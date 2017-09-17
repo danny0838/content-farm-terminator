@@ -75,9 +75,10 @@ a:hover {
     font-size: 14px;
   }
   .content {
-    padding: 0 10px;
+    padding: 60px 10px 0px 10px;
+    background-size: 60px;
   }
-  .content img {
-    width: 60px;
+  .content h1 {
+    margin-top: 12px;
   }
 }
