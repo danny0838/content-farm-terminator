@@ -15,6 +15,9 @@ body {
 
   max-width: 500px;
   display: table;
+
+  padding-top: 96px;
+  background: no-repeat url("img/ic_alert_octagon.png");
 }
 
 .content h1 {
