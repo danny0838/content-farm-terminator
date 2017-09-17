@@ -1,21 +1,25 @@
 body {
+  display: table;
+  margin: 0;
+  border: 0;
+  padding: 0;
+  width: 100%;
+  height: 100vh;
   background-color: #CC3333;
   color: #FFFFFF;
   font-family: helvetica, arial, sans-serif;
   font-size: 18px;
 }
 
+.wrapper {
+  display: table-cell;
+  vertical-align: middle;
+}
+
 .content {
+  box-sizing: border-box;
   margin: auto;
-  position: absolute;
-  top:0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-
   max-width: 500px;
-  display: table;
-
   padding-top: 96px;
   background: no-repeat left top/96px url("img/content-farm-marker-white.svg");
 }
