@@ -1,47 +1,47 @@
 {
-  "appName":{
-    "message":"終結內容農場"
+  "appName": {
+    "message": "終結內容農場"
   },
-  "appDesc":{
-    "message":"標示內容農場連結，並且防止不小心打開內容農場的文章"
+  "appDesc": {
+    "message": "標示內容農場連結，並且防止不小心進入內容農場"
   },
 
 
-  "title":{
-    "message":"內容農場注意",
-    "description":"Title for stop page"
+  "title": {
+    "message": "小心內容農場",
+    "description": "Title for stop page"
   },
-  "header":{
-    "message":"你正準備打開內容農場",
-    "description":"Header of warning in stop page"
+  "header": {
+    "message": "你即將進入內容農場",
+    "description": "Header of warning in stop page"
   },
-  "body":{
-    "message":"要繼續嗎？要是感到煩厭，放棄也是一種選擇啊。",
-    "description":"Body of warning message"
+  "body": {
+    "message": "要繼續嗎？要是感到厭煩，放棄也是一種選擇啊。",
+    "description": "Body of warning message"
   },
 
   "details": {
-    "message" : "調整封鎖名單",
-    "description" : "Click to open options from stop page"
+    "message": "調整封鎖名單",
+    "description": "Click to open options from stop page"
   },
 
-  "backBtn":{
-    "message":"返回",
-    "description":"Back button text"
+  "backBtn": {
+    "message": "返回",
+    "description": "Back button text"
   },
-  "contBtn":{
-    "message":"繼續",
-    "description":"Continue button text"
-  },
-
-  "contNoAdsBtn":{
-    "message":"繼續 (無廣告)",
-    "description":"Continue button text"
+  "contBtn": {
+    "message": "繼續",
+    "description": "Continue button text"
   },
 
-  "markTitle":{
-    "message":"這個連結將連往內容農場",
-    "description":"Title and alt text for the image marker of a link targeting a content farm page."
+  "contNoAdsBtn": {
+    "message": "繼續 (無廣告)",
+    "description": "Continue button text"
+  },
+
+  "markTitle": {
+    "message": "這個連結將連往內容農場",
+    "description": "Title and alt text for the image marker of a link targeting a content farm page."
   },
 
   "systemBlacklist": {
@@ -50,8 +50,8 @@
   },
 
   "systemBlacklistDesc": {
-    "message" : "系統內建的黑名單 (唯讀)",
-    "description" : "Description of Blacklist Field for options"
+    "message": "系統內建的黑名單 (唯讀)",
+    "description": "Description of Blacklist Field for options"
   },
 
   "userBlacklist": {
@@ -60,8 +60,8 @@
   },
 
   "userBlacklistDesc": {
-    "message" : "每行輸入一個想額外封鎖的網域，可使用萬用字元(*)",
-    "description" : "Description of Blacklist Field for options"
+    "message": "每行輸入一個想額外封鎖的網域，可使用萬用字元(*)",
+    "description": "Description of Blacklist Field for options"
   },
 
   "webBlacklist": {
@@ -70,8 +70,8 @@
   },
 
   "webBlacklistDesc": {
-    "message" : "網路黑名單的網址，每行一個，系統會自動前往取得並匯入黑名單",
-    "description" : "Description of Web Blacklist Field for options"
+    "message": "網路黑名單的網址，每行一個，系統會自動前往取得及匯入黑名單",
+    "description": "Description of Web Blacklist Field for options"
   },
 
   "userWhitelist": {
@@ -80,12 +80,12 @@
   },
 
   "userWhitelistDesc": {
-    "message" : "每行輸入一個想解除封鎖的網域，可使用萬用字元(*)",
-    "description" : "Description of Whitelist Field for options"
+    "message": "每行輸入一個想解除封鎖的網域，可使用萬用字元(*)",
+    "description": "Description of Whitelist Field for options"
   },
 
-  "save" : {
-    "message" : "儲存",
-    "description" : "Save Button"
+  "save": {
+    "message": "儲存",
+    "description": "Save Button"
   }
 }

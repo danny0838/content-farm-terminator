@@ -1,46 +1,46 @@
 {
-  "appName":{
-    "message":"Content Farm Terminator"
+  "appName": {
+    "message": "Content Farm Terminator"
   },
-  "appDesc":{
-    "message":"Marks links targeting content farms and prevents the user from visiting these sites by mistake"
+  "appDesc": {
+    "message": "Marks content farm links and prevents the user from entering by accident"
   },
 
 
-  "title":{
-    "message":"Beware! Content Farm!",
-    "description":"Title for stop page"
+  "title": {
+    "message": "Beware of Content Farm!",
+    "description": "Title for stop page"
   },
-  "header":{
-    "message":"You're going to visit a content farm",
-    "description":"Header of warning in stop page"
+  "header": {
+    "message": "You're entering a content farm",
+    "description": "Header of warning in stop page"
   },
-  "body":{
-    "message":"Continue? Back if you are annoyed with them.",
-    "description":"Body of warning message"
+  "body": {
+    "message": "Continue? Back if you are annoyed with them.",
+    "description": "Body of warning message"
   },
   "details": {
-    "message" : "Revise blocklist",
-    "description" : "Click to open options from stop page"
+    "message": "Revise blocklist",
+    "description": "Click to open options from stop page"
   },
-  "backBtn":{
-    "message":"Back",
-    "description":"Back button text"
-  },
-
-  "contBtn":{
-    "message":"Continue",
-    "description":"Continue button text"
+  "backBtn": {
+    "message": "Back",
+    "description": "Back button text"
   },
 
-  "contNoAdsBtn":{
-    "message":"Continue (No Ads)",
-    "description":"Continue button text"
+  "contBtn": {
+    "message": "Continue",
+    "description": "Continue button text"
   },
 
-  "markTitle":{
-    "message":"This link targets content farm",
-    "description":"Title and alt text for the image marker of a link targeting a content farm page."
+  "contNoAdsBtn": {
+    "message": "Continue (No Ads)",
+    "description": "Continue button text"
+  },
+
+  "markTitle": {
+    "message": "This link targets content farm",
+    "description": "Title and alt text for the image marker of a link targeting a content farm page."
   },
 
   "systemBlacklist": {
@@ -49,8 +49,8 @@
   },
 
   "systemBlacklistDesc": {
-    "message" : "Default Blacklist (Read-only).",
-    "description" : "Description of Blacklist Field for options"
+    "message": "Default Blacklist (Read-only).",
+    "description": "Description of Blacklist Field for options"
   },
 
   "userBlacklist": {
@@ -59,8 +59,8 @@
   },
 
   "userBlacklistDesc": {
-    "message" : "Set your own personal blacklist here. One entry per line. Wildcard(*) is allowed.",
-    "description" : "Description of Blacklist Field for options"
+    "message": "Set your own personal blacklist here. One entry per line. Wildcard(*) is allowed.",
+    "description": "Description of Blacklist Field for options"
   },
 
   "webBlacklist": {
@@ -69,8 +69,8 @@
   },
 
   "webBlacklistDesc": {
-    "message" : "URLs of web blacklists that will be automatically fetched and imported. One entry per line.",
-    "description" : "Description of Web Blacklist Field for options"
+    "message": "URLs of web blacklists that will be automatically fetched and imported. One entry per line.",
+    "description": "Description of Web Blacklist Field for options"
   },
 
   "userWhitelist": {
@@ -79,12 +79,12 @@
   },
 
   "userWhitelistDesc": {
-    "message" : "Unblock your faviour sites from system blacklist. One entry per line. Wilcard(*) is allowed.",
-    "description" : "Description of Whitelist Field for options"
+    "message": "Unblock your faviour sites from system blacklist. One entry per line. Wilcard(*) is allowed.",
+    "description": "Description of Whitelist Field for options"
   },
 
-  "save" : {
-    "message" : "SAVE",
-    "description" : "Save Button"
+  "save": {
+    "message": "SAVE",
+    "description": "Save Button"
   }
 }
