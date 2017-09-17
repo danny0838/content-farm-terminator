@@ -18,7 +18,7 @@ function markContentFarmLink(elem) {
   }, (isBlocked) => {
     if (isBlocked) {
       let img = doc.createElement('img');
-      img.src = chrome.runtime.getURL('img/alert-octagon.svg');
+      img.src = chrome.runtime.getURL('img/content-farm-marker.svg');
       img.style.margin = '0';
       img.style.border = '0';
       img.style.padding = '0';
