@@ -82,6 +82,10 @@ h1, h2 {
   resize: vertical;
 }
 
+textarea[readonly] {
+  background-color: #DDDDDD;
+}
+
 .submit {
   display: inline-block;
   text-decoration: none;
