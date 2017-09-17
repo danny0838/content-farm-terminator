@@ -46,6 +46,15 @@ utils.escapeRegExp = function (str) {
   return str.replace(/([\*\+\?\.\^\/\$\\\|\[\]\{\}\(\)])/g, "\\$1");
 };
 
+utils.doctypeToString = function (doctype) {
+  if (!doctype) { return ""; }
+  var ret = "<!DOCTYPE " + doctype.name;
+  if (doctype.publicId) { ret += ' PUBLIC "' + doctype.publicId + '"'; }
+  if (doctype.systemId) { ret += ' "'        + doctype.systemId + '"'; }
+  ret += ">\n";
+  return ret;
+};
+
 class ContentFarmFilter {
   constructor() {
     this._blacklist = new Set();
