@@ -34,6 +34,20 @@
     ]
   },
 
+  "content_scripts": [
+    {
+      "matches": [
+        "http://*/*",
+        "https://*/*"
+      ],
+      "js": [
+        "utils.js",
+        "content.js"
+      ],
+      "run_at": "document_end"
+    }
+  ],
+
   "options_ui": {
     "browser_style": false,
     "open_in_tab": true,
@@ -42,6 +56,7 @@
 
   "web_accessible_resources": [
     "blacklist.txt",
-    "blocked.html"
+    "blocked.html",
+    "img/*"
   ]
 }

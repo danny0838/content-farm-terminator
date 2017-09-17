@@ -38,6 +38,11 @@
     "description":"Continue button text"
   },
 
+  "markTitle":{
+    "message":"This link targets content farm",
+    "description":"Title and alt text for the image marker of a link targeting a content farm page."
+  },
+
   "systemBlacklist": {
     "message": "System Blacklist",
     "description": "Field Label for options"

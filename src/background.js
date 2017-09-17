@@ -9,6 +9,16 @@ function updateFilter() {
     filter.addBlackList(lists.userBlacklist);
     filter.addWhiteList(lists.userWhitelist);
     return filter.addBuiltinBlackList();
+  }).then(() => {
+    return new Promise((resolve, reject) => {
+      chrome.tabs.query({}, resolve);
+    }).then((tabs) => {
+      tabs.forEach((tab) => {
+        chrome.tabs.sendMessage(tab.id, {
+          cmd: 'updateContent'
+        });
+      });
+    });
   }).catch((ex) => {
     console.error(ex);
   });
@@ -26,6 +36,11 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
   // console.warn("omMessage", message);
   var {cmd, args} = message;
   switch (cmd) {
+    case 'isUrlBlocked': {
+      let blocked = filter.isBlocked(args.url);
+      sendResponse(blocked);
+      break;
+    }
     case 'unblockTemp': {
       filter.unblockTemp(args.hostname);
       sendResponse(true);

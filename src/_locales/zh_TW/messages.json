@@ -39,6 +39,11 @@
     "description":"Continue button text"
   },
 
+  "markTitle":{
+    "message":"這個連結將連往內容農場",
+    "description":"Title and alt text for the image marker of a link targeting a content farm page."
+  },
+
   "systemBlacklist": {
     "message": "系統黑名單",
     "description": "Field Label for options"
