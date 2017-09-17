@@ -9,10 +9,12 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
   utils.getOptions({
     userBlacklist: "",
-    userWhitelist: ""
+    userWhitelist: "",
+    webBlacklist: ""
   }).then((options) => {
     document.querySelector('#userBlacklist textarea').value = options.userBlacklist;
     document.querySelector('#userWhitelist textarea').value = options.userWhitelist;
+    document.querySelector('#webBlacklist textarea').value = options.webBlacklist;
   }).catch((ex) => {
     console.error(ex);
   });
@@ -21,7 +23,8 @@ document.addEventListener('DOMContentLoaded', (event) => {
     event.preventDefault();
     utils.setOptions({
       userBlacklist: document.querySelector('#userBlacklist textarea').value,
-      userWhitelist: document.querySelector('#userWhitelist textarea').value
+      userWhitelist: document.querySelector('#userWhitelist textarea').value,
+      webBlacklist: document.querySelector('#webBlacklist textarea').value
     }).then(() => {
       if (history.length > 1) {
         history.go(-1);

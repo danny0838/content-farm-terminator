@@ -3,12 +3,17 @@ var filter;
 function updateFilter() {
   return utils.getOptions({
     userBlacklist: "",
-    userWhitelist: ""
+    userWhitelist: "",
+    webBlacklist: ""
   }).then((lists) => {
     filter = new ContentFarmFilter();
     filter.addBlackList(lists.userBlacklist);
     filter.addWhiteList(lists.userWhitelist);
-    return filter.addBuiltinBlackList();
+    let tasks = filter.parseRulesText(lists.webBlacklist).map((url) => {
+      return filter.addBlackListFromUrl(url);
+    });
+    tasks.push(filter.addBuiltinBlackList());
+    return Promise.all(tasks);
   }).then(() => {
     return new Promise((resolve, reject) => {
       chrome.tabs.query({}, resolve);

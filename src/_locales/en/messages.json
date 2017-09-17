@@ -63,6 +63,16 @@
     "description" : "Description of Blacklist Field for options"
   },
 
+  "webBlacklist": {
+    "message": "Web Blacklists",
+    "description": "Field Label for options"
+  },
+
+  "webBlacklistDesc": {
+    "message" : "URLs of web blacklists that will be automatically fetched and imported. One entry per line.",
+    "description" : "Description of Web Blacklist Field for options"
+  },
+
   "userWhitelist": {
     "message": "User Whitelist",
     "description": "Field Label for options"
