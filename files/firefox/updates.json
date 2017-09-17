@@ -3,7 +3,9 @@
     "content-farm-terminator.beta@danny0838.addons.mozilla.org": {
       "updates": [
         { "version": "1.3.0",
-          "update_link": "https://danny0838.github.io/content-farm-terminator/files/firefox/content_farm_terminator-1.3.0-an+fx.xpi" }
+          "update_link": "https://danny0838.github.io/content-farm-terminator/files/firefox/content_farm_terminator-1.3.0-an+fx.xpi" },
+        { "version": "1.3.1",
+          "update_link": "https://danny0838.github.io/content-farm-terminator/files/firefox/content_farm_terminator-1.3.1-an+fx.xpi" }
       ]
     }
   }
