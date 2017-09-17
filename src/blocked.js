@@ -1,6 +1,19 @@
 var sourceUrl = new URL(location.href).searchParams.get('to');
 var sourceUrlObj = new URL(sourceUrl);
 
+function recheckBlock() {
+  return new Promise((resolve, reject) => {
+    chrome.runtime.sendMessage({
+      cmd: 'isUrlBlocked',
+      args: {url: sourceUrl}
+    }, resolve);
+  }).then((isBlocked) => {
+    if (!isBlocked) {
+      location.replace(sourceUrl);
+    }
+  });
+}
+
 document.addEventListener('DOMContentLoaded', (event) => {
   utils.loadLanguages(document);
 
@@ -35,4 +48,16 @@ document.addEventListener('DOMContentLoaded', (event) => {
       });
     }
   });
+});
+
+chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
+  console.warn("omMessage", message);
+  var {cmd, args} = message;
+  switch (cmd) {
+    case 'updateContent': {
+      recheckBlock();
+      sendResponse(true);
+      break;
+    }
+  }
 });
