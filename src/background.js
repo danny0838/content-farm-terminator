@@ -4,12 +4,8 @@ var _isFxBelow56;
 Promise.resolve().then(() => {
   return browser.runtime.getBrowserInfo();
 }).then((info) => {
-  if (info.name === 'Firefox') {
-    /^(\d+)\./.test(info.version);
-    _isFxBelow56 = parseInt(RegExp.$1, 10) < 56;
-  } else {
-    throw new Error('invalid');
-  }
+  _isFxBelow56 = info.name === 'Firefox' || info.name === 'Fennec' &&
+      parseInt(info.version.match(/^(\d+)\./)[1], 10) < 56;
 }).catch((ex) => {
   _isFxBelow56 = false;
 });
