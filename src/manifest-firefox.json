@@ -1,0 +1,47 @@
+{
+  "manifest_version": 2,
+  "name": "__MSG_appName__",
+  "version": "1.2.0",
+  "description": "__MSG_appDesc__",
+  "author": "Danny Lin",
+  "default_locale": "en",
+
+  "applications": {
+    "gecko": {
+      "id": "content-farm-terminator.beta@danny0838.addons.mozilla.org",
+      "strict_min_version": "48.0",
+      "update_url": "https://danny0838.github.io/content-farm-terminator/files/firefox/updates.json"
+    }
+  },
+
+  "icons": {
+    "24": "img/alert-octagon.svg"
+  },
+
+  "permissions": [
+    "tabs",
+    "webRequest",
+    "webRequestBlocking",
+    "storage",
+    "http://*/",
+    "https://*/"
+  ],
+
+  "background": {
+    "scripts": [
+      "utils.js",
+      "background.js"
+    ]
+  },
+
+  "options_ui": {
+    "browser_style": false,
+    "open_in_tab": true,
+    "page": "options.html"
+  },
+
+  "web_accessible_resources": [
+    "blacklist.txt",
+    "blocked.html"
+  ]
+}

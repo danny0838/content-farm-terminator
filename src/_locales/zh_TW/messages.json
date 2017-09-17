@@ -1,0 +1,76 @@
+{
+  "appName":{
+    "message":"終結內容農場"
+  },
+  "appDesc":{
+    "message":"標示內容農場連結，並且防止不小心打開內容農場的文章"
+  },
+
+
+  "title":{
+    "message":"內容農場注意",
+    "description":"Title for stop page"
+  },
+  "header":{
+    "message":"你正準備打開內容農場",
+    "description":"Header of warning in stop page"
+  },
+  "body":{
+    "message":"要繼續嗎？要是感到煩厭，放棄也是一種選擇啊。",
+    "description":"Body of warning message"
+  },
+
+  "details": {
+    "message" : "詳情",
+    "description" : "Click to open options from stop page"
+  },
+
+  "backBtn":{
+    "message":"返回",
+    "description":"Back button text"
+  },
+  "contBtn":{
+    "message":"繼續",
+    "description":"Continue button text"
+  },
+
+  "contNoAdsBtn":{
+    "message":"繼續 (無廣告)",
+    "description":"Continue button text"
+  },
+
+  "systemBlacklist": {
+    "message": "系統黑名單",
+    "description": "Field Label for options"
+  },
+
+  "systemBlacklistDesc": {
+    "message" : "系統預設黑名單 (唯讀)",
+    "description" : "Description of Blacklist Field for options"
+  },
+
+  "userBlacklist": {
+    "message": "用戶自定黑名單",
+    "description": "Field Label for options"
+  },
+
+  "userBlacklistDesc": {
+    "message" : "每行可以輸入一個用戶想封鎖的網址，容許使用通配符(*)",
+    "description" : "Description of Blacklist Field for options"
+  },
+
+  "userWhitelist": {
+    "message": "用戶自定白名單",
+    "description": "Field Label for options"
+  },
+
+  "userWhitelistDesc": {
+    "message" : "解除部份網址的封鎖，同樣地每行一個，容許使用通配符(*)",
+    "description" : "Description of Whitelist Field for options"
+  },
+
+  "save" : {
+    "message" : "儲存",
+    "description" : "Save Button"
+  }
+}

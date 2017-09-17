@@ -1,0 +1,103 @@
+body {
+  background-color: #ffffff;
+  color: rgba(0,0,0,0.87);
+  font-family: helvetica, arial, sans-serif;
+  font-size: 18px;
+}
+
+.content {
+  display: block;
+  width: 50%;
+  margin: 46px auto;
+  min-width: 720px;
+}
+
+h1, h2 {
+  font-size: 16px;
+  font-weight: normal;
+}
+
+.header h1 {
+  font-weight: bold;
+  display: inline-block;
+  font-size: 20px;
+  padding: 0;
+  vertical-align: middle;
+}
+
+.header img {
+  padding-left: 16px;
+  padding-right: 18px;
+  display: inline-block;
+  width: 46px;
+  height: 46px;
+  vertical-align: middle;
+}
+
+.subheader h1 {
+  -webkit-transition: background .1s linear;
+  transition: background .1s linear;
+  vertical-align: middle;
+  opacity: 0.54;
+  margin: 0 0 0 18px;
+  padding: 0;
+}
+
+.field {
+  padding: 0 0 0 18px;
+  overflow: hidden;
+  margin: 9px 0 0 0;
+}
+
+
+.fieldLabel {
+  width: 32%;
+  float: left;
+  margin-top: 18px;
+}
+
+.fieldLabel h2 {
+  font-weight: bold;
+  margin: 0 0 9px 0;
+}
+
+.fieldLabel span {
+  font-size: 14px;
+  opacity: 0.54;
+  padding-right: 8px;
+}
+
+.fieldset {
+  width: 68%;
+  float: right;
+  margin-top: 18px;
+}
+
+.fieldset textarea {
+  box-sizing: border-box;
+  width: 100%;
+  height: 144px;
+  font-size: 14px;
+  line-height: 18px;
+  resize: vertical;
+}
+
+.submit {
+  display: inline-block;
+  text-decoration: none;
+  border: 1px solid #C1C1C1;
+  background-color: #FBFBFB;
+  border-radius: 2px;
+  padding: 10px 14px;
+  color: #333333;
+  font-size: 12px;
+  text-align: center;
+  text-transform: uppercase;
+  transition: background .1s linear;
+  width: 50px;
+  float: right;
+}
+
+.submit:hover {
+  background-color: #EBEBEB;
+}
