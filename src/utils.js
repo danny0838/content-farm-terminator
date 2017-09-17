@@ -42,6 +42,18 @@ utils.setOptions = function (options) {
   });
 };
 
+utils.escapeHtml = function (str, noDoubleQuotes, singleQuotes, spaces) {
+  var list = {
+    "&": "&amp;",
+    "<": "&lt;",
+    ">": "&gt;",
+    '"': (noDoubleQuotes ? '"' : "&quot;"),
+    "'": (singleQuotes ? "&#39;" : "'"),
+    " ": (spaces ? "&nbsp;" : " ")
+  };
+  return str.replace(/[&<>"']| (?= )/g, m => list[m]);
+};
+
 utils.escapeRegExp = function (str) {
   return str.replace(/([\*\+\?\.\^\/\$\\\|\[\]\{\}\(\)])/g, "\\$1");
 };

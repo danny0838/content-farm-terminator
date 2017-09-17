@@ -1,5 +1,19 @@
 var filter;
 
+var _isFxBelow56;
+Promise.resolve().then(() => {
+  return browser.runtime.getBrowserInfo();
+}).then((info) => {
+  if (info.name === 'Firefox') {
+    /^(\d+)\./.test(info.version);
+    _isFxBelow56 = parseInt(RegExp.$1, 10) < 56;
+  } else {
+    throw new Error('invalid');
+  }
+}).catch((ex) => {
+  _isFxBelow56 = false;
+});
+
 function updateFilter() {
   return utils.getOptions({
     userBlacklist: "",
@@ -33,7 +47,34 @@ chrome.webRequest.onBeforeRequest.addListener((details) => {
   var url = details.url;
   if (filter.isBlocked(url)) {
     let redirectUrl = `${chrome.runtime.getURL('blocked.html')}?to=${encodeURIComponent(url)}`;
-    return {redirectUrl: redirectUrl};
+    if (!_isFxBelow56) {
+      return {redirectUrl: redirectUrl};
+    } else {
+      // fix for bug in Firefox < 56
+      if (details.type === "main_frame") {
+        chrome.tabs.update(details.tabId, {url: redirectUrl});
+        return {cancel: true};
+      } else {
+        let html = `<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<style>
+a {
+  background: no-repeat left/1em url("${utils.escapeHtml(chrome.runtime.getURL("img/content-farm-marker.svg"))}");
+  padding-left: 1em;
+}
+</style>
+</head>
+<body>
+<a href="${utils.escapeHtml(redirectUrl, false)}" target="_blank">View blocked page</a>
+</body>
+</html>
+`;
+        let dataUrl = 'data:text/html;charset=UTF-8,' + encodeURIComponent(html);
+        return {redirectUrl: dataUrl};
+      }
+    }
   }
 }, {urls: ["*://*/*"], types: ["main_frame", "sub_frame"]}, ["blocking"]);
 
