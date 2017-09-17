@@ -6,6 +6,12 @@ function markContentFarmLink(elem) {
     prev.remove();
   }
 
+  // The document is currently viewing and thus allowed expicitly by the user.
+  // Do not mark links targeting the same domain.
+  if (new URL(elem.href).hostname === new URL(doc.location.href).hostname) {
+    return;
+  }
+
   chrome.runtime.sendMessage({
     cmd: 'isUrlBlocked',
     args: {url: elem.href}
