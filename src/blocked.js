@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
   });
 
   document.querySelector('#continueNoAds').addEventListener('click', (event) => {
-    let newUrl = `https://webcache.googleusercontent.com/search?strip=1&q=cache:${encodeURI(sourceUrl)}`;
+    let newUrl = `sandbox.html?src=${encodeURIComponent(sourceUrl)}`;
     location.replace(newUrl);
   });
 
