@@ -14,7 +14,7 @@ function markContentFarmLink(elem) {
 
   chrome.runtime.sendMessage({
     cmd: 'isUrlBlocked',
-    args: {url: elem.href}
+    args: {url: elem.href, ignoreTemp: true}
   }, (isBlocked) => {
     if (isBlocked) {
       let img = doc.createElement('img');

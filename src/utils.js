@@ -103,10 +103,12 @@ class ContentFarmFilter {
     });
   }
 
-  isBlocked(url) {
+  isBlocked(url, ignoreTemp = false) {
     let hostname = new URL(url).hostname;
-    for (let regex of this._whitelistTemp.values()) {
-      if (regex.test(hostname)) { return false; }
+    if (!ignoreTemp) {
+      for (let regex of this._whitelistTemp.values()) {
+        if (regex.test(hostname)) { return false; }
+      }
     }
     for (let regex of this._whitelist.values()) {
       if (regex.test(hostname)) { return false; }
