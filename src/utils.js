@@ -69,15 +69,17 @@ utils.doctypeToString = function (doctype) {
 
 class ContentFarmFilter {
   constructor() {
-    this._blacklist = new Set();
-    this._whitelist = new Set();
-    this._whitelistTemp = new Set();
+    this._blacklist;
+    this._whitelist;
+    this._blacklistSet = new Set();
+    this._whitelistSet = new Set();
+    this._whitelistTempSet = new Set();
   }
 
   addBlackList(listText) {
     this.parseRulesText(listText).forEach((ruleText) => {
       let ruleRegex = this.parseRuleRegex(ruleText);
-      this._blacklist.add(ruleRegex);
+      this._blacklistSet.add(ruleRegex);
     });
   }
 
@@ -99,31 +101,30 @@ class ContentFarmFilter {
   addWhiteList(listText) {
     this.parseRulesText(listText).forEach((ruleText) => {
       let ruleRegex = this.parseRuleRegex(ruleText);
-      this._whitelist.add(ruleRegex);
+      this._whitelistSet.add(ruleRegex);
     });
   }
 
   isBlocked(url, ignoreTemp = false) {
     let hostname = new URL(url).hostname;
     if (!ignoreTemp) {
-      for (let regex of this._whitelistTemp.values()) {
-        if (regex.test(hostname)) { return false; }
-      }
+      let whitelistTemp = this.parseMergedRegex(this._whitelistTempSet);
+      if (whitelistTemp.test(hostname)) { return false; }
     }
-    for (let regex of this._whitelist.values()) {
-      if (regex.test(hostname)) { return false; }
+    if (typeof this._blacklist === "undefined") {
+      this._blacklist = this.parseMergedRegex(this._blacklistSet);
+      this._whitelist = this.parseMergedRegex(this._whitelistSet);
     }
-    for (let regex of this._blacklist.values()) {
-      if (regex.test(hostname)) { return true; }
-    }
+    if (this._whitelist.test(hostname)) { return false; }
+    if (this._blacklist.test(hostname)) { return true; }
     return false;
   }
 
   unblockTemp(url, time = 15000) {
     let regex = this.parseRuleRegex(url);
-    this._whitelistTemp.add(regex);
+    this._whitelistTempSet.add(regex);
     setTimeout(() => {
-      this._whitelistTemp.delete(regex);
+      this._whitelistTempSet.delete(regex);
     }, time);
   }
 
@@ -132,6 +133,10 @@ class ContentFarmFilter {
   }
 
   parseRuleRegex(ruleText) {
-    return new RegExp('^(?:www\.)?' + utils.escapeRegExp(ruleText).replace(/\\\*/g, "[^/]*") + '$');
+    return utils.escapeRegExp(ruleText).replace(/\\\*/g, "[^/]*");
+  }
+
+  parseMergedRegex(regexSet) {
+    return new RegExp('^(?:www\.)?(?:' + Array.from(regexSet).join('|') + ')$');
   }
 }
