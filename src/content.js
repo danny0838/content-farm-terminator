@@ -1,11 +1,6 @@
 function markContentFarmLink(elem) {
   let doc = elem.ownerDocument;
 
-  let prev = elem.previousSibling;
-  if (prev && prev.dataset && prev.dataset.contentFarmTerminatorMarker) {
-    prev.remove();
-  }
-
   // The document is currently viewing and thus allowed expicitly by the user.
   // Do not mark links targeting the same domain.
   if (new URL(elem.href).hostname === new URL(doc.location.href).hostname) {
@@ -27,13 +22,16 @@ function markContentFarmLink(elem) {
       img.style.display = 'inline';
       img.style.position = 'relative';
       img.title = img.alt = utils.lang('markTitle');
-      img.dataset.contentFarmTerminatorMarker = 1;
+      img.setAttribute("data-content-farm-terminator-marker", 1);
       elem.parentNode.insertBefore(img, elem);
     }
   });
 }
 
 function markContentFarmLinks(root = document) {
+  Array.prototype.forEach.call(root.querySelectorAll('img[data-content-farm-terminator-marker]'), (elem) => {
+    elem.remove();
+  });
   Array.prototype.forEach.call(root.querySelectorAll('a[href], area[href]'), (elem) => {
     markContentFarmLink(elem);
   });
