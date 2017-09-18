@@ -1,6 +1,8 @@
 var docUrlObj = new URL(document.location.href);
+var anchorMarkerMap = new Map();
 
 function markContentFarmLink(elem) {
+  if (!elem.href) { return Promise.resolve(); }
   let doc = elem.ownerDocument;
 
   return Promise.resolve().then(() => {
@@ -80,6 +82,7 @@ function markContentFarmLink(elem) {
         img.title = img.alt = utils.lang('markTitle');
         img.setAttribute("data-content-farm-terminator-marker", 1);
         elem.parentNode.insertBefore(img, elem);
+        anchorMarkerMap.set(elem, img);
       }
     });
   }).catch((ex) => {
@@ -88,6 +91,7 @@ function markContentFarmLink(elem) {
 }
 
 function markContentFarmLinks(root = document) {
+  anchorMarkerMap = new Map();
   Array.prototype.forEach.call(root.querySelectorAll('img[data-content-farm-terminator-marker]'), (elem) => {
     elem.remove();
   });
@@ -95,6 +99,48 @@ function markContentFarmLinks(root = document) {
     return markContentFarmLink(elem);
   });
   return Promise.all(tasks);
+}
+
+function observeDomUpdates() {
+  var isAnchor = function (node) {
+    let n = node.nodeName.toLowerCase();
+    return n === "a" || n === "area";
+  };
+
+  var docObserver = new MutationObserver((mutations) => {
+    for (let mutation of mutations) {
+      // console.warn("DOM update", mutation);
+      for (let node of mutation.addedNodes) {
+        if (isAnchor(node)) {
+          markContentFarmLink(node);
+          ancObserver.observe(node, ancObserverConf);
+        }
+      }
+      for (let node of mutation.removedNodes) {
+        if (isAnchor(node)) {
+          let marker = anchorMarkerMap.get(node);
+          if (marker) { marker.remove(); }
+        }
+      }
+    }
+  });
+  var docObserverConf = {childList: true, subtree: true};
+
+  var ancObserver = new MutationObserver((mutations) => {
+    for (let mutation of mutations) {
+      // console.warn("Anchor update", mutation);
+      let node = mutation.target;
+      let marker = anchorMarkerMap.get(node);
+      if (marker) { marker.remove(); }
+      markContentFarmLink(node);
+    }
+  });
+  var ancObserverConf = {attributes: true, attributeFilter: ["href"]};
+
+  docObserver.observe(document.documentElement, docObserverConf);
+  Array.prototype.forEach.call(document.querySelectorAll("a, area"), (elem) => {
+    ancObserver.observe(elem, ancObserverConf);
+  });
 }
 
 chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
@@ -109,4 +155,6 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
   }
 });
 
-markContentFarmLinks();
+markContentFarmLinks().then(() => {
+  observeDomUpdates();
+});
