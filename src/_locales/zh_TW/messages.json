@@ -27,14 +27,27 @@
     "message": "詳情",
     "description": "Click to open options from blocked page"
   },
+  "detailsTitle": {
+    "message": "進入選項頁面修改封鎖名單。",
+    "description": "Details buttnon title"
+  },
 
   "backBtn": {
     "message": "返回",
     "description": "Back button text"
   },
+  "backBtnTitle": {
+    "message": "回上一頁，遠離垃圾！",
+    "description": "Back button title"
+  },
+
   "viewBtn": {
     "message": "檢視",
     "description": "View button text"
+  },
+  "viewBtnTitle": {
+    "message": "檢視程式處理過的頁面內容，封鎖圖片、多媒體、內嵌程式碼等內容。這不會為原站台帶來廣告收益。",
+    "description": "View button title"
   },
 
   "markTitle": {

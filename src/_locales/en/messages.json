@@ -26,14 +26,27 @@
     "message": "Details",
     "description": "Click to open options from blocked page"
   },
+  "detailsTitle": {
+    "message": "Enter the options page to revise blocklists.",
+    "description": "Details buttnon title"
+  },
+
   "backBtn": {
     "message": "Back",
     "description": "Back button text"
+  },
+  "backBtnTitle": {
+    "message": "Go back to the previous page. Keep away from spams!",
+    "description": "Back button title"
   },
 
   "viewBtn": {
     "message": "View",
     "description": "View button text"
+  },
+  "viewBtnTitle": {
+    "message": "View processed web page content with images, multimedia, and embedded scripts removed. This brings NO ads traffic to the site.",
+    "description": "View button title"
   },
 
   "markTitle": {
