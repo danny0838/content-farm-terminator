@@ -1,4 +1,6 @@
-function markContentFarmLink(elem, docUrlObj) {
+var docUrlObj = new URL(document.location.href);
+
+function markContentFarmLink(elem) {
   let doc = elem.ownerDocument;
 
   return Promise.resolve().then(() => {
@@ -59,10 +61,12 @@ function markContentFarmLink(elem, docUrlObj) {
       return;
     }
 
-    chrome.runtime.sendMessage({
-      cmd: 'isUrlBlocked',
-      args: {url: hostname, ignoreTemp: true}
-    }, (isBlocked) => {
+    return new Promise((resolve, reject) => {
+      chrome.runtime.sendMessage({
+        cmd: 'isUrlBlocked',
+        args: {url: hostname, ignoreTemp: true}
+      }, resolve);
+    }).then((isBlocked) => {
       if (isBlocked) {
         let img = doc.createElement('img');
         img.src = chrome.runtime.getURL('img/content-farm-marker.svg');
@@ -78,17 +82,19 @@ function markContentFarmLink(elem, docUrlObj) {
         elem.parentNode.insertBefore(img, elem);
       }
     });
+  }).catch((ex) => {
+    console.error(ex);
   });
 }
 
 function markContentFarmLinks(root = document) {
-  let docUrlObj = new URL(document.location.href);
   Array.prototype.forEach.call(root.querySelectorAll('img[data-content-farm-terminator-marker]'), (elem) => {
     elem.remove();
   });
-  Array.prototype.forEach.call(root.querySelectorAll('a[href], area[href]'), (elem) => {
-    markContentFarmLink(elem, docUrlObj);
+  var tasks = Array.from(root.querySelectorAll('a[href], area[href]')).map((elem) => {
+    return markContentFarmLink(elem);
   });
+  return Promise.all(tasks);
 }
 
 chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
