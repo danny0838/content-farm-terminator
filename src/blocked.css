@@ -21,7 +21,7 @@ body {
   margin: auto;
   max-width: 500px;
   padding-top: 96px;
-  background: no-repeat left top/96px url("img/content-farm-marker-white.svg");
+  background: no-repeat 8px 0px/96px url("img/content-farm-marker-white.svg");
 }
 
 .content h1 {
