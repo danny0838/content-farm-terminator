@@ -105,8 +105,11 @@ class ContentFarmFilter {
     });
   }
 
+  /**
+   * @param {string} url - url or hostname
+   */
   isBlocked(url, ignoreTemp = false) {
-    let hostname = new URL(url).hostname;
+    let hostname = (url.indexOf(":") !== -1) ? new URL(url).hostname : url;
     if (!ignoreTemp) {
       let whitelistTemp = this.parseMergedRegex(this._whitelistTempSet);
       if (whitelistTemp.test(hostname)) { return false; }
