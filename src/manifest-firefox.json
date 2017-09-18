@@ -15,7 +15,7 @@
   },
 
   "icons": {
-    "24": "img/content-farm-marker.svg"
+    "48": "img/content-farm-marker_48.png"
   },
 
   "permissions": [
@@ -58,5 +58,15 @@
     "blacklist.txt",
     "blocked.html",
     "img/*"
-  ]
+  ],
+
+  "browser_action": {
+    "default_icon": "img/content-farm-marker_48.png",
+    "default_title": "__MSG_appName__"
+  },
+
+  "page_action": {
+    "default_icon": "img/content-farm-marker_48.png",
+    "default_title": "__MSG_appName__"
+  }
 }
