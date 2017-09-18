@@ -73,7 +73,6 @@ class ContentFarmFilter {
     this._whitelist;
     this._blacklistSet = new Set();
     this._whitelistSet = new Set();
-    this._whitelistTempSet = new Set();
   }
 
   addBlackList(listText) {
@@ -108,12 +107,8 @@ class ContentFarmFilter {
   /**
    * @param {string} url - url or hostname
    */
-  isBlocked(url, ignoreTemp = false) {
+  isBlocked(url) {
     let hostname = (url.indexOf(":") !== -1) ? new URL(url).hostname : url;
-    if (!ignoreTemp) {
-      let whitelistTemp = this.parseMergedRegex(this._whitelistTempSet);
-      if (whitelistTemp.test(hostname)) { return false; }
-    }
     if (typeof this._blacklist === "undefined") {
       this._blacklist = this.parseMergedRegex(this._blacklistSet);
       this._whitelist = this.parseMergedRegex(this._whitelistSet);
@@ -121,14 +116,6 @@ class ContentFarmFilter {
     if (this._whitelist.test(hostname)) { return false; }
     if (this._blacklist.test(hostname)) { return true; }
     return false;
-  }
-
-  unblockTemp(url, time = 15000) {
-    let regex = this.parseRuleRegex(url);
-    this._whitelistTempSet.add(regex);
-    setTimeout(() => {
-      this._whitelistTempSet.delete(regex);
-    }, time);
   }
 
   parseRulesText(rulesText) {

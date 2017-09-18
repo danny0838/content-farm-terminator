@@ -79,13 +79,8 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
   var {cmd, args} = message;
   switch (cmd) {
     case 'isUrlBlocked': {
-      let blocked = filter.isBlocked(args.url, args.ignoreTemp);
+      let blocked = filter.isBlocked(args.url);
       sendResponse(blocked);
-      break;
-    }
-    case 'unblockTemp': {
-      filter.unblockTemp(args.hostname);
-      sendResponse(true);
       break;
     }
     case 'closeTab': {

@@ -66,7 +66,7 @@ function markContentFarmLink(elem) {
     return new Promise((resolve, reject) => {
       chrome.runtime.sendMessage({
         cmd: 'isUrlBlocked',
-        args: {url: hostname, ignoreTemp: true}
+        args: {url: hostname}
       }, resolve);
     }).then((isBlocked) => {
       if (isBlocked) {

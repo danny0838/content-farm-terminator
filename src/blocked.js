@@ -22,18 +22,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
   /**
    * Events
    */
-  document.querySelector('#continue').addEventListener('click', (event) => {
-    chrome.runtime.sendMessage({
-      cmd: 'unblockTemp',
-      args: {hostname: sourceUrlObj.hostname}
-    }, (response) => {
-      if (response) {
-        location.replace(sourceUrl);
-      }
-    });
-  });
-
-  document.querySelector('#continueNoAds').addEventListener('click', (event) => {
+  document.querySelector('#view').addEventListener('click', (event) => {
     let newUrl = `sandbox.html?src=${encodeURIComponent(sourceUrl)}`;
     location.replace(newUrl);
   });
