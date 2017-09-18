@@ -12,11 +12,11 @@
   },
   "title": {
     "message": "Beware of Content Farm!",
-    "description": "Title for stop page"
+    "description": "Title for blocked page"
   },
   "header": {
     "message": "You're entering a content farm",
-    "description": "Header of warning in stop page"
+    "description": "Header of warning in blocked page"
   },
   "body": {
     "message": "Continue? Back if you are annoyed with them.",
@@ -24,7 +24,7 @@
   },
   "details": {
     "message": "Revise blocklist",
-    "description": "Click to open options from stop page"
+    "description": "Click to open options from blocked page"
   },
   "backBtn": {
     "message": "Back",
@@ -42,7 +42,7 @@
   },
 
   "markTitle": {
-    "message": "This link targets content farm",
+    "message": "This link targets a content farm",
     "description": "Title and alt text for the image marker of a link targeting a content farm page."
   },
 

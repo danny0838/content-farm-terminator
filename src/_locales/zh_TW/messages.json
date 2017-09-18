@@ -12,11 +12,11 @@
   },
   "title": {
     "message": "小心內容農場",
-    "description": "Title for stop page"
+    "description": "Title for blocked page"
   },
   "header": {
     "message": "你即將進入內容農場",
-    "description": "Header of warning in stop page"
+    "description": "Header of warning in blocked page"
   },
   "body": {
     "message": "要繼續嗎？要是感到厭煩，放棄也是一種選擇啊。",
@@ -25,7 +25,7 @@
 
   "details": {
     "message": "調整封鎖名單",
-    "description": "Click to open options from stop page"
+    "description": "Click to open options from blocked page"
   },
 
   "backBtn": {
@@ -43,7 +43,7 @@
   },
 
   "markTitle": {
-    "message": "這個連結將連往內容農場",
+    "message": "此連結將前往內容農場",
     "description": "Title and alt text for the image marker of a link targeting a content farm page."
   },
 
