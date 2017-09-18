@@ -106,9 +106,7 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
 });
 
 chrome.storage.onChanged.addListener((changes, areaName) => {
-  if (areaName === 'sync') {
-    updateFilter();
-  }
+  updateFilter();
 });
 
 updateFilter();
