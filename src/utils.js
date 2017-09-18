@@ -67,6 +67,17 @@ utils.doctypeToString = function (doctype) {
   return ret;
 };
 
+utils.readFileAsDocument = function (blob) {
+  return new Promise((resolve, reject) => {
+    var xhr = new XMLHttpRequest();
+    xhr.responseType = "document";
+    xhr.onload = () => { resolve(xhr.response); }
+    xhr.onerror = () => { reject(new Error("Network request failed.")); }
+    xhr.open("GET", URL.createObjectURL(blob), true);
+    xhr.send();
+  });
+};
+
 class ContentFarmFilter {
   constructor() {
     this._blacklist;
