@@ -8,6 +8,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
   }).then((text) => {
     return new DOMParser().parseFromString(text, 'text/html');
   }).then((doc) => {
+    document.title = doc.title;
     Array.prototype.forEach.call(doc.querySelectorAll('img, iframe, applet, object, embed, audio, video, canvas, base'), (elem) => {
       elem.remove();
     });
