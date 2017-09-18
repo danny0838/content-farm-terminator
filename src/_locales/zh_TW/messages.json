@@ -6,7 +6,10 @@
     "message": "標示內容農場連結，並且防止不小心進入內容農場"
   },
 
-
+  "viewBlockedFrame": {
+    "message": "檢視被封鎖的頁面",
+    "description": "Text of the link of a blocked frame page"
+  },
   "title": {
     "message": "小心內容農場",
     "description": "Title for stop page"

@@ -6,7 +6,10 @@
     "message": "Marks content farm links and prevents the user from entering by accident"
   },
 
-
+  "viewBlockedFrame": {
+    "message": "View blocked page",
+    "description": "Text of the link of a blocked frame page"
+  },
   "title": {
     "message": "Beware of Content Farm!",
     "description": "Title for stop page"

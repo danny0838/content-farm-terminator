@@ -63,7 +63,7 @@ a {
 </style>
 </head>
 <body>
-<a href="${utils.escapeHtml(redirectUrl, false)}" target="_blank">View blocked page</a>
+<a href="${utils.escapeHtml(redirectUrl, false)}" target="_blank">${utils.lang("viewBlockedFrame")}</a>
 </body>
 </html>
 `;
