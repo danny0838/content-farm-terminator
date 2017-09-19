@@ -80,6 +80,7 @@ utils.readFileAsDocument = function (blob) {
 
 class ContentFarmFilter {
   constructor() {
+    this._listUpdated = true;
     this._blacklist;
     this._whitelist;
     this._blacklistSet = new Set();
@@ -91,6 +92,7 @@ class ContentFarmFilter {
       let ruleRegex = this.parseRuleRegex(ruleText);
       this._blacklistSet.add(ruleRegex);
     });
+    this._listUpdated = true;
   }
 
   addBlackListFromUrl(url) {
@@ -113,6 +115,7 @@ class ContentFarmFilter {
       let ruleRegex = this.parseRuleRegex(ruleText);
       this._whitelistSet.add(ruleRegex);
     });
+    this._listUpdated = true;
   }
 
   /**
@@ -120,9 +123,10 @@ class ContentFarmFilter {
    */
   isBlocked(url) {
     let hostname = (url.indexOf(":") !== -1) ? new URL(url).hostname : url;
-    if (typeof this._blacklist === "undefined") {
+    if (this._listUpdated) {
       this._blacklist = this.parseMergedRegex(this._blacklistSet);
       this._whitelist = this.parseMergedRegex(this._whitelistSet);
+      this._listUpdated = false;
     }
     if (this._whitelist.test(hostname)) { return false; }
     if (this._blacklist.test(hostname)) { return true; }
