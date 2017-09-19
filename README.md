@@ -29,4 +29,4 @@
 
 * [Chrome 擴充功能](https://chrome.google.com/webstore/detail/content-farm-terminator/lcghoajegeldpfkfaejegfobkapnemjl)
 
-* [Firefox 附加元件](https://danny0838.github.io/content-farm-terminator/files/firefox/latest.html)
+* [Firefox 附加元件](https://addons.mozilla.org/zh-tw/firefox/addon/content-farm-terminator/)
