@@ -36,6 +36,7 @@
 
   "content_scripts": [
     {
+      "all_frames": true,
       "matches": [
         "http://*/*",
         "https://*/*"
