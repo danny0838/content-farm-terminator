@@ -46,7 +46,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
       headElem.insertBefore(metaCharsetElem, headElem.firstChild);
 
       // pass document title to top frame
-      document.title = doc.title;
+      if (doc.title) { document.title = doc.title; }
 
       var html =  utils.doctypeToString(doc.doctype) + doc.documentElement.outerHTML;
       return new Blob([html], {type: 'text/html'});
