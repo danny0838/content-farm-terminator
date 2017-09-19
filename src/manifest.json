@@ -33,7 +33,8 @@
       "all_frames": true,
       "matches": [
         "http://*/*",
-        "https://*/*"
+        "https://*/*",
+        "file:///*"
       ],
       "js": [
         "utils.js",
