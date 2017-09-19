@@ -56,15 +56,9 @@ chrome.webRequest.onBeforeRequest.addListener((details) => {
 <html>
 <head>
 <meta charset="UTF-8">
-<style>
-a {
-background: no-repeat left/1em url("${utils.escapeHtml(chrome.runtime.getURL("img/content-farm-marker.svg"))}");
-padding-left: 1em;
-}
-</style>
 </head>
 <body>
-<a href="${utils.escapeHtml(redirectUrl, false)}" target="_blank">${utils.lang("viewBlockedFrame")}</a>
+<img src="${utils.escapeHtml(chrome.runtime.getURL("img/content-farm-marker.svg"))}" alt="" style="width: 1em;"><a href="${utils.escapeHtml(redirectUrl, false)}" target="_blank">${utils.lang("viewBlockedFrame")}</a>
 </body>
 </html>
 `;
