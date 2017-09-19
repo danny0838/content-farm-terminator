@@ -43,22 +43,23 @@ chrome.webRequest.onBeforeRequest.addListener((details) => {
   var url = details.url;
   if (filter.isBlocked(url)) {
     let redirectUrl = `${chrome.runtime.getURL('blocked.html')}?to=${encodeURIComponent(url)}`;
-    if (!_isFxBelow56) {
-      return {redirectUrl: redirectUrl};
-    } else {
-      // fix for bug in Firefox < 56
-      if (details.type === "main_frame") {
+    if (details.type === "main_frame") {
+      if (!_isFxBelow56) {
+        return {redirectUrl: redirectUrl};
+      } else {
+        // fix for bug in Firefox < 56
         chrome.tabs.update(details.tabId, {url: redirectUrl});
         return {cancel: true};
-      } else {
-        let html = `<!DOCTYPE html>
+      }
+    } else {
+      let html = `<!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
 <style>
 a {
-  background: no-repeat left/1em url("${utils.escapeHtml(chrome.runtime.getURL("img/content-farm-marker.svg"))}");
-  padding-left: 1em;
+background: no-repeat left/1em url("${utils.escapeHtml(chrome.runtime.getURL("img/content-farm-marker.svg"))}");
+padding-left: 1em;
 }
 </style>
 </head>
@@ -67,9 +68,8 @@ a {
 </body>
 </html>
 `;
-        let dataUrl = 'data:text/html;charset=UTF-8,' + encodeURIComponent(html);
-        return {redirectUrl: dataUrl};
-      }
+      let dataUrl = 'data:text/html;charset=UTF-8,' + encodeURIComponent(html);
+      return {redirectUrl: dataUrl};
     }
   }
 }, {urls: ["*://*/*"], types: ["main_frame", "sub_frame"]}, ["blocking"]);
