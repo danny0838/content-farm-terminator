@@ -115,6 +115,12 @@ function observeDomUpdates() {
           markContentFarmLink(node);
           ancObserver.observe(node, ancObserverConf);
         }
+        if (node.nodeType === 1) {
+          Array.prototype.forEach.call(node.querySelectorAll("a, area"), (elem) => {
+            markContentFarmLink(elem);
+            ancObserver.observe(elem, ancObserverConf);
+          });
+        }
       }
       for (let node of mutation.removedNodes) {
         if (isAnchor(node)) {
