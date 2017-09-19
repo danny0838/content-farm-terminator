@@ -13,15 +13,15 @@ function markContentFarmLink(elem) {
     return Promise.resolve().then(() => {
       // Google (mobile of no javascript)
       if (u.host.startsWith("www.google.com.") && u.pathname == "/url") {
-        let u = s.get("q") || s.get("url");
-        if (u) { return new URL(u).hostname; }
+        let url = s.get("q") || s.get("url");
+        if (url) { return new URL(url).hostname; }
       // Yahoo search
       } else if (u.host == "r.search.yahoo.com") {
         return new URL(decodeURIComponent(u.pathname.match(/\/RU=(.*?)\//)[1])).hostname;
       // Sina search
       } else if (u.host.startsWith("find.sina.com.") && u.pathname == "/sina_redirector.php") {
-        let u = s.get("url");
-        if (u) { return new URL(u).hostname; }
+        let url = s.get("url");
+        if (url) { return new URL(url).hostname; }
       // 百度
       } else if (docUrlObj.host == "www.baidu.com" && docUrlObj.pathname == "/s" &&
           u.host == "www.baidu.com" && u.pathname == "/link") {
@@ -48,8 +48,8 @@ function markContentFarmLink(elem) {
         } catch (ex) {}
       // 搜狗 mobile
       } else if (u.host == "m.sogou.com" && u.pathname.startsWith("/web/")) {
-        let u = s.get("url");
-        if (u) { return new URL(u).hostname; }
+        let url = s.get("url");
+        if (url) { return new URL(url).hostname; }
       }
     }).catch((ex) => {
       console.error(ex);
