@@ -8,9 +8,8 @@
 
   "applications": {
     "gecko": {
-      "id": "content-farm-terminator.beta@danny0838.addons.mozilla.org",
-      "strict_min_version": "48.0",
-      "update_url": "https://danny0838.github.io/content-farm-terminator/files/firefox/updates.json"
+      "id": "content-farm-terminator@danny0838.addons.mozilla.org",
+      "strict_min_version": "48.0"
     }
   },
 
