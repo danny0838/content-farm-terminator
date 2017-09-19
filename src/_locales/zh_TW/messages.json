@@ -71,7 +71,7 @@
   },
 
   "userBlacklistDesc": {
-    "message": "每行輸入一個想額外封鎖的網域，可使用萬用字元(*)",
+    "message": "想額外封鎖的網域名單，每行一個，可使用萬用字元(*)。輸入的網址會自動修正。",
     "description": "Description of Blacklist Field for options"
   },
 
@@ -91,7 +91,7 @@
   },
 
   "userWhitelistDesc": {
-    "message": "每行輸入一個想解除封鎖的網域，可使用萬用字元(*)",
+    "message": "想解除封鎖的網域名單，每行一個，可使用萬用字元(*)。輸入的網址會自動修正。",
     "description": "Description of Whitelist Field for options"
   },
 
