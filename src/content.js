@@ -50,6 +50,29 @@ function markContentFarmLink(elem) {
       } else if (u.host == "m.sogou.com" && u.pathname.startsWith("/web/")) {
         let url = s.get("url");
         if (url) { return new URL(url).hostname; }
+      // Facebook mobile
+      } else if (u.host == "lm.facebook.com" && u.pathname == "/l.php") {
+        let url = s.get("u");
+        if (url) { return new URL(url).hostname; }
+      // Twitter
+      } else if (docUrlObj.host == "twitter.com" && u.host == "t.co") {
+        let url = elem.getAttribute("data-expanded-url");
+        if (url) { return new URL(url).hostname; }
+      // Twitter mobile
+      } else if (docUrlObj.host == "mobile.twitter.com" && u.host == "t.co") {
+        try {
+          let refNode = elem.querySelector('span');
+          let url = refNode.textContent.match(/\(link: (.*?)\)/)[1];
+          return new URL(url).hostname;
+        } catch (ex) {}
+      // Instagram
+      } else if (u.host == "l.instagram.com" && u.pathname == "/") {
+        let url = s.get("u");
+        if (url) { return new URL(url).hostname; }
+      // Pocket
+      } else if (u.host == "getpocket.com" && u.pathname == "/redirect") {
+        let url = s.get("url");
+        if (url) { return new URL(url).hostname; }
       }
     }).catch((ex) => {
       console.error(ex);
