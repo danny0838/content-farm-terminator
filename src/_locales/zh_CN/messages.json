@@ -1,0 +1,112 @@
+{
+  "appName": {
+    "message": "终结内容农场"
+  },
+  "appDesc": {
+    "message": "标示内容农场连结，并且防止不小心进入内容农场"
+  },
+
+  "viewBlockedFrame": {
+    "message": "内容农场",
+    "description": "Text of the link of a blocked frame page"
+  },
+  "title": {
+    "message": "小心内容农场",
+    "description": "Title for blocked page"
+  },
+  "header": {
+    "message": "你即将进入内容农场",
+    "description": "Header of warning in blocked page"
+  },
+  "body": {
+    "message": "要继续吗？若是感到厌烦，放弃也是一种选择啊。",
+    "description": "Body of warning message"
+  },
+
+  "details": {
+    "message": "详情",
+    "description": "Click to open options from blocked page"
+  },
+  "detailsTitle": {
+    "message": "进入选项页面修改封锁名单。",
+    "description": "Details buttnon title"
+  },
+
+  "backBtn": {
+    "message": "返回",
+    "description": "Back button text"
+  },
+  "backBtnTitle": {
+    "message": "回上一页，远离垃圾！",
+    "description": "Back button title"
+  },
+
+  "viewBtn": {
+    "message": "检视",
+    "description": "View button text"
+  },
+  "viewBtnTitle": {
+    "message": "检视处理过的页面内容，封锁图片、多媒体、内嵌程式码等内容。这不会为原站台带来广告收益。",
+    "description": "View button title"
+  },
+
+  "markTitle": {
+    "message": "此连结将前往内容农场",
+    "description": "Title and alt text for the image marker of a link targeting a content farm page."
+  },
+
+  "systemBlacklist": {
+    "message": "系统黑名单",
+    "description": "Field Label for options"
+  },
+
+  "systemBlacklistDesc": {
+    "message": "系统内建黑名单 (只读)",
+    "description": "Description of Blacklist Field for options"
+  },
+
+  "userBlacklist": {
+    "message": "自订黑名单",
+    "description": "Field Label for options"
+  },
+
+  "userBlacklistDesc": {
+    "message": "想额外封锁的网域名单，每行一个，可使用通配符(*)。输入网址会自动修正。",
+    "description": "Description of Blacklist Field for options"
+  },
+
+  "webBlacklist": {
+    "message": "网络黑名单",
+    "description": "Field Label for options"
+  },
+
+  "webBlacklistDesc": {
+    "message": "网络黑名单的网址，每行一个，系统会自动前往取得及导入黑名单",
+    "description": "Description of Web Blacklist Field for options"
+  },
+
+  "userWhitelist": {
+    "message": "自订白名单",
+    "description": "Field Label for options"
+  },
+
+  "userWhitelistDesc": {
+    "message": "想解除封锁的网域名单，每行一个，可使用通配符(*)。输入网址会自动修正。",
+    "description": "Description of Whitelist Field for options"
+  },
+
+  "report": {
+    "message": "举报内容农场",
+    "description": "Report button"
+  },
+
+  "reportUrl": {
+    "message": "https://goo.gl/forms/4nsmTmGjJUzQtr0p1",
+    "description": "Target URL of Report button"
+  },
+
+  "save": {
+    "message": "保存",
+    "description": "Save Button"
+  }
+}
