@@ -2,6 +2,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
   utils.loadLanguages(document);
 
   var url = new URL(location.href).searchParams.get('src');
+  var hash = new URL(url).hash;
 
   fetch(url, {credentials: 'include'}).then((response) => {
     return response.blob();
@@ -52,7 +53,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
       return new Blob([html], {type: 'text/html'});
     });
   }).then((blob) => {
-    let blobUrl = URL.createObjectURL(blob);
+    let blobUrl = URL.createObjectURL(blob) + hash;
     let frame = document.querySelector('#viewer');
     let parent = frame.parentNode;
     let next = frame.nextSibling;
