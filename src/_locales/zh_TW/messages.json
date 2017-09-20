@@ -95,6 +95,16 @@
     "description": "Description of Whitelist Field for options"
   },
 
+  "report": {
+    "message": "舉報內容農場",
+    "description": "Report button"
+  },
+
+  "reportUrl": {
+    "message": "https://goo.gl/forms/4nsmTmGjJUzQtr0p1",
+    "description": "Target URL of Report button"
+  },
+
   "save": {
     "message": "儲存",
     "description": "Save Button"

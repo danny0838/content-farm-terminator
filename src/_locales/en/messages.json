@@ -94,6 +94,16 @@
     "description": "Description of Whitelist Field for options"
   },
 
+  "report": {
+    "message": "Report a content farm.",
+    "description": "Report button"
+  },
+
+  "reportUrl": {
+    "message": "https://goo.gl/forms/z0tI8JdOWZJmZjqv1",
+    "description": "Target URL of Report button"
+  },
+
   "save": {
     "message": "SAVE",
     "description": "Save Button"
