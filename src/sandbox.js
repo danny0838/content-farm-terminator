@@ -1,8 +1,10 @@
 document.addEventListener('DOMContentLoaded', (event) => {
   utils.loadLanguages(document);
 
+  var frame = document.querySelector('#viewer');
+  var loading = document.querySelector('#loading');
+
   var url = new URL(location.href).searchParams.get('src');
-  var hash = new URL(url).hash;
 
   fetch(url, {credentials: 'include'}).then((response) => {
     return response.blob();
@@ -53,12 +55,16 @@ document.addEventListener('DOMContentLoaded', (event) => {
       return new Blob([html], {type: 'text/html'});
     });
   }).then((blob) => {
-    let blobUrl = URL.createObjectURL(blob) + hash;
-    let frame = document.querySelector('#viewer');
+    let blobUrl = URL.createObjectURL(blob) + new URL(url).hash;
     let parent = frame.parentNode;
     let next = frame.nextSibling;
     parent.removeChild(frame);
     frame.src = blobUrl;
     parent.insertBefore(frame, next);
+  }).catch((ex) => {
+    console.error(ex);
+  }).then(() => {
+    loading.style.display = "none";
+    frame.style.display = "block";
   });
 });
