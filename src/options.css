@@ -1,86 +1,72 @@
-body {
-  background-color: #ffffff;
-  color: rgba(0,0,0,0.87);
-  font-family: helvetica, arial, sans-serif;
-  font-size: 18px;
-}
-
-.content {
-  display: block;
-  width: 50%;
-  margin: 46px auto;
-  min-width: 720px;
-}
-
-h1, h2 {
+html {
   font-size: 16px;
-  font-weight: normal;
 }
 
-.header h1 {
-  font-weight: bold;
-  display: inline-block;
-  font-size: 20px;
-  padding: 0;
-  vertical-align: middle;
+body {
+  box-sizing: border-box;
+  margin: auto;
+  padding: 20px;
+  width: 80%;
+  min-width: 700px;
+  font-size: 1rem;
 }
 
 .header img {
-  padding-left: 16px;
-  padding-right: 18px;
   display: inline-block;
-  width: 46px;
-  height: 46px;
+  margin-right: .5rem;
+  width: 3rem;
+  height: 3rem;
   vertical-align: middle;
 }
 
-.subheader h1 {
-  -webkit-transition: background .1s linear;
-  transition: background .1s linear;
-  vertical-align: middle;
-  opacity: 0.54;
-  margin: 0 0 0 18px;
+.header h1 {
+  display: inline-block;
+  margin: 1rem 0;
   padding: 0;
+  vertical-align: middle;
+  font-size: 1.5rem;
+}
+
+.header span {
+  opacity: 0.6;
 }
 
 .field {
-  padding: 0 0 0 18px;
+  box-sizing: border-box;
+  margin: 1.75rem 0 0 0;
+  padding: 0;
   overflow: hidden;
-  margin: 9px 0 0 0;
 }
 
-
 .fieldLabel {
-  box-sizing: border-box;
-  width: 32%;
   float: left;
-  margin-top: 18px;
-  padding-right: 8px;
+  box-sizing: border-box;
+  padding-right: .5rem;
+  width: 32%;
 }
 
 .fieldLabel h2 {
-  font-weight: bold;
-  margin: 0 0 9px 0;
+  margin: 0 0 .5rem 0;
+  font-size: 1.125rem;
 }
 
 .fieldLabel span {
-  font-size: 14px;
-  opacity: 0.54;
+  font-size: 1rem;
+  opacity: 0.6;
 }
 
 .fieldset {
-  width: 68%;
   float: right;
-  margin-top: 18px;
+  box-sizing: border-box;
+  width: 68%;
 }
 
 .fieldset textarea {
   box-sizing: border-box;
   width: 100%;
   height: 144px;
-  font-size: 14px;
-  line-height: 18px;
   resize: vertical;
+  font-size: .875rem;
 }
 
 textarea[readonly] {
@@ -89,20 +75,35 @@ textarea[readonly] {
 
 .submit {
   display: inline-block;
-  text-decoration: none;
-  border: 1px solid #C1C1C1;
-  background-color: #FBFBFB;
-  border-radius: 2px;
-  padding: 10px 14px;
-  color: #333333;
-  font-size: 14px;
-  text-align: center;
-  text-transform: uppercase;
-  transition: background .1s linear;
-  width: 50px;
   float: right;
+  border: 1px solid #C1C1C1;
+  border-radius: 5px;
+  padding: 10px 14px;
+  width: 50px;
+  background-color: #EEEEEE;
+  text-align: center;
+  text-decoration: none;
+  color: #333333;
+  font-size: 1rem;
+  text-transform: uppercase;
 }
 
 .submit:hover {
   background-color: #EBEBEB;
+}
+
+
+@media screen and (max-width: 720px) {
+  body {
+    width: 100%;
+    min-width: initial;
+  }
+  .fieldLabel {
+    padding: 0;
+    width: 100%;
+  }
+  .fieldset {
+    margin-top: 9px;
+    width: 100%;
+  }
 }

@@ -2,6 +2,7 @@
 <html dir="__MSG_@@bidi_dir__">
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
 <link rel="shortcut icon" href="img/content-farm-marker_48.png">
 <link rel="stylesheet" href="options.css">
 <script src="utils.js"></script>
@@ -10,8 +11,10 @@
 </head>
 <body>
 <div class="content">
-  <div class="header"><img src="img/content-farm-marker.svg"><h1 id="appNameLabel">__MSG_appName__</h1></div>
-  <div class="subheader"><h1 id="appDescLabel">__MSG_appDesc__</h1></div>
+  <div class="header">
+    <div><img src="img/content-farm-marker.svg"><h1 id="appNameLabel">__MSG_appName__</h1></div>
+    <div><span id="appDescLabel">__MSG_appDesc__</span></div>
+  </div>
 
   <div class="options">
     <div id="systemBlacklist" class="field">
@@ -54,12 +57,8 @@
       </div>
     </div>
 
-    <div id="blankField" class="field">
-      <h2></h2>
-
-      <div class="fieldset">
-        <a id="submitButton" class="submit" href="#">__MSG_save__</a>
-      </div>
+    <div class="field">
+      <a id="submitButton" class="submit" href="#">__MSG_save__</a>
     </div>
   </div>
 </div>
