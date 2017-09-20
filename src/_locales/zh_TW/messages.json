@@ -46,7 +46,7 @@
     "description": "View button text"
   },
   "viewBtnTitle": {
-    "message": "檢視程式處理過的頁面內容，封鎖圖片、多媒體、內嵌程式碼等內容。這不會為原站台帶來廣告收益。",
+    "message": "檢視處理過的頁面內容，封鎖圖片、多媒體、內嵌程式碼等內容。這不會為原站台帶來廣告收益。",
     "description": "View button title"
   },
 
@@ -71,7 +71,7 @@
   },
 
   "userBlacklistDesc": {
-    "message": "想額外封鎖的網域名單，每行一個，可使用萬用字元(*)。輸入的網址會自動修正。",
+    "message": "想額外封鎖的網域名單，每行一個，可使用萬用字元(*)。輸入網址會自動修正。",
     "description": "Description of Blacklist Field for options"
   },
 
@@ -91,7 +91,7 @@
   },
 
   "userWhitelistDesc": {
-    "message": "想解除封鎖的網域名單，每行一個，可使用萬用字元(*)。輸入的網址會自動修正。",
+    "message": "想解除封鎖的網域名單，每行一個，可使用萬用字元(*)。輸入網址會自動修正。",
     "description": "Description of Whitelist Field for options"
   },
 
