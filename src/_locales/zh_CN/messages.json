@@ -3,7 +3,7 @@
     "message": "终结内容农场"
   },
   "appDesc": {
-    "message": "标示内容农场连结，并且防止不小心进入内容农场"
+    "message": "标记内容农场链接，并且防止不小心进入内容农场"
   },
 
   "viewBlockedFrame": {
@@ -28,7 +28,7 @@
     "description": "Click to open options from blocked page"
   },
   "detailsTitle": {
-    "message": "进入选项页面修改封锁名单。",
+    "message": "进入选项页面修改屏蔽名单。",
     "description": "Details buttnon title"
   },
 
@@ -42,16 +42,16 @@
   },
 
   "viewBtn": {
-    "message": "检视",
+    "message": "查看",
     "description": "View button text"
   },
   "viewBtnTitle": {
-    "message": "检视处理过的页面内容，封锁图片、多媒体、内嵌程式码等内容。这不会为原站台带来广告收益。",
+    "message": "查看处理过的页面内容，屏蔽图片、多媒体、内嵌脚本等内容。这不会为原站点带来广告收益。",
     "description": "View button title"
   },
 
   "markTitle": {
-    "message": "此连结将前往内容农场",
+    "message": "此链接将前往内容农场",
     "description": "Title and alt text for the image marker of a link targeting a content farm page."
   },
 
@@ -61,17 +61,17 @@
   },
 
   "systemBlacklistDesc": {
-    "message": "系统内建黑名单 (只读)",
+    "message": "系统内置黑名单 (只读)",
     "description": "Description of Blacklist Field for options"
   },
 
   "userBlacklist": {
-    "message": "自订黑名单",
+    "message": "自定义黑名单",
     "description": "Field Label for options"
   },
 
   "userBlacklistDesc": {
-    "message": "想额外封锁的网域名单，每行一个，可使用通配符(*)。输入网址会自动修正。",
+    "message": "想额外封锁的网站名单，每行一个，可使用通配符(*)。输入网址会自动修正。",
     "description": "Description of Blacklist Field for options"
   },
 
@@ -81,17 +81,17 @@
   },
 
   "webBlacklistDesc": {
-    "message": "网络黑名单的网址，每行一个，系统会自动前往取得及导入黑名单",
+    "message": "网络黑名单的网址，每行一个，系统会自动前往获取及导入黑名单",
     "description": "Description of Web Blacklist Field for options"
   },
 
   "userWhitelist": {
-    "message": "自订白名单",
+    "message": "自定义白名单",
     "description": "Field Label for options"
   },
 
   "userWhitelistDesc": {
-    "message": "想解除封锁的网域名单，每行一个，可使用通配符(*)。输入网址会自动修正。",
+    "message": "想解除封锁的网址名单，每行一个，可使用通配符(*)。输入网址会自动修正。",
     "description": "Description of Whitelist Field for options"
   },
 
