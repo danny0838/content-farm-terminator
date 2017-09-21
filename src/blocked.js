@@ -28,7 +28,6 @@ document.addEventListener('DOMContentLoaded', (event) => {
   });
 
   document.querySelector('#back').addEventListener('click', (event) => {
-    console.warn(history.length);
     if (history.length > 1) {
       history.go(-1);
     } else {
@@ -40,7 +39,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
 });
 
 chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
-  console.warn("omMessage", message);
+  // console.warn("omMessage", message);
   var {cmd, args} = message;
   switch (cmd) {
     case 'updateContent': {
