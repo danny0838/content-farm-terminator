@@ -11,8 +11,8 @@ function markContentFarmLink(elem) {
 
     // fix redirects by search engine or social network
     return Promise.resolve().then(() => {
-      // Google (mobile of no javascript)
-      if (u.host.startsWith("www.google.com.") && u.pathname == "/url") {
+      // Google
+      if ((u.host.startsWith("www.google.com.") || u.host == "www.google.com") && u.pathname == "/url") {
         let url = s.get("q") || s.get("url");
         if (url) { return new URL(url).hostname; }
       // Yahoo search
