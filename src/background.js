@@ -19,7 +19,7 @@ function updateFilter() {
     filter = new ContentFarmFilter();
     filter.addBlackList(lists.userBlacklist);
     filter.addWhiteList(lists.userWhitelist);
-    let tasks = filter.rulesTextToLines(lists.webBlacklist).map((url) => {
+    let tasks = filter.urlsTextToLines(lists.webBlacklist).map((url) => {
       return filter.addBlackListFromUrl(url);
     });
     tasks.push(filter.addBuiltinBlackList());
@@ -117,7 +117,13 @@ if (chrome.browserAction) {
 }
 
 chrome.storage.onChanged.addListener((changes, areaName) => {
-  updateFilter();
+  if (areaName === "sync") {
+    updateFilter().then(() => {
+      if (changes.webBlacklist) {
+        filter.clearStaleWebListCache(changes.webBlacklist);
+      }
+    });
+  }
 });
 
 updateFilter();

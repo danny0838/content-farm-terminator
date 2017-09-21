@@ -58,6 +58,12 @@ utils.escapeRegExp = function (str) {
   return str.replace(/([\*\+\?\.\^\/\$\\\|\[\]\{\}\(\)])/g, "\\$1");
 };
 
+utils.splitUrlByAnchor = function (url) {
+  var pos = url.indexOf("#");
+  if (pos !== -1) { return [url.slice(0, pos), url.slice(pos)]; }
+  return [url, ""];
+};
+
 utils.doctypeToString = function (doctype) {
   if (!doctype) { return ""; }
   var ret = "<!DOCTYPE " + doctype.name;
@@ -95,9 +101,23 @@ class ContentFarmFilter {
     this._listUpdated = true;
   }
 
-  addBlackListFromUrl(url) {
-    return fetch(url, {credentials: 'include'}).then((response) => {
-      return response.text();
+  /**
+   * @param {string} url - a URL with hash stripped
+   */
+  addBlackListFromUrl(url, noCache = false) {
+    return this.getWebListCache(url).then((text) => {
+      if (typeof text !== "undefined") { return text; }
+      var time = Date.now();
+      return fetch(url, {credentials: 'include'}).then((response) => {
+        return response.text();
+      }).then((text) => {
+        if (noCache) { return text; }
+        return this.setWebListCache(url, time, text).then(() => {
+          return text;
+        });
+      }).catch((ex) => {
+        return "";
+      });
     }).then((text) => {
       this.addBlackList(this.validateRulesText(text));
     }).catch((ex) => {
@@ -107,7 +127,7 @@ class ContentFarmFilter {
 
   addBuiltinBlackList() {
     let url = chrome.runtime.getURL('blacklist.txt');
-    return this.addBlackListFromUrl(url);
+    return this.addBlackListFromUrl(url, true);
   }
 
   addWhiteList(listText) {
@@ -132,6 +152,10 @@ class ContentFarmFilter {
     if (this._whitelist.test(hostname)) { return false; }
     if (this._blacklist.test(hostname)) { return true; }
     return false;
+  }
+
+  urlsTextToLines(urlsText) {
+    return (urlsText || "").split(/\n|\r\n?/).map(x => utils.splitUrlByAnchor(x)[0]).filter(x => !!x.trim());
   }
 
   rulesTextToLines(rulesText) {
@@ -163,5 +187,65 @@ class ContentFarmFilter {
 
   getMergedRegex(regexSet) {
     return new RegExp('^(?:www\.)?(?:' + Array.from(regexSet).join('|') + ')$');
+  }
+
+  webListCacheKey(url) {
+    return JSON.stringify({webBlocklistCache:url});
+  }
+
+  getWebListCache(url) {
+    return new Promise((resolve, reject) => {
+      var key = this.webListCacheKey(url);
+      chrome.storage.local.get(key, (result) => {
+        if (chrome.runtime.lastError) {
+          reject(chrome.runtime.lastError);
+        } else {
+          resolve(result[key]);
+        }
+      });
+    }).then((data) => {
+      if (data) {
+        var {time, rulesText} = data;
+        // cache expires in 1 day
+        if (Date.now() - time < 1 * 24 * 60 * 60 * 1000) {
+          return rulesText;
+        }
+      }
+    }).catch((ex) => {
+      console.error(ex);
+    });
+  }
+
+  setWebListCache(url, time, rulesText) {
+    return new Promise((resolve, reject) => {
+      var items = {};
+      items[this.webListCacheKey(url)] = {time, rulesText};
+      chrome.storage.local.set(items, () => {
+        if (chrome.runtime.lastError) {
+          reject(chrome.runtime.lastError);
+        } else {
+          resolve();
+        }
+      });
+    }).catch((ex) => {
+      console.error(ex);
+    });
+  }
+
+  clearStaleWebListCache(webListChange) {
+    return new Promise((resolve, reject) => {
+      var {newValue, oldValue} = webListChange;
+      var urlSet = new Set(filter.urlsTextToLines(newValue));
+      var deletedUrls = filter.urlsTextToLines(oldValue).filter(u => !urlSet.has(u));
+      chrome.storage.local.remove(deletedUrls.map(u => this.webListCacheKey(u)), () => {
+        if (chrome.runtime.lastError) {
+          reject(chrome.runtime.lastError);
+        } else {
+          resolve();
+        }
+      });
+    }).catch((ex) => {
+      console.error(ex);
+    });
   }
 }
