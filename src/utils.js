@@ -137,6 +137,24 @@ class ContentFarmFilter {
     return (rulesText || "").split(/\n|\r\n?/).filter(x => !!x.trim());
   }
 
+  validateRulesText(rulesText) {
+    return (rulesText || "").split(/\n|\r\n?/).map((ruleText) => {
+      if (!ruleText) { return ""; }
+      try {
+        // escape "*" to make a valid URL
+        var t = ruleText.replace(/x/g, "xx").replace(/\*/g, "xa");
+        // add a scheme if none to make a valid URL
+        if (!/^[A-Za-z][0-9A-za-z+\-.]*:\/\//.test(t)) { t = "http://" + t; }
+        // get hostname
+        t = new URL(t).hostname;
+        // unescape and remove "www."
+        t = t.replace(/x[xa]/g, m => ({xx: "x", xa: "*"})[m]).replace(/^www\./, "");
+        return t;
+      } catch (ex) {}
+      return "";
+    }).join("\n");
+  }
+
   ruleTextToRegex(ruleText) {
     return utils.escapeRegExp(ruleText).replace(/\\\*/g, "[^/]*");
   }
