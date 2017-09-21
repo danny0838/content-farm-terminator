@@ -81,7 +81,7 @@
   },
 
   "webBlacklistDesc": {
-    "message": "网络黑名单的网址，每行一个，系统会自动前往获取及导入黑名单",
+    "message": "网络黑名单的网址，每行一个，系统会自动前往获取及导入黑名单。",
     "description": "Description of Web Blacklist Field for options"
   },
 
