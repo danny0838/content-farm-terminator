@@ -88,8 +88,8 @@ class ContentFarmFilter {
   }
 
   addBlackList(listText) {
-    this.parseRulesText(listText).forEach((ruleText) => {
-      let ruleRegex = this.parseRuleRegex(ruleText);
+    this.rulesTextToLines(listText).forEach((ruleText) => {
+      let ruleRegex = this.ruleTextToRegex(ruleText);
       this._blacklistSet.add(ruleRegex);
     });
     this._listUpdated = true;
@@ -111,8 +111,8 @@ class ContentFarmFilter {
   }
 
   addWhiteList(listText) {
-    this.parseRulesText(listText).forEach((ruleText) => {
-      let ruleRegex = this.parseRuleRegex(ruleText);
+    this.rulesTextToLines(listText).forEach((ruleText) => {
+      let ruleRegex = this.ruleTextToRegex(ruleText);
       this._whitelistSet.add(ruleRegex);
     });
     this._listUpdated = true;
@@ -124,8 +124,8 @@ class ContentFarmFilter {
   isBlocked(url) {
     let hostname = (url.indexOf(":") !== -1) ? new URL(url).hostname : url;
     if (this._listUpdated) {
-      this._blacklist = this.parseMergedRegex(this._blacklistSet);
-      this._whitelist = this.parseMergedRegex(this._whitelistSet);
+      this._blacklist = this.getMergedRegex(this._blacklistSet);
+      this._whitelist = this.getMergedRegex(this._whitelistSet);
       this._listUpdated = false;
     }
     if (this._whitelist.test(hostname)) { return false; }
@@ -133,15 +133,15 @@ class ContentFarmFilter {
     return false;
   }
 
-  parseRulesText(rulesText) {
+  rulesTextToLines(rulesText) {
     return (rulesText || "").split(/\n|\r\n?/).filter(x => !!x.trim());
   }
 
-  parseRuleRegex(ruleText) {
+  ruleTextToRegex(ruleText) {
     return utils.escapeRegExp(ruleText).replace(/\\\*/g, "[^/]*");
   }
 
-  parseMergedRegex(regexSet) {
+  getMergedRegex(regexSet) {
     return new RegExp('^(?:www\.)?(?:' + Array.from(regexSet).join('|') + ')$');
   }
 }
