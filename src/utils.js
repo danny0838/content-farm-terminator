@@ -99,7 +99,7 @@ class ContentFarmFilter {
     return fetch(url, {credentials: 'include'}).then((response) => {
       return response.text();
     }).then((text) => {
-      this.addBlackList(text);
+      this.addBlackList(this.validateRulesText(text));
     }).catch((ex) => {
       console.error(ex);
     });
