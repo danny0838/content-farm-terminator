@@ -73,6 +73,10 @@ function markContentFarmLink(elem) {
       } else if (u.host == "getpocket.com" && u.pathname == "/redirect") {
         let url = s.get("url");
         if (url) { return new URL(url).hostname; }
+      // 巴哈姆特
+      } else if (u.host == "ref.gamer.com.tw" && u.pathname == "/redir.php") {
+        let url = s.get("url");
+        if (url) { return new URL(url).hostname; }
       }
     }).catch((ex) => {
       console.error(ex);
