@@ -78,14 +78,19 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
       break;
     }
     case 'closeTab': {
-      new Promise((resolve, reject) => {
-        chrome.tabs.query({
-          active: true,
-          currentWindow: true
-        }, resolve);
-      }).then((tabs) => {
+      Promise.resolve().then(() => {
+        if (args.tabId) { return [args.tabId]; }
         return new Promise((resolve, reject) => {
-          chrome.tabs.remove(tabs.map(x => x.id), resolve);
+          chrome.tabs.query({
+            active: true,
+            currentWindow: true
+          }, resolve);
+        }).then((tabs) => {
+          return tabs.map(x => x.id);
+        });
+      }).then((tabIds) => {
+        return new Promise((resolve, reject) => {
+          chrome.tabs.remove(tabIds, resolve);
         });
       });
       sendResponse(true);

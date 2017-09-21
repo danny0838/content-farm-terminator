@@ -31,8 +31,11 @@ document.addEventListener('DOMContentLoaded', (event) => {
     if (history.length > 1) {
       history.go(-1);
     } else {
-      chrome.runtime.sendMessage({
-        cmd: 'closeTab'
+      chrome.tabs.getCurrent((tab) => {
+        chrome.runtime.sendMessage({
+          cmd: 'closeTab',
+          args: {tabId: tab.id}
+        });
       });
     }
   });
