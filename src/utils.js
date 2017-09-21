@@ -123,6 +123,7 @@ class ContentFarmFilter {
    */
   isBlocked(url) {
     let hostname = (url.indexOf(":") !== -1) ? new URL(url).hostname : url;
+    hostname = punycode.toUnicode(hostname);
     if (this._listUpdated) {
       this._blacklist = this.getMergedRegex(this._blacklistSet);
       this._whitelist = this.getMergedRegex(this._whitelistSet);
@@ -149,6 +150,7 @@ class ContentFarmFilter {
         t = new URL(t).hostname;
         // unescape and remove "www."
         t = t.replace(/x[xa]/g, m => ({xx: "x", xa: "*"})[m]).replace(/^www\./, "");
+        t = punycode.toUnicode(t);
         return t;
       } catch (ex) {}
       return "";

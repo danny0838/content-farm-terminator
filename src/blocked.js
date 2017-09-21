@@ -17,7 +17,7 @@ function recheckBlock() {
 document.addEventListener('DOMContentLoaded', (event) => {
   utils.loadLanguages(document);
 
-  document.querySelector('#warningUrl').textContent = sourceUrlObj.hostname;
+  document.querySelector('#warningUrl').textContent = punycode.toUnicode(sourceUrlObj.hostname);
 
   /**
    * Events

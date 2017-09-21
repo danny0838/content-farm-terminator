@@ -30,6 +30,7 @@
 
   "background": {
     "scripts": [
+      "lib/punycode.js",
       "utils.js",
       "background.js"
     ]
