@@ -66,11 +66,13 @@ function updateLinkMarker(elem) {
         // 搜狗
         else if (h === "www.sogou.com") {
           if (p.startsWith("/link")) {
-            if (docHostname === "www.sogou.com" && docPathname === "/sogou") {
-              try {
-                let refNode = elem.closest('div.vrwrap, div.rb').querySelector('cite');
-                return refNode.textContent.replace(/^.*? - /, "").replace(/[\/ \xA0][\s\S]*$/, "");
-              } catch (ex) {}
+            if (docHostname === "www.sogou.com") {
+              if (docPathname === "/web" || docPathname === "/sogou" ) {
+                try {
+                  let refNode = elem.closest('div.vrwrap, div.rb').querySelector('cite');
+                  return refNode.textContent.replace(/^.*? - /, "").replace(/[\/ \xA0][\s\S]*$/, "");
+                } catch (ex) {}
+              }
             }
           }
         }
