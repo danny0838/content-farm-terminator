@@ -26,63 +26,100 @@ function updateLinkMarker(elem) {
         let s = u.searchParams;
         
         // Google
-        if ((h.startsWith("www.google.com.") || h == "www.google.com") && p == "/url") {
-          return s.get("q") || s.get("url");
+        if (h.startsWith("www.google.com.") || h === "www.google.com") {
+          if (p === "/url") {
+            return s.get("q") || s.get("url");
+          }
+        }
         // Yahoo search
-        } else if (h == "r.search.yahoo.com") {
+        else if (h === "r.search.yahoo.com") {
           return decodeURIComponent(p.match(/\/RU=(.*?)\//)[1]);
+        }
         // Sina search
-        } else if (h.startsWith("find.sina.com.") && p == "/sina_redirector.php") {
-          return s.get("url");
+        else if (h.startsWith("find.sina.com.")) {
+          if (p === "/sina_redirector.php") {
+            return s.get("url");
+          }
+        }
         // 百度
-        } else if (docHostname == "www.baidu.com" && docPathname == "/s" && h == "www.baidu.com" && p == "/link") {
-          try {
-            let refNode = elem.closest('div.result').querySelector('a.c-showurl');
-            let hostname = refNode.textContent.replace(/^\w+:\/+/, "").replace(/\/.*$/, "");
-            return hostname;
-          } catch (ex) {}
+        else if (h === "www.baidu.com") {
+          if (p === "/link") {
+            if (docHostname === "www.baidu.com" && docPathname === "/s") {
+              try {
+                let refNode = elem.closest('div.result').querySelector('a.c-showurl');
+                return refNode.textContent.replace(/^\w+:\/+/, "").replace(/\/.*$/, "");
+              } catch (ex) {}
+            }
+          }
+        }
         // 百度 mobile
-        } else if (docHostname == "m.baidu.com" && docPathname == "/s" && h == "m.baidu.com" && p.startsWith("/from=0/")) {
-          try {
-            let refNode = elem.closest('div.c-container').querySelector('div.c-showurl span.c-showurl');
-            let hostname = refNode.textContent.replace(/^\w+:\/+/, "").replace(/\/.*$/, "");
-            return hostname;
-          } catch (ex) {}
+        else if (h === "m.baidu.com") {
+          if (p.startsWith("/from=0/")) {
+            if (docHostname === "m.baidu.com" && docPathname === "/s") {
+              try {
+                let refNode = elem.closest('div.c-container').querySelector('div.c-showurl span.c-showurl');
+                return refNode.textContent.replace(/^\w+:\/+/, "").replace(/\/.*$/, "");
+              } catch (ex) {}
+            }
+          }
+        }
         // 搜狗
-        } else if (docHostname == "www.sogou.com" && docPathname == "/sogou" && h == "www.sogou.com" && p.startsWith("/link")) {
-          try {
-            let refNode = elem.closest('div.vrwrap, div.rb').querySelector('cite');
-            let hostname = refNode.textContent.replace(/^.*? - /, "").replace(/[\/ \xA0][\s\S]*$/, "");
-            return hostname;
-          } catch (ex) {}
+        else if (h === "www.sogou.com") {
+          if (p.startsWith("/link")) {
+            if (docHostname === "www.sogou.com" && docPathname === "/sogou") {
+              try {
+                let refNode = elem.closest('div.vrwrap, div.rb').querySelector('cite');
+                return refNode.textContent.replace(/^.*? - /, "").replace(/[\/ \xA0][\s\S]*$/, "");
+              } catch (ex) {}
+            }
+          }
+        }
         // 搜狗 mobile
-        } else if (h == "m.sogou.com" && p.startsWith("/web/")) {
-          return s.get("url");
+        else if (h === "m.sogou.com") {
+          if (p.startsWith("/web/")) {
+            return s.get("url");
+          }
+        }
         // Facebook mobile
-        } else if (h == "lm.facebook.com" && p == "/l.php") {
-          return s.get("u");
-        // Twitter
-        } else if (docHostname == "twitter.com" && h == "t.co") {
-          return elem.getAttribute("data-expanded-url");
-        // Twitter mobile
-        } else if (docHostname == "mobile.twitter.com" && h == "t.co") {
-          try {
-            let refNode = elem.querySelector('span');
-            let url = refNode.textContent.match(/\(link: (.*?)\)/)[1];
-            return url;
-          } catch (ex) {}
+        else if (h === "lm.facebook.com") {
+          if (p === "/l.php") {
+            return s.get("u");
+          }
+        }
+        // Twitter / Twitter mobile
+        else if (h === "t.co") {
+          if (docHostname === "twitter.com") {
+            return elem.getAttribute("data-expanded-url");
+          } else if (docHostname === "mobile.twitter.com") {
+            try {
+              let refNode = elem.querySelector('span');
+              return refNode.textContent.match(/\(link: (.*?)\)/)[1];
+            } catch (ex) {}
+          }
+        }
         // Disqus
-        } else if (h == "disq.us" && p == "/") {
-          return s.get("url");
+        else if (h === "disq.us") {
+          if (p === "/") {
+            return s.get("url");
+          }
+        }
         // Instagram
-        } else if (h == "l.instagram.com" && p == "/") {
-          return s.get("u");
+        else if (h === "l.instagram.com") {
+          if (p === "/") {
+            return s.get("u");
+          }
+        }
         // Pocket
-        } else if (h == "getpocket.com" && p == "/redirect") {
-          return s.get("url");
+        else if (h === "getpocket.com") {
+          if (p === "/redirect") {
+            return s.get("url");
+          }
+        }
         // 巴哈姆特
-        } else if (h == "ref.gamer.com.tw" && p == "/redir.php") {
-          return s.get("url");
+        else if (h === "ref.gamer.com.tw") {
+          if (p === "/redir.php") {
+            return s.get("url");
+          }
         }
       }).then((urlOrHostname) => {
         if (urlOrHostname) {
