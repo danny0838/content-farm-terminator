@@ -71,6 +71,9 @@ function updateLinkMarker(elem) {
             let url = refNode.textContent.match(/\(link: (.*?)\)/)[1];
             return url;
           } catch (ex) {}
+        // Disqus
+        } else if (h == "disq.us" && p == "/") {
+          return s.get("url");
         // Instagram
         } else if (h == "l.instagram.com" && p == "/") {
           return s.get("u");
