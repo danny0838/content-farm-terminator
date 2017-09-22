@@ -103,7 +103,7 @@ textarea[readonly] {
     width: 100%;
   }
   .fieldset {
-    margin-top: 9px;
+    margin-top: .5rem;
     width: 100%;
   }
 }
