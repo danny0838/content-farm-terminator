@@ -1,129 +1,133 @@
 var docUrlObj = new URL(document.location.href);
+var docHostname = docUrlObj.hostname;
+var docPathname = docUrlObj.pathname;
 var anchorMarkerMap = new Map();
 
-function markContentFarmLink(elem) {
-  if (!elem.href) { return Promise.resolve(); }
-  let doc = elem.ownerDocument;
-
+function updateLinkMarker(elem) {
+  // console.warn("updateLinkMarker", elem);
   return Promise.resolve().then(() => {
+    if (!elem.parentNode || !elem.href) { return false; }
+
     let u = new URL(elem.href);
-    let s = u.searchParams;
+    let h = u.hostname;
 
-    // fix redirects by search engine or social network
-    return Promise.resolve().then(() => {
-      // Google
-      if ((u.host.startsWith("www.google.com.") || u.host == "www.google.com") && u.pathname == "/url") {
-        let url = s.get("q") || s.get("url");
-        if (url) { return new URL(url).hostname; }
-      // Yahoo search
-      } else if (u.host == "r.search.yahoo.com") {
-        return new URL(decodeURIComponent(u.pathname.match(/\/RU=(.*?)\//)[1])).hostname;
-      // Sina search
-      } else if (u.host.startsWith("find.sina.com.") && u.pathname == "/sina_redirector.php") {
-        let url = s.get("url");
-        if (url) { return new URL(url).hostname; }
-      // 百度
-      } else if (docUrlObj.host == "www.baidu.com" && docUrlObj.pathname == "/s" &&
-          u.host == "www.baidu.com" && u.pathname == "/link") {
-        try {
-          let refNode = elem.closest('div.result').querySelector('a.c-showurl');
-          let hostname = refNode.textContent.replace(/^\w+:\/+/, "").replace(/\/.*$/, "");
-          return hostname;
-        } catch (ex) {}
-      // 百度 mobile
-      } else if (docUrlObj.host == "m.baidu.com" && docUrlObj.pathname == "/s" &&
-          u.host == "m.baidu.com" && u.pathname.startsWith("/from=0/")) {
-        try {
-          let refNode = elem.closest('div.c-container').querySelector('div.c-showurl span.c-showurl');
-          let hostname = refNode.textContent.replace(/^\w+:\/+/, "").replace(/\/.*$/, "");
-          return hostname;
-        } catch (ex) {}
-      // 搜狗
-      } else if (docUrlObj.host == "www.sogou.com" && docUrlObj.pathname == "/sogou" &&
-          u.host == "www.sogou.com" && u.pathname.startsWith("/link")) {
-        try {
-          let refNode = elem.closest('div.vrwrap, div.rb').querySelector('cite');
-          let hostname = refNode.textContent.replace(/^.*? - /, "").replace(/[\/ \xA0][\s\S]*$/, "");
-          return hostname;
-        } catch (ex) {}
-      // 搜狗 mobile
-      } else if (u.host == "m.sogou.com" && u.pathname.startsWith("/web/")) {
-        let url = s.get("url");
-        if (url) { return new URL(url).hostname; }
-      // Facebook mobile
-      } else if (u.host == "lm.facebook.com" && u.pathname == "/l.php") {
-        let url = s.get("u");
-        if (url) { return new URL(url).hostname; }
-      // Twitter
-      } else if (docUrlObj.host == "twitter.com" && u.host == "t.co") {
-        let url = elem.getAttribute("data-expanded-url");
-        if (url) { return new URL(url).hostname; }
-      // Twitter mobile
-      } else if (docUrlObj.host == "mobile.twitter.com" && u.host == "t.co") {
-        try {
-          let refNode = elem.querySelector('span');
-          let url = refNode.textContent.match(/\(link: (.*?)\)/)[1];
-          return new URL(url).hostname;
-        } catch (ex) {}
-      // Instagram
-      } else if (u.host == "l.instagram.com" && u.pathname == "/") {
-        let url = s.get("u");
-        if (url) { return new URL(url).hostname; }
-      // Pocket
-      } else if (u.host == "getpocket.com" && u.pathname == "/redirect") {
-        let url = s.get("url");
-        if (url) { return new URL(url).hostname; }
-      // 巴哈姆特
-      } else if (u.host == "ref.gamer.com.tw" && u.pathname == "/redir.php") {
-        let url = s.get("url");
-        if (url) { return new URL(url).hostname; }
-      }
-    }).catch((ex) => {
-      console.error(ex);
-    }).then((hostname) => {
-      return hostname || u.hostname;
-    });
-  }).then((hostname) => {
-    // The document is currently viewing and thus allowed expicitly by the user.
-    // Do not mark links targeting the same domain.
-    if (hostname === docUrlObj.hostname) {
-      return;
-    }
-
+    // check whether the hostname is blocked
     return new Promise((resolve, reject) => {
       chrome.runtime.sendMessage({
         cmd: 'isUrlBlocked',
-        args: {url: hostname}
+        args: {url: h}
       }, resolve);
     }).then((isBlocked) => {
-      if (isBlocked) {
-        let img = doc.createElement('img');
-        img.src = chrome.runtime.getURL('img/content-farm-marker.svg');
-        img.style.margin = '0';
-        img.style.border = '0';
-        img.style.padding = '0';
-        img.style.width = '1em';
-        img.style.height = '1em';
-        img.style.display = 'inline';
-        img.style.position = 'relative';
-        img.title = img.alt = utils.lang('markTitle');
-        img.setAttribute("data-content-farm-terminator-marker", 1);
-        elem.parentNode.insertBefore(img, elem);
-        anchorMarkerMap.set(elem, img);
-      }
+      if (isBlocked) { return true; }
+
+      // check for a potential redirect by the current site (e.g. search engine or social network)
+      return Promise.resolve().then(() => {
+        let p = u.pathname;
+        let s = u.searchParams;
+        
+        // Google
+        if ((h.startsWith("www.google.com.") || h == "www.google.com") && p == "/url") {
+          return s.get("q") || s.get("url");
+        // Yahoo search
+        } else if (h == "r.search.yahoo.com") {
+          return decodeURIComponent(p.match(/\/RU=(.*?)\//)[1]);
+        // Sina search
+        } else if (h.startsWith("find.sina.com.") && p == "/sina_redirector.php") {
+          return s.get("url");
+        // 百度
+        } else if (docHostname == "www.baidu.com" && docPathname == "/s" && h == "www.baidu.com" && p == "/link") {
+          try {
+            let refNode = elem.closest('div.result').querySelector('a.c-showurl');
+            let hostname = refNode.textContent.replace(/^\w+:\/+/, "").replace(/\/.*$/, "");
+            return hostname;
+          } catch (ex) {}
+        // 百度 mobile
+        } else if (docHostname == "m.baidu.com" && docPathname == "/s" && h == "m.baidu.com" && p.startsWith("/from=0/")) {
+          try {
+            let refNode = elem.closest('div.c-container').querySelector('div.c-showurl span.c-showurl');
+            let hostname = refNode.textContent.replace(/^\w+:\/+/, "").replace(/\/.*$/, "");
+            return hostname;
+          } catch (ex) {}
+        // 搜狗
+        } else if (docHostname == "www.sogou.com" && docPathname == "/sogou" && h == "www.sogou.com" && p.startsWith("/link")) {
+          try {
+            let refNode = elem.closest('div.vrwrap, div.rb').querySelector('cite');
+            let hostname = refNode.textContent.replace(/^.*? - /, "").replace(/[\/ \xA0][\s\S]*$/, "");
+            return hostname;
+          } catch (ex) {}
+        // 搜狗 mobile
+        } else if (h == "m.sogou.com" && p.startsWith("/web/")) {
+          return s.get("url");
+        // Facebook mobile
+        } else if (h == "lm.facebook.com" && p == "/l.php") {
+          return s.get("u");
+        // Twitter
+        } else if (docHostname == "twitter.com" && h == "t.co") {
+          return elem.getAttribute("data-expanded-url");
+        // Twitter mobile
+        } else if (docHostname == "mobile.twitter.com" && h == "t.co") {
+          try {
+            let refNode = elem.querySelector('span');
+            let url = refNode.textContent.match(/\(link: (.*?)\)/)[1];
+            return url;
+          } catch (ex) {}
+        // Instagram
+        } else if (h == "l.instagram.com" && p == "/") {
+          return s.get("u");
+        // Pocket
+        } else if (h == "getpocket.com" && p == "/redirect") {
+          return s.get("url");
+        // 巴哈姆特
+        } else if (h == "ref.gamer.com.tw" && p == "/redir.php") {
+          return s.get("url");
+        }
+      }).then((urlOrHostname) => {
+        if (urlOrHostname) {
+          return new Promise((resolve, reject) => {
+            chrome.runtime.sendMessage({
+              cmd: 'isUrlBlocked',
+              args: {url: urlOrHostname}
+            }, resolve);
+          });
+        }
+        return false;
+      }).catch((ex) => {
+        return false;
+      });
     });
-  }).catch((ex) => {
-    console.error(ex);
+  }).then((willBlock) => {
+    let marker = anchorMarkerMap.get(elem);
+    if (willBlock) {
+      if (!marker) {
+        marker = elem.ownerDocument.createElement('img');
+        marker.src = chrome.runtime.getURL('img/content-farm-marker.svg');
+        marker.style = 'display: inline-block !important;' + 
+          'visibility: visible !important;' + 
+          'position: relative !important;' + 
+          'float: none !important;' + 
+          'margin: 0 !important;' + 
+          'outline: 0 !important;' + 
+          'border: 0 !important;' + 
+          'padding: 0 !important;' + 
+          'width: 1em !important; min-width: 0 !important; max-width: none !important;' + 
+          'height: 1em !important; min-height: 0 !important; max-height: none !important;' + 
+          'vertical-align: text-top !important;';
+        marker.title = marker.alt = utils.lang('markTitle');
+        marker.setAttribute("data-content-farm-terminator-marker", 1);
+        anchorMarkerMap.set(elem, marker);
+      }
+      if (!marker.parentNode) {
+        elem.insertBefore(marker, elem.firstChild);
+      }
+    } else {
+      if (marker && marker.parentNode) { marker.remove(); }
+    }
   });
 }
 
-function markContentFarmLinks(root = document) {
-  anchorMarkerMap = new Map();
-  Array.prototype.forEach.call(root.querySelectorAll('img[data-content-farm-terminator-marker]'), (elem) => {
-    elem.remove();
-  });
+function updateLinkMarkersAll(root = document) {
   var tasks = Array.from(root.querySelectorAll('a[href], area[href]')).map((elem) => {
-    return markContentFarmLink(elem);
+    return updateLinkMarker(elem);
   });
   return Promise.all(tasks);
 }
@@ -139,20 +143,24 @@ function observeDomUpdates() {
       // console.warn("DOM update", mutation);
       for (let node of mutation.addedNodes) {
         if (isAnchor(node)) {
-          markContentFarmLink(node);
+          updateLinkMarker(node);
           ancObserver.observe(node, ancObserverConf);
         }
         if (node.nodeType === 1) {
           Array.prototype.forEach.call(node.querySelectorAll("a, area"), (elem) => {
-            markContentFarmLink(elem);
+            updateLinkMarker(elem);
             ancObserver.observe(elem, ancObserverConf);
           });
         }
       }
       for (let node of mutation.removedNodes) {
         if (isAnchor(node)) {
-          let marker = anchorMarkerMap.get(node);
-          if (marker) { marker.remove(); }
+          updateLinkMarker(node);
+        }
+        if (node.nodeType === 1) {
+          Array.prototype.forEach.call(node.querySelectorAll("a, area"), (elem) => {
+            updateLinkMarker(elem);
+          });
         }
       }
     }
@@ -163,9 +171,7 @@ function observeDomUpdates() {
     for (let mutation of mutations) {
       // console.warn("Anchor update", mutation);
       let node = mutation.target;
-      let marker = anchorMarkerMap.get(node);
-      if (marker) { marker.remove(); }
-      markContentFarmLink(node);
+      updateLinkMarker(node);
     }
   });
   var ancObserverConf = {attributes: true, attributeFilter: ["href"]};
@@ -181,13 +187,16 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
   var {cmd, args} = message;
   switch (cmd) {
     case 'updateContent': {
-      markContentFarmLinks();
+      updateLinkMarkersAll();
       sendResponse(true);
       break;
     }
   }
 });
 
-markContentFarmLinks().then(() => {
-  observeDomUpdates();
+// Remove stale link markers when the addon is re-enabled
+Array.prototype.forEach.call(document.querySelectorAll('img[data-content-farm-terminator-marker]'), (elem) => {
+  elem.remove();
 });
+observeDomUpdates();
+updateLinkMarkersAll();
