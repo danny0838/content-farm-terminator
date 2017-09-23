@@ -27,6 +27,17 @@ utils.getOptions = function (options) {
         resolve(result);
       }
     });
+  }).catch((ex) => {
+    // fallback to storage.local if storage.sync is not available
+    return new Promise((resolve, reject) => {
+      return chrome.storage.local.get(options, (result) => {
+        if (chrome.runtime.lastError) {
+          reject(chrome.runtime.lastError);
+        } else {
+          resolve(result);
+        }
+      });
+    });
   });
 };
 
@@ -38,6 +49,17 @@ utils.setOptions = function (options) {
       } else {
         resolve();
       }
+    });
+  }).catch((ex) => {
+    // fallback to storage.local if storage.sync is not available
+    return new Promise((resolve, reject) => {
+      chrome.storage.local.set(options, () => {
+        if (chrome.runtime.lastError) {
+          reject(chrome.runtime.lastError);
+        } else {
+          resolve();
+        }
+      });
     });
   });
 };
