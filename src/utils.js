@@ -240,9 +240,9 @@ class ContentFarmFilter {
 
   setWebListCache(url, time, rulesText) {
     return new Promise((resolve, reject) => {
-      var items = {};
-      items[this.webListCacheKey(url)] = {time, rulesText};
-      chrome.storage.local.set(items, () => {
+      chrome.storage.local.set({
+        [this.webListCacheKey(url)]: {time, rulesText}
+      }, () => {
         if (chrome.runtime.lastError) {
           reject(chrome.runtime.lastError);
         } else {
