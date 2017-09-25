@@ -210,7 +210,7 @@ class ContentFarmFilter {
   }
 
   getMergedRegex(regexSet) {
-    return new RegExp('^(?:www\.)?(?:' + Array.from(regexSet).join('|') + ')$');
+    return new RegExp('^(?:www\.)?(?!www\.)(?:' + Array.from(regexSet).join('|') + ')$');
   }
 
   webListCacheKey(url) {
