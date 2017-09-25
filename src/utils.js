@@ -131,14 +131,16 @@ class ContentFarmFilter {
       if (typeof text !== "undefined") { return text; }
       var time = Date.now();
       return fetch(url, {credentials: 'include'}).then((response) => {
+        if (!response.ok) { throw new Error(`Unable to get blocklist from: '${url}'`); }
         return response.text();
       }).then((text) => {
         if (noCache) { return text; }
         return this.setWebListCache(url, time, text).then(() => {
           return text;
+        }).catch((ex) => {
+          console.error(ex);
+          return text;
         });
-      }).catch((ex) => {
-        return "";
       });
     }).then((text) => {
       this.addBlackList(this.validateRulesText(text));
