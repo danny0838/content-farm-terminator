@@ -26,9 +26,10 @@ function updateLinkMarker(elem) {
         let s = u.searchParams;
         
         // Google
-        if (h.startsWith("www.google.com.") || h === "www.google.com") {
-          if (p === "/url") {
-            return s.get("q") || s.get("url");
+        // pattern adopted from Personal Blocklist (by Google) Chrome extension 2.6.1
+        if (/^[a-z.]+[.]?google(?:[.][a-z]{2,4}){1,2}?$/.test(h)) {
+          if (/^\/[a-z_-]*$/.test(p)) {
+            return s.get("q") || s.get("u") || s.get("url") || s.get("imgu") || s.get("imgurl");
           }
         }
         // Yahoo search
