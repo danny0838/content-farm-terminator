@@ -71,7 +71,7 @@
   },
 
   "userBlacklistDesc": {
-    "message": "想額外封鎖的網域名單，每行一個，可使用萬用字元(*)。輸入網址會自動修正。",
+    "message": "想額外封鎖的網域名單，每行一個，可使用萬用字元(*)，不須包含 \"www.\"，空白以後的字元不計。輸入網址會自動修正。",
     "description": "Description of Blacklist Field for options"
   },
 
@@ -81,7 +81,7 @@
   },
 
   "webBlacklistDesc": {
-    "message": "網路黑名單的網址，每行一個，系統會自動前往取得及匯入黑名單。",
+    "message": "網路黑名單的網址，每行一個，空白以後的字元不計。系統會自動前往取得及匯入黑名單。",
     "description": "Description of Web Blacklist Field for options"
   },
 
@@ -91,7 +91,7 @@
   },
 
   "userWhitelistDesc": {
-    "message": "想解除封鎖的網域名單，每行一個，可使用萬用字元(*)。輸入網址會自動修正。",
+    "message": "想解除封鎖的網域名單，每行一個，可使用萬用字元(*)，不須包含 \"www.\"，空白以後的字元不計。輸入網址會自動修正。",
     "description": "Description of Whitelist Field for options"
   },
 

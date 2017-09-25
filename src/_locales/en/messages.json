@@ -70,7 +70,7 @@
   },
 
   "userBlacklistDesc": {
-    "message": "Additional blacklist. One entry per line. Wildcards (*) are allowed. URLs will be auto-corrected.",
+    "message": "Additional blacklist. One entry per line. Wildcards (*) are allowed. \"www.\" prefix is not needed. Text following a space will be ignored. URLs will be auto-corrected.",
     "description": "Description of Blacklist Field for options"
   },
 
@@ -80,7 +80,7 @@
   },
 
   "webBlacklistDesc": {
-    "message": "URLs of web blacklists that will be automatically fetched and imported. One entry per line.",
+    "message": "URLs of web blacklists that will be automatically fetched and imported. One entry per line. Text following a space will be ignored.",
     "description": "Description of Web Blacklist Field for options"
   },
 
@@ -90,7 +90,7 @@
   },
 
   "userWhitelistDesc": {
-    "message": "List of sites to be unblocked. One entry per line. Wildcards (*) are allowed. URLs will be auto-corrected.",
+    "message": "List of sites to be unblocked. One entry per line. Wildcards (*) are allowed. \"www.\" prefix is not needed. Text following a space will be ignored. URLs will be auto-corrected.",
     "description": "Description of Whitelist Field for options"
   },
 

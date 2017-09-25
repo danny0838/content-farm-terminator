@@ -71,7 +71,7 @@
   },
 
   "userBlacklistDesc": {
-    "message": "想额外屏蔽的网站名单，每行一个，可使用通配符(*)。输入网址会自动修正。",
+    "message": "想额外屏蔽的网站名单，每行一个，可使用通配符(*)，不须包含 \"www.\"，空格以后的字符不计。输入网址会自动修正。",
     "description": "Description of Blacklist Field for options"
   },
 
@@ -81,7 +81,7 @@
   },
 
   "webBlacklistDesc": {
-    "message": "网络黑名单的网址，每行一个，系统会自动前往获取及导入黑名单。",
+    "message": "网络黑名单的网址，每行一个，空格以后的字符不计，系统会自动前往获取及导入黑名单。",
     "description": "Description of Web Blacklist Field for options"
   },
 
@@ -91,7 +91,7 @@
   },
 
   "userWhitelistDesc": {
-    "message": "想解除屏蔽的网站名单，每行一个，可使用通配符(*)。输入网址会自动修正。",
+    "message": "想解除屏蔽的网站名单，每行一个，可使用通配符(*)，不须包含 \"www.\"，空格以后的字符不计。输入网址会自动修正。",
     "description": "Description of Whitelist Field for options"
   },
 
