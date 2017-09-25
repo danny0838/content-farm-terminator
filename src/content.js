@@ -112,6 +112,12 @@ function updateLinkMarker(elem) {
             return s.get("u");
           }
         }
+        // Tumblr
+        else if (h === "t.umblr.com") {
+          if (p === "/redirect") {
+            return s.get("z");
+          }
+        }
         // Pocket
         else if (h === "getpocket.com") {
           if (p === "/redirect") {
