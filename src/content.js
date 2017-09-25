@@ -83,8 +83,8 @@ function updateLinkMarker(elem) {
             return s.get("url");
           }
         }
-        // Facebook mobile
-        else if (h === "lm.facebook.com") {
+        // Facebook / Facebook mobile
+        else if (h === "l.facebook.com" || h === "lm.facebook.com") {
           if (p === "/l.php") {
             return s.get("u");
           }
