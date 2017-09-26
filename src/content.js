@@ -160,8 +160,8 @@ function updateLinkMarker(elem) {
           'outline: 0 !important;' + 
           'border: 0 !important;' + 
           'padding: 0 !important;' + 
-          'width: 1em !important; min-width: 0 !important; max-width: none !important;' + 
-          'height: 1em !important; min-height: 0 !important; max-height: none !important;' + 
+          'width: 1em !important; min-width: 12px !important; max-width: none !important;' + 
+          'height: 1em !important; min-height: 12px !important; max-height: none !important;' + 
           'vertical-align: text-top !important;';
         marker.title = marker.alt = utils.lang('markTitle');
         marker.setAttribute("data-content-farm-terminator-marker", 1);
