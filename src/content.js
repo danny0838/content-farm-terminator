@@ -9,7 +9,9 @@ function updateLinkMarker(elem) {
     if (!elem.parentNode || !elem.href) { return false; }
 
     let u = new URL(elem.href);
+    let c = u.protocol;
     let h = u.hostname;
+    if (!(c === "http:" || c === "https:")) { return false; }
 
     // check whether the hostname is blocked
     return new Promise((resolve, reject) => {
