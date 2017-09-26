@@ -33,8 +33,10 @@ function getRedirectedUrlOrHostname(elem) {
       if (p === "/link") {
         if (docHostname === "www.baidu.com" && docPathname === "/s") {
           try {
-            let refNode = elem.closest('div.result').querySelector('a.c-showurl');
-            return refNode.textContent.replace(/^\w+:\/+/, "").replace(/\/.*$/, "");
+            if (elem.matches('div.result > h3 > a, div.result div.general_image_pic a, div.result a.c-showurl')) {
+              var refNode = elem.closest('div.result').querySelector('a.c-showurl');
+              return refNode.textContent.replace(/^\w+:\/+/, "").replace(/\/.*$/, "");
+            }
           } catch (ex) {}
         }
       }
