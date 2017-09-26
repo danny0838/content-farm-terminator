@@ -46,8 +46,10 @@ function getRedirectedUrlOrHostname(elem) {
       if (p.startsWith("/from=0/")) {
         if (docHostname === "m.baidu.com" && docPathname === "/s") {
           try {
-            let refNode = elem.closest('div.c-container').querySelector('div.c-showurl span.c-showurl');
-            return refNode.textContent.replace(/^\w+:\/+/, "").replace(/\/.*$/, "");
+            if (elem.matches(':not(.koubei-a)')) {
+              let refNode = elem.closest('div.c-container').querySelector('div.c-showurl span.c-showurl');
+              return refNode.textContent.replace(/^\w+:\/+/, "").replace(/\/.*$/, "");
+            }
           } catch (ex) {}
         }
       }
