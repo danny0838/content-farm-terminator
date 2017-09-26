@@ -6,6 +6,31 @@
     "message": "Marks content farm links and prevents the user from entering by accident"
   },
 
+  "blockTab": {
+    "message": "Blacklist the domain of this tab",
+    "description": "Context menu blocker on tab"
+  },
+
+  "blockPage": {
+    "message": "Blacklist the domain of this page",
+    "description": "Context menu blocker on page"
+  },
+
+  "blockLink": {
+    "message": "Blacklist the domain of this link",
+    "description": "Context menu blocker on link"
+  },
+
+  "blockSelection": {
+    "message": "Blacklist the domain of selected text",
+    "description": "Context menu blocker on selection"
+  },
+
+  "blockDomain": {
+    "message": "Blacklist this domain:",
+    "description": "Prompt for blocking domain"
+  },
+
   "viewBlockedFrame": {
     "message": "Content Farm",
     "description": "Text of the link of a blocked frame page"

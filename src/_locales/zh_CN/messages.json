@@ -6,6 +6,31 @@
     "message": "标记内容农场链接，并且防止不小心进入内容农场"
   },
 
+  "blockTab": {
+    "message": "把这个分页的网域加入黑名单",
+    "description": "Context menu blocker on tab"
+  },
+
+  "blockPage": {
+    "message": "把这个页面的网域加入黑名单",
+    "description": "Context menu blocker on page"
+  },
+
+  "blockLink": {
+    "message": "把这个链接的网域加入黑名单",
+    "description": "Context menu blocker on link"
+  },
+
+  "blockSelection": {
+    "message": "把选取文字网域加入黑名单",
+    "description": "Context menu blocker on selection"
+  },
+
+  "blockDomain": {
+    "message": "把这个网域加入黑名单：",
+    "description": "Prompt for blocking domain"
+  },
+
   "viewBlockedFrame": {
     "message": "内容农场",
     "description": "Text of the link of a blocked frame page"

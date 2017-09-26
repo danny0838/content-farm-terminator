@@ -2,6 +2,7 @@ var docUrlObj = new URL(document.location.href);
 var docHostname = docUrlObj.hostname;
 var docPathname = docUrlObj.pathname;
 var anchorMarkerMap = new Map();
+var lastRightClickedElem;
 
 function getRedirectedUrlOrHostname(elem) {
   return Promise.resolve().then(() => {
@@ -246,8 +247,25 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
       sendResponse(true);
       break;
     }
+    case 'blockDomain': {
+      var hostname = prompt(utils.lang("blockDomain"), args.hostname);
+      sendResponse(hostname);
+      break;
+    }
+    case 'getLinkHostname': {
+      var anchor = lastRightClickedElem.closest('a[href], area[href]');
+      getRedirectedUrlOrHostname(anchor).then((hostname) => {
+        sendResponse(hostname);
+      });
+      return true; // async response
+      break;
+    }
   }
 });
+
+window.addEventListener("contextmenu", (event) => {
+  lastRightClickedElem = event.target;
+}, true);
 
 // Remove stale link markers when the addon is re-enabled
 Array.prototype.forEach.call(document.querySelectorAll('img[data-content-farm-terminator-marker]'), (elem) => {

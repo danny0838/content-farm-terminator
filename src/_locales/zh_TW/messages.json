@@ -6,6 +6,31 @@
     "message": "標示內容農場連結，並且防止不小心進入內容農場"
   },
 
+  "blockTab": {
+    "message": "將此分頁的網域加入黑名單",
+    "description": "Context menu blocker on tab"
+  },
+
+  "blockPage": {
+    "message": "將此頁面的網域加入黑名單",
+    "description": "Context menu blocker on page"
+  },
+
+  "blockLink": {
+    "message": "將此連結的網域加入黑名單",
+    "description": "Context menu blocker on link"
+  },
+
+  "blockSelection": {
+    "message": "將選取文字網域加入黑名單",
+    "description": "Context menu blocker on selection"
+  },
+
+  "blockDomain": {
+    "message": "將此網域加入黑名單：",
+    "description": "Prompt for blocking domain"
+  },
+
   "viewBlockedFrame": {
     "message": "內容農場",
     "description": "Text of the link of a blocked frame page"

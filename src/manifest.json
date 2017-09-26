@@ -15,6 +15,7 @@
   },
 
   "permissions": [
+    "contextMenus",
     "tabs",
     "webRequest",
     "webRequestBlocking",
