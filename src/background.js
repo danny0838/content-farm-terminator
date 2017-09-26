@@ -19,9 +19,7 @@ function updateFilter() {
     filter = new ContentFarmFilter();
     filter.addBlackList(lists.userBlacklist);
     filter.addWhiteList(lists.userWhitelist);
-    let tasks = filter.urlsTextToLines(lists.webBlacklist).map((url) => {
-      return filter.addBlackListFromUrl(url);
-    });
+    let tasks = filter.urlsTextToLines(lists.webBlacklist).map(filter.addBlackListFromUrl);
     tasks.push(filter.addBuiltinBlackList());
     return Promise.all(tasks);
   }).then(() => {

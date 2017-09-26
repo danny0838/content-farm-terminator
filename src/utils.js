@@ -269,7 +269,7 @@ class ContentFarmFilter {
       var {newValue, oldValue} = webListChange;
       var urlSet = new Set(filter.urlsTextToLines(newValue));
       var deletedUrls = filter.urlsTextToLines(oldValue).filter(u => !urlSet.has(u));
-      chrome.storage.local.remove(deletedUrls.map(u => this.webListCacheKey(u)), () => {
+      chrome.storage.local.remove(deletedUrls.map(this.webListCacheKey), () => {
         if (chrome.runtime.lastError) {
           reject(chrome.runtime.lastError);
         } else {
