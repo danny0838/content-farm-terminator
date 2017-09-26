@@ -184,31 +184,33 @@ class ContentFarmFilter {
     ).filter(x => !!x.trim());
   }
 
-  rulesTextToLines(rulesText) {
-    return (rulesText || "").split(/\n|\r\n?/).filter(x => !!x.trim());
+  validateRuleLine(ruleLine) {
+    var parts = ruleLine.split(" ");
+    parts[0] = ((ruleText) => {
+      if (!ruleText) { return ""; }
+      try {
+        // escape "*" to make a valid URL
+        var t = ruleText.replace(/x/g, "xx").replace(/\*/g, "xa");
+        // add a scheme if none to make a valid URL
+        if (!/^[A-Za-z][0-9A-za-z+\-.]*:\/\//.test(t)) { t = "http://" + t; }
+        // get hostname
+        t = new URL(t).hostname;
+        // unescape and remove "www."
+        t = t.replace(/x[xa]/g, m => ({xx: "x", xa: "*"})[m]).replace(/^www\./, "");
+        t = punycode.toUnicode(t);
+        return t;
+      } catch (ex) {}
+      return "";
+    })(parts[0]);
+    return parts.join(" ");
   }
 
   validateRulesText(rulesText) {
-    return (rulesText || "").split(/\n|\r\n?/).map((ruleLine) => {
-      var parts = ruleLine.split(" ");
-      parts[0] = ((ruleText) => {
-        if (!ruleText) { return ""; }
-        try {
-          // escape "*" to make a valid URL
-          var t = ruleText.replace(/x/g, "xx").replace(/\*/g, "xa");
-          // add a scheme if none to make a valid URL
-          if (!/^[A-Za-z][0-9A-za-z+\-.]*:\/\//.test(t)) { t = "http://" + t; }
-          // get hostname
-          t = new URL(t).hostname;
-          // unescape and remove "www."
-          t = t.replace(/x[xa]/g, m => ({xx: "x", xa: "*"})[m]).replace(/^www\./, "");
-          t = punycode.toUnicode(t);
-          return t;
-        } catch (ex) {}
-        return "";
-      })(parts[0]);
-      return parts.join(" ");
-    }).join("\n");
+    return (rulesText || "").split(/\n|\r\n?/).map(this.validateRuleLine).join("\n");
+  }
+
+  rulesTextToLines(rulesText) {
+    return (rulesText || "").split(/\n|\r\n?/).filter(x => !!x.trim());
   }
 
   ruleTextToRegex(ruleText) {
