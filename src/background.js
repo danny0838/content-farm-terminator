@@ -97,23 +97,6 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
   }
 });
 
-if (chrome.browserAction) {
-  chrome.browserAction.onClicked.addListener((tab) => {
-    var url = chrome.runtime.getURL("options.html");
-    chrome.tabs.create({url: url, active: true});
-  });
-} else {
-  // Firefox Android < 55: no browserAction
-  // Fallback to pageAction.
-  // Firefox Android ignores the tabId parameter and
-  // shows the pageAction for all tabs
-  chrome.pageAction.onClicked.addListener((tab) => {
-    var url = chrome.runtime.getURL("options.html");
-    chrome.tabs.create({url: url, active: true});
-  });
-  chrome.pageAction.show(0);
-}
-
 chrome.storage.onChanged.addListener((changes, areaName) => {
   // Config keys are stored in storage.sync and fallbacks to storage.local;
   // cache keys are stored in storage.local and are valid JSON format.
@@ -130,5 +113,22 @@ chrome.storage.onChanged.addListener((changes, areaName) => {
     }
   });
 });
+
+if (chrome.browserAction) {
+  chrome.browserAction.onClicked.addListener((tab) => {
+    var url = chrome.runtime.getURL("options.html");
+    chrome.tabs.create({url: url, active: true});
+  });
+} else {
+  // Firefox Android < 55: no browserAction
+  // Fallback to pageAction.
+  // Firefox Android ignores the tabId parameter and
+  // shows the pageAction for all tabs
+  chrome.pageAction.onClicked.addListener((tab) => {
+    var url = chrome.runtime.getURL("options.html");
+    chrome.tabs.create({url: url, active: true});
+  });
+  chrome.pageAction.show(0);
+}
 
 updateFilter();
