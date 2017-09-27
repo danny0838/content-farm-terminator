@@ -3,6 +3,121 @@ var docHostname = docUrlObj.hostname;
 var docPathname = docUrlObj.pathname;
 var anchorMarkerMap = new Map();
 
+function getRedirectedUrlOrHostname(elem) {
+  return Promise.resolve().then(() => {
+    let u = new URL(elem.href);
+    let h = u.hostname;
+    let p = u.pathname;
+    let s = u.searchParams;
+
+    // Google
+    // adopted from WOT: http://static-cdn.mywot.com/settings/extensions/serps.json
+    if (/^(www\.)?(google)\.([a-z]{2,3})(\.[a-z]{2,3})?$/.test(h)) {
+      if (p === "/url" || p === "/interstitial") {
+        return s.get("url") || s.get("q");
+      }
+    }
+    // Yahoo search
+    else if (h === "r.search.yahoo.com") {
+      return decodeURIComponent(p.match(/\/RU=(.*?)\//)[1]);
+    }
+    // Sina search
+    else if (h.startsWith("find.sina.com.")) {
+      if (p === "/sina_redirector.php") {
+        return s.get("url");
+      }
+    }
+    // 百度
+    else if (h === "www.baidu.com") {
+      if (p === "/link") {
+        if (docHostname === "www.baidu.com" && docPathname === "/s") {
+          try {
+            let refNode = elem.closest('div.result').querySelector('a.c-showurl');
+            return refNode.textContent.replace(/^\w+:\/+/, "").replace(/\/.*$/, "");
+          } catch (ex) {}
+        }
+      }
+    }
+    // 百度 mobile
+    else if (h === "m.baidu.com") {
+      if (p.startsWith("/from=0/")) {
+        if (docHostname === "m.baidu.com" && docPathname === "/s") {
+          try {
+            let refNode = elem.closest('div.c-container').querySelector('div.c-showurl span.c-showurl');
+            return refNode.textContent.replace(/^\w+:\/+/, "").replace(/\/.*$/, "");
+          } catch (ex) {}
+        }
+      }
+    }
+    // 搜狗
+    else if (h === "www.sogou.com") {
+      if (p.startsWith("/link")) {
+        if (docHostname === "www.sogou.com") {
+          if (docPathname === "/web" || docPathname === "/sogou" ) {
+            try {
+              let refNode = elem.closest('div.vrwrap, div.rb').querySelector('cite');
+              return refNode.textContent.replace(/^.*? - /, "").replace(/[\/ \xA0][\s\S]*$/, "");
+            } catch (ex) {}
+          }
+        }
+      }
+    }
+    // 搜狗 mobile
+    else if (h === "m.sogou.com") {
+      if (p.startsWith("/web/")) {
+        return s.get("url");
+      }
+    }
+    // Facebook / Facebook mobile
+    else if (h === "l.facebook.com" || h === "lm.facebook.com") {
+      if (p === "/l.php") {
+        return s.get("u");
+      }
+    }
+    // Twitter / Twitter mobile
+    else if (h === "t.co") {
+      if (docHostname === "twitter.com") {
+        return elem.getAttribute("data-expanded-url");
+      } else if (docHostname === "mobile.twitter.com") {
+        try {
+          let refNode = elem.querySelector('span');
+          return refNode.textContent.match(/\(link: (.*?)\)/)[1];
+        } catch (ex) {}
+      }
+    }
+    // Disqus
+    else if (h === "disq.us") {
+      if (p === "/") {
+        return s.get("url");
+      }
+    }
+    // Instagram
+    else if (h === "l.instagram.com") {
+      if (p === "/") {
+        return s.get("u");
+      }
+    }
+    // Tumblr
+    else if (h === "t.umblr.com") {
+      if (p === "/redirect") {
+        return s.get("z");
+      }
+    }
+    // Pocket
+    else if (h === "getpocket.com") {
+      if (p === "/redirect") {
+        return s.get("url");
+      }
+    }
+    // 巴哈姆特
+    else if (h === "ref.gamer.com.tw") {
+      if (p === "/redir.php") {
+        return s.get("url");
+      }
+    }
+  }).catch((ex) => {});
+}
+
 function updateLinkMarker(elem) {
   // console.warn("updateLinkMarker", elem);
   return Promise.resolve().then(() => {
@@ -23,116 +138,7 @@ function updateLinkMarker(elem) {
       if (isBlocked) { return true; }
 
       // check for a potential redirect by the current site (e.g. search engine or social network)
-      return Promise.resolve().then(() => {
-        let p = u.pathname;
-        let s = u.searchParams;
-        
-        // Google
-        // adopted from WOT: http://static-cdn.mywot.com/settings/extensions/serps.json
-        if (/^(www\.)?(google)\.([a-z]{2,3})(\.[a-z]{2,3})?$/.test(h)) {
-          if (p === "/url" || p === "/interstitial") {
-            return s.get("url") || s.get("q");
-          }
-        }
-        // Yahoo search
-        else if (h === "r.search.yahoo.com") {
-          return decodeURIComponent(p.match(/\/RU=(.*?)\//)[1]);
-        }
-        // Sina search
-        else if (h.startsWith("find.sina.com.")) {
-          if (p === "/sina_redirector.php") {
-            return s.get("url");
-          }
-        }
-        // 百度
-        else if (h === "www.baidu.com") {
-          if (p === "/link") {
-            if (docHostname === "www.baidu.com" && docPathname === "/s") {
-              try {
-                let refNode = elem.closest('div.result').querySelector('a.c-showurl');
-                return refNode.textContent.replace(/^\w+:\/+/, "").replace(/\/.*$/, "");
-              } catch (ex) {}
-            }
-          }
-        }
-        // 百度 mobile
-        else if (h === "m.baidu.com") {
-          if (p.startsWith("/from=0/")) {
-            if (docHostname === "m.baidu.com" && docPathname === "/s") {
-              try {
-                let refNode = elem.closest('div.c-container').querySelector('div.c-showurl span.c-showurl');
-                return refNode.textContent.replace(/^\w+:\/+/, "").replace(/\/.*$/, "");
-              } catch (ex) {}
-            }
-          }
-        }
-        // 搜狗
-        else if (h === "www.sogou.com") {
-          if (p.startsWith("/link")) {
-            if (docHostname === "www.sogou.com") {
-              if (docPathname === "/web" || docPathname === "/sogou" ) {
-                try {
-                  let refNode = elem.closest('div.vrwrap, div.rb').querySelector('cite');
-                  return refNode.textContent.replace(/^.*? - /, "").replace(/[\/ \xA0][\s\S]*$/, "");
-                } catch (ex) {}
-              }
-            }
-          }
-        }
-        // 搜狗 mobile
-        else if (h === "m.sogou.com") {
-          if (p.startsWith("/web/")) {
-            return s.get("url");
-          }
-        }
-        // Facebook / Facebook mobile
-        else if (h === "l.facebook.com" || h === "lm.facebook.com") {
-          if (p === "/l.php") {
-            return s.get("u");
-          }
-        }
-        // Twitter / Twitter mobile
-        else if (h === "t.co") {
-          if (docHostname === "twitter.com") {
-            return elem.getAttribute("data-expanded-url");
-          } else if (docHostname === "mobile.twitter.com") {
-            try {
-              let refNode = elem.querySelector('span');
-              return refNode.textContent.match(/\(link: (.*?)\)/)[1];
-            } catch (ex) {}
-          }
-        }
-        // Disqus
-        else if (h === "disq.us") {
-          if (p === "/") {
-            return s.get("url");
-          }
-        }
-        // Instagram
-        else if (h === "l.instagram.com") {
-          if (p === "/") {
-            return s.get("u");
-          }
-        }
-        // Tumblr
-        else if (h === "t.umblr.com") {
-          if (p === "/redirect") {
-            return s.get("z");
-          }
-        }
-        // Pocket
-        else if (h === "getpocket.com") {
-          if (p === "/redirect") {
-            return s.get("url");
-          }
-        }
-        // 巴哈姆特
-        else if (h === "ref.gamer.com.tw") {
-          if (p === "/redir.php") {
-            return s.get("url");
-          }
-        }
-      }).then((urlOrHostname) => {
+      return getRedirectedUrlOrHostname(elem).then((urlOrHostname) => {
         if (urlOrHostname) {
           return new Promise((resolve, reject) => {
             chrome.runtime.sendMessage({
