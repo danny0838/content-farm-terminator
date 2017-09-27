@@ -188,7 +188,7 @@ function updateLinkMarker(elem) {
 }
 
 function updateLinkMarkersAll(root = document) {
-  const tasks = Array.from(root.querySelectorAll('a[href], area[href]')).map(updateLinkMarker);
+  const tasks = Array.from(root.querySelectorAll('a[href], area[href]'), updateLinkMarker);
   return Promise.all(tasks);
 }
 
