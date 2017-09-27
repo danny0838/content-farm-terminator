@@ -19,7 +19,7 @@
 3. 若真的很想看一下被攔截的頁面，可點擊「檢視」查看去除廣告與程式碼的網頁內容，如此既能滿足好奇心又不致給對方收益。
 4. 可自訂黑名單及白名單，也能從網路上取得黑名單。
 
-本套件支援 Chromium 系瀏覽器以及 Firefox 桌面版和手機版，是參考 [Chrome](https://chrome.google.com/webstore/detail/content-farm-blocker/opjaibbmmpldcncnbbglondckfnokfpm) 及 [Firefox](https://addons.mozilla.org/firefox/addon/block-content-farm) 的《封鎖內容農場》重製而成。版本更新記錄請見[這裡](https://github.com/danny0838/content-farm-terminator/blob/master/RELEASES.md)。
+本套件支援 Chromium 系瀏覽器以及 Firefox 桌面版和手機版，是參考 [Chrome](https://chrome.google.com/webstore/detail/content-farm-blocker/opjaibbmmpldcncnbbglondckfnokfpm) 及 [Firefox](https://addons.mozilla.org/firefox/addon/block-content-farm) 的《封鎖內容農場》重製而成，並借鑑了 [WOT](https://chrome.google.com/webstore/detail/wot-web-of-trust-website/bhmmomiinigofkjcapegjjndpbikblnp)、[Personal Blocklist](https://chrome.google.com/webstore/detail/personal-blocklist-by-goo/nolijncfnkgaikbjbdaogikpmpbdcdef) 等類似套件的功能。版本更新記錄詳見[這裡](https://github.com/danny0838/content-farm-terminator/blob/master/RELEASES.md)。
 
 ## 下載及安裝
 
