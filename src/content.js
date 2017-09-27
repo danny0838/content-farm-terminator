@@ -151,17 +151,14 @@ function updateLinkMarker(elem) {
 
       // check for a potential redirect by the current site (e.g. search engine or social network)
       return getRedirectedUrlOrHostname(elem).then((urlOrHostname) => {
-        if (urlOrHostname) {
-          return new Promise((resolve, reject) => {
-            chrome.runtime.sendMessage({
-              cmd: 'isUrlBlocked',
-              args: {url: urlOrHostname}
-            }, resolve);
-          });
-        }
-        return false;
-      }).catch((ex) => {
-        return false;
+        if (!urlOrHostname) { return false; }
+
+        return new Promise((resolve, reject) => {
+          chrome.runtime.sendMessage({
+            cmd: 'isUrlBlocked',
+            args: {url: urlOrHostname}
+          }, resolve);
+        });
       });
     });
   }).then((willBlock) => {
