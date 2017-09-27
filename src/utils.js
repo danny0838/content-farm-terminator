@@ -63,7 +63,7 @@ const utils = {
     });
   },
 
-  escapeHtml(str, noDoubleQuotes, singleQuotes, spaces) {
+  escapeHtml(str, noDoubleQuotes = false, singleQuotes = false, spaces = false) {
     const list = {
       "&": "&amp;",
       "<": "&lt;",
