@@ -185,7 +185,7 @@ class ContentFarmFilter {
   }
 
   validateRuleLine(ruleLine) {
-    const parts = ruleLine.split(" ");
+    const parts = (ruleLine || "").split(" ");
     parts[0] = ((ruleText) => {
       if (!ruleText) { return ""; }
       try {
