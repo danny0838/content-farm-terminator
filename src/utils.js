@@ -1,109 +1,109 @@
-const utils = {};
+const utils = {
+  lang(key, args) {
+    return chrome.i18n.getMessage(key, args) || "__MSG_" + key + "__";
+  },
 
-utils.lang = function (key, args) {
-  return chrome.i18n.getMessage(key, args) || "__MSG_" + key + "__";
-};
-
-utils.loadLanguages = function (rootNode = document) {
-  Array.prototype.forEach.call(rootNode.getElementsByTagName("*"), (elem) => {
-    if (elem.childNodes.length === 1) {
-      const child = elem.firstChild;
-      if (child.nodeType === 3) {
-        child.nodeValue = child.nodeValue.replace(/__MSG_(.*?)__/, (m, k) => utils.lang(k));
+  loadLanguages(rootNode = document) {
+    Array.prototype.forEach.call(rootNode.getElementsByTagName("*"), (elem) => {
+      if (elem.childNodes.length === 1) {
+        const child = elem.firstChild;
+        if (child.nodeType === 3) {
+          child.nodeValue = child.nodeValue.replace(/__MSG_(.*?)__/, (m, k) => utils.lang(k));
+        }
       }
-    }
-    Array.prototype.forEach.call(elem.attributes, (attr) => {
-      attr.nodeValue = attr.nodeValue.replace(/__MSG_(.*?)__/, (m, k) => utils.lang(k));
+      Array.prototype.forEach.call(elem.attributes, (attr) => {
+        attr.nodeValue = attr.nodeValue.replace(/__MSG_(.*?)__/, (m, k) => utils.lang(k));
+      }, this);
     }, this);
-  }, this);
-};
+  },
 
-utils.getOptions = function (options) {
-  return new Promise((resolve, reject) => {
-    chrome.storage.sync.get(options, (result) => {
-      if (chrome.runtime.lastError) {
-        reject(chrome.runtime.lastError);
-      } else {
-        resolve(result);
-      }
-    });
-  }).catch((ex) => {
-    // fallback to storage.local if storage.sync is not available
+  getOptions(options) {
     return new Promise((resolve, reject) => {
-      return chrome.storage.local.get(options, (result) => {
+      chrome.storage.sync.get(options, (result) => {
         if (chrome.runtime.lastError) {
           reject(chrome.runtime.lastError);
         } else {
           resolve(result);
         }
       });
+    }).catch((ex) => {
+      // fallback to storage.local if storage.sync is not available
+      return new Promise((resolve, reject) => {
+        return chrome.storage.local.get(options, (result) => {
+          if (chrome.runtime.lastError) {
+            reject(chrome.runtime.lastError);
+          } else {
+            resolve(result);
+          }
+        });
+      });
     });
-  });
-};
+  },
 
-utils.setOptions = function (options) {
-  return new Promise((resolve, reject) => {
-    chrome.storage.sync.set(options, () => {
-      if (chrome.runtime.lastError) {
-        reject(chrome.runtime.lastError);
-      } else {
-        resolve();
-      }
-    });
-  }).catch((ex) => {
-    // fallback to storage.local if storage.sync is not available
+  setOptions(options) {
     return new Promise((resolve, reject) => {
-      chrome.storage.local.set(options, () => {
+      chrome.storage.sync.set(options, () => {
         if (chrome.runtime.lastError) {
           reject(chrome.runtime.lastError);
         } else {
           resolve();
         }
       });
+    }).catch((ex) => {
+      // fallback to storage.local if storage.sync is not available
+      return new Promise((resolve, reject) => {
+        chrome.storage.local.set(options, () => {
+          if (chrome.runtime.lastError) {
+            reject(chrome.runtime.lastError);
+          } else {
+            resolve();
+          }
+        });
+      });
     });
-  });
-};
+  },
 
-utils.escapeHtml = function (str, noDoubleQuotes, singleQuotes, spaces) {
-  const list = {
-    "&": "&amp;",
-    "<": "&lt;",
-    ">": "&gt;",
-    '"': (noDoubleQuotes ? '"' : "&quot;"),
-    "'": (singleQuotes ? "&#39;" : "'"),
-    " ": (spaces ? "&nbsp;" : " ")
-  };
-  return str.replace(/[&<>"']| (?= )/g, m => list[m]);
-};
+  escapeHtml(str, noDoubleQuotes, singleQuotes, spaces) {
+    const list = {
+      "&": "&amp;",
+      "<": "&lt;",
+      ">": "&gt;",
+      '"': (noDoubleQuotes ? '"' : "&quot;"),
+      "'": (singleQuotes ? "&#39;" : "'"),
+      " ": (spaces ? "&nbsp;" : " ")
+    };
+    return str.replace(/[&<>"']| (?= )/g, m => list[m]);
+  },
 
-utils.escapeRegExp = function (str) {
-  return str.replace(/([\*\+\?\.\^\/\$\\\|\[\]\{\}\(\)])/g, "\\$1");
-};
+  escapeRegExp(str) {
+    return str.replace(/([\*\+\?\.\^\/\$\\\|\[\]\{\}\(\)])/g, "\\$1");
+  },
 
-utils.splitUrlByAnchor = function (url) {
-  const pos = url.indexOf("#");
-  if (pos !== -1) { return [url.slice(0, pos), url.slice(pos)]; }
-  return [url, ""];
-};
+  splitUrlByAnchor(url) {
+    const pos = url.indexOf("#");
+    if (pos !== -1) { return [url.slice(0, pos), url.slice(pos)]; }
+    return [url, ""];
+  },
 
-utils.doctypeToString = function (doctype) {
-  if (!doctype) { return ""; }
-  let ret = "<!DOCTYPE " + doctype.name;
-  if (doctype.publicId) { ret += ' PUBLIC "' + doctype.publicId + '"'; }
-  if (doctype.systemId) { ret += ' "'        + doctype.systemId + '"'; }
-  ret += ">\n";
-  return ret;
-};
+  doctypeToString(doctype) {
+    if (!doctype) { return ""; }
+    let ret = "<!DOCTYPE " + doctype.name;
+    if (doctype.publicId) { ret += ' PUBLIC "' + doctype.publicId + '"'; }
+    if (doctype.systemId) { ret += ' "'        + doctype.systemId + '"'; }
+    ret += ">\n";
+    return ret;
+  },
 
-utils.readFileAsDocument = function (blob) {
-  return new Promise((resolve, reject) => {
-    const xhr = new XMLHttpRequest();
-    xhr.responseType = "document";
-    xhr.onload = () => { resolve(xhr.response); }
-    xhr.onerror = () => { reject(new Error("Network request failed.")); }
-    xhr.open("GET", URL.createObjectURL(blob), true);
-    xhr.send();
-  });
+  readFileAsDocument(blob) {
+    return new Promise((resolve, reject) => {
+      const xhr = new XMLHttpRequest();
+      xhr.responseType = "document";
+      xhr.onload = () => { resolve(xhr.response); }
+      xhr.onerror = () => { reject(new Error("Network request failed.")); }
+      xhr.open("GET", URL.createObjectURL(blob), true);
+      xhr.send();
+    });
+  },
 };
 
 class ContentFarmFilter {
