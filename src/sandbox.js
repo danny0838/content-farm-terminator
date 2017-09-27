@@ -1,10 +1,10 @@
 document.addEventListener('DOMContentLoaded', (event) => {
   utils.loadLanguages(document);
 
-  var frame = document.querySelector('#viewer');
-  var loading = document.querySelector('#loading');
+  const frame = document.querySelector('#viewer');
+  const loading = document.querySelector('#loading');
 
-  var url = new URL(location.href).searchParams.get('src');
+  const url = new URL(location.href).searchParams.get('src');
 
   fetch(url, {credentials: 'include'}).then((response) => {
     return response.blob();
@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
     return utils.readFileAsDocument(blob).then((doc) => {
       if (!doc) { return blob; }
 
-      var headElem = doc.querySelector('head');
+      const headElem = doc.querySelector('head');
 
       // respect original base but redirect links to parent frame
       Array.prototype.forEach.call(doc.querySelectorAll('base'), (elem) => {
@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
       });
 
       // add base
-      var baseElem = doc.createElement('base');
+      const baseElem = doc.createElement('base');
       baseElem.href = url;
       baseElem.target = '_parent';
       headElem.insertBefore(baseElem, headElem.firstChild);
@@ -30,7 +30,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
         if (elem.hasAttribute("charset")) {
           elem.remove();
         } else if (elem.hasAttribute("http-equiv") && elem.hasAttribute("content")) {
-          let httpEquiv = elem.getAttribute("http-equiv").toLowerCase();
+          const httpEquiv = elem.getAttribute("http-equiv").toLowerCase();
           if (httpEquiv === "content-type" || httpEquiv === "content-security-policy") {
             elem.remove();
           }
@@ -38,26 +38,26 @@ document.addEventListener('DOMContentLoaded', (event) => {
       });
 
       // add content security policy to block offensive contents
-      var metaCspElem = doc.createElement("meta");
+      const metaCspElem = doc.createElement("meta");
       metaCspElem.setAttribute("http-equiv", "Content-Security-Policy");
       metaCspElem.setAttribute("content", "img-src data:; media-src data:; object-src 'none'; frame-src blob:; script-src 'none';");
       headElem.insertBefore(metaCspElem, headElem.firstChild);
 
       // add meta charset to force UTF-8 encoding
-      var metaCharsetElem = doc.createElement("meta");
+      const metaCharsetElem = doc.createElement("meta");
       metaCharsetElem.setAttribute("charset", "UTF-8");
       headElem.insertBefore(metaCharsetElem, headElem.firstChild);
 
       // pass document title to top frame
       if (doc.title) { document.title = doc.title; }
 
-      var html =  utils.doctypeToString(doc.doctype) + doc.documentElement.outerHTML;
+      const html =  utils.doctypeToString(doc.doctype) + doc.documentElement.outerHTML;
       return new Blob([html], {type: 'text/html'});
     });
   }).then((blob) => {
-    let blobUrl = URL.createObjectURL(blob) + new URL(url).hash;
-    let parent = frame.parentNode;
-    let next = frame.nextSibling;
+    const blobUrl = URL.createObjectURL(blob) + new URL(url).hash;
+    const parent = frame.parentNode;
+    const next = frame.nextSibling;
     parent.removeChild(frame);
     frame.src = blobUrl;
     parent.insertBefore(frame, next);

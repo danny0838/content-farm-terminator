@@ -1,4 +1,4 @@
-var utils = {};
+const utils = {};
 
 utils.lang = function (key, args) {
   return chrome.i18n.getMessage(key, args) || "__MSG_" + key + "__";
@@ -7,7 +7,7 @@ utils.lang = function (key, args) {
 utils.loadLanguages = function (rootNode = document) {
   Array.prototype.forEach.call(rootNode.getElementsByTagName("*"), (elem) => {
     if (elem.childNodes.length === 1) {
-      let child = elem.firstChild;
+      const child = elem.firstChild;
       if (child.nodeType === 3) {
         child.nodeValue = child.nodeValue.replace(/__MSG_(.*?)__/, (m, k) => utils.lang(k));
       }
@@ -65,7 +65,7 @@ utils.setOptions = function (options) {
 };
 
 utils.escapeHtml = function (str, noDoubleQuotes, singleQuotes, spaces) {
-  var list = {
+  const list = {
     "&": "&amp;",
     "<": "&lt;",
     ">": "&gt;",
@@ -81,14 +81,14 @@ utils.escapeRegExp = function (str) {
 };
 
 utils.splitUrlByAnchor = function (url) {
-  var pos = url.indexOf("#");
+  const pos = url.indexOf("#");
   if (pos !== -1) { return [url.slice(0, pos), url.slice(pos)]; }
   return [url, ""];
 };
 
 utils.doctypeToString = function (doctype) {
   if (!doctype) { return ""; }
-  var ret = "<!DOCTYPE " + doctype.name;
+  let ret = "<!DOCTYPE " + doctype.name;
   if (doctype.publicId) { ret += ' PUBLIC "' + doctype.publicId + '"'; }
   if (doctype.systemId) { ret += ' "'        + doctype.systemId + '"'; }
   ret += ">\n";
@@ -97,7 +97,7 @@ utils.doctypeToString = function (doctype) {
 
 utils.readFileAsDocument = function (blob) {
   return new Promise((resolve, reject) => {
-    var xhr = new XMLHttpRequest();
+    const xhr = new XMLHttpRequest();
     xhr.responseType = "document";
     xhr.onload = () => { resolve(xhr.response); }
     xhr.onerror = () => { reject(new Error("Network request failed.")); }
@@ -117,7 +117,7 @@ class ContentFarmFilter {
 
   addBlackList(listText) {
     this.rulesTextToLines(listText).forEach((ruleText) => {
-      let ruleRegex = this.ruleTextToRegex(ruleText);
+      const ruleRegex = this.ruleTextToRegex(ruleText);
       this._blacklistSet.add(ruleRegex);
     });
     this._listUpdated = true;
@@ -129,7 +129,7 @@ class ContentFarmFilter {
   addBlackListFromUrl(url, noCache = false) {
     return this.getWebListCache(url).then((text) => {
       if (typeof text !== "undefined") { return text; }
-      var time = Date.now();
+      const time = Date.now();
       return fetch(url, {credentials: 'include'}).then((response) => {
         if (!response.ok) { throw new Error(`Unable to get blocklist from: '${url}'`); }
         return response.text();
@@ -150,13 +150,13 @@ class ContentFarmFilter {
   }
 
   addBuiltinBlackList() {
-    let url = chrome.runtime.getURL('blacklist.txt');
+    const url = chrome.runtime.getURL('blacklist.txt');
     return this.addBlackListFromUrl(url, true);
   }
 
   addWhiteList(listText) {
     this.rulesTextToLines(listText).forEach((ruleText) => {
-      let ruleRegex = this.ruleTextToRegex(ruleText);
+      const ruleRegex = this.ruleTextToRegex(ruleText);
       this._whitelistSet.add(ruleRegex);
     });
     this._listUpdated = true;
@@ -185,12 +185,12 @@ class ContentFarmFilter {
   }
 
   validateRuleLine(ruleLine) {
-    var parts = ruleLine.split(" ");
+    const parts = ruleLine.split(" ");
     parts[0] = ((ruleText) => {
       if (!ruleText) { return ""; }
       try {
         // escape "*" to make a valid URL
-        var t = ruleText.replace(/x/g, "xx").replace(/\*/g, "xa");
+        let t = ruleText.replace(/x/g, "xx").replace(/\*/g, "xa");
         // add a scheme if none to make a valid URL
         if (!/^[A-Za-z][0-9A-za-z+\-.]*:\/\//.test(t)) { t = "http://" + t; }
         // get hostname
@@ -227,7 +227,7 @@ class ContentFarmFilter {
 
   getWebListCache(url) {
     return new Promise((resolve, reject) => {
-      var key = this.webListCacheKey(url);
+      const key = this.webListCacheKey(url);
       chrome.storage.local.get(key, (result) => {
         if (chrome.runtime.lastError) {
           reject(chrome.runtime.lastError);
@@ -237,7 +237,7 @@ class ContentFarmFilter {
       });
     }).then((data) => {
       if (data) {
-        var {time, rulesText} = data;
+        const {time, rulesText} = data;
         // cache expires in 1 day
         if (Date.now() - time < 1 * 24 * 60 * 60 * 1000) {
           return rulesText;
@@ -266,9 +266,9 @@ class ContentFarmFilter {
 
   clearStaleWebListCache(webListChange) {
     return new Promise((resolve, reject) => {
-      var {newValue, oldValue} = webListChange;
-      var urlSet = new Set(filter.urlsTextToLines(newValue));
-      var deletedUrls = filter.urlsTextToLines(oldValue).filter(u => !urlSet.has(u));
+      const {newValue, oldValue} = webListChange;
+      const urlSet = new Set(filter.urlsTextToLines(newValue));
+      const deletedUrls = filter.urlsTextToLines(oldValue).filter(u => !urlSet.has(u));
       chrome.storage.local.remove(deletedUrls.map(this.webListCacheKey), () => {
         if (chrome.runtime.lastError) {
           reject(chrome.runtime.lastError);

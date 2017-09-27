@@ -1,6 +1,6 @@
-var filter;
+let filter;
 
-var _isFxBelow56;
+let _isFxBelow56;
 Promise.resolve().then(() => {
   return browser.runtime.getBrowserInfo();
 }).then((info) => {
@@ -19,7 +19,7 @@ function updateFilter() {
     filter = new ContentFarmFilter();
     filter.addBlackList(lists.userBlacklist);
     filter.addWhiteList(lists.userWhitelist);
-    let tasks = filter.urlsTextToLines(lists.webBlacklist).map(filter.addBlackListFromUrl);
+    const tasks = filter.urlsTextToLines(lists.webBlacklist).map(filter.addBlackListFromUrl);
     tasks.push(filter.addBuiltinBlackList());
     return Promise.all(tasks);
   }).then(() => {
@@ -38,9 +38,9 @@ function updateFilter() {
 }
 
 chrome.webRequest.onBeforeRequest.addListener((details) => {
-  var url = details.url;
+  const url = details.url;
   if (filter.isBlocked(url)) {
-    let redirectUrl = `${chrome.runtime.getURL('blocked.html')}?to=${encodeURIComponent(url)}`;
+    const redirectUrl = `${chrome.runtime.getURL('blocked.html')}?to=${encodeURIComponent(url)}`;
     if (details.type === "main_frame") {
       if (!_isFxBelow56) {
         return {redirectUrl: redirectUrl};
@@ -50,7 +50,7 @@ chrome.webRequest.onBeforeRequest.addListener((details) => {
         return {cancel: true};
       }
     } else {
-      let html = `<!DOCTYPE html>
+      const html = `<!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
@@ -60,7 +60,7 @@ chrome.webRequest.onBeforeRequest.addListener((details) => {
 </body>
 </html>
 `;
-      let dataUrl = 'data:text/html;charset=UTF-8,' + encodeURIComponent(html);
+      const dataUrl = 'data:text/html;charset=UTF-8,' + encodeURIComponent(html);
       return {redirectUrl: dataUrl};
     }
   }
@@ -68,10 +68,10 @@ chrome.webRequest.onBeforeRequest.addListener((details) => {
 
 chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
   // console.warn("omMessage", message);
-  var {cmd, args} = message;
+  const {cmd, args} = message;
   switch (cmd) {
     case 'isUrlBlocked': {
-      let blocked = filter.isBlocked(args.url);
+      const blocked = filter.isBlocked(args.url);
       sendResponse(blocked);
       break;
     }
@@ -116,7 +116,7 @@ chrome.storage.onChanged.addListener((changes, areaName) => {
 
 if (chrome.browserAction) {
   chrome.browserAction.onClicked.addListener((tab) => {
-    var url = chrome.runtime.getURL("options.html");
+    const url = chrome.runtime.getURL("options.html");
     chrome.tabs.create({url: url, active: true});
   });
 } else {
@@ -125,16 +125,16 @@ if (chrome.browserAction) {
   // Firefox Android ignores the tabId parameter and
   // shows the pageAction for all tabs
   chrome.pageAction.onClicked.addListener((tab) => {
-    var url = chrome.runtime.getURL("options.html");
+    const url = chrome.runtime.getURL("options.html");
     chrome.tabs.create({url: url, active: true});
   });
   chrome.pageAction.show(0);
 }
 
 if (chrome.contextMenus) {
-  let blockDomain = function (urlOrHostname, tabId, frameId) {
+  const blockDomain = function (urlOrHostname, tabId, frameId) {
     return new Promise((resolve, reject) => {
-      var h = filter.validateRuleLine(urlOrHostname.trim().replace(/\s[\s\S]*$/g, ""));
+      const h = filter.validateRuleLine(urlOrHostname.trim().replace(/\s[\s\S]*$/g, ""));
       chrome.tabs.sendMessage(tabId, {
         cmd: 'blockDomain',
         args: {hostname: h}
@@ -145,7 +145,7 @@ if (chrome.contextMenus) {
       return utils.getOptions({
         userBlacklist: ""
       }).then((options) => {
-        var text = options.userBlacklist;
+        let text = options.userBlacklist;
         if (text) { text += "\n"; }
         text = text + hostname;
         return utils.setOptions({
@@ -184,7 +184,7 @@ if (chrome.contextMenus) {
           cmd: 'getLinkHostname'
         }, resolve);
       }).then((redirectedUrl) => {
-        var urlOrHostname = redirectedUrl || info.linkUrl;
+        const urlOrHostname = redirectedUrl || info.linkUrl;
         return blockDomain(urlOrHostname, tab.id, info.frameId);
       });
     }

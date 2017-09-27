@@ -1,5 +1,5 @@
-var sourceUrl = new URL(location.href).searchParams.get('to');
-var sourceUrlObj = new URL(sourceUrl);
+const sourceUrl = new URL(location.href).searchParams.get('to');
+const sourceUrlObj = new URL(sourceUrl);
 
 function recheckBlock() {
   return new Promise((resolve, reject) => {
@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
    * Events
    */
   document.querySelector('#view').addEventListener('click', (event) => {
-    let newUrl = `sandbox.html?src=${encodeURIComponent(sourceUrl)}`;
+    const newUrl = `sandbox.html?src=${encodeURIComponent(sourceUrl)}`;
     location.replace(newUrl);
   });
 
@@ -43,7 +43,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
 chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
   // console.warn("omMessage", message);
-  var {cmd, args} = message;
+  const {cmd, args} = message;
   switch (cmd) {
     case 'updateContent': {
       recheckBlock();

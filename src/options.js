@@ -1,4 +1,4 @@
-var validator = new ContentFarmFilter();
+const validator = new ContentFarmFilter();
 
 document.addEventListener('DOMContentLoaded', (event) => {
   utils.loadLanguages(document);
@@ -23,9 +23,9 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
   document.querySelector('#submitButton').addEventListener('click', (event) => {
     event.preventDefault();
-    var userBlacklist = document.querySelector('#userBlacklist textarea').value;
-    var userWhitelist = document.querySelector('#userWhitelist textarea').value;
-    var webBlacklist = document.querySelector('#webBlacklist textarea').value;
+    const userBlacklist = document.querySelector('#userBlacklist textarea').value;
+    const userWhitelist = document.querySelector('#userWhitelist textarea').value;
+    const webBlacklist = document.querySelector('#webBlacklist textarea').value;
 
     utils.setOptions({
       userBlacklist: validator.validateRulesText(userBlacklist),

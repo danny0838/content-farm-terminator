@@ -1,15 +1,15 @@
-var docUrlObj = new URL(document.location.href);
-var docHostname = docUrlObj.hostname;
-var docPathname = docUrlObj.pathname;
-var anchorMarkerMap = new Map();
-var lastRightClickedElem;
+const docUrlObj = new URL(document.location.href);
+const docHostname = docUrlObj.hostname;
+const docPathname = docUrlObj.pathname;
+const anchorMarkerMap = new Map();
+let lastRightClickedElem;
 
 function getRedirectedUrlOrHostname(elem) {
   return Promise.resolve().then(() => {
-    let u = new URL(elem.href);
-    let h = u.hostname;
-    let p = u.pathname;
-    let s = u.searchParams;
+    const u = new URL(elem.href);
+    const h = u.hostname;
+    const p = u.pathname;
+    const s = u.searchParams;
 
     // Google
     // adopted from WOT: http://static-cdn.mywot.com/settings/extensions/serps.json
@@ -34,7 +34,7 @@ function getRedirectedUrlOrHostname(elem) {
         if (docHostname === "www.baidu.com" && docPathname === "/s") {
           try {
             if (elem.matches('div.result > h3 > a, div.result div.general_image_pic a, div.result a.c-showurl')) {
-              var refNode = elem.closest('div.result').querySelector('a.c-showurl');
+              const refNode = elem.closest('div.result').querySelector('a.c-showurl');
               return refNode.textContent.replace(/^\w+:\/+/, "").replace(/\/.*$/, "");
             }
           } catch (ex) {}
@@ -47,7 +47,7 @@ function getRedirectedUrlOrHostname(elem) {
         if (docHostname === "m.baidu.com" && docPathname === "/s") {
           try {
             if (elem.matches(':not(.koubei-a)')) {
-              let refNode = elem.closest('div.c-container').querySelector('div.c-showurl span.c-showurl');
+              const refNode = elem.closest('div.c-container').querySelector('div.c-showurl span.c-showurl');
               return refNode.textContent.replace(/^\w+:\/+/, "").replace(/\/.*$/, "");
             }
           } catch (ex) {}
@@ -60,7 +60,7 @@ function getRedirectedUrlOrHostname(elem) {
         if (docHostname === "www.sogou.com") {
           if (docPathname === "/web" || docPathname === "/sogou" ) {
             try {
-              let refNode = elem.closest('div.vrwrap, div.rb').querySelector('cite');
+              const refNode = elem.closest('div.vrwrap, div.rb').querySelector('cite');
               return refNode.textContent.replace(/^.*? - /, "").replace(/[\/ \xA0][\s\S]*$/, "");
             } catch (ex) {}
           }
@@ -85,7 +85,7 @@ function getRedirectedUrlOrHostname(elem) {
         return elem.getAttribute("data-expanded-url");
       } else if (docHostname === "mobile.twitter.com") {
         try {
-          let refNode = elem.querySelector('span');
+          const refNode = elem.querySelector('span');
           return refNode.textContent.match(/\(link: (.*?)\)/)[1];
         } catch (ex) {}
       }
@@ -128,9 +128,9 @@ function updateLinkMarker(elem) {
   return Promise.resolve().then(() => {
     if (!elem.parentNode || !elem.href) { return false; }
 
-    let u = new URL(elem.href);
-    let c = u.protocol;
-    let h = u.hostname;
+    const u = new URL(elem.href);
+    const c = u.protocol;
+    const h = u.hostname;
     if (!(c === "http:" || c === "https:")) { return false; }
 
     // check whether the hostname is blocked
@@ -188,17 +188,17 @@ function updateLinkMarker(elem) {
 }
 
 function updateLinkMarkersAll(root = document) {
-  var tasks = Array.from(root.querySelectorAll('a[href], area[href]')).map(updateLinkMarker);
+  const tasks = Array.from(root.querySelectorAll('a[href], area[href]')).map(updateLinkMarker);
   return Promise.all(tasks);
 }
 
 function observeDomUpdates() {
-  var isAnchor = function (node) {
+  const isAnchor = function (node) {
     let n = node.nodeName.toLowerCase();
     return n === "a" || n === "area";
   };
 
-  var docObserver = new MutationObserver((mutations) => {
+  const docObserver = new MutationObserver((mutations) => {
     for (let mutation of mutations) {
       // console.warn("DOM update", mutation);
       for (let node of mutation.addedNodes) {
@@ -225,16 +225,16 @@ function observeDomUpdates() {
       }
     }
   });
-  var docObserverConf = {childList: true, subtree: true};
+  const docObserverConf = {childList: true, subtree: true};
 
-  var ancObserver = new MutationObserver((mutations) => {
+  const ancObserver = new MutationObserver((mutations) => {
     for (let mutation of mutations) {
       // console.warn("Anchor update", mutation);
-      let node = mutation.target;
+      const node = mutation.target;
       updateLinkMarker(node);
     }
   });
-  var ancObserverConf = {attributes: true, attributeFilter: ["href"]};
+  const ancObserverConf = {attributes: true, attributeFilter: ["href"]};
 
   docObserver.observe(document.documentElement, docObserverConf);
   Array.prototype.forEach.call(document.querySelectorAll("a, area"), (elem) => {
@@ -244,7 +244,7 @@ function observeDomUpdates() {
 
 chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
   //console.warn("omMessage", message);
-  var {cmd, args} = message;
+  const {cmd, args} = message;
   switch (cmd) {
     case 'updateContent': {
       updateLinkMarkersAll();
@@ -252,12 +252,12 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
       break;
     }
     case 'blockDomain': {
-      var hostname = prompt(utils.lang("blockDomain"), args.hostname);
+      const hostname = prompt(utils.lang("blockDomain"), args.hostname);
       sendResponse(hostname);
       break;
     }
     case 'getLinkHostname': {
-      var anchor = lastRightClickedElem.closest('a[href], area[href]');
+      const anchor = lastRightClickedElem.closest('a[href], area[href]');
       getRedirectedUrlOrHostname(anchor).then((hostname) => {
         sendResponse(hostname);
       });
