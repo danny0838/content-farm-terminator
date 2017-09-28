@@ -13,7 +13,7 @@ function getRedirectedUrlOrHostname(elem) {
 
     // Google
     // adopted from WOT: http://static-cdn.mywot.com/settings/extensions/serps.json
-    if (/^(www\.)?(google)\.([a-z]{2,3})(\.[a-z]{2,3})?$/.test(h)) {
+    if (/^(www\.|encrypted\.)?(google)\.([a-z]{2,3})(\.[a-z]{2,3})?$/.test(h)) {
       if (p === "/url" || p === "/interstitial") {
         return s.get("url") || s.get("q");
       }
