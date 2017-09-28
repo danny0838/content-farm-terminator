@@ -72,6 +72,15 @@ function getRedirectedUrlOrHostname(elem) {
       }
     }
 
+    // Lycos
+    else if (h === "search.lycos.com") {
+      if (p === "/b.php") {
+        return u.protocol + "//" + s.get("as");
+      } else if (p === "/bnjs.php") {
+        return s.get("as");
+      }
+    }
+
     // 百度
     else if (h === "www.baidu.com") {
       if (p === "/link") {
