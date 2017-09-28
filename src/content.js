@@ -49,6 +49,14 @@ function getRedirectedUrlOrHostname(elem) {
       }
     }
 
+    // Dogpile
+    else if (h === "ccs.dogpile.com") {
+      if (p === "/ClickHandler.ashx") {
+        u.search = s.get("encp");
+        return s.get("ru");
+      }
+    }
+
     // Search
     else if (h === "www.search.com") {
       if (p === "/wr_clk") {
