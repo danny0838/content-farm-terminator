@@ -41,6 +41,14 @@ function getRedirectedUrlOrHostname(elem) {
       }
     }
 
+    // WebCrawler mobile
+    else if (h === "cs.webcrawler.com") {
+      if (p === "/ClickHandler.ashx") {
+        u.search = s.get("encp");
+        return s.get("ru");
+      }
+    }
+
     // 百度
     else if (h === "www.baidu.com") {
       if (p === "/link") {
