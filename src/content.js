@@ -19,6 +19,13 @@ function getRedirectedUrlOrHostname(elem) {
       }
     }
 
+    // Bing (used rarely, e.g. in Egerin)
+    else if (h === "www.bing.com") {
+      if (p === "/cr") {
+        return s.get("r");
+      }
+    }
+
     // Yahoo search (no javascript)
     else if (h === "r.search.yahoo.com") {
       return decodeURIComponent(p.match(/\/RU=(.*?)\//)[1]);
