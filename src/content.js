@@ -49,6 +49,13 @@ function getRedirectedUrlOrHostname(elem) {
       }
     }
 
+    // Search
+    else if (h === "www.search.com") {
+      if (p === "/wr_clk") {
+        return s.get("surl");
+      }
+    }
+
     // 百度
     else if (h === "www.baidu.com") {
       if (p === "/link") {
