@@ -219,7 +219,7 @@ class ContentFarmFilter {
   }
 
   getMergedRegex(regexSet) {
-    return new RegExp('^(?:' + [...regexSet].join('|') + ')$');
+    return new RegExp('^(?:.+\\.)?(?:' + [...regexSet].join('|') + ')$');
   }
 
   webListCacheKey(url) {

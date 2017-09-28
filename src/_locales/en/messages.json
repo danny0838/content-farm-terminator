@@ -89,16 +89,6 @@
     "description": "Description of Blacklist Field for options"
   },
 
-  "userBlacklist": {
-    "message": "User Blacklist",
-    "description": "Field Label for options"
-  },
-
-  "userBlacklistDesc": {
-    "message": "Additional blacklist. One entry per line. Wildcards (*) are allowed. \"www.\" prefix is not needed. Text following a space will be ignored. URLs will be auto-corrected.",
-    "description": "Description of Blacklist Field for options"
-  },
-
   "webBlacklist": {
     "message": "Web Blacklists",
     "description": "Field Label for options"
@@ -109,14 +99,39 @@
     "description": "Description of Web Blacklist Field for options"
   },
 
+  "webBlacklistPlaceholder": {
+    "message": "https://example.com/blacklist.txt (example)",
+    "description": "Placeholder of Web Blacklist Field for options"
+  },
+
+  "userBlacklist": {
+    "message": "User Blacklist",
+    "description": "Field Label for options"
+  },
+
+  "userBlacklistDesc": {
+    "message": "Additional blacklist. One entry per line. Domain and all subdomains are matched. A wildcard (*) matches zero or more chars. Text following a space will be ignored. URLs will be auto-corrected.",
+    "description": "Description of Blacklist Field for options"
+  },
+
+  "userBlacklistPlaceholder": {
+    "message": "example.com (matches example.com, *.example.com)",
+    "description": "Placeholder of Blacklist Field for options"
+  },
+
   "userWhitelist": {
     "message": "User Whitelist",
     "description": "Field Label for options"
   },
 
   "userWhitelistDesc": {
-    "message": "List of sites to be unblocked. One entry per line. Wildcards (*) are allowed. \"www.\" prefix is not needed. Text following a space will be ignored. URLs will be auto-corrected.",
+    "message": "List of sites to be unblocked. One entry per line. Domain and all subdomains are matched. A wildcard (*) matches zero or more chars. Text following a space will be ignored. URLs will be auto-corrected.",
     "description": "Description of Whitelist Field for options"
+  },
+
+  "userWhitelistPlaceholder": {
+    "message": "example.com (matches example.com, *.example.com)",
+    "description": "Placeholder of Whitelist Field for options"
   },
 
   "report": {

@@ -90,24 +90,34 @@
     "description": "Description of Blacklist Field for options"
   },
 
-  "userBlacklist": {
-    "message": "自定义黑名单",
-    "description": "Field Label for options"
-  },
-
-  "userBlacklistDesc": {
-    "message": "想额外屏蔽的网站名单，每行一个，可使用通配符(*)，不须包含 \"www.\"，空格以后的字符不计。输入网址会自动修正。",
-    "description": "Description of Blacklist Field for options"
-  },
-
   "webBlacklist": {
     "message": "网络黑名单",
     "description": "Field Label for options"
   },
 
   "webBlacklistDesc": {
-    "message": "网络黑名单的网址，每行一个，空格以后的字符不计，系统会自动前往获取及导入黑名单。",
+    "message": "网络黑名单的网址，每行一个，空格及以后的字符皆忽略，系统会自动前往获取及导入黑名单。",
     "description": "Description of Web Blacklist Field for options"
+  },
+
+  "webBlacklistPlaceholder": {
+    "message": "https://example.com/blacklist.txt (示例)",
+    "description": "Placeholder of Web Blacklist Field for options"
+  },
+
+  "userBlacklist": {
+    "message": "自定义黑名单",
+    "description": "Field Label for options"
+  },
+
+  "userBlacklistDesc": {
+    "message": "想额外屏蔽的网站名单。每行一个，匹配网域及子网域，“*”匹配任意零或多个字符，空格及以后的字符皆忽略。输入网址会自动修正。",
+    "description": "Description of Blacklist Field for options"
+  },
+
+  "userBlacklistPlaceholder": {
+    "message": "example.com (匹配 example.com, *.example.com)",
+    "description": "Placeholder of Blacklist Field for options"
   },
 
   "userWhitelist": {
@@ -116,8 +126,13 @@
   },
 
   "userWhitelistDesc": {
-    "message": "想解除屏蔽的网站名单，每行一个，可使用通配符(*)，不须包含 \"www.\"，空格以后的字符不计。输入网址会自动修正。",
+    "message": "想解除屏蔽的网站名单。每行一个，匹配网域及子网域，“*”匹配任意零或多个字符，空格及以后的字符皆忽略。输入网址会自动修正。",
     "description": "Description of Whitelist Field for options"
+  },
+
+  "userWhitelistPlaceholder": {
+    "message": "example.com (匹配 example.com, *.example.com)",
+    "description": "Placeholder of Whitelist Field for options"
   },
 
   "report": {
