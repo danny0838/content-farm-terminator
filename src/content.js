@@ -31,6 +31,16 @@ function getRedirectedUrlOrHostname(elem) {
       }
     }
 
+    // Yandex search
+    else if (h === "www.yandex.com") {
+      if (p === "/clck/jsredir") {
+        if (elem.matches('li.serp-item > div > h2 > a')) {
+          const refNode = elem.closest('li.serp-item').querySelector('div > h2+div a > b');
+          return refNode.textContent;
+        }
+      }
+    }
+
     // 百度
     else if (h === "www.baidu.com") {
       if (p === "/link") {
