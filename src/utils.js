@@ -168,6 +168,7 @@ class ContentFarmFilter {
   isBlocked(url) {
     let hostname = (url.indexOf(":") !== -1) ? new URL(url).hostname : url;
     hostname = punycode.toUnicode(hostname);
+    hostname = hostname.replace(/^www\./, "");
     if (this._listUpdated) {
       this._blacklist = this.getMergedRegex(this._blacklistSet);
       this._whitelist = this.getMergedRegex(this._whitelistSet);
@@ -218,7 +219,7 @@ class ContentFarmFilter {
   }
 
   getMergedRegex(regexSet) {
-    return new RegExp('^(?:www\.)?(?!www\.)(?:' + [...regexSet].join('|') + ')$');
+    return new RegExp('^(?:' + [...regexSet].join('|') + ')$');
   }
 
   webListCacheKey(url) {
