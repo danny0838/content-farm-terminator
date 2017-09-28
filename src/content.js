@@ -74,6 +74,22 @@ function getRedirectedUrlOrHostname(elem) {
       }
     }
 
+    // 360搜索
+    else if (h === "www.so.com") {
+      if (p === "/link") {
+        if (docHostname === "www.so.com" && docPathname === "/s") {
+          return elem.getAttribute('data-url');
+        }
+      }
+    }
+
+    // 360搜索 mobile
+    else if (h === "m.so.com") {
+      if (p === "/jump") {
+        return s.get("u");
+      }
+    }
+
     // Facebook / Facebook mobile
     else if (h === "l.facebook.com" || h === "lm.facebook.com") {
       if (p === "/l.php") {
