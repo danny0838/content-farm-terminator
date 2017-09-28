@@ -183,7 +183,7 @@ if (chrome.contextMenus) {
       return new Promise((resolve, reject) => {
         chrome.tabs.sendMessage(tab.id, {
           cmd: 'getLinkHostname'
-        }, resolve);
+        }, {frameId: info.frameId}, resolve);
       }).then((redirectedUrl) => {
         const urlOrHostname = redirectedUrl || info.linkUrl;
         return blockDomain(urlOrHostname, tab.id, info.frameId);
