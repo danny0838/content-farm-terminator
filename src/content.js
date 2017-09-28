@@ -88,6 +88,26 @@ function getRedirectedUrlOrHostname(elem) {
       }
     }
 
+    // Qwant
+    else if (h === "lite.qwant.com") {
+      if (p.startsWith("/redirect/")) {
+        return decodeURIComponent(p.match(/\/redirect\/[^\/]+\/(.*)$/)[1]);
+      }
+    }
+
+    // Qwant Ads
+    else if (/^\d+\.r\.bat\.bing\.com$/.test(h)) {
+      if (p === "/") {
+        if (docHostname === "lite.qwant.com" && docPathname === "/") {
+          if (elem.matches('div.result a')) {
+            const refNode = elem.closest('div.result').querySelector('p.url').cloneNode(true);
+            refNode.querySelector('span').remove();
+            return u.protocol + "//" + refNode.textContent.trim();
+          }
+        }
+      }
+    }
+
     // 百度
     else if (h === "www.baidu.com") {
       if (p === "/link") {
