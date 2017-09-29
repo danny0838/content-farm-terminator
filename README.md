@@ -15,9 +15,10 @@
 
 本瀏覽器套件就是為了解決以上問題而生，它有以下功能：
 1. 自動偵測前往內容農場的連結並加以標示，讓你在第一時間避開內容農場，同時免於將點擊數回饋給搜尋引擎。
-2. 在即將進入內容農場時加以攔截，讓你能及時離開。
-3. 若真的很想看一下被攔截的頁面，可點擊「檢視」查看去除廣告與程式碼的網頁內容，如此既能滿足好奇心又不致給對方收益。
+2. 在即將進入內容農場時予以封鎖，讓你能及時離開。
+3. 若真的很想看一下被封鎖的頁面，可點擊「檢視」瀏覽去除廣告與程式碼的網頁內容，如此既能滿足好奇心又不致給對方收益。
 4. 可自訂黑名單及白名單，也能從網路上取得黑名單。
+5. 可透過右鍵選單將超連結或選取文字對應的網域快速加入黑名單。
 
 本套件支援 Chromium 系瀏覽器以及 Firefox 桌面版和手機版，是參考 [Chrome](https://chrome.google.com/webstore/detail/content-farm-blocker/opjaibbmmpldcncnbbglondckfnokfpm) 及 [Firefox](https://addons.mozilla.org/firefox/addon/block-content-farm) 的《封鎖內容農場》重製而成，並借鑑了 [WOT](https://chrome.google.com/webstore/detail/wot-web-of-trust-website/bhmmomiinigofkjcapegjjndpbikblnp)、[Personal Blocklist](https://chrome.google.com/webstore/detail/personal-blocklist-by-goo/nolijncfnkgaikbjbdaogikpmpbdcdef) 等類似套件的功能。版本更新記錄詳見[這裡](https://github.com/danny0838/content-farm-terminator/blob/master/RELEASES.md)。
 
