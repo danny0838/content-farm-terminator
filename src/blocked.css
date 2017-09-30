@@ -27,6 +27,7 @@ body {
   padding: 5.3rem .5rem .5rem .5rem;
   max-width: 28rem;
   background: no-repeat 0px 0px/5.3rem url("img/content-farm-marker-white.svg");
+  filter: drop-shadow(.1rem .1rem .4rem rgba(0,0,0,.87));
 }
 
 #messageHeader {
