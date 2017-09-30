@@ -23,7 +23,7 @@ body {
 
 #content {
   box-sizing: border-box;
-  margin: auto;
+  margin: -5.3rem auto 0;
   padding: 5.3rem .5rem .5rem .5rem;
   max-width: 28rem;
   background: no-repeat 0px 0px/5.3rem url("img/content-farm-marker-white.svg");
@@ -75,6 +75,7 @@ a {
   }
 
   #content {
+    margin-top: -3rem;
     padding: 3rem .3rem .3rem .3rem;
     background-size: 3rem;
   }
