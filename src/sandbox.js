@@ -51,7 +51,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
       // pass document title to top frame
       if (doc.title) { document.title = doc.title; }
 
-      const html =  utils.doctypeToString(doc.doctype) + doc.documentElement.outerHTML;
+      const html = utils.doctypeToString(doc.doctype) + doc.documentElement.outerHTML;
       return new Blob([html], {type: 'text/html'});
     });
   }).then((blob) => {
