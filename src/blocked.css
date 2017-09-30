@@ -1,3 +1,7 @@
+html {
+  font-size: 18px;
+}
+
 body {
   display: table;
   margin: 0;
@@ -8,82 +12,91 @@ body {
   background-color: #CC3333;
   color: #FFFFFF;
   font-family: helvetica, arial, sans-serif;
-  font-size: 18px;
+  font-size: 1rem;
 }
 
-.wrapper {
+#wrapper {
   display: table-cell;
+  padding: 0 .5rem 0;
   vertical-align: middle;
 }
 
-.content {
+#content {
   box-sizing: border-box;
   margin: auto;
-  max-width: 500px;
-  padding-top: 96px;
-  background: no-repeat 8px 0px/96px url("img/content-farm-marker-white.svg");
+  padding: 5.3rem .5rem .5rem .5rem;
+  max-width: 28rem;
+  background: no-repeat 0px 0px/5.3rem url("img/content-farm-marker-white.svg");
 }
 
-.content h1 {
-  margin-top: 16px;
-  margin-left: 8px;
-  margin-right: 8px;
+#messageHeader {
+  margin-top: .4rem;
 }
 
-.content p {
-  margin-top: 32px;
-  font-size: 20px;
-  margin-left: 8px;
-  margin-right: 8px;
-  margin-bottom: 40px;
+#messageText {
+  margin-top: 1.8rem;
+  margin-bottom: 2.2rem;
+  font-size: 1.2rem;
+}
+
+a {
+  color: #FFFFFF;
+  text-decoration: underline;
+}
+
+#buttonBar {
+  margin: 3.6rem -.5rem 0 -.5rem;
 }
 
 .button {
-  height: 32px;
-  line-height: 32px;
-  padding-left: 8px;
-  padding-right: 8px;
+  display: inline-block;
+  border-radius: 2px;
+  padding-left: .5rem;
+  padding-right: .5rem;
+  height: 1.8rem;
+  line-height: 1.8rem;
   vertical-align: middle;
   text-align: center;
   cursor: pointer;
-  display: inline-block;
 }
 
 .button:hover {
   background-color: rgba(255,255,255,0.3);
 }
 
-a {
-  color: #FFFFFF;
-  margin-left: 8px;
-  text-decoration: underline;
-}
-
-a:hover {
-  color: #FFFFFF;
-  text-decoration: underline;
-}
-
-.buttonBar {
-  margin-top: 64px;
-}
-
 #back {
   float:right;
-  border-radius: 2px;
   border: 1px solid #fff;
 }
 
-
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 28rem) {
   body {
-    font-size: 14px;
+    font-size: .8rem;
   }
-  .content {
-    padding: 60px 10px 0px 10px;
-    background-size: 60px;
+
+  #content {
+    padding: 3rem .3rem .3rem .3rem;
+    background-size: 3rem;
   }
-  .content h1 {
-    margin-top: 12px;
+
+  #messageHeader {
+    margin-top: .3rem;
+  }
+
+  #messageText {
+    margin-top: 1.4rem;
+    margin-bottom: 1.4rem;
+    font-size: 1rem;
+  }
+
+  #buttonBar {
+    margin: 2rem -.3rem 0 -.3rem;
+  }
+
+  .button {
+    padding-left: .3rem;
+    padding-right: .3rem;
+    height: 1.5rem;
+    line-height: 1.5rem;
   }
 }
