@@ -13,7 +13,7 @@ body {
 
 .header img {
   display: inline-block;
-  margin-right: .5rem;
+  margin-__MSG_@@bidi_end_edge__: .5rem;
   width: 3rem;
   height: 3rem;
   vertical-align: middle;
@@ -39,9 +39,9 @@ body {
 }
 
 .fieldLabel {
-  float: left;
+  float: __MSG_@@bidi_start_edge__;
   box-sizing: border-box;
-  padding-right: .5rem;
+  padding-__MSG_@@bidi_end_edge__: .5rem;
   width: 32%;
 }
 
@@ -56,7 +56,7 @@ body {
 }
 
 .fieldset {
-  float: right;
+  float: __MSG_@@bidi_end_edge__;
   box-sizing: border-box;
   width: 68%;
 }
@@ -74,7 +74,7 @@ textarea[readonly] {
 }
 
 #buttonsField {
-  text-align: right;
+  text-align: __MSG_@@bidi_end_edge__;
 }
 
 .button {

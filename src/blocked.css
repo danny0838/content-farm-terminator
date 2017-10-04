@@ -26,7 +26,10 @@ body {
   margin: -5.3rem auto 0;
   padding: 5.3rem .5rem .5rem .5rem;
   max-width: 28rem;
-  background: no-repeat 0px 0px/5.3rem url("img/content-farm-marker-white.svg");
+  background-image: url("img/content-farm-marker-white.svg");
+  background-position: __MSG_@@bidi_start_edge__ top;
+  background-size: 5.3rem;
+  background-repeat: no-repeat;
   filter: drop-shadow(.1rem .1rem .4rem rgba(0,0,0,.87));
 }
 
@@ -52,8 +55,8 @@ a {
 .button {
   display: inline-block;
   border-radius: 2px;
-  padding-left: .5rem;
-  padding-right: .5rem;
+  padding-__MSG_@@bidi_start_edge__: .5rem;
+  padding-__MSG_@@bidi_end_edge__: .5rem;
   height: 1.8rem;
   line-height: 1.8rem;
   vertical-align: middle;
@@ -66,7 +69,7 @@ a {
 }
 
 #back {
-  float:right;
+  float: __MSG_@@bidi_end_edge__;
   border: 1px solid #fff;
 }
 
@@ -96,8 +99,8 @@ a {
   }
 
   .button {
-    padding-left: .3rem;
-    padding-right: .3rem;
+    padding-__MSG_@@bidi_start_edge__: .3rem;
+    padding-__MSG_@@bidi_end_edge__: .3rem;
     height: 1.5rem;
     line-height: 1.5rem;
   }
