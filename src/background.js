@@ -122,17 +122,17 @@ chrome.runtime.onInstalled.addListener((details) => {
   const {reason, previousVersion} = details;
 
   if (reason === "update" && utils.versionCompare(previousVersion, "2.1.2") === -1) {
-    console.warn("Migrating options from < 2.1.2");
-    return utils.getOptions(["webBlacklist", "webBlacklists"]).then((options) => {
-      if (typeof options.webBlacklists === "undefined") {
-        if (options.webBlacklist) {
+    return Promise.resolve().then(() => {
+      console.warn("Migrating options from < 2.1.2");
+      return utils.getOptions(["webBlacklist", "webBlacklists"]).then((options) => {
+        if (options.webBlacklist && (typeof options.webBlacklists === "undefined")) {
           let newWebBlacklists = "https://danny0838.github.io/content-farm-terminator/files/blocklist/content-farms.txt" + 
               "\n" + options.webBlacklist;
           return utils.setOptions({webBlacklists: newWebBlacklists}).then(() => {
             updateFilter();
           });
         }
-      }
+      });
     }).then(() => {
       console.warn("Migrated successfully.");
     });
