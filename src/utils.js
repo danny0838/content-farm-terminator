@@ -127,18 +127,32 @@ class ContentFarmFilter {
    * @param {string} url - a URL with hash stripped
    */
   addBlackListFromUrl(url, noCache = false) {
-    return this.getWebListCache(url).then((text) => {
-      if (typeof text !== "undefined") { return text; }
+    return this.getWebListCache(url).then((data) => {
       const time = Date.now();
+
+      // retrieve rules from cache
+      let cacheRulesText, cacheTime;
+      if (data) {
+        ({time: cacheTime, rulesText: cacheRulesText} = data);
+        // use cached version if not expired
+        if (time - cacheTime < 1 * 24 * 60 * 60 * 1000) { // 1 day
+          return cacheRulesText;
+        }
+      }
+
+      // retrieve rules from web
+      // if no cache or cache has expired
       return fetch(url, {credentials: 'include'}).then((response) => {
-        if (!response.ok) { throw new Error(`Unable to get blocklist from: '${url}'`); }
+        if (!response.ok) { throw new Error("response not ok"); }
         return response.text();
+      }).catch((ex) => {
+        console.error(`Unable to get blocklist from: '${url}'`);
+        // fallback to cached version if web version not accessible
+        return cacheRulesText;
       }).then((text) => {
         if (noCache) { return text; }
+        // store retrieved rules to cache
         return this.setWebListCache(url, time, text).then(() => {
-          return text;
-        }).catch((ex) => {
-          console.error(ex);
           return text;
         });
       });
@@ -236,14 +250,6 @@ class ContentFarmFilter {
           resolve(result[key]);
         }
       });
-    }).then((data) => {
-      if (data) {
-        const {time, rulesText} = data;
-        // cache expires in 1 day
-        if (Date.now() - time < 1 * 24 * 60 * 60 * 1000) {
-          return rulesText;
-        }
-      }
     }).catch((ex) => {
       console.error(ex);
     });
