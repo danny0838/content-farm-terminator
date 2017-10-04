@@ -4,7 +4,7 @@ function loadOptions() {
   return utils.getDefaultOptions().then((options) => {
     document.querySelector('#userBlacklist textarea').value = options.userBlacklist;
     document.querySelector('#userWhitelist textarea').value = options.userWhitelist;
-    document.querySelector('#webBlacklist textarea').value = options.webBlacklist;
+    document.querySelector('#webBlacklists textarea').value = options.webBlacklists;
 
     return new Promise((resolve, reject) => {
       chrome.runtime.sendMessage({
@@ -34,12 +34,12 @@ document.addEventListener('DOMContentLoaded', (event) => {
     event.preventDefault();
     const userBlacklist = document.querySelector('#userBlacklist textarea').value;
     const userWhitelist = document.querySelector('#userWhitelist textarea').value;
-    const webBlacklist = document.querySelector('#webBlacklist textarea').value;
+    const webBlacklists = document.querySelector('#webBlacklists textarea').value;
 
     utils.setOptions({
       userBlacklist: validator.validateRulesText(userBlacklist),
       userWhitelist: validator.validateRulesText(userWhitelist),
-      webBlacklist: webBlacklist
+      webBlacklists: webBlacklists
     }).then(() => {
       if (history.length > 1) {
         history.go(-1);

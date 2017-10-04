@@ -90,19 +90,19 @@
     "description": "Description of All Blacklist field for options"
   },
 
-  "webBlacklist": {
+  "webBlacklists": {
     "message": "網路黑名單",
-    "description": "Web Blacklist field for options"
+    "description": "Web Blacklists field for options"
   },
 
-  "webBlacklistDesc": {
+  "webBlacklistsDesc": {
     "message": "網路黑名單的網址，每行一個，空白及之後字元皆忽略。系統會自動前往取得及匯入黑名單。",
-    "description": "Description of Web Blacklist field for options"
+    "description": "Description of Web Blacklists field for options"
   },
 
-  "webBlacklistPlaceholder": {
+  "webBlacklistsPlaceholder": {
     "message": "https://example.com/blacklist.txt (示例)",
-    "description": "Placeholder of Web Blacklist field for options"
+    "description": "Placeholder of Web Blacklists field for options"
   },
 
   "userBlacklist": {

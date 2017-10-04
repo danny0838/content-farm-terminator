@@ -89,19 +89,19 @@
     "description": "Description of All Blacklist field for options"
   },
 
-  "webBlacklist": {
+  "webBlacklists": {
     "message": "Web Blacklists",
-    "description": "Web Blacklist field for options"
+    "description": "Web Blacklists field for options"
   },
 
-  "webBlacklistDesc": {
+  "webBlacklistsDesc": {
     "message": "URLs of web blacklists that will be automatically fetched and imported. One entry per line. Text following a space will be ignored.",
-    "description": "Description of Web Blacklist field for options"
+    "description": "Description of Web Blacklists field for options"
   },
 
-  "webBlacklistPlaceholder": {
+  "webBlacklistsPlaceholder": {
     "message": "https://example.com/blacklist.txt (example)",
-    "description": "Placeholder of Web Blacklist field for options"
+    "description": "Placeholder of Web Blacklists field for options"
   },
 
   "userBlacklist": {

@@ -13,11 +13,11 @@ Promise.resolve().then(() => {
 });
 
 function updateFilter() {
-  return updateFilterPromise = utils.getDefaultOptions().then((lists) => {
+  return updateFilterPromise = utils.getDefaultOptions().then((options) => {
     filter = new ContentFarmFilter();
-    filter.addBlackList(lists.userBlacklist);
-    filter.addWhiteList(lists.userWhitelist);
-    const tasks = filter.urlsTextToLines(lists.webBlacklist).map(u => filter.addBlackListFromUrl(u));
+    filter.addBlackList(options.userBlacklist);
+    filter.addWhiteList(options.userWhitelist);
+    const tasks = filter.urlsTextToLines(options.webBlacklists).map(u => filter.addBlackListFromUrl(u));
     return Promise.all(tasks);
   }).then(() => {
     return new Promise((resolve, reject) => {
@@ -112,10 +112,31 @@ chrome.storage.onChanged.addListener((changes, areaName) => {
     } catch(ex) {}
   }
   updateFilter().then(() => {
-    if (changes.webBlacklist) {
-      filter.clearStaleWebListCache(changes.webBlacklist);
+    if (changes.webBlacklists) {
+      filter.clearStaleWebListCache(changes.webBlacklists);
     }
   });
+});
+
+chrome.runtime.onInstalled.addListener((details) => {
+  const {reason, previousVersion} = details;
+
+  if (utils.versionCompare(previousVersion, "2.1.2") === -1) {
+    console.warn("Migrating options to 2.1.2");
+    return utils.getOptions(["webBlacklist", "webBlacklists"]).then((options) => {
+      if (typeof options.webBlacklists === "undefined") {
+        if (options.webBlacklist) {
+          let newWebBlacklists = "https://danny0838.github.io/content-farm-terminator/files/blocklist/content-farms.txt" + 
+              "\n" + options.webBlacklist;
+          return utils.setOptions({webBlacklists: newWebBlacklists}).then(() => {
+            updateFilter();
+          });
+        }
+      }
+    }).then(() => {
+      console.warn("Migrated successfully.");
+    });
+  }
 });
 
 if (chrome.browserAction) {
