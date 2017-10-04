@@ -73,13 +73,15 @@ textarea[readonly] {
   background-color: #DDDDDD;
 }
 
-.submit {
+#buttonsField {
+  text-align: right;
+}
+
+.button {
   display: inline-block;
-  float: right;
   border: 1px solid #C1C1C1;
   border-radius: 5px;
   padding: 10px 14px;
-  width: 50px;
   background-color: #EEEEEE;
   text-align: center;
   text-decoration: none;
@@ -88,7 +90,7 @@ textarea[readonly] {
   text-transform: uppercase;
 }
 
-.submit:hover {
+.button:hover {
   background-color: #EBEBEB;
 }
 

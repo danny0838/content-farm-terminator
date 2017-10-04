@@ -147,5 +147,10 @@
   "save": {
     "message": "SAVE",
     "description": "Save Button"
+  },
+
+  "reset": {
+    "message": "RESET",
+    "description": "Reset Button"
   }
 }

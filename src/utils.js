@@ -63,6 +63,29 @@ const utils = {
     });
   },
 
+  clearOptions() {
+    return new Promise((resolve, reject) => {
+      chrome.storage.sync.clear(() => {
+        if (chrome.runtime.lastError) {
+          reject(chrome.runtime.lastError);
+        } else {
+          resolve();
+        }
+      });
+    }).catch((ex) => {
+      // fallback to storage.local if storage.sync is not available
+      return new Promise((resolve, reject) => {
+        chrome.storage.local.clear(() => {
+          if (chrome.runtime.lastError) {
+            reject(chrome.runtime.lastError);
+          } else {
+            resolve();
+          }
+        });
+      });
+    });
+  },
+
   escapeHtml(str, noDoubleQuotes = false, singleQuotes = false, spaces = false) {
     const list = {
       "&": "&amp;",
