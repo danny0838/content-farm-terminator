@@ -80,14 +80,14 @@
     "description": "Title and alt text for the image marker of a link targeting a content farm page."
   },
 
-  "systemBlacklist": {
-    "message": "系統黑名單",
-    "description": "Label of System Blacklist field for options"
+  "allBlacklist": {
+    "message": "作用中的黑名單",
+    "description": "Label of All Blacklist field for options"
   },
 
-  "systemBlacklistDesc": {
-    "message": "系統內建黑名單 (唯讀)",
-    "description": "Description of System Blacklist field for options"
+  "allBlacklistDesc": {
+    "message": "已載入且正在使用的黑名單 (唯讀)",
+    "description": "Description of All Blacklist field for options"
   },
 
   "webBlacklist": {

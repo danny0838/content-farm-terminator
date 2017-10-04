@@ -17,6 +17,14 @@ const utils = {
     }, this);
   },
 
+  getDefaultOptions(options) {
+    return this.getOptions({
+      userBlacklist: "",
+      userWhitelist: "",
+      webBlacklist: "https://danny0838.github.io/content-farm-terminator/files/blocklist/content-farms.txt",
+    });
+  },
+
   getOptions(options) {
     return new Promise((resolve, reject) => {
       chrome.storage.sync.get(options, (result) => {
@@ -134,6 +142,7 @@ class ContentFarmFilter {
     this._listUpdated = true;
     this._blacklist;
     this._whitelist;
+    this._blacklistRawSet = new Set();
     this._blacklistSet = new Set();
     this._whitelistSet = new Set();
   }
@@ -142,6 +151,7 @@ class ContentFarmFilter {
     this.rulesTextToLines(listText).forEach((ruleText) => {
       const ruleRegex = this.ruleTextToRegex(ruleText);
       this._blacklistSet.add(ruleRegex);
+      this._blacklistRawSet.add(ruleText);
     });
     this._listUpdated = true;
   }
@@ -184,11 +194,6 @@ class ContentFarmFilter {
     }).catch((ex) => {
       console.error(ex);
     });
-  }
-
-  addBuiltinBlackList() {
-    const url = chrome.runtime.getURL('blacklist.txt');
-    return this.addBlackListFromUrl(url, true);
   }
 
   addWhiteList(listText) {
@@ -257,6 +262,10 @@ class ContentFarmFilter {
 
   getMergedRegex(regexSet) {
     return new RegExp('^(?:.+\\.)?(?:' + [...regexSet].join('|') + ')$');
+  }
+
+  getMergedBlacklist() {
+    return [...this._blacklistRawSet].join("\n");
   }
 
   webListCacheKey(url) {

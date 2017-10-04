@@ -79,14 +79,14 @@
     "description": "Title and alt text for the image marker of a link targeting a content farm page."
   },
 
-  "systemBlacklist": {
-    "message": "System Blacklist",
-    "description": "Label of System Blacklist field for options"
+  "allBlacklist": {
+    "message": "Loaded Blacklist",
+    "description": "Label of All Blacklist field for options"
   },
 
-  "systemBlacklistDesc": {
-    "message": "Default Blacklist (Read-only).",
-    "description": "Description of System Blacklist field for options"
+  "allBlacklistDesc": {
+    "message": "Loaded and working Blacklist (Read-only).",
+    "description": "Description of All Blacklist field for options"
   },
 
   "webBlacklist": {

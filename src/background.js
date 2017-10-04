@@ -1,4 +1,5 @@
 let filter;
+let updateFilterPromise;
 
 let _isFxBelow56;
 Promise.resolve().then(() => {
@@ -12,16 +13,11 @@ Promise.resolve().then(() => {
 });
 
 function updateFilter() {
-  return utils.getOptions({
-    userBlacklist: "",
-    userWhitelist: "",
-    webBlacklist: ""
-  }).then((lists) => {
+  return updateFilterPromise = utils.getDefaultOptions().then((lists) => {
     filter = new ContentFarmFilter();
     filter.addBlackList(lists.userBlacklist);
     filter.addWhiteList(lists.userWhitelist);
     const tasks = filter.urlsTextToLines(lists.webBlacklist).map(u => filter.addBlackListFromUrl(u));
-    tasks.push(filter.addBuiltinBlackList());
     return Promise.all(tasks);
   }).then(() => {
     return new Promise((resolve, reject) => {
@@ -74,6 +70,13 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
     case 'isUrlBlocked': {
       const blocked = filter.isBlocked(args.url);
       sendResponse(blocked);
+      break;
+    }
+    case 'getMergedBlacklist': {
+      updateFilterPromise.then(() => {
+        sendResponse(filter.getMergedBlacklist());
+      });
+      return true; // async response
       break;
     }
     case 'closeTab': {

@@ -1,14 +1,18 @@
 const validator = new ContentFarmFilter();
 
 function loadOptions() {
-  return utils.getOptions({
-    userBlacklist: "",
-    userWhitelist: "",
-    webBlacklist: ""
-  }).then((options) => {
+  return utils.getDefaultOptions().then((options) => {
     document.querySelector('#userBlacklist textarea').value = options.userBlacklist;
     document.querySelector('#userWhitelist textarea').value = options.userWhitelist;
     document.querySelector('#webBlacklist textarea').value = options.webBlacklist;
+
+    return new Promise((resolve, reject) => {
+      chrome.runtime.sendMessage({
+        cmd: 'getMergedBlacklist',
+      }, resolve);
+    }).then((blacklist) => {
+      document.querySelector('#allBlacklist textarea').value = blacklist;
+    });
   }).catch((ex) => {
     console.error(ex);
   });
@@ -16,12 +20,6 @@ function loadOptions() {
 
 document.addEventListener('DOMContentLoaded', (event) => {
   utils.loadLanguages(document);
-
-  fetch(chrome.runtime.getURL('blacklist.txt')).then((response) => {
-    return response.text();
-  }).then((text) => {
-    document.querySelector('#systemBlacklist textarea').value = text.trim();
-  });
 
   loadOptions();
 
