@@ -5,6 +5,12 @@ function loadOptions() {
     document.querySelector('#userBlacklist textarea').value = options.userBlacklist;
     document.querySelector('#userWhitelist textarea').value = options.userWhitelist;
     document.querySelector('#webBlacklists textarea').value = options.webBlacklists;
+    for(const checkbox of document.querySelectorAll('#contextMenusOptions input[type="checkbox"]')) {
+      checkbox.checked = false;
+      if(options.contextMenusOptions.includes(checkbox.name)) {
+        checkbox.checked = true;
+      }
+    }
 
     return new Promise((resolve, reject) => {
       chrome.runtime.sendMessage({
@@ -35,11 +41,14 @@ document.addEventListener('DOMContentLoaded', (event) => {
     const userBlacklist = document.querySelector('#userBlacklist textarea').value;
     const userWhitelist = document.querySelector('#userWhitelist textarea').value;
     const webBlacklists = document.querySelector('#webBlacklists textarea').value;
+    const contextMenusChecked = document.querySelectorAll('#contextMenusOptions input[type="checkbox"]:checked');
+    const contextMenusOptions = Array.prototype.map.call(contextMenusChecked, el => el.name);
 
     utils.setOptions({
       userBlacklist: validator.validateRulesText(userBlacklist),
       userWhitelist: validator.validateRulesText(userWhitelist),
-      webBlacklists: webBlacklists
+      webBlacklists: webBlacklists,
+      contextMenusOptions: contextMenusOptions
     }).then(() => {
       if (history.length > 1) {
         history.go(-1);

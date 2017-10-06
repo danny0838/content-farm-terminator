@@ -80,6 +80,36 @@
     "description": "Title and alt text for the image marker of a link targeting a content farm page."
   },
 
+  "contextMenusOptions": {
+    "message": "右鍵選項",
+    "description": "Label of context menu for options"
+  },
+
+  "contextMenusOptionsDesc": {
+    "message": "啟動/關閉右鍵選項",
+    "description": "Description of context menu for options"
+  },
+
+  "contextMenusOptionsPage": {
+    "message": "網頁內",
+    "description": "Page option of context menu"
+  },
+
+  "contextMenusOptionsTab": {
+    "message": "分頁上",
+    "description": "Tab option of context menu"
+  },
+
+  "contextMenusOptionsLink": {
+    "message": "連結上",
+    "description": "Link option of context menu"
+  },
+
+  "contextMenusOptionsSelection": {
+    "message": "選取文字上",
+    "description": "Selection option of context menu"
+  },
+
   "allBlacklist": {
     "message": "作用中的黑名單",
     "description": "Label of All Blacklist field for options"

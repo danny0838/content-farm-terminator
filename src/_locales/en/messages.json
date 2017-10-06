@@ -79,6 +79,36 @@
     "description": "Title and alt text for the image marker of a link targeting a content farm page."
   },
 
+  "contextMenusOptions": {
+    "message": "Context Menu Options",
+    "description": "Label of context menu for options"
+  },
+
+  "contextMenusOptionsDesc": {
+    "message": "Append options to context menu",
+    "description": "Description of context menu for options"
+  },
+
+  "contextMenusOptionsPage": {
+    "message": "In page",
+    "description": "Page option of context menu"
+  },
+
+  "contextMenusOptionsTab": {
+    "message": "On tab",
+    "description": "Tab option of context menu"
+  },
+
+  "contextMenusOptionsLink": {
+    "message": "On link",
+    "description": "Link option of context menu"
+  },
+
+  "contextMenusOptionsSelection": {
+    "message": "On selection",
+    "description": "Selection option of context menu"
+  },
+
   "allBlacklist": {
     "message": "Loaded Blacklist",
     "description": "Label of All Blacklist field for options"
