@@ -2,6 +2,7 @@ const docUrlObj = new URL(document.location.href);
 const docHostname = docUrlObj.hostname;
 const docPathname = docUrlObj.pathname;
 const anchorMarkerMap = new Map();
+let updateLinkMarkerPromise = Promise.resolve();
 let lastRightClickedElem;
 
 function getRedirectedUrlOrHostname(elem) {
@@ -225,7 +226,7 @@ function getRedirectedUrlOrHostname(elem) {
 
 function updateLinkMarker(elem) {
   // console.warn("updateLinkMarker", elem);
-  return Promise.resolve().then(() => {
+  return updateLinkMarkerPromise = updateLinkMarkerPromise.then(() => {
     if (!elem.parentNode || !elem.href) { return false; }
 
     const u = new URL(elem.href);
@@ -281,12 +282,16 @@ function updateLinkMarker(elem) {
     } else {
       if (marker && marker.parentNode) { marker.remove(); }
     }
+  }).catch((ex) => {
+    console.error(ex);
   });
 }
 
 function updateLinkMarkersAll(root = document) {
-  const tasks = Array.from(root.querySelectorAll('a[href], area[href]'), updateLinkMarker);
-  return Promise.all(tasks);
+  Array.prototype.forEach.call(root.querySelectorAll('a[href], area[href]'), (elem) => {
+    updateLinkMarker(elem);
+  });
+  return updateLinkMarkerPromise;
 }
 
 function observeDomUpdates() {
