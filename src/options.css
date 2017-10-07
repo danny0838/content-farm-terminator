@@ -73,10 +73,6 @@ textarea[readonly] {
   background-color: #DDDDDD;
 }
 
-#buttonsField {
-  text-align: __MSG_@@bidi_end_edge__;
-}
-
 .button {
   display: inline-block;
   border: 1px solid #C1C1C1;
@@ -92,6 +88,14 @@ textarea[readonly] {
 
 .button:hover {
   background-color: #EBEBEB;
+}
+
+#resetButton {
+  float: __MSG_@@bidi_start_edge__;
+}
+
+#submitButton {
+  float: __MSG_@@bidi_end_edge__;
 }
 
 
