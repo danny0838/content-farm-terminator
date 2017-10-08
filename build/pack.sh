@@ -15,13 +15,13 @@ cd "$src"
 
 # Chrome extension package (for submit)
 fn="$filename.zip" &&
-rm "$dist/$fn" &&
+rm -f "$dist/$fn" &&
 zip -r "$dist/$fn" * -x '.git*' &&
 zip -d "$dist/$fn" 'manifest-firefox.json'
 
 # Firefox addon
 fn="$filename.xpi" &&
-rm "$dist/$fn" &&
+rm -f "$dist/$fn" &&
 zip -r "$dist/$fn" * -x '.git*' &&
 zip -d "$dist/$fn" 'manifest.json' &&
 printf "@ manifest-firefox.json\n@=manifest.json\n" | zipnote -w "$dist/$fn"
