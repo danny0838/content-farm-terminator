@@ -111,11 +111,14 @@ chrome.storage.onChanged.addListener((changes, areaName) => {
       return;
     } catch(ex) {}
   }
-  updateFilter().then(() => {
-    if (changes.webBlacklists) {
-      filter.clearStaleWebListCache(changes.webBlacklists);
-    }
-  });
+
+  if (changes.webBlacklists || changes.userBlacklist || changes.userWhitelist) {
+    updateFilter().then(() => {
+      if (changes.webBlacklists) {
+        filter.clearStaleWebListCache(changes.webBlacklists);
+      }
+    });
+  }
 });
 
 chrome.runtime.onInstalled.addListener((details) => {
