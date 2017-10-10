@@ -34,6 +34,80 @@ function updateFilter() {
   });
 }
 
+function updateContextMenus() {
+  if (!chrome.contextMenus) { return; }
+
+  const blockDomain = function (urlOrHostname, tabId, frameId) {
+    return new Promise((resolve, reject) => {
+      const h = filter.validateRuleLine(urlOrHostname.trim().replace(/\s[\s\S]*$/g, ""));
+      chrome.tabs.sendMessage(tabId, {
+        cmd: 'blockDomain',
+        args: {hostname: h}
+      }, {frameId}, resolve);
+    }).then((hostname) => {
+      if (!hostname) { return; }
+      hostname = filter.validateRuleLine(hostname);
+      return utils.getOptions({
+        userBlacklist: ""
+      }).then((options) => {
+        let text = options.userBlacklist;
+        if (text) { text += "\n"; }
+        text = text + hostname;
+        return utils.setOptions({
+          userBlacklist: text
+        });
+      });
+    });
+  };
+
+  try {
+    chrome.contextMenus.create({
+      title: utils.lang("blockTab"),
+      contexts: ["tab"],
+      documentUrlPatterns: ["http://*/*", "https://*/*"],
+      onclick: (info, tab) => {
+        return blockDomain(info.pageUrl, tab.id, 0);
+      }
+    });
+  } catch (ex) {
+    // Available only in Firefox >= 53. Otherwise ignore the error.
+  }
+
+  chrome.contextMenus.create({
+    title: utils.lang("blockPage"),
+    contexts: ["page"],
+    documentUrlPatterns: ["http://*/*", "https://*/*"],
+    onclick: (info, tab) => {
+      return blockDomain(info.pageUrl, tab.id, info.frameId);
+    }
+  });
+
+  chrome.contextMenus.create({
+    title: utils.lang("blockLink"),
+    contexts: ["link"],
+    documentUrlPatterns: ["http://*/*", "https://*/*"],
+    onclick: (info, tab) => {
+      return new Promise((resolve, reject) => {
+        chrome.tabs.sendMessage(tab.id, {
+          cmd: 'getLinkHostname'
+        }, {frameId: info.frameId}, resolve);
+      }).then((redirectedUrl) => {
+        const urlOrHostname = redirectedUrl || info.linkUrl;
+        return blockDomain(urlOrHostname, tab.id, info.frameId);
+      });
+    }
+  });
+
+  chrome.contextMenus.create({
+    title: utils.lang("blockSelection"),
+    contexts: ["selection"],
+    documentUrlPatterns: ["http://*/*", "https://*/*"],
+    onclick: (info, tab) => {
+      return blockDomain(info.selectionText, tab.id, info.frameId);
+    }
+  });
+}
+
 chrome.webRequest.onBeforeRequest.addListener((details) => {
   const url = details.url;
   if (filter.isBlocked(url)) {
@@ -158,72 +232,5 @@ if (chrome.browserAction) {
   chrome.pageAction.show(0);
 }
 
-if (chrome.contextMenus) {
-  const blockDomain = function (urlOrHostname, tabId, frameId) {
-    return new Promise((resolve, reject) => {
-      const h = filter.validateRuleLine(urlOrHostname.trim().replace(/\s[\s\S]*$/g, ""));
-      chrome.tabs.sendMessage(tabId, {
-        cmd: 'blockDomain',
-        args: {hostname: h}
-      }, {frameId}, resolve);
-    }).then((hostname) => {
-      if (!hostname) { return; }
-      hostname = filter.validateRuleLine(hostname);
-      return utils.getOptions({
-        userBlacklist: ""
-      }).then((options) => {
-        let text = options.userBlacklist;
-        if (text) { text += "\n"; }
-        text = text + hostname;
-        return utils.setOptions({
-          userBlacklist: text
-        });
-      });
-    });
-  };
-  try {
-    chrome.contextMenus.create({
-      title: utils.lang("blockTab"),
-      contexts: ["tab"],
-      documentUrlPatterns: ["http://*/*", "https://*/*"],
-      onclick: (info, tab) => {
-        return blockDomain(info.pageUrl, tab.id, 0);
-      }
-    });
-  } catch (ex) {
-    // Available only in Firefox >= 53. Otherwise ignore the error.
-  }
-  chrome.contextMenus.create({
-    title: utils.lang("blockPage"),
-    contexts: ["page"],
-    documentUrlPatterns: ["http://*/*", "https://*/*"],
-    onclick: (info, tab) => {
-      return blockDomain(info.pageUrl, tab.id, info.frameId);
-    }
-  });
-  chrome.contextMenus.create({
-    title: utils.lang("blockLink"),
-    contexts: ["link"],
-    documentUrlPatterns: ["http://*/*", "https://*/*"],
-    onclick: (info, tab) => {
-      return new Promise((resolve, reject) => {
-        chrome.tabs.sendMessage(tab.id, {
-          cmd: 'getLinkHostname'
-        }, {frameId: info.frameId}, resolve);
-      }).then((redirectedUrl) => {
-        const urlOrHostname = redirectedUrl || info.linkUrl;
-        return blockDomain(urlOrHostname, tab.id, info.frameId);
-      });
-    }
-  });
-  chrome.contextMenus.create({
-    title: utils.lang("blockSelection"),
-    contexts: ["selection"],
-    documentUrlPatterns: ["http://*/*", "https://*/*"],
-    onclick: (info, tab) => {
-      return blockDomain(info.selectionText, tab.id, info.frameId);
-    }
-  });
-}
-
+updateContextMenus();
 updateFilter();
