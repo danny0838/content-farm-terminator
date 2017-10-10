@@ -1,4 +1,10 @@
 const utils = {
+  defaultOptions: {
+    userBlacklist: "",
+    userWhitelist: "",
+    webBlacklists: "https://danny0838.github.io/content-farm-terminator/files/blocklist/content-farms.txt",
+  },
+
   lang(key, args) {
     return chrome.i18n.getMessage(key, args) || "__MSG_" + key + "__";
   },
@@ -18,11 +24,7 @@ const utils = {
   },
 
   getDefaultOptions(options) {
-    return this.getOptions({
-      userBlacklist: "",
-      userWhitelist: "",
-      webBlacklists: "https://danny0838.github.io/content-farm-terminator/files/blocklist/content-farms.txt",
-    });
+    return this.getOptions(this.defaultOptions);
   },
 
   getOptions(options) {

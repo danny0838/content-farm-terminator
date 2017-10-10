@@ -126,8 +126,7 @@ chrome.runtime.onInstalled.addListener((details) => {
       console.warn("Migrating options from < 2.1.2");
       return utils.getOptions(["webBlacklist", "webBlacklists"]).then((options) => {
         if (options.webBlacklist && (typeof options.webBlacklists === "undefined")) {
-          let newWebBlacklists = "https://danny0838.github.io/content-farm-terminator/files/blocklist/content-farms.txt" + 
-              "\n" + options.webBlacklist;
+          let newWebBlacklists = utils.defaultOptions.webBlacklists + "\n" + options.webBlacklist;
           return utils.setOptions({webBlacklists: newWebBlacklists}).then(() => {
             updateFilter();
           });
