@@ -18,6 +18,31 @@ function loadOptions() {
   });
 }
 
+function saveOptions() {
+  const userBlacklist = document.querySelector('#userBlacklist textarea').value;
+  const userWhitelist = document.querySelector('#userWhitelist textarea').value;
+  const webBlacklists = document.querySelector('#webBlacklists textarea').value;
+
+  return utils.setOptions({
+    userBlacklist: validator.validateRulesText(userBlacklist),
+    userWhitelist: validator.validateRulesText(userWhitelist),
+    webBlacklists: webBlacklists
+  }).then(() => {
+    if (history.length > 1) {
+      history.go(-1);
+    } else {
+      chrome.tabs.getCurrent((tab) => {
+        chrome.runtime.sendMessage({
+          cmd: 'closeTab',
+          args: {tabId: tab.id}
+        });
+      });
+    }
+  }).catch((ex) => {
+    console.error(ex);
+  });
+}
+
 document.addEventListener('DOMContentLoaded', (event) => {
   utils.loadLanguages(document);
 
@@ -32,27 +57,6 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
   document.querySelector('#submitButton').addEventListener('click', (event) => {
     event.preventDefault();
-    const userBlacklist = document.querySelector('#userBlacklist textarea').value;
-    const userWhitelist = document.querySelector('#userWhitelist textarea').value;
-    const webBlacklists = document.querySelector('#webBlacklists textarea').value;
-
-    utils.setOptions({
-      userBlacklist: validator.validateRulesText(userBlacklist),
-      userWhitelist: validator.validateRulesText(userWhitelist),
-      webBlacklists: webBlacklists
-    }).then(() => {
-      if (history.length > 1) {
-        history.go(-1);
-      } else {
-        chrome.tabs.getCurrent((tab) => {
-          chrome.runtime.sendMessage({
-            cmd: 'closeTab',
-            args: {tabId: tab.id}
-          });
-        });
-      }
-    }).catch((ex) => {
-      console.error(ex);
-    });
+    saveOptions();
   });
 });
