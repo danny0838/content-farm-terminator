@@ -1,34 +1,25 @@
-@-webkit-keyframes spin {
-  from {-webkit-transform:rotate(0turn)}
-  to {-webkit-transform:rotate(1turn)}
+@keyframes spin {
+  from { transform: rotate(0turn); }
+  to { transform: rotate(1turn); }
 }
 
-@keyframes spin {
-  from {transform:rotate(0turn)}
-  to {transform:rotate(1turn)}
+html {
+  height: 100%;
 }
 
 body {
   margin: 0;
   border: 0;
   padding: 0;
-}
-
-#wrapper {
-  position: relative;
-  height: 100vh;
+  height: 100%;
 }
 
 #viewer {
-  display: none;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
   margin: 0;
   border: 0;
   padding: 0;
+  width: 100%;
+  height: 100%;
 }
 
 #loading {
@@ -38,13 +29,11 @@ body {
   right: 0;
   bottom: 0;
   margin: auto;
-  width: 32px;
-  height: 32px;
-  -webkit-border-radius: 20px;
-  border-radius: 20px;
   border: 4px solid #666;
   border-color: #666 transparent;
+  border-radius: 20px;
+  width: 32px;
+  height: 32px;
   background-color: transparent;
-  -webkit-animation: spin 1s linear infinite;
   animation: spin 1s linear infinite;
 }
