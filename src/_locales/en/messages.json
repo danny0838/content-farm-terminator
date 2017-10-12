@@ -79,6 +79,16 @@
     "description": "Title and alt text for the image marker of a link targeting a content farm page."
   },
 
+  "commonOptions":{
+    "message":"Common Options",
+    "description":"Label of common options"
+  },
+
+  "advancedOptions":{
+    "message":"Advanced Options",
+    "description":"Label of advanced options"
+  },
+
   "allBlacklist": {
     "message": "Loaded Blacklist",
     "description": "Label of All Blacklist field for options"
@@ -142,6 +152,11 @@
   "reportUrl": {
     "message": "https://goo.gl/forms/z0tI8JdOWZJmZjqv1",
     "description": "Target URL of Report button"
+  },
+
+  "displayContextMenusOptions": {
+    "message": "Display Options to Context Menu",
+    "description": "Label of display options to context menu"
   },
 
   "save": {

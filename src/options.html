@@ -16,56 +16,71 @@
     <div><img src="img/content-farm-marker.svg"><h1 id="appNameLabel">__MSG_appName__</h1></div>
     <div><span id="appDescLabel">__MSG_appDesc__</span></div>
   </div>
-
-  <div class="options">
-    <div id="allBlacklist" class="field">
-      <div class="fieldLabel">
-        <h2 id="allBlacklistLabel">__MSG_allBlacklist__</h2>
-        <span id="allBlacklistDescLabel">__MSG_allBlacklistDesc__</span>
+  <div id="tabs">
+    <!-- 1st tab -->
+    <span id="tab0" class="tab-switch"></span>
+    <a href="#tab0" class="tab-link">__MSG_commonOptions__</a>
+    <div class="options">
+      <div id="allBlacklist" class="field">
+        <div class="fieldLabel">
+          <h2 id="allBlacklistLabel">__MSG_allBlacklist__</h2>
+          <span id="allBlacklistDescLabel">__MSG_allBlacklistDesc__</span>
+        </div>
+        <div class="fieldset">
+          <textarea readonly></textarea>
+        </div>
       </div>
-      <div class="fieldset">
-        <textarea readonly></textarea>
+
+      <div id="webBlacklists" class="field">
+        <div class="fieldLabel">
+          <h2 id="webBlacklistsLabel">__MSG_webBlacklists__</h2>
+          <span id="webBlacklistsDescLabel">__MSG_webBlacklistsDesc__</span>
+        </div>
+        <div class="fieldset">
+          <textarea placeholder="__MSG_webBlacklistsPlaceholder__"></textarea>
+        </div>
+      </div>
+
+      <div id="userBlacklist" class="field">
+        <div class="fieldLabel">
+          <h2 id="userBlacklistLabel">__MSG_userBlacklist__</h2>
+          <span id="userBlacklistDescLabel">__MSG_userBlacklistDesc__</span>
+        </div>
+        <div class="fieldset">
+          <textarea placeholder="__MSG_userBlacklistPlaceholder__"></textarea>
+        </div>
+      </div>
+
+      <div id="userWhitelist" class="field">
+        <div class="fieldLabel">
+          <h2 id="userWhitelistLabel">__MSG_userWhitelist__</h2>
+          <span id="userWhitelistDescLabel">__MSG_userWhitelistDesc__</span>
+        </div>
+        <div class="fieldset">
+          <textarea placeholder="__MSG_userWhitelistPlaceholder__"></textarea>
+        </div>
+      </div>
+
+      <div class="field">
+        <a href="__MSG_reportUrl__">__MSG_report__</a>
       </div>
     </div>
 
-    <div id="webBlacklists" class="field">
-      <div class="fieldLabel">
-        <h2 id="webBlacklistsLabel">__MSG_webBlacklists__</h2>
-        <span id="webBlacklistsDescLabel">__MSG_webBlacklistsDesc__</span>
-      </div>
-      <div class="fieldset">
-        <textarea placeholder="__MSG_webBlacklistsPlaceholder__"></textarea>
-      </div>
-    </div>
+    <!-- 2nd tab -->
+    <span id="tab1" class="tab-switch"></span>
+    <a href="#tab1" class="tab-link">__MSG_advancedOptions__</a>
 
-    <div id="userBlacklist" class="field">
-      <div class="fieldLabel">
-        <h2 id="userBlacklistLabel">__MSG_userBlacklist__</h2>
-        <span id="userBlacklistDescLabel">__MSG_userBlacklistDesc__</span>
-      </div>
-      <div class="fieldset">
-        <textarea placeholder="__MSG_userBlacklistPlaceholder__"></textarea>
+    <div class="options">
+      <span id="displayContextMenusOptionsLabel">__MSG_displayContextMenusOptions__</span>
+      <div class="material-switch">
+        <input type="checkbox" name="displayContextMenusOptions" id="displayContextMenusOptions">
+        <label for="displayContextMenusOptions"></label>
       </div>
     </div>
-
-    <div id="userWhitelist" class="field">
-      <div class="fieldLabel">
-        <h2 id="userWhitelistLabel">__MSG_userWhitelist__</h2>
-        <span id="userWhitelistDescLabel">__MSG_userWhitelistDesc__</span>
-      </div>
-      <div class="fieldset">
-        <textarea placeholder="__MSG_userWhitelistPlaceholder__"></textarea>
-      </div>
-    </div>
-
-    <div class="field">
-      <a href="__MSG_reportUrl__">__MSG_report__</a>
-    </div>
-
-    <div id="buttonsField" class="field">
-      <a id="resetButton" class="button" href="#">__MSG_reset__</a>
-      <a id="submitButton" class="button" href="#">__MSG_save__</a>
-    </div>
+  </div>
+  <div id="buttonsField" class="field">
+    <a id="resetButton" class="button" href="#">__MSG_reset__</a>
+    <a id="submitButton" class="button" href="#">__MSG_save__</a>
   </div>
 </div>
 </body>
