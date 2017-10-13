@@ -1,51 +1,57 @@
 const utils = {
+  /**
+   * Options
+   *
+   * Use sync storage as viable, fallback to local storage.
+   *
+   * - get: load priority as local > sync > default
+   *
+   * - set: store to sync, if succeeds, remove corresponding keys from local
+   *   (so that new data synced from other terminals will be used); and store
+   *   to local if failed.
+   *
+   *   A set could fail due to:
+   *   - storage.sync not available: storage.sync is undefined in Firefox < 52;
+   *     storage.sync methods fail if Firefox config
+   *     webextensions.storage.sync.enabled is not set to true.
+   *   - the data to be stored exceeds quota or other limit
+   *   - other unclear reason (during data syncing?)
+   *
+   * - clear: clear sync and local
+   */
   defaultOptions: {
     userBlacklist: "",
     userWhitelist: "",
     webBlacklists: "https://danny0838.github.io/content-farm-terminator/files/blocklist/content-farms.txt",
   },
 
-  lang(key, args) {
-    return chrome.i18n.getMessage(key, args) || "__MSG_" + key + "__";
-  },
-
-  loadLanguages(rootNode = document) {
-    Array.prototype.forEach.call(rootNode.getElementsByTagName("*"), (elem) => {
-      if (elem.childNodes.length === 1) {
-        const child = elem.firstChild;
-        if (child.nodeType === 3) {
-          child.nodeValue = child.nodeValue.replace(/__MSG_(.*?)__/, (m, k) => utils.lang(k));
-        }
-      }
-      Array.prototype.forEach.call(elem.attributes, (attr) => {
-        attr.nodeValue = attr.nodeValue.replace(/__MSG_(.*?)__/, (m, k) => utils.lang(k));
-      }, this);
-    }, this);
-  },
-
   getDefaultOptions(options) {
     return this.getOptions(this.defaultOptions);
   },
 
+  // Use storage.local > storage.sync > default
   getOptions(options) {
+    let keys = Object.keys(options);
     return new Promise((resolve, reject) => {
-      chrome.storage.sync.get(options, (result) => {
+      chrome.storage.sync.get(keys, (result) => {
         if (chrome.runtime.lastError) {
           reject(chrome.runtime.lastError);
         } else {
           resolve(result);
         }
       });
-    }).catch((ex) => {
-      // fallback to storage.local if storage.sync is not available
+    }).catch((ex) => {}).then((syncResult) => {
+      // merge options from storage.local to options from storage.sync
       return new Promise((resolve, reject) => {
-        return chrome.storage.local.get(options, (result) => {
+        return chrome.storage.local.get(keys, (result) => {
           if (chrome.runtime.lastError) {
             reject(chrome.runtime.lastError);
           } else {
             resolve(result);
           }
         });
+      }).then((result) => {
+        return Object.assign(options, syncResult, result);
       });
     });
   },
@@ -59,8 +65,18 @@ const utils = {
           resolve();
         }
       });
-    }).catch((ex) => {
-      // fallback to storage.local if storage.sync is not available
+    }).then(() => {
+      return new Promise((resolve, reject) => {
+        chrome.storage.local.remove(Object.keys(options), () => {
+          if (chrome.runtime.lastError) {
+            reject(chrome.runtime.lastError);
+          } else {
+            resolve();
+          }
+        });
+      });
+    }, (ex) => {
+      console.warn(ex.message);
       return new Promise((resolve, reject) => {
         chrome.storage.local.set(options, () => {
           if (chrome.runtime.lastError) {
@@ -82,8 +98,7 @@ const utils = {
           resolve();
         }
       });
-    }).catch((ex) => {
-      // fallback to storage.local if storage.sync is not available
+    }).catch((ex) => {}).then(() => {
       return new Promise((resolve, reject) => {
         chrome.storage.local.clear(() => {
           if (chrome.runtime.lastError) {
@@ -94,6 +109,24 @@ const utils = {
         });
       });
     });
+  },
+
+  lang(key, args) {
+    return chrome.i18n.getMessage(key, args) || "__MSG_" + key + "__";
+  },
+
+  loadLanguages(rootNode = document) {
+    Array.prototype.forEach.call(rootNode.getElementsByTagName("*"), (elem) => {
+      if (elem.childNodes.length === 1) {
+        const child = elem.firstChild;
+        if (child.nodeType === 3) {
+          child.nodeValue = child.nodeValue.replace(/__MSG_(.*?)__/, (m, k) => utils.lang(k));
+        }
+      }
+      Array.prototype.forEach.call(elem.attributes, (attr) => {
+        attr.nodeValue = attr.nodeValue.replace(/__MSG_(.*?)__/, (m, k) => utils.lang(k));
+      }, this);
+    }, this);
   },
 
   escapeHtml(str, noDoubleQuotes = false, singleQuotes = false, spaces = false) {

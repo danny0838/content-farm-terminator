@@ -19,6 +19,7 @@
   "permissions": [
     "contextMenus",
     "tabs",
+    "unlimitedStorage",
     "webRequest",
     "webRequestBlocking",
     "storage",

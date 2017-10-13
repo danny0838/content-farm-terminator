@@ -178,21 +178,34 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
 chrome.storage.onChanged.addListener((changes, areaName) => {
   // Config keys are stored in storage.sync and fallbacks to storage.local;
   // cache keys are stored in storage.local and are valid JSON format.
-  // We only update when a config key is changed.
+  // We only take action when at least one config key is changed.
   if (areaName !== "sync") {
+    // skip if it's a storage.local.remove() rather than a real user modification
+    for (let key in changes) {
+      if (!("newValue" in changes[key])) { return; }
+      break;
+    }
+
+    // skip if no config key is changed
     try {
       for (let key in changes) { JSON.parse(key); }
       return;
     } catch(ex) {}
   }
 
-  if (changes.webBlacklists || changes.userBlacklist || changes.userWhitelist) {
-    updateFilter().then(() => {
-      if (changes.webBlacklists) {
-        filter.clearStaleWebListCache(changes.webBlacklists);
-      }
-    });
-  }
+  updateFilter().then(() => {
+    // @TODO:
+    // Say we have a shift from local to sync:
+    //
+    //     local {webBlacklists: "list1\nlist2"} => sync {webBlacklists: "list1"}
+    //     sync  {webBlacklists: ""}
+    //
+    // We get a change of sync: "" => "list1" and a change of local: "list1\nlist2" => undefined,
+    // and the cache of list2 is not cleared, while it should be, leaving staled cache not cleared.
+    if (changes.webBlacklists) {
+      filter.clearStaleWebListCache(changes.webBlacklists);
+    }
+  });
 });
 
 chrome.runtime.onInstalled.addListener((details) => {
