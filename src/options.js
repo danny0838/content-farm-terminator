@@ -63,18 +63,13 @@ document.addEventListener('DOMContentLoaded', (event) => {
     });
   });
 
-  /**
-   * NodeList.prototype.forEach()
-   * Chrome >= 51, Fx >= 50
-   *
-   * Following makes sure saveOptions work fine
-   */
-  document.querySelectorAll('.tab-link').forEach(el => {
-    el.addEventListener('click', () => {
+  // Do not create a history entry when switching the tab to ensure save to work fine.
+  Array.prototype.forEach.call(document.querySelectorAll('.tab-link'), (elem) => {
+    elem.addEventListener('click', (event) => {
       event.preventDefault();
-      location.replace(el.href);
+      location.replace(elem.href);
     });
-  })
+  });
 
   if (!location.hash) {
     location.replace('#tab0');
