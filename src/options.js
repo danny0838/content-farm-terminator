@@ -26,8 +26,6 @@ function loadOptions() {
     }).then((blacklist) => {
       document.querySelector('#allBlacklist textarea').value = blacklist;
     });
-  }).catch((ex) => {
-    console.error(ex);
   });
 }
 
@@ -40,8 +38,6 @@ function saveOptions() {
     userBlacklist: validator.validateRulesText(userBlacklist),
     userWhitelist: validator.validateRulesText(userWhitelist),
     webBlacklists: webBlacklists
-  }).catch((ex) => {
-    console.error(ex);
   });
 }
 
