@@ -80,13 +80,13 @@
   },
 
   "commonOptions":{
-    "message":"Common Options",
-    "description":"Label of common options"
+    "message":"General",
+    "description":"Label of general options tab"
   },
 
   "advancedOptions":{
-    "message":"Advanced Options",
-    "description":"Label of advanced options"
+    "message":"Advanced",
+    "description":"Label of advanced options tab"
   },
 
   "allBlacklist": {
@@ -144,6 +144,11 @@
     "description": "Placeholder of Whitelist field for options"
   },
 
+  "displayContextMenuCommands": {
+    "message": "Display context menu commands",
+    "description": "Label of display context menu commands"
+  },
+
   "report": {
     "message": "Report a content farm.",
     "description": "Report button"
@@ -152,11 +157,6 @@
   "reportUrl": {
     "message": "https://goo.gl/forms/z0tI8JdOWZJmZjqv1",
     "description": "Target URL of Report button"
-  },
-
-  "displayContextMenusOptions": {
-    "message": "Display Options to Context Menu",
-    "description": "Label of display options to context menu"
   },
 
   "save": {

@@ -82,12 +82,12 @@
 
   "commonOptions":{
     "message":"一般選項",
-    "description":"Label of common options"
+    "description":"Label of general options tab"
   },
 
   "advancedOptions":{
     "message":"進階選項",
-    "description":"Label of advanced options"
+    "description":"Label of advanced options tab"
   },
 
   "allBlacklist": {
@@ -145,6 +145,11 @@
     "description": "Placeholder of Whitelist field for options"
   },
 
+  "displayContextMenuCommands": {
+    "message": "顯示右鍵選單指令",
+    "description": "Label of display context menu commands"
+  },
+
   "report": {
     "message": "舉報內容農場",
     "description": "Report button"
@@ -153,11 +158,6 @@
   "reportUrl": {
     "message": "https://goo.gl/forms/4nsmTmGjJUzQtr0p1",
     "description": "Target URL of Report button"
-  },
-
-  "displayContextMenusOptions": {
-    "message": "顯示右鍵選單按鈕",
-    "description": "Label of display options to context menu"
   },
 
   "save": {

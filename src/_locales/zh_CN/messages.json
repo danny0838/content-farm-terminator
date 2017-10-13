@@ -80,6 +80,16 @@
     "description": "Title and alt text for the image marker of a link targeting a content farm page."
   },
 
+  "commonOptions":{
+    "message":"一般选项",
+    "description":"Label of general options tab"
+  },
+
+  "advancedOptions":{
+    "message":"高级选项",
+    "description":"Label of advanced options tab"
+  },
+
   "allBlacklist": {
     "message": "作用中的黑名单",
     "description": "Label of All Blacklist field for options"
@@ -133,6 +143,11 @@
   "userWhitelistPlaceholder": {
     "message": "example.com (匹配 example.com, *.example.com)",
     "description": "Placeholder of Whitelist field for options"
+  },
+
+  "displayContextMenuCommands": {
+    "message": "显示右键选单命令",
+    "description": "Label of display context menu commands"
   },
 
   "report": {

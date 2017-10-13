@@ -23,7 +23,7 @@ const utils = {
     userBlacklist: "",
     userWhitelist: "",
     webBlacklists: "https://danny0838.github.io/content-farm-terminator/files/blocklist/content-farms.txt",
-    displayContextMenusOptions: true,
+    displayContextMenuCommands: true,
   },
 
   getDefaultOptions(options) {
