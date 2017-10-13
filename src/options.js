@@ -1,5 +1,18 @@
 const validator = new ContentFarmFilter();
 
+function quit() {
+  if (history.length > 1) {
+    history.go(-1);
+  } else {
+    chrome.tabs.getCurrent((tab) => {
+      chrome.runtime.sendMessage({
+        cmd: 'closeTab',
+        args: {tabId: tab.id}
+      });
+    });
+  }
+}
+
 function loadOptions() {
   return utils.getDefaultOptions().then((options) => {
     document.querySelector('#userBlacklist textarea').value = options.userBlacklist;
@@ -27,17 +40,6 @@ function saveOptions() {
     userBlacklist: validator.validateRulesText(userBlacklist),
     userWhitelist: validator.validateRulesText(userWhitelist),
     webBlacklists: webBlacklists
-  }).then(() => {
-    if (history.length > 1) {
-      history.go(-1);
-    } else {
-      chrome.tabs.getCurrent((tab) => {
-        chrome.runtime.sendMessage({
-          cmd: 'closeTab',
-          args: {tabId: tab.id}
-        });
-      });
-    }
   }).catch((ex) => {
     console.error(ex);
   });
@@ -50,13 +52,15 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
   document.querySelector('#resetButton').addEventListener('click', (event) => {
     event.preventDefault();
-    utils.clearOptions().then(() => {
+    return utils.clearOptions().then(() => {
       return loadOptions();
     });
   });
 
   document.querySelector('#submitButton').addEventListener('click', (event) => {
     event.preventDefault();
-    saveOptions();
+    return saveOptions().then(() => {
+      return quit();
+    });
   });
 });
