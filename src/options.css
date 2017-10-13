@@ -112,10 +112,11 @@ textarea[readonly] {
 }
 
 .tab-switch {
+  /* prevents scrolling to #target */
   position: fixed;
 }
 
-.tab-switch:target + .tab-link + .options {
+.tab-switch:target + .tab-link + .tab-content {
   display: block;
   padding: 1rem;
 }
@@ -123,7 +124,6 @@ textarea[readonly] {
 .tab-switch:target + .tab-link {
   background-color: white;
   color: black;
-
 }
 
 .tab-link {
@@ -133,9 +133,9 @@ textarea[readonly] {
   color: white;
 }
 
-.options {
+.tab-content {
   box-sizing: border-box;
-  float: right;
+  float: __MSG_@@bidi_end_edge__;
   display: none;
   width: 100%;
   background-color: white;
