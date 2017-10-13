@@ -76,5 +76,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
     });
   })
 
-  location.replace('#tab0');
+  if (!location.hash) {
+    location.replace('#tab0');
+  }
 });
