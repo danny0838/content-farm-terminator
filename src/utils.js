@@ -196,6 +196,29 @@ const utils = {
       xhr.send();
     });
   },
+
+  getBlockedPageUrl(url, inFrame = false) {
+    const redirectUrl = `${chrome.runtime.getURL('blocked.html')}?to=${encodeURIComponent(url)}`;
+
+    // A frame may be too small to show full description about blocking.
+    // Display a link for opening in a new tab instead.
+    if (inFrame) {
+      const html = `<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+</head>
+<body>
+<img src="${utils.escapeHtml(chrome.runtime.getURL("img/content-farm-marker.svg"))}" alt="" style="width: 1em;"><a href="${utils.escapeHtml(redirectUrl, false)}" target="_blank">${utils.lang("viewBlockedFrame")}</a>
+</body>
+</html>
+`;
+      const dataUrl = 'data:text/html;charset=UTF-8,' + encodeURIComponent(html);
+      return dataUrl;
+    }
+
+    return redirectUrl;
+  },
 };
 
 class ContentFarmFilter {

@@ -369,6 +369,25 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
   }
 });
 
+// Check whether the current page is blocked, as a supplement
+// for content farm pages not blocked by background onBeforeRequest.
+// This could happen when the page is loaded before the extension
+// is loaded or before updateFilter is completed in the background script.
+//
+// @TODO: Some ads are still loaded even if we block the page here.
+new Promise((resolve, reject) => {
+  chrome.runtime.sendMessage({
+    cmd: 'isUrlBlocked',
+    args: {url: docHostname}
+  }, resolve);
+}).then((isBlocked) => {
+  if (!isBlocked) { return; }
+
+  const inFrame = (self !== top);
+  const redirectUrl = utils.getBlockedPageUrl(docUrlObj.href, inFrame);
+  location.replace(redirectUrl);
+});
+
 window.addEventListener("contextmenu", (event) => {
   lastRightClickedElem = event.target;
 }, true);

@@ -1,5 +1,6 @@
 let filter;
 let updateFilterPromise;
+let suspendedTabs = new Map();
 
 let _isFxBelow56;
 Promise.resolve().then(() => {
@@ -108,33 +109,22 @@ function updateContextMenus() {
   });
 }
 
+// ref: https://github.com/gorhill/uBlock/issues/2067
+// Suspend all tabs until updateFilter is completed, and then this function
+// will be replaced and the suspended tabs will be loaded.
+//
+// @TODO:
+// This could still fail if the browser loads tabs before the extensions are loaded
+// (Chrome and Firefox for Android seems so).
+// In this case, we fallback to block on content script starting.
+let onBeforeRequestCallback = function (details) {
+  const {tabId, url} = details;
+  suspendedTabs.set(tabId, url);
+  return {cancel: true};
+};
+
 chrome.webRequest.onBeforeRequest.addListener((details) => {
-  const url = details.url;
-  if (filter.isBlocked(url)) {
-    const redirectUrl = `${chrome.runtime.getURL('blocked.html')}?to=${encodeURIComponent(url)}`;
-    if (details.type === "main_frame") {
-      if (!_isFxBelow56) {
-        return {redirectUrl: redirectUrl};
-      } else {
-        // fix for bug in Firefox < 56
-        chrome.tabs.update(details.tabId, {url: redirectUrl});
-        return {cancel: true};
-      }
-    } else {
-      const html = `<!DOCTYPE html>
-<html>
-<head>
-<meta charset="UTF-8">
-</head>
-<body>
-<img src="${utils.escapeHtml(chrome.runtime.getURL("img/content-farm-marker.svg"))}" alt="" style="width: 1em;"><a href="${utils.escapeHtml(redirectUrl, false)}" target="_blank">${utils.lang("viewBlockedFrame")}</a>
-</body>
-</html>
-`;
-      const dataUrl = 'data:text/html;charset=UTF-8,' + encodeURIComponent(html);
-      return {redirectUrl: dataUrl};
-    }
-  }
+  return onBeforeRequestCallback(details);
 }, {urls: ["*://*/*"], types: ["main_frame", "sub_frame"]}, ["blocking"]);
 
 chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
@@ -142,8 +132,11 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
   const {cmd, args} = message;
   switch (cmd) {
     case 'isUrlBlocked': {
-      const blocked = filter.isBlocked(args.url);
-      sendResponse(blocked);
+      updateFilterPromise.then(() => {
+        const blocked = filter.isBlocked(args.url);
+        sendResponse(blocked);
+      });
+      return true; // async response
       break;
     }
     case 'getMergedBlacklist': {
@@ -246,4 +239,34 @@ if (chrome.browserAction) {
 }
 
 updateContextMenus();
-updateFilter();
+
+updateFilter().then(() => {
+  // replace onBeforeRequestCallback with the blocker
+  onBeforeRequestCallback = function (details) {
+    const url = details.url;
+    if (!filter.isBlocked(url)) { return; }
+
+    if (details.type === "main_frame") {
+      const redirectUrl = utils.getBlockedPageUrl(url, false);
+
+      // Firefox < 56 does not allow redirecting to an extension page
+      // even if it is listed in web_accessible_resources.
+      // Using data URI with meta or script refresh works but generates
+      // an extra history entry.
+      if (_isFxBelow56) {
+        chrome.tabs.update(details.tabId, {url: redirectUrl});
+        return {cancel: true};
+      }
+
+      return {redirectUrl: redirectUrl};
+    } else {
+      const redirectUrl = utils.getBlockedPageUrl(url, true);
+      return {redirectUrl: redirectUrl};
+    }
+  };
+
+  // load the suspended tabs
+  suspendedTabs.forEach((url, tabId) => {
+    chrome.tabs.update(tabId, {url: url, active: false});
+  });
+});
