@@ -2,77 +2,84 @@
   "appName": {
     "message": "終結內容農場"
   },
+
   "appDesc": {
     "message": "標示內容農場連結，並且防止不小心進入內容農場"
   },
 
   "blockTab": {
     "message": "將此分頁的網域加入黑名單",
-    "description": "Context menu blocker on tab"
+    "description": "Label of context menu blocker on tab"
   },
 
   "blockPage": {
     "message": "將此頁面的網域加入黑名單",
-    "description": "Context menu blocker on page"
+    "description": "Label of context menu blocker on page"
   },
 
   "blockLink": {
     "message": "將此連結的網域加入黑名單",
-    "description": "Context menu blocker on link"
+    "description": "Label of context menu blocker on link"
   },
 
   "blockSelection": {
     "message": "將選取文字網域加入黑名單",
-    "description": "Context menu blocker on selection"
+    "description": "Label of context menu blocker on selection"
   },
 
   "blockDomain": {
     "message": "將此網域加入黑名單：",
-    "description": "Prompt for blocking domain"
+    "description": "Prompt message of context menu blocker"
   },
 
   "viewBlockedFrame": {
     "message": "內容農場",
-    "description": "Text of the link of a blocked frame page"
+    "description": "Text of link of a blocked frame page"
   },
+
   "title": {
     "message": "小心內容農場",
-    "description": "Title for blocked page"
+    "description": "Document title of blocked page"
   },
+
   "header": {
     "message": "你即將進入內容農場：",
-    "description": "Header of warning in blocked page"
+    "description": "Header of blocked page"
   },
+
   "body": {
     "message": "要繼續嗎？若是感到厭煩，放棄也是一種選擇啊。",
-    "description": "Body of warning message"
+    "description": "Main message of blocked page"
   },
 
   "details": {
     "message": "詳情",
-    "description": "Click to open options from blocked page"
+    "description": "Label of details button in blocked page"
   },
+
   "detailsTitle": {
     "message": "進入選項頁面修改封鎖名單。",
-    "description": "Details buttnon title"
+    "description": "Title of details button in blocked page"
   },
 
   "backBtn": {
     "message": "返回",
-    "description": "Back button text"
+    "description": "Label of back button in blocked page"
   },
+
   "backBtnTitle": {
     "message": "回上一頁，遠離垃圾！",
-    "description": "Back button title"
+    "description": "Title of back button in blocked page"
   },
 
   "viewBtn": {
     "message": "檢視",
-    "description": "View button text"
+    "description": "Label of view button in blocked page"
   },
+
   "viewBtnTitle": {
     "message": "檢視處理過的頁面內容，封鎖圖片、多媒體、內嵌程式碼等內容。這不會為原站台帶來廣告收益。",
-    "description": "View button title"
+    "description": "Title of view button in blocked page"
   },
 
   "markTitle": {
@@ -82,76 +89,76 @@
 
   "allBlacklist": {
     "message": "作用中的黑名單",
-    "description": "Label of All Blacklist field for options"
+    "description": "Label of allBlacklist field in options page"
   },
 
   "allBlacklistDesc": {
     "message": "已載入且正在使用的黑名單 (唯讀)",
-    "description": "Description of All Blacklist field for options"
+    "description": "Description of allBlacklist field in options page"
   },
 
   "webBlacklists": {
     "message": "網路黑名單",
-    "description": "Web Blacklists field for options"
+    "description": "Label of webBlacklists field in options page"
   },
 
   "webBlacklistsDesc": {
     "message": "網路黑名單的網址，每行一個，空白及之後字元皆忽略。系統會自動前往取得及匯入黑名單。",
-    "description": "Description of Web Blacklists field for options"
+    "description": "Description of webBlacklists field in options page"
   },
 
   "webBlacklistsPlaceholder": {
     "message": "https://example.com/blacklist.txt (示例)",
-    "description": "Placeholder of Web Blacklists field for options"
+    "description": "Placeholder of webBlacklists field in options page"
   },
 
   "userBlacklist": {
     "message": "自訂黑名單",
-    "description": "Label of Blacklist field for options"
+    "description": "Label of userBlacklist field in options page"
   },
 
   "userBlacklistDesc": {
     "message": "想額外封鎖的網域名單。每行一個，作用於網域及子網域，「*」表示任意零或多個字元，空白及之後字元皆忽略。輸入網址會自動修正。",
-    "description": "Description of Blacklist field for options"
+    "description": "Description of userBlacklist field in options page"
   },
 
   "userBlacklistPlaceholder": {
     "message": "example.com (作用於 example.com, *.example.com)",
-    "description": "Placeholder of Blacklist field for options"
+    "description": "Placeholder of userBlacklist field in options page"
   },
 
   "userWhitelist": {
     "message": "自訂白名單",
-    "description": "Label of Whitelist field for options"
+    "description": "Label of userWhitelist field in options page"
   },
 
   "userWhitelistDesc": {
     "message": "想解除封鎖的網域名單。每行一個，作用於網域及子網域，「*」表示任意零或多個字元，空白及之後字元皆忽略。輸入網址會自動修正。",
-    "description": "Description of Whitelist field for options"
+    "description": "Description of userWhitelist field in options page"
   },
 
   "userWhitelistPlaceholder": {
     "message": "example.com (作用於 example.com, *.example.com)",
-    "description": "Placeholder of Whitelist field for options"
+    "description": "Placeholder of userWhitelist field in options page"
   },
 
   "report": {
     "message": "舉報內容農場",
-    "description": "Report button"
+    "description": "Label of report button in options page"
   },
 
   "reportUrl": {
     "message": "https://goo.gl/forms/4nsmTmGjJUzQtr0p1",
-    "description": "Target URL of Report button"
+    "description": "Target URL of report button in options page"
   },
 
   "save": {
     "message": "儲存",
-    "description": "Save Button"
+    "description": "Label of save button in options page"
   },
 
   "reset": {
     "message": "重設",
-    "description": "Reset Button"
+    "description": "Label of reset button in options page"
   }
 }

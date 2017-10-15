@@ -2,76 +2,84 @@
   "appName": {
     "message": "Content Farm Terminator"
   },
+
   "appDesc": {
     "message": "Marks content farm links and prevents the user from entering by accident"
   },
 
   "blockTab": {
     "message": "Blacklist the domain of this tab",
-    "description": "Context menu blocker on tab"
+    "description": "Label of context menu blocker on tab"
   },
 
   "blockPage": {
     "message": "Blacklist the domain of this page",
-    "description": "Context menu blocker on page"
+    "description": "Label of context menu blocker on page"
   },
 
   "blockLink": {
     "message": "Blacklist the domain of this link",
-    "description": "Context menu blocker on link"
+    "description": "Label of context menu blocker on link"
   },
 
   "blockSelection": {
     "message": "Blacklist the domain of selected text",
-    "description": "Context menu blocker on selection"
+    "description": "Label of context menu blocker on selection"
   },
 
   "blockDomain": {
     "message": "Blacklist this domain:",
-    "description": "Prompt for blocking domain"
+    "description": "Prompt message of context menu blocker"
   },
 
   "viewBlockedFrame": {
     "message": "Content Farm",
-    "description": "Text of the link of a blocked frame page"
+    "description": "Text of link of a blocked frame page"
   },
+
   "title": {
     "message": "Beware of Content Farm!",
-    "description": "Title for blocked page"
+    "description": "Document title of blocked page"
   },
+
   "header": {
     "message": "You're entering a content farm:",
-    "description": "Header of warning in blocked page"
+    "description": "Header of blocked page"
   },
+
   "body": {
     "message": "Continue? Back if you are annoyed with them.",
-    "description": "Body of warning message"
+    "description": "Main message of blocked page"
   },
+
   "details": {
     "message": "Details",
-    "description": "Click to open options from blocked page"
+    "description": "Label of details button in blocked page"
   },
+
   "detailsTitle": {
     "message": "Enter the options page to revise blocklists.",
-    "description": "Details buttnon title"
+    "description": "Title of details button in blocked page"
   },
 
   "backBtn": {
     "message": "Back",
-    "description": "Back button text"
+    "description": "Label of back button in blocked page"
   },
+
   "backBtnTitle": {
     "message": "Go back to the previous page. Keep away from spams!",
-    "description": "Back button title"
+    "description": "Title of back button in blocked page"
   },
 
   "viewBtn": {
     "message": "View",
-    "description": "View button text"
+    "description": "Label of view button in blocked page"
   },
+
   "viewBtnTitle": {
     "message": "View processed web page content with images, multimedia, and embedded scripts removed. This brings NO ads traffic to the site.",
-    "description": "View button title"
+    "description": "Title of view button in blocked page"
   },
 
   "markTitle": {
@@ -81,76 +89,76 @@
 
   "allBlacklist": {
     "message": "Loaded Blacklist",
-    "description": "Label of All Blacklist field for options"
+    "description": "Label of allBlacklist field in options page"
   },
 
   "allBlacklistDesc": {
     "message": "Loaded and working Blacklist (Read-only).",
-    "description": "Description of All Blacklist field for options"
+    "description": "Description of allBlacklist field in options page"
   },
 
   "webBlacklists": {
     "message": "Web Blacklists",
-    "description": "Web Blacklists field for options"
+    "description": "Label of webBlacklists field in options page"
   },
 
   "webBlacklistsDesc": {
     "message": "URLs of web blacklists that will be automatically fetched and imported. One entry per line. Text following a space will be ignored.",
-    "description": "Description of Web Blacklists field for options"
+    "description": "Description of webBlacklists field in options page"
   },
 
   "webBlacklistsPlaceholder": {
     "message": "https://example.com/blacklist.txt (example)",
-    "description": "Placeholder of Web Blacklists field for options"
+    "description": "Placeholder of webBlacklists field in options page"
   },
 
   "userBlacklist": {
     "message": "User Blacklist",
-    "description": "Label of Blacklist field for options"
+    "description": "Label of userBlacklist field in options page"
   },
 
   "userBlacklistDesc": {
     "message": "Additional blacklist. One entry per line. Domain and all subdomains are matched. A wildcard (*) matches zero or more chars. Text following a space will be ignored. URLs will be auto-corrected.",
-    "description": "Description of Blacklist field for options"
+    "description": "Description of userBlacklist field in options page"
   },
 
   "userBlacklistPlaceholder": {
     "message": "example.com (matches example.com, *.example.com)",
-    "description": "Placeholder of Blacklist field for options"
+    "description": "Placeholder of userBlacklist field in options page"
   },
 
   "userWhitelist": {
     "message": "User Whitelist",
-    "description": "Label of Whitelist field for options"
+    "description": "Label of userWhitelist field in options page"
   },
 
   "userWhitelistDesc": {
     "message": "List of sites to be unblocked. One entry per line. Domain and all subdomains are matched. A wildcard (*) matches zero or more chars. Text following a space will be ignored. URLs will be auto-corrected.",
-    "description": "Description of Whitelist field for options"
+    "description": "Description of userWhitelist field in options page"
   },
 
   "userWhitelistPlaceholder": {
     "message": "example.com (matches example.com, *.example.com)",
-    "description": "Placeholder of Whitelist field for options"
+    "description": "Placeholder of userWhitelist field in options page"
   },
 
   "report": {
     "message": "Report a content farm.",
-    "description": "Report button"
+    "description": "Label of report button in options page"
   },
 
   "reportUrl": {
     "message": "https://goo.gl/forms/z0tI8JdOWZJmZjqv1",
-    "description": "Target URL of Report button"
+    "description": "Target URL of report button in options page"
   },
 
   "save": {
     "message": "SAVE",
-    "description": "Save Button"
+    "description": "Label of save button in options page"
   },
 
   "reset": {
     "message": "RESET",
-    "description": "Reset Button"
+    "description": "Label of reset button in options page"
   }
 }

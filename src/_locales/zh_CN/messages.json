@@ -2,77 +2,84 @@
   "appName": {
     "message": "终结内容农场"
   },
+
   "appDesc": {
     "message": "标记内容农场链接，并且防止不小心进入内容农场"
   },
 
   "blockTab": {
     "message": "把这个分页的网域加入黑名单",
-    "description": "Context menu blocker on tab"
+    "description": "Label of context menu blocker on tab"
   },
 
   "blockPage": {
     "message": "把这个页面的网域加入黑名单",
-    "description": "Context menu blocker on page"
+    "description": "Label of context menu blocker on page"
   },
 
   "blockLink": {
     "message": "把这个链接的网域加入黑名单",
-    "description": "Context menu blocker on link"
+    "description": "Label of context menu blocker on link"
   },
 
   "blockSelection": {
     "message": "把选取文字网域加入黑名单",
-    "description": "Context menu blocker on selection"
+    "description": "Label of context menu blocker on selection"
   },
 
   "blockDomain": {
     "message": "把这个网域加入黑名单：",
-    "description": "Prompt for blocking domain"
+    "description": "Prompt message of context menu blocker"
   },
 
   "viewBlockedFrame": {
     "message": "内容农场",
-    "description": "Text of the link of a blocked frame page"
+    "description": "Text of link of a blocked frame page"
   },
+
   "title": {
     "message": "小心内容农场",
-    "description": "Title for blocked page"
+    "description": "Document title of blocked page"
   },
+
   "header": {
     "message": "你即将进入内容农场：",
-    "description": "Header of warning in blocked page"
+    "description": "Header of blocked page"
   },
+
   "body": {
     "message": "要继续吗？若是感到厌烦，放弃也是一种选择啊。",
-    "description": "Body of warning message"
+    "description": "Main message of blocked page"
   },
 
   "details": {
     "message": "详情",
-    "description": "Click to open options from blocked page"
+    "description": "Label of details button in blocked page"
   },
+
   "detailsTitle": {
     "message": "进入选项页面修改屏蔽名单。",
-    "description": "Details buttnon title"
+    "description": "Title of details button in blocked page"
   },
 
   "backBtn": {
     "message": "返回",
-    "description": "Back button text"
+    "description": "Label of back button in blocked page"
   },
+
   "backBtnTitle": {
     "message": "回上一页，远离垃圾！",
-    "description": "Back button title"
+    "description": "Title of back button in blocked page"
   },
 
   "viewBtn": {
     "message": "查看",
-    "description": "View button text"
+    "description": "Label of view button in blocked page"
   },
+
   "viewBtnTitle": {
     "message": "查看处理过的页面内容，屏蔽图片、多媒体、内嵌脚本等内容。这不会为原站点带来广告收益。",
-    "description": "View button title"
+    "description": "Title of view button in blocked page"
   },
 
   "markTitle": {
@@ -82,76 +89,76 @@
 
   "allBlacklist": {
     "message": "作用中的黑名单",
-    "description": "Label of All Blacklist field for options"
+    "description": "Label of allBlacklist field in options page"
   },
 
   "allBlacklistDesc": {
     "message": "已载入且正在使用的黑名单 (只读)",
-    "description": "Description of All Blacklist field for options"
+    "description": "Description of allBlacklist field in options page"
   },
 
   "webBlacklists": {
     "message": "网络黑名单",
-    "description": "Web Blacklists field for options"
+    "description": "Label of webBlacklists field in options page"
   },
 
   "webBlacklistsDesc": {
     "message": "网络黑名单的网址，每行一个，空格及以后的字符皆忽略，系统会自动前往获取及导入黑名单。",
-    "description": "Description of Web Blacklists field for options"
+    "description": "Description of webBlacklists field in options page"
   },
 
   "webBlacklistsPlaceholder": {
     "message": "https://example.com/blacklist.txt (示例)",
-    "description": "Placeholder of Web Blacklists field for options"
+    "description": "Placeholder of webBlacklists field in options page"
   },
 
   "userBlacklist": {
     "message": "自定义黑名单",
-    "description": "Label of Blacklist field for options"
+    "description": "Label of userBlacklist field in options page"
   },
 
   "userBlacklistDesc": {
     "message": "想额外屏蔽的网站名单。每行一个，匹配网域及子网域，“*”匹配任意零或多个字符，空格及以后的字符皆忽略。输入网址会自动修正。",
-    "description": "Description of Blacklist field for options"
+    "description": "Description of userBlacklist field in options page"
   },
 
   "userBlacklistPlaceholder": {
     "message": "example.com (匹配 example.com, *.example.com)",
-    "description": "Placeholder of Blacklist field for options"
+    "description": "Placeholder of userBlacklist field in options page"
   },
 
   "userWhitelist": {
     "message": "自定义白名单",
-    "description": "Label of Whitelist field for options"
+    "description": "Label of userWhitelist field in options page"
   },
 
   "userWhitelistDesc": {
     "message": "想解除屏蔽的网站名单。每行一个，匹配网域及子网域，“*”匹配任意零或多个字符，空格及以后的字符皆忽略。输入网址会自动修正。",
-    "description": "Description of Whitelist field for options"
+    "description": "Description of userWhitelist field in options page"
   },
 
   "userWhitelistPlaceholder": {
     "message": "example.com (匹配 example.com, *.example.com)",
-    "description": "Placeholder of Whitelist field for options"
+    "description": "Placeholder of userWhitelist field in options page"
   },
 
   "report": {
     "message": "举报内容农场",
-    "description": "Report button"
+    "description": "Label of report button in options page"
   },
 
   "reportUrl": {
     "message": "https://goo.gl/forms/4nsmTmGjJUzQtr0p1",
-    "description": "Target URL of Report button"
+    "description": "Target URL of report button in options page"
   },
 
   "save": {
     "message": "保存",
-    "description": "Save Button"
+    "description": "Label of save button in options page"
   },
 
   "reset": {
     "message": "重置",
-    "description": "Reset Button"
+    "description": "Label of reset button in options page"
   }
 }
