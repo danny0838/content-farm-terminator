@@ -142,6 +142,11 @@
     "description": "Placeholder of userWhitelist field in options page"
   },
 
+  "showContextMenuCommands": {
+    "message": "显示右键菜单命令",
+    "description": "Label of showContextMenuCommands in options page"
+  },
+
   "report": {
     "message": "举报内容农场",
     "description": "Label of report button in options page"

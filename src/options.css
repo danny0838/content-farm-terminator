@@ -98,6 +98,50 @@ textarea[readonly] {
   float: __MSG_@@bidi_end_edge__;
 }
 
+/* https://bootsnipp.com/snippets/featured/material-design-switch */
+.material-switch {
+  display: inline-block;
+}
+
+.material-switch > input[type="checkbox"] {
+  display: none;
+}
+
+.material-switch > input[type="checkbox"] + label {
+  display: inline-block;
+  position: relative;
+  margin: 6px;
+  border-radius: 8px;
+  width: 40px;
+  height: 16px;
+  opacity: 0.3;
+  background-color: rgb(0, 0, 0);
+  box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.5);
+  transition: all 0.4s ease-in-out;
+}
+
+.material-switch > input[type="checkbox"] + label::after {
+  position: absolute;
+  top: -4px;
+  left: -4px;
+  border-radius: 16px;
+  width: 24px;
+  height: 24px;
+  content: "";
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease-in-out;
+}
+
+.material-switch > input[type="checkbox"]:checked + label {
+  background-color: #5cb85c;
+  opacity: 0.5;
+}
+
+.material-switch > input[type="checkbox"]:checked + label::after {
+  background-color: inherit;
+  left: 20px;
+}
 
 @media screen and (max-width: 720px) {
   body {

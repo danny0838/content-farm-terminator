@@ -18,6 +18,7 @@ function loadOptions() {
     document.querySelector('#userBlacklist textarea').value = options.userBlacklist;
     document.querySelector('#userWhitelist textarea').value = options.userWhitelist;
     document.querySelector('#webBlacklists textarea').value = options.webBlacklists;
+    document.querySelector('#showContextMenuCommands input').checked = options.showContextMenuCommands;
 
     return new Promise((resolve, reject) => {
       chrome.runtime.sendMessage({
@@ -33,16 +34,24 @@ function saveOptions() {
   const userBlacklist = document.querySelector('#userBlacklist textarea').value;
   const userWhitelist = document.querySelector('#userWhitelist textarea').value;
   const webBlacklists = document.querySelector('#webBlacklists textarea').value;
+  const showContextMenuCommands = document.querySelector('#showContextMenuCommands input').checked;
 
   return utils.setOptions({
     userBlacklist: validator.validateRulesText(userBlacklist),
     userWhitelist: validator.validateRulesText(userWhitelist),
-    webBlacklists: webBlacklists
+    webBlacklists: webBlacklists,
+    showContextMenuCommands: showContextMenuCommands,
   });
 }
 
 document.addEventListener('DOMContentLoaded', (event) => {
   utils.loadLanguages(document);
+
+  // hide showContextMenuCommands option if contextMenus is not available
+  // (e.g. Firefox for Android)
+  if (!chrome.contextMenus) {
+    document.querySelector('#showContextMenuCommands').style.display = 'none';
+  }
 
   loadOptions();
 

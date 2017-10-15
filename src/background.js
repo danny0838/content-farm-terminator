@@ -61,51 +61,61 @@ function updateContextMenus() {
     });
   };
 
-  try {
+  const createContextMenuCommands = function () {
+    try {
+      chrome.contextMenus.create({
+        title: utils.lang("blockTab"),
+        contexts: ["tab"],
+        documentUrlPatterns: ["http://*/*", "https://*/*"],
+        onclick: (info, tab) => {
+          return blockDomain(info.pageUrl, tab.id, 0);
+        }
+      });
+    } catch (ex) {
+      // Available only in Firefox >= 53. Otherwise ignore the error.
+    }
+
     chrome.contextMenus.create({
-      title: utils.lang("blockTab"),
-      contexts: ["tab"],
+      title: utils.lang("blockPage"),
+      contexts: ["page"],
       documentUrlPatterns: ["http://*/*", "https://*/*"],
       onclick: (info, tab) => {
-        return blockDomain(info.pageUrl, tab.id, 0);
+        return blockDomain(info.pageUrl, tab.id, info.frameId);
       }
     });
-  } catch (ex) {
-    // Available only in Firefox >= 53. Otherwise ignore the error.
-  }
 
-  chrome.contextMenus.create({
-    title: utils.lang("blockPage"),
-    contexts: ["page"],
-    documentUrlPatterns: ["http://*/*", "https://*/*"],
-    onclick: (info, tab) => {
-      return blockDomain(info.pageUrl, tab.id, info.frameId);
-    }
-  });
+    chrome.contextMenus.create({
+      title: utils.lang("blockLink"),
+      contexts: ["link"],
+      documentUrlPatterns: ["http://*/*", "https://*/*"],
+      onclick: (info, tab) => {
+        return new Promise((resolve, reject) => {
+          chrome.tabs.sendMessage(tab.id, {
+            cmd: 'getLinkHostname'
+          }, {frameId: info.frameId}, resolve);
+        }).then((redirectedUrl) => {
+          const urlOrHostname = redirectedUrl || info.linkUrl;
+          return blockDomain(urlOrHostname, tab.id, info.frameId);
+        });
+      }
+    });
 
-  chrome.contextMenus.create({
-    title: utils.lang("blockLink"),
-    contexts: ["link"],
-    documentUrlPatterns: ["http://*/*", "https://*/*"],
-    onclick: (info, tab) => {
-      return new Promise((resolve, reject) => {
-        chrome.tabs.sendMessage(tab.id, {
-          cmd: 'getLinkHostname'
-        }, {frameId: info.frameId}, resolve);
-      }).then((redirectedUrl) => {
-        const urlOrHostname = redirectedUrl || info.linkUrl;
-        return blockDomain(urlOrHostname, tab.id, info.frameId);
-      });
-    }
-  });
+    chrome.contextMenus.create({
+      title: utils.lang("blockSelection"),
+      contexts: ["selection"],
+      documentUrlPatterns: ["http://*/*", "https://*/*"],
+      onclick: (info, tab) => {
+        return blockDomain(info.selectionText, tab.id, info.frameId);
+      }
+    });
+  };
 
-  chrome.contextMenus.create({
-    title: utils.lang("blockSelection"),
-    contexts: ["selection"],
-    documentUrlPatterns: ["http://*/*", "https://*/*"],
-    onclick: (info, tab) => {
-      return blockDomain(info.selectionText, tab.id, info.frameId);
-    }
+  chrome.contextMenus.removeAll(() => {
+    utils.getDefaultOptions().then((options) => {
+      if (options.showContextMenuCommands) {
+        createContextMenuCommands();
+      }
+    });
   });
 }
 
@@ -186,6 +196,7 @@ chrome.storage.onChanged.addListener((changes, areaName) => {
     } catch(ex) {}
   }
 
+  updateContextMenus();
   updateFilter().then(() => {
     // @TODO:
     // Say we have a shift from local to sync:
