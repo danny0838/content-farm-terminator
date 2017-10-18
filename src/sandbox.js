@@ -51,6 +51,11 @@ document.addEventListener('DOMContentLoaded', (event) => {
       // pass document title to top frame
       if (doc.title) { document.title = doc.title; }
 
+      // remove target attribute in all links to force following base
+      Array.prototype.forEach.call(doc.querySelectorAll('a[target], area[target]'), (elem) => {
+        elem.removeAttribute("target");
+      });
+
       const html = utils.doctypeToString(doc.doctype) + doc.documentElement.outerHTML;
       return new Blob([html], {type: 'text/html'});
     });
