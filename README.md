@@ -1,6 +1,8 @@
 終結內容農場 (Content Farm Terminator)
 ======================================
 
+![Screenshot](doc/screenshots/main-001.png)
+
 「幾十億人都驚呆了！！！！」
 
 常看到這種標題嗎？它們多半來自內容農場。
