@@ -295,12 +295,14 @@ class ContentFarmFilter {
   isBlocked(url) {
     let hostname = (url.indexOf(":") !== -1) ? new URL(url).hostname : url;
     hostname = punycode.toUnicode(hostname);
-    hostname = hostname.replace(/^www\./, "");
+
+    // update the regex if the rules have been changed
     if (this._listUpdated) {
       this._blacklist = this.getMergedRegex(this._blacklistSet);
       this._whitelist = this.getMergedRegex(this._whitelistSet);
       this._listUpdated = false;
     }
+
     if (this._whitelist.test(hostname)) { return false; }
     if (this._blacklist.test(hostname)) { return true; }
     return false;
@@ -354,7 +356,7 @@ class ContentFarmFilter {
   }
 
   webListCacheKey(url) {
-    return JSON.stringify({webBlocklistCache:url});
+    return JSON.stringify({webBlocklistCache: url});
   }
 
   getWebListCache(url) {

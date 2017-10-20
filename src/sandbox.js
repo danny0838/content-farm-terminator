@@ -38,9 +38,10 @@ document.addEventListener('DOMContentLoaded', (event) => {
       });
 
       // add content security policy to block offensive contents
+      // the iframe cannot be loaded without "frame-src blob:"
       const metaCspElem = doc.createElement("meta");
       metaCspElem.setAttribute("http-equiv", "Content-Security-Policy");
-      metaCspElem.setAttribute("content", "img-src data:; media-src data:; object-src 'none'; frame-src blob:; script-src 'none';");
+      metaCspElem.setAttribute("content", "img-src data:; media-src data:; frame-src blob:; object-src 'none'; script-src 'none';");
       headElem.insertBefore(metaCspElem, headElem.firstChild);
 
       // add meta charset to force UTF-8 encoding
