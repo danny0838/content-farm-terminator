@@ -37,6 +37,10 @@ body {
   margin-top: .4rem;
 }
 
+#warningUrl {
+  word-break: break-all;
+}
+
 #messageText {
   margin-top: 1.8rem;
   margin-bottom: 2.2rem;
