@@ -225,20 +225,40 @@ const utils = {
 class ContentFarmFilter {
   constructor() {
     this._listUpdated = true;
-    this._blacklist;
-    this._whitelist;
-    this._blacklistRawSet = new Set();
     this._blacklistSet = new Set();
+    this._blacklistReSet = new Set();
+    this._blacklistRawSet = new Set();
+    this._blacklist;
     this._whitelistSet = new Set();
+    this._whitelistReSet = new Set();
+    this._whitelistRawSet = new Set();
+    this._whitelist;
+  }
+
+  addBlockList(listText, ruleSet, reRuleSet, rawRuleSet) {
+    this.rulesTextToLines(listText).forEach((ruleText) => {
+      rawRuleSet.add(ruleText);
+
+      let rule = ruleText.replace(/ .*$/, "");
+      if (rule.startsWith('/') && rule.endsWith('/')) {
+        // RegExp rule
+        rule = new RegExp(rule.slice(1, -1)).source;
+        reRuleSet.add(rule);
+      } else {
+        // standard rule
+        rule = utils.escapeRegExp(ruleText).replace(/\\\*/g, "[^/]*");
+        ruleSet.add(rule);
+      }
+    });
+    this._listUpdated = true;
   }
 
   addBlackList(listText) {
-    this.rulesTextToLines(listText).forEach((ruleText) => {
-      const ruleRegex = this.ruleTextToRegex(ruleText);
-      this._blacklistSet.add(ruleRegex);
-      this._blacklistRawSet.add(ruleText);
-    });
-    this._listUpdated = true;
+    this.addBlockList(listText, this._blacklistSet, this._blacklistReSet, this._blacklistRawSet);
+  }
+
+  addWhiteList(listText) {
+    this.addBlockList(listText, this._whitelistSet, this._whitelistReSet, this._whitelistRawSet);
   }
 
   /**
@@ -281,14 +301,6 @@ class ContentFarmFilter {
     });
   }
 
-  addWhiteList(listText) {
-    this.rulesTextToLines(listText).forEach((ruleText) => {
-      const ruleRegex = this.ruleTextToRegex(ruleText);
-      this._whitelistSet.add(ruleRegex);
-    });
-    this._listUpdated = true;
-  }
-
   /**
    * @param {string} url - url or hostname
    */
@@ -302,8 +314,8 @@ class ContentFarmFilter {
 
     // update the regex if the rules have been changed
     if (this._listUpdated) {
-      this._blacklist = this.getMergedRegex(this._blacklistSet);
-      this._whitelist = this.getMergedRegex(this._whitelistSet);
+      this._blacklist = this.getMergedRegex(this._blacklistSet, this._blacklistReSet);
+      this._whitelist = this.getMergedRegex(this._whitelistSet, this._whitelistReSet);
       this._listUpdated = false;
     }
 
@@ -320,20 +332,37 @@ class ContentFarmFilter {
 
   validateRuleLine(ruleLine) {
     const parts = (ruleLine || "").split(" ");
-    parts[0] = ((ruleText) => {
-      if (!ruleText) { return ""; }
-      try {
-        // escape "*" to make a valid URL
-        let t = ruleText.replace(/x/g, "xx").replace(/\*/g, "xa");
-        // add a scheme if none to make a valid URL
-        if (!/^[A-Za-z][0-9A-za-z+\-.]*:\/\//.test(t)) { t = "http://" + t; }
-        // get hostname
-        t = new URL(t).hostname;
-        // unescape and remove "www."
-        t = t.replace(/x[xa]/g, m => ({xx: "x", xa: "*"})[m]).replace(/^www\./, "");
-        t = punycode.toUnicode(t);
-        return t;
-      } catch (ex) {}
+    parts[0] = ((rule) => {
+      if (!rule) { return ""; }
+
+      if (rule.startsWith('/') && rule.endsWith('/')) {
+        // RegExp rule
+        try {
+          // test if the RegExp is valid
+          new RegExp(rule.slice(1, -1));
+          return rule;
+        } catch (ex) {
+          // invalid RegExp syntax
+          console.error(ex);
+        }
+      } else {
+        // standard rule
+        try {
+          // escape "*" to make a valid URL
+          let t = rule.replace(/x/g, "xx").replace(/\*/g, "xa");
+          // add a scheme if none to make a valid URL
+          if (!/^[A-Za-z][0-9A-za-z+\-.]*:\/\//.test(t)) { t = "http://" + t; }
+          // get hostname
+          t = new URL(t).hostname;
+          // unescape and remove "www."
+          t = t.replace(/x[xa]/g, m => ({xx: "x", xa: "*"})[m]).replace(/^www\./, "");
+          t = punycode.toUnicode(t);
+          return t;
+        } catch (ex) {
+          // invalid URL hostname
+          console.error(ex);
+        }
+      }
       return "";
     })(parts[0]);
     return parts.join(" ");
@@ -347,16 +376,14 @@ class ContentFarmFilter {
     return (rulesText || "").split(/\n|\r\n?/).filter(x => !!x.trim());
   }
 
-  ruleTextToRegex(ruleText) {
-    return utils.escapeRegExp(ruleText).replace(/\\\*/g, "[^/]*").replace(/ .*$/, "");
-  }
-
-  getMergedRegex(regexSet) {
+  getMergedRegex(regexSet, extRegexSet) {
+    const extRegex = [...extRegexSet].join('|');
     const re = '^https?://' + 
         '(?:[\\w.+-]+(?::[\\w.+-]+)?@)?' + 
         '(?:[^:/?#]+\\.)?' + 
         '(?:' + [...regexSet].join('|') + ')' + 
-        '(?=$|[:/?#])';
+        '(?=$|[:/?#])' + 
+        (extRegex ? '|' + extRegex : '');
     return new RegExp(re);
   }
 
