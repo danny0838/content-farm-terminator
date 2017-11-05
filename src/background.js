@@ -143,8 +143,8 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
   switch (cmd) {
     case 'isUrlBlocked': {
       updateFilterPromise.then(() => {
-        const blocked = filter.isBlocked(args.url);
-        sendResponse(blocked);
+        const blockType = filter.isBlocked(args.url);
+        sendResponse(blockType);
       });
       return true; // async response
       break;
@@ -255,10 +255,11 @@ updateFilter().then(() => {
   // replace onBeforeRequestCallback with the blocker
   onBeforeRequestCallback = function (details) {
     const url = details.url;
-    if (!filter.isBlocked(url)) { return; }
+    const blockType = filter.isBlocked(url);
+    if (!blockType) { return; }
 
     if (details.type === "main_frame") {
-      const redirectUrl = utils.getBlockedPageUrl(url, false);
+      const redirectUrl = utils.getBlockedPageUrl(url, blockType, false);
 
       // Firefox < 56 does not allow redirecting to an extension page
       // even if it is listed in web_accessible_resources.
@@ -271,7 +272,7 @@ updateFilter().then(() => {
 
       return {redirectUrl: redirectUrl};
     } else {
-      const redirectUrl = utils.getBlockedPageUrl(url, true);
+      const redirectUrl = utils.getBlockedPageUrl(url, blockType, true);
       return {redirectUrl: redirectUrl};
     }
   };

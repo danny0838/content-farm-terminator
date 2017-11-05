@@ -1,4 +1,5 @@
-const sourceUrl = new URL(location.href).searchParams.get('to');
+const urlObj = new URL(location.href);
+const sourceUrl = urlObj.searchParams.get('to');
 const sourceUrlObj = new URL(sourceUrl);
 
 function recheckBlock() {
@@ -17,7 +18,20 @@ function recheckBlock() {
 document.addEventListener('DOMContentLoaded', (event) => {
   utils.loadLanguages(document);
 
-  document.querySelector('#warningUrl').textContent = punycode.toUnicode(sourceUrlObj.hostname);
+  if (urlObj.searchParams.get('type') == 2) {
+    let u = sourceUrlObj;
+    u = u.protocol + '//' + 
+        (u.username ? u.username + (u.password ? ':' + u.password : '') + '@' : '') + 
+        punycode.toUnicode(u.hostname) + 
+        (u.port ? ':' + u.port : '') + 
+        u.pathname + u.search + u.hash;
+    const elem = document.createElement('span');
+    elem.textContent = u;
+    elem.style.fontSize = '0.8em';
+    document.querySelector('#warningUrl').appendChild(elem);
+  } else {
+    document.querySelector('#warningUrl').textContent = punycode.toUnicode(sourceUrlObj.hostname);
+  }
 
   /**
    * Events

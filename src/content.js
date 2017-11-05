@@ -379,11 +379,11 @@ new Promise((resolve, reject) => {
     cmd: 'isUrlBlocked',
     args: {url: docHostname}
   }, resolve);
-}).then((isBlocked) => {
-  if (!isBlocked) { return; }
+}).then((blockType) => {
+  if (!blockType) { return; }
 
   const inFrame = (self !== top);
-  const redirectUrl = utils.getBlockedPageUrl(docUrlObj.href, inFrame);
+  const redirectUrl = utils.getBlockedPageUrl(docUrlObj.href, blockType, inFrame);
   location.replace(redirectUrl);
 });
 

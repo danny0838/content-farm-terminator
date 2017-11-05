@@ -198,8 +198,8 @@ const utils = {
     });
   },
 
-  getBlockedPageUrl(url, inFrame = false) {
-    const redirectUrl = `${chrome.runtime.getURL('blocked.html')}?to=${encodeURIComponent(url)}`;
+  getBlockedPageUrl(url, blockType = 1, inFrame = false) {
+    const redirectUrl = `${chrome.runtime.getURL('blocked.html')}?to=${encodeURIComponent(url)}&type=${blockType}`;
 
     // A frame may be too small to show full description about blocking.
     // Display a link for opening in a new tab instead.
@@ -303,6 +303,7 @@ class ContentFarmFilter {
 
   /**
    * @param {string} url - url or hostname
+   * @return {number} 0: not blocked; 1: blocked by standard rule; 2: blocked by regex rule
    */
   isBlocked(url) {
     let u = new URL((url.indexOf(":") !== -1) ? url : 'http://' + url);
@@ -319,9 +320,9 @@ class ContentFarmFilter {
       this._listUpdated = false;
     }
 
-    if (this._whitelist.test(u)) { return false; }
-    if (this._blacklist.test(u)) { return true; }
-    return false;
+    if (this._whitelist.test(u)) { return 0; }
+    if (this._blacklist.test(u)) { return RegExp.$1 ? 1 : 2; }
+    return 0;
   }
 
   urlsTextToLines(urlsText) {
@@ -381,7 +382,7 @@ class ContentFarmFilter {
     const re = '^https?://' + 
         '(?:[\\w.+-]+(?::[\\w.+-]+)?@)?' + 
         '(?:[^:/?#]+\\.)?' + 
-        '(?:' + [...regexSet].join('|') + ')' + 
+        '(' + [...regexSet].join('|') + ')' + // capture standard rule
         '(?=$|[:/?#])' + 
         (extRegex ? '|' + extRegex : '');
     return new RegExp(re);
