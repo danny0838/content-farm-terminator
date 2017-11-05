@@ -19,14 +19,9 @@ document.addEventListener('DOMContentLoaded', (event) => {
   utils.loadLanguages(document);
 
   if (urlObj.searchParams.get('type') == 2) {
-    let u = sourceUrlObj;
-    u = u.protocol + '//' + 
-        (u.username ? u.username + (u.password ? ':' + u.password : '') + '@' : '') + 
-        punycode.toUnicode(u.hostname) + 
-        (u.port ? ':' + u.port : '') + 
-        u.pathname + u.search + u.hash;
+    const url = utils.getNormalizedUrl(sourceUrlObj);
     const elem = document.createElement('span');
-    elem.textContent = u;
+    elem.textContent = url;
     elem.style.fontSize = '0.8em';
     document.querySelector('#warningUrl').appendChild(elem);
   } else {

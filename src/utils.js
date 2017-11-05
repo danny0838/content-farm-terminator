@@ -146,6 +146,18 @@ const utils = {
     return str.replace(/([\*\+\?\.\^\/\$\\\|\[\]\{\}\(\)])/g, "\\$1");
   },
 
+  getNormalizedUrl(urlObj) {
+    const u = urlObj.username;
+    const p = urlObj.password;
+    const h = punycode.toUnicode(urlObj.hostname); // URL.hostname is punycoded in Chrome
+    const t = urlObj.port;
+    return urlObj.protocol + '//' + 
+        (u ? u + (p ? ':' + p : '') + '@' : '') + 
+        h + 
+        (t ? ':' + t : '') + 
+        urlObj.pathname + urlObj.search + urlObj.hash;
+  },
+
   splitUrlByAnchor(url) {
     const pos = url.indexOf("#");
     if (pos !== -1) { return [url.slice(0, pos), url.slice(pos)]; }
@@ -307,11 +319,7 @@ class ContentFarmFilter {
    */
   isBlocked(url) {
     let u = new URL((url.indexOf(":") !== -1) ? url : 'http://' + url);
-    u = u.protocol + '//' + 
-        (u.username ? u.username + (u.password ? ':' + u.password : '') + '@' : '') + 
-        punycode.toUnicode(u.hostname) + 
-        (u.port ? ':' + u.port : '') + 
-        u.pathname + u.search + u.hash;
+    u = utils.getNormalizedUrl(u);
 
     // update the regex if the rules have been changed
     if (this._listUpdated) {
