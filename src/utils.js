@@ -293,8 +293,12 @@ class ContentFarmFilter {
    * @param {string} url - url or hostname
    */
   isBlocked(url) {
-    let hostname = (url.indexOf(":") !== -1) ? new URL(url).hostname : url;
-    hostname = punycode.toUnicode(hostname);
+    let u = new URL((url.indexOf(":") !== -1) ? url : 'http://' + url);
+    u = u.protocol + '//' + 
+        (u.username ? u.username + (u.password ? ':' + u.password : '') + '@' : '') + 
+        punycode.toUnicode(u.hostname) + 
+        (u.port ? ':' + u.port : '') + 
+        u.pathname + u.search + u.hash;
 
     // update the regex if the rules have been changed
     if (this._listUpdated) {
@@ -303,8 +307,8 @@ class ContentFarmFilter {
       this._listUpdated = false;
     }
 
-    if (this._whitelist.test(hostname)) { return false; }
-    if (this._blacklist.test(hostname)) { return true; }
+    if (this._whitelist.test(u)) { return false; }
+    if (this._blacklist.test(u)) { return true; }
     return false;
   }
 
@@ -348,7 +352,12 @@ class ContentFarmFilter {
   }
 
   getMergedRegex(regexSet) {
-    return new RegExp('^(?:.+\\.)?(?:' + [...regexSet].join('|') + ')$');
+    const re = '^https?://' + 
+        '(?:[\\w.+-]+(?::[\\w.+-]+)?@)?' + 
+        '(?:[^:/?#]+\\.)?' + 
+        '(?:' + [...regexSet].join('|') + ')' + 
+        '(?=$|[:/?#])';
+    return new RegExp(re);
   }
 
   getMergedBlacklist() {

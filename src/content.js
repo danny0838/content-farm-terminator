@@ -231,14 +231,13 @@ function updateLinkMarker(elem) {
 
     const u = new URL(elem.href);
     const c = u.protocol;
-    const h = u.hostname;
     if (!(c === "http:" || c === "https:")) { return false; }
 
-    // check whether the hostname is blocked
+    // check whether the URL is blocked
     return new Promise((resolve, reject) => {
       chrome.runtime.sendMessage({
         cmd: 'isUrlBlocked',
-        args: {url: h}
+        args: {url: u.href}
       }, resolve);
     }).then((isBlocked) => {
       if (isBlocked) { return true; }
