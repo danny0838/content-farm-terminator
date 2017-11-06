@@ -352,15 +352,15 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
       sendResponse(true);
       break;
     }
-    case 'blockDomain': {
-      const hostname = prompt(utils.lang("blockDomain"), args.hostname);
-      sendResponse(hostname);
+    case 'blockSite': {
+      const rule = prompt(utils.lang("blockSite"), args.rule);
+      sendResponse(rule);
       break;
     }
-    case 'getLinkHostname': {
+    case 'getRedirectedLinkUrl': {
       const anchor = lastRightClickedElem.closest('a[href], area[href]');
-      getRedirectedUrlOrHostname(anchor).then((hostname) => {
-        sendResponse(hostname);
+      getRedirectedUrlOrHostname(anchor).then((urlOrHostname) => {
+        sendResponse(urlOrHostname);
       });
       return true; // async response
       break;

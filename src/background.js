@@ -38,22 +38,22 @@ function updateFilter() {
 function updateContextMenus() {
   if (!chrome.contextMenus) { return; }
 
-  const blockDomain = function (urlOrHostname, tabId, frameId) {
+  const blockSite = function (urlOrHostname, tabId, frameId) {
     return new Promise((resolve, reject) => {
-      const h = filter.validateRuleLine(urlOrHostname.trim().replace(/\s[\s\S]*$/g, ""));
+      const rule = filter.validateRuleLine(urlOrHostname.trim().replace(/\s[\s\S]*$/g, ""));
       chrome.tabs.sendMessage(tabId, {
-        cmd: 'blockDomain',
-        args: {hostname: h}
+        cmd: 'blockSite',
+        args: {rule}
       }, {frameId}, resolve);
-    }).then((hostname) => {
-      if (!hostname) { return; }
-      hostname = filter.validateRuleLine(hostname);
+    }).then((rule) => {
+      if (!rule) { return; }
+      rule = filter.validateRuleLine(rule);
       return utils.getOptions({
         userBlacklist: ""
       }).then((options) => {
         let text = options.userBlacklist;
         if (text) { text += "\n"; }
-        text = text + hostname;
+        text = text + rule;
         return utils.setOptions({
           userBlacklist: text
         });
@@ -68,7 +68,7 @@ function updateContextMenus() {
         contexts: ["tab"],
         documentUrlPatterns: ["http://*/*", "https://*/*"],
         onclick: (info, tab) => {
-          return blockDomain(info.pageUrl, tab.id, 0);
+          return blockSite(info.pageUrl, tab.id, 0);
         }
       });
     } catch (ex) {
@@ -80,7 +80,7 @@ function updateContextMenus() {
       contexts: ["page"],
       documentUrlPatterns: ["http://*/*", "https://*/*"],
       onclick: (info, tab) => {
-        return blockDomain(info.pageUrl, tab.id, info.frameId);
+        return blockSite(info.pageUrl, tab.id, info.frameId);
       }
     });
 
@@ -91,11 +91,11 @@ function updateContextMenus() {
       onclick: (info, tab) => {
         return new Promise((resolve, reject) => {
           chrome.tabs.sendMessage(tab.id, {
-            cmd: 'getLinkHostname'
+            cmd: 'getRedirectedLinkUrl'
           }, {frameId: info.frameId}, resolve);
         }).then((redirectedUrl) => {
           const urlOrHostname = redirectedUrl || info.linkUrl;
-          return blockDomain(urlOrHostname, tab.id, info.frameId);
+          return blockSite(urlOrHostname, tab.id, info.frameId);
         });
       }
     });
@@ -105,7 +105,7 @@ function updateContextMenus() {
       contexts: ["selection"],
       documentUrlPatterns: ["http://*/*", "https://*/*"],
       onclick: (info, tab) => {
-        return blockDomain(info.selectionText, tab.id, info.frameId);
+        return blockSite(info.selectionText, tab.id, info.frameId);
       }
     });
   };

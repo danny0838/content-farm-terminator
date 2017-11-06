@@ -27,7 +27,7 @@
     "description": "Label of context menu blocker on selection"
   },
 
-  "blockDomain": {
+  "blockSite": {
     "message": "Blacklist this domain:",
     "description": "Prompt message of context menu blocker"
   },
