@@ -23,12 +23,12 @@
   },
 
   "blockSelection": {
-    "message": "Blacklist the domain of selected text",
+    "message": "Blacklist the domain of selected text link",
     "description": "Label of context menu blocker on selection"
   },
 
   "blockSite": {
-    "message": "Blacklist this domain:",
+    "message": "Add this rule to blacklist:",
     "description": "Prompt message of context menu blocker"
   },
 

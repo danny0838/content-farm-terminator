@@ -18,17 +18,17 @@
   },
 
   "blockLink": {
-    "message": "把这个链接的网域加入黑名单",
+    "message": "把这个链接指向的网域加入黑名单",
     "description": "Label of context menu blocker on link"
   },
 
   "blockSelection": {
-    "message": "把选取文字网域加入黑名单",
+    "message": "把选取文字链接指向的网域加入黑名单",
     "description": "Label of context menu blocker on selection"
   },
 
   "blockSite": {
-    "message": "把这个网域加入黑名单：",
+    "message": "把这条规则加入黑名单：",
     "description": "Prompt message of context menu blocker"
   },
 
