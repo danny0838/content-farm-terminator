@@ -143,7 +143,9 @@ const utils = {
   },
 
   escapeRegExp(str) {
-    return str.replace(/([\*\+\?\.\^\/\$\\\|\[\]\{\}\(\)])/g, "\\$1");
+    // Escaping "-" allows the result to be inserted into a character class.
+    // Escaping "/" allow the result to be used in a JS regex literal.
+    return str.replace(/[-\/\\^$*+?.|()[\]{}]/g, "\\$&");
   },
 
   getNormalizedUrl(urlObj) {
