@@ -7,6 +7,8 @@
 
 * [類內容農場清單](https://danny0838.github.io/content-farm-terminator/files/blocklist/nearly-content-farms.txt)：類似內容農場的網站，例如疑似大量盜用圖文但尚未找到明確證據，或者有相當比例主題性或原創性的網站。這些網站通常品質良莠不齊、常見誇大的標題與貧乏的內容，也可能曾被一些評論者認定為內容農場。此清單篩選較為主觀，請自行甄酌使用。
 
+* [社群內容農場清單](https://danny0838.github.io/content-farm-terminator/files/blocklist/sns-content-farms.txt)：內容農場相關的社群網站頁面。由於社群網站架構因素，可能無法涵蓋所有相關頁面。
+
 * [假新聞網站清單](https://danny0838.github.io/content-farm-terminator/files/blocklist/fake-news.txt): 假新聞網站清單，取自 Brian Feldman 等人發展的 Chrome 擴充功能 Fake News Alert。備查。
 
 * [詐騙網站清單](https://danny0838.github.io/content-farm-terminator/files/blocklist/scam-sites.txt): 詐騙網站清單，取自 Chrome 擴充功能《詐騙網站及內容農場評價系統》。備查。
