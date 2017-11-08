@@ -1,10 +1,47 @@
-const docUrlObj = new URL(document.location.href);
-const docHref = docUrlObj.href;
-const docHostname = docUrlObj.hostname;
-const docPathname = docUrlObj.pathname;
+const docUrlObj = new URL(location.href);
+let docHref = docUrlObj.href;
+let docHostname = docUrlObj.hostname;
+let docPathname = docUrlObj.pathname;
+
 const anchorMarkerMap = new Map();
 let updateLinkMarkerPromise = Promise.resolve();
 let lastRightClickedElem;
+
+/**
+ * @param urlChanged {boolean} a recent URL change has been confirmed
+ * @return {boolean} whether document URL changed
+ */
+function recheckCurrentUrl(urlChanged = false) {
+  return Promise.resolve().then(() => {
+    // check for URL change of the address bar and update related global variables
+    const href = location.href;
+    if (href !== docHref) {
+      docHref = docUrlObj.href = href;
+      docHostname = docUrlObj.hostname;
+      docPathname = docUrlObj.pathname;
+      urlChanged = true;
+    }
+
+    // skip further check if document URL doesn't change
+    if (!urlChanged) { return false; }
+
+    // check if the current document URL is blocked
+    return new Promise((resolve, reject) => {
+      chrome.runtime.sendMessage({
+        cmd: 'isUrlBlocked',
+        args: {url: docHref},
+      }, resolve);
+    }).then((blockType) => {
+      if (!blockType) { return; }
+
+      const inFrame = (self !== top);
+      const redirectUrl = utils.getBlockedPageUrl(docUrlObj.href, blockType, inFrame);
+      location.replace(redirectUrl);
+    }).then(() => {
+      return true;
+    });
+  });
+}
 
 function getRedirectedUrlOrHostname(elem) {
   return Promise.resolve().then(() => {
@@ -344,6 +381,14 @@ function observeDomUpdates() {
   });
 }
 
+// Check whether the current page is blocked, as a supplement
+// for content farm pages not blocked by background onBeforeRequest.
+// This could happen when the page is loaded before the extension
+// is loaded or before updateFilter is completed in the background script.
+//
+// @TODO: Some ads are still loaded even if we block the page here.
+recheckCurrentUrl(true);
+
 chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
   //console.warn("omMessage", message);
   const {cmd, args} = message;
@@ -369,25 +414,6 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
   }
 });
 
-// Check whether the current page is blocked, as a supplement
-// for content farm pages not blocked by background onBeforeRequest.
-// This could happen when the page is loaded before the extension
-// is loaded or before updateFilter is completed in the background script.
-//
-// @TODO: Some ads are still loaded even if we block the page here.
-new Promise((resolve, reject) => {
-  chrome.runtime.sendMessage({
-    cmd: 'isUrlBlocked',
-    args: {url: docHref},
-  }, resolve);
-}).then((blockType) => {
-  if (!blockType) { return; }
-
-  const inFrame = (self !== top);
-  const redirectUrl = utils.getBlockedPageUrl(docUrlObj.href, blockType, inFrame);
-  location.replace(redirectUrl);
-});
-
 window.addEventListener("contextmenu", (event) => {
   lastRightClickedElem = event.target;
 }, true);
@@ -396,5 +422,6 @@ window.addEventListener("contextmenu", (event) => {
 Array.prototype.forEach.call(document.querySelectorAll('img[data-content-farm-terminator-marker]'), (elem) => {
   elem.remove();
 });
+
 observeDomUpdates();
 updateLinkMarkersAll();
