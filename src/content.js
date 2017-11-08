@@ -1,4 +1,5 @@
 const docUrlObj = new URL(document.location.href);
+const docHref = docUrlObj.href;
 const docHostname = docUrlObj.hostname;
 const docPathname = docUrlObj.pathname;
 const anchorMarkerMap = new Map();
@@ -377,7 +378,7 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
 new Promise((resolve, reject) => {
   chrome.runtime.sendMessage({
     cmd: 'isUrlBlocked',
-    args: {url: docHostname}
+    args: {url: docHref},
   }, resolve);
 }).then((blockType) => {
   if (!blockType) { return; }
