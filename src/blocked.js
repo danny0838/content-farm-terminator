@@ -1,6 +1,5 @@
 const urlObj = new URL(location.href);
 const sourceUrl = urlObj.searchParams.get('to');
-const sourceUrlObj = new URL(sourceUrl);
 
 function recheckBlock() {
   return new Promise((resolve, reject) => {
@@ -18,14 +17,24 @@ function recheckBlock() {
 document.addEventListener('DOMContentLoaded', (event) => {
   utils.loadLanguages(document);
 
-  if (urlObj.searchParams.get('type') == 2) {
-    const url = utils.getNormalizedUrl(sourceUrlObj);
+  try {
+    const sourceUrlObj = new URL(sourceUrl);
+    if (urlObj.searchParams.get('type') == 2) {
+      const url = utils.getNormalizedUrl(sourceUrlObj);
+      const elem = document.createElement('span');
+      elem.textContent = url;
+      elem.style.fontSize = '0.8em';
+      document.querySelector('#warningUrl').appendChild(elem);
+    } else {
+      document.querySelector('#warningUrl').textContent = punycode.toUnicode(sourceUrlObj.hostname);
+    }
+  } catch (ex) {
+    // sourceUrl is invalid, show raw sourceUrl
+    // this should not happen unless the user manually enters the URL
     const elem = document.createElement('span');
-    elem.textContent = url;
+    elem.textContent = sourceUrl;
     elem.style.fontSize = '0.8em';
     document.querySelector('#warningUrl').appendChild(elem);
-  } else {
-    document.querySelector('#warningUrl').textContent = punycode.toUnicode(sourceUrlObj.hostname);
   }
 
   /**
