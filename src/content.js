@@ -363,6 +363,7 @@ function observeDomUpdates() {
         }
       }
     }
+    onPotentialUrlChange();
   });
   const docObserverConf = {childList: true, subtree: true};
 
@@ -372,6 +373,7 @@ function observeDomUpdates() {
       const node = mutation.target;
       updateLinkMarker(node);
     }
+    onPotentialUrlChange();
   });
   const ancObserverConf = {attributes: true, attributeFilter: ["href"]};
 
@@ -379,6 +381,40 @@ function observeDomUpdates() {
   Array.prototype.forEach.call(document.querySelectorAll("a, area"), (elem) => {
     ancObserver.observe(elem, ancObserverConf);
   });
+}
+
+/**
+ * Check for a potential document URL change
+ *
+ * There is no event handler for a URL change made by history.pushState
+ * or history.replaceState. Since a meaningful state change should include
+ * a DOM change, we check for a URL change when the DOM changes.
+ *
+ * @param urlChanged {boolean} a recent URL change has been confirmed
+ */
+function onPotentialUrlChange(urlChanged = false) {
+  if (!onPotentialUrlChange.timer) {
+    // Set a timer to skip frequent rechecks and schedule a recheck.
+    // This catches a history.pushState called after DOM changes.
+    onPotentialUrlChange.timer = setTimeout(() => {
+      clearTimeout(onPotentialUrlChange.timer);
+      onPotentialUrlChange.timer = null;
+
+      // skip recheck if a recent URL change has been confirmed
+      if (!urlChanged) { recheckCurrentUrl(urlChanged); }
+    }, 500);
+
+    // Check for a URL change immediately if there has been no recent check.
+    // This catches a history.pushState called before DOM changes.
+    if (urlChanged || Date.now() - onPotentialUrlChange.lastCall > 5000) {
+      recheckCurrentUrl(urlChanged).then((change) => {
+        if (change) { urlChanged = true; }
+      });
+    }
+
+    // record a recent check
+    onPotentialUrlChange.lastCall = Date.now();
+  }
 }
 
 // Check whether the current page is blocked, as a supplement
@@ -413,6 +449,14 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
     }
   }
 });
+
+window.addEventListener("hashchange", (event) => {
+  onPotentialUrlChange(true);
+}, true);
+
+window.addEventListener("popstate", (event) => {
+  onPotentialUrlChange(true);
+}, true);
 
 window.addEventListener("contextmenu", (event) => {
   lastRightClickedElem = event.target;
