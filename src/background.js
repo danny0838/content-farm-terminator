@@ -232,6 +232,13 @@ chrome.runtime.onInstalled.addListener((details) => {
   }
 });
 
+chrome.history.onVisited.addListener((result) => {
+  // suppress extension pages from generating a history entry
+  if (result.url.startsWith(chrome.runtime.getURL(""))) {
+    chrome.history.deleteUrl({url: result.url});
+  }
+});
+
 if (chrome.browserAction) {
   chrome.browserAction.onClicked.addListener((tab) => {
     const url = chrome.runtime.getURL("options.html");

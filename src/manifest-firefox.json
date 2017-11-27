@@ -21,6 +21,7 @@
 
   "permissions": [
     "contextMenus",
+    "history",
     "tabs",
     "unlimitedStorage",
     "webRequest",
