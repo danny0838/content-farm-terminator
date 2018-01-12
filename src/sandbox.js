@@ -39,7 +39,8 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
       // add content security policy to block offensive contents
       // the iframe cannot be loaded without "frame-src blob:"
-      const host = new URL(url).origin;
+      const u = new URL(url);
+      const host = `http://${u.host} https://${u.host} http://*.${u.host.replace(/^www[.]/, '')} https://*.${u.host.replace(/^www[.]/, '')}`;
       const metaCspElem = doc.createElement("meta");
       metaCspElem.setAttribute("http-equiv", "Content-Security-Policy");
       metaCspElem.setAttribute("content", `img-src ${host} data:; media-src ${host} data:; frame-src 'self' blob:; object-src 'none'; script-src 'none';`);
