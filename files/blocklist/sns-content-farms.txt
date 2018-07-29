@@ -45,6 +45,7 @@
 /^https?://(?:\w+[.])?facebook[.]com(?:/(?:pg/)?|\b[^#]+#!/)meiriyangsheng(?=[/?#]|$)/
 /^https?://(?:\w+[.])?facebook[.]com(?:/(?:pg/)?|\b[^#]+#!/)neirongfarm(?=[/?#]|$)/
 /^https?://(?:\w+[.])?facebook[.]com(?:/(?:pg/)?|\b[^#]+#!/)newseveryday(?=[/?#]|$)/
+/^https?://(?:\w+[.])?facebook[.]com(?:/(?:pg/)?|\b[^#]+#!/)ptt01s(?=[/?#]|$)/
 /^https?://(?:\w+[.])?facebook[.]com(?:/(?:pg/)?|\b[^#]+#!/)push2you(?=[/?#]|$)/
 /^https?://(?:\w+[.])?facebook[.]com(?:/(?:pg/)?|\b[^#]+#!/)share[.]funny[.]everyday(?=[/?#]|$)/
 /^https?://(?:\w+[.])?facebook[.]com(?:/(?:pg/)?|\b[^#]+#!/)share[.]gossip[.]everyday(?=[/?#]|$)/
@@ -87,6 +88,7 @@
 /^https?://(?:\w+[.])?youtube[.]com/channel/UCpDA0vmk7lH-J9yHzQ-U0Pw(?=[/?#]|$)/
 /^https?://(?:\w+[.])?youtube[.]com/channel/UCsiL_m0Er5kYYVv5ExTqMIA(?=[/?#]|$)/
 /^https?://(?:\w+[.])?youtube[.]com/channel/UCwsAJAMyGad-kFJePW2vtZw(?=[/?#]|$)/
+/^https?://(?:\w+[.])?youtube[.]com/channel/UCy7cT78NBkNH7A-NW4GuIgA(?=[/?#]|$)/
 /^https?://(?:\w+[.])?youtube[.]com/channel/UCyAD8_m1IFCCqcsujdhaqRQ(?=[/?#]|$)/
 /^https?://(?:\w+[.])?youtube[.]com/channel/UCyPU3v0h4-2iB3rM8s8NNkg(?=[/?#]|$)/
 /^https?://(?:\w+[.])?youtube[.]com/channel/UCzHk_dZclFHUks7h83RxUlA(?=[/?#]|$)/
