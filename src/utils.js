@@ -77,7 +77,6 @@ const utils = {
         });
       });
     }, (ex) => {
-      console.warn(ex.message);
       return new Promise((resolve, reject) => {
         chrome.storage.local.set(options, () => {
           if (chrome.runtime.lastError) {
