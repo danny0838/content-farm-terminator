@@ -103,7 +103,7 @@
   },
 
   "webBlacklistsDesc": {
-    "message": "網路黑名單的網址，每行一個，空白及之後字元皆忽略。系統會自動前往取得及匯入黑名單。",
+    "message": "網路黑名單的網址，每行一個，空白及之後字元皆忽略。系統會自動匯入黑名單並定期更新。",
     "description": "Description of webBlacklists field in options page"
   },
 
@@ -144,7 +144,7 @@
 
   "blocklistSyntaxLink": {
     "message": "詳細語法說明",
-    "description": "Title of the link to the syntax help page"
+    "description": "Label of the link to the syntax help page"
   },
 
   "showContextMenuCommands": {

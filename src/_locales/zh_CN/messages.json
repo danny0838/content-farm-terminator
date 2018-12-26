@@ -103,7 +103,7 @@
   },
 
   "webBlacklistsDesc": {
-    "message": "网络黑名单的网址，每行一个，空格及以后的字符皆忽略，系统会自动前往获取及导入黑名单。",
+    "message": "网络黑名单的网址，每行一个，空格及以后的字符皆忽略，系统会自动导入黑名单并定期更新。",
     "description": "Description of webBlacklists field in options page"
   },
 
@@ -144,7 +144,7 @@
 
   "blocklistSyntaxLink": {
     "message": "详细语法说明",
-    "description": "Title of the link to the syntax help page"
+    "description": "Label of the link to the syntax help page"
   },
 
   "showContextMenuCommands": {

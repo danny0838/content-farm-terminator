@@ -103,7 +103,7 @@
   },
 
   "webBlacklistsDesc": {
-    "message": "URLs of web blacklists that will be automatically fetched and imported. One entry per line. Text following a space will be ignored.",
+    "message": "URLs of web blacklists that will be automatically imported and periodically renewed. One entry per line. Text following a space will be ignored.",
     "description": "Description of webBlacklists field in options page"
   },
 
@@ -144,7 +144,7 @@
 
   "blocklistSyntaxLink": {
     "message": "Syntax help.",
-    "description": "Title of the link to the syntax help page"
+    "description": "Label of the link to the syntax help page"
   },
 
   "showContextMenuCommands": {
