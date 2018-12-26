@@ -362,12 +362,12 @@ class ContentFarmFilter {
         if (!/^[A-Za-z][0-9A-za-z+\-.]*:\/\//.test(t)) { t = "http://" + t; }
         // get hostname
         t = new URL(t).hostname;
-        // unescape "*"
-        t = t.replace(/x[xa]/g, m => ({xx: "x", xa: "*"})[m]);
         // remove "www."
         t = t.replace(/^www\./, "");
         // convert punycode to unicode
         t = punycode.toUnicode(t);
+        // unescape "*"
+        t = t.replace(/x[xa]/g, m => ({xx: "x", xa: "*"})[m]);
         return t;
       } catch (ex) {
         // invalid URL hostname
