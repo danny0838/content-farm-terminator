@@ -177,6 +177,11 @@
     "description": "Label of reset button in options page"
   },
 
+  "resetConfirm": {
+    "message": "这会把所有选项还原回默认值，目前的设置将永久遗失！\n\n确定要继续吗？",
+    "description": "Text of confirmination of reset button in options page"
+  },
+
   "helpSyntaxTitle": {
     "message": "屏蔽名单语法说明",
     "description": "Title of the syntax help page"

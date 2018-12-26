@@ -57,6 +57,9 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
   document.querySelector('#resetButton').addEventListener('click', (event) => {
     event.preventDefault();
+    if (!confirm(utils.lang("resetConfirm"))) {
+      return;
+    }
     return utils.clearOptions().then(() => {
       return loadOptions();
     });

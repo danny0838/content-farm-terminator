@@ -177,6 +177,11 @@
     "description": "Label of reset button in options page"
   },
 
+  "resetConfirm": {
+    "message": "All option values will be replaced by default ones.\n\nAre you sure to proceed?",
+    "description": "Text of confirmination of reset button in options page"
+  },
+
   "helpSyntaxTitle": {
     "message": "Syntax of blocklists",
     "description": "Title of the syntax help page"
