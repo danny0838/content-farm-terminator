@@ -30,7 +30,7 @@ const utils = {
     return this.getOptions(this.defaultOptions);
   },
 
-  // Use storage.local > storage.sync > default
+  // Use storage.local > storage.sync > passed values
   getOptions(options) {
     let keys = Object.keys(options);
     return new Promise((resolve, reject) => {
@@ -52,7 +52,7 @@ const utils = {
           }
         });
       }).then((result) => {
-        return Object.assign(options, syncResult, result);
+        return Object.assign({}, options, syncResult, result);
       });
     });
   },
