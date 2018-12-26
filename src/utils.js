@@ -340,46 +340,51 @@ class ContentFarmFilter {
     ).filter(x => !!x.trim());
   }
 
+  validateRule(rule) {
+    if (!rule) { return ""; }
+
+    if (rule.startsWith('/') && rule.endsWith('/')) {
+      // RegExp rule
+      try {
+        // test if the RegExp is valid
+        new RegExp(rule.slice(1, -1));
+        return rule;
+      } catch (ex) {
+        // invalid RegExp syntax
+        console.error(ex);
+      }
+    } else {
+      // standard rule
+      try {
+        // escape "*" to make a valid URL
+        let t = rule.replace(/x/g, "xx").replace(/\*/g, "xa");
+        // add a scheme if none to make a valid URL
+        if (!/^[A-Za-z][0-9A-za-z+\-.]*:\/\//.test(t)) { t = "http://" + t; }
+        // get hostname
+        t = new URL(t).hostname;
+        // unescape "*"
+        t = t.replace(/x[xa]/g, m => ({xx: "x", xa: "*"})[m]);
+        // remove "www."
+        t = t.replace(/^www\./, "");
+        // convert punycode to unicode
+        t = punycode.toUnicode(t);
+        return t;
+      } catch (ex) {
+        // invalid URL hostname
+        console.error(ex);
+      }
+    }
+    return "";
+  }
+
   validateRuleLine(ruleLine) {
     const parts = (ruleLine || "").split(" ");
-    parts[0] = ((rule) => {
-      if (!rule) { return ""; }
-
-      if (rule.startsWith('/') && rule.endsWith('/')) {
-        // RegExp rule
-        try {
-          // test if the RegExp is valid
-          new RegExp(rule.slice(1, -1));
-          return rule;
-        } catch (ex) {
-          // invalid RegExp syntax
-          console.error(ex);
-        }
-      } else {
-        // standard rule
-        try {
-          // escape "*" to make a valid URL
-          let t = rule.replace(/x/g, "xx").replace(/\*/g, "xa");
-          // add a scheme if none to make a valid URL
-          if (!/^[A-Za-z][0-9A-za-z+\-.]*:\/\//.test(t)) { t = "http://" + t; }
-          // get hostname
-          t = new URL(t).hostname;
-          // unescape and remove "www."
-          t = t.replace(/x[xa]/g, m => ({xx: "x", xa: "*"})[m]).replace(/^www\./, "");
-          t = punycode.toUnicode(t);
-          return t;
-        } catch (ex) {
-          // invalid URL hostname
-          console.error(ex);
-        }
-      }
-      return "";
-    })(parts[0]);
+    parts[0] = this.validateRule(parts[0]);
     return parts.join(" ");
   }
 
   validateRulesText(rulesText) {
-    return (rulesText || "").split(/\n|\r\n?/).map(this.validateRuleLine).join("\n");
+    return (rulesText || "").split(/\n|\r\n?/).map(this.validateRuleLine, this).join("\n");
   }
 
   rulesTextToLines(rulesText) {
