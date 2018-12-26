@@ -14,3 +14,12 @@
 * [假新聞網站清單](https://danny0838.github.io/content-farm-terminator/files/blocklist/fake-news.txt): 假新聞網站清單，取自 Brian Feldman 等人發展的 Chrome 擴充功能 Fake News Alert。備查。
 
 * [詐騙網站清單](https://danny0838.github.io/content-farm-terminator/files/blocklist/scam-sites.txt): 詐騙網站清單，取自 Chrome 擴充功能《詐騙網站及內容農場評價系統》。備查。
+
+
+## 網址轉換規則清單
+
+使用方法：進入清單，複製想用的轉換規則，貼到《終結內容農場》瀏覽器套件選項的網址轉換規則。
+
+* [標準內容農場規則清單](https://danny0838.github.io/content-farm-terminator/files/blocklist/content-farms-trules.txt)
+
+* [社群內容農場規則清單](https://danny0838.github.io/content-farm-terminator/files/blocklist/sns-content-farms-trules.txt)

@@ -1,0 +1,14 @@
+  -- Facebook
+/^https?://(?:\w+\.)?facebook\.com(?:/|\b[^#]+#!/)groups/(\d+)(?=[/?#]|$)/ /^https?://(?:\w+\.)?facebook\.com(?:/|\b[^#]+#!/)groups/$1(?=[/?#]|$)/
+/^https?://(?:\w+\.)?facebook\.com(?:/(?:pg/)?|\b[^#]+#!/)(?:[^/?#]+-)?(\d+)(?=[/?#]|$)/ /^https?://(?:\w+\.)?facebook\.com(?:/(?:pg/)?|\b[^#]+#!/)(?:[^/?#]+-)?$1(?=[/?#]|$)/
+/^https?://(?:\w+\.)?facebook\.com(?:/(?:pg/)?|\b[^#]+#!/)([\w.-]+)(?=[/?#]|$)/ /^https?://(?:\w+\.)?facebook\.com(?:/(?:pg/)?|\b[^#]+#!/)$1(?=[/?#]|$)/
+
+  -- LINE
+/^https?://page\.line\.me/([\w-]+)(?=[/?#]|$)/ /^https?://page\.line\.me/$1(?=[/?#]|$)/
+
+  -- Youtube
+/^https?://(?:\w+\.)?youtube\.com/channel/([\w-]+)(?=[/?#]|$)/ /^https?://(?:\w+\.)?youtube\.com/channel/$1(?=[/?#]|$)/
+/^https?://(?:\w+\.)?youtube\.com/user/([\w-]+)(?=[/?#]|$)/ /^https?://(?:\w+\.)?youtube\.com/user/$1(?=[/?#]|$)/
+
+  -- Vimeo
+/^https?://vimeo\.com/(user\d+)(?=[/?#]|$)/ /^https?://vimeo\.com/$1(?=[/?#]|$)/
