@@ -107,6 +107,11 @@
     "description": "Description of webBlacklists field in options page"
   },
 
+  "webBlacklistsLink": {
+    "message": "我们的网络黑名单",
+    "description": "Label of the link to web blacklists page"
+  },
+
   "webBlacklistsPlaceholder": {
     "message": "https://example.com/blacklist.txt (示例)",
     "description": "Placeholder of webBlacklists field in options page"

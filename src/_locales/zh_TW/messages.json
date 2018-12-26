@@ -112,6 +112,11 @@
     "description": "Placeholder of webBlacklists field in options page"
   },
 
+  "webBlacklistsLink": {
+    "message": "我們的網路黑名單",
+    "description": "Label of the link to web blacklists page"
+  },
+
   "userBlacklist": {
     "message": "自訂黑名單",
     "description": "Label of userBlacklist field in options page"
