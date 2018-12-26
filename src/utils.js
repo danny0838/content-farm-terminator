@@ -23,6 +23,7 @@ const utils = {
     userBlacklist: "",
     userWhitelist: "",
     webBlacklists: "https://danny0838.github.io/content-farm-terminator/files/blocklist/content-farms.txt",
+    transformRules: "",
     showContextMenuCommands: true,
   },
 
@@ -241,11 +242,12 @@ class ContentFarmFilter {
     this._blacklistSet = new Set();
     this._blacklistReSet = new Set();
     this._blacklistRawSet = new Set();
-    this._blacklist;
+    this._blacklist = null;
     this._whitelistSet = new Set();
     this._whitelistReSet = new Set();
     this._whitelistRawSet = new Set();
-    this._whitelist;
+    this._whitelist = null;
+    this._transformRules = [];
   }
 
   addBlockList(listText, ruleSet, reRuleSet, rawRuleSet) {
@@ -314,6 +316,26 @@ class ContentFarmFilter {
     });
   }
 
+  addTransformRules(rulesText) {
+    (rulesText || "").split(/\n|\r\n?/).forEach((ruleLine) => {
+      const parts = (ruleLine || "").split(" ");
+      let pattern = parts[0];
+      let replace = parts[1];
+
+      if (pattern && replace) {
+        if (pattern.startsWith('/') && pattern.endsWith('/')) {
+          // RegExp rule
+          pattern = new RegExp(pattern.slice(1, -1));
+        } else {
+          // standard rule
+          pattern = new RegExp(utils.escapeRegExp(pattern).replace(/\\\*/g, "[^:/?#]*"));
+        }
+
+        this._transformRules.push({pattern, replace});
+      }
+    });
+  }
+
   /**
    * @param {string} url - url or hostname
    * @return {number} 0: not blocked; 1: blocked by standard rule; 2: blocked by regex rule
@@ -338,6 +360,32 @@ class ContentFarmFilter {
     return (urlsText || "").split(/\n|\r\n?/).map(
       u => utils.splitUrlByAnchor(u.split(" ", 1)[0])[0]
     ).filter(x => !!x.trim());
+  }
+
+  transformRule(rule) {
+    this._transformRules.some((tRule) => {
+      const match = tRule.pattern.exec(rule);
+      if (match) {
+        const useRegex = tRule.replace.startsWith('/') && tRule.replace.endsWith('/');
+        rule = tRule.replace.replace(/\$([$&\d])/g, (_, m) => {
+          let result;
+          if (m === '$') {
+            result = '$';
+          } else if (m === '&') {
+            result = match[0];
+          } else {
+            result = match[parseInt(m, 10)];
+          }
+          if (useRegex) {
+            result = utils.escapeRegExp(result).replace(/\\\//g, '/');
+          }
+          return result;
+        });
+        return true;
+      }
+      return false;
+    });
+    return rule;
   }
 
   validateRule(rule) {
@@ -385,6 +433,14 @@ class ContentFarmFilter {
 
   validateRulesText(rulesText) {
     return (rulesText || "").split(/\n|\r\n?/).map(this.validateRuleLine, this).join("\n");
+  }
+
+  validateTransformRulesText(rulesText) {
+    return (rulesText || "").split(/\n|\r\n?/).map((ruleLine) => {
+      const parts = (ruleLine || "").split(" ");
+      parts[0] = this.validateRule(parts[0]);
+      return parts.join(" ");
+    }, this).join("\n");
   }
 
   rulesTextToLines(rulesText) {

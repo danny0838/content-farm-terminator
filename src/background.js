@@ -16,6 +16,7 @@ Promise.resolve().then(() => {
 function updateFilter() {
   return updateFilterPromise = utils.getDefaultOptions().then((options) => {
     filter = new ContentFarmFilter();
+    filter.addTransformRules(options.transformRules);
     filter.addBlackList(options.userBlacklist);
     filter.addWhiteList(options.userWhitelist);
     const tasks = filter.urlsTextToLines(options.webBlacklists).map(u => filter.addBlackListFromUrl(u));
@@ -40,7 +41,9 @@ function updateContextMenus() {
 
   const blockSite = function (urlOrHostname, tabId, frameId) {
     return new Promise((resolve, reject) => {
-      const rule = filter.validateRuleLine(urlOrHostname.trim().replace(/\s[\s\S]*$/g, ""));
+      let rule = urlOrHostname.trim().replace(/\s[\s\S]*$/g, "");
+      rule = filter.transformRule(rule);
+      rule = filter.validateRuleLine(rule);
       chrome.tabs.sendMessage(tabId, {
         cmd: 'blockSite',
         args: {rule}

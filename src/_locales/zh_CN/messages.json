@@ -147,9 +147,29 @@
     "description": "Placeholder of userWhitelist field in options page"
   },
 
+  "transformRules": {
+    "message": "网址转换规则",
+    "description": "Label of transformRules field in options page"
+  },
+
+  "transformRulesDesc": {
+    "message": "使用右键菜单加入网址时，会自动套用这些转换规则修改网址。",
+    "description": "Description of transformRules field in options page"
+  },
+
+  "transformRulesPlaceholder": {
+    "message": "/^https?://example\\.com/(.*)/ /^https?://example\\.com/$$1/ (示例)",
+    "description": "Placeholder of transformRules field in options page"
+  },
+
   "blocklistSyntaxLink": {
     "message": "详细语法说明",
     "description": "Label of the link to the syntax help page"
+  },
+
+  "transformSyntaxLink": {
+    "message": "语法说明",
+    "description": "Label of the link to the transform syntax help page"
   },
 
   "showContextMenuCommands": {
@@ -190,5 +210,15 @@
   "helpSyntaxContent": {
     "message": "1. 标准屏蔽规则\n\n《终结内容农场》的标准屏蔽规则是以网域为主，并延及所有子网域。例如以下规则：\n\n    example.com\n\n会作用于以下网页：\n\n    http://example.com\n    https://example.com\n    http://example.com:8000\n    http://user:password@example.com\n    http://example.com/\n    http://example.com/somepage.html\n    http://example.com/subdir/somepage.html\n    http://example.com?id=123\n    http://example.com#main\n\n及 www 型网域中的网页：\n\n    http://www.example.com\n\n及所有子网域中的网页：\n\n    http://sub.example.com\n    http://extra.sub.example.com\n\n而不会作用于以下网页：\n\n    http://nonexample.com\n    http://example.com.tw\n\n\n2. 通配符\n\n标准屏蔽规则可使用通配符“*”表示任意零或多个字元。例如以下规则：\n\n    http://example.com.*\n\n会作用于以下网页：\n\n    http://example.com.tw\n    http://example.com.cn\n    http://example.com.extra.tw\n\n\n3. 注解\n\n每一条规则在空白以后的字元会被忽略，可用于补充说明。例如以下规则：\n\n    http://example.com 我是说明文字\n\n的作用和以下规则完全相同：\n\n    http://example.com\n\n\n4. 正则表达式\n\n除了基本屏蔽规则以外，也可以使用正则表达式 (RegExp) 比对复杂的 URL，写法是在规则的前后加上 \"/\"。例如：\n\n    /^https?:\\/\\/example\\.com\\/subdir(?=$$|[/?#])/ 我是正则表达式规则\n\n正则表达式规则中的 \"/\" 不须做跳脱处理，例如以上规则也可以写成：\n\n    /^https?://example\\.com/subdir(?=$$|[/?#])/ 我是正则表达式规则\n\n请注意正则表达式规则是比对整个 URL，不是比对域名，也不会延及 www 型网域与子网域。\n\n\n5. 自动修正\n\n《终结内容农场》会自动修正输入的规则。标准屏蔽规则会自动修正为对应的域名。例如输入以下规则：\n\n    www.example.com\n    http://example.com\n    example.com:8000\n    http://example.com/somepage.html\n\n都会被自动修正为以下规则：\n\n    example.com\n\n对于国际化域名，标准屏蔽规则会自动修正为未编码的形式。例如输入以下规则：\n\n    xn--fiq228c.tw\n\n会被自动修正为以下规则：\n\n    中文.tw\n\n如果输入的标准屏蔽规则无法转换为有效的网域名，或输入的正则表达式规则有语法错误，则会被清空。",
     "description": "Content of the syntax help page"
+  },
+
+  "helpTransformSyntaxTitle": {
+    "message": "转换规则语法说明",
+    "description": "Title of the transform syntax help page"
+  },
+
+  "helpTransformSyntaxContent": {
+    "message": "网址转换规则是每行一条规则，每一条规则的格式如下：\n\n    <寻找文本> <替换文本> <注解文字>\n\n<寻找文本> 须为有效的正则表达式，前后须为 \"/\"。<替换文本> 可以是任意文字，并可使用 \"$$\" 带入特殊内容：\n\n- \"$$n\": n 为 0~9，带入 <寻找文本> 匹配的子群组字串。如果 <替换文本> 是正则表达式规则（头尾皆为 \"/\"），则带入的字串会自动做脱义处理。\n- \"$$$\": 带入普通的 \"$$\" 符号。\n\n转换网址时，会由前后往逐一寻找及替换，一但遇到符合的 <寻找文本>，就会把网址转换为 <替换文本> 并中止后续处理。如果没有符合的，则不做任何转换。\n\n例如以下规则：\n\n    /^https?://example\\.com/(.*)/ $$1.example.com\n\n会把网址 \"https://example.com/my.job\" 转换为 \"my.job.example.com\"。\n\n而以下规则：\n\n    /^https?://example\\.com/(.*)/ /^https?://example\\.com/$$1/\n\n则会把网址 \"https://example.com/my.job\" 转换为 \"/^https?://example\\.com/my\\.job/\"。",
+    "description": "Content of the transform syntax help page"
   }
 }

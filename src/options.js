@@ -18,6 +18,7 @@ function loadOptions() {
     document.querySelector('#userBlacklist textarea').value = options.userBlacklist;
     document.querySelector('#userWhitelist textarea').value = options.userWhitelist;
     document.querySelector('#webBlacklists textarea').value = options.webBlacklists;
+    document.querySelector('#transformRules textarea').value = options.transformRules;
     document.querySelector('#showContextMenuCommands input').checked = options.showContextMenuCommands;
 
     return new Promise((resolve, reject) => {
@@ -34,12 +35,14 @@ function saveOptions() {
   const userBlacklist = document.querySelector('#userBlacklist textarea').value;
   const userWhitelist = document.querySelector('#userWhitelist textarea').value;
   const webBlacklists = document.querySelector('#webBlacklists textarea').value;
+  const transformRules = document.querySelector('#transformRules textarea').value;
   const showContextMenuCommands = document.querySelector('#showContextMenuCommands input').checked;
 
   return utils.setOptions({
     userBlacklist: validator.validateRulesText(userBlacklist),
     userWhitelist: validator.validateRulesText(userWhitelist),
     webBlacklists: webBlacklists,
+    transformRules: validator.validateTransformRulesText(transformRules),
     showContextMenuCommands: showContextMenuCommands,
   });
 }
@@ -47,9 +50,10 @@ function saveOptions() {
 document.addEventListener('DOMContentLoaded', (event) => {
   utils.loadLanguages(document);
 
-  // hide showContextMenuCommands option if contextMenus is not available
+  // hide some options if contextMenus is not available
   // (e.g. Firefox for Android)
   if (!chrome.contextMenus) {
+    document.querySelector('#transformRules').style.display = 'none';
     document.querySelector('#showContextMenuCommands').style.display = 'none';
   }
 

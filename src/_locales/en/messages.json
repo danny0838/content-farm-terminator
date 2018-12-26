@@ -147,9 +147,29 @@
     "description": "Placeholder of userWhitelist field in options page"
   },
 
+  "transformRules": {
+    "message": "URL Transformation Rules",
+    "description": "Label of transformRules field in options page"
+  },
+
+  "transformRulesDesc": {
+    "message": "These rules will be applied to a URL that is added via the context menu.",
+    "description": "Description of transformRules field in options page"
+  },
+
+  "transformRulesPlaceholder": {
+    "message": "/^https?://example\\.com/(.*)/ /^https?://example\\.com/$$1/ (example)",
+    "description": "Placeholder of transformRules field in options page"
+  },
+
   "blocklistSyntaxLink": {
     "message": "Syntax help.",
     "description": "Label of the link to the syntax help page"
+  },
+
+  "transformSyntaxLink": {
+    "message": "Syntax help.",
+    "description": "Label of the link to the transform syntax help page"
   },
 
   "showContextMenuCommands": {
@@ -190,5 +210,15 @@
   "helpSyntaxContent": {
     "message": "1. Standard rules\n\nA standard rule is domain-based, including all subdomains. For example, this rule:\n\n    example.com\n\nmatches these pages:\n\n    http://example.com\n    https://example.com\n    http://example.com:8000\n    http://user:password@example.com\n    http://example.com/\n    http://example.com/somepage.html\n    http://example.com/subdir/somepage.html\n    http://example.com?id=123\n    http://example.com#main\n\nand pages in the \"www\"-prefixed domain:\n\n    http://www.example.com\n\nand pages in the subdomains:\n\n    http://sub.example.com\n    http://extra.sub.example.com\n\n, while these pages are not matched:\n\n    http://nonexample.com\n    http://example.com.tw\n\n\n2. Wildcards\n\nWildcards \"*\" can be included in a standard rule to match zero or more chars. For example, this rule:\n\n    http://example.com.*\n\nmatches these pages:\n\n    http://example.com.tw\n    http://example.com.cn\n    http://example.com.extra.tw\n\n\n3. Comments\n\nText following a space will be ignored. For example, this rule:\n\n    http://example.com I am the comment\n\nworks as same as this rule:\n\n    http://example.com\n\n\n4. Regular expression rules\n\nBesides standard rules, a regular expression (RegExp) rule can be used to match a complicated URL. To use it, add \"/\" at the start and the end of a rule. For example:\n\n    /^https?:\\/\\/example\\.com\\/subdir(?=$$|[/?#])/ I am a RegExp rule\n\n\"/\"s in a regular expression rule need not be escaped. For example, the above rule can also be written as:\n\n    /^https?://example\\.com/subdir(?=$$|[/?#])/ I am a RegExp rule\n\nNote that a regular expression rule matches whole URL rather than the domain name, and \"www\"-prefixed domain and subdomains are not included.\n\n\n5. Auto-correction\n\nEntered rules will be auto-corrected. A standard rule will be converted to the corresponding domain name. For example, these rules:\n\n    www.example.com\n    http://example.com\n    example.com:8000\n    http://example.com/somepage.html\n\nwill be corrected to:\n\n    example.com\n\nFor internationalized domain names (IDN), a standard rule will be converted to the non-encoded form. For example, this rule:\n\n    xn--fiq228c.tw\n\nWill be corrected to:\n\n    中文.tw\n\nIf a standard rule cannot be converted to a valid domain name, or a regular expression rule has an invalid syntax, it will be cleared.",
     "description": "Content of the syntax help page"
+  },
+
+  "helpTransformSyntaxTitle": {
+    "message": "Syntax of transform rules",
+    "description": "Title of the transform syntax help page"
+  },
+
+  "helpTransformSyntaxContent": {
+    "message": "URL transformation rules is one rule per line. The syntax of each rule is:\n\n    <pattern> <replacement> <comment>\n\nWhere <pattern> is a regular expression (RegExp) enclosed by \"/\", and <replacement> is any text with \"$$\" for special meaning:\n\n- \"$$n\": n (0–9) means the corresponding matched subgroup text. If <replacement> is a RegExp (enclosed by \"/\"), the included text will be automatically escaped.\n- \"$$$\": means a literal \"$$\".\n\nWhen trnsforming a URL, rules are matched one by one. When a matched <pattern> is found, the URL will be replaced with the corresponding <replacement> and further processing is skipped. If no match is found, the URL is not trnsformed.\n\nFor example, the following rule:\n\n    /^https?://example\\.com/(.*)/ $$1.example.com\n\ntransforms the URL \"https://example.com/my.job\" into \"my.job.example.com\".\n\nWhile the following rule:\n\n    /^https?://example\\.com/(.*)/ /^https?://example\\.com/$$1/\n\ntransforms the URL \"https://example.com/my.job\" into \"/^https?://example\\.com/my\\.job/\".",
+    "description": "Content of the transform syntax help page"
   }
 }
