@@ -70,3 +70,6 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
     }
   }
 });
+
+// in case that sourceUrl is alreally unblocked
+recheckBlock();
