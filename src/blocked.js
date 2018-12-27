@@ -37,6 +37,8 @@ document.addEventListener('DOMContentLoaded', (event) => {
     document.querySelector('#warningUrl').appendChild(elem);
   }
 
+  document.querySelector('#detailsLink').href = `options.html?from=${encodeURIComponent(sourceUrl)}`;
+
   /**
    * Events
    */

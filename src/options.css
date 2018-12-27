@@ -31,6 +31,10 @@ body {
   opacity: 0.6;
 }
 
+#urlInfo {
+  word-break: break-all;
+}
+
 .field {
   box-sizing: border-box;
   margin: 1.75rem 0 0 0;

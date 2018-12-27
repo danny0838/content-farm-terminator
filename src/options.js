@@ -59,6 +59,13 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
   loadOptions();
 
+  {
+    const url = new URL(location.href).searchParams.get('from') || "";
+    const urlRegex = url ? `/^${utils.escapeRegExp(url).replace(/\\\//g, '/')}$/` : "";
+    const text = (url && urlRegex) ? `${url} (${urlRegex})` : "";
+    document.querySelector('#urlInfo').textContent = text;
+  }
+
   document.querySelector('#resetButton').addEventListener('click', (event) => {
     event.preventDefault();
     if (!confirm(utils.lang("resetConfirm"))) {
