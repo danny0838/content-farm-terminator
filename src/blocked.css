@@ -53,28 +53,24 @@ a {
 }
 
 #buttonBar {
-  margin: 3.6rem -.5rem 0 -.5rem;
+  margin-top: 3.6rem;
 }
 
-.button {
-  display: inline-block;
+button {
+  border: 1px solid #CCCCCC;
   border-radius: 2px;
-  padding-__MSG_@@bidi_start_edge__: .5rem;
-  padding-__MSG_@@bidi_end_edge__: .5rem;
-  height: 1.8rem;
-  line-height: 1.8rem;
-  vertical-align: middle;
-  text-align: center;
+  padding: .3rem;
+  background: none;
+  color: #FFFFFF;
   cursor: pointer;
 }
 
-.button:hover {
+button:hover {
   background-color: rgba(255,255,255,0.3);
 }
 
 #back {
   float: __MSG_@@bidi_end_edge__;
-  border: 1px solid #fff;
 }
 
 @media screen and (max-width: 28rem) {
@@ -99,7 +95,7 @@ a {
   }
 
   #buttonBar {
-    margin: 2rem -.3rem 0 -.3rem;
+    margin-top: 2rem;
   }
 
   .button {
