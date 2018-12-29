@@ -103,7 +103,7 @@
   },
 
   "webBlacklistsDesc": {
-    "message": "網路黑名單的網址，每行一個，空白及之後字元皆忽略。系統會自動匯入黑名單並定期更新。",
+    "message": "網路黑名單的網址。每行一個，空白及之後字元皆忽略。系統會自動匯入黑名單並定期更新。",
     "description": "Description of webBlacklists field in options page"
   },
 
@@ -123,7 +123,7 @@
   },
 
   "userBlacklistDesc": {
-    "message": "想額外封鎖的網頁名單。每行一個。輸入網址會自動修正。",
+    "message": "想額外封鎖的網站名單。每行一個。輸入網址會自動修正。",
     "description": "Description of userBlacklist field in options page"
   },
 
@@ -138,7 +138,7 @@
   },
 
   "userWhitelistDesc": {
-    "message": "想解除封鎖的網頁名單。每行一個。輸入網址會自動修正。",
+    "message": "想解除封鎖的網站名單。每行一個。輸入網址會自動修正。",
     "description": "Description of userWhitelist field in options page"
   },
 

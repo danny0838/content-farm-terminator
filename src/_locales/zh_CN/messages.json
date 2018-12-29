@@ -103,7 +103,7 @@
   },
 
   "webBlacklistsDesc": {
-    "message": "网络黑名单的网址，每行一个，空格及以后的字符皆忽略，系统会自动导入黑名单并定期更新。",
+    "message": "网络黑名单的网址。每行一个，空格及以后的字符皆忽略，系统会自动导入黑名单并定期更新。",
     "description": "Description of webBlacklists field in options page"
   },
 
