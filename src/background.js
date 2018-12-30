@@ -1,6 +1,5 @@
 let filter;
 let updateFilterPromise;
-let suspendedTabs = new Map();
 
 let _isFxBelow56;
 Promise.resolve().then(() => {

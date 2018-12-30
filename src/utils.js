@@ -27,7 +27,7 @@ const utils = {
     showContextMenuCommands: true,
   },
 
-  getDefaultOptions(options) {
+  getDefaultOptions() {
     return this.getOptions(this.defaultOptions);
   },
 
