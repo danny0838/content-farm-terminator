@@ -29,5 +29,3 @@
 * [Chrome 擴充功能](https://chrome.google.com/webstore/detail/content-farm-terminator/lcghoajegeldpfkfaejegfobkapnemjl)
 
 * [Firefox 附加元件](https://addons.mozilla.org/firefox/addon/content-farm-terminator/)
-
-> 本程式不收集使用者資訊，也不在背景建立網路連線（除了取得使用者指定之網路黑名單以外）。原始程式碼完全公開，有任何疑慮皆可自行查證。
