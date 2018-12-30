@@ -44,7 +44,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
    */
   document.querySelector('#view').addEventListener('click', (event) => {
     const newUrl = `sandbox.html?src=${encodeURIComponent(sourceUrl)}`;
-    location.replace(newUrl);
+    location.assign(newUrl);
   });
 
   document.querySelector('#back').addEventListener('click', (event) => {
