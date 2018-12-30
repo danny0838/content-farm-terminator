@@ -77,6 +77,38 @@
     "description": "Title of view button in blocked page"
   },
 
+  "unblockBtn": {
+    "message": "Unblock",
+    "description": "Label of unblock button in blocked page"
+  },
+
+  "unblockBtnCountdown": {
+    "message": "Unblock ($countdown$)",
+    "description": "Label of unblock button in blocked page (with countdown)",
+    "placeholders": {
+      "countdown": {
+        "content": "$1",
+        "example": "5"
+      }
+    }
+  },
+
+  "unblockBtnTitle": {
+    "message": "Unblock this page temporarily.",
+    "description": "Title of unblock button in blocked page"
+  },
+
+  "unblockBtnPrompt": {
+    "message": "Information from a content farm is usually unverified and questionable, and malicious ads and/or scripts could reside.\n* Try View if you intend to simply check the page content.\n* Add the URL to the whitelist if this site is not a content farm.\n\nTo still unblock this page, input the following code: $key$",
+    "description": "Prompt message of unblock button in blocked page",
+    "placeholders": {
+      "key": {
+        "content": "$1",
+        "example": "1234"
+      }
+    }
+  },
+
   "markTitle": {
     "message": "This link targets a content farm",
     "description": "Title and alt text for the image marker of a link targeting a content farm page."

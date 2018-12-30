@@ -77,6 +77,38 @@
     "description": "Title of view button in blocked page"
   },
 
+  "unblockBtn": {
+    "message": "解鎖",
+    "description": "Label of unblock button in blocked page"
+  },
+
+  "unblockBtnCountdown": {
+    "message": "解鎖($countdown$)",
+    "description": "Label of unblock button in blocked page (with countdown)",
+    "placeholders": {
+      "countdown": {
+        "content": "$1",
+        "example": "5"
+      }
+    }
+  },
+
+  "unblockBtnTitle": {
+    "message": "暫時解鎖此頁面。",
+    "description": "Title of unblock button in blocked page"
+  },
+
+  "unblockBtnPrompt": {
+    "message": "內容農場的資訊大多缺乏查證、品質參差不齊、且可能含有不良廣告或惡意程式。\n* 想確認頁面內容，建議使用 [檢視] 功能，以免受到惡意程式攻擊，且能避免農場主得到廣告收益。\n* 如果此站台不是內容農場，請將網址加入白名單。\n\n若確定要暫時解鎖此頁面，請輸入驗證碼：$key$",
+    "description": "Prompt message of unblock button in blocked page",
+    "placeholders": {
+      "key": {
+        "content": "$1",
+        "example": "1234"
+      }
+    }
+  },
+
   "markTitle": {
     "message": "此連結將前往內容農場",
     "description": "Title and alt text for the image marker of a link targeting a content farm page."

@@ -25,6 +25,12 @@ const utils = {
     webBlacklists: "https://danny0838.github.io/content-farm-terminator/files/blocklist/content-farms.txt",
     transformRules: "",
     showContextMenuCommands: true,
+    tempUnblockDuration: 8000,
+    tempUnblockCountdownBase: 15000,
+    tempUnblockCountdownIncrement: 10000,
+    tempUnblockCountdownReset: 24 * 60 * 60 * 1000,
+    tempUnblockCountdown: -1,
+    tempUnblockLastAccess: -1,
   },
 
   getDefaultOptions() {

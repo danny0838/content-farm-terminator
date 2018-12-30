@@ -65,8 +65,17 @@ button {
   cursor: pointer;
 }
 
+button[disabled] {
+  opacity: .6;
+  cursor: initial;
+}
+
 button:hover {
   background-color: rgba(255,255,255,0.3);
+}
+
+button[disabled]:hover {
+  background: none;
 }
 
 #back {

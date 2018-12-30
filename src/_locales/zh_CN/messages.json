@@ -77,6 +77,38 @@
     "description": "Title of view button in blocked page"
   },
 
+  "unblockBtn": {
+    "message": "解锁",
+    "description": "Label of unblock button in blocked page"
+  },
+
+  "unblockBtnCountdown": {
+    "message": "解锁($countdown$)",
+    "description": "Label of unblock button in blocked page (with countdown)",
+    "placeholders": {
+      "countdown": {
+        "content": "$1",
+        "example": "5"
+      }
+    }
+  },
+
+  "unblockBtnTitle": {
+    "message": "暂时解锁此页面。",
+    "description": "Title of unblock button in blocked page"
+  },
+
+  "unblockBtnPrompt": {
+    "message": "内容农场的资讯大多缺乏查证、质量参差不齐、且可能含有不良广告或恶意程序。\n* 想确认页面内容，建议使用 [查看] 功能，以免受到恶意程序攻击，且能避免农场主得到广告收益。\n* 如果此站台不是内容农场，请将网址加入白名单。\n\n若确定要暂时解锁此页面，请输入验证码：$key$",
+    "description": "Prompt message of unblock button in blocked page",
+    "placeholders": {
+      "key": {
+        "content": "$1",
+        "example": "1234"
+      }
+    }
+  },
+
   "markTitle": {
     "message": "此链接将前往内容农场",
     "description": "Title and alt text for the image marker of a link targeting a content farm page."

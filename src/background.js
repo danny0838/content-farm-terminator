@@ -1,5 +1,6 @@
 let filter;
 let updateFilterPromise;
+let tempUnblockTabs = new Set();
 
 let _isFxBelow56;
 Promise.resolve().then(() => {
@@ -122,6 +123,11 @@ function updateContextMenus() {
 }
 
 let onBeforeRequestBlocker = function (details) {
+  // check if this tab is temporarily unblocked
+  if (tempUnblockTabs.has(details.tabId)) {
+    return;
+  }
+
   const url = details.url;
   const blockType = filter.isBlocked(url);
   if (!blockType) { return; }
@@ -171,6 +177,48 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
       updateFilterPromise.then(() => {
         const blockType = filter.isBlocked(args.url);
         sendResponse(blockType);
+      });
+      return true; // async response
+      break;
+    }
+    case 'isTempUnblocked': {
+      sendResponse(tempUnblockTabs.has(sender.tab.id));
+      break;
+    }
+    case 'tempUnblock': {
+      const tabId = sender.tab.id;
+      utils.getOptions({
+        tempUnblockDuration: utils.defaultOptions.tempUnblockDuration,
+        tempUnblockCountdownBase: utils.defaultOptions.tempUnblockCountdownBase,
+        tempUnblockCountdownIncrement: utils.defaultOptions.tempUnblockCountdownIncrement,
+        tempUnblockCountdownReset: utils.defaultOptions.tempUnblockCountdownReset,
+        tempUnblockCountdown: utils.defaultOptions.tempUnblockCountdown,
+        tempUnblockLastAccess: utils.defaultOptions.tempUnblockLastAccess,
+      }).then((options) => {
+        // temporarily unblock the tab
+        tempUnblockTabs.add(tabId);
+        setTimeout(() => {
+          tempUnblockTabs.delete(tabId);
+        }, options.tempUnblockDuration);
+        sendResponse(true);
+
+        // update countdown
+        if (options.tempUnblockLastAccess < 0 ||
+            Date.now() - options.tempUnblockLastAccess > options.tempUnblockCountdownReset) {
+          options.tempUnblockCountdown = -1;
+        }
+
+        if (options.tempUnblockCountdown === -1) {
+          options.tempUnblockCountdown = options.tempUnblockCountdownBase;
+        }
+
+        options.tempUnblockCountdown += options.tempUnblockCountdownIncrement;
+        options.tempUnblockLastAccess = Date.now();
+
+        return utils.setOptions({
+          tempUnblockCountdown: options.tempUnblockCountdown,
+          tempUnblockLastAccess: options.tempUnblockLastAccess,
+        });
       });
       return true; // async response
       break;

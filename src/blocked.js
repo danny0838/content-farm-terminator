@@ -4,9 +4,19 @@ const sourceUrl = urlObj.searchParams.get('to');
 function recheckBlock() {
   return new Promise((resolve, reject) => {
     chrome.runtime.sendMessage({
-      cmd: 'isUrlBlocked',
-      args: {url: sourceUrl}
+      cmd: 'isTempUnblocked',
+      args: {},
     }, resolve);
+  }).then((isTempUnblocked) => {
+    // skip further check if this tab is temporarily unblocked
+    if (isTempUnblocked) { return false; }
+
+    return new Promise((resolve, reject) => {
+      chrome.runtime.sendMessage({
+        cmd: 'isUrlBlocked',
+        args: {url: sourceUrl}
+      }, resolve);
+    });
   }).then((isBlocked) => {
     if (!isBlocked) {
       location.replace(sourceUrl);
@@ -47,6 +57,21 @@ document.addEventListener('DOMContentLoaded', (event) => {
     location.assign(newUrl);
   });
 
+  document.querySelector('#unblock').addEventListener('click', (event) => {
+    const key = Math.random().toString().slice(2, 6);
+    if (prompt(utils.lang("unblockBtnPrompt", key)) !== key) {
+      return;
+    }
+    chrome.runtime.sendMessage({
+      cmd: 'tempUnblock',
+      args: {},
+    }, (response) => {
+      if (response) {
+        location.replace(sourceUrl);
+      }
+    });
+  });
+
   document.querySelector('#back').addEventListener('click', (event) => {
     if (history.length > 1) {
       history.go(-1);
@@ -74,4 +99,35 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
 });
 
 // in case that sourceUrl is alreally unblocked
-recheckBlock();
+recheckBlock().then(() => {
+  return utils.getOptions({
+    tempUnblockCountdownBase: utils.defaultOptions.tempUnblockCountdownBase,
+    tempUnblockCountdownReset: utils.defaultOptions.tempUnblockCountdownReset,
+    tempUnblockCountdown: utils.defaultOptions.tempUnblockCountdown,
+    tempUnblockLastAccess: utils.defaultOptions.tempUnblockLastAccess,
+  }).then((options) => {
+    if (options.tempUnblockLastAccess < 0 ||
+        Date.now() - options.tempUnblockLastAccess > options.tempUnblockCountdownReset) {
+      options.tempUnblockCountdown = -1;
+    }
+
+    if (options.tempUnblockCountdown === -1) {
+      options.tempUnblockCountdown = options.tempUnblockCountdownBase;
+    }
+
+    let countdown = options.tempUnblockCountdown;
+    const elem = document.querySelector('#unblock');
+    elem.textContent = utils.lang("unblockBtnCountdown", [countdown / 1000]);
+
+    let t = setInterval(() => {
+      countdown -= 1000;
+      if (countdown > 0) {
+        elem.textContent = utils.lang("unblockBtnCountdown", [countdown / 1000]);
+      } else {
+        clearInterval(t);
+        elem.textContent = utils.lang("unblockBtn");
+        elem.disabled = false;
+      }
+    }, 1000);
+  });
+});

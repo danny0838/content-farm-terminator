@@ -12,7 +12,15 @@ let lastRightClickedElem;
  * @return {boolean} whether document URL changed
  */
 function recheckCurrentUrl(urlChanged = false) {
-  return Promise.resolve().then(() => {
+  return new Promise((resolve, reject) => {
+    chrome.runtime.sendMessage({
+      cmd: 'isTempUnblocked',
+      args: {},
+    }, resolve);
+  }).then((isTempUnblocked) => {
+    // skip further check if this tab is temporarily unblocked
+    if (isTempUnblocked) { return false; }
+
     // check for URL change of the address bar and update related global variables
     const href = location.href;
     if (href !== docHref) {
