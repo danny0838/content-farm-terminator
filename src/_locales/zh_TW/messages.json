@@ -204,6 +204,11 @@
     "description": "Label of showContextMenuCommands in options page"
   },
 
+  "showUnblockButton": {
+    "message": "在封鎖頁面顯示解鎖按鈕",
+    "description": "Label of showUnblockButton in options page"
+  },
+
   "report": {
     "message": "舉報內容農場",
     "description": "Label of report button in options page"

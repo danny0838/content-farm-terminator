@@ -20,6 +20,7 @@ function loadOptions() {
     document.querySelector('#webBlacklists textarea').value = options.webBlacklists;
     document.querySelector('#transformRules textarea').value = options.transformRules;
     document.querySelector('#showContextMenuCommands input').checked = options.showContextMenuCommands;
+    document.querySelector('#showUnblockButton input').checked = options.showUnblockButton;
 
     return new Promise((resolve, reject) => {
       chrome.runtime.sendMessage({
@@ -37,6 +38,7 @@ function saveOptions() {
   const webBlacklists = document.querySelector('#webBlacklists textarea').value;
   const transformRules = document.querySelector('#transformRules textarea').value;
   const showContextMenuCommands = document.querySelector('#showContextMenuCommands input').checked;
+  const showUnblockButton = document.querySelector('#showUnblockButton input').checked;
 
   return utils.setOptions({
     userBlacklist: validator.validateRulesText(userBlacklist),
@@ -44,6 +46,7 @@ function saveOptions() {
     webBlacklists: webBlacklists,
     transformRules: validator.validateTransformRulesText(transformRules),
     showContextMenuCommands: showContextMenuCommands,
+    showUnblockButton: showUnblockButton,
   });
 }
 

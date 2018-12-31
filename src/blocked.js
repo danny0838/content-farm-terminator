@@ -101,11 +101,16 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
 // in case that sourceUrl is alreally unblocked
 recheckBlock().then(() => {
   return utils.getOptions({
+    showUnblockButton: utils.defaultOptions.showUnblockButton,
     tempUnblockCountdownBase: utils.defaultOptions.tempUnblockCountdownBase,
     tempUnblockCountdownReset: utils.defaultOptions.tempUnblockCountdownReset,
     tempUnblockCountdown: utils.defaultOptions.tempUnblockCountdown,
     tempUnblockLastAccess: utils.defaultOptions.tempUnblockLastAccess,
   }).then((options) => {
+    if (!options.showUnblockButton) {
+      return;
+    }
+
     if (options.tempUnblockLastAccess < 0 ||
         Date.now() - options.tempUnblockLastAccess > options.tempUnblockCountdownReset) {
       options.tempUnblockCountdown = -1;
@@ -117,6 +122,7 @@ recheckBlock().then(() => {
 
     let countdown = options.tempUnblockCountdown;
     const elem = document.querySelector('#unblock');
+    elem.hidden = false;
     elem.textContent = utils.lang("unblockBtnCountdown", [countdown / 1000]);
 
     let t = setInterval(() => {

@@ -204,6 +204,11 @@
     "description": "Label of showContextMenuCommands in options page"
   },
 
+  "showUnblockButton": {
+    "message": "Show unblock button in blocked page",
+    "description": "Label of showUnblockButton in options page"
+  },
+
   "report": {
     "message": "Report a content farm.",
     "description": "Label of report button in options page"
