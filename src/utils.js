@@ -268,7 +268,7 @@ class ContentFarmFilter {
         reRuleSet.add(rule);
       } else {
         // standard rule
-        rule = utils.escapeRegExp(ruleText).replace(/\\\*/g, "[^:/?#]*");
+        rule = utils.escapeRegExp(rule).replace(/\\\*/g, "[^:/?#]*");
         ruleSet.add(rule);
       }
     });
