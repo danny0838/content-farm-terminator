@@ -43,6 +43,17 @@
     }
   },
 
+  "blockSiteDuplicated": {
+    "message": "There's already a rule identical to \"$rule$\" in the blacklist.",
+    "description": "Duplication message of context menu blocker",
+    "placeholders": {
+      "rule": {
+        "content": "$1",
+        "example": "example.com"
+      }
+    }
+  },
+
   "viewBlockedFrame": {
     "message": "Content Farm",
     "description": "Text of link of a blocked frame page"

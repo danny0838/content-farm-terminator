@@ -50,7 +50,18 @@ function updateContextMenus() {
       }, {frameId}, resolve);
     }).then((rule) => {
       if (!rule) { return; }
+
       rule = filter.validateRuleLine(rule);
+
+      if (rule && filter.isInBlacklist(rule)) {
+        return new Promise((resolve, reject) => {
+          chrome.tabs.sendMessage(tabId, {
+            cmd: 'alert',
+            args: {msg: utils.lang("blockSiteDuplicated", rule)}
+          }, {frameId}, resolve);
+        });
+      }
+
       return utils.getOptions({
         userBlacklist: ""
       }).then((options) => {

@@ -43,6 +43,17 @@
     }
   },
 
+  "blockSiteDuplicated": {
+    "message": "黑名單已有與 \"$rule$\" 相同的規則。",
+    "description": "Duplication message of context menu blocker",
+    "placeholders": {
+      "rule": {
+        "content": "$1",
+        "example": "example.com"
+      }
+    }
+  },
+
   "viewBlockedFrame": {
     "message": "內容農場",
     "description": "Text of link of a blocked frame page"

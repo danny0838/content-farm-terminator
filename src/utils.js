@@ -361,6 +361,18 @@ class ContentFarmFilter {
     return 0;
   }
 
+  isInBlacklist(ruleLine) {
+    const {type, ruleReText} = this.parseRuleLine(ruleLine);
+    switch (type) {
+      case "regex":
+        return this._blacklist.regexReTextSet.has(ruleReText);
+        break;
+      default:
+        return this._blacklist.standardReTextSet.has(ruleReText);
+        break;
+    }
+  }
+
   urlsTextToLines(urlsText) {
     return (urlsText || "").split(/\n|\r\n?/).map(
       u => utils.splitUrlByAnchor(u.split(" ", 1)[0])[0]
