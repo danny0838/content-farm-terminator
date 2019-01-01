@@ -455,6 +455,11 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
       return true; // async response
       break;
     }
+    case 'alert': {
+      alert(args.msg);
+      sendResponse(true);
+      break;
+    }
   }
 });
 

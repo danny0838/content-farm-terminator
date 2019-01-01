@@ -32,6 +32,17 @@
     "description": "Prompt message of context menu blocker"
   },
 
+  "blockSiteSuccess": {
+    "message": "Rule \"$rule$\" added to the blacklist.",
+    "description": "Success message of context menu blocker",
+    "placeholders": {
+      "rule": {
+        "content": "$1",
+        "example": "example.com"
+      }
+    }
+  },
+
   "viewBlockedFrame": {
     "message": "Content Farm",
     "description": "Text of link of a blocked frame page"

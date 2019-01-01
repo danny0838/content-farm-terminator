@@ -32,6 +32,17 @@
     "description": "Prompt message of context menu blocker"
   },
 
+  "blockSiteSuccess": {
+    "message": "已将规则 \"$rule$\" 加入黑名单。",
+    "description": "Success message of context menu blocker",
+    "placeholders": {
+      "rule": {
+        "content": "$1",
+        "example": "example.com"
+      }
+    }
+  },
+
   "viewBlockedFrame": {
     "message": "内容农场",
     "description": "Text of link of a blocked frame page"

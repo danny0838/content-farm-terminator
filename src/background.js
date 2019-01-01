@@ -60,6 +60,13 @@ function updateContextMenus() {
         return utils.setOptions({
           userBlacklist: text
         });
+      }).then(() => {
+        return new Promise((resolve, reject) => {
+          chrome.tabs.sendMessage(tabId, {
+            cmd: 'alert',
+            args: {msg: utils.lang("blockSiteSuccess", rule)}
+          }, {frameId}, resolve);
+        });
       });
     });
   };
