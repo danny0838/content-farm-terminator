@@ -246,41 +246,43 @@ const utils = {
 class ContentFarmFilter {
   constructor() {
     this._listUpdated = true;
-    this._blacklistSet = new Set();
-    this._blacklistReSet = new Set();
-    this._blacklistRawSet = new Set();
-    this._blacklist = null;
-    this._whitelistSet = new Set();
-    this._whitelistReSet = new Set();
-    this._whitelistRawSet = new Set();
-    this._whitelist = null;
+    this._blacklist = {
+      rawSet: new Set(),
+      standardReTextSet: new Set(),
+      regexReTextSet: new Set(),
+      mergedRe: null,
+    };
+    this._whitelist = {
+      rawSet: new Set(),
+      standardReTextSet: new Set(),
+      regexReTextSet: new Set(),
+      mergedRe: null,
+    };
     this._transformRules = [];
   }
 
-  addBlockList(listText, ruleSet, reRuleSet, rawRuleSet) {
-    this.rulesTextToLines(listText).forEach((ruleText) => {
-      rawRuleSet.add(ruleText);
-
-      let rule = ruleText.replace(/ .*$/, "");
-      if (rule.startsWith('/') && rule.endsWith('/')) {
-        // RegExp rule
-        rule = new RegExp(rule.slice(1, -1)).source;
-        reRuleSet.add(rule);
-      } else {
-        // standard rule
-        rule = utils.escapeRegExp(rule).replace(/\\\*/g, "[^:/?#]*");
-        ruleSet.add(rule);
+  addBlockList(listText, blockList) {
+    this.rulesTextToLines(listText).forEach((ruleLine) => {
+      blockList.rawSet.add(ruleLine);
+      const {type, ruleReText} = this.parseRuleLine(ruleLine);
+      switch (type) {
+        case "regex":
+          blockList.regexReTextSet.add(ruleReText);
+          break;
+        default:
+          blockList.standardReTextSet.add(ruleReText);
+          break;
       }
     });
     this._listUpdated = true;
   }
 
   addBlackList(listText) {
-    this.addBlockList(listText, this._blacklistSet, this._blacklistReSet, this._blacklistRawSet);
+    this.addBlockList(listText, this._blacklist);
   }
 
   addWhiteList(listText) {
-    this.addBlockList(listText, this._whitelistSet, this._whitelistReSet, this._whitelistRawSet);
+    this.addBlockList(listText, this._whitelist);
   }
 
   /**
@@ -352,14 +354,10 @@ class ContentFarmFilter {
     u = utils.getNormalizedUrl(u);
 
     // update the regex if the rules have been changed
-    if (this._listUpdated) {
-      this._blacklist = this.getMergedRegex(this._blacklistSet, this._blacklistReSet);
-      this._whitelist = this.getMergedRegex(this._whitelistSet, this._whitelistReSet);
-      this._listUpdated = false;
-    }
+    this.makeMergedRegex();
 
-    if (this._whitelist.test(u)) { return 0; }
-    if (this._blacklist.test(u)) { return RegExp.$1 ? 1 : 2; }
+    if (this._whitelist.mergedRe.test(u)) { return 0; }
+    if (this._blacklist.mergedRe.test(u)) { return RegExp.$1 ? 1 : 2; }
     return 0;
   }
 
@@ -450,23 +448,52 @@ class ContentFarmFilter {
     }, this).join("\n");
   }
 
+  parseRuleLine(ruleLine) {
+    let result = {};
+    let rule = ruleLine.replace(/\s.*$/, "");
+
+    if (rule.startsWith('/') && rule.endsWith('/')) {
+      // RegExp rule
+      result.type = "regex";
+      result.ruleText = rule;
+      result.ruleReText = rule.slice(1, -1);
+    } else {
+      // standard rule
+      result.type = "standard";
+      result.ruleText = rule;
+      result.ruleReText = utils.escapeRegExp(rule).replace(/\\\*/g, "[^:/?#]*");
+    }
+
+    return result;
+  }
+
   rulesTextToLines(rulesText) {
     return (rulesText || "").split(/\n|\r\n?/).filter(x => !!x.trim());
   }
 
-  getMergedRegex(regexSet, extRegexSet) {
-    const extRegex = [...extRegexSet].join('|');
-    const re = '^https?://' + 
-        '(?:[\\w.+-]+(?::[\\w.+-]+)?@)?' + 
-        '(?:[^:/?#]+\\.)?' + 
-        '(' + [...regexSet].join('|') + ')' + // capture standard rule
-        '(?=$|[:/?#])' + 
-        (extRegex ? '|' + extRegex : '');
-    return new RegExp(re);
+  makeMergedRegex(blockList) {
+    if (!this.makeMergedRegex.mergeFunc) {
+      this.makeMergedRegex.mergeFunc = function getMergedRegex(blockList) {
+        const extRegex = [...blockList.regexReTextSet].join('|');
+        const re = '^https?://' + 
+            '(?:[\\w.+-]+(?::[\\w.+-]+)?@)?' + 
+            '(?:[^:/?#]+\\.)?' + 
+            '(' + [...blockList.standardReTextSet].join('|') + ')' + // capture standard rule
+            '(?=$|[:/?#])' + 
+            (extRegex ? '|' + extRegex : '');
+        blockList.mergedRe = new RegExp(re);
+      };
+    }
+
+    if (this._listUpdated) {
+      this.makeMergedRegex.mergeFunc(this._blacklist);
+      this.makeMergedRegex.mergeFunc(this._whitelist);
+      this._listUpdated = false;
+    }
   }
 
   getMergedBlacklist() {
-    return [...this._blacklistRawSet].join("\n");
+    return [...this._blacklist.rawSet].join("\n");
   }
 
   webListCacheKey(url) {
