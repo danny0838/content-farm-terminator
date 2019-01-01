@@ -39,9 +39,9 @@ function updateFilter() {
 function updateContextMenus() {
   if (!chrome.contextMenus) { return; }
 
-  const blockSite = function (urlOrHostname, tabId, frameId) {
+  const blockSite = function (rule, tabId, frameId) {
     return new Promise((resolve, reject) => {
-      let rule = urlOrHostname.trim().replace(/\s[\s\S]*$/g, "");
+      rule = (rule || "").trim().replace(/\s[\s\S]*$/g, "");
       rule = filter.transformRule(rule);
       rule = filter.validateRuleLine(rule);
       chrome.tabs.sendMessage(tabId, {
@@ -97,8 +97,8 @@ function updateContextMenus() {
             cmd: 'getRedirectedLinkUrl'
           }, {frameId: info.frameId}, resolve);
         }).then((redirectedUrl) => {
-          const urlOrHostname = redirectedUrl || info.linkUrl;
-          return blockSite(urlOrHostname, tab.id, info.frameId);
+          const rule = redirectedUrl || info.linkUrl;
+          return blockSite(rule, tab.id, info.frameId);
         });
       }
     });
