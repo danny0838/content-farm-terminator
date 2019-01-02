@@ -304,7 +304,10 @@ class ContentFarmFilter {
 
       // retrieve rules from web
       // if no cache or cache has expired
-      return fetch(url, {credentials: 'include'}).then((response) => {
+      return fetch(url, {
+        credentials: 'include',
+        cache: 'no-cache',
+      }).then((response) => {
         if (!response.ok) { throw new Error("response not ok"); }
         return response.text();
       }).catch((ex) => {
