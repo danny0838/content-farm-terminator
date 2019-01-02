@@ -1,4 +1,4 @@
-let filter;
+let filter = new ContentFarmFilter();
 let updateFilterPromise;
 let tempUnblockTabs = new Set();
 
@@ -15,12 +15,16 @@ Promise.resolve().then(() => {
 
 function updateFilter() {
   return updateFilterPromise = utils.getDefaultOptions().then((options) => {
-    filter = new ContentFarmFilter();
-    filter.addTransformRules(options.transformRules);
-    filter.addBlackList(options.userBlacklist);
-    filter.addWhiteList(options.userWhitelist);
-    const tasks = filter.urlsTextToLines(options.webBlacklists).map(u => filter.addBlackListFromUrl(u));
-    return Promise.all(tasks);
+    const newFilter = new ContentFarmFilter();
+    newFilter.addTransformRules(options.transformRules);
+    newFilter.addBlackList(options.userBlacklist);
+    newFilter.addWhiteList(options.userWhitelist);
+    const tasks = newFilter
+      .urlsTextToLines(options.webBlacklists)
+      .map(u => newFilter.addBlackListFromUrl(u));
+    return Promise.all(tasks).then(() => {
+      filter = newFilter;
+    });
   }).then(() => {
     return new Promise((resolve, reject) => {
       chrome.tabs.query({}, resolve);
