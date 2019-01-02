@@ -21,7 +21,7 @@ function updateFilter() {
     newFilter.addWhiteList(options.userWhitelist);
     const tasks = newFilter
       .urlsTextToLines(options.webBlacklists)
-      .map(u => newFilter.addBlackListFromUrl(u));
+      .map(u => newFilter.addBlackListFromUrl(u, options.webBlacklistsCacheDuration));
     return Promise.all(tasks).then(() => {
       filter = newFilter;
     });

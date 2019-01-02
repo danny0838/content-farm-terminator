@@ -23,6 +23,7 @@ const utils = {
     userBlacklist: "",
     userWhitelist: "",
     webBlacklists: "https://danny0838.github.io/content-farm-terminator/files/blocklist/content-farms.txt",
+    webBlacklistsCacheDuration: 24 * 60 * 60 * 1000,
     transformRules: "",
     showContextMenuCommands: true,
     showUnblockButton: true,
@@ -288,7 +289,7 @@ class ContentFarmFilter {
   /**
    * @param {string} url - a URL with hash stripped
    */
-  addBlackListFromUrl(url, noCache = false) {
+  addBlackListFromUrl(url, cacheDuration = 0, doNotCache = false) {
     return this.getWebListCache(url).then((data) => {
       const time = Date.now();
 
@@ -297,7 +298,7 @@ class ContentFarmFilter {
       if (data) {
         ({time: cacheTime, rulesText: cacheRulesText} = data);
         // use cached version if not expired
-        if (time - cacheTime < 1 * 24 * 60 * 60 * 1000) { // 1 day
+        if (time - cacheTime < cacheDuration) {
           return cacheRulesText;
         }
       }
@@ -315,7 +316,7 @@ class ContentFarmFilter {
         // fallback to cached version if web version not accessible
         return cacheRulesText;
       }).then((text) => {
-        if (noCache) { return text; }
+        if (doNotCache) { return text; }
         // store retrieved rules to cache
         return this.setWebListCache(url, time, text).then(() => {
           return text;
