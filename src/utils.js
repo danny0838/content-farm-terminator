@@ -24,6 +24,7 @@ const utils = {
     userWhitelist: "",
     webBlacklists: "https://danny0838.github.io/content-farm-terminator/files/blocklist/content-farms.txt",
     webBlacklistsCacheDuration: 24 * 60 * 60 * 1000,
+    webBlacklistsUpdateInterval: 30 * 60 * 60 * 1000,
     transformRules: "",
     showContextMenuCommands: true,
     showUnblockButton: true,

@@ -361,4 +361,9 @@ updateContextMenus();
 
 updateFilter().then(() => {
   onBeforeRequestCallback = onBeforeRequestBlocker;
+  return utils.getOptions({
+    webBlacklistsUpdateInterval: utils.defaultOptions.webBlacklistsUpdateInterval,
+  }).then((options) => {
+    setInterval(updateFilter, options.webBlacklistsUpdateInterval);
+  });
 });
