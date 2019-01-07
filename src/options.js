@@ -64,7 +64,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
   {
     const url = new URL(location.href).searchParams.get('from') || "";
-    const urlRegex = url ? `/^${utils.escapeRegExp(url).replace(/\\\//g, '/')}$/` : "";
+    const urlRegex = url ? `/^${utils.escapeRegExp(url, true)}$/` : "";
     const text = (url && urlRegex) ? `${url} (${urlRegex})` : "";
     document.querySelector('#urlInfo').textContent = text;
   }

@@ -151,7 +151,11 @@ const utils = {
     return str.replace(/[&<>"']| (?= )/g, m => list[m]);
   },
 
-  escapeRegExp(str) {
+  escapeRegExp(str, simple) {
+    if (simple) {
+      // Do not escape "-" and "/"
+      return str.replace(/[\\^$*+?.|()[\]{}]/g, "\\$&");
+    }
     // Escaping "-" allows the result to be inserted into a character class.
     // Escaping "/" allow the result to be used in a JS regex literal.
     return str.replace(/[-\/\\^$*+?.|()[\]{}]/g, "\\$&");
@@ -399,7 +403,7 @@ class ContentFarmFilter {
             result = match[parseInt(m, 10)];
           }
           if (useRegex) {
-            result = utils.escapeRegExp(result).replace(/\\\//g, '/');
+            result = utils.escapeRegExp(result, true);
           }
           return result;
         });
