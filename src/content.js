@@ -215,9 +215,39 @@ function getRedirectedUrlOrHostname(elem) {
     }
 
     // Facebook / Facebook mobile
-    else if (h === "l.facebook.com" || h === "lm.facebook.com") {
-      if (p === "/l.php") {
-        return s.get("u");
+    else if (docHostname === "www.facebook.com" ||
+        docHostname === "m.facebook.com" ||
+        h === "l.facebook.com" || h === "lm.facebook.com") {
+      // domain name detected by Facebook for shared link
+      let domainName;
+      if (docHostname === "www.facebook.com") {
+        try {
+          domainName = elem.previousSibling.querySelector('div[data-ad-preview]').textContent.trim();
+        } catch (ex) {}
+      } else if (docHostname === "m.facebook.com") {
+        try {
+          domainName = elem.previousSibling.querySelector('header h4').textContent.trim().toLowerCase();
+        } catch (ex) {}
+      }
+
+      // general reverse parse of Facebook redirect
+      let url;
+      if (h === "l.facebook.com" || h === "lm.facebook.com") {
+        if (p === "/l.php") {
+          url = s.get("u");
+        }
+      }
+
+      if (domainName && url) {
+        if (new RegExp('^https?://(?:www\.)?' + domainName + '(?=[/?#]|$)').test(url)) {
+          return url;
+        } else {
+          return domainName;
+        }
+      } else if (domainName) {
+        return domainName;
+      } else if (url) {
+        return url;
       }
     }
 
