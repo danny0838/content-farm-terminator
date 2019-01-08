@@ -359,8 +359,14 @@ class ContentFarmFilter {
    * @return {number} 0: not blocked; 1: blocked by standard rule; 2: blocked by regex rule
    */
   isBlocked(url) {
-    let u = new URL((url.indexOf(":") !== -1) ? url : 'http://' + url);
-    u = utils.getNormalizedUrl(u);
+    let u;
+    try {
+      u = new URL((url.indexOf(":") !== -1) ? url : 'http://' + url);
+      u = utils.getNormalizedUrl(u);
+    } catch (ex) {
+      // bad URL
+      return 0;
+    }
 
     // update the regex if the rules have been changed
     this.makeMergedRegex();
