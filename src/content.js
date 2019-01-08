@@ -315,8 +315,8 @@ function updateLinkMarker(elem) {
         cmd: 'isUrlBlocked',
         args: {url: u.href}
       }, resolve);
-    }).then((isBlocked) => {
-      if (isBlocked) { return true; }
+    }).then((blockType) => {
+      if (blockType) { return true; }
 
       // check for a potential redirect by the current site (e.g. search engine or social network)
       return getRedirectedUrlOrHostname(elem).then((urlOrHostname) => {
