@@ -5,22 +5,15 @@ let docPathname = docUrlObj.pathname;
 
 const anchorMarkerMap = new Map();
 let updateLinkMarkerPromise = Promise.resolve();
+let isUpdatingUrl = false;
 let lastRightClickedElem;
 
 /**
- * @param urlChanged {boolean} a recent URL change has been confirmed
+ * @param urlChanged {boolean} a recent URL change has been presumed
  * @return {boolean} whether document URL changed
  */
 function recheckCurrentUrl(urlChanged = false) {
-  return new Promise((resolve, reject) => {
-    chrome.runtime.sendMessage({
-      cmd: 'isTempUnblocked',
-      args: {},
-    }, resolve);
-  }).then((isTempUnblocked) => {
-    // skip further check if this tab is temporarily unblocked
-    if (isTempUnblocked) { return false; }
-
+  return Promise.resolve().then(() => {
     // check for URL change of the address bar and update related global variables
     const href = location.href;
     if (href !== docHref) {
@@ -31,23 +24,34 @@ function recheckCurrentUrl(urlChanged = false) {
     }
 
     // skip further check if document URL doesn't change
-    if (!urlChanged) { return false; }
+    if (!urlChanged) { return urlChanged; }
 
-    // check if the current document URL is blocked
     return new Promise((resolve, reject) => {
       chrome.runtime.sendMessage({
-        cmd: 'isUrlBlocked',
-        args: {url: docHref},
+        cmd: 'isTempUnblocked',
+        args: {},
       }, resolve);
-    }).then((blockType) => {
-      if (!blockType) { return; }
+    }).then((isTempUnblocked) => {
+      // skip further check if this tab is temporarily unblocked
+      if (isTempUnblocked) { return urlChanged; }
 
-      const inFrame = (self !== top);
-      const redirectUrl = utils.getBlockedPageUrl(docUrlObj.href, blockType, inFrame);
-      location.replace(redirectUrl);
-    }).then(() => {
-      return true;
+      // check if the current document URL is blocked
+      return new Promise((resolve, reject) => {
+        chrome.runtime.sendMessage({
+          cmd: 'isUrlBlocked',
+          args: {url: docHref},
+        }, resolve);
+      }).then((blockType) => {
+        if (blockType) {
+          const inFrame = (self !== top);
+          const redirectUrl = utils.getBlockedPageUrl(docUrlObj.href, blockType, inFrame);
+          location.replace(redirectUrl);
+        }
+        return urlChanged;
+      });
     });
+  }).catch((ex) => {
+    console.error(ex);
   });
 }
 
@@ -427,26 +431,31 @@ function observeDomUpdates() {
  * There is no event handler for a URL change made by history.pushState
  * or history.replaceState. Since a meaningful state change should include
  * a DOM change, we check for a URL change when the DOM changes.
- *
- * @param urlChanged {boolean} a recent URL change has been confirmed
  */
-function onPotentialUrlChange(urlChanged = false) {
+function onPotentialUrlChange() {
+  if (isUpdatingUrl) { return; }
+
   if (!onPotentialUrlChange.timer) {
+    let urlChanged = false;
+
     // Set a timer to skip frequent rechecks and schedule a recheck.
     // This catches a history.pushState called after DOM changes.
-    onPotentialUrlChange.timer = setTimeout(() => {
+    new Promise((resolve, reject) => {
+      onPotentialUrlChange.timer = setTimeout(resolve, 500);
+    }).then(() => {
+      if (isUpdatingUrl) { return; }
+      if (urlChanged) { return; }
+      return recheckCurrentUrl();
+    }).then(() => {
       clearTimeout(onPotentialUrlChange.timer);
       onPotentialUrlChange.timer = null;
-
-      // skip recheck if a recent URL change has been confirmed
-      if (!urlChanged) { recheckCurrentUrl(urlChanged); }
-    }, 500);
+    });
 
     // Check for a URL change immediately if there has been no recent check.
     // This catches a history.pushState called before DOM changes.
-    if (urlChanged || Date.now() - onPotentialUrlChange.lastCall > 5000) {
-      recheckCurrentUrl(urlChanged).then((change) => {
-        if (change) { urlChanged = true; }
+    if (Date.now() - (onPotentialUrlChange.lastCall || -Infinity) > 5000) {
+      recheckCurrentUrl().then((changed) => {
+        if (changed) { urlChanged = true; }
       });
     }
 
@@ -454,14 +463,6 @@ function onPotentialUrlChange(urlChanged = false) {
     onPotentialUrlChange.lastCall = Date.now();
   }
 }
-
-// Check whether the current page is blocked, as a supplement
-// for content farm pages not blocked by background onBeforeRequest.
-// This could happen when the page is loaded before the extension
-// is loaded or before updateFilter is completed in the background script.
-//
-// @TODO: Some ads are still loaded even if we block the page here.
-recheckCurrentUrl(true);
 
 chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
   //console.warn("omMessage", message);
@@ -493,12 +494,22 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
   }
 });
 
+// address bar, click link, location.assign() with only hash change
 window.addEventListener("hashchange", (event) => {
-  onPotentialUrlChange(true);
+  if (isUpdatingUrl) { return; }
+  isUpdatingUrl = true;
+  return recheckCurrentUrl().then((urlChanged) => {
+    isUpdatingUrl = false;
+  });
 }, true);
 
+// history.back(), history.go()
 window.addEventListener("popstate", (event) => {
-  onPotentialUrlChange(true);
+  if (isUpdatingUrl) { return; }
+  isUpdatingUrl = true;
+  return recheckCurrentUrl().then((urlChanged) => {
+    isUpdatingUrl = false;
+  });
 }, true);
 
 window.addEventListener("contextmenu", (event) => {
@@ -510,5 +521,13 @@ Array.prototype.forEach.call(document.querySelectorAll('img[data-content-farm-te
   elem.remove();
 });
 
-observeDomUpdates();
-updateLinkMarkersAll();
+// Check whether the current page is blocked, as a supplement
+// for content farm pages not blocked by background onBeforeRequest.
+// This could happen when the page is loaded before the extension
+// is loaded or before updateFilter is completed in the background script.
+//
+// @TODO: Some ads are still loaded even if we block the page here.
+recheckCurrentUrl(true).then((urlChanged) => {
+  observeDomUpdates();
+  updateLinkMarkersAll();
+});
