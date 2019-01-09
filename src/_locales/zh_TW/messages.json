@@ -221,6 +221,11 @@
     "description": "Label of the link to the transform syntax help page"
   },
 
+  "showLinkMarkers": {
+    "message": "標示網頁中的內容農場連結",
+    "description": "Label of showLinkMarkers in options page"
+  },
+
   "showContextMenuCommands": {
     "message": "顯示右鍵選單指令",
     "description": "Label of showContextMenuCommands in options page"

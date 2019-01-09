@@ -6,6 +6,7 @@ let docPathname = docUrlObj.pathname;
 const anchorMarkerMap = new Map();
 let updateLinkMarkerPromise = Promise.resolve();
 let lastRightClickedElem;
+let showLinkMarkers = true;
 
 /**
  * @param urlChanged {boolean} a recent URL change has been presumed
@@ -306,6 +307,8 @@ function getRedirectedUrlOrHostname(elem) {
 function updateLinkMarker(elem) {
   // console.warn("updateLinkMarker", elem);
   return updateLinkMarkerPromise = updateLinkMarkerPromise.then(() => {
+    if (!showLinkMarkers) { return false; }
+
     if (!elem.parentNode || !elem.href) { return false; }
 
     const u = new URL(elem.href);
@@ -427,8 +430,14 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
   const {cmd, args} = message;
   switch (cmd) {
     case 'updateContent': {
-      updateLinkMarkersAll();
-      sendResponse(true);
+      utils.getOptions({
+        showLinkMarkers: utils.defaultOptions.showLinkMarkers,
+      }).then((options) => {
+        showLinkMarkers = options.showLinkMarkers;
+        updateLinkMarkersAll();
+        sendResponse(true);
+      });
+      return true; // async response
       break;
     }
     case 'blockSite': {
@@ -483,13 +492,19 @@ Array.prototype.forEach.call(document.querySelectorAll('img[data-content-farm-te
   elem.remove();
 });
 
-// Check whether the current page is blocked, as a supplement
-// for content farm pages not blocked by background onBeforeRequest.
-// This could happen when the page is loaded before the extension
-// is loaded or before updateFilter is completed in the background script.
-//
-// @TODO: Some ads are still loaded even if we block the page here.
-recheckCurrentUrl(true).then((urlChanged) => {
-  observeDomUpdates();
-  updateLinkMarkersAll();
+utils.getOptions({
+  showLinkMarkers: utils.defaultOptions.showLinkMarkers,
+}).then((options) => {
+  showLinkMarkers = options.showLinkMarkers;
+
+  // Check whether the current page is blocked, as a supplement
+  // for content farm pages not blocked by background onBeforeRequest.
+  // This could happen when the page is loaded before the extension
+  // is loaded or before updateFilter is completed in the background script.
+  //
+  // @TODO: Some ads are still loaded even if we block the page here.
+  return recheckCurrentUrl(true).then((urlChanged) => {
+    observeDomUpdates();
+    updateLinkMarkersAll();
+  });
 });

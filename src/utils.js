@@ -26,6 +26,7 @@ const utils = {
     webBlacklistsCacheDuration: 24 * 60 * 60 * 1000,
     webBlacklistsUpdateInterval: 30 * 60 * 60 * 1000,
     transformRules: "",
+    showLinkMarkers: true,
     showContextMenuCommands: true,
     showUnblockButton: true,
     tempUnblockDuration: 8000,

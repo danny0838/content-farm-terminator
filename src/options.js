@@ -19,6 +19,7 @@ function loadOptions() {
     document.querySelector('#userWhitelist textarea').value = options.userWhitelist;
     document.querySelector('#webBlacklists textarea').value = options.webBlacklists;
     document.querySelector('#transformRules textarea').value = options.transformRules;
+    document.querySelector('#showLinkMarkers input').checked = options.showLinkMarkers;
     document.querySelector('#showContextMenuCommands input').checked = options.showContextMenuCommands;
     document.querySelector('#showUnblockButton input').checked = options.showUnblockButton;
 
@@ -37,6 +38,7 @@ function saveOptions() {
   const userWhitelist = document.querySelector('#userWhitelist textarea').value;
   const webBlacklists = document.querySelector('#webBlacklists textarea').value;
   const transformRules = document.querySelector('#transformRules textarea').value;
+  const showLinkMarkers = document.querySelector('#showLinkMarkers input').checked;
   const showContextMenuCommands = document.querySelector('#showContextMenuCommands input').checked;
   const showUnblockButton = document.querySelector('#showUnblockButton input').checked;
 
@@ -45,6 +47,7 @@ function saveOptions() {
     userWhitelist: validator.validateRulesText(userWhitelist),
     webBlacklists: webBlacklists,
     transformRules: validator.validateTransformRulesText(transformRules),
+    showLinkMarkers: showLinkMarkers,
     showContextMenuCommands: showContextMenuCommands,
     showUnblockButton: showUnblockButton,
   });

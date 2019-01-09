@@ -221,6 +221,11 @@
     "description": "Label of the link to the transform syntax help page"
   },
 
+  "showLinkMarkers": {
+    "message": "Mark content farm links in the web page",
+    "description": "Label of showLinkMarkers in options page"
+  },
+
   "showContextMenuCommands": {
     "message": "Show context menu commands",
     "description": "Label of showContextMenuCommands in options page"
