@@ -5,7 +5,6 @@ let docPathname = docUrlObj.pathname;
 
 const anchorMarkerMap = new Map();
 let updateLinkMarkerPromise = Promise.resolve();
-let isUpdatingUrl = false;
 let lastRightClickedElem;
 
 /**
@@ -405,7 +404,6 @@ function observeDomUpdates() {
         }
       }
     }
-    onPotentialUrlChange();
   });
   const docObserverConf = {childList: true, subtree: true};
 
@@ -415,7 +413,6 @@ function observeDomUpdates() {
       const node = mutation.target;
       updateLinkMarker(node);
     }
-    onPotentialUrlChange();
   });
   const ancObserverConf = {attributes: true, attributeFilter: ["href"]};
 
@@ -423,45 +420,6 @@ function observeDomUpdates() {
   Array.prototype.forEach.call(document.querySelectorAll("a, area"), (elem) => {
     ancObserver.observe(elem, ancObserverConf);
   });
-}
-
-/**
- * Check for a potential document URL change
- *
- * There is no event handler for a URL change made by history.pushState
- * or history.replaceState. Since a meaningful state change should include
- * a DOM change, we check for a URL change when the DOM changes.
- */
-function onPotentialUrlChange() {
-  if (isUpdatingUrl) { return; }
-
-  if (!onPotentialUrlChange.timer) {
-    let urlChanged = false;
-
-    // Set a timer to skip frequent rechecks and schedule a recheck.
-    // This catches a history.pushState called after DOM changes.
-    new Promise((resolve, reject) => {
-      onPotentialUrlChange.timer = setTimeout(resolve, 500);
-    }).then(() => {
-      if (isUpdatingUrl) { return; }
-      if (urlChanged) { return; }
-      return recheckCurrentUrl();
-    }).then(() => {
-      clearTimeout(onPotentialUrlChange.timer);
-      onPotentialUrlChange.timer = null;
-    });
-
-    // Check for a URL change immediately if there has been no recent check.
-    // This catches a history.pushState called before DOM changes.
-    if (Date.now() - (onPotentialUrlChange.lastCall || -Infinity) > 5000) {
-      recheckCurrentUrl().then((changed) => {
-        if (changed) { urlChanged = true; }
-      });
-    }
-
-    // record a recent check
-    onPotentialUrlChange.lastCall = Date.now();
-  }
 }
 
 chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
@@ -494,23 +452,27 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
   }
 });
 
-// address bar, click link, location.assign() with only hash change
-window.addEventListener("hashchange", (event) => {
-  if (isUpdatingUrl) { return; }
-  isUpdatingUrl = true;
+function onPotentialUrlChange() {
+  if (onPotentialUrlChange.checking) { return; }
+  onPotentialUrlChange.checking = true;
   return recheckCurrentUrl().then((urlChanged) => {
-    isUpdatingUrl = false;
+    onPotentialUrlChange.checking = false;
   });
-}, true);
+}
+
+/**
+ * Check for a potential document URL change
+ *
+ * There is no event handler for a URL change made by history.pushState
+ * or history.replaceState. Use a perioridic recheck to do this.
+ */
+setInterval(onPotentialUrlChange, 750);
+
+// address bar, click link, location.assign() with only hash change
+window.addEventListener("hashchange", onPotentialUrlChange, true);
 
 // history.back(), history.go()
-window.addEventListener("popstate", (event) => {
-  if (isUpdatingUrl) { return; }
-  isUpdatingUrl = true;
-  return recheckCurrentUrl().then((urlChanged) => {
-    isUpdatingUrl = false;
-  });
-}, true);
+window.addEventListener("popstate", onPotentialUrlChange, true);
 
 window.addEventListener("contextmenu", (event) => {
   lastRightClickedElem = event.target;
