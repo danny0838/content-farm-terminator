@@ -22,6 +22,6 @@
 
 使用方法：進入清單，複製想用的轉換規則，貼到「終結內容農場」瀏覽器套件選項的網址轉換規則。
 
-* [標準內容農場規則清單](https://danny0838.github.io/content-farm-terminator/files/blocklist/content-farms-trules.txt)
+* [標準內容農場規則清單](https://danny0838.github.io/content-farm-terminator/files/url-transform-rules/content-farms.txt)
 
-* [社群內容農場規則清單](https://danny0838.github.io/content-farm-terminator/files/blocklist/sns-content-farms-trules.txt)
+* [社群內容農場規則清單](https://danny0838.github.io/content-farm-terminator/files/url-transform-rules/sns-content-farms.txt)
