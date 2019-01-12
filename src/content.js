@@ -220,11 +220,12 @@ function getRedirectedUrlOrHostname(elem) {
 
     // Facebook / Facebook mobile
     else if (docHostname === "www.facebook.com" ||
+        docHostname === "business.facebook.com" ||
         docHostname === "m.facebook.com" ||
         h === "l.facebook.com" || h === "lm.facebook.com") {
       // domain name detected by Facebook for shared link
       let domainName;
-      if (docHostname === "www.facebook.com") {
+      if (docHostname === "www.facebook.com" || docHostname === "business.facebook.com") {
         try {
           domainName = elem.previousSibling.querySelector('div[data-ad-preview="display-link"]').textContent.trim();
         } catch (ex) {}
