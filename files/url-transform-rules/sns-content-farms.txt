@@ -5,6 +5,7 @@
 
   -- LINE
 /^https?://page\.line\.me/([\w-]+)(?=[/?#]|$)/ /^https?://page\.line\.me/$1(?=[/?#]|$)/
+/^https?://timeline\.line\.me/(?:\w+?)/_([\w-]+)(?=[/?#]|$)/ /^https?://timeline\.line\.me/(?:\w+?)/_$1(?=[/?#]|$)/
 
   -- Youtube
 /^https?://(?:\w+\.)?youtube\.com/channel/([\w-]+)(?=[/?#]|$)/ /^https?://(?:\w+\.)?youtube\.com/channel/$1(?=[/?#]|$)/
