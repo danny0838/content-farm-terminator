@@ -65,11 +65,14 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
   loadOptions();
 
-  {
-    const url = new URL(location.href).searchParams.get('from') || "";
-    const urlRegex = url ? `/^${utils.escapeRegExp(url, true)}$/` : "";
-    const text = (url && urlRegex) ? `${url} (${urlRegex})` : "";
-    document.querySelector('#urlInfo').textContent = text;
+  try {
+    const url = new URL(location.href).searchParams.get('from');
+    if (url) {
+      const urlRegex = `/^${utils.escapeRegExp(url, true)}$/`;
+      document.querySelector('#urlInfo').textContent = utils.lang('urlInfo', [url, urlRegex]);
+    }
+  } catch (ex) {
+    console.error(ex);
   }
 
   document.querySelector('#resetButton').addEventListener('click', (event) => {
