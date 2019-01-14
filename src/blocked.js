@@ -29,6 +29,9 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
   try {
     const sourceUrlObj = new URL(sourceUrl);
+    if (!(sourceUrlObj.protocol === 'http:' || sourceUrlObj.protocol === 'https:')) {
+      throw new Error('URL not under http(s) protocol.');
+    }
     if (urlObj.searchParams.get('type') == 2) {
       const url = utils.getNormalizedUrl(sourceUrlObj);
       const elem = document.createElement('span');
