@@ -342,7 +342,17 @@ if (chrome.history) {
 
 if (chrome.browserAction) {
   chrome.browserAction.onClicked.addListener((tab) => {
-    const url = chrome.runtime.getURL("options.html");
+    let url;
+    try {
+      const refUrlObj = new URL(tab.url);
+      if (!(refUrlObj.protocol === 'http:' || refUrlObj.protocol === 'https:')) {
+        throw new Error('URL not under http(s) protocol.');
+      }
+      const refUrl = utils.getNormalizedUrl(refUrlObj);
+      url = chrome.runtime.getURL("options.html") + `?from=${encodeURIComponent(refUrl)}`;
+    } catch (ex) {
+      url = chrome.runtime.getURL("options.html");
+    }
     chrome.tabs.create({url: url, active: true});
   });
 } else {
