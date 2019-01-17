@@ -60,6 +60,9 @@ document.addEventListener('DOMContentLoaded', (event) => {
     location.assign(newUrl);
   });
 
+  // Firefox might record status and make it non-disabled
+  document.querySelector('#unblock').disabled = true;
+
   document.querySelector('#unblock').addEventListener('click', (event) => {
     const key = Math.random().toString().slice(2, 6);
     if (prompt(utils.lang("unblockBtnPrompt", key)) !== key) {
