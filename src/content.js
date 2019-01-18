@@ -227,7 +227,7 @@ function getRedirectedUrlOrHostname(elem) {
       let domainName;
       if (docHostname === "www.facebook.com" || docHostname === "business.facebook.com") {
         try {
-          domainName = elem.previousSibling.querySelector('div[data-ad-preview="display-link"]').textContent.trim();
+          domainName = elem.previousSibling.querySelector('div.ellipsis').textContent.trim();
         } catch (ex) {}
       } else if (docHostname === "m.facebook.com") {
         try {
