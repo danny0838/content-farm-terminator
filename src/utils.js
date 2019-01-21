@@ -402,7 +402,7 @@ class ContentFarmFilter {
         const leftContext = RegExp.leftContext;
         const rightContext = RegExp.rightContext;
         const useRegex = tRule.replace.startsWith('/') && tRule.replace.endsWith('/');
-        rule = tRule.replace.replace(/\$([$&`'\d])/g, (_, m) => {
+        rule = tRule.replace.replace(/\$([$&`']|\d+)/g, (_, m) => {
           let result;
           if (m === '$') {
             return '$';
@@ -413,7 +413,19 @@ class ContentFarmFilter {
           } else if (m === "'") {
             result = rightContext;
           } else {
-            result = match[parseInt(m, 10)];
+            let matchIdx = m, matchIdxInt, plainNum = '';
+            while (matchIdx.length) {
+              matchIdxInt = parseInt(matchIdx, 10);
+              if (matchIdxInt < match.length && matchIdxInt > 0) {
+                result = match[matchIdxInt] + plainNum;
+                break;
+              }
+              plainNum = matchIdx.slice(-1) + plainNum;
+              matchIdx = matchIdx.slice(0, -1);
+            }
+            if (typeof result === 'undefined') {
+              return '$' + plainNum;
+            }
           }
           if (useRegex) {
             result = utils.escapeRegExp(result, true);
