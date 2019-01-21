@@ -399,13 +399,19 @@ class ContentFarmFilter {
     this._transformRules.some((tRule) => {
       const match = tRule.pattern.exec(rule);
       if (match) {
+        const leftContext = RegExp.leftContext;
+        const rightContext = RegExp.rightContext;
         const useRegex = tRule.replace.startsWith('/') && tRule.replace.endsWith('/');
-        rule = tRule.replace.replace(/\$([$&\d])/g, (_, m) => {
+        rule = tRule.replace.replace(/\$([$&`'\d])/g, (_, m) => {
           let result;
           if (m === '$') {
             return '$';
           } else if (m === '&') {
             result = match[0];
+          } else if (m === '`') {
+            result = leftContext;
+          } else if (m === "'") {
+            result = rightContext;
           } else {
             result = match[parseInt(m, 10)];
           }
