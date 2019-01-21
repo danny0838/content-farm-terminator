@@ -403,7 +403,7 @@ class ContentFarmFilter {
         rule = tRule.replace.replace(/\$([$&\d])/g, (_, m) => {
           let result;
           if (m === '$') {
-            result = '$';
+            return '$';
           } else if (m === '&') {
             result = match[0];
           } else {
