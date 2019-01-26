@@ -368,15 +368,13 @@ class ContentFarmFilter {
   constructor() {
     this._listUpdated = true;
     this._blacklist = {
-      rawSet: new Set(),
-      standardReTextSet: new Set(),
-      regexReTextSet: new Set(),
+      lines: new Set(),
+      rules: new Map(),
       mergedRe: null,
     };
     this._whitelist = {
-      rawSet: new Set(),
-      standardReTextSet: new Set(),
-      regexReTextSet: new Set(),
+      lines: new Set(),
+      rules: new Map(),
       mergedRe: null,
     };
     this._transformRules = [];
@@ -385,16 +383,9 @@ class ContentFarmFilter {
   addBlockList(listText, blockList) {
     utils.getLines(listText).forEach((ruleLine) => {
       if (!ruleLine.trim()) { return; }
-      blockList.rawSet.add(ruleLine);
-      const {type, ruleReText} = this.parseRuleLine(ruleLine);
-      switch (type) {
-        case "regex":
-          blockList.regexReTextSet.add(ruleReText);
-          break;
-        default:
-          blockList.standardReTextSet.add(ruleReText);
-          break;
-      }
+      blockList.lines.add(ruleLine);
+      const parsed = this.parseRuleLine(ruleLine);
+      blockList.rules.set(parsed.rule, parsed);
     });
     this._listUpdated = true;
   }
@@ -454,9 +445,7 @@ class ContentFarmFilter {
     const reReplacer = /\\\*/g;
     const fn = function addTransformRules(rulesText) {
       utils.getLines(rulesText).forEach((ruleLine) => {
-        const parts = ruleLine.split(" ");
-        let pattern = parts[0];
-        let replace = parts[1];
+        let {pattern, replace} = this.parseTransformRuleLine(ruleLine);
 
         if (pattern && replace) {
           if (pattern.startsWith('/') && pattern.endsWith('/')) {
@@ -498,15 +487,8 @@ class ContentFarmFilter {
   }
 
   isInBlacklist(ruleLine) {
-    const {type, ruleReText} = this.parseRuleLine(ruleLine);
-    switch (type) {
-      case "regex":
-        return this._blacklist.regexReTextSet.has(ruleReText);
-        break;
-      default:
-        return this._blacklist.standardReTextSet.has(ruleReText);
-        break;
-    }
+    const {rule} = this.parseRuleLine(ruleLine);
+    return this._blacklist.rules.has(rule);
   }
 
   get urlsTextToLines() {
@@ -619,78 +601,112 @@ class ContentFarmFilter {
     return fn;
   }
 
-  validateRuleLine(ruleLine) {
-    const parts = (ruleLine || "").split(" ");
-    parts[0] = this.validateRule(parts[0]);
-    return parts.join(" ");
-  }
-
   validateRulesText(rulesText) {
+    const parseOptions = {validate: true, asString: true};
     return utils
       .getLines(rulesText)
-      .map(this.validateRuleLine, this)
+      .map(ruleLine => this.parseRuleLine(ruleLine, parseOptions))
       .join("\n");
   }
 
   validateTransformRulesText(rulesText) {
+    const parseOptions = {validate: true, asString: true};
     return utils
       .getLines(rulesText)
-      .map((ruleLine) => {
-        const parts = (ruleLine || "").split(" ");
-        parts[0] = this.validateRule(parts[0]);
-        return parts.join(" ");
-      }, this)
+      .map(ruleLine => this.parseTransformRuleLine(ruleLine, parseOptions))
       .join("\n");
   }
 
+  /**
+   * @param {Object} options
+   *     - {boolean} validate
+   *     - {boolean} transform
+   *     - {boolean} asString
+   */
   get parseRuleLine() {
-    const reSpaceRemover = /\s.*$/g;
-    const reReplacer = /\\\*/g;
-    const fn = function parseRuleLine(ruleLine) {
-      const result = {};
-      const rule = ruleLine.replace(reSpaceRemover, "");
+    const reSpaceMatcher = /^(\S*)(\s*)(.*)$/;
+    const fn = function parseRuleLine(ruleLine, options = {}) {
+      let [, rule, sep, comment] = (ruleLine || "").match(reSpaceMatcher);
 
-      if (rule.startsWith('/') && rule.endsWith('/')) {
-        // RegExp rule
-        result.type = "regex";
-        result.ruleText = rule;
-        result.ruleReText = rule.slice(1, -1);
-      } else {
-        // standard rule
-        result.type = "standard";
-        result.ruleText = rule;
-        result.ruleReText = utils.escapeRegExp(rule).replace(reReplacer, "[^:/?#]*");
+      if (options.transform) {
+        rule = this.transformRule(rule);
       }
 
-      return result;
+      if (options.validate) {
+        rule = this.validateRule(rule);
+      }
+
+      if (options.asString) {
+        return [rule, sep, comment].join("");
+      }
+
+      return {rule, sep, comment};
     };
-    Object.defineProperty(this, 'parseRuleLine', { value: fn });
+    Object.defineProperty(this, 'parseRuleLine', {value: fn});
     return fn;
   }
 
-  makeMergedRegex(blockList) {
-    if (!this.makeMergedRegex.mergeFunc) {
-      this.makeMergedRegex.mergeFunc = function getMergedRegex(blockList) {
-        const extRegex = [...blockList.regexReTextSet].join('|');
-        const re = '^https?://' + 
-            '(?:[\\w.+-]+(?::[\\w.+-]+)?@)?' + 
-            '(?:[^:/?#]+\\.)?' + 
-            '(' + [...blockList.standardReTextSet].join('|') + ')' + // capture standard rule
-            '(?=$|[:/?#])' + 
-            (extRegex ? '|' + extRegex : '');
-        blockList.mergedRe = new RegExp(re);
-      };
-    }
+  /**
+   * @param {Object} options
+   *     - {boolean} validate
+   *     - {boolean} asString
+   */
+  get parseTransformRuleLine() {
+    const reSpaceMatcher = /^(\S*)(\s*)(\S*)(\s*)(.*)$/;
+    const fn = function parseTransformRuleLine(ruleLine, options = {}) {
+      let [, pattern, sep, replace, sep2, comment] = (ruleLine || "").match(reSpaceMatcher);
 
-    if (this._listUpdated) {
-      this.makeMergedRegex.mergeFunc(this._blacklist);
-      this.makeMergedRegex.mergeFunc(this._whitelist);
-      this._listUpdated = false;
-    }
+      if (options.validate) {
+        pattern = this.validateRule(pattern);
+      }
+
+      if (options.asString) {
+        return [pattern, sep, replace, sep2, comment].join("");
+      }
+
+      return {pattern, sep, replace, sep2, comment};
+    };
+    Object.defineProperty(this, 'parseTransformRuleLine', {value: fn});
+    return fn;
+  }
+
+  get makeMergedRegex() {
+    const reReplacer = /\\\*/g;
+    const mergeFunc = function getMergedRegex(blockList) {
+      let standardRules = [];
+      let regexRules = [];
+      blockList.rules.forEach(({rule}) => {
+        if (rule.startsWith('/') && rule.endsWith('/')) {
+          // RegExp rule
+          regexRules.push(rule.slice(1, -1));
+        } else {
+          // standard rule
+          standardRules.push(utils.escapeRegExp(rule).replace(reReplacer, "[^:/?#]*"));
+        }
+      });
+      standardRules = standardRules.join('|');
+      regexRules = regexRules.join('|');
+      const re = '^https?://' + 
+          '(?:[\\w.+-]+(?::[\\w.+-]+)?@)?' + 
+          '(?:[^:/?#]+\\.)?' + 
+          '(' + standardRules + ')' + // capture standard rule
+          '(?=$|[:/?#])' + 
+          (regexRules ? '|' + regexRules : '');
+      blockList.mergedRe = new RegExp(re);
+    };
+    const fn = function makeMergedRegex(blockList) {
+      if (this._listUpdated) {
+        this._listUpdated = false;
+        mergeFunc(this._blacklist);
+        mergeFunc(this._whitelist);
+      }
+    };
+    Object.defineProperty(this, 'makeMergedRegex', {value: fn});
+    return fn;
   }
 
   getMergedBlacklist() {
-    return [...this._blacklist.rawSet].join("\n");
+    return [...this._blacklist.lines].join("\n");
   }
 
   webListCacheKey(url) {

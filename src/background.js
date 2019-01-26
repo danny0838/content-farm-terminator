@@ -34,9 +34,8 @@ function updateContextMenus() {
 
   const blockSite = function (rule, tabId, frameId) {
     return new Promise((resolve, reject) => {
-      rule = (rule || "").trim().replace(/\s[\s\S]*$/g, "");
-      rule = filter.transformRule(rule);
-      rule = filter.validateRuleLine(rule);
+      rule = (rule || "").trim();
+      rule = filter.parseRuleLine(rule, {validate: true, transform: true, asString: true});
       chrome.tabs.sendMessage(tabId, {
         cmd: 'blockSite',
         args: {rule}
@@ -44,7 +43,7 @@ function updateContextMenus() {
     }).then((rule) => {
       if (!rule) { return; }
 
-      rule = filter.validateRuleLine(rule);
+      rule = filter.parseRuleLine(rule, {validate: true, asString: true});
 
       if (rule && filter.isInBlacklist(rule)) {
         return new Promise((resolve, reject) => {
