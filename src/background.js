@@ -198,14 +198,14 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
     }
     case 'tempUnblock': {
       const tabId = sender.tab.id;
-      utils.getOptions({
-        tempUnblockDuration: utils.defaultOptions.tempUnblockDuration,
-        tempUnblockCountdownBase: utils.defaultOptions.tempUnblockCountdownBase,
-        tempUnblockCountdownIncrement: utils.defaultOptions.tempUnblockCountdownIncrement,
-        tempUnblockCountdownReset: utils.defaultOptions.tempUnblockCountdownReset,
-        tempUnblockCountdown: utils.defaultOptions.tempUnblockCountdown,
-        tempUnblockLastAccess: utils.defaultOptions.tempUnblockLastAccess,
-      }).then((options) => {
+      utils.getOptions([
+        "tempUnblockDuration",
+        "tempUnblockCountdownBase",
+        "tempUnblockCountdownIncrement",
+        "tempUnblockCountdownReset",
+        "tempUnblockCountdown",
+        "tempUnblockLastAccess",
+      ]).then((options) => {
         // temporarily unblock the tab
         tempUnblockTabs.add(tabId);
         setTimeout(() => {
@@ -360,9 +360,9 @@ updateContextMenus();
 
 updateFilter().then(() => {
   onBeforeRequestCallback = onBeforeRequestBlocker;
-  return utils.getOptions({
-    webBlacklistsUpdateInterval: utils.defaultOptions.webBlacklistsUpdateInterval,
-  }).then((options) => {
+  return utils.getOptions([
+    "webBlacklistsUpdateInterval",
+  ]).then((options) => {
     setInterval(updateFilter, options.webBlacklistsUpdateInterval);
   });
 });

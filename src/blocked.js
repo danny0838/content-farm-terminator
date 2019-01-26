@@ -106,13 +106,13 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
 
 // in case that sourceUrl is alreally unblocked
 recheckBlock().then(() => {
-  return utils.getOptions({
-    showUnblockButton: utils.defaultOptions.showUnblockButton,
-    tempUnblockCountdownBase: utils.defaultOptions.tempUnblockCountdownBase,
-    tempUnblockCountdownReset: utils.defaultOptions.tempUnblockCountdownReset,
-    tempUnblockCountdown: utils.defaultOptions.tempUnblockCountdown,
-    tempUnblockLastAccess: utils.defaultOptions.tempUnblockLastAccess,
-  }).then((options) => {
+  return utils.getOptions([
+    "showUnblockButton",
+    "tempUnblockCountdownBase",
+    "tempUnblockCountdownReset",
+    "tempUnblockCountdown",
+    "tempUnblockLastAccess",
+  ]).then((options) => {
     if (!options.showUnblockButton) {
       return;
     }

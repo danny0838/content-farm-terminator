@@ -41,9 +41,21 @@ const utils = {
     return this.getOptions(this.defaultOptions);
   },
 
-  // Use storage.local > storage.sync > passed values
+  /**
+   * Use storage.local > storage.sync > passed values
+   *
+   * @param options - A string, array of strings, or an object.
+   *     Use defaultOptions as fallback value for string and array.
+   */
   getOptions(options) {
-    let keys = Object.keys(options);
+    if (typeof options === "string") {
+      options = { [options]: this.defaultOptions[options] };
+    } else if (Array.isArray(options)) {
+      const newOptions = {};
+      options.forEach((option) => { newOptions[option] = this.defaultOptions[option]; })
+      options = newOptions;
+    }
+    const keys = Object.keys(options);
     return new Promise((resolve, reject) => {
       chrome.storage.sync.get(keys, (result) => {
         if (chrome.runtime.lastError) {

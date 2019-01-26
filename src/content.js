@@ -431,9 +431,9 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
   const {cmd, args} = message;
   switch (cmd) {
     case 'updateContent': {
-      utils.getOptions({
-        showLinkMarkers: utils.defaultOptions.showLinkMarkers,
-      }).then((options) => {
+      utils.getOptions([
+        "showLinkMarkers",
+      ]).then((options) => {
         showLinkMarkers = options.showLinkMarkers;
         updateLinkMarkersAll();
         sendResponse(true);
@@ -493,9 +493,9 @@ Array.prototype.forEach.call(document.querySelectorAll('img[data-content-farm-te
   elem.remove();
 });
 
-utils.getOptions({
-  showLinkMarkers: utils.defaultOptions.showLinkMarkers,
-}).then((options) => {
+utils.getOptions([
+  "showLinkMarkers",
+]).then((options) => {
   showLinkMarkers = options.showLinkMarkers;
 
   // Check whether the current page is blocked, as a supplement
