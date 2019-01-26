@@ -79,6 +79,44 @@ function getRedirectedUrlOrHostname(elem) {
       }
     }
 
+    // Facebook / Facebook mobile
+    else if (docHostname.substring(docHostname.indexOf(".") + 1) === "facebook.com" ||
+        h === "l.facebook.com" || h === "lm.facebook.com") {
+      // domain name detected by Facebook for shared link
+      let domainName;
+      if (docHostname.substring(docHostname.indexOf(".") + 1) === "facebook.com") {
+        if (docHostname === "m.facebook.com") {
+          try {
+            domainName = elem.previousSibling.querySelector('header h4').textContent.trim().toLowerCase();
+          } catch (ex) {}
+        } else {
+          try {
+            domainName = elem.previousSibling.querySelector('div.ellipsis').textContent.trim();
+          } catch (ex) {}
+        }
+      }
+
+      // general reverse parse of Facebook redirect
+      let url;
+      if (h === "l.facebook.com" || h === "lm.facebook.com") {
+        if (p === "/l.php") {
+          url = s.get("u");
+        }
+      }
+
+      if (domainName && url) {
+        if (new RegExp('^https?://(?:www\.)?' + domainName + '(?=[/?#]|$)').test(url)) {
+          return url;
+        } else {
+          return domainName;
+        }
+      } else if (domainName) {
+        return domainName;
+      } else if (url) {
+        return url;
+      }
+    }
+
     // Bing (used rarely, e.g. in Egerin)
     else if (h === "www.bing.com") {
       if (p === "/cr") {
@@ -224,44 +262,6 @@ function getRedirectedUrlOrHostname(elem) {
     else if (h === "m.so.com") {
       if (p === "/jump") {
         return s.get("u");
-      }
-    }
-
-    // Facebook / Facebook mobile
-    else if (docHostname.substring(docHostname.indexOf(".") + 1) === "facebook.com" ||
-        h === "l.facebook.com" || h === "lm.facebook.com") {
-      // domain name detected by Facebook for shared link
-      let domainName;
-      if (docHostname.substring(docHostname.indexOf(".") + 1) === "facebook.com") {
-        if (docHostname === "m.facebook.com") {
-          try {
-            domainName = elem.previousSibling.querySelector('header h4').textContent.trim().toLowerCase();
-          } catch (ex) {}
-        } else {
-          try {
-            domainName = elem.previousSibling.querySelector('div.ellipsis').textContent.trim();
-          } catch (ex) {}
-        }
-      }
-
-      // general reverse parse of Facebook redirect
-      let url;
-      if (h === "l.facebook.com" || h === "lm.facebook.com") {
-        if (p === "/l.php") {
-          url = s.get("u");
-        }
-      }
-
-      if (domainName && url) {
-        if (new RegExp('^https?://(?:www\.)?' + domainName + '(?=[/?#]|$)').test(url)) {
-          return url;
-        } else {
-          return domainName;
-        }
-      } else if (domainName) {
-        return domainName;
-      } else if (url) {
-        return url;
       }
     }
 
