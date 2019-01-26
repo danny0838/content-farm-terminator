@@ -2,17 +2,6 @@ let filter = new ContentFarmFilter();
 let updateFilterPromise;
 let tempUnblockTabs = new Set();
 
-let _isFxBelow56;
-Promise.resolve().then(() => {
-  return browser.runtime.getBrowserInfo();
-}).then((info) => {
-  _isFxBelow56 =
-      (info.name === 'Firefox' || info.name === 'Fennec') &&
-      parseInt(info.version.match(/^(\d+)\./)[1], 10) < 56;
-}).catch((ex) => {
-  _isFxBelow56 = false;
-});
-
 function updateFilter() {
   return updateFilterPromise = utils.getDefaultOptions().then((options) => {
     const newFilter = new ContentFarmFilter();
@@ -161,7 +150,7 @@ let onBeforeRequestBlocker = function (details) {
     // even if it is listed in web_accessible_resources.
     // Using data URI with meta or script refresh works but generates
     // an extra history entry.
-    if (_isFxBelow56) {
+    if (utils.userAgent.soup.has('firefox') && utils.userAgent.major < 56) {
       chrome.tabs.update(details.tabId, {url: redirectUrl});
       return {cancel: true};
     }
