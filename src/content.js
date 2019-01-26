@@ -44,7 +44,7 @@ function recheckCurrentUrl(urlChanged = false) {
       }).then((blockType) => {
         if (blockType) {
           const inFrame = (self !== top);
-          const redirectUrl = utils.getBlockedPageUrl(docUrlObj.href, blockType, inFrame);
+          const redirectUrl = utils.getBlockedPageUrl(docHref, blockType, inFrame);
           location.replace(redirectUrl);
         }
         return urlChanged;
@@ -56,6 +56,16 @@ function recheckCurrentUrl(urlChanged = false) {
 }
 
 function getRedirectedUrlOrHostname(elem) {
+  const me = getRedirectedUrlOrHostname;
+  if (!me.cached) {
+    me.cached = true;
+
+    // adopted from WOT: http://static-cdn.mywot.com/settings/extensions/serps.json
+    me.reGoogleTester = /^(www\.|encrypted\.)?(google)\.([a-z]{2,3})(\.[a-z]{2,3})?$/;
+
+    me.reQwantAdsTester = /^\d+\.r\.bat\.bing\.com$/;
+  }
+
   return Promise.resolve().then(() => {
     const u = new URL(elem.href);
     const h = u.hostname;
@@ -63,8 +73,7 @@ function getRedirectedUrlOrHostname(elem) {
     const s = u.searchParams;
 
     // Google
-    // adopted from WOT: http://static-cdn.mywot.com/settings/extensions/serps.json
-    if (/^(www\.|encrypted\.)?(google)\.([a-z]{2,3})(\.[a-z]{2,3})?$/.test(h)) {
+    if (me.reGoogleTester.test(h)) {
       if (p === "/url" || p === "/interstitial") {
         return s.get("url") || s.get("q");
       }
@@ -147,7 +156,7 @@ function getRedirectedUrlOrHostname(elem) {
     }
 
     // Qwant Ads
-    else if (/^\d+\.r\.bat\.bing\.com$/.test(h)) {
+    else if (me.reQwantAdsTester.test(h)) {
       if (p === "/") {
         if (docHostname === "lite.qwant.com" && docPathname === "/") {
           if (elem.matches('div.result a')) {

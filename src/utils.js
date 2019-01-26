@@ -216,40 +216,61 @@ const utils = {
     return chrome.i18n.getMessage(key, args) || "__MSG_" + key + "__";
   },
 
-  loadLanguages(rootNode = document) {
-    Array.prototype.forEach.call(rootNode.getElementsByTagName("*"), (elem) => {
-      if (elem.childNodes.length === 1) {
-        const child = elem.firstChild;
-        if (child.nodeType === 3) {
-          child.nodeValue = child.nodeValue.replace(/__MSG_(.*?)__/, (m, k) => utils.lang(k));
+  get loadLanguages() {
+    const reReplacer = /__MSG_(.*?)__/;
+    const fnReplacer = (m, k) => utils.lang(k);
+    const fn = function loadLanguages(rootNode = document) {
+      Array.prototype.forEach.call(rootNode.getElementsByTagName("*"), (elem) => {
+        if (elem.childNodes.length === 1) {
+          const child = elem.firstChild;
+          if (child.nodeType === 3) {
+            child.nodeValue = child.nodeValue.replace(reReplacer, fnReplacer);
+          }
         }
-      }
-      Array.prototype.forEach.call(elem.attributes, (attr) => {
-        attr.nodeValue = attr.nodeValue.replace(/__MSG_(.*?)__/, (m, k) => utils.lang(k));
+        Array.prototype.forEach.call(elem.attributes, (attr) => {
+          attr.nodeValue = attr.nodeValue.replace(reReplacer, fnReplacer);
+        }, this);
       }, this);
-    }, this);
+    };
+    Object.defineProperty(this, 'loadLanguages', { value: fn });
+    return fn;
   },
 
-  escapeHtml(str, noDoubleQuotes = false, singleQuotes = false, spaces = false) {
-    const list = {
+  get escapeHtml() {
+    const reEscaper = /[&<>"']| (?= )/g;
+    const mapEscaper = {
       "&": "&amp;",
       "<": "&lt;",
       ">": "&gt;",
-      '"': (noDoubleQuotes ? '"' : "&quot;"),
-      "'": (singleQuotes ? "&#39;" : "'"),
-      " ": (spaces ? "&nbsp;" : " ")
+      '"': "&quot;",
+      "'": "&#39;",
+      " ": "&nbsp;"
     };
-    return str.replace(/[&<>"']| (?= )/g, m => list[m]);
+    const fnEscaper = m => mapEscaper[m];
+    const fn = function escapeHtml(str, noDoubleQuotes = false, singleQuotes = false, spaces = false) {
+      mapEscaper['"'] = noDoubleQuotes ? '"' : "&quot;";
+      mapEscaper["'"] = singleQuotes ? "&#39;" : "'";
+      mapEscaper[" "] = spaces ? "&nbsp;" : " ";
+      return str.replace(reEscaper, fnEscaper);
+    };
+    Object.defineProperty(this, 'escapeHtml', { value: fn });
+    return fn;
   },
 
-  escapeRegExp(str, simple) {
-    if (simple) {
-      // Do not escape "-" and "/"
-      return str.replace(/[\\^$*+?.|()[\]{}]/g, "\\$&");
-    }
-    // Escaping "-" allows the result to be inserted into a character class.
-    // Escaping "/" allow the result to be used in a JS regex literal.
-    return str.replace(/[-\/\\^$*+?.|()[\]{}]/g, "\\$&");
+  get escapeRegExp() {
+    const reStandard = /[-\/\\^$*+?.|()[\]{}]/g;
+    const reSimple = /[\\^$*+?.|()[\]{}]/g;
+    const fn = function escapeRegExp(str, simple) {
+      if (simple) {
+        // Do not escape "-" and "/"
+        return str.replace(reSimple, "\\$&");
+      }
+      // Escaping "-" allows the result to be inserted into a character class.
+      // Escaping "/" allow the result to be used in a JS regex literal.
+      return str.replace(reStandard, "\\$&");
+    };
+    Object.defineProperty(this, 'escapeRegExp', { value: fn });
+    return fn;
   },
 
   getNormalizedUrl(urlObj) {
@@ -264,15 +285,18 @@ const utils = {
         urlObj.pathname + urlObj.search + urlObj.hash;
   },
 
-  splitUrlByAnchor(url) {
-    const pos = url.indexOf("#");
-    if (pos !== -1) { return [url.slice(0, pos), url.slice(pos)]; }
-    return [url, ""];
+  get getLines() {
+    const reSplitter = /\n|\r\n?/;
+    const fn = function getLines(str) {
+      return (str || "").split(reSplitter);
+    };
+    Object.defineProperty(this, 'getLines', { value: fn });
+    return fn;
   },
 
   versionCompare(v1, v2) {
-    let v1parts = v1.split('.');
-    let v2parts = v2.split('.');
+    const v1parts = v1.split('.');
+    const v2parts = v2.split('.');
 
     for (let i = 0; i < v1parts.length; ++i) {
       if (typeof v2parts[i] === "undefined") {
@@ -359,7 +383,8 @@ class ContentFarmFilter {
   }
 
   addBlockList(listText, blockList) {
-    this.rulesTextToLines(listText).forEach((ruleLine) => {
+    utils.getLines(listText).forEach((ruleLine) => {
+      if (!ruleLine.trim()) { return; }
       blockList.rawSet.add(ruleLine);
       const {type, ruleReText} = this.parseRuleLine(ruleLine);
       switch (type) {
@@ -425,24 +450,29 @@ class ContentFarmFilter {
     });
   }
 
-  addTransformRules(rulesText) {
-    (rulesText || "").split(/\n|\r\n?/).forEach((ruleLine) => {
-      const parts = (ruleLine || "").split(" ");
-      let pattern = parts[0];
-      let replace = parts[1];
+  get addTransformRules() {
+    const reReplacer = /\\\*/g;
+    const fn = function addTransformRules(rulesText) {
+      utils.getLines(rulesText).forEach((ruleLine) => {
+        const parts = ruleLine.split(" ");
+        let pattern = parts[0];
+        let replace = parts[1];
 
-      if (pattern && replace) {
-        if (pattern.startsWith('/') && pattern.endsWith('/')) {
-          // RegExp rule
-          pattern = new RegExp(pattern.slice(1, -1));
-        } else {
-          // standard rule
-          pattern = new RegExp(utils.escapeRegExp(pattern).replace(/\\\*/g, "[^:/?#]*"));
+        if (pattern && replace) {
+          if (pattern.startsWith('/') && pattern.endsWith('/')) {
+            // RegExp rule
+            pattern = new RegExp(pattern.slice(1, -1));
+          } else {
+            // standard rule
+            pattern = new RegExp(utils.escapeRegExp(pattern).replace(reReplacer, "[^:/?#]*"));
+          }
+
+          this._transformRules.push({pattern, replace});
         }
-
-        this._transformRules.push({pattern, replace});
-      }
-    });
+      });
+    };
+    Object.defineProperty(this, 'addTransformRules', { value: fn });
+    return fn;
   }
 
   /**
@@ -479,91 +509,114 @@ class ContentFarmFilter {
     }
   }
 
-  urlsTextToLines(urlsText) {
-    return (urlsText || "").split(/\n|\r\n?/).map(
-      u => utils.splitUrlByAnchor(u.split(" ", 1)[0])[0]
-    ).filter(x => !!x.trim());
+  get urlsTextToLines() {
+    const reTidy = /[\s#].*$/g;
+    const fn = function urlsTextToLines(urlsText) {
+      return utils
+        .getLines(urlsText)
+        .map(u => u.replace(reTidy, ''))
+        .filter(x => !!x.trim());
+    };
+    Object.defineProperty(this, 'urlsTextToLines', { value: fn });
+    return fn;
   }
 
-  transformRule(rule) {
-    this._transformRules.some((tRule) => {
-      const match = tRule.pattern.exec(rule);
-      if (match) {
-        const leftContext = RegExp.leftContext;
-        const rightContext = RegExp.rightContext;
-        const useRegex = tRule.replace.startsWith('/') && tRule.replace.endsWith('/');
-        rule = tRule.replace.replace(/\$([$&`']|\d+)/g, (_, m) => {
-          let result;
-          if (m === '$') {
-            return '$';
-          } else if (m === '&') {
-            result = match[0];
-          } else if (m === '`') {
-            result = leftContext;
-          } else if (m === "'") {
-            result = rightContext;
-          } else {
-            let matchIdx = m, matchIdxInt, plainNum = '';
-            while (matchIdx.length) {
-              matchIdxInt = parseInt(matchIdx, 10);
-              if (matchIdxInt < match.length && matchIdxInt > 0) {
-                result = match[matchIdxInt] + plainNum;
-                break;
+  get transformRule() {
+    const regex = /\$([$&`']|\d+)/g;
+    const fn = function transformRule(rule) {
+      this._transformRules.some((tRule) => {
+        const match = tRule.pattern.exec(rule);
+        if (match) {
+          const leftContext = RegExp.leftContext;
+          const rightContext = RegExp.rightContext;
+          const useRegex = tRule.replace.startsWith('/') && tRule.replace.endsWith('/');
+          rule = tRule.replace.replace(regex, (_, m) => {
+            let result;
+            if (m === '$') {
+              return '$';
+            } else if (m === '&') {
+              result = match[0];
+            } else if (m === '`') {
+              result = leftContext;
+            } else if (m === "'") {
+              result = rightContext;
+            } else {
+              let matchIdx = m, matchIdxInt, plainNum = '';
+              while (matchIdx.length) {
+                matchIdxInt = parseInt(matchIdx, 10);
+                if (matchIdxInt < match.length && matchIdxInt > 0) {
+                  result = match[matchIdxInt] + plainNum;
+                  break;
+                }
+                plainNum = matchIdx.slice(-1) + plainNum;
+                matchIdx = matchIdx.slice(0, -1);
               }
-              plainNum = matchIdx.slice(-1) + plainNum;
-              matchIdx = matchIdx.slice(0, -1);
+              if (typeof result === 'undefined') {
+                return '$' + plainNum;
+              }
             }
-            if (typeof result === 'undefined') {
-              return '$' + plainNum;
+            if (useRegex) {
+              result = utils.escapeRegExp(result, true);
             }
-          }
-          if (useRegex) {
-            result = utils.escapeRegExp(result, true);
-          }
-          return result;
-        });
-        return true;
-      }
-      return false;
-    });
-    return rule;
+            return result;
+          });
+          return true;
+        }
+        return false;
+      });
+      return rule;
+    };
+    Object.defineProperty(this, 'transformRule', { value: fn });
+    return fn;
   }
 
-  validateRule(rule) {
-    if (!rule) { return ""; }
+  get validateRule() {
+    const reHostEscaper = /[x*]/g;
+    const reHostUnescaper = /x[xa]/g;
+    const mapHostEscaper = {"x": "xx", "*": "xa"};
+    const mapHostUnescaper = {xx: "x", xa: "*"};
+    const fnHostEscaper = m => mapHostEscaper[m];
+    const fnHostUnescaper = m => mapHostUnescaper[m];
+    const reSchemeChecker = /^[A-Za-z][0-9A-za-z+\-.]*:\/\//;
+    const reWwwRemover = /^www\./;
+    const fn = function validateRule(rule) {
+      if (!rule) { return ""; }
 
-    if (rule.startsWith('/') && rule.endsWith('/')) {
-      // RegExp rule
-      try {
-        // test if the RegExp is valid
-        new RegExp(rule.slice(1, -1));
-        return rule;
-      } catch (ex) {
-        // invalid RegExp syntax
-        console.error(ex);
+      if (rule.startsWith('/') && rule.endsWith('/')) {
+        // RegExp rule
+        try {
+          // test if the RegExp is valid
+          new RegExp(rule.slice(1, -1));
+          return rule;
+        } catch (ex) {
+          // invalid RegExp syntax
+          console.error(ex);
+        }
+      } else {
+        // standard rule
+        try {
+          // escape "*" to make a valid URL
+          let t = rule.replace(reHostEscaper, fnHostEscaper);
+          // add a scheme if none to make a valid URL
+          if (!reSchemeChecker.test(t)) { t = "http://" + t; }
+          // get hostname
+          t = new URL(t).hostname;
+          // remove "www."
+          t = t.replace(reWwwRemover, "");
+          // convert punycode to unicode
+          t = punycode.toUnicode(t);
+          // unescape "*"
+          t = t.replace(reHostUnescaper, fnHostUnescaper);
+          return t;
+        } catch (ex) {
+          // invalid URL hostname
+          console.error(ex);
+        }
       }
-    } else {
-      // standard rule
-      try {
-        // escape "*" to make a valid URL
-        let t = rule.replace(/x/g, "xx").replace(/\*/g, "xa");
-        // add a scheme if none to make a valid URL
-        if (!/^[A-Za-z][0-9A-za-z+\-.]*:\/\//.test(t)) { t = "http://" + t; }
-        // get hostname
-        t = new URL(t).hostname;
-        // remove "www."
-        t = t.replace(/^www\./, "");
-        // convert punycode to unicode
-        t = punycode.toUnicode(t);
-        // unescape "*"
-        t = t.replace(/x[xa]/g, m => ({xx: "x", xa: "*"})[m]);
-        return t;
-      } catch (ex) {
-        // invalid URL hostname
-        console.error(ex);
-      }
-    }
-    return "";
+      return "";
+    };
+    Object.defineProperty(this, 'validateRule', { value: fn });
+    return fn;
   }
 
   validateRuleLine(ruleLine) {
@@ -573,38 +626,46 @@ class ContentFarmFilter {
   }
 
   validateRulesText(rulesText) {
-    return (rulesText || "").split(/\n|\r\n?/).map(this.validateRuleLine, this).join("\n");
+    return utils
+      .getLines(rulesText)
+      .map(this.validateRuleLine, this)
+      .join("\n");
   }
 
   validateTransformRulesText(rulesText) {
-    return (rulesText || "").split(/\n|\r\n?/).map((ruleLine) => {
-      const parts = (ruleLine || "").split(" ");
-      parts[0] = this.validateRule(parts[0]);
-      return parts.join(" ");
-    }, this).join("\n");
+    return utils
+      .getLines(rulesText)
+      .map((ruleLine) => {
+        const parts = (ruleLine || "").split(" ");
+        parts[0] = this.validateRule(parts[0]);
+        return parts.join(" ");
+      }, this)
+      .join("\n");
   }
 
-  parseRuleLine(ruleLine) {
-    let result = {};
-    let rule = ruleLine.replace(/\s.*$/, "");
+  get parseRuleLine() {
+    const reSpaceRemover = /\s.*$/g;
+    const reReplacer = /\\\*/g;
+    const fn = function parseRuleLine(ruleLine) {
+      const result = {};
+      const rule = ruleLine.replace(reSpaceRemover, "");
 
-    if (rule.startsWith('/') && rule.endsWith('/')) {
-      // RegExp rule
-      result.type = "regex";
-      result.ruleText = rule;
-      result.ruleReText = rule.slice(1, -1);
-    } else {
-      // standard rule
-      result.type = "standard";
-      result.ruleText = rule;
-      result.ruleReText = utils.escapeRegExp(rule).replace(/\\\*/g, "[^:/?#]*");
-    }
+      if (rule.startsWith('/') && rule.endsWith('/')) {
+        // RegExp rule
+        result.type = "regex";
+        result.ruleText = rule;
+        result.ruleReText = rule.slice(1, -1);
+      } else {
+        // standard rule
+        result.type = "standard";
+        result.ruleText = rule;
+        result.ruleReText = utils.escapeRegExp(rule).replace(reReplacer, "[^:/?#]*");
+      }
 
-    return result;
-  }
-
-  rulesTextToLines(rulesText) {
-    return (rulesText || "").split(/\n|\r\n?/).filter(x => !!x.trim());
+      return result;
+    };
+    Object.defineProperty(this, 'parseRuleLine', { value: fn });
+    return fn;
   }
 
   makeMergedRegex(blockList) {

@@ -133,7 +133,7 @@ function updateContextMenus() {
   });
 }
 
-let onBeforeRequestBlocker = function (details) {
+function onBeforeRequestBlocker(details) {
   // check if this tab is temporarily unblocked
   if (tempUnblockTabs.has(details.tabId)) {
     return;
