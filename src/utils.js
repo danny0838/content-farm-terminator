@@ -703,12 +703,13 @@ class ContentFarmFilter {
       });
       standardRules = standardRules.join('|');
       regexRules = regexRules.join('|');
-      const re = '^https?://' + 
-          '(?:[\\w.+-]+(?::[\\w.+-]+)?@)?' + 
-          '(?:[^:/?#]+\\.)?' + 
-          '(' + standardRules + ')' + // capture standard rule
-          '(?=$|[:/?#])' + 
-          (regexRules ? '|' + regexRules : '');
+      // ref: https://tools.ietf.org/html/rfc3986#appendix-A
+      const re = "^https?://" + 
+          "(?:[0-9A-Za-z-._~%!$&'()*+,;=:]+@)?" + 
+          "(?:[^@:/?#]+\\.)?" + 
+          "(" + standardRules + ")" + // capture standard rule
+          "(?=[:/?#]|$)" + 
+          (regexRules ? "|" + regexRules : "");
       blockList.mergedRe = new RegExp(re);
     };
     const fn = function makeMergedRegex(blockList) {
