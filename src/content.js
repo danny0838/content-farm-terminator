@@ -105,7 +105,8 @@ function getRedirectedUrlOrHostname(elem) {
       }
 
       if (domainName && url) {
-        if (new RegExp('^https?://(?:www\.)?' + domainName + '(?=[/?#]|$)').test(url)) {
+        const d = utils.escapeRegExp(domainName);
+        if (new RegExp('^https?://(?:www\.)?' + d + '(?=[:/?#]|$)').test(url)) {
           return url;
         } else {
           return domainName;
