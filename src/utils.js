@@ -559,7 +559,7 @@ class ContentFarmFilter {
     const mapHostUnescaper = {xx: "x", xa: "*"};
     const fnHostEscaper = m => mapHostEscaper[m];
     const fnHostUnescaper = m => mapHostUnescaper[m];
-    const reSchemeChecker = /^[A-Za-z][0-9A-za-z+\-.]*:\/\//;
+    const reSchemeChecker = /^[A-Za-z][0-9A-za-z.+-]*:\/\//;
     const reWwwRemover = /^www\./;
     const fn = function validateRule(rule) {
       if (!rule) { return ""; }
@@ -625,7 +625,7 @@ class ContentFarmFilter {
    */
   get parseRuleLine() {
     const reSpaceMatcher = /^(\S*)(\s*)(.*)$/;
-    const reSchemeChecker = /^[A-Za-z][0-9A-za-z+\-.]*:/;
+    const reSchemeChecker = /^[A-Za-z][0-9A-za-z.+-]*:/;
     const fn = function parseRuleLine(ruleLine, options = {}) {
       let [, rule, sep, comment] = (ruleLine || "").match(reSpaceMatcher);
 
@@ -705,7 +705,7 @@ class ContentFarmFilter {
       regexRules = regexRules.join('|');
       // ref: https://tools.ietf.org/html/rfc3986#appendix-A
       const re = "^https?://" + 
-          "(?:[0-9A-Za-z-._~%!$&'()*+,;=:]+@)?" + 
+          "(?:[-._~0-9A-Za-z%!$&'()*+,;=:]+@)?" + 
           "(?:[^@:/?#]+\\.)?" + 
           "(" + standardRules + ")" + // capture standard rule
           "(?=[:/?#]|$)" + 
