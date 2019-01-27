@@ -42,14 +42,21 @@ function saveOptions() {
   const showContextMenuCommands = document.querySelector('#showContextMenuCommands input').checked;
   const showUnblockButton = document.querySelector('#showUnblockButton input').checked;
 
-  return utils.setOptions({
-    userBlacklist: validator.validateRulesText(userBlacklist),
-    userWhitelist: validator.validateRulesText(userWhitelist),
-    webBlacklists: webBlacklists,
-    transformRules: validator.validateTransformRulesText(transformRules),
-    showLinkMarkers: showLinkMarkers,
-    showContextMenuCommands: showContextMenuCommands,
-    showUnblockButton: showUnblockButton,
+  return new Promise((resolve, reject) => {
+    chrome.runtime.sendMessage({
+      cmd: 'updateOptions',
+      args: {
+        userBlacklist,
+        userWhitelist,
+        webBlacklists,
+        transformRules,
+        showLinkMarkers,
+        showContextMenuCommands,
+        showUnblockButton,
+      },
+    }, (result) => {
+      result ? resolve(result) : reject(new Error('Unable to save options.'));
+    });
   });
 }
 

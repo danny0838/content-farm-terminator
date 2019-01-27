@@ -601,8 +601,8 @@ class ContentFarmFilter {
     return fn;
   }
 
-  validateRulesText(rulesText) {
-    const parseOptions = {validate: true, asString: true};
+  validateRulesText(rulesText, transform = false) {
+    const parseOptions = {validate: true, transform: transform, asString: true};
     return utils
       .getLines(rulesText)
       .map(ruleLine => this.parseRuleLine(ruleLine, parseOptions))
@@ -625,11 +625,28 @@ class ContentFarmFilter {
    */
   get parseRuleLine() {
     const reSpaceMatcher = /^(\S*)(\s*)(.*)$/;
+    const reSchemeChecker = /^[A-Za-z][0-9A-za-z+\-.]*:/;
     const fn = function parseRuleLine(ruleLine, options = {}) {
       let [, rule, sep, comment] = (ruleLine || "").match(reSpaceMatcher);
 
       if (options.transform) {
-        rule = this.transformRule(rule);
+        switch (options.transform) {
+          case 'standard':
+            if (!(rule.startsWith('/') && rule.endsWith('/'))) {
+              rule = this.transformRule(rule);
+            }
+            break;
+          case 'url':
+            if (!(rule.startsWith('/') && rule.endsWith('/'))) {
+              if (reSchemeChecker.test(rule)) {
+                rule = this.transformRule(rule);
+              }
+            }
+            break;
+          default:
+            rule = this.transformRule(rule);
+            break;
+        }
       }
 
       if (options.validate) {

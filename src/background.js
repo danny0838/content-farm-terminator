@@ -35,7 +35,7 @@ function updateContextMenus() {
   const blockSite = function (rule, tabId, frameId) {
     return new Promise((resolve, reject) => {
       rule = (rule || "").trim();
-      rule = filter.parseRuleLine(rule, {validate: true, transform: true, asString: true});
+      rule = filter.parseRuleLine(rule, {validate: true, transform: 'standard', asString: true});
       chrome.tabs.sendMessage(tabId, {
         cmd: 'blockSite',
         args: {rule}
@@ -236,6 +236,18 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
     case 'getMergedBlacklist': {
       updateFilterPromise.then(() => {
         sendResponse(filter.getMergedBlacklist());
+      });
+      return true; // async response
+      break;
+    }
+    case 'updateOptions': {
+      const validator = new ContentFarmFilter();
+      args.transformRules = validator.validateTransformRulesText(args.transformRules);
+      validator.addTransformRules(args.transformRules);
+      args.userBlacklist = validator.validateRulesText(args.userBlacklist, 'url');
+      args.userWhitelist = validator.validateRulesText(args.userWhitelist, 'url');
+      utils.setOptions(args).then(() => {
+        sendResponse(true);
       });
       return true; // async response
       break;
