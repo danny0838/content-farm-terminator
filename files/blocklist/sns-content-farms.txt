@@ -30,6 +30,7 @@
 /^https?://(?:(?:[\w-]+\.)?facebook\.com(?:/(?:pg/)?|\b[^#]+#!/)|(?:fb|m)\.(?:com|me)/)(?:[^?#]+/)?(?:[^/?#]+-)?1609772149321763(?=[/?#]|$)/
 /^https?://(?:(?:[\w-]+\.)?facebook\.com(?:/(?:pg/)?|\b[^#]+#!/)|(?:fb|m)\.(?:com|me)/)(?:[^?#]+/)?(?:[^/?#]+-)?1639140209448921(?=[/?#]|$)/
 /^https?://(?:(?:[\w-]+\.)?facebook\.com(?:/(?:pg/)?|\b[^#]+#!/)|(?:fb|m)\.(?:com|me)/)(?:[^?#]+/)?(?:[^/?#]+-)?1641907636053069(?=[/?#]|$)/
+/^https?://(?:(?:[\w-]+\.)?facebook\.com(?:/(?:pg/)?|\b[^#]+#!/)|(?:fb|m)\.(?:com|me)/)(?:[^?#]+/)?(?:[^/?#]+-)?1643961159233142(?=[/?#]|$)/
 /^https?://(?:(?:[\w-]+\.)?facebook\.com(?:/(?:pg/)?|\b[^#]+#!/)|(?:fb|m)\.(?:com|me)/)(?:[^?#]+/)?(?:[^/?#]+-)?1649819841735711(?=[/?#]|$)/
 /^https?://(?:(?:[\w-]+\.)?facebook\.com(?:/(?:pg/)?|\b[^#]+#!/)|(?:fb|m)\.(?:com|me)/)(?:[^?#]+/)?(?:[^/?#]+-)?165534787282102(?=[/?#]|$)/
 /^https?://(?:(?:[\w-]+\.)?facebook\.com(?:/(?:pg/)?|\b[^#]+#!/)|(?:fb|m)\.(?:com|me)/)(?:[^?#]+/)?(?:[^/?#]+-)?1658481110898183(?=[/?#]|$)/
@@ -131,6 +132,7 @@
 /^https?://(?:(?:[\w-]+\.)?facebook\.com(?:/(?:pg/)?|\b[^#]+#!/)|(?:fb|m)\.(?:com|me)/)CancerStory4U(?=[/?#]|$)/
 /^https?://(?:(?:[\w-]+\.)?facebook\.com(?:/(?:pg/)?|\b[^#]+#!/)|(?:fb|m)\.(?:com|me)/)Changhua\.Info(?=[/?#]|$)/
 /^https?://(?:(?:[\w-]+\.)?facebook\.com(?:/(?:pg/)?|\b[^#]+#!/)|(?:fb|m)\.(?:com|me)/)Chiayi\.Info(?=[/?#]|$)/
+/^https?://(?:(?:[\w-]+\.)?facebook\.com(?:/(?:pg/)?|\b[^#]+#!/)|(?:fb|m)\.(?:com|me)/)ChineseZodiac288(?=[/?#]|$)/
 /^https?://(?:(?:[\w-]+\.)?facebook\.com(?:/(?:pg/)?|\b[^#]+#!/)|(?:fb|m)\.(?:com|me)/)Coco01net(?=[/?#]|$)/
 /^https?://(?:(?:[\w-]+\.)?facebook\.com(?:/(?:pg/)?|\b[^#]+#!/)|(?:fb|m)\.(?:com|me)/)College\.tw(?=[/?#]|$)/
 /^https?://(?:(?:[\w-]+\.)?facebook\.com(?:/(?:pg/)?|\b[^#]+#!/)|(?:fb|m)\.(?:com|me)/)Comedyrestricted(?=[/?#]|$)/
@@ -187,6 +189,7 @@
 /^https?://(?:(?:[\w-]+\.)?facebook\.com(?:/(?:pg/)?|\b[^#]+#!/)|(?:fb|m)\.(?:com|me)/)MomOnline(?=[/?#]|$)/
 /^https?://(?:(?:[\w-]+\.)?facebook\.com(?:/(?:pg/)?|\b[^#]+#!/)|(?:fb|m)\.(?:com|me)/)MostCrazyFunnyVideo(?=[/?#]|$)/
 /^https?://(?:(?:[\w-]+\.)?facebook\.com(?:/(?:pg/)?|\b[^#]+#!/)|(?:fb|m)\.(?:com|me)/)Nantou\.Info(?=[/?#]|$)/
+/^https?://(?:(?:[\w-]+\.)?facebook\.com(?:/(?:pg/)?|\b[^#]+#!/)|(?:fb|m)\.(?:com|me)/)NiceHaveU(?=[/?#]|$)/
 /^https?://(?:(?:[\w-]+\.)?facebook\.com(?:/(?:pg/)?|\b[^#]+#!/)|(?:fb|m)\.(?:com|me)/)Nightmarket\.tw(?=[/?#]|$)/
 /^https?://(?:(?:[\w-]+\.)?facebook\.com(?:/(?:pg/)?|\b[^#]+#!/)|(?:fb|m)\.(?:com|me)/)ONE\.PIECE\.LAW\.TW(?=[/?#]|$)/
 /^https?://(?:(?:[\w-]+\.)?facebook\.com(?:/(?:pg/)?|\b[^#]+#!/)|(?:fb|m)\.(?:com|me)/)OuMaMaFenSiTuan(?=[/?#]|$)/
@@ -263,7 +266,9 @@
 /^https?://(?:(?:[\w-]+\.)?facebook\.com(?:/(?:pg/)?|\b[^#]+#!/)|(?:fb|m)\.(?:com|me)/)babysocute8(?=[/?#]|$)/
 /^https?://(?:(?:[\w-]+\.)?facebook\.com(?:/(?:pg/)?|\b[^#]+#!/)|(?:fb|m)\.(?:com|me)/)baike1268(?=[/?#]|$)/
 /^https?://(?:(?:[\w-]+\.)?facebook\.com(?:/(?:pg/)?|\b[^#]+#!/)|(?:fb|m)\.(?:com|me)/)baoganohhh(?=[/?#]|$)/
+/^https?://(?:(?:[\w-]+\.)?facebook\.com(?:/(?:pg/)?|\b[^#]+#!/)|(?:fb|m)\.(?:com|me)/)beautifulifer(?=[/?#]|$)/
 /^https?://(?:(?:[\w-]+\.)?facebook\.com(?:/(?:pg/)?|\b[^#]+#!/)|(?:fb|m)\.(?:com|me)/)bigchinalove(?=[/?#]|$)/
+/^https?://(?:(?:[\w-]+\.)?facebook\.com(?:/(?:pg/)?|\b[^#]+#!/)|(?:fb|m)\.(?:com|me)/)blesseverydayaroundyou(?=[/?#]|$)/
 /^https?://(?:(?:[\w-]+\.)?facebook\.com(?:/(?:pg/)?|\b[^#]+#!/)|(?:fb|m)\.(?:com|me)/)blessyou88(?=[/?#]|$)/
 /^https?://(?:(?:[\w-]+\.)?facebook\.com(?:/(?:pg/)?|\b[^#]+#!/)|(?:fb|m)\.(?:com|me)/)bomb01\.tw(?=[/?#]|$)/
 /^https?://(?:(?:[\w-]+\.)?facebook\.com(?:/(?:pg/)?|\b[^#]+#!/)|(?:fb|m)\.(?:com|me)/)bookclub\.tw(?=[/?#]|$)/
@@ -284,6 +289,7 @@
 /^https?://(?:(?:[\w-]+\.)?facebook\.com(?:/(?:pg/)?|\b[^#]+#!/)|(?:fb|m)\.(?:com|me)/)cashhascome(?=[/?#]|$)/
 /^https?://(?:(?:[\w-]+\.)?facebook\.com(?:/(?:pg/)?|\b[^#]+#!/)|(?:fb|m)\.(?:com|me)/)catssssssssssssss(?=[/?#]|$)/
 /^https?://(?:(?:[\w-]+\.)?facebook\.com(?:/(?:pg/)?|\b[^#]+#!/)|(?:fb|m)\.(?:com|me)/)children\.tw(?=[/?#]|$)/
+/^https?://(?:(?:[\w-]+\.)?facebook\.com(?:/(?:pg/)?|\b[^#]+#!/)|(?:fb|m)\.(?:com|me)/)chinesezodiac168(?=[/?#]|$)/
 /^https?://(?:(?:[\w-]+\.)?facebook\.com(?:/(?:pg/)?|\b[^#]+#!/)|(?:fb|m)\.(?:com|me)/)chongwu1268(?=[/?#]|$)/
 /^https?://(?:(?:[\w-]+\.)?facebook\.com(?:/(?:pg/)?|\b[^#]+#!/)|(?:fb|m)\.(?:com|me)/)chudayun(?=[/?#]|$)/
 /^https?://(?:(?:[\w-]+\.)?facebook\.com(?:/(?:pg/)?|\b[^#]+#!/)|(?:fb|m)\.(?:com|me)/)ck101fans(?=[/?#]|$)/
@@ -423,6 +429,7 @@
 /^https?://(?:(?:[\w-]+\.)?facebook\.com(?:/(?:pg/)?|\b[^#]+#!/)|(?:fb|m)\.(?:com|me)/)kmtdppisshit(?=[/?#]|$)/
 /^https?://(?:(?:[\w-]+\.)?facebook\.com(?:/(?:pg/)?|\b[^#]+#!/)|(?:fb|m)\.(?:com|me)/)know\.articles(?=[/?#]|$)/
 /^https?://(?:(?:[\w-]+\.)?facebook\.com(?:/(?:pg/)?|\b[^#]+#!/)|(?:fb|m)\.(?:com|me)/)labor\.tw(?=[/?#]|$)/
+/^https?://(?:(?:[\w-]+\.)?facebook\.com(?:/(?:pg/)?|\b[^#]+#!/)|(?:fb|m)\.(?:com|me)/)ladytalking(?=[/?#]|$)/
 /^https?://(?:(?:[\w-]+\.)?facebook\.com(?:/(?:pg/)?|\b[^#]+#!/)|(?:fb|m)\.(?:com|me)/)laughbombclub(?=[/?#]|$)/
 /^https?://(?:(?:[\w-]+\.)?facebook\.com(?:/(?:pg/)?|\b[^#]+#!/)|(?:fb|m)\.(?:com|me)/)laughingoutloudhaha(?=[/?#]|$)/
 /^https?://(?:(?:[\w-]+\.)?facebook\.com(?:/(?:pg/)?|\b[^#]+#!/)|(?:fb|m)\.(?:com|me)/)lifehealthpedia(?=[/?#]|$)/
@@ -436,7 +443,10 @@
 /^https?://(?:(?:[\w-]+\.)?facebook\.com(?:/(?:pg/)?|\b[^#]+#!/)|(?:fb|m)\.(?:com|me)/)liulianwang(?=[/?#]|$)/
 /^https?://(?:(?:[\w-]+\.)?facebook\.com(?:/(?:pg/)?|\b[^#]+#!/)|(?:fb|m)\.(?:com|me)/)looker\.pets(?=[/?#]|$)/
 /^https?://(?:(?:[\w-]+\.)?facebook\.com(?:/(?:pg/)?|\b[^#]+#!/)|(?:fb|m)\.(?:com|me)/)love12horoscope(?=[/?#]|$)/
+/^https?://(?:(?:[\w-]+\.)?facebook\.com(?:/(?:pg/)?|\b[^#]+#!/)|(?:fb|m)\.(?:com|me)/)love\.articlesharing(?=[/?#]|$)/
+/^https?://(?:(?:[\w-]+\.)?facebook\.com(?:/(?:pg/)?|\b[^#]+#!/)|(?:fb|m)\.(?:com|me)/)love\.horoscopes(?=[/?#]|$)/
 /^https?://(?:(?:[\w-]+\.)?facebook\.com(?:/(?:pg/)?|\b[^#]+#!/)|(?:fb|m)\.(?:com|me)/)love\.hppylife6970(?=[/?#]|$)/
+/^https?://(?:(?:[\w-]+\.)?facebook\.com(?:/(?:pg/)?|\b[^#]+#!/)|(?:fb|m)\.(?:com|me)/)love\.sharing\.page(?=[/?#]|$)/
 /^https?://(?:(?:[\w-]+\.)?facebook\.com(?:/(?:pg/)?|\b[^#]+#!/)|(?:fb|m)\.(?:com|me)/)love\.tw(?=[/?#]|$)/
 /^https?://(?:(?:[\w-]+\.)?facebook\.com(?:/(?:pg/)?|\b[^#]+#!/)|(?:fb|m)\.(?:com|me)/)lovebakinglovehealthy(?=[/?#]|$)/
 /^https?://(?:(?:[\w-]+\.)?facebook\.com(?:/(?:pg/)?|\b[^#]+#!/)|(?:fb|m)\.(?:com|me)/)lovelife\.every(?=[/?#]|$)/
@@ -446,6 +456,7 @@
 /^https?://(?:(?:[\w-]+\.)?facebook\.com(?:/(?:pg/)?|\b[^#]+#!/)|(?:fb|m)\.(?:com|me)/)luckyformoney(?=[/?#]|$)/
 /^https?://(?:(?:[\w-]+\.)?facebook\.com(?:/(?:pg/)?|\b[^#]+#!/)|(?:fb|m)\.(?:com|me)/)luckylife66(?=[/?#]|$)/
 /^https?://(?:(?:[\w-]+\.)?facebook\.com(?:/(?:pg/)?|\b[^#]+#!/)|(?:fb|m)\.(?:com|me)/)luckyuuuuu(?=[/?#]|$)/
+/^https?://(?:(?:[\w-]+\.)?facebook\.com(?:/(?:pg/)?|\b[^#]+#!/)|(?:fb|m)\.(?:com|me)/)luv2share(?=[/?#]|$)/
 /^https?://(?:(?:[\w-]+\.)?facebook\.com(?:/(?:pg/)?|\b[^#]+#!/)|(?:fb|m)\.(?:com|me)/)lvyou\.articles(?=[/?#]|$)/
 /^https?://(?:(?:[\w-]+\.)?facebook\.com(?:/(?:pg/)?|\b[^#]+#!/)|(?:fb|m)\.(?:com|me)/)madhouse\.tw(?=[/?#]|$)/
 /^https?://(?:(?:[\w-]+\.)?facebook\.com(?:/(?:pg/)?|\b[^#]+#!/)|(?:fb|m)\.(?:com|me)/)makeitshare(?=[/?#]|$)/
@@ -479,6 +490,7 @@
 /^https?://(?:(?:[\w-]+\.)?facebook\.com(?:/(?:pg/)?|\b[^#]+#!/)|(?:fb|m)\.(?:com|me)/)newskiwi(?=[/?#]|$)/
 /^https?://(?:(?:[\w-]+\.)?facebook\.com(?:/(?:pg/)?|\b[^#]+#!/)|(?:fb|m)\.(?:com|me)/)njgnews(?=[/?#]|$)/
 /^https?://(?:(?:[\w-]+\.)?facebook\.com(?:/(?:pg/)?|\b[^#]+#!/)|(?:fb|m)\.(?:com|me)/)notezlove\.tw(?=[/?#]|$)/
+/^https?://(?:(?:[\w-]+\.)?facebook\.com(?:/(?:pg/)?|\b[^#]+#!/)|(?:fb|m)\.(?:com|me)/)nvrenxinsheng(?=[/?#]|$)/
 /^https?://(?:(?:[\w-]+\.)?facebook\.com(?:/(?:pg/)?|\b[^#]+#!/)|(?:fb|m)\.(?:com|me)/)nvrenxinshi(?=[/?#]|$)/
 /^https?://(?:(?:[\w-]+\.)?facebook\.com(?:/(?:pg/)?|\b[^#]+#!/)|(?:fb|m)\.(?:com|me)/)nvshengtiing(?=[/?#]|$)/
 /^https?://(?:(?:[\w-]+\.)?facebook\.com(?:/(?:pg/)?|\b[^#]+#!/)|(?:fb|m)\.(?:com|me)/)omgnews\.cc(?=[/?#]|$)/
@@ -508,6 +520,7 @@
 /^https?://(?:(?:[\w-]+\.)?facebook\.com(?:/(?:pg/)?|\b[^#]+#!/)|(?:fb|m)\.(?:com|me)/)quwen1268(?=[/?#]|$)/
 /^https?://(?:(?:[\w-]+\.)?facebook\.com(?:/(?:pg/)?|\b[^#]+#!/)|(?:fb|m)\.(?:com|me)/)richlife8(?=[/?#]|$)/
 /^https?://(?:(?:[\w-]+\.)?facebook\.com(?:/(?:pg/)?|\b[^#]+#!/)|(?:fb|m)\.(?:com|me)/)safetybuy\.tw(?=[/?#]|$)/
+/^https?://(?:(?:[\w-]+\.)?facebook\.com(?:/(?:pg/)?|\b[^#]+#!/)|(?:fb|m)\.(?:com|me)/)sampo0315(?=[/?#]|$)/
 /^https?://(?:(?:[\w-]+\.)?facebook\.com(?:/(?:pg/)?|\b[^#]+#!/)|(?:fb|m)\.(?:com|me)/)sci01(?=[/?#]|$)/
 /^https?://(?:(?:[\w-]+\.)?facebook\.com(?:/(?:pg/)?|\b[^#]+#!/)|(?:fb|m)\.(?:com|me)/)seemorechinese(?=[/?#]|$)/
 /^https?://(?:(?:[\w-]+\.)?facebook\.com(?:/(?:pg/)?|\b[^#]+#!/)|(?:fb|m)\.(?:com|me)/)sexy\.tw(?=[/?#]|$)/
@@ -532,9 +545,11 @@
 /^https?://(?:(?:[\w-]+\.)?facebook\.com(?:/(?:pg/)?|\b[^#]+#!/)|(?:fb|m)\.(?:com|me)/)stocks\.tw(?=[/?#]|$)/
 /^https?://(?:(?:[\w-]+\.)?facebook\.com(?:/(?:pg/)?|\b[^#]+#!/)|(?:fb|m)\.(?:com|me)/)story543com(?=[/?#]|$)/
 /^https?://(?:(?:[\w-]+\.)?facebook\.com(?:/(?:pg/)?|\b[^#]+#!/)|(?:fb|m)\.(?:com|me)/)success\.articles(?=[/?#]|$)/
+/^https?://(?:(?:[\w-]+\.)?facebook\.com(?:/(?:pg/)?|\b[^#]+#!/)|(?:fb|m)\.(?:com|me)/)successaccademy7296(?=[/?#]|$)/
 /^https?://(?:(?:[\w-]+\.)?facebook\.com(?:/(?:pg/)?|\b[^#]+#!/)|(?:fb|m)\.(?:com|me)/)taiwan1314520(?=[/?#]|$)/
 /^https?://(?:(?:[\w-]+\.)?facebook\.com(?:/(?:pg/)?|\b[^#]+#!/)|(?:fb|m)\.(?:com|me)/)taiwan\.go(?=[/?#]|$)/
 /^https?://(?:(?:[\w-]+\.)?facebook\.com(?:/(?:pg/)?|\b[^#]+#!/)|(?:fb|m)\.(?:com|me)/)taiwanlol(?=[/?#]|$)/
+/^https?://(?:(?:[\w-]+\.)?facebook\.com(?:/(?:pg/)?|\b[^#]+#!/)|(?:fb|m)\.(?:com|me)/)talk\.girl(?=[/?#]|$)/
 /^https?://(?:(?:[\w-]+\.)?facebook\.com(?:/(?:pg/)?|\b[^#]+#!/)|(?:fb|m)\.(?:com|me)/)teepr(?=[/?#]|$)/
 /^https?://(?:(?:[\w-]+\.)?facebook\.com(?:/(?:pg/)?|\b[^#]+#!/)|(?:fb|m)\.(?:com|me)/)teepromg(?=[/?#]|$)/
 /^https?://(?:(?:[\w-]+\.)?facebook\.com(?:/(?:pg/)?|\b[^#]+#!/)|(?:fb|m)\.(?:com|me)/)thenewdaypost(?=[/?#]|$)/
@@ -560,6 +575,7 @@
 /^https?://(?:(?:[\w-]+\.)?facebook\.com(?:/(?:pg/)?|\b[^#]+#!/)|(?:fb|m)\.(?:com|me)/)viralane(?=[/?#]|$)/
 /^https?://(?:(?:[\w-]+\.)?facebook\.com(?:/(?:pg/)?|\b[^#]+#!/)|(?:fb|m)\.(?:com|me)/)watanabenoamifanpage(?=[/?#]|$)/
 /^https?://(?:(?:[\w-]+\.)?facebook\.com(?:/(?:pg/)?|\b[^#]+#!/)|(?:fb|m)\.(?:com|me)/)whyhow\.online(?=[/?#]|$)/
+/^https?://(?:(?:[\w-]+\.)?facebook\.com(?:/(?:pg/)?|\b[^#]+#!/)|(?:fb|m)\.(?:com|me)/)wisdomlife66(?=[/?#]|$)/
 /^https?://(?:(?:[\w-]+\.)?facebook\.com(?:/(?:pg/)?|\b[^#]+#!/)|(?:fb|m)\.(?:com|me)/)wofafa888(?=[/?#]|$)/
 /^https?://(?:(?:[\w-]+\.)?facebook\.com(?:/(?:pg/)?|\b[^#]+#!/)|(?:fb|m)\.(?:com|me)/)women\.articles(?=[/?#]|$)/
 /^https?://(?:(?:[\w-]+\.)?facebook\.com(?:/(?:pg/)?|\b[^#]+#!/)|(?:fb|m)\.(?:com|me)/)women\.tw(?=[/?#]|$)/
@@ -575,10 +591,12 @@
 /^https?://(?:(?:[\w-]+\.)?facebook\.com(?:/(?:pg/)?|\b[^#]+#!/)|(?:fb|m)\.(?:com|me)/)yayaCom(?=[/?#]|$)/
 /^https?://(?:(?:[\w-]+\.)?facebook\.com(?:/(?:pg/)?|\b[^#]+#!/)|(?:fb|m)\.(?:com|me)/)yesnews\.com\.tw(?=[/?#]|$)/
 /^https?://(?:(?:[\w-]+\.)?facebook\.com(?:/(?:pg/)?|\b[^#]+#!/)|(?:fb|m)\.(?:com|me)/)yifanfengshun888(?=[/?#]|$)/
+/^https?://(?:(?:[\w-]+\.)?facebook\.com(?:/(?:pg/)?|\b[^#]+#!/)|(?:fb|m)\.(?:com|me)/)yihuayishijie(?=[/?#]|$)/
 /^https?://(?:(?:[\w-]+\.)?facebook\.com(?:/(?:pg/)?|\b[^#]+#!/)|(?:fb|m)\.(?:com|me)/)yoursoulbay(?=[/?#]|$)/
 /^https?://(?:(?:[\w-]+\.)?facebook\.com(?:/(?:pg/)?|\b[^#]+#!/)|(?:fb|m)\.(?:com|me)/)yuerzhuanjia(?=[/?#]|$)/
 /^https?://(?:(?:[\w-]+\.)?facebook\.com(?:/(?:pg/)?|\b[^#]+#!/)|(?:fb|m)\.(?:com|me)/)yummydishes(?=[/?#]|$)/
 /^https?://(?:(?:[\w-]+\.)?facebook\.com(?:/(?:pg/)?|\b[^#]+#!/)|(?:fb|m)\.(?:com|me)/)yummyfoodMalaysia(?=[/?#]|$)/
+/^https?://(?:(?:[\w-]+\.)?facebook\.com(?:/(?:pg/)?|\b[^#]+#!/)|(?:fb|m)\.(?:com|me)/)zhaocai9682(?=[/?#]|$)/
 /^https?://(?:(?:[\w-]+\.)?facebook\.com(?:/(?:pg/)?|\b[^#]+#!/)|(?:fb|m)\.(?:com|me)/)zhengnengliangde(?=[/?#]|$)/
 /^https?://(?:(?:[\w-]+\.)?facebook\.com(?:/|\b[^#]+#!/)|(?:fb|m)\.(?:com|me)/)groups/1010583825638662(?=[/?#]|$)/
 /^https?://(?:(?:[\w-]+\.)?facebook\.com(?:/|\b[^#]+#!/)|(?:fb|m)\.(?:com|me)/)groups/145771259199711(?=[/?#]|$)/
