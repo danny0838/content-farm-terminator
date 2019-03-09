@@ -2,7 +2,7 @@
 /^https?://(\w+)\.blogspot\.(?:\w+)(?=[/?#]|$)/ $1.blogspot.*
 
   -- Xuite
-/^https?://(?:m\.)?(?:[bv]log|photo)\.xuite\.net/([\w.-]+)(?=[/?#]|$)/ /^https?://(?:m\.)?(?:[bv]log|photo)\.xuite\.net/$1(?=[/?#]|$)/
+/^https?://(?:(?:m\.)?(?:[bv]log|photo)\.xuite\.net|m\.xuite\.net/blog)/([\w.-]+)(?=[/?#]|$)/ /^https?://(?:(?:m\.)?(?:[bv]log|photo)\.xuite\.net|m\.xuite\.net/blog)/$1(?=[/?#]|$)/
 
   -- UDN
 /^https?://(?:blog|album)\.udn\.com/(?:mobile/)?([\w.-]+)(?=[/?#]|$)/ /^https?://(?:blog|album)\.udn\.com/(?:mobile/)?$1(?=[/?#]|$)/
