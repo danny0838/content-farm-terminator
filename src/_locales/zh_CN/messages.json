@@ -246,6 +246,11 @@
     "description": "Label of showContextMenuCommands in options page"
   },
 
+  "quickContextMenuCommands": {
+    "message": "右键菜单命令略过细节确认",
+    "description": "Label of quickContextMenuCommands in options page"
+  },
+
   "showUnblockButton": {
     "message": "在封锁页面显示解锁按钮",
     "description": "Label of showUnblockButton in options page"

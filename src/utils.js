@@ -28,6 +28,7 @@ const utils = {
     transformRules: "",
     showLinkMarkers: true,
     showContextMenuCommands: true,
+    quickContextMenuCommands: false,
     showUnblockButton: true,
     tempUnblockDuration: 8000,
     tempUnblockCountdownBase: 15000,

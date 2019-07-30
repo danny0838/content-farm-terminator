@@ -21,6 +21,7 @@ function loadOptions() {
     document.querySelector('#transformRules textarea').value = options.transformRules;
     document.querySelector('#showLinkMarkers input').checked = options.showLinkMarkers;
     document.querySelector('#showContextMenuCommands input').checked = options.showContextMenuCommands;
+    document.querySelector('#quickContextMenuCommands input').checked = options.quickContextMenuCommands;
     document.querySelector('#showUnblockButton input').checked = options.showUnblockButton;
 
     return new Promise((resolve, reject) => {
@@ -40,6 +41,7 @@ function saveOptions() {
   const transformRules = document.querySelector('#transformRules textarea').value;
   const showLinkMarkers = document.querySelector('#showLinkMarkers input').checked;
   const showContextMenuCommands = document.querySelector('#showContextMenuCommands input').checked;
+  const quickContextMenuCommands = document.querySelector('#quickContextMenuCommands input').checked;
   const showUnblockButton = document.querySelector('#showUnblockButton input').checked;
 
   return new Promise((resolve, reject) => {
@@ -52,6 +54,7 @@ function saveOptions() {
         transformRules,
         showLinkMarkers,
         showContextMenuCommands,
+        quickContextMenuCommands,
         showUnblockButton,
       },
     }, (result) => {

@@ -29,10 +29,16 @@ function updateFilter() {
   });
 }
 
-function blockSite(rule, tabId, frameId) {
+function blockSite(rule, tabId, frameId, quickMode) {
   return new Promise((resolve, reject) => {
     rule = (rule || "").trim();
     rule = filter.parseRuleLine(rule, {validate: true, transform: 'standard', asString: true});
+
+    if (quickMode) {
+      resolve(rule);
+      return;
+    }
+
     chrome.tabs.sendMessage(tabId, {
       cmd: 'blockSite',
       args: {rule}
@@ -43,6 +49,10 @@ function blockSite(rule, tabId, frameId) {
     rule = filter.parseRuleLine(rule, {validate: true, asString: true});
 
     if (rule && filter.isInBlacklist(rule)) {
+      if (quickMode) {
+        return;
+      }
+
       return new Promise((resolve, reject) => {
         chrome.tabs.sendMessage(tabId, {
           cmd: 'alert',
@@ -61,6 +71,10 @@ function blockSite(rule, tabId, frameId) {
         userBlacklist: text
       });
     }).then(() => {
+      if (quickMode) {
+        return;
+      }
+
       return new Promise((resolve, reject) => {
         chrome.tabs.sendMessage(tabId, {
           cmd: 'alert',
@@ -74,6 +88,8 @@ function blockSite(rule, tabId, frameId) {
 function updateContextMenus() {
   if (!chrome.contextMenus) { return; }
 
+  let quickMode = false;
+
   const createContextMenuCommands = function () {
     try {
       chrome.contextMenus.create({
@@ -81,7 +97,7 @@ function updateContextMenus() {
         contexts: ["tab"],
         documentUrlPatterns: ["http://*/*", "https://*/*"],
         onclick: (info, tab) => {
-          return blockSite(info.pageUrl, tab.id, 0);
+          return blockSite(info.pageUrl, tab.id, 0, quickMode);
         }
       });
     } catch (ex) {
@@ -93,7 +109,7 @@ function updateContextMenus() {
       contexts: ["page"],
       documentUrlPatterns: ["http://*/*", "https://*/*"],
       onclick: (info, tab) => {
-        return blockSite(info.pageUrl, tab.id, info.frameId);
+        return blockSite(info.pageUrl, tab.id, info.frameId, quickMode);
       }
     });
 
@@ -108,7 +124,7 @@ function updateContextMenus() {
           }, {frameId: info.frameId}, resolve);
         }).then((redirectedUrl) => {
           const rule = redirectedUrl || info.linkUrl;
-          return blockSite(rule, tab.id, info.frameId);
+          return blockSite(rule, tab.id, info.frameId, quickMode);
         });
       }
     });
@@ -118,7 +134,7 @@ function updateContextMenus() {
       contexts: ["selection"],
       documentUrlPatterns: ["http://*/*", "https://*/*"],
       onclick: (info, tab) => {
-        return blockSite(info.selectionText, tab.id, info.frameId);
+        return blockSite(info.selectionText, tab.id, info.frameId, quickMode);
       }
     });
   };
@@ -128,6 +144,7 @@ function updateContextMenus() {
       if (options.showContextMenuCommands) {
         createContextMenuCommands();
       }
+      quickMode = options.quickContextMenuCommands;
     });
   });
 }
