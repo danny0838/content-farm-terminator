@@ -116,6 +116,7 @@ textarea[readonly] {
 .material-switch > input[type="checkbox"] + label {
   display: inline-block;
   position: relative;
+  cursor: pointer;
   margin: 6px;
   border-radius: 8px;
   width: 40px;
