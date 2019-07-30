@@ -105,10 +105,12 @@ textarea[readonly] {
 /* https://bootsnipp.com/snippets/featured/material-design-switch */
 .material-switch {
   display: inline-block;
+  position: relative;
 }
 
 .material-switch > input[type="checkbox"] {
-  display: none;
+  position: absolute;
+  opacity: 0;
 }
 
 .material-switch > input[type="checkbox"] + label {
@@ -145,6 +147,11 @@ textarea[readonly] {
 .material-switch > input[type="checkbox"]:checked + label::after {
   background-color: inherit;
   left: 20px;
+}
+
+.material-switch > input[type="checkbox"]:focus + label {
+  outline: .1em solid #4D90FE;
+  transition-duration: 0s;
 }
 
 @media screen and (max-width: 720px) {
