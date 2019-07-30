@@ -29,50 +29,50 @@ function updateFilter() {
   });
 }
 
-function updateContextMenus() {
-  if (!chrome.contextMenus) { return; }
+function blockSite(rule, tabId, frameId) {
+  return new Promise((resolve, reject) => {
+    rule = (rule || "").trim();
+    rule = filter.parseRuleLine(rule, {validate: true, transform: 'standard', asString: true});
+    chrome.tabs.sendMessage(tabId, {
+      cmd: 'blockSite',
+      args: {rule}
+    }, {frameId}, resolve);
+  }).then((rule) => {
+    if (!rule) { return; }
 
-  const blockSite = function (rule, tabId, frameId) {
-    return new Promise((resolve, reject) => {
-      rule = (rule || "").trim();
-      rule = filter.parseRuleLine(rule, {validate: true, transform: 'standard', asString: true});
-      chrome.tabs.sendMessage(tabId, {
-        cmd: 'blockSite',
-        args: {rule}
-      }, {frameId}, resolve);
-    }).then((rule) => {
-      if (!rule) { return; }
+    rule = filter.parseRuleLine(rule, {validate: true, asString: true});
 
-      rule = filter.parseRuleLine(rule, {validate: true, asString: true});
+    if (rule && filter.isInBlacklist(rule)) {
+      return new Promise((resolve, reject) => {
+        chrome.tabs.sendMessage(tabId, {
+          cmd: 'alert',
+          args: {msg: utils.lang("blockSiteDuplicated", rule)}
+        }, {frameId}, resolve);
+      });
+    }
 
-      if (rule && filter.isInBlacklist(rule)) {
-        return new Promise((resolve, reject) => {
-          chrome.tabs.sendMessage(tabId, {
-            cmd: 'alert',
-            args: {msg: utils.lang("blockSiteDuplicated", rule)}
-          }, {frameId}, resolve);
-        });
-      }
-
-      return utils.getOptions({
-        userBlacklist: ""
-      }).then((options) => {
-        let text = options.userBlacklist;
-        if (text) { text += "\n"; }
-        text = text + rule;
-        return utils.setOptions({
-          userBlacklist: text
-        });
-      }).then(() => {
-        return new Promise((resolve, reject) => {
-          chrome.tabs.sendMessage(tabId, {
-            cmd: 'alert',
-            args: {msg: utils.lang("blockSiteSuccess", rule)}
-          }, {frameId}, resolve);
-        });
+    return utils.getOptions({
+      userBlacklist: ""
+    }).then((options) => {
+      let text = options.userBlacklist;
+      if (text) { text += "\n"; }
+      text = text + rule;
+      return utils.setOptions({
+        userBlacklist: text
+      });
+    }).then(() => {
+      return new Promise((resolve, reject) => {
+        chrome.tabs.sendMessage(tabId, {
+          cmd: 'alert',
+          args: {msg: utils.lang("blockSiteSuccess", rule)}
+        }, {frameId}, resolve);
       });
     });
-  };
+  });
+}
+
+function updateContextMenus() {
+  if (!chrome.contextMenus) { return; }
 
   const createContextMenuCommands = function () {
     try {
