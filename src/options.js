@@ -71,6 +71,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
   if (!chrome.contextMenus) {
     document.querySelector('#transformRules').hidden = true;
     document.querySelector('#showContextMenuCommands').hidden = true;
+    document.querySelector('#quickContextMenuCommands').hidden = true;
   }
 
   loadOptions();
