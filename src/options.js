@@ -69,8 +69,8 @@ document.addEventListener('DOMContentLoaded', (event) => {
   // hide some options if contextMenus is not available
   // (e.g. Firefox for Android)
   if (!chrome.contextMenus) {
-    document.querySelector('#transformRules').style.display = 'none';
-    document.querySelector('#showContextMenuCommands').style.display = 'none';
+    document.querySelector('#transformRules').hidden = true;
+    document.querySelector('#showContextMenuCommands').hidden = true;
   }
 
   loadOptions();
