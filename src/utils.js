@@ -554,10 +554,10 @@ class ContentFarmFilter {
   }
 
   get validateRule() {
-    const reHostEscaper = /[x*]/g;
+    const reHostEscaper = /[xX*]/g;
     const reHostUnescaper = /x[xa]/g;
-    const mapHostEscaper = {"x": "xx", "*": "xa"};
-    const mapHostUnescaper = {xx: "x", xa: "*"};
+    const mapHostEscaper = {"x": "xx", "X": "xX", "*": "xa"};
+    const mapHostUnescaper = {xx: "x", xX: "X", xa: "*"};
     const fnHostEscaper = m => mapHostEscaper[m];
     const fnHostUnescaper = m => mapHostUnescaper[m];
     const reSchemeChecker = /^[A-Za-z][0-9A-za-z.+-]*:\/\//;
