@@ -342,6 +342,7 @@
 /^https?://(?:(?:[\w-]+\.)?facebook\.com(?:/(?:pg/)?|\b[^#]+#!/)|(?:fb|m)\.(?:com|me)/)Mark\.Knowledge(?=[/?#]|$)/
 /^https?://(?:(?:[\w-]+\.)?facebook\.com(?:/(?:pg/)?|\b[^#]+#!/)|(?:fb|m)\.(?:com|me)/)Masterbu01(?=[/?#]|$)/
 /^https?://(?:(?:[\w-]+\.)?facebook\.com(?:/(?:pg/)?|\b[^#]+#!/)|(?:fb|m)\.(?:com|me)/)MediaLnkCom(?=[/?#]|$)/
+/^https?://(?:(?:[\w-]+\.)?facebook\.com(?:/(?:pg/)?|\b[^#]+#!/)|(?:fb|m)\.(?:com|me)/)MeinBeauty(?=[/?#]|$)/
 /^https?://(?:(?:[\w-]+\.)?facebook\.com(?:/(?:pg/)?|\b[^#]+#!/)|(?:fb|m)\.(?:com|me)/)Miaoli\.Info(?=[/?#]|$)/
 /^https?://(?:(?:[\w-]+\.)?facebook\.com(?:/(?:pg/)?|\b[^#]+#!/)|(?:fb|m)\.(?:com|me)/)MoandNaiCrazyTogether(?=[/?#]|$)/
 /^https?://(?:(?:[\w-]+\.)?facebook\.com(?:/(?:pg/)?|\b[^#]+#!/)|(?:fb|m)\.(?:com|me)/)MomOnline(?=[/?#]|$)/
@@ -1049,6 +1050,7 @@
 /^https?://(?:\w+\.)?youtube\.com/channel/UClTQ8L1fx1ImVKq94rHN4vQ(?=[/?#]|$)/
 /^https?://(?:\w+\.)?youtube\.com/channel/UClsTm-2bYx0IAyVDqO9quDg(?=[/?#]|$)/
 /^https?://(?:\w+\.)?youtube\.com/channel/UCob5b3llKPjYVdYINgoc00w(?=[/?#]|$)/
+/^https?://(?:\w+\.)?youtube\.com/channel/UCoxztySrNbfqhZquQ8ETwEw(?=[/?#]|$)/
 /^https?://(?:\w+\.)?youtube\.com/channel/UCpDA0vmk7lH-J9yHzQ-U0Pw(?=[/?#]|$)/
 /^https?://(?:\w+\.)?youtube\.com/channel/UCsiL_m0Er5kYYVv5ExTqMIA(?=[/?#]|$)/
 /^https?://(?:\w+\.)?youtube\.com/channel/UCuZSxICXMG5iZlY00mtv6Ww(?=[/?#]|$)/
