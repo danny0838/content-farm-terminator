@@ -309,7 +309,10 @@ chrome.storage.onChanged.addListener((changes, areaName) => {
     } catch(ex) {}
   }
 
-  updateContextMenus();
+  if ("showContextMenuCommands" in changes || "quickContextMenuCommands" in changes) {
+    updateContextMenus();
+  }
+
   updateFilter().then(() => {
     // @TODO:
     // Say we have a shift from local to sync:
