@@ -256,6 +256,11 @@
     "description": "Label of showUnblockButton in options page"
   },
 
+  "suppressHistory": {
+    "message": "Suppress history for content farm terminator pages",
+    "description": "Label of suppressHistory in options page"
+  },
+
   "report": {
     "message": "Report a content farm.",
     "description": "Label of report button in options page"

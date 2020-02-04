@@ -93,6 +93,37 @@ const contextMenuController = {
   },
 };
 
+const historyController = {
+  onVisited(result) {
+    // suppress extension pages from generating a history entry
+    if (result.url.startsWith(chrome.runtime.getURL(""))) {
+      chrome.history.deleteUrl({url: result.url});
+    }
+  },
+
+  listen(willListen) {
+    if (!chrome.history) { return; }
+
+    if (willListen) {
+      if (!chrome.history.onVisited.hasListener(this.onVisited)) {
+        chrome.history.onVisited.addListener(this.onVisited);
+      }
+    } else {
+      if (chrome.history.onVisited.hasListener(this.onVisited)) {
+        chrome.history.onVisited.removeListener(this.onVisited);
+      }
+    }
+  },
+
+  refresh() {
+    return utils.getOptions([
+      "suppressHistory",
+    ]).then(({suppressHistory}) => {
+      this.listen(suppressHistory);
+    });
+  },
+};
+
 function updateFilter() {
   return updateFilterPromise = utils.getDefaultOptions().then((options) => {
     const newFilter = new ContentFarmFilter();
@@ -343,6 +374,10 @@ chrome.storage.onChanged.addListener((changes, areaName) => {
     contextMenuController.refresh(options);
   }
 
+  if ("suppressHistory" in changes) {
+    historyController.refresh();
+  }
+
   updateFilter().then(() => {
     // @TODO:
     // Say we have a shift from local to sync:
@@ -381,15 +416,6 @@ chrome.runtime.onInstalled.addListener((details) => {
   }
 });
 
-if (chrome.history) {
-  chrome.history.onVisited.addListener((result) => {
-    // suppress extension pages from generating a history entry
-    if (result.url.startsWith(chrome.runtime.getURL(""))) {
-      chrome.history.deleteUrl({url: result.url});
-    }
-  });
-}
-
 if (chrome.browserAction) {
   chrome.browserAction.onClicked.addListener((tab) => {
     let url;
@@ -418,6 +444,7 @@ if (chrome.browserAction) {
 }
 
 contextMenuController.refresh();
+historyController.refresh();
 
 updateFilter().then(() => {
   onBeforeRequestCallback = onBeforeRequestBlocker;

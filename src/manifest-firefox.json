@@ -21,7 +21,6 @@
 
   "permissions": [
     "contextMenus",
-    "history",
     "tabs",
     "unlimitedStorage",
     "webRequest",
@@ -29,6 +28,10 @@
     "storage",
     "http://*/",
     "https://*/"
+  ],
+
+  "optional_permissions": [
+    "history"
   ],
 
   "background": {

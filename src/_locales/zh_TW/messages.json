@@ -256,6 +256,11 @@
     "description": "Label of showUnblockButton in options page"
   },
 
+  "suppressHistory": {
+    "message": "終結內容農場相關頁面不產生歷史記錄",
+    "description": "Label of suppressHistory in options page"
+  },
+
   "report": {
     "message": "舉報內容農場",
     "description": "Label of report button in options page"

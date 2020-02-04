@@ -19,6 +19,7 @@ function loadOptions() {
     document.querySelector('#userWhitelist textarea').value = options.userWhitelist;
     document.querySelector('#webBlacklists textarea').value = options.webBlacklists;
     document.querySelector('#transformRules textarea').value = options.transformRules;
+    document.querySelector('#suppressHistory input').checked = options.suppressHistory;
     document.querySelector('#showLinkMarkers input').checked = options.showLinkMarkers;
     document.querySelector('#showContextMenuCommands input').checked = options.showContextMenuCommands;
     document.querySelector('#quickContextMenuCommands input').checked = options.quickContextMenuCommands;
@@ -39,26 +40,44 @@ function saveOptions() {
   const userWhitelist = document.querySelector('#userWhitelist textarea').value;
   const webBlacklists = document.querySelector('#webBlacklists textarea').value;
   const transformRules = document.querySelector('#transformRules textarea').value;
+  let suppressHistory = document.querySelector('#suppressHistory input').checked;
   const showLinkMarkers = document.querySelector('#showLinkMarkers input').checked;
   const showContextMenuCommands = document.querySelector('#showContextMenuCommands input').checked;
   const quickContextMenuCommands = document.querySelector('#quickContextMenuCommands input').checked;
   const showUnblockButton = document.querySelector('#showUnblockButton input').checked;
 
+  // @TODO:
+  // On Firefox 55 (and upwards?) the request prompts repeatedly even if the
+  // permissions are already granted.
   return new Promise((resolve, reject) => {
-    chrome.runtime.sendMessage({
-      cmd: 'updateOptions',
-      args: {
-        userBlacklist,
-        userWhitelist,
-        webBlacklists,
-        transformRules,
-        showLinkMarkers,
-        showContextMenuCommands,
-        quickContextMenuCommands,
-        showUnblockButton,
-      },
-    }, (result) => {
-      result ? resolve(result) : reject(new Error('Unable to save options.'));
+    if (!suppressHistory || !chrome.permissions) {
+      resolve(false);
+      return;
+    }
+
+    chrome.permissions.request({permissions: ['history']}, resolve);
+  }).then((response) => {
+    if (!response) {
+      suppressHistory = document.querySelector('#suppressHistory input').checked = false;
+    }
+  }).then(() => {
+    return new Promise((resolve, reject) => {
+      chrome.runtime.sendMessage({
+        cmd: 'updateOptions',
+        args: {
+          userBlacklist,
+          userWhitelist,
+          webBlacklists,
+          transformRules,
+          suppressHistory,
+          showLinkMarkers,
+          showContextMenuCommands,
+          quickContextMenuCommands,
+          showUnblockButton,
+        },
+      }, (result) => {
+        result ? resolve(result) : reject(new Error('Unable to save options.'));
+      });
     });
   });
 }
@@ -72,6 +91,20 @@ document.addEventListener('DOMContentLoaded', (event) => {
     document.querySelector('#transformRules').hidden = true;
     document.querySelector('#showContextMenuCommands').hidden = true;
     document.querySelector('#quickContextMenuCommands').hidden = true;
+  }
+
+  // hide some options if chrome.history is not available
+  if (!chrome.permissions && !chrome.history) {
+    // Firefox supports chrome.permissions since >= 55. In prior versions
+    // permissions listed in "optional_permissions" are ignored.
+    document.querySelector('#suppressHistory').hidden = true;
+  } else if (chrome.permissions) {
+    // The promise is rejected if chrome.history is not supported.
+    new Promise((resolve, reject) => {
+      chrome.permissions.request({permissions: ['history']}, resolve);
+    }).catch((ex) => {
+      document.querySelector('#suppressHistory').hidden = true;
+    });
   }
 
   loadOptions();

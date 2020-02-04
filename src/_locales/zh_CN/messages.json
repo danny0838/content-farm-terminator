@@ -256,6 +256,11 @@
     "description": "Label of showUnblockButton in options page"
   },
 
+  "suppressHistory": {
+    "message": "终结内容农场相关页面不产生历史记录",
+    "description": "Label of suppressHistory in options page"
+  },
+
   "report": {
     "message": "举报内容农场",
     "description": "Label of report button in options page"
