@@ -2,6 +2,97 @@ let filter = new ContentFarmFilter();
 let updateFilterPromise;
 let tempUnblockTabs = new Set();
 
+const contextMenuController = {
+  quickMode: false,
+
+  create() {
+    return Promise.resolve().then(() => {
+      if (!chrome.contextMenus) { return; }
+
+      return Promise.resolve().then(() => {
+        // Available only in Firefox >= 53.
+        if (chrome.contextMenus.ContextType.TAB) {
+          return new Promise((resolve, reject) => {
+            chrome.contextMenus.create({
+              title: utils.lang("blockTab"),
+              contexts: ["tab"],
+              documentUrlPatterns: ["http://*/*", "https://*/*"],
+              onclick: (info, tab) => {
+                return blockSite(info.pageUrl, tab.id, 0, this.quickMode);
+              }
+            }, resolve);
+          });
+        }
+      }).then(() => {
+        return new Promise((resolve, reject) => {
+          chrome.contextMenus.create({
+            title: utils.lang("blockPage"),
+            contexts: ["page"],
+            documentUrlPatterns: ["http://*/*", "https://*/*"],
+            onclick: (info, tab) => {
+              return blockSite(info.pageUrl, tab.id, info.frameId, this.quickMode);
+            }
+          }, resolve);
+        });
+      }).then(() => {
+        return new Promise((resolve, reject) => {
+          chrome.contextMenus.create({
+            title: utils.lang("blockLink"),
+            contexts: ["link"],
+            documentUrlPatterns: ["http://*/*", "https://*/*"],
+            onclick: (info, tab) => {
+              return new Promise((resolve, reject) => {
+                chrome.tabs.sendMessage(tab.id, {
+                  cmd: 'getRedirectedLinkUrl'
+                }, {frameId: info.frameId}, resolve);
+              }).then((redirectedUrl) => {
+                const rule = redirectedUrl || info.linkUrl;
+                return blockSite(rule, tab.id, info.frameId, this.quickMode);
+              });
+            }
+          }, resolve);
+        });
+      }).then(() => {
+        return new Promise((resolve, reject) => {
+          chrome.contextMenus.create({
+            title: utils.lang("blockSelection"),
+            contexts: ["selection"],
+            documentUrlPatterns: ["http://*/*", "https://*/*"],
+            onclick: (info, tab) => {
+              return blockSite(info.selectionText, tab.id, info.frameId, this.quickMode);
+            }
+          }, resolve);
+        });
+      });
+    });
+  },
+
+  refresh(options = [
+    "showContextMenuCommands",
+    "quickContextMenuCommands",
+  ]) {
+    return Promise.resolve().then(() => {
+      if (!chrome.contextMenus) { return; }
+
+      return utils.getOptions(options).then(({showContextMenuCommands, quickContextMenuCommands}) => {
+        if (typeof quickContextMenuCommands !== 'undefined') {
+          this.quickMode = !!quickContextMenuCommands;
+        }
+
+        if (typeof showContextMenuCommands !== 'undefined') {
+          return new Promise((resolve, reject) => {
+            chrome.contextMenus.removeAll(resolve);
+          }).then(() => {
+            if (showContextMenuCommands) {
+              return this.create();
+            }
+          });
+        }
+      });
+    });
+  },
+};
+
 function updateFilter() {
   return updateFilterPromise = utils.getDefaultOptions().then((options) => {
     const newFilter = new ContentFarmFilter();
@@ -81,70 +172,6 @@ function blockSite(rule, tabId, frameId, quickMode) {
           args: {msg: utils.lang("blockSiteSuccess", rule)}
         }, {frameId}, resolve);
       });
-    });
-  });
-}
-
-function updateContextMenus() {
-  if (!chrome.contextMenus) { return; }
-
-  let quickMode = false;
-
-  const createContextMenuCommands = function () {
-    try {
-      chrome.contextMenus.create({
-        title: utils.lang("blockTab"),
-        contexts: ["tab"],
-        documentUrlPatterns: ["http://*/*", "https://*/*"],
-        onclick: (info, tab) => {
-          return blockSite(info.pageUrl, tab.id, 0, quickMode);
-        }
-      });
-    } catch (ex) {
-      // Available only in Firefox >= 53. Otherwise ignore the error.
-    }
-
-    chrome.contextMenus.create({
-      title: utils.lang("blockPage"),
-      contexts: ["page"],
-      documentUrlPatterns: ["http://*/*", "https://*/*"],
-      onclick: (info, tab) => {
-        return blockSite(info.pageUrl, tab.id, info.frameId, quickMode);
-      }
-    });
-
-    chrome.contextMenus.create({
-      title: utils.lang("blockLink"),
-      contexts: ["link"],
-      documentUrlPatterns: ["http://*/*", "https://*/*"],
-      onclick: (info, tab) => {
-        return new Promise((resolve, reject) => {
-          chrome.tabs.sendMessage(tab.id, {
-            cmd: 'getRedirectedLinkUrl'
-          }, {frameId: info.frameId}, resolve);
-        }).then((redirectedUrl) => {
-          const rule = redirectedUrl || info.linkUrl;
-          return blockSite(rule, tab.id, info.frameId, quickMode);
-        });
-      }
-    });
-
-    chrome.contextMenus.create({
-      title: utils.lang("blockSelection"),
-      contexts: ["selection"],
-      documentUrlPatterns: ["http://*/*", "https://*/*"],
-      onclick: (info, tab) => {
-        return blockSite(info.selectionText, tab.id, info.frameId, quickMode);
-      }
-    });
-  };
-
-  chrome.contextMenus.removeAll(() => {
-    utils.getDefaultOptions().then((options) => {
-      if (options.showContextMenuCommands) {
-        createContextMenuCommands();
-      }
-      quickMode = options.quickContextMenuCommands;
     });
   });
 }
@@ -310,7 +337,10 @@ chrome.storage.onChanged.addListener((changes, areaName) => {
   }
 
   if ("showContextMenuCommands" in changes || "quickContextMenuCommands" in changes) {
-    updateContextMenus();
+    const options = [];
+    if ("showContextMenuCommands" in changes) { options.push("showContextMenuCommands"); }
+    if ("quickContextMenuCommands" in changes) { options.push("quickContextMenuCommands"); }
+    contextMenuController.refresh(options);
   }
 
   updateFilter().then(() => {
@@ -387,7 +417,7 @@ if (chrome.browserAction) {
   chrome.pageAction.show(0);
 }
 
-updateContextMenus();
+contextMenuController.refresh();
 
 updateFilter().then(() => {
   onBeforeRequestCallback = onBeforeRequestBlocker;
