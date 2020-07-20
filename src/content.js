@@ -369,6 +369,36 @@ function updateLinkMarker(elem) {
         anchorMarkerMap.set(elem, marker);
       }
       if (!marker.parentNode) {
+        // insert before a non-blank text node preceeding all element nodes
+        for (const node of elem.childNodes) {
+          if (node.nodeType === 3 && node.nodeValue.trim()) {
+            elem.insertBefore(marker, node);
+            return;
+          } else if (node.nodeType === 1) {
+            break;
+          }
+        }
+
+        // insert in the first header descendant
+        for (const node of elem.querySelectorAll('h1, h2, h3, h4, h5, h6')) {
+          if (node.offsetParent && node.textContent.trim()) {
+            node.insertBefore(marker, node.firstChild);
+            return;
+          }
+        }
+
+        // insert in the first span-like descendant
+        for (const node of elem.querySelectorAll('span, div, b')) {
+          if (node.offsetParent) {
+            const firstChild = node.firstChild;
+            if (firstChild && firstChild.nodeType === 3 && firstChild.nodeValue.trim()) {
+              node.insertBefore(marker, firstChild);
+              return;
+            }
+          }
+        }
+
+        // insert as the first anchor child 
         elem.insertBefore(marker, elem.firstChild);
       }
     } else {
