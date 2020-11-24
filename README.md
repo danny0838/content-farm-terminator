@@ -30,5 +30,6 @@
 * [終結內容農場功能介紹](https://content-farm-terminator.blogspot.com/2018/12/content-farm-terminator-intro.html)
 
 ## 下載及安裝
-* [Chrome 擴充功能](https://chrome.google.com/webstore/detail/content-farm-terminator/lcghoajegeldpfkfaejegfobkapnemjl)
+* [Chrome 擴充功能](https://chrome.google.com/webstore/detail/lcghoajegeldpfkfaejegfobkapnemjl)
+* [Edge 擴充功能](https://microsoftedge.microsoft.com/addons/detail/fgckcfkpckemdnnejbbfkkchanedbeje)
 * [Firefox 附加元件](https://addons.mozilla.org/firefox/addon/content-farm-terminator/)
