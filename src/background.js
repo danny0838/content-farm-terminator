@@ -372,11 +372,14 @@ function initStorageChangeListener() {
       } catch(ex) {}
     }
 
-    if ("showContextMenuCommands" in changes || "quickContextMenuCommands" in changes) {
-      const options = [];
-      if ("showContextMenuCommands" in changes) { options.push("showContextMenuCommands"); }
-      if ("quickContextMenuCommands" in changes) { options.push("quickContextMenuCommands"); }
-      contextMenuController.refresh(options);
+    {
+      const contextMenuOptions = [
+        "showContextMenuCommands",
+        "quickContextMenuCommands",
+      ].filter(x => x in changes);
+      if (contextMenuOptions.length) {
+        contextMenuController.refresh(contextMenuOptions);
+      }
     }
 
     if ("suppressHistory" in changes) {
