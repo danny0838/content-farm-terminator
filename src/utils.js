@@ -218,10 +218,10 @@ const utils = {
     return chrome.i18n.getMessage(key, args) || "__MSG_" + key + "__";
   },
 
-  get loadLanguages() {
+  loadLanguages(...args) {
     const reReplacer = /__MSG_(.*?)__/;
     const fnReplacer = (m, k) => utils.lang(k);
-    const fn = function loadLanguages(rootNode = document) {
+    const fn = this.loadLanguages = (rootNode = document) => {
       Array.prototype.forEach.call(rootNode.getElementsByTagName("*"), (elem) => {
         if (elem.childNodes.length === 1) {
           const child = elem.firstChild;
@@ -234,11 +234,10 @@ const utils = {
         }, this);
       }, this);
     };
-    Object.defineProperty(this, 'loadLanguages', { value: fn });
-    return fn;
+    return fn(...args);
   },
 
-  get escapeHtml() {
+  escapeHtml(...args) {
     const reEscaper = /[&<>"']| (?= )/g;
     const mapEscaper = {
       "&": "&amp;",
@@ -249,20 +248,19 @@ const utils = {
       " ": "&nbsp;"
     };
     const fnEscaper = m => mapEscaper[m];
-    const fn = function escapeHtml(str, noDoubleQuotes = false, singleQuotes = false, spaces = false) {
+    const fn = this.escapeHtml = (str, noDoubleQuotes = false, singleQuotes = false, spaces = false) => {
       mapEscaper['"'] = noDoubleQuotes ? '"' : "&quot;";
       mapEscaper["'"] = singleQuotes ? "&#39;" : "'";
       mapEscaper[" "] = spaces ? "&nbsp;" : " ";
       return str.replace(reEscaper, fnEscaper);
     };
-    Object.defineProperty(this, 'escapeHtml', { value: fn });
-    return fn;
+    return fn(...args);
   },
 
-  get escapeRegExp() {
+  escapeRegExp(...args) {
     const reStandard = /[-\/\\^$*+?.|()[\]{}]/g;
     const reSimple = /[\\^$*+?.|()[\]{}]/g;
-    const fn = function escapeRegExp(str, simple) {
+    const fn = this.escapeRegExp = (str, simple) => {
       if (simple) {
         // Do not escape "-" and "/"
         return str.replace(reSimple, "\\$&");
@@ -271,8 +269,7 @@ const utils = {
       // Escaping "/" allow the result to be used in a JS regex literal.
       return str.replace(reStandard, "\\$&");
     };
-    Object.defineProperty(this, 'escapeRegExp', { value: fn });
-    return fn;
+    return fn(...args);
   },
 
   getNormalizedUrl(urlObj) {
@@ -287,13 +284,12 @@ const utils = {
         urlObj.pathname + urlObj.search + urlObj.hash;
   },
 
-  get getLines() {
+  getLines(...args) {
     const reSplitter = /\n|\r\n?/;
-    const fn = function getLines(str) {
+    const fn = this.getLines = (str) => {
       return (str || "").split(reSplitter);
     };
-    Object.defineProperty(this, 'getLines', { value: fn });
-    return fn;
+    return fn(...args);
   },
 
   versionCompare(v1, v2) {
@@ -443,9 +439,9 @@ class ContentFarmFilter {
     });
   }
 
-  get addTransformRules() {
+  addTransformRules(...args) {
     const reReplacer = /\\\*/g;
-    const fn = function addTransformRules(rulesText) {
+    const fn = this.addTransformRules = (rulesText) => {
       utils.getLines(rulesText).forEach((ruleLine) => {
         let {pattern, replace} = this.parseTransformRuleLine(ruleLine);
 
@@ -462,8 +458,7 @@ class ContentFarmFilter {
         }
       });
     };
-    Object.defineProperty(this, 'addTransformRules', { value: fn });
-    return fn;
+    return fn(...args);
   }
 
   /**
@@ -493,21 +488,20 @@ class ContentFarmFilter {
     return this._blacklist.rules.has(rule);
   }
 
-  get urlsTextToLines() {
+  urlsTextToLines(...args) {
     const reTidy = /[\s#].*$/g;
-    const fn = function urlsTextToLines(urlsText) {
+    const fn = this.urlsTextToLines = (urlsText) => {
       return utils
         .getLines(urlsText)
         .map(u => u.replace(reTidy, ''))
         .filter(x => !!x.trim());
     };
-    Object.defineProperty(this, 'urlsTextToLines', { value: fn });
-    return fn;
+    return fn(...args);
   }
 
-  get transformRule() {
+  transformRule(...args) {
     const regex = /\$([$&`']|\d+)/g;
-    const fn = function transformRule(rule) {
+    const fn = this.transformRule = (rule) => {
       this._transformRules.some((tRule) => {
         const match = tRule.pattern.exec(rule);
         if (match) {
@@ -550,11 +544,10 @@ class ContentFarmFilter {
       });
       return rule;
     };
-    Object.defineProperty(this, 'transformRule', { value: fn });
-    return fn;
+    return fn(...args);
   }
 
-  get validateRule() {
+  validateRule(...args) {
     const reHostEscaper = /[xX*]/g;
     const reHostUnescaper = /x[xa]/g;
     const mapHostEscaper = {"x": "xx", "X": "xX", "*": "xa"};
@@ -563,7 +556,7 @@ class ContentFarmFilter {
     const fnHostUnescaper = m => mapHostUnescaper[m];
     const reSchemeChecker = /^[A-Za-z][0-9A-za-z.+-]*:\/\//;
     const reWwwRemover = /^www\./;
-    const fn = function validateRule(rule) {
+    const fn = this.validateRule = (rule) => {
       if (!rule) { return ""; }
 
       if (rule.startsWith('/') && rule.endsWith('/')) {
@@ -599,8 +592,7 @@ class ContentFarmFilter {
       }
       return "";
     };
-    Object.defineProperty(this, 'validateRule', { value: fn });
-    return fn;
+    return fn(...args);
   }
 
   validateRulesText(rulesText, transform = false) {
@@ -625,10 +617,10 @@ class ContentFarmFilter {
    *     - {boolean} transform
    *     - {boolean} asString
    */
-  get parseRuleLine() {
+  parseRuleLine(...args) {
     const reSpaceMatcher = /^(\S*)(\s*)(.*)$/;
     const reSchemeChecker = /^[A-Za-z][0-9A-za-z.+-]*:/;
-    const fn = function parseRuleLine(ruleLine, options = {}) {
+    const fn = this.parseRuleLine = (ruleLine, options = {}) => {
       let [, rule, sep, comment] = (ruleLine || "").match(reSpaceMatcher);
 
       if (options.transform) {
@@ -661,8 +653,7 @@ class ContentFarmFilter {
 
       return {rule, sep, comment};
     };
-    Object.defineProperty(this, 'parseRuleLine', {value: fn});
-    return fn;
+    return fn(...args);
   }
 
   /**
@@ -670,9 +661,9 @@ class ContentFarmFilter {
    *     - {boolean} validate
    *     - {boolean} asString
    */
-  get parseTransformRuleLine() {
+  parseTransformRuleLine(...args) {
     const reSpaceMatcher = /^(\S*)(\s*)(\S*)(\s*)(.*)$/;
-    const fn = function parseTransformRuleLine(ruleLine, options = {}) {
+    const fn = this.parseTransformRuleLine = (ruleLine, options = {}) => {
       let [, pattern, sep, replace, sep2, comment] = (ruleLine || "").match(reSpaceMatcher);
 
       if (options.validate) {
@@ -685,11 +676,10 @@ class ContentFarmFilter {
 
       return {pattern, sep, replace, sep2, comment};
     };
-    Object.defineProperty(this, 'parseTransformRuleLine', {value: fn});
-    return fn;
+    return fn(...args);
   }
 
-  get makeMergedRegex() {
+  makeMergedRegex(...args) {
     const reReplacer = /\\\*/g;
     const mergeFunc = function getMergedRegex(blockList) {
       let standardRules = [];
@@ -714,15 +704,14 @@ class ContentFarmFilter {
           (regexRules ? "|" + regexRules : "");
       blockList.mergedRe = new RegExp(re);
     };
-    const fn = function makeMergedRegex(blockList) {
+    const fn = this.makeMergedRegex = (blockList) => {
       if (this._listUpdated) {
         this._listUpdated = false;
         mergeFunc(this._blacklist);
         mergeFunc(this._whitelist);
       }
     };
-    Object.defineProperty(this, 'makeMergedRegex', {value: fn});
-    return fn;
+    return fn(...args);
   }
 
   getMergedBlacklist() {
