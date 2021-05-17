@@ -462,25 +462,29 @@ class ContentFarmFilter {
   }
 
   /**
-   * @param {string} url - url or hostname
+   * @param {string} urlOrHostname - url or hostname
    * @return {number} 0: not blocked; 1: blocked by standard rule; 2: blocked by regex rule
    */
-  isBlocked(url) {
-    let u;
-    try {
-      u = new URL((url.indexOf(":") !== -1) ? url : 'http://' + url);
-      u = utils.getNormalizedUrl(u);
-    } catch (ex) {
-      // bad URL
+  isBlocked(...args) {
+    const reSchemeChecker = /^[A-Za-z][0-9A-za-z.+-]*:\/\//;
+    const fn = this.isBlocked = (urlOrHostname) => {
+      let u;
+      try {
+        u = new URL(reSchemeChecker.test(urlOrHostname) ? urlOrHostname : 'http://' + urlOrHostname);
+        u = utils.getNormalizedUrl(u);
+      } catch (ex) {
+        // bad URL
+        return 0;
+      }
+
+      // update the regex if the rules have been changed
+      this.makeMergedRegex();
+
+      if (this._whitelist.mergedRe.test(u)) { return 0; }
+      if (this._blacklist.mergedRe.test(u)) { return RegExp.$1 ? 1 : 2; }
       return 0;
-    }
-
-    // update the regex if the rules have been changed
-    this.makeMergedRegex();
-
-    if (this._whitelist.mergedRe.test(u)) { return 0; }
-    if (this._blacklist.mergedRe.test(u)) { return RegExp.$1 ? 1 : 2; }
-    return 0;
+    };
+    return fn(...args);
   }
 
   isInBlacklist(ruleLine) {
