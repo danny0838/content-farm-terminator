@@ -404,19 +404,29 @@ function initStorageChangeListener() {
       autoUpdateFilter();
     }
 
-    updateFilter().then(() => {
-      // @TODO:
-      // Say we have a shift from local to sync:
-      //
-      //     local {webBlacklists: "list1\nlist2"} => sync {webBlacklists: "list1"}
-      //     sync  {webBlacklists: ""}
-      //
-      // We get a change of sync: "" => "list1" and a change of local: "list1\nlist2" => undefined,
-      // and the cache of list2 is not cleared, while it should be, leaving staled cache not cleared.
-      if (changes.webBlacklists) {
-        filter.clearStaleWebListCache(changes.webBlacklists);
+    {
+      const listOptions = [
+        "webBlacklists",
+        "userBlacklist",
+        "userWhitelist",
+        "transformRules",
+      ].filter(x => x in changes);
+      if (listOptions.length) {
+        updateFilter().then(() => {
+          // @TODO:
+          // Say we have a shift from local to sync:
+          //
+          //     local {webBlacklists: "list1\nlist2"} => sync {webBlacklists: "list1"}
+          //     sync  {webBlacklists: ""}
+          //
+          // We get a change of sync: "" => "list1" and a change of local: "list1\nlist2" => undefined,
+          // and the cache of list2 is not cleared, while it should be, leaving staled cache not cleared.
+          if (changes.webBlacklists) {
+            filter.clearStaleWebListCache(changes.webBlacklists);
+          }
+        });
       }
-    });
+    }
   });
 }
 
