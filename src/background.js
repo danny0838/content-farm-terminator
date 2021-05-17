@@ -1,5 +1,6 @@
 let filter = new ContentFarmFilter();
 let updateFilterPromise;
+let autoUpdateFilterTimer;
 let tempUnblockTabs = new Set();
 
 const contextMenuController = {
@@ -250,6 +251,19 @@ function onBeforeRequestCallback(details) {
   });
 };
 
+function autoUpdateFilter() {
+  if (autoUpdateFilterTimer) {
+    clearInterval(autoUpdateFilterTimer);
+    autoUpdateFilterTimer = null;
+  }
+
+  return utils.getOptions([
+    "webBlacklistsUpdateInterval",
+  ]).then(({webBlacklistsUpdateInterval}) => {
+    autoUpdateFilterTimer = setInterval(updateFilter, webBlacklistsUpdateInterval);
+  });
+}
+
 function initBeforeRequestListener() {
   chrome.webRequest.onBeforeRequest.addListener((details) => {
     return onBeforeRequestCallback(details);
@@ -386,6 +400,10 @@ function initStorageChangeListener() {
       historyController.refresh();
     }
 
+    if ("webBlacklistsUpdateInterval" in changes) {
+      autoUpdateFilter();
+    }
+
     updateFilter().then(() => {
       // @TODO:
       // Say we have a shift from local to sync:
@@ -466,14 +484,11 @@ function init() {
   contextMenuController.refresh(); // async
   historyController.refresh(); // async
 
-  updateFilter().then(() => {
-    onBeforeRequestCallback = onBeforeRequestBlocker;
-    return utils.getOptions([
-      "webBlacklistsUpdateInterval",
-    ]).then((options) => {
-      setInterval(updateFilter, options.webBlacklistsUpdateInterval);
+  updateFilter() // async
+    .then(() => {
+      onBeforeRequestCallback = onBeforeRequestBlocker;
+      return autoUpdateFilter();
     });
-  });
 }
 
 init();
