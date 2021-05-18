@@ -1,5 +1,3 @@
-const validator = new ContentFarmFilter();
-
 function quit() {
   if (history.length > 1) {
     history.go(-1);
