@@ -96,13 +96,9 @@ const historyController = {
     if (!browser.history) { return; }
 
     if (willListen) {
-      if (!browser.history.onVisited.hasListener(this.onVisited)) {
-        browser.history.onVisited.addListener(this.onVisited);
-      }
+      browser.history.onVisited.addListener(this.onVisited);
     } else {
-      if (browser.history.onVisited.hasListener(this.onVisited)) {
-        browser.history.onVisited.removeListener(this.onVisited);
-      }
+      browser.history.onVisited.removeListener(this.onVisited);
     }
   },
 
