@@ -26,21 +26,17 @@ function recheckCurrentUrl(urlChanged = false) {
     // skip further check if document URL doesn't change
     if (!urlChanged) { return urlChanged; }
 
-    return new Promise((resolve, reject) => {
-      chrome.runtime.sendMessage({
-        cmd: 'isTempUnblocked',
-        args: {},
-      }, resolve);
+    return browser.runtime.sendMessage({
+      cmd: 'isTempUnblocked',
+      args: {},
     }).then((isTempUnblocked) => {
       // skip further check if this tab is temporarily unblocked
       if (isTempUnblocked) { return urlChanged; }
 
       // check if the current document URL is blocked
-      return new Promise((resolve, reject) => {
-        chrome.runtime.sendMessage({
-          cmd: 'isUrlBlocked',
-          args: {url: docHref},
-        }, resolve);
+      return browser.runtime.sendMessage({
+        cmd: 'isUrlBlocked',
+        args: {url: docHref},
       }).then((blockType) => {
         if (blockType) {
           const inFrame = (self !== top);
@@ -327,11 +323,9 @@ function updateLinkMarker(elem) {
     if (!(c === "http:" || c === "https:")) { return false; }
 
     // check whether the URL is blocked
-    return new Promise((resolve, reject) => {
-      chrome.runtime.sendMessage({
-        cmd: 'isUrlBlocked',
-        args: {url: u.href}
-      }, resolve);
+    return browser.runtime.sendMessage({
+      cmd: 'isUrlBlocked',
+      args: {url: u.href}
     }).then((blockType) => {
       if (blockType) { return true; }
 
@@ -339,11 +333,9 @@ function updateLinkMarker(elem) {
       return getRedirectedUrlOrHostname(elem).then((urlOrHostname) => {
         if (!urlOrHostname) { return false; }
 
-        return new Promise((resolve, reject) => {
-          chrome.runtime.sendMessage({
-            cmd: 'isUrlBlocked',
-            args: {url: urlOrHostname}
-          }, resolve);
+        return browser.runtime.sendMessage({
+          cmd: 'isUrlBlocked',
+          args: {url: urlOrHostname}
         });
       });
     });
@@ -352,7 +344,7 @@ function updateLinkMarker(elem) {
     if (willBlock) {
       if (!marker) {
         marker = elem.ownerDocument.createElement('img');
-        marker.src = chrome.runtime.getURL('img/content-farm-marker.svg');
+        marker.src = browser.runtime.getURL('img/content-farm-marker.svg');
         marker.style = 'display: inline-block !important;' + 
           'visibility: visible !important;' + 
           'position: relative !important;' + 
@@ -466,7 +458,7 @@ function observeDomUpdates() {
   });
 }
 
-chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
+browser.runtime.onMessage.addListener((message, sender, sendResponse) => {
   //console.warn("omMessage", message);
   const {cmd, args} = message;
   switch (cmd) {

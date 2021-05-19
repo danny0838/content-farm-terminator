@@ -2,10 +2,10 @@ function quit() {
   if (history.length > 1) {
     history.go(-1);
   } else {
-    chrome.tabs.getCurrent((tab) => {
-      chrome.runtime.sendMessage({
+    browser.tabs.getCurrent().then((tab) => {
+      browser.runtime.sendMessage({
         cmd: 'closeTab',
-        args: {tabId: tab.id}
+        args: {tabId: tab.id},
       });
     });
   }
@@ -23,10 +23,8 @@ function loadOptions() {
     document.querySelector('#quickContextMenuCommands input').checked = options.quickContextMenuCommands;
     document.querySelector('#showUnblockButton input').checked = options.showUnblockButton;
 
-    return new Promise((resolve, reject) => {
-      chrome.runtime.sendMessage({
-        cmd: 'getMergedBlacklist',
-      }, resolve);
+    return browser.runtime.sendMessage({
+      cmd: 'getMergedBlacklist',
     }).then((blacklist) => {
       document.querySelector('#allBlacklist textarea').value = blacklist;
     });
@@ -47,35 +45,30 @@ function saveOptions() {
   // @TODO:
   // On Firefox 55 (and upwards?) the request prompts repeatedly even if the
   // permissions are already granted.
-  return new Promise((resolve, reject) => {
-    if (!suppressHistory || !chrome.permissions) {
-      resolve(false);
-      return;
+  return Promise.resolve().then(() => {
+    if (!suppressHistory || !browser.permissions) {
+      return false;
     }
 
-    chrome.permissions.request({permissions: ['history']}, resolve);
+    return browser.permissions.request({permissions: ['history']});
   }).then((response) => {
     if (!response) {
       suppressHistory = document.querySelector('#suppressHistory input').checked = false;
     }
   }).then(() => {
-    return new Promise((resolve, reject) => {
-      chrome.runtime.sendMessage({
-        cmd: 'updateOptions',
-        args: {
-          userBlacklist,
-          userWhitelist,
-          webBlacklists,
-          transformRules,
-          suppressHistory,
-          showLinkMarkers,
-          showContextMenuCommands,
-          quickContextMenuCommands,
-          showUnblockButton,
-        },
-      }, (result) => {
-        result ? resolve(result) : reject(new Error('Unable to save options.'));
-      });
+    return browser.runtime.sendMessage({
+      cmd: 'updateOptions',
+      args: {
+        userBlacklist,
+        userWhitelist,
+        webBlacklists,
+        transformRules,
+        suppressHistory,
+        showLinkMarkers,
+        showContextMenuCommands,
+        quickContextMenuCommands,
+        showUnblockButton,
+      },
     });
   });
 }
@@ -85,19 +78,19 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
   // hide some options if contextMenus is not available
   // (e.g. Firefox for Android)
-  if (!chrome.contextMenus) {
+  if (!browser.contextMenus) {
     document.querySelector('#transformRules').hidden = true;
     document.querySelector('#showContextMenuCommands').hidden = true;
     document.querySelector('#quickContextMenuCommands').hidden = true;
   }
 
-  // hide some options if chrome.history is not available
-  // Firefox supports chrome.permissions since >= 55. In prior versions
+  // hide some options if browser.history is not available
+  // Firefox supports browser.permissions since >= 55. In prior versions
   // permissions listed in "optional_permissions" are ignored.
-  // Firefox for Android does not support chrome.history. Unfortunately,
-  // we cannot detect whether chrome.history is supported by testing
-  // whether chrome.history is defined.
-  if (!chrome.permissions && !chrome.history) {
+  // Firefox for Android does not support browser.history. Unfortunately,
+  // we cannot detect whether browser.history is supported by testing
+  // whether browser.history is defined.
+  if (!browser.permissions && !browser.history) {
     document.querySelector('#suppressHistory').hidden = true;
   }
 

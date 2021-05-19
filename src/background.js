@@ -8,61 +8,51 @@ const contextMenuController = {
 
   create() {
     return Promise.resolve().then(() => {
-      if (!chrome.contextMenus) { return; }
+      if (!browser.contextMenus) { return; }
 
       return Promise.resolve().then(() => {
         // Available only in Firefox >= 53.
-        if (chrome.contextMenus.ContextType.TAB) {
-          return new Promise((resolve, reject) => {
-            chrome.contextMenus.create({
-              title: utils.lang("blockTab"),
-              contexts: ["tab"],
-              documentUrlPatterns: ["http://*/*", "https://*/*"],
-              onclick: (info, tab) => {
-                return blockSite(info.pageUrl, tab.id, 0, this.quickMode);
-              }
-            }, resolve);
+        if (browser.contextMenus.ContextType.TAB) {
+          return browser.contextMenus.create({
+            title: utils.lang("blockTab"),
+            contexts: ["tab"],
+            documentUrlPatterns: ["http://*/*", "https://*/*"],
+            onclick: (info, tab) => {
+              return blockSite(info.pageUrl, tab.id, 0, this.quickMode);
+            },
           });
         }
       }).then(() => {
-        return new Promise((resolve, reject) => {
-          chrome.contextMenus.create({
-            title: utils.lang("blockPage"),
-            contexts: ["page"],
-            documentUrlPatterns: ["http://*/*", "https://*/*"],
-            onclick: (info, tab) => {
-              return blockSite(info.pageUrl, tab.id, info.frameId, this.quickMode);
-            }
-          }, resolve);
+        return browser.contextMenus.create({
+          title: utils.lang("blockPage"),
+          contexts: ["page"],
+          documentUrlPatterns: ["http://*/*", "https://*/*"],
+          onclick: (info, tab) => {
+            return blockSite(info.pageUrl, tab.id, info.frameId, this.quickMode);
+          },
         });
       }).then(() => {
-        return new Promise((resolve, reject) => {
-          chrome.contextMenus.create({
-            title: utils.lang("blockLink"),
-            contexts: ["link"],
-            documentUrlPatterns: ["http://*/*", "https://*/*"],
-            onclick: (info, tab) => {
-              return new Promise((resolve, reject) => {
-                chrome.tabs.sendMessage(tab.id, {
-                  cmd: 'getRedirectedLinkUrl'
-                }, {frameId: info.frameId}, resolve);
-              }).then((redirectedUrl) => {
-                const rule = redirectedUrl || info.linkUrl;
-                return blockSite(rule, tab.id, info.frameId, this.quickMode);
-              });
-            }
-          }, resolve);
+        return browser.contextMenus.create({
+          title: utils.lang("blockLink"),
+          contexts: ["link"],
+          documentUrlPatterns: ["http://*/*", "https://*/*"],
+          onclick: (info, tab) => {
+            return browser.tabs.sendMessage(tab.id, {
+              cmd: 'getRedirectedLinkUrl'
+            }, {frameId: info.frameId}).then((redirectedUrl) => {
+              const rule = redirectedUrl || info.linkUrl;
+              return blockSite(rule, tab.id, info.frameId, this.quickMode);
+            });
+          },
         });
       }).then(() => {
-        return new Promise((resolve, reject) => {
-          chrome.contextMenus.create({
-            title: utils.lang("blockSelection"),
-            contexts: ["selection"],
-            documentUrlPatterns: ["http://*/*", "https://*/*"],
-            onclick: (info, tab) => {
-              return blockSite(info.selectionText, tab.id, info.frameId, this.quickMode);
-            }
-          }, resolve);
+        return browser.contextMenus.create({
+          title: utils.lang("blockSelection"),
+          contexts: ["selection"],
+          documentUrlPatterns: ["http://*/*", "https://*/*"],
+          onclick: (info, tab) => {
+            return blockSite(info.selectionText, tab.id, info.frameId, this.quickMode);
+          },
         });
       });
     });
@@ -73,23 +63,23 @@ const contextMenuController = {
     "quickContextMenuCommands",
   ]) {
     return Promise.resolve().then(() => {
-      if (!chrome.contextMenus) { return; }
+      if (!browser.contextMenus) { return; }
 
-      return utils.getOptions(options).then(({showContextMenuCommands, quickContextMenuCommands}) => {
-        if (typeof quickContextMenuCommands !== 'undefined') {
-          this.quickMode = !!quickContextMenuCommands;
-        }
+      return utils.getOptions(options)
+        .then(({showContextMenuCommands, quickContextMenuCommands}) => {
+          if (typeof quickContextMenuCommands !== 'undefined') {
+            this.quickMode = !!quickContextMenuCommands;
+          }
 
-        if (typeof showContextMenuCommands !== 'undefined') {
-          return new Promise((resolve, reject) => {
-            chrome.contextMenus.removeAll(resolve);
-          }).then(() => {
-            if (showContextMenuCommands) {
-              return this.create();
-            }
-          });
-        }
-      });
+          if (typeof showContextMenuCommands !== 'undefined') {
+            return browser.contextMenus.removeAll()
+              .then(() => {
+                if (showContextMenuCommands) {
+                  return this.create();
+                }
+              });
+          }
+        });
     });
   },
 };
@@ -97,21 +87,21 @@ const contextMenuController = {
 const historyController = {
   onVisited(result) {
     // suppress extension pages from generating a history entry
-    if (result.url.startsWith(chrome.runtime.getURL(""))) {
-      chrome.history.deleteUrl({url: result.url});
+    if (result.url.startsWith(browser.runtime.getURL(""))) {
+      browser.history.deleteUrl({url: result.url});
     }
   },
 
   listen(willListen) {
-    if (!chrome.history) { return; }
+    if (!browser.history) { return; }
 
     if (willListen) {
-      if (!chrome.history.onVisited.hasListener(this.onVisited)) {
-        chrome.history.onVisited.addListener(this.onVisited);
+      if (!browser.history.onVisited.hasListener(this.onVisited)) {
+        browser.history.onVisited.addListener(this.onVisited);
       }
     } else {
-      if (chrome.history.onVisited.hasListener(this.onVisited)) {
-        chrome.history.onVisited.removeListener(this.onVisited);
+      if (browser.history.onVisited.hasListener(this.onVisited)) {
+        browser.history.onVisited.removeListener(this.onVisited);
       }
     }
   },
@@ -138,34 +128,32 @@ function updateFilter() {
       filter = newFilter;
     });
   }).then(() => {
-    return new Promise((resolve, reject) => {
-      chrome.tabs.query({}, resolve);
-    }).then((tabs) => {
-      tabs.forEach((tab) => {
-        chrome.tabs.sendMessage(tab.id, {
-          cmd: 'updateContent'
-        });
+    return browser.tabs.query({})
+      .then((tabs) => {
+        return Promise.all(tabs.map((tab) => {
+          return browser.tabs.sendMessage(tab.id, {
+            cmd: 'updateContent',
+          }).catch((ex) => {});
+        }));
       });
-    });
   }).catch((ex) => {
     console.error(ex);
   });
 }
 
 function blockSite(rule, tabId, frameId, quickMode) {
-  return new Promise((resolve, reject) => {
+  return Promise.resolve().then(() => {
     rule = (rule || "").trim();
     rule = filter.parseRuleLine(rule, {validate: true, transform: 'standard', asString: true});
 
     if (quickMode) {
-      resolve(rule);
-      return;
+      return rule;
     }
 
-    chrome.tabs.sendMessage(tabId, {
+    return browser.tabs.sendMessage(tabId, {
       cmd: 'blockSite',
-      args: {rule}
-    }, {frameId}, resolve);
+      args: {rule},
+    }, {frameId});
   }).then((rule) => {
     if (!rule) { return; }
 
@@ -176,12 +164,10 @@ function blockSite(rule, tabId, frameId, quickMode) {
         return;
       }
 
-      return new Promise((resolve, reject) => {
-        chrome.tabs.sendMessage(tabId, {
-          cmd: 'alert',
-          args: {msg: utils.lang("blockSiteDuplicated", rule)}
-        }, {frameId}, resolve);
-      });
+      return browser.tabs.sendMessage(tabId, {
+        cmd: 'alert',
+        args: {msg: utils.lang("blockSiteDuplicated", rule)},
+      }, {frameId});
     }
 
     return utils.getOptions({
@@ -198,12 +184,10 @@ function blockSite(rule, tabId, frameId, quickMode) {
         return;
       }
 
-      return new Promise((resolve, reject) => {
-        chrome.tabs.sendMessage(tabId, {
-          cmd: 'alert',
-          args: {msg: utils.lang("blockSiteSuccess", rule)}
-        }, {frameId}, resolve);
-      });
+      return browser.tabs.sendMessage(tabId, {
+        cmd: 'alert',
+        args: {msg: utils.lang("blockSiteSuccess", rule)},
+      }, {frameId});
     });
   });
 }
@@ -226,7 +210,7 @@ function onBeforeRequestBlocker(details) {
     // Using data URI with meta or script refresh works but generates
     // an extra history entry.
     if (utils.userAgent.soup.has('firefox') && utils.userAgent.major < 56) {
-      chrome.tabs.update(details.tabId, {url: redirectUrl});
+      browser.tabs.update(details.tabId, {url: redirectUrl});
       return {cancel: true};
     }
 
@@ -265,13 +249,13 @@ function autoUpdateFilter() {
 }
 
 function initBeforeRequestListener() {
-  chrome.webRequest.onBeforeRequest.addListener((details) => {
+  browser.webRequest.onBeforeRequest.addListener((details) => {
     return onBeforeRequestCallback(details);
   }, {urls: ["*://*/*"], types: ["main_frame", "sub_frame"]}, ["blocking"]);
 }
 
 function initMessageListener() {
-  chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
+  browser.runtime.onMessage.addListener((message, sender, sendResponse) => {
     // console.warn("omMessage", message);
     const {cmd, args} = message;
     switch (cmd) {
@@ -347,18 +331,14 @@ function initMessageListener() {
       case 'closeTab': {
         Promise.resolve().then(() => {
           if (args.tabId) { return [args.tabId]; }
-          return new Promise((resolve, reject) => {
-            chrome.tabs.query({
-              active: true,
-              currentWindow: true
-            }, resolve);
+          return browser.tabs.query({
+            active: true,
+            currentWindow: true
           }).then((tabs) => {
             return tabs.map(x => x.id);
           });
         }).then((tabIds) => {
-          return new Promise((resolve, reject) => {
-            chrome.tabs.remove(tabIds, resolve);
-          });
+          return browser.tabs.remove(tabIds);
         });
         sendResponse(true);
         break;
@@ -368,7 +348,7 @@ function initMessageListener() {
 }
 
 function initStorageChangeListener() {
-  chrome.storage.onChanged.addListener((changes, areaName) => {
+  browser.storage.onChanged.addListener((changes, areaName) => {
     // Config keys are stored in storage.sync and fallbacks to storage.local;
     // cache keys are stored in storage.local and are valid JSON format.
     // We only take action when at least one config key is changed.
@@ -431,7 +411,7 @@ function initStorageChangeListener() {
 }
 
 function initInstallListener() {
-  chrome.runtime.onInstalled.addListener((details) => {
+  browser.runtime.onInstalled.addListener((details) => {
     const {reason, previousVersion} = details;
 
     if (reason === "update" && utils.versionCompare(previousVersion, "2.1.2") === -1) {
@@ -456,19 +436,19 @@ function initInstallListener() {
 }
 
 function initBrowserAction() {
-  if (!chrome.browserAction) {
+  if (!browser.browserAction) {
     // Firefox Android < 55: no browserAction
     // Fallback to pageAction.
     // Firefox Android ignores the tabId parameter and
     // shows the pageAction for all tabs
-    chrome.pageAction.onClicked.addListener((tab) => {
-      const url = chrome.runtime.getURL("options.html");
-      chrome.tabs.create({url: url, active: true});
+    browser.pageAction.onClicked.addListener((tab) => {
+      const url = browser.runtime.getURL("options.html");
+      browser.tabs.create({url: url, active: true});
     });
-    chrome.pageAction.show(0);
+    browser.pageAction.show(0);
   }
 
-  chrome.browserAction.onClicked.addListener((tab) => {
+  browser.browserAction.onClicked.addListener((tab) => {
     let url;
     try {
       const refUrlObj = new URL(tab.url);
@@ -476,11 +456,11 @@ function initBrowserAction() {
         throw new Error('URL not under http(s) protocol.');
       }
       const refUrl = utils.getNormalizedUrl(refUrlObj);
-      url = chrome.runtime.getURL("options.html") + `?from=${encodeURIComponent(refUrl)}`;
+      url = browser.runtime.getURL("options.html") + `?from=${encodeURIComponent(refUrl)}`;
     } catch (ex) {
-      url = chrome.runtime.getURL("options.html");
+      url = browser.runtime.getURL("options.html");
     }
-    chrome.tabs.create({url: url, active: true});
+    browser.tabs.create({url: url, active: true});
   });
 }
 

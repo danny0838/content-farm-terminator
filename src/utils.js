@@ -58,82 +58,32 @@ const utils = {
       options = newOptions;
     }
     const keys = Object.keys(options);
-    return new Promise((resolve, reject) => {
-      chrome.storage.sync.get(keys, (result) => {
-        if (chrome.runtime.lastError) {
-          reject(chrome.runtime.lastError);
-        } else {
-          resolve(result);
-        }
+    return browser.storage.sync.get(keys)
+      .catch((ex) => {})
+      .then((syncResult) => {
+        // merge options from storage.local to options from storage.sync
+        return browser.storage.local.get(keys)
+          .then((result) => {
+            return Object.assign({}, options, syncResult, result);
+          });
       });
-    }).catch((ex) => {}).then((syncResult) => {
-      // merge options from storage.local to options from storage.sync
-      return new Promise((resolve, reject) => {
-        return chrome.storage.local.get(keys, (result) => {
-          if (chrome.runtime.lastError) {
-            reject(chrome.runtime.lastError);
-          } else {
-            resolve(result);
-          }
-        });
-      }).then((result) => {
-        return Object.assign({}, options, syncResult, result);
-      });
-    });
   },
 
   setOptions(options) {
-    return new Promise((resolve, reject) => {
-      chrome.storage.sync.set(options, () => {
-        if (chrome.runtime.lastError) {
-          reject(chrome.runtime.lastError);
-        } else {
-          resolve();
-        }
+    return browser.storage.sync.set(options)
+      .then(() => {
+        return browser.storage.local.remove(Object.keys(options));
+      }, (ex) => {
+        return browser.storage.local.set(options);
       });
-    }).then(() => {
-      return new Promise((resolve, reject) => {
-        chrome.storage.local.remove(Object.keys(options), () => {
-          if (chrome.runtime.lastError) {
-            reject(chrome.runtime.lastError);
-          } else {
-            resolve();
-          }
-        });
-      });
-    }, (ex) => {
-      return new Promise((resolve, reject) => {
-        chrome.storage.local.set(options, () => {
-          if (chrome.runtime.lastError) {
-            reject(chrome.runtime.lastError);
-          } else {
-            resolve();
-          }
-        });
-      });
-    });
   },
 
   clearOptions() {
-    return new Promise((resolve, reject) => {
-      chrome.storage.sync.clear(() => {
-        if (chrome.runtime.lastError) {
-          reject(chrome.runtime.lastError);
-        } else {
-          resolve();
-        }
+    return browser.storage.sync.clear()
+      .catch((ex) => {})
+      .then(() => {
+        return browser.storage.local.clear();
       });
-    }).catch((ex) => {}).then(() => {
-      return new Promise((resolve, reject) => {
-        chrome.storage.local.clear(() => {
-          if (chrome.runtime.lastError) {
-            reject(chrome.runtime.lastError);
-          } else {
-            resolve();
-          }
-        });
-      });
-    });
   },
 
   /**
@@ -152,7 +102,7 @@ const utils = {
     };
 
     // Whether this is a dev build.
-    if (/^\d+\.\d+\.\d+\D/.test(chrome.runtime.getManifest().version)) {
+    if (/^\d+\.\d+\.\d+\D/.test(browser.runtime.getManifest().version)) {
       soup.add('devbuild');
     }
 
@@ -215,7 +165,7 @@ const utils = {
   },
 
   lang(key, args) {
-    return chrome.i18n.getMessage(key, args) || "__MSG_" + key + "__";
+    return browser.i18n.getMessage(key, args) || "__MSG_" + key + "__";
   },
 
   loadLanguages(...args) {
@@ -339,7 +289,7 @@ const utils = {
   },
 
   getBlockedPageUrl(url, blockType = 1, inFrame = false) {
-    const redirectUrl = `${chrome.runtime.getURL('blocked.html')}?to=${encodeURIComponent(url)}&type=${blockType}`;
+    const redirectUrl = `${browser.runtime.getURL('blocked.html')}?to=${encodeURIComponent(url)}&type=${blockType}`;
 
     // A frame may be too small to show full description about blocking.
     // Display a link for opening in a new tab instead.
@@ -350,7 +300,7 @@ const utils = {
 <meta charset="UTF-8">
 </head>
 <body>
-<img src="${utils.escapeHtml(chrome.runtime.getURL("img/content-farm-marker.svg"))}" alt="" style="width: 1em;"><a href="${utils.escapeHtml(redirectUrl, false)}" target="_blank">${utils.lang("viewBlockedFrame")}</a>
+<img src="${utils.escapeHtml(browser.runtime.getURL("img/content-farm-marker.svg"))}" alt="" style="width: 1em;"><a href="${utils.escapeHtml(redirectUrl, false)}" target="_blank">${utils.lang("viewBlockedFrame")}</a>
 </body>
 </html>
 `;
@@ -727,50 +677,29 @@ class ContentFarmFilter {
   }
 
   getWebListCache(url) {
-    return new Promise((resolve, reject) => {
-      const key = this.webListCacheKey(url);
-      chrome.storage.local.get(key, (result) => {
-        if (chrome.runtime.lastError) {
-          reject(chrome.runtime.lastError);
-        } else {
-          resolve(result[key]);
-        }
+    const key = this.webListCacheKey(url);
+    return browser.storage.local.get(key)
+      .catch((ex) => {
+        console.error(ex);
       });
-    }).catch((ex) => {
-      console.error(ex);
-    });
   }
 
   setWebListCache(url, time, rulesText) {
-    return new Promise((resolve, reject) => {
-      chrome.storage.local.set({
-        [this.webListCacheKey(url)]: {time, rulesText}
-      }, () => {
-        if (chrome.runtime.lastError) {
-          reject(chrome.runtime.lastError);
-        } else {
-          resolve();
-        }
+    return browser.storage.local.set({
+      [this.webListCacheKey(url)]: {time, rulesText}
+    })
+      .catch((ex) => {
+        console.error(ex);
       });
-    }).catch((ex) => {
-      console.error(ex);
-    });
   }
 
   clearStaleWebListCache(webListChange) {
-    return new Promise((resolve, reject) => {
-      const {newValue, oldValue} = webListChange;
-      const urlSet = new Set(filter.urlsTextToLines(newValue));
-      const deletedUrls = filter.urlsTextToLines(oldValue).filter(u => !urlSet.has(u));
-      chrome.storage.local.remove(deletedUrls.map(this.webListCacheKey), () => {
-        if (chrome.runtime.lastError) {
-          reject(chrome.runtime.lastError);
-        } else {
-          resolve();
-        }
+    const {newValue, oldValue} = webListChange;
+    const urlSet = new Set(filter.urlsTextToLines(newValue));
+    const deletedUrls = filter.urlsTextToLines(oldValue).filter(u => !urlSet.has(u));
+    return browser.storage.local.remove(deletedUrls.map(this.webListCacheKey))
+      .catch((ex) => {
+        console.error(ex);
       });
-    }).catch((ex) => {
-      console.error(ex);
-    });
   }
 }

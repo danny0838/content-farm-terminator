@@ -33,6 +33,7 @@
 
   "background": {
     "scripts": [
+      "lib/browser-polyfill.js",
       "lib/punycode.js",
       "utils.js",
       "background.js"
@@ -48,6 +49,7 @@
         "file:///*"
       ],
       "js": [
+        "lib/browser-polyfill.js",
         "utils.js",
         "content.js"
       ],
