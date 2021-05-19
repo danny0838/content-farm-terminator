@@ -38,6 +38,7 @@
     "scripts": [
       "lib/punycode.js",
       "utils.js",
+      "content-farm-filter.js",
       "background.js"
     ]
   },

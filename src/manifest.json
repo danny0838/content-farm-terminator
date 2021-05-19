@@ -35,6 +35,7 @@
     "scripts": [
       "lib/browser-polyfill.js",
       "lib/punycode.js",
+      "content-farm-filter.js",
       "utils.js",
       "background.js"
     ]
