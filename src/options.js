@@ -92,17 +92,13 @@ document.addEventListener('DOMContentLoaded', (event) => {
   }
 
   // hide some options if chrome.history is not available
+  // Firefox supports chrome.permissions since >= 55. In prior versions
+  // permissions listed in "optional_permissions" are ignored.
+  // Firefox for Android does not support chrome.history. Unfortunately,
+  // we cannot detect whether chrome.history is supported by testing
+  // whether chrome.history is defined.
   if (!chrome.permissions && !chrome.history) {
-    // Firefox supports chrome.permissions since >= 55. In prior versions
-    // permissions listed in "optional_permissions" are ignored.
     document.querySelector('#suppressHistory').hidden = true;
-  } else if (chrome.permissions) {
-    // The promise is rejected if chrome.history is not supported.
-    new Promise((resolve, reject) => {
-      chrome.permissions.request({permissions: ['history']}, resolve);
-    }).catch((ex) => {
-      document.querySelector('#suppressHistory').hidden = true;
-    });
   }
 
   loadOptions();
