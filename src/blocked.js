@@ -77,17 +77,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
   });
 
   document.querySelector('#back').addEventListener('click', (event) => {
-    if (history.length > 1) {
-      history.go(-1);
-    } else {
-      browser.tabs.getCurrent()
-        .then((tab) => {
-          browser.runtime.sendMessage({
-            cmd: 'closeTab',
-            args: {tabId: tab.id}
-          });
-        });
-    }
+    return utils.back();
   });
 });
 

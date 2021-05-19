@@ -1,16 +1,3 @@
-function quit() {
-  if (history.length > 1) {
-    history.go(-1);
-  } else {
-    browser.tabs.getCurrent().then((tab) => {
-      browser.runtime.sendMessage({
-        cmd: 'closeTab',
-        args: {tabId: tab.id},
-      });
-    });
-  }
-}
-
 function loadOptions() {
   return utils.getDefaultOptions().then((options) => {
     document.querySelector('#userBlacklist textarea').value = options.userBlacklist;
@@ -121,7 +108,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
   document.querySelector('#submitButton').addEventListener('click', (event) => {
     event.preventDefault();
     return saveOptions().then(() => {
-      return quit();
+      return utils.back();
     });
   });
 });

@@ -310,6 +310,21 @@ const utils = {
 
     return redirectUrl;
   },
+
+  back() {
+    if (history.length > 1) {
+      history.go(-1);
+      return;
+    }
+
+    return browser.tabs.getCurrent()
+      .then((tab) => {
+        return browser.runtime.sendMessage({
+          cmd: 'closeTab',
+          args: {tabId: tab.id},
+        });
+      });
+  },
 };
 
 class ContentFarmFilter {
