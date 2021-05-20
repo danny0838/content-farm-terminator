@@ -458,38 +458,31 @@ function observeDomUpdates() {
   });
 }
 
-browser.runtime.onMessage.addListener((message, sender, sendResponse) => {
+browser.runtime.onMessage.addListener((message, sender) => {
   //console.warn("omMessage", message);
   const {cmd, args} = message;
   switch (cmd) {
     case 'updateContent': {
-      utils.getOptions([
+      return utils.getOptions([
         "showLinkMarkers",
       ]).then((options) => {
         showLinkMarkers = options.showLinkMarkers;
-        updateLinkMarkersAll();
-        sendResponse(true);
+        return updateLinkMarkersAll();
       });
-      return true; // async response
-      break;
     }
     case 'blockSite': {
       const rule = prompt(utils.lang("blockSite"), args.rule);
-      sendResponse(rule);
-      break;
+      return Promise.resolve(rule);
     }
     case 'getRedirectedLinkUrl': {
       const anchor = lastRightClickedElem.closest('a[href], area[href]');
-      getRedirectedUrlOrHostname(anchor).then((urlOrHostname) => {
-        sendResponse(urlOrHostname);
+      return getRedirectedUrlOrHostname(anchor).then((urlOrHostname) => {
+        return urlOrHostname;
       });
-      return true; // async response
-      break;
     }
     case 'alert': {
       alert(args.msg);
-      sendResponse(true);
-      break;
+      return Promise.resolve(true);
     }
   }
 });

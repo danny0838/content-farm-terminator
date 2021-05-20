@@ -91,14 +91,13 @@ document.addEventListener('DOMContentLoaded', (event) => {
   });
 });
 
-browser.runtime.onMessage.addListener((message, sender, sendResponse) => {
+browser.runtime.onMessage.addListener((message, sender) => {
   // console.warn("omMessage", message);
   const {cmd, args} = message;
   switch (cmd) {
     case 'updateContent': {
       recheckBlock();
-      sendResponse(true);
-      break;
+      return Promise.resolve(true);
     }
   }
 });

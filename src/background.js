@@ -255,25 +255,21 @@ function initBeforeRequestListener() {
 }
 
 function initMessageListener() {
-  browser.runtime.onMessage.addListener((message, sender, sendResponse) => {
+  browser.runtime.onMessage.addListener((message, sender) => {
     // console.warn("omMessage", message);
     const {cmd, args} = message;
     switch (cmd) {
       case 'isUrlBlocked': {
-        updateFilterPromise.then(() => {
-          const blockType = filter.isBlocked(args.url);
-          sendResponse(blockType);
+        return updateFilterPromise.then(() => {
+          return filter.isBlocked(args.url);
         });
-        return true; // async response
-        break;
       }
       case 'isTempUnblocked': {
-        sendResponse(tempUnblockTabs.has(sender.tab.id));
-        break;
+        return Promise.resolve(tempUnblockTabs.has(sender.tab.id));
       }
       case 'tempUnblock': {
         const tabId = sender.tab.id;
-        utils.getOptions([
+        return utils.getOptions([
           "tempUnblockDuration",
           "tempUnblockCountdownBase",
           "tempUnblockCountdownIncrement",
@@ -286,7 +282,6 @@ function initMessageListener() {
           setTimeout(() => {
             tempUnblockTabs.delete(tabId);
           }, options.tempUnblockDuration);
-          sendResponse(true);
 
           // update countdown
           if (options.tempUnblockLastAccess < 0 ||
@@ -305,16 +300,14 @@ function initMessageListener() {
             tempUnblockCountdown: options.tempUnblockCountdown,
             tempUnblockLastAccess: options.tempUnblockLastAccess,
           });
+        }).then(() => {
+          return true;
         });
-        return true; // async response
-        break;
       }
       case 'getMergedBlacklist': {
-        updateFilterPromise.then(() => {
-          sendResponse(filter.getMergedBlacklist());
+        return updateFilterPromise.then(() => {
+          return filter.getMergedBlacklist();
         });
-        return true; // async response
-        break;
       }
       case 'updateOptions': {
         const validator = new ContentFarmFilter();
@@ -322,11 +315,9 @@ function initMessageListener() {
         validator.addTransformRules(args.transformRules);
         args.userBlacklist = validator.validateRulesText(args.userBlacklist, 'url');
         args.userWhitelist = validator.validateRulesText(args.userWhitelist, 'url');
-        utils.setOptions(args).then(() => {
-          sendResponse(true);
+        return utils.setOptions(args).then(() => {
+          return true;
         });
-        return true; // async response
-        break;
       }
       case 'closeTab': {
         Promise.resolve().then(() => {
@@ -340,8 +331,7 @@ function initMessageListener() {
         }).then((tabIds) => {
           return browser.tabs.remove(tabIds);
         });
-        sendResponse(true);
-        break;
+        return Promise.resolve(true);
       }
     }
   });
