@@ -147,7 +147,7 @@ const utils = {
       soup: soup,
     };
 
-    const dispatch = function() {
+    const dispatch = () => {
       window.dispatchEvent(new CustomEvent('browserInfoLoaded'));
     };
 
@@ -685,7 +685,7 @@ class ContentFarmFilter {
 
   makeMergedRegex(...args) {
     const reReplacer = /\\\*/g;
-    const mergeFunc = function getMergedRegex(blockList) {
+    const mergeFunc = (blockList) => {
       let standardRules = [];
       let regexRules = [];
       blockList.rules.forEach(({rule}) => {

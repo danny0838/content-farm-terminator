@@ -417,7 +417,7 @@ function updateLinkMarkersAll(root = document) {
 }
 
 function observeDomUpdates() {
-  const isAnchor = function (node) {
+  const isAnchor = (node) => {
     let n = node.nodeName.toLowerCase();
     return n === "a" || n === "area";
   };
