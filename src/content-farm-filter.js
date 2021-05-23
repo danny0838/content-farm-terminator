@@ -4,12 +4,10 @@ class ContentFarmFilter {
     this._blacklist = {
       lines: new Set(),
       rules: new Map(),
-      mergedRe: null,
     };
     this._whitelist = {
       lines: new Set(),
       rules: new Map(),
-      mergedRe: null,
     };
     this._transformRules = [];
   }
@@ -103,21 +101,87 @@ class ContentFarmFilter {
    */
   isBlocked(...args) {
     const reSchemeChecker = /^[A-Za-z][0-9A-za-z.+-]*:\/\//;
+    const reIpv4 = /^\d{1,3}(?:\.\d{1,3}){3}$/;
+    const hostnameMatchBlockList = (hostname, blocklist) => {
+      if ((hostname.startsWith('[') && hostname.endsWith(']')) || reIpv4.test(hostname)) {
+        // IP hostname
+        return blocklist.standardRulesDict.match(hostname);
+      }
+
+      // domain name hostname
+      if (hostname.startsWith('www.')) {
+        hostname = hostname.slice(4);
+      }
+
+      const rv = new Map();
+      let domain = hostname;
+      let pos;
+      while (true) {
+        const m = blocklist.standardRulesDict.match(domain);
+        for (const [k, v] of m) {
+          rv.set(k, v);
+          return rv; // return first match
+        }
+        pos = domain.indexOf('.');
+        if (pos === -1) { break; }
+        domain = domain.slice(pos + 1);
+      }
+      return rv;
+    };
+    const urlMatchBlockList = (url, blocklist) => {
+      const rv = new Map();
+      for (const regex of blocklist.regexes) {
+        regex.lastIndex = 0;
+        if (regex.test(url)) {
+          // @TODO: reference the matched rule
+          rv.set(true, true);
+        }
+      }
+      return rv;
+    };
     const fn = this.isBlocked = (urlOrHostname) => {
-      let u;
+      let urlObj;
       try {
-        u = new URL(reSchemeChecker.test(urlOrHostname) ? urlOrHostname : 'http://' + urlOrHostname);
-        u = utils.getNormalizedUrl(u);
+        urlObj = new URL(reSchemeChecker.test(urlOrHostname) ? urlOrHostname : 'http://' + urlOrHostname);
       } catch (ex) {
         // bad URL
         return 0;
       }
 
-      // update the regex if the rules have been changed
       this.makeCachedRules();
+ 
+      // URL.hostname is not punycoded in some old browsers (e.g. Firefox 52)
+      const h = punycode.toASCII(urlObj.hostname);
 
-      if (this._whitelist.mergedRe.test(u)) { return 0; }
-      if (this._blacklist.mergedRe.test(u)) { return RegExp.$1 ? 1 : 2; }
+      let rules;
+      let blocklist;
+
+      blocklist = this._whitelist;
+
+      rules = hostnameMatchBlockList(h, blocklist);
+      if (rules.size) {
+        return 0;
+      }
+
+      const url = utils.getNormalizedUrl(urlObj);
+
+      rules = urlMatchBlockList(url, blocklist);
+      if (rules.size) {
+        return 0;
+      }
+
+      blocklist = this._blacklist;
+
+      rules = hostnameMatchBlockList(h, blocklist);
+      if (rules.size) {
+        return 1;
+      }
+
+      rules = urlMatchBlockList(url, blocklist);
+      if (rules.size) {
+        return 2;
+      }
+
       return 0;
     };
     return fn(...args);
@@ -323,29 +387,29 @@ class ContentFarmFilter {
   }
 
   makeCachedRules(...args) {
-    const reReplacer = /\\\*/g;
     const cacheRules = (blockList) => {
-      let standardRules = [];
-      let regexRules = [];
-      blockList.rules.forEach(({rule}) => {
+      const standardRulesDict = new Trie();
+      const regexRules = [];
+
+      for (const [rule] of blockList.rules) {
         if (rule.startsWith('/') && rule.endsWith('/')) {
           // RegExp rule
           regexRules.push(rule.slice(1, -1));
         } else {
           // standard rule
-          standardRules.push(utils.escapeRegExp(rule).replace(reReplacer, "[^:/?#]*"));
+          let rewrittenRule = rule;
+          rewrittenRule = punycode.toASCII(rewrittenRule);
+          standardRulesDict.add(rewrittenRule, rule);
         }
-      });
-      standardRules = standardRules.join('|');
-      regexRules = regexRules.join('|');
-      // ref: https://tools.ietf.org/html/rfc3986#appendix-A
-      const re = "^https?://" + 
-          "(?:[-._~0-9A-Za-z%!$&'()*+,;=:]+@)?" + 
-          "(?:[^@:/?#]+\\.)?" + 
-          "(" + standardRules + ")" + // capture standard rule
-          "(?=[:/?#]|$)" + 
-          (regexRules ? "|" + regexRules : "");
-      blockList.mergedRe = new RegExp(re);
+      }
+
+      const regexes = [];
+      if (regexRules.length) {
+        regexes.push(new RegExp(regexRules.join('|')));
+      }
+
+      blockList.standardRulesDict = standardRulesDict;
+      blockList.regexes = regexes;
     };
     const fn = this.makeCachedRules = () => {
       if (this._listUpdated) {
@@ -390,5 +454,85 @@ class ContentFarmFilter {
       .catch((ex) => {
         console.error(ex);
       });
+  }
+}
+
+class Trie {
+  constructor() {
+    this._trie = new Map();
+  }
+
+  add(key, value = key) {
+    let trie = this._trie;
+    for (const s of Array.from(key)) {
+      let next = trie.get(s);
+      if (!next) {
+        next = new Map();
+        next.token = s;
+        trie.set(s, next);
+      }
+      trie = next;
+    }
+    let next = trie.get(null);
+    if (!next) {
+      next = new Map();
+      next.token = null;
+      trie.set(null, next);
+    }
+    next.set(value, key);
+  }
+
+  match(str) {
+    const parts = Array.from(str);
+    parts.push(null);
+    return this._match(parts, this._trie, 0);
+  }
+
+  _match(parts, trie, i) {
+    const queue = [[trie, i]];
+    const rv = new Map();
+
+    while (queue.length) {
+      const [trie, i] = queue.pop();
+      const part = parts[i];
+      const subqueue = [];
+      let next;
+
+      if (part === null) {
+        next = trie.get(part);
+        if (typeof next !== 'undefined') {
+          for (const [k, v] of next) {
+            rv.set(k, v);
+            return rv; // return first match
+          }
+        }
+
+        next = trie.get('*');
+        if (typeof next !== 'undefined') {
+          subqueue.push([next, i]);
+        }
+      } else {
+        next = trie.get(part);
+        if (typeof next !== 'undefined') {
+          subqueue.push([next, i + 1]);
+        }
+
+        if (trie.token === '*') {
+          subqueue.push([trie, i + 1]);
+        }
+
+        next = trie.get('*');
+        if (typeof next !== 'undefined') {
+          subqueue.push([next, i + 1]);
+        }
+      }
+
+      // add to queue using reversed order
+      while (subqueue.length) {
+        queue.push(subqueue.pop());
+      }
+    }
+
+    return rv;
   }
 }
