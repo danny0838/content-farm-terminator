@@ -76,7 +76,7 @@ class ContentFarmFilter {
   }
 
   addTransformRules(...args) {
-    const reReplacer = /\\\*/g;
+    const reAsteriskReplacer = /\\\*/g;
     const fn = this.addTransformRules = (rulesText) => {
       utils.getLines(rulesText).forEach((ruleLine) => {
         let {pattern, replace} = this.parseTransformRuleLine(ruleLine);
@@ -87,7 +87,7 @@ class ContentFarmFilter {
             pattern = new RegExp(pattern.slice(1, -1));
           } else {
             // standard rule
-            pattern = new RegExp(utils.escapeRegExp(pattern).replace(reReplacer, "[^:/?#]*"));
+            pattern = new RegExp(utils.escapeRegExp(pattern).replace(reAsteriskReplacer, "[^:/?#]*"));
           }
 
           this._transformRules.push({pattern, replace});
@@ -114,7 +114,7 @@ class ContentFarmFilter {
       }
 
       // update the regex if the rules have been changed
-      this.makeMergedRegex();
+      this.makeCachedRules();
 
       if (this._whitelist.mergedRe.test(u)) { return 0; }
       if (this._blacklist.mergedRe.test(u)) { return RegExp.$1 ? 1 : 2; }
@@ -140,7 +140,7 @@ class ContentFarmFilter {
   }
 
   transformRule(...args) {
-    const regex = /\$([$&`']|\d+)/g;
+    const rePlaceHolder = /\$([$&`']|\d+)/g;
     const fn = this.transformRule = (rule) => {
       this._transformRules.some((tRule) => {
         const match = tRule.pattern.exec(rule);
@@ -148,7 +148,7 @@ class ContentFarmFilter {
           const leftContext = RegExp.leftContext;
           const rightContext = RegExp.rightContext;
           const useRegex = tRule.replace.startsWith('/') && tRule.replace.endsWith('/');
-          rule = tRule.replace.replace(regex, (_, m) => {
+          rule = tRule.replace.replace(rePlaceHolder, (_, m) => {
             let result;
             if (m === '$') {
               return '$';
@@ -319,9 +319,9 @@ class ContentFarmFilter {
     return fn(...args);
   }
 
-  makeMergedRegex(...args) {
+  makeCachedRules(...args) {
     const reReplacer = /\\\*/g;
-    const mergeFunc = (blockList) => {
+    const cacheRules = (blockList) => {
       let standardRules = [];
       let regexRules = [];
       blockList.rules.forEach(({rule}) => {
@@ -344,11 +344,11 @@ class ContentFarmFilter {
           (regexRules ? "|" + regexRules : "");
       blockList.mergedRe = new RegExp(re);
     };
-    const fn = this.makeMergedRegex = (blockList) => {
+    const fn = this.makeCachedRules = (blockList) => {
       if (this._listUpdated) {
         this._listUpdated = false;
-        mergeFunc(this._blacklist);
-        mergeFunc(this._whitelist);
+        cacheRules(this._blacklist);
+        cacheRules(this._whitelist);
       }
     };
     return fn(...args);
