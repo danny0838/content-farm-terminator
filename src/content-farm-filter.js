@@ -344,7 +344,7 @@ class ContentFarmFilter {
           (regexRules ? "|" + regexRules : "");
       blockList.mergedRe = new RegExp(re);
     };
-    const fn = this.makeCachedRules = (blockList) => {
+    const fn = this.makeCachedRules = () => {
       if (this._listUpdated) {
         this._listUpdated = false;
         cacheRules(this._blacklist);
