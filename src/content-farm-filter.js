@@ -196,6 +196,7 @@ class ContentFarmFilter {
     const fnHostUnescaper = m => mapHostUnescaper[m];
     const reSchemeChecker = /^[A-Za-z][0-9A-za-z.+-]*:\/\//;
     const reWwwRemover = /^www\./;
+    const reAsteriskFixer = /\*+(?=\*)/g;
     const fn = this.validateRule = (rule) => {
       if (!rule) { return ""; }
 
@@ -224,6 +225,8 @@ class ContentFarmFilter {
           t = punycode.toUnicode(t);
           // unescape "*"
           t = t.replace(reHostUnescaper, fnHostUnescaper);
+          // replace "**..." with "*"
+          t = t.replace(reAsteriskFixer, '');
           return t;
         } catch (ex) {
           // invalid URL hostname
