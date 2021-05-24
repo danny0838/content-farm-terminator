@@ -51,6 +51,8 @@ function saveOptions() {
     }
 
     return browser.permissions.request({permissions: ['history']});
+  }).catch((ex) => {
+    return false;
   }).then((response) => {
     if (!response) {
       suppressHistory = document.querySelector('#suppressHistory input').checked = false;
