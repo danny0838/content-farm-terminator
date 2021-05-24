@@ -121,6 +121,7 @@ function updateFilter() {
       .urlsTextToLines(options.webBlacklists)
       .map(u => newFilter.addBlackListFromUrl(u, options.webBlacklistsCacheDuration));
     return Promise.all(tasks).then(() => {
+      newFilter.makeCachedRules();
       filter = newFilter;
     });
   }).then(() => {
