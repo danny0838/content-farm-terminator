@@ -74,15 +74,16 @@ class ContentFarmFilter {
   }
 
   addTransformRules(...args) {
+    const reRegexRule = /^\/(.*)\/([a-z]*)$/;
     const reAsteriskReplacer = /\\\*/g;
     const fn = this.addTransformRules = (rulesText) => {
       utils.getLines(rulesText).forEach((ruleLine) => {
         let {pattern, replace} = this.parseTransformRuleLine(ruleLine);
 
         if (pattern && replace) {
-          if (pattern.startsWith('/') && pattern.endsWith('/')) {
+          if (reRegexRule.test(pattern)) {
             // RegExp rule
-            pattern = new RegExp(pattern.slice(1, -1));
+            pattern = new RegExp(RegExp.$1, RegExp.$2);
           } else {
             // standard rule
             pattern = new RegExp(utils.escapeRegExp(pattern).replace(reAsteriskReplacer, "[^:/?#]*"));
@@ -204,6 +205,7 @@ class ContentFarmFilter {
   }
 
   transformRule(...args) {
+    const reRegexRule = /^\/(.*)\/([a-z]*)$/;
     const rePlaceHolder = /\$([$&`']|\d+)/g;
     const fn = this.transformRule = (rule) => {
       this._transformRules.some((tRule) => {
@@ -211,7 +213,7 @@ class ContentFarmFilter {
         if (match) {
           const leftContext = RegExp.leftContext;
           const rightContext = RegExp.rightContext;
-          const useRegex = tRule.replace.startsWith('/') && tRule.replace.endsWith('/');
+          const useRegex = reRegexRule.test(tRule.replace);
           rule = tRule.replace.replace(rePlaceHolder, (_, m) => {
             let result;
             if (m === '$') {
@@ -252,6 +254,7 @@ class ContentFarmFilter {
   }
 
   validateRule(...args) {
+    const reRegexRule = /^\/(.*)\/([a-z]*)$/;
     const reHostEscaper = /[xX*]/g;
     const reHostUnescaper = /x[xa]/g;
     const mapHostEscaper = {"x": "xx", "X": "xX", "*": "xa"};
@@ -264,11 +267,11 @@ class ContentFarmFilter {
     const fn = this.validateRule = (rule) => {
       if (!rule) { return ""; }
 
-      if (rule.startsWith('/') && rule.endsWith('/')) {
+      if (reRegexRule.test(rule)) {
         // RegExp rule
         try {
           // test if the RegExp is valid
-          new RegExp(rule.slice(1, -1));
+          new RegExp(RegExp.$1, RegExp.$2);
           return rule;
         } catch (ex) {
           // invalid RegExp syntax
@@ -327,18 +330,19 @@ class ContentFarmFilter {
   parseRuleLine(...args) {
     const reSpaceMatcher = /^(\S*)(\s*)(.*)$/;
     const reSchemeChecker = /^[A-Za-z][0-9A-za-z.+-]*:/;
+    const reRegexRule = /^\/(.*)\/([a-z]*)$/;
     const fn = this.parseRuleLine = (ruleLine, options = {}) => {
       let [, rule, sep, comment] = (ruleLine || "").match(reSpaceMatcher);
 
       if (options.transform) {
         switch (options.transform) {
           case 'standard':
-            if (!(rule.startsWith('/') && rule.endsWith('/'))) {
+            if (!reRegexRule.test(rule)) {
               rule = this.transformRule(rule);
             }
             break;
           case 'url':
-            if (!(rule.startsWith('/') && rule.endsWith('/'))) {
+            if (!reRegexRule.test(rule)) {
               if (reSchemeChecker.test(rule)) {
                 rule = this.transformRule(rule);
               }
@@ -387,14 +391,44 @@ class ContentFarmFilter {
   }
 
   makeCachedRules(...args) {
+    const reRegexRule = /^\/(.*)\/([a-z]*)$/;
+    const reAdvancedRegex = /(\\[1-9])|\\.|\[(?:[^\]]*(?:\\.[^\]]*)*)\]|(\((?!\?))/g;
+    const reMaxGroups = 16384;
+    const reMaxLength = 8192 * 256;
+
+    // An "advanced" RegExp is one that contains a capture group like (foo) or a
+    // backreference like \1, and cannot be merged.
+    const isAdvancedRegex = (regexText) => {
+      let m;
+      reAdvancedRegex.lastIndex = 0;
+      while (m = reAdvancedRegex.exec(regexText)) {
+        if (m[1] || m[2]) {
+          return true;
+        }
+      }
+      return false;
+    };
+
     const cacheRules = (blockList) => {
       const standardRulesDict = new Trie();
-      const regexRules = [];
-
+      const mapFlagRules = new Map();
+      const mapAdvancedRegexRules = new Map();
       for (const [rule] of blockList.rules) {
-        if (rule.startsWith('/') && rule.endsWith('/')) {
+        if (reRegexRule.test(rule)) {
           // RegExp rule
-          regexRules.push(rule.slice(1, -1));
+          const regexText = RegExp.$1;
+          const regexFlags = [...new Set(RegExp.$2)].sort().join('');
+          if (isAdvancedRegex(regexText)) {
+            const regex = new RegExp(regexText, regexFlags);
+            mapAdvancedRegexRules.set(regex, rule);
+          } else {
+            let rules = mapFlagRules.get(regexFlags);
+            if (!rules) {
+              rules = new Map();
+              mapFlagRules.set(regexFlags, rules);
+            }
+            rules.set(regexText, rule);
+          }
         } else {
           // standard rule
           let rewrittenRule = rule;
@@ -404,13 +438,40 @@ class ContentFarmFilter {
       }
 
       const regexes = [];
-      if (regexRules.length) {
-        regexes.push(new RegExp(regexRules.join('|')));
+      let regexTexts = [];
+      let len = 0;
+      const mergeRegexes = (regexFlags) => {
+        const regex = new RegExp(regexTexts.join('|'), regexFlags);
+        regexes.push(regex);
+        regexTexts = [];
+        len = 0;
+      };
+      for (const [regexFlags, rules] of mapFlagRules) {
+        for (const [regexText, rule] of rules) {
+          if (regexTexts.length + 1 > reMaxGroups) {
+            mergeRegexes(regexFlags);
+          }
+
+          const newLen = (len ? len + 3 : 2) + regexText.length;
+          if (newLen > reMaxLength && regexTexts.length) {
+            mergeRegexes(regexFlags);
+          }
+
+          regexTexts.push(regexText);
+          len = newLen;
+        }
+        if (regexTexts.length) {
+          mergeRegexes(regexFlags);
+        }
+      }
+      for (const [regex, rule] of mapAdvancedRegexRules) {
+        regexes.push(regex);
       }
 
       blockList.standardRulesDict = standardRulesDict;
       blockList.regexes = regexes;
     };
+
     const fn = this.makeCachedRules = () => {
       if (this._listUpdated) {
         this._listUpdated = false;
@@ -418,6 +479,7 @@ class ContentFarmFilter {
         cacheRules(this._whitelist);
       }
     };
+
     return fn(...args);
   }
 
