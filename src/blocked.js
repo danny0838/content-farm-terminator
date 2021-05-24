@@ -35,7 +35,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
       elem.style.fontSize = '0.8em';
       document.querySelector('#warningUrl').appendChild(elem);
     } else {
-      document.querySelector('#warningUrl').textContent = punycode.toUnicode(sourceUrlObj.hostname);
+      document.querySelector('#warningUrl').textContent = punycode.toASCII(sourceUrlObj.hostname);
     }
   } catch (ex) {
     // sourceUrl is invalid, show raw sourceUrl

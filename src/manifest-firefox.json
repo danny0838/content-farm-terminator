@@ -51,6 +51,7 @@
         "https://*/*"
       ],
       "js": [
+        "lib/punycode.js",
         "utils.js",
         "content.js"
       ],

@@ -40,10 +40,12 @@ document.addEventListener('DOMContentLoaded', (event) => {
       // add content security policy to block offensive contents
       // the iframe cannot be loaded without "frame-src blob:"
       const u = new URL(url);
-      const host = `http://${u.host} https://${u.host} http://*.${u.host.replace(/^www[.]/, '')} https://*.${u.host.replace(/^www[.]/, '')}`;
+      const host = punycode.toASCII(u.host);
+      const hostSubdomains = "*." + host.replace(/^www[.]/, '');
+      const hostSources = `http://${host} https://${host} http://${hostSubdomains} https://${hostSubdomains}`;
       const metaCspElem = doc.createElement("meta");
       metaCspElem.setAttribute("http-equiv", "Content-Security-Policy");
-      metaCspElem.setAttribute("content", `img-src ${host} data:; media-src ${host} data:; frame-src 'self' blob:; object-src 'none'; script-src 'none';`);
+      metaCspElem.setAttribute("content", `img-src ${hostSources} data:; media-src ${hostSources} data:; frame-src 'self' blob:; object-src 'none'; script-src 'none';`);
       headElem.insertBefore(metaCspElem, headElem.firstChild);
 
       // add meta charset to force UTF-8 encoding

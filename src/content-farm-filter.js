@@ -286,14 +286,14 @@ class ContentFarmFilter {
           if (!reSchemeChecker.test(t)) { t = "http://" + t; }
           // get hostname
           t = new URL(t).hostname;
-          // remove "www."
-          t = t.replace(reWwwRemover, "");
-          // convert punycode to unicode
-          t = punycode.toUnicode(t);
           // unescape "*"
           t = t.replace(reHostUnescaper, fnHostUnescaper);
           // replace "**..." with "*"
           t = t.replace(reAsteriskFixer, '');
+          // remove "www."
+          t = t.replace(reWwwRemover, "");
+          // convert IDN to punycode
+          t = punycode.toASCII(t);
           return t;
         } catch (ex) {
           // invalid URL hostname
@@ -432,7 +432,6 @@ class ContentFarmFilter {
         } else {
           // standard rule
           let rewrittenRule = rule;
-          rewrittenRule = punycode.toASCII(rewrittenRule);
           standardRulesDict.add(rewrittenRule, rule);
         }
       }

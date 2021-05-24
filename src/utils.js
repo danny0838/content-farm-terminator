@@ -225,11 +225,13 @@ const utils = {
   getNormalizedUrl(urlObj) {
     const u = urlObj.username;
     const p = urlObj.password;
-    const h = punycode.toUnicode(urlObj.hostname); // URL.hostname is punycoded in Chrome
     const t = urlObj.port;
     return urlObj.protocol + '//' + 
         (u ? u + (p ? ':' + p : '') + '@' : '') + 
-        h + 
+
+        // URL.hostname is not punycoded in some old browsers (e.g. Firefox 52)
+        punycode.toASCII(urlObj.hostname) + 
+
         (t ? ':' + t : '') + 
         urlObj.pathname + urlObj.search + urlObj.hash;
   },
@@ -289,6 +291,7 @@ const utils = {
   },
 
   getBlockedPageUrl(url, blockType = 1, inFrame = false) {
+    url = utils.getNormalizedUrl(new URL(url));
     const redirectUrl = `${browser.runtime.getURL('blocked.html')}?to=${encodeURIComponent(url)}&type=${blockType}`;
 
     // A frame may be too small to show full description about blocking.

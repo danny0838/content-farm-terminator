@@ -51,6 +51,7 @@
       ],
       "js": [
         "lib/browser-polyfill.js",
+        "lib/punycode.js",
         "utils.js",
         "content.js"
       ],
