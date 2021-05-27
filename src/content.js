@@ -467,7 +467,8 @@ browser.runtime.onMessage.addListener((message, sender) => {
         "showLinkMarkers",
       ]).then((options) => {
         showLinkMarkers = options.showLinkMarkers;
-        return updateLinkMarkersAll();
+        updateLinkMarkersAll(); // async
+        return Promise.resolve(true);
       });
     }
     case 'blockSite': {
