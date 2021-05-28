@@ -71,6 +71,7 @@ body {
   height: 144px;
   resize: vertical;
   font-size: .875rem;
+  word-break: break-all;
 }
 
 textarea[readonly] {
