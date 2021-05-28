@@ -397,7 +397,7 @@ class ContentFarmFilter {
       // @TODO: prevent false positive for something like \k<\b>
       '(' + '\\\\(?:[1-9]|k<[^>]+>)' + ')',
       '\\\\.',
-      '\\[(?:[^\\]]*(?:\\\\.[^\\]]*)*)\\]',
+      '\\[(?:[^\\\\\\]]*(?:\\\\.[^\\\\\\]]*)*)\\]',
       // capture group 2: (foo) or (?<name>foo)
       '(' + '\\((?:(?!\\?)|\\?<(?![!=])[^>]+>)' + ')',
     ].join('|'), 'g');
