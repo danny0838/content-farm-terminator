@@ -396,17 +396,21 @@ class ContentFarmFilter {
     const reMaxGroups = 16384;
     const reMaxLength = 8192 * 256;
 
-    // An "advanced" RegExp is one that contains a capture group like (foo) or a
-    // backreference like \1, and cannot be merged.
+    // An "advanced" RegExp is one that contains a backreference like \1, and
+    // cannot be merged.
     const isAdvancedRegex = (regexText) => {
-      let m;
-      reAdvancedRegex.lastIndex = 0;
-      while (m = reAdvancedRegex.exec(regexText)) {
-        if (m[1] || m[2]) {
-          return true;
+      let rv = false;
+      isAdvancedRegex.regexText = regexText.replace(reAdvancedRegex, (m, m1, m2) => {
+        if (m1) {
+          rv = true;
+          return m;
         }
-      }
-      return false;
+        if (m2) {
+          return m + '?:';
+        }
+        return m;
+      });
+      return rv;
     };
 
     const cacheRules = (blockList) => {
@@ -427,7 +431,7 @@ class ContentFarmFilter {
               rules = new Map();
               mapFlagRules.set(regexFlags, rules);
             }
-            rules.set(regexText, rule);
+            rules.set(isAdvancedRegex.regexText, rule);
           }
         } else {
           // standard rule
