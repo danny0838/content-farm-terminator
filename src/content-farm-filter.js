@@ -530,6 +530,12 @@ class ContentFarmFilter {
   }
 }
 
+const TRIE_TOKEN_EOT = Symbol('EOT');
+const TRIE_TOKEN_ANYCHARS = Symbol('*');
+const TRIE_TOKEN_MAP = new Map([
+  ['*', TRIE_TOKEN_ANYCHARS],
+]);
+
 class Trie {
   constructor() {
     this._trie = new Map();
@@ -538,36 +544,31 @@ class Trie {
   add(key, value = key) {
     let trie = this._trie;
     for (const s of Array.from(key)) {
-      let next = trie.get(s);
+      const token = TRIE_TOKEN_MAP.get(s) || s;
+      let next = trie.get(token);
       if (!next) {
         next = new Map();
-        next.token = s;
-        trie.set(s, next);
+        next.token = token;
+        trie.set(token, next);
       }
       trie = next;
     }
-    let next = trie.get(null);
+    const token = TRIE_TOKEN_EOT;
+    let next = trie.get(token);
     if (!next) {
       next = new Map();
-      next.token = null;
-      trie.set(null, next);
+      next.token = token;
+      trie.set(token, next);
     }
     next.set(value, key);
   }
 
   match(str) {
     const parts = Array.from(str);
-    parts.push(null);
+    parts.push(TRIE_TOKEN_EOT);
     return this._match(parts, this._trie, 0);
   }
 
-  /**
-   * Match a string for given parts and position
-   *
-   * Special trie tokens:
-   * null: ending mark of a rule
-   * "*": zero or more any chars
-   */
   _match(parts, trie, i) {
     const queue = [[trie, i]];
     const rv = new Map();
@@ -579,24 +580,24 @@ class Trie {
       let next;
 
       switch (trie.token) {
-        case null: {
+        case TRIE_TOKEN_EOT: {
           for (const [k, v] of trie) {
             rv.set(k, v);
             return rv; // return first match
           }
           break;
         }
-        case "*": {
+        case TRIE_TOKEN_ANYCHARS: {
           next = trie.get(part);
           if (typeof next !== 'undefined') {
             subqueue.push([next, i + 1]);
           }
 
-          if (part !== null) {
+          if (part !== TRIE_TOKEN_EOT) {
             subqueue.push([trie, i + 1]);
           }
 
-          next = trie.get('*');
+          next = trie.get(TRIE_TOKEN_ANYCHARS);
           if (typeof next !== 'undefined') {
             subqueue.push([next, i]);
           }
@@ -608,7 +609,7 @@ class Trie {
             subqueue.push([next, i + 1]);
           }
 
-          next = trie.get('*');
+          next = trie.get(TRIE_TOKEN_ANYCHARS);
           if (typeof next !== 'undefined') {
             subqueue.push([next, i]);
           }
