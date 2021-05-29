@@ -561,6 +561,13 @@ class Trie {
     return this._match(parts, this._trie, 0);
   }
 
+  /**
+   * Match a string for given parts and position
+   *
+   * Special trie tokens:
+   * null: ending mark of a rule
+   * "*": zero or more any chars
+   */
   _match(parts, trie, i) {
     const queue = [[trie, i]];
     const rv = new Map();
@@ -571,32 +578,41 @@ class Trie {
       const subqueue = [];
       let next;
 
-      if (part === null) {
-        next = trie.get(part);
-        if (typeof next !== 'undefined') {
-          for (const [k, v] of next) {
+      switch (trie.token) {
+        case null: {
+          for (const [k, v] of trie) {
             rv.set(k, v);
             return rv; // return first match
           }
+          break;
         }
+        case "*": {
+          next = trie.get(part);
+          if (typeof next !== 'undefined') {
+            subqueue.push([next, i + 1]);
+          }
 
-        next = trie.get('*');
-        if (typeof next !== 'undefined') {
-          subqueue.push([next, i]);
-        }
-      } else {
-        next = trie.get(part);
-        if (typeof next !== 'undefined') {
-          subqueue.push([next, i + 1]);
-        }
+          if (part !== null) {
+            subqueue.push([trie, i + 1]);
+          }
 
-        if (trie.token === '*') {
-          subqueue.push([trie, i + 1]);
+          next = trie.get('*');
+          if (typeof next !== 'undefined') {
+            subqueue.push([next, i]);
+          }
+          break;
         }
+        default: {
+          next = trie.get(part);
+          if (typeof next !== 'undefined') {
+            subqueue.push([next, i + 1]);
+          }
 
-        next = trie.get('*');
-        if (typeof next !== 'undefined') {
-          subqueue.push([next, i + 1]);
+          next = trie.get('*');
+          if (typeof next !== 'undefined') {
+            subqueue.push([next, i]);
+          }
+          break;
         }
       }
 
