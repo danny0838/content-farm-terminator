@@ -463,13 +463,15 @@ browser.runtime.onMessage.addListener((message, sender) => {
   const {cmd, args} = message;
   switch (cmd) {
     case 'updateContent': {
-      return utils.getOptions([
+     // async
+      utils.getOptions([
         "showLinkMarkers",
       ]).then((options) => {
         showLinkMarkers = options.showLinkMarkers;
-        updateLinkMarkersAll(); // async
-        return Promise.resolve(true);
+        updateLinkMarkersAll();
       });
+
+      return Promise.resolve(true);
     }
     case 'blockSite': {
       const rule = prompt(utils.lang("blockSite"), args.rule);
