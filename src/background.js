@@ -125,14 +125,19 @@ function updateFilter() {
       filter = newFilter;
     });
   }).then(() => {
-    return browser.tabs.query({})
+    // async update tabs to prevent block
+    browser.tabs.query({})
       .then((tabs) => {
         return Promise.all(tabs.map((tab) => {
           return browser.tabs.sendMessage(tab.id, {
             cmd: 'updateContent',
-          }).catch((ex) => {});
+          }).catch((ex) => {
+            return false;
+          });
         }));
       });
+
+    return true;
   }).catch((ex) => {
     console.error(ex);
   });

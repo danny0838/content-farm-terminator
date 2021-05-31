@@ -463,12 +463,12 @@ browser.runtime.onMessage.addListener((message, sender) => {
   const {cmd, args} = message;
   switch (cmd) {
     case 'updateContent': {
-     // async
+      // async update to prevent block
       utils.getOptions([
         "showLinkMarkers",
       ]).then((options) => {
         showLinkMarkers = options.showLinkMarkers;
-        updateLinkMarkersAll();
+        return updateLinkMarkersAll();
       });
 
       return Promise.resolve(true);
