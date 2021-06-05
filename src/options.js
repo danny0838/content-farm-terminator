@@ -1,5 +1,5 @@
 function loadOptions() {
-  return utils.getDefaultOptions().then((options) => {
+  return utils.getOptions().then((options) => {
     document.querySelector('#userBlacklist textarea').value = options.userBlacklist;
     document.querySelector('#userWhitelist textarea').value = options.userWhitelist;
     document.querySelector('#webBlacklists textarea').value = options.webBlacklists;

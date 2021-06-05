@@ -39,17 +39,13 @@ const utils = {
     tempUnblockLastAccess: -1,
   },
 
-  getDefaultOptions() {
-    return this.getOptions(this.defaultOptions);
-  },
-
   /**
    * Use storage.local > storage.sync > passed values
    *
-   * @param options - A string, array of strings, or an object.
-   *     Use defaultOptions as fallback value for string and array.
+   * @param {string|string[]|Object} [options] - An object for key-value pairs,
+   *     or key(s) with corresponding values of defaultOptions.
    */
-  getOptions(options) {
+  getOptions(options = this.defaultOptions) {
     if (typeof options === "string") {
       options = { [options]: this.defaultOptions[options] };
     } else if (Array.isArray(options)) {

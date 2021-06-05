@@ -112,7 +112,7 @@ const historyController = {
 };
 
 function updateFilter() {
-  return updateFilterPromise = utils.getDefaultOptions().then((options) => {
+  return updateFilterPromise = utils.getOptions().then((options) => {
     const newFilter = new ContentFarmFilter();
     newFilter.addTransformRules(options.transformRules);
     newFilter.addBlackList(options.userBlacklist);
