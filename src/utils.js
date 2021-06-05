@@ -47,11 +47,12 @@ const utils = {
    */
   getOptions(options = this.defaultOptions) {
     if (typeof options === "string") {
-      options = { [options]: this.defaultOptions[options] };
+      options = {[options]: this.defaultOptions[options]};
     } else if (Array.isArray(options)) {
-      const newOptions = {};
-      options.forEach((option) => { newOptions[option] = this.defaultOptions[option]; })
-      options = newOptions;
+      options = options.reduce((rv, key) => {
+        rv[key] = this.defaultOptions[key];
+        return rv;
+      }, {});
     }
     const keys = Object.keys(options);
     return browser.storage.sync.get(keys)
