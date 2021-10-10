@@ -27,6 +27,11 @@
     "description": "Label of context menu blocker on selection"
   },
 
+  "blockSelectedLinks": {
+    "message": "把选取范围所有链接指向的网域加入黑名单",
+    "description": "Label of context menu blocker for selected links"
+  },
+
   "blockSite": {
     "message": "把这条规则加入黑名单：",
     "description": "Prompt message of context menu blocker"
@@ -52,6 +57,32 @@
         "example": "example.com"
       }
     }
+  },
+
+  "blockSites": {
+    "message": "是否将以下规则加入黑名单？\n\n$rules$",
+    "description": "Confirm message of blocking multiple links",
+    "placeholders": {
+      "rules": {
+        "content": "$1",
+        "example": "example1.com\nexample2.com"
+      }
+    }
+  },
+
+  "blockSitesSuccess": {
+    "message": "已将以下规则加入黑名单：\n\n$rules$",
+    "description": "Success message of blocking multiple links",
+    "placeholders": {
+      "rules": {
+        "content": "$1",
+        "example": "example1.com\nexample2.com"
+      }
+    }
+  },
+
+  "blockSitesNoValidRules": {
+    "message": "找不到可加入黑名单的规则。"
   },
 
   "viewBlockedFrame": {

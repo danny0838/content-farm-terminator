@@ -477,6 +477,42 @@ browser.runtime.onMessage.addListener((message, sender) => {
       const rule = prompt(utils.lang("blockSite"), args.rule);
       return Promise.resolve(rule);
     }
+    case 'blockSites': {
+      const confirmed = confirm(utils.lang("blockSites", args.rules.join('\n')));
+      return Promise.resolve(confirmed);
+    }
+    case 'blockSelectedLinks': {
+      const rv = [];
+      const sel = document.getSelection();
+      const nodeRange = document.createRange();
+      for(let i = 0, I = sel.rangeCount; i < I; i++) {
+        const range = sel.getRangeAt(i);
+        if (range.collapsed) {
+          continue;
+        }
+        const walker = document.createTreeWalker(range.commonAncestorContainer, 1, {
+          acceptNode: (node) => {
+            nodeRange.selectNode(node);
+            if (nodeRange.compareBoundaryPoints(Range.START_TO_START, range) >= 0
+                && nodeRange.compareBoundaryPoints(Range.END_TO_END, range) <= 0) {
+              if (node.matches('a[href], area[href]')) {
+                return NodeFilter.FILTER_ACCEPT;
+              }
+            }
+            return NodeFilter.FILTER_SKIP;
+          },
+        });
+        let node;
+        while (node = walker.nextNode()) {
+          const a = node;
+          const p = getRedirectedUrlOrHostname(a).then((redirected) => {
+            return redirected || a.href;
+          }).catch((ex) => {});
+          rv.push(p);
+        }
+      }
+      return Promise.all(rv).then(rv => rv.filter(x => x));
+    }
     case 'getRedirectedLinkUrl': {
       const anchor = lastRightClickedElem.closest('a[href], area[href]');
       return getRedirectedUrlOrHostname(anchor).then((urlOrHostname) => {

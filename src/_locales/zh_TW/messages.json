@@ -27,6 +27,11 @@
     "description": "Label of context menu blocker on selection"
   },
 
+  "blockSelectedLinks": {
+    "message": "將選取範圍所有超連結指向的網域加入黑名單",
+    "description": "Label of context menu blocker for selected links"
+  },
+
   "blockSite": {
     "message": "將這條規則加入黑名單：",
     "description": "Prompt message of context menu blocker"
@@ -52,6 +57,32 @@
         "example": "example.com"
       }
     }
+  },
+
+  "blockSites": {
+    "message": "是否將以下規則加入黑名單？\n\n$rules$",
+    "description": "Confirm message of blocking multiple links",
+    "placeholders": {
+      "rules": {
+        "content": "$1",
+        "example": "example1.com\nexample2.com"
+      }
+    }
+  },
+
+  "blockSitesSuccess": {
+    "message": "已將以下規則加入黑名單：\n\n$rules$",
+    "description": "Success message of blocking multiple links",
+    "placeholders": {
+      "rules": {
+        "content": "$1",
+        "example": "example1.com\nexample2.com"
+      }
+    }
+  },
+
+  "blockSitesNoValidRules": {
+    "message": "找不到可加入黑名單的規則。"
   },
 
   "viewBlockedFrame": {

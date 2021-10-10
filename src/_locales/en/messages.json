@@ -27,6 +27,11 @@
     "description": "Label of context menu blocker on selection"
   },
 
+  "blockSelectedLinks": {
+    "message": "Blacklist all domains of links in the selection range",
+    "description": "Label of context menu blocker for selected links"
+  },
+
   "blockSite": {
     "message": "Add this rule to blacklist:",
     "description": "Prompt message of context menu blocker"
@@ -52,6 +57,32 @@
         "example": "example.com"
       }
     }
+  },
+
+  "blockSites": {
+    "message": "Add following rules to blacklist?\n\n$rules$",
+    "description": "Confirm message of blocking multiple links",
+    "placeholders": {
+      "rules": {
+        "content": "$1",
+        "example": "example1.com\nexample2.com"
+      }
+    }
+  },
+
+  "blockSitesSuccess": {
+    "message": "The following rules are added to the blacklist:\n\n$rules$",
+    "description": "Success message of blocking multiple links",
+    "placeholders": {
+      "rules": {
+        "content": "$1",
+        "example": "example1.com\nexample2.com"
+      }
+    }
+  },
+
+  "blockSitesNoValidRules": {
+    "message": "No avaliable rule can be added to the blacklist."
   },
 
   "viewBlockedFrame": {

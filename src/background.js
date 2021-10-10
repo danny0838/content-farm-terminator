@@ -54,6 +54,15 @@ const contextMenuController = {
             return blockSite(info.selectionText, tab.id, info.frameId, this.quickMode);
           },
         });
+      }).then(() => {
+        return browser.contextMenus.create({
+          title: utils.lang("blockSelectedLinks"),
+          contexts: ["selection"],
+          documentUrlPatterns: ["http://*/*", "https://*/*"],
+          onclick: (info, tab) => {
+            return blockSelectedLinks(tab.id, info.frameId, this.quickMode);
+          },
+        });
       });
     });
   },
@@ -194,6 +203,62 @@ function blockSite(rule, tabId, frameId, quickMode) {
       return browser.tabs.sendMessage(tabId, {
         cmd: 'alert',
         args: {msg: utils.lang("blockSiteSuccess", rule)},
+      }, {frameId});
+    });
+  });
+}
+
+function blockSelectedLinks(tabId, frameId, quickMode) {
+  return browser.tabs.sendMessage(tabId, {
+    cmd: 'blockSelectedLinks',
+  }, {frameId}).then((list) => {
+    let rules = list.map((rule) => {
+      rule = (rule || "").trim();
+      rule = filter.parseRuleLine(rule, {validate: true, transform: 'standard', asString: true});
+      return rule;
+    }).filter(rule => !filter.isInBlacklist(rule));
+
+    if (!rules.length) {
+      return browser.tabs.sendMessage(tabId, {
+        cmd: 'alert',
+        args: {msg: utils.lang("blockSitesNoValidRules")},
+      }, {frameId});
+    }
+
+    // de-duplicate
+    rules = Array.from(new Set(rules));
+
+    if (quickMode) {
+      return rules;
+    }
+
+    return browser.tabs.sendMessage(tabId, {
+      cmd: 'blockSites',
+      args: {rules},
+    }, {frameId}).then((confirmed) => {
+      return confirmed ? rules : undefined;
+    });
+  }).then((rules) => {
+    // canceled
+    if (!rules) { return; }
+    
+    return utils.getOptions({
+      userBlacklist: ""
+    }).then((options) => {
+      let text = options.userBlacklist;
+      if (text) { text += "\n"; }
+      text = text + rules.join('\n');
+      return utils.setOptions({
+        userBlacklist: text
+      });
+    }).then(() => {
+      if (quickMode) {
+        return;
+      }
+
+      return browser.tabs.sendMessage(tabId, {
+        cmd: 'alert',
+        args: {msg: utils.lang("blockSitesSuccess", rules.join('\n'))},
       }, {frameId});
     });
   });
