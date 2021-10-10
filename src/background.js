@@ -155,11 +155,16 @@ function blockSite(rule, tabId, frameId, quickMode) {
     return browser.tabs.sendMessage(tabId, {
       cmd: 'blockSite',
       args: {rule},
-    }, {frameId});
-  }).then((rule) => {
-    if (!rule) { return; }
+    }, {frameId}).then((rule) => {
+      // cancled
+      if (!rule) { return rule; }
 
-    rule = filter.parseRuleLine(rule, {validate: true, asString: true});
+      // validate the user-modified rule
+      return filter.parseRuleLine(rule, {validate: true, asString: true});
+    });
+  }).then((rule) => {
+    // canceled
+    if (!rule) { return; }
 
     if (rule && filter.isInBlacklist(rule)) {
       if (quickMode) {
