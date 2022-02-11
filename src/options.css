@@ -98,10 +98,24 @@ textarea[readonly] {
 
 #resetButton {
   float: __MSG_@@bidi_start_edge__;
+  border-color: rgba(27, 31, 36, 0.15);
+  background-color: #f6f8fa;
+  color: #cf222e;
+}
+
+#resetButton:hover {
+  background-color: #a40e26;
+  color: white;
 }
 
 #submitButton {
   float: __MSG_@@bidi_end_edge__;
+  background-color: #2da44e;
+  color: white;
+}
+
+#submitButton:hover {
+  background-color: #2c974b;
 }
 
 /* https://bootsnipp.com/snippets/featured/material-design-switch */
