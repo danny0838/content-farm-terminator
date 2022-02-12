@@ -73,19 +73,18 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
   // hide some options if contextMenus is not available
   // (e.g. Firefox for Android)
-  if (!browser.contextMenus) {
-    document.querySelector('#transformRules').hidden = true;
+  if (!browser.contextMenus || utils.userAgent.soup.has('mobile')) {
     document.querySelector('#showContextMenuCommands').hidden = true;
     document.querySelector('#quickContextMenuCommands').hidden = true;
   }
 
   // hide some options if browser.history is not available
-  // Firefox supports browser.permissions since >= 55. In prior versions
-  // permissions listed in "optional_permissions" are ignored.
-  // Firefox for Android does not support browser.history. Unfortunately,
-  // we cannot detect whether browser.history is supported by testing
-  // whether browser.history is defined.
-  if (!browser.permissions && !browser.history) {
+  // Firefox < 55: no browser.permissions, and permissions listed in
+  // "optional_permissions" are ignored.
+  // Chromium mobile (e.g. Kiwi): cannot call browser.permissions.request()
+  // Firefox for Android: no browser.history. However, we cannot simply check
+  // browser.history as it's undefined before granted permission.
+  if (!browser.permissions && !browser.history || utils.userAgent.soup.has('mobile')) {
     document.querySelector('#suppressHistory').hidden = true;
   }
 
