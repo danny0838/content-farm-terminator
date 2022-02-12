@@ -32,6 +32,7 @@
   ],
 
   "background": {
+    "persistent": true,
     "scripts": [
       "lib/browser-polyfill.js",
       "lib/punycode.js",
