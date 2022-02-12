@@ -7,97 +7,87 @@ const contextMenuController = {
   quickMode: false,
 
   create() {
-    return Promise.resolve().then(() => {
-      if (!browser.contextMenus) { return; }
+    if (!browser.contextMenus) { return; }
 
-      return Promise.resolve().then(() => {
-        // Available only in Firefox >= 53.
-        if (browser.contextMenus.ContextType.TAB) {
-          return browser.contextMenus.create({
-            title: utils.lang("blockTab"),
-            contexts: ["tab"],
-            documentUrlPatterns: ["http://*/*", "https://*/*"],
-            onclick: (info, tab) => {
-              return blockSite(info.pageUrl, tab.id, 0, this.quickMode);
-            },
-          });
-        }
-      }).then(() => {
-        return browser.contextMenus.create({
-          title: utils.lang("blockPage"),
-          contexts: ["page"],
-          documentUrlPatterns: ["http://*/*", "https://*/*"],
-          onclick: (info, tab) => {
-            return blockSite(info.pageUrl, tab.id, info.frameId, this.quickMode);
-          },
-        });
-      }).then(() => {
-        return browser.contextMenus.create({
-          title: utils.lang("blockLink"),
-          contexts: ["link"],
-          documentUrlPatterns: ["http://*/*", "https://*/*"],
-          onclick: (info, tab) => {
-            return browser.tabs.sendMessage(tab.id, {
-              cmd: 'getRedirectedLinkUrl'
-            }, {frameId: info.frameId}).then((redirectedUrl) => {
-              const rule = redirectedUrl || info.linkUrl;
-              return blockSite(rule, tab.id, info.frameId, this.quickMode);
-            });
-          },
-        });
-      }).then(() => {
-        return browser.contextMenus.create({
-          title: utils.lang("blockSelection"),
-          contexts: ["selection"],
-          documentUrlPatterns: ["http://*/*", "https://*/*"],
-          onclick: (info, tab) => {
-            return blockSite(info.selectionText, tab.id, info.frameId, this.quickMode);
-          },
-        });
-      }).then(() => {
-        return browser.contextMenus.create({
-          title: utils.lang("blockSelectedLinks"),
-          contexts: ["selection"],
-          documentUrlPatterns: ["http://*/*", "https://*/*"],
-          onclick: (info, tab) => {
-            return blockSelectedLinks(tab.id, info.frameId, this.quickMode);
-          },
-        });
+    // Available only in Firefox >= 53.
+    if (browser.contextMenus.ContextType.TAB) {
+      browser.contextMenus.create({
+        title: utils.lang("blockTab"),
+        contexts: ["tab"],
+        documentUrlPatterns: ["http://*/*", "https://*/*"],
+        onclick: async (info, tab) => {
+          return await blockSite(info.pageUrl, tab.id, 0, this.quickMode);
+        },
       });
+    }
+
+    browser.contextMenus.create({
+      title: utils.lang("blockPage"),
+      contexts: ["page"],
+      documentUrlPatterns: ["http://*/*", "https://*/*"],
+      onclick: async (info, tab) => {
+        return await blockSite(info.pageUrl, tab.id, info.frameId, this.quickMode);
+      },
+    });
+
+    browser.contextMenus.create({
+      title: utils.lang("blockLink"),
+      contexts: ["link"],
+      documentUrlPatterns: ["http://*/*", "https://*/*"],
+      onclick: async (info, tab) => {
+        const redirectedUrl = await browser.tabs.sendMessage(tab.id, {
+          cmd: 'getRedirectedLinkUrl',
+        }, {frameId: info.frameId});
+        const rule = redirectedUrl || info.linkUrl;
+        return await blockSite(rule, tab.id, info.frameId, this.quickMode);
+      },
+    });
+
+    browser.contextMenus.create({
+      title: utils.lang("blockSelection"),
+      contexts: ["selection"],
+      documentUrlPatterns: ["http://*/*", "https://*/*"],
+      onclick: async (info, tab) => {
+        return await blockSite(info.selectionText, tab.id, info.frameId, this.quickMode);
+      },
+    });
+
+    browser.contextMenus.create({
+      title: utils.lang("blockSelectedLinks"),
+      contexts: ["selection"],
+      documentUrlPatterns: ["http://*/*", "https://*/*"],
+      onclick: async (info, tab) => {
+        return await blockSelectedLinks(tab.id, info.frameId, this.quickMode);
+      },
     });
   },
 
-  refresh(options = [
+  async refresh(options = [
     "showContextMenuCommands",
     "quickContextMenuCommands",
   ]) {
-    return Promise.resolve().then(() => {
-      if (!browser.contextMenus) { return; }
+    if (!browser.contextMenus) { return; }
 
-      return utils.getOptions(options)
-        .then(({showContextMenuCommands, quickContextMenuCommands}) => {
-          if (typeof quickContextMenuCommands !== 'undefined') {
-            this.quickMode = !!quickContextMenuCommands;
-          }
+    const {showContextMenuCommands, quickContextMenuCommands} = await utils.getOptions(options);
 
-          if (typeof showContextMenuCommands !== 'undefined') {
-            return browser.contextMenus.removeAll()
-              .then(() => {
-                if (showContextMenuCommands) {
-                  return this.create();
-                }
-              });
-          }
-        });
-    });
+    if (typeof quickContextMenuCommands !== 'undefined') {
+      this.quickMode = !!quickContextMenuCommands;
+    }
+
+    if (typeof showContextMenuCommands !== 'undefined') {
+      await browser.contextMenus.removeAll();
+      if (showContextMenuCommands) {
+        return this.create();
+      }
+    }
   },
 };
 
 const historyController = {
-  onVisited(result) {
+  async onVisited(result) {
     // suppress extension pages from generating a history entry
     if (result.url.startsWith(browser.runtime.getURL(""))) {
-      browser.history.deleteUrl({url: result.url});
+      await browser.history.deleteUrl({url: result.url});
     }
   },
 
@@ -111,157 +101,152 @@ const historyController = {
     }
   },
 
-  refresh() {
-    return utils.getOptions([
+  async refresh() {
+    const {suppressHistory} = await utils.getOptions([
       "suppressHistory",
-    ]).then(({suppressHistory}) => {
-      this.listen(suppressHistory);
-    });
+    ]);
+    this.listen(suppressHistory);
   },
 };
 
-function updateFilter() {
-  return updateFilterPromise = utils.getOptions().then((options) => {
-    const newFilter = new ContentFarmFilter();
-    newFilter.addTransformRules(options.transformRules);
-    newFilter.addBlackList(options.userBlacklist);
-    newFilter.addWhiteList(options.userWhitelist);
-    const tasks = newFilter
-      .urlsTextToLines(options.webBlacklists)
-      .map(u => newFilter.addBlackListFromUrl(u, options.webBlacklistsCacheDuration));
-    return Promise.all(tasks).then(() => {
+async function updateFilter() {
+  return updateFilterPromise = (async () => {
+    try {
+      const options = await utils.getOptions();
+      const newFilter = new ContentFarmFilter();
+      newFilter.addTransformRules(options.transformRules);
+      newFilter.addBlackList(options.userBlacklist);
+      newFilter.addWhiteList(options.userWhitelist);
+      const tasks = newFilter
+        .urlsTextToLines(options.webBlacklists)
+        .map(u => newFilter.addBlackListFromUrl(u, options.webBlacklistsCacheDuration));
+      await Promise.all(tasks);
       newFilter.makeCachedRules();
       filter = newFilter;
-    });
-  }).then(() => {
-    // async update tabs to prevent block
-    browser.tabs.query({})
-      .then((tabs) => {
-        return Promise.all(tabs.map((tab) => {
-          return browser.tabs.sendMessage(tab.id, {
-            cmd: 'updateContent',
-          }).catch((ex) => {
-            return false;
-          });
-        }));
-      });
 
-    return true;
-  }).catch((ex) => {
-    console.error(ex);
-  });
+      // async update tabs to prevent block
+      const tabs = await browser.tabs.query({});
+      await Promise.all(tabs.map((tab) => {
+        return browser.tabs.sendMessage(tab.id, {
+          cmd: 'updateContent',
+        }).catch((ex) => {
+          return false;
+        });
+      }));
+
+      return true;
+    } catch (ex) {
+      console.error(ex);
+    }
+  })();
 }
 
-function blockSite(rule, tabId, frameId, quickMode) {
-  return Promise.resolve().then(() => {
-    rule = (rule || "").trim();
-    rule = filter.parseRuleLine(rule, {validate: true, transform: 'standard', asString: true});
+async function blockSite(rule, tabId, frameId, quickMode) {
+  rule = (rule || "").trim();
+  rule = filter.parseRuleLine(rule, {validate: true, transform: 'standard', asString: true});
 
-    if (quickMode) {
-      return rule;
-    }
-
-    return browser.tabs.sendMessage(tabId, {
+  if (!quickMode) {
+    let newRule = await browser.tabs.sendMessage(tabId, {
       cmd: 'blockSite',
       args: {rule},
-    }, {frameId}).then((rule) => {
-      // cancled
-      if (!rule) { return rule; }
+    }, {frameId});
 
+    if (newRule) {
       // validate the user-modified rule
-      return filter.parseRuleLine(rule, {validate: true, asString: true});
-    });
-  }).then((rule) => {
-    // canceled
-    if (!rule) { return; }
-
-    if (rule && filter.isInBlacklist(rule)) {
-      if (quickMode) {
-        return;
-      }
-
-      return browser.tabs.sendMessage(tabId, {
-        cmd: 'alert',
-        args: {msg: utils.lang("blockSiteDuplicated", rule)},
-      }, {frameId});
+      newRule =  filter.parseRuleLine(newRule, {validate: true, asString: true});
     }
 
-    return utils.getOptions({
-      userBlacklist: ""
-    }).then((options) => {
-      let text = options.userBlacklist;
-      if (text) { text += "\n"; }
-      text = text + rule;
-      return utils.setOptions({
-        userBlacklist: text
-      });
-    }).then(() => {
-      if (quickMode) {
-        return;
-      }
+    rule = newRule;
+  }
 
-      return browser.tabs.sendMessage(tabId, {
-        cmd: 'alert',
-        args: {msg: utils.lang("blockSiteSuccess", rule)},
-      }, {frameId});
+  // canceled
+  if (!rule) { return; }
+
+  if (rule && filter.isInBlacklist(rule)) {
+    if (quickMode) {
+      return;
+    }
+
+    return await browser.tabs.sendMessage(tabId, {
+      cmd: 'alert',
+      args: {msg: utils.lang("blockSiteDuplicated", rule)},
+    }, {frameId});
+  }
+
+  updateOptions: {
+    const options = await utils.getOptions({
+      userBlacklist: ""
     });
-  });
+    let text = options.userBlacklist;
+    if (text) { text += "\n"; }
+    text = text + rule;
+    await utils.setOptions({
+      userBlacklist: text
+    });
+  }
+
+  if (quickMode) {
+    return;
+  }
+
+  return await browser.tabs.sendMessage(tabId, {
+    cmd: 'alert',
+    args: {msg: utils.lang("blockSiteSuccess", rule)},
+  }, {frameId});
 }
 
-function blockSelectedLinks(tabId, frameId, quickMode) {
-  return browser.tabs.sendMessage(tabId, {
+async function blockSelectedLinks(tabId, frameId, quickMode) {
+  const list = await browser.tabs.sendMessage(tabId, {
     cmd: 'blockSelectedLinks',
-  }, {frameId}).then((list) => {
-    let rules = list.map((rule) => {
-      rule = (rule || "").trim();
-      rule = filter.parseRuleLine(rule, {validate: true, transform: 'standard', asString: true});
-      return rule;
-    }).filter(rule => !filter.isInBlacklist(rule));
+  }, {frameId});
 
-    if (!rules.length) {
-      return browser.tabs.sendMessage(tabId, {
-        cmd: 'alert',
-        args: {msg: utils.lang("blockSitesNoValidRules")},
-      }, {frameId});
-    }
+  let rules = list.map((rule) => {
+    rule = (rule || "").trim();
+    rule = filter.parseRuleLine(rule, {validate: true, transform: 'standard', asString: true});
+    return rule;
+  }).filter(rule => !filter.isInBlacklist(rule));
 
-    // de-duplicate
-    rules = Array.from(new Set(rules));
-
-    if (quickMode) {
-      return rules;
-    }
-
+  if (!rules.length) {
     return browser.tabs.sendMessage(tabId, {
+      cmd: 'alert',
+      args: {msg: utils.lang("blockSitesNoValidRules")},
+    }, {frameId});
+  }
+
+  // de-duplicate
+  rules = Array.from(new Set(rules));
+
+  if (!quickMode) {
+    const confirmed = await browser.tabs.sendMessage(tabId, {
       cmd: 'blockSites',
       args: {rules},
-    }, {frameId}).then((confirmed) => {
-      return confirmed ? rules : undefined;
-    });
-  }).then((rules) => {
-    // canceled
-    if (!rules) { return; }
-    
-    return utils.getOptions({
-      userBlacklist: ""
-    }).then((options) => {
-      let text = options.userBlacklist;
-      if (text) { text += "\n"; }
-      text = text + rules.join('\n');
-      return utils.setOptions({
-        userBlacklist: text
-      });
-    }).then(() => {
-      if (quickMode) {
-        return;
-      }
+    }, {frameId});
+    rules = confirmed ? rules : undefined;
+  }
 
-      return browser.tabs.sendMessage(tabId, {
-        cmd: 'alert',
-        args: {msg: utils.lang("blockSitesSuccess", rules.join('\n'))},
-      }, {frameId});
+  // canceled
+  if (!rules) { return; }
+
+  updateOptions: {
+    const options = await utils.getOptions({
+      userBlacklist: ""
     });
-  });
+    let text = options.userBlacklist;
+    if (text) { text += "\n"; }
+    text = text + rules.join('\n');
+    await utils.setOptions({
+      userBlacklist: text
+    });
+  }
+
+  if (quickMode) {
+    return;
+  }
+
+  return browser.tabs.sendMessage(tabId, {
+    cmd: 'alert',
+    args: {msg: utils.lang("blockSitesSuccess", rules.join('\n'))},
+  }, {frameId});
 }
 
 function onBeforeRequestBlocker(details) {
@@ -305,23 +290,21 @@ function onBeforeRequestBlocker(details) {
  * This will be replaced by onBeforeRequestBlocker as long as updateFilter
  * is done.
  */
-function onBeforeRequestCallback(details) {
-  return updateFilterPromise.then(() => {
-    return onBeforeRequestBlocker(details);
-  });
+async function onBeforeRequestCallback(details) {
+  await updateFilterPromise;
+  return onBeforeRequestBlocker(details);
 };
 
-function autoUpdateFilter() {
+async function autoUpdateFilter() {
   if (autoUpdateFilterTimer) {
     clearInterval(autoUpdateFilterTimer);
     autoUpdateFilterTimer = null;
   }
 
-  return utils.getOptions([
+  const {webBlacklistsUpdateInterval} = await utils.getOptions([
     "webBlacklistsUpdateInterval",
-  ]).then(({webBlacklistsUpdateInterval}) => {
-    autoUpdateFilterTimer = setInterval(updateFilter, webBlacklistsUpdateInterval);
-  });
+  ]);
+  autoUpdateFilterTimer = setInterval(updateFilter, webBlacklistsUpdateInterval);
 }
 
 function initBeforeRequestListener() {
@@ -336,23 +319,28 @@ function initMessageListener() {
     const {cmd, args} = message;
     switch (cmd) {
       case 'isUrlBlocked': {
-        return updateFilterPromise.then(() => {
-          return filter.isBlocked(args.url);
-        });
+        return (async () => {
+          await updateFilterPromise;
+          return await filter.isBlocked(args.url);
+        })();
       }
       case 'isTempUnblocked': {
-        return Promise.resolve(tempUnblockTabs.has(sender.tab.id));
+        return (async () => {
+          return tempUnblockTabs.has(sender.tab.id);
+        })();
       }
       case 'tempUnblock': {
-        const tabId = sender.tab.id;
-        return utils.getOptions([
-          "tempUnblockDuration",
-          "tempUnblockCountdownBase",
-          "tempUnblockCountdownIncrement",
-          "tempUnblockCountdownReset",
-          "tempUnblockCountdown",
-          "tempUnblockLastAccess",
-        ]).then((options) => {
+        return (async () => {
+          const tabId = sender.tab.id;
+          const options = await utils.getOptions([
+            "tempUnblockDuration",
+            "tempUnblockCountdownBase",
+            "tempUnblockCountdownIncrement",
+            "tempUnblockCountdownReset",
+            "tempUnblockCountdown",
+            "tempUnblockLastAccess",
+          ]);
+
           // temporarily unblock the tab
           tempUnblockTabs.add(tabId);
           setTimeout(() => {
@@ -372,49 +360,47 @@ function initMessageListener() {
           options.tempUnblockCountdown += options.tempUnblockCountdownIncrement;
           options.tempUnblockLastAccess = Date.now();
 
-          return utils.setOptions({
+          await utils.setOptions({
             tempUnblockCountdown: options.tempUnblockCountdown,
             tempUnblockLastAccess: options.tempUnblockLastAccess,
           });
-        }).then(() => {
+
           return true;
-        });
+        })();
       }
       case 'getMergedBlacklist': {
-        return updateFilterPromise.then(() => {
-          return filter.getMergedBlacklist();
-        });
+        return (async () => {
+          await updateFilterPromise;
+          return await filter.getMergedBlacklist();
+        })();
       }
       case 'updateOptions': {
-        const validator = new ContentFarmFilter();
-        args.transformRules = validator.validateTransformRulesText(args.transformRules);
-        validator.addTransformRules(args.transformRules);
-        args.userBlacklist = validator.validateRulesText(args.userBlacklist, 'url');
-        args.userWhitelist = validator.validateRulesText(args.userWhitelist, 'url');
-        return utils.setOptions(args).then(() => {
+        return (async () => {
+          const validator = new ContentFarmFilter();
+          args.transformRules = validator.validateTransformRulesText(args.transformRules);
+          validator.addTransformRules(args.transformRules);
+          args.userBlacklist = validator.validateRulesText(args.userBlacklist, 'url');
+          args.userWhitelist = validator.validateRulesText(args.userWhitelist, 'url');
+          await utils.setOptions(args);
           return true;
-        });
+        })();
       }
       case 'closeTab': {
-        Promise.resolve().then(() => {
-          if (args.tabId) { return [args.tabId]; }
-          return browser.tabs.query({
+        return (async () => {
+          const tabIds = args.tabId ? [args.tabId] : await browser.tabs.query({
             active: true,
             currentWindow: true
-          }).then((tabs) => {
-            return tabs.map(x => x.id);
-          });
-        }).then((tabIds) => {
-          return browser.tabs.remove(tabIds);
-        });
-        return Promise.resolve(true);
+          }).then(tabs => tabs.map(x => x.id));
+          await browser.tabs.remove(tabIds);
+          return true;
+        })();
       }
     }
   });
 }
 
 function initStorageChangeListener() {
-  browser.storage.onChanged.addListener((changes, areaName) => {
+  browser.storage.onChanged.addListener(async (changes, areaName) => {
     // Config keys are stored in storage.sync and fallbacks to storage.local;
     // cache keys are stored in storage.local and are valid JSON format.
     // We only take action when at least one config key is changed.
@@ -458,45 +444,40 @@ function initStorageChangeListener() {
         "transformRules",
       ].filter(x => x in changes);
       if (listOptions.length) {
-        updateFilter().then(() => {
-          // @TODO:
-          // Say we have a shift from local to sync:
-          //
-          //     local {webBlacklists: "list1\nlist2"} => sync {webBlacklists: "list1"}
-          //     sync  {webBlacklists: ""}
-          //
-          // We get a change of sync: "" => "list1" and a change of local: "list1\nlist2" => undefined,
-          // and the cache of list2 is not cleared, while it should be, leaving staled cache not cleared.
-          if (changes.webBlacklists) {
-            filter.clearStaleWebListCache(changes.webBlacklists);
-          }
-        });
+        await updateFilter();
+
+        // @TODO:
+        // Say we have a shift from local to sync:
+        //
+        //     local {webBlacklists: "list1\nlist2"} => sync {webBlacklists: "list1"}
+        //     sync  {webBlacklists: ""}
+        //
+        // We get a change of sync: "" => "list1" and a change of local: "list1\nlist2" => undefined,
+        // and the cache of list2 is not cleared, while it should be, leaving staled cache not cleared.
+        if (changes.webBlacklists) {
+          filter.clearStaleWebListCache(changes.webBlacklists);
+        }
       }
     }
   });
 }
 
 function initInstallListener() {
-  browser.runtime.onInstalled.addListener((details) => {
+  browser.runtime.onInstalled.addListener(async (details) => {
     const {reason, previousVersion} = details;
 
     if (reason === "update" && utils.versionCompare(previousVersion, "2.1.2") === -1) {
-      return Promise.resolve().then(() => {
-        console.warn("Migrating options from < 2.1.2");
-        return utils.getOptions({
-          "webBlacklist": undefined,
-          "webBlacklists": undefined,
-        }).then((options) => {
-          if (options.webBlacklist && (typeof options.webBlacklists === "undefined")) {
-            const newWebBlacklists = utils.defaultOptions.webBlacklists + "\n" + options.webBlacklist;
-            return utils.setOptions({webBlacklists: newWebBlacklists}).then(() => {
-              updateFilter();
-            });
-          }
-        });
-      }).then(() => {
-        console.warn("Migrated successfully.");
+      console.warn("Migrating options from < 2.1.2");
+      const options = await utils.getOptions({
+        "webBlacklist": undefined,
+        "webBlacklists": undefined,
       });
+      if (options.webBlacklist && (typeof options.webBlacklists === "undefined")) {
+        const newWebBlacklists = utils.defaultOptions.webBlacklists + "\n" + options.webBlacklist;
+        await utils.setOptions({webBlacklists: newWebBlacklists});
+        await updateFilter();
+      }
+      console.warn("Migrated successfully.");
     }
   });
 }

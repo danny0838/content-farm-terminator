@@ -33,45 +33,48 @@ class ContentFarmFilter {
   /**
    * @param {string} url - a URL with hash stripped
    */
-  addBlackListFromUrl(url, cacheDuration = 0, doNotCache = false) {
-    return this.getWebListCache(url).then((data) => {
-      const time = Date.now();
+  async addBlackListFromUrl(url, cacheDuration = 0, doNotCache = false) {
+    try {
+      const data = await this.getWebListCache(url);
+      const text = await (async () => {
+        const time = Date.now();
 
-      // retrieve rules from cache
-      let cacheRulesText, cacheTime;
-      if (data) {
-        ({time: cacheTime, rulesText: cacheRulesText} = data);
-        // use cached version if not expired
-        if (time - cacheTime < cacheDuration) {
+        // retrieve rules from cache
+        let cacheRulesText, cacheTime;
+        if (data) {
+          ({time: cacheTime, rulesText: cacheRulesText} = data);
+          // use cached version if not expired
+          if (time - cacheTime < cacheDuration) {
+            return cacheRulesText;
+          }
+        }
+
+        // retrieve rules from web if no cache or cache has expired
+        let text;
+        try {
+          const response = await fetch(url, {
+            credentials: 'include',
+            cache: 'no-cache',
+          });
+          if (!response.ok) { throw new Error("response not ok"); }
+          text = await response.text();
+        } catch (ex) {
+          console.error(`Unable to get blocklist from: '${url}'`);
+
+          // fallback to cached version if web version not accessible
           return cacheRulesText;
         }
-      }
 
-      // retrieve rules from web if no cache or cache has expired
-      return Promise.resolve().then(() => {
-        return fetch(url, {
-          credentials: 'include',
-          cache: 'no-cache',
-        }).then((response) => {
-          if (!response.ok) { throw new Error("response not ok"); }
-          return response.text();
-        }).then((text) => {
-          if (doNotCache) { return text; }
-          // store retrieved rules to cache
-          return this.setWebListCache(url, time, text)
-            .catch(() => {})
-            .then(() => text);
-        });
-      }).catch((ex) => {
-        console.error(`Unable to get blocklist from: '${url}'`);
-        // fallback to cached version if web version not accessible
-        return cacheRulesText;
-      });
-    }).then((text) => {
+        // store retrieved rules to cache
+        if (!doNotCache) {
+          await this.setWebListCache(url, time, text).catch(() => {});
+        }
+        return text;
+      })();
       this.addBlackList(this.validateRulesText(text));
-    }).catch((ex) => {
+    } catch (ex) {
       console.error(ex);
-    });
+    }
   }
 
   addTransformRules(...args) {
@@ -503,23 +506,21 @@ class ContentFarmFilter {
     return JSON.stringify({webBlocklistCache: url});
   }
 
-  getWebListCache(url) {
+  async getWebListCache(url) {
     const key = this.webListCacheKey(url);
-    return browser.storage.local.get(key).then(response => response[key]);
+    return (await browser.storage.local.get(key))[key];
   }
 
-  setWebListCache(url, time, rulesText) {
+  async setWebListCache(url, time, rulesText) {
     const key = this.webListCacheKey(url);
-    return browser.storage.local.set({
-      [key]: {time, rulesText},
-    });
+    await browser.storage.local.set({[key]: {time, rulesText}});
   }
 
-  clearStaleWebListCache(webListChange) {
+  async clearStaleWebListCache(webListChange) {
     const {newValue, oldValue} = webListChange;
     const urlSet = new Set(filter.urlsTextToLines(newValue));
     const deletedUrls = filter.urlsTextToLines(oldValue).filter(u => !urlSet.has(u));
-    return browser.storage.local.remove(deletedUrls.map(this.webListCacheKey));
+    await browser.storage.local.remove(deletedUrls.map(this.webListCacheKey));
   }
 }
 

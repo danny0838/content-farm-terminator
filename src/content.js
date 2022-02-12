@@ -12,8 +12,8 @@ let showLinkMarkers = true;
  * @param urlChanged {boolean} a recent URL change has been presumed
  * @return {boolean} whether document URL changed
  */
-function recheckCurrentUrl(urlChanged = false) {
-  return Promise.resolve().then(() => {
+async function recheckCurrentUrl(urlChanged = false) {
+  try {
     // check for URL change of the address bar and update related global variables
     const href = location.href;
     if (href !== docHref) {
@@ -26,32 +26,32 @@ function recheckCurrentUrl(urlChanged = false) {
     // skip further check if document URL doesn't change
     if (!urlChanged) { return urlChanged; }
 
-    return browser.runtime.sendMessage({
+    const isTempUnblocked = await browser.runtime.sendMessage({
       cmd: 'isTempUnblocked',
       args: {},
-    }).then((isTempUnblocked) => {
-      // skip further check if this tab is temporarily unblocked
-      if (isTempUnblocked) { return urlChanged; }
-
-      // redirect if the current document URL is blocked
-      return browser.runtime.sendMessage({
-        cmd: 'isUrlBlocked',
-        args: {url: docHref},
-      }).then((blockType) => {
-        if (blockType) {
-          const inFrame = (self !== top);
-          const redirectUrl = utils.getBlockedPageUrl(docHref, {blockType, inFrame});
-          location.replace(redirectUrl);
-        }
-        return urlChanged;
-      });
     });
-  }).catch((ex) => {
+
+    // skip further check if this tab is temporarily unblocked
+    if (isTempUnblocked) { return urlChanged; }
+
+    // redirect if the current document URL is blocked
+    const blockType = await browser.runtime.sendMessage({
+      cmd: 'isUrlBlocked',
+      args: {url: docHref},
+    });
+    if (blockType) {
+      const inFrame = (self !== top);
+      const redirectUrl = utils.getBlockedPageUrl(docHref, {blockType, inFrame});
+      location.replace(redirectUrl);
+    }
+
+    return urlChanged;
+  } catch (ex) {
     console.error(ex);
-  });
+  }
 }
 
-function getRedirectedUrlOrHostname(elem) {
+async function getRedirectedUrlOrHostname(elem) {
   const me = getRedirectedUrlOrHostname;
   if (!me.cached) {
     me.cached = true;
@@ -62,7 +62,7 @@ function getRedirectedUrlOrHostname(elem) {
     me.reQwantAdsTester = /^\d+\.r\.bat\.bing\.com$/;
   }
 
-  return Promise.resolve().then(() => {
+  try {
     const u = new URL(elem.href);
     const h = u.hostname;
     const p = u.pathname;
@@ -306,14 +306,14 @@ function getRedirectedUrlOrHostname(elem) {
         return s.get("url");
       }
     }
-  }).catch((ex) => {
+  } catch (ex) {
     console.error(ex);
-  });
+  }
 }
 
-function updateLinkMarker(elem) {
+async function updateLinkMarker(elem) {
   // console.warn("updateLinkMarker", elem);
-  return updateLinkMarkerPromise = updateLinkMarkerPromise.then(() => {
+  return updateLinkMarkerPromise = updateLinkMarkerPromise.then(async () => {
     if (!showLinkMarkers) { return false; }
 
     if (!elem.parentNode || !elem.href) { return false; }
@@ -323,21 +323,19 @@ function updateLinkMarker(elem) {
     if (!(c === "http:" || c === "https:")) { return false; }
 
     // check whether the URL is blocked
-    return browser.runtime.sendMessage({
+    const blockType = await browser.runtime.sendMessage({
       cmd: 'isUrlBlocked',
       args: {url: u.href}
-    }).then((blockType) => {
-      if (blockType) { return true; }
+    });
+    if (blockType) { return true; }
 
-      // check for a potential redirect by the current site (e.g. search engine or social network)
-      return getRedirectedUrlOrHostname(elem).then((urlOrHostname) => {
-        if (!urlOrHostname) { return false; }
+    // check for a potential redirect by the current site (e.g. search engine or social network)
+    const urlOrHostname = await getRedirectedUrlOrHostname(elem);
+    if (!urlOrHostname) { return false; }
 
-        return browser.runtime.sendMessage({
-          cmd: 'isUrlBlocked',
-          args: {url: urlOrHostname}
-        });
-      });
+    return await browser.runtime.sendMessage({
+      cmd: 'isUrlBlocked',
+      args: {url: urlOrHostname},
     });
   }).then((willBlock) => {
     let marker = anchorMarkerMap.get(elem);
@@ -401,7 +399,7 @@ function updateLinkMarker(elem) {
   });
 }
 
-function updateLinkMarkersAll(root = document) {
+async function updateLinkMarkersAll(root = document) {
   for (const elem of root.querySelectorAll('a[href], area[href]')) {
     updateLinkMarker(elem); // async
   }
@@ -524,12 +522,11 @@ browser.runtime.onMessage.addListener((message, sender) => {
   }
 });
 
-function onPotentialUrlChange() {
+async function onPotentialUrlChange() {
   if (onPotentialUrlChange.checking) { return; }
   onPotentialUrlChange.checking = true;
-  return recheckCurrentUrl().then((urlChanged) => {
-    onPotentialUrlChange.checking = false;
-  });
+  const urlChanged = await recheckCurrentUrl();
+  onPotentialUrlChange.checking = false;
 }
 
 /**
@@ -555,9 +552,11 @@ for (const elem of document.querySelectorAll('img[data-content-farm-terminator-m
   elem.remove();
 }
 
-utils.getOptions([
-  "showLinkMarkers",
-]).then((options) => {
+(async () => {
+  const options = await utils.getOptions([
+    "showLinkMarkers",
+  ]);
+
   showLinkMarkers = options.showLinkMarkers;
 
   // Check whether the current page is blocked, as a supplement
@@ -566,8 +565,7 @@ utils.getOptions([
   // is loaded or before updateFilter is completed in the background script.
   //
   // @TODO: Some ads are still loaded even if we block the page here.
-  return recheckCurrentUrl(true).then((urlChanged) => {
-    observeDomUpdates();
-    updateLinkMarkersAll();
-  });
-});
+  await recheckCurrentUrl(true);
+  observeDomUpdates();
+  await updateLinkMarkersAll();
+})();

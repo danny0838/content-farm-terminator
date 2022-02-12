@@ -45,7 +45,7 @@ const utils = {
    * @param {string|string[]|Object} [options] - An object for key-value pairs,
    *     or key(s) with corresponding values of defaultOptions.
    */
-  getOptions(options = this.defaultOptions) {
+  async getOptions(options = this.defaultOptions) {
     if (typeof options === "string") {
       options = {[options]: this.defaultOptions[options]};
     } else if (Array.isArray(options)) {
@@ -55,32 +55,34 @@ const utils = {
       }, {});
     }
     const keys = Object.keys(options);
-    return browser.storage.sync.get(keys)
-      .catch((ex) => {})
-      .then((syncResult) => {
-        // merge options from storage.local to options from storage.sync
-        return browser.storage.local.get(keys)
-          .then((result) => {
-            return Object.assign({}, options, syncResult, result);
-          });
-      });
+
+    let syncResult;
+    try {
+      syncResult = await browser.storage.sync.get(keys);
+    } catch (ex) {
+      syncResult = {};
+    }
+
+    // merge options from storage.local to options from storage.sync
+    const localResult = await browser.storage.local.get(keys);
+    return Object.assign({}, options, syncResult, localResult);
   },
 
-  setOptions(options) {
-    return browser.storage.sync.set(options)
-      .then(() => {
-        return browser.storage.local.remove(Object.keys(options));
-      }, (ex) => {
-        return browser.storage.local.set(options);
-      });
+  async setOptions(options) {
+    try {
+      await browser.storage.sync.set(options);
+      await browser.storage.local.remove(Object.keys(options));
+    } catch (ex) {
+      await browser.storage.local.set(options);
+    }
   },
 
-  clearOptions() {
-    return browser.storage.sync.clear()
-      .catch((ex) => {})
-      .then(() => {
-        return browser.storage.local.clear();
-      });
+  async clearOptions() {
+    try {
+      await browser.storage.sync.clear();
+    } catch (ex) {
+      await browser.storage.local.clear();
+    }
   },
 
   /**
@@ -317,18 +319,16 @@ const utils = {
     return redirectUrl;
   },
 
-  back() {
+  async back() {
     if (history.length > 1) {
       history.go(-1);
       return;
     }
 
-    return browser.tabs.getCurrent()
-      .then((tab) => {
-        return browser.runtime.sendMessage({
-          cmd: 'closeTab',
-          args: {tabId: tab.id},
-        });
-      });
+    const tab = await browser.tabs.getCurrent();
+    return await browser.runtime.sendMessage({
+      cmd: 'closeTab',
+      args: {tabId: tab.id},
+    });
   },
 };

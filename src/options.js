@@ -1,24 +1,22 @@
-function loadOptions() {
-  return utils.getOptions().then((options) => {
-    document.querySelector('#userBlacklist textarea').value = options.userBlacklist;
-    document.querySelector('#userWhitelist textarea').value = options.userWhitelist;
-    document.querySelector('#webBlacklists textarea').value = options.webBlacklists;
-    document.querySelector('#transformRules textarea').value = options.transformRules;
-    document.querySelector('#suppressHistory input').checked = options.suppressHistory;
-    document.querySelector('#showLinkMarkers input').checked = options.showLinkMarkers;
-    document.querySelector('#showContextMenuCommands input').checked = options.showContextMenuCommands;
-    document.querySelector('#quickContextMenuCommands input').checked = options.quickContextMenuCommands;
-    document.querySelector('#showUnblockButton input').checked = options.showUnblockButton;
+async function loadOptions() {
+  const options = await utils.getOptions();
+  document.querySelector('#userBlacklist textarea').value = options.userBlacklist;
+  document.querySelector('#userWhitelist textarea').value = options.userWhitelist;
+  document.querySelector('#webBlacklists textarea').value = options.webBlacklists;
+  document.querySelector('#transformRules textarea').value = options.transformRules;
+  document.querySelector('#suppressHistory input').checked = options.suppressHistory;
+  document.querySelector('#showLinkMarkers input').checked = options.showLinkMarkers;
+  document.querySelector('#showContextMenuCommands input').checked = options.showContextMenuCommands;
+  document.querySelector('#quickContextMenuCommands input').checked = options.quickContextMenuCommands;
+  document.querySelector('#showUnblockButton input').checked = options.showUnblockButton;
 
-    return browser.runtime.sendMessage({
-      cmd: 'getMergedBlacklist',
-    }).then((blacklist) => {
-      document.querySelector('#allBlacklist textarea').value = blacklist;
-    });
+  const blacklist = await browser.runtime.sendMessage({
+    cmd: 'getMergedBlacklist',
   });
+  document.querySelector('#allBlacklist textarea').value = blacklist;
 }
 
-function saveOptions() {
+async function saveOptions() {
   const userBlacklist = document.querySelector('#userBlacklist textarea').value;
   const userWhitelist = document.querySelector('#userWhitelist textarea').value;
   const webBlacklists = document.querySelector('#webBlacklists textarea').value;
@@ -29,64 +27,54 @@ function saveOptions() {
   const quickContextMenuCommands = document.querySelector('#quickContextMenuCommands input').checked;
   const showUnblockButton = document.querySelector('#showUnblockButton input').checked;
 
-  // Firefox < 54: No browser.permissions.
-  //
-  // @FIXME:
-  // Firefox < 56: the request dialog prompts repeatedly even if the
-  // permissions are already granted. Checking permissions.contains() in
-  // prior doesn't work as Promise.then() breaks tracing of the user input
-  // event handler and makes the request always fail (for Firefox < 60).
-  // https://bugzilla.mozilla.org/show_bug.cgi?id=1398833
-  return (() => {
-    if (!suppressHistory || !browser.permissions) {
-      return Promise.resolve(false);
-    }
-
-    return browser.permissions.request({permissions: ['history']}).catch((ex) => {
+  if (suppressHistory) {
+    // @FIXME:
+    // Firefox < 54: No browser.permissions.
+    // Firefox < 56: the request dialog prompts repeatedly even if the
+    // permissions are already granted. Checking permissions.contains() in
+    // prior doesn't work as Promise.then() breaks tracing of the user input
+    // event handler and makes the request always fail.
+    // https://bugzilla.mozilla.org/show_bug.cgi?id=1398833
+    if (!(browser.permissions && await browser.permissions.request({permissions: ['history']}).catch(ex => {
       console.error(ex);
       return false;
-    });
-  })().then((granted) => {
-    if (!granted) {
+    }))) {
       suppressHistory = document.querySelector('#suppressHistory input').checked = false;
     }
-  }).then(() => {
-    return browser.runtime.sendMessage({
-      cmd: 'updateOptions',
-      args: {
-        userBlacklist,
-        userWhitelist,
-        webBlacklists,
-        transformRules,
-        suppressHistory,
-        showLinkMarkers,
-        showContextMenuCommands,
-        quickContextMenuCommands,
-        showUnblockButton,
-      },
-    });
+  }
+
+  return await browser.runtime.sendMessage({
+    cmd: 'updateOptions',
+    args: {
+      userBlacklist,
+      userWhitelist,
+      webBlacklists,
+      transformRules,
+      suppressHistory,
+      showLinkMarkers,
+      showContextMenuCommands,
+      quickContextMenuCommands,
+      showUnblockButton,
+    },
   });
 }
 
-function onReset(event) {
+async function onReset(event) {
   event.preventDefault();
   if (!confirm(utils.lang("resetConfirm"))) {
     return;
   }
-  return utils.clearOptions().then(() => {
-    return loadOptions();
-  });
+  await utils.clearOptions();
+  await loadOptions();
 }
 
-function onSubmit(event) {
+async function onSubmit(event) {
   event.preventDefault();
-  return saveOptions().then(() => {
-    return utils.back();
-  });
+  await saveOptions();
+  await utils.back();
 }
 
-
-function init(event) {
+async function init(event) {
   utils.loadLanguages(document);
 
   // hide some options if contextMenus is not available
