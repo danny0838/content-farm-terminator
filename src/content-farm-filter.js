@@ -503,30 +503,21 @@ class ContentFarmFilter {
 
   getWebListCache(url) {
     const key = this.webListCacheKey(url);
-    return browser.storage.local.get(key)
-      .catch((ex) => {
-        console.error(ex);
-      });
+    return browser.storage.local.get(key);
   }
 
   setWebListCache(url, time, rulesText) {
     const key = this.webListCacheKey(url);
     return browser.storage.local.set({
       [key]: {time, rulesText},
-    })
-      .catch((ex) => {
-        console.error(ex);
-      });
+    });
   }
 
   clearStaleWebListCache(webListChange) {
     const {newValue, oldValue} = webListChange;
     const urlSet = new Set(filter.urlsTextToLines(newValue));
     const deletedUrls = filter.urlsTextToLines(oldValue).filter(u => !urlSet.has(u));
-    return browser.storage.local.remove(deletedUrls.map(this.webListCacheKey))
-      .catch((ex) => {
-        console.error(ex);
-      });
+    return browser.storage.local.remove(deletedUrls.map(this.webListCacheKey));
   }
 }
 
