@@ -20,7 +20,33 @@ function recheckBlock() {
   });
 }
 
-document.addEventListener('DOMContentLoaded', (event) => {
+function onViewClick() {
+  const newUrl = `sandbox.html?src=${encodeURIComponent(sourceUrl)}`;
+  location.assign(newUrl);
+}
+
+function onUnblockClick() {
+  const key = Math.random().toString().slice(2, 6);
+  if (prompt(utils.lang("unblockBtnPrompt", key)) !== key) {
+    return;
+  }
+
+  return browser.runtime.sendMessage({
+    cmd: 'tempUnblock',
+    args: {},
+  })
+    .then((response) => {
+      if (response) {
+        location.replace(sourceUrl);
+      }
+    });
+}
+
+function onBackClick() {
+  return utils.back();
+}
+
+function init() {
   utils.loadLanguages(document);
 
   try {
@@ -48,51 +74,32 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
   document.querySelector('#detailsLink').href = `options.html?from=${encodeURIComponent(sourceUrl)}`;
 
-  /**
-   * Events
-   */
-  document.querySelector('#view').addEventListener('click', (event) => {
-    const newUrl = `sandbox.html?src=${encodeURIComponent(sourceUrl)}`;
-    location.assign(newUrl);
-  });
-
   // Firefox might record status and make it non-disabled
   document.querySelector('#unblock').disabled = true;
 
-  document.querySelector('#unblock').addEventListener('click', (event) => {
-    const key = Math.random().toString().slice(2, 6);
-    if (prompt(utils.lang("unblockBtnPrompt", key)) !== key) {
-      return;
-    }
+  /**
+   * Events
+   */
+  document.querySelector('#view').addEventListener('click', onViewClick);
+  document.querySelector('#unblock').addEventListener('click', onUnblockClick);
+  document.querySelector('#back').addEventListener('click', onBackClick);
+}
 
-    return browser.runtime.sendMessage({
-      cmd: 'tempUnblock',
-      args: {},
-    })
-      .then((response) => {
-        if (response) {
-          location.replace(sourceUrl);
-        }
-      });
-  });
-
-  document.querySelector('#back').addEventListener('click', (event) => {
-    return utils.back();
-  });
-});
+document.addEventListener('DOMContentLoaded', init);
 
 browser.runtime.onMessage.addListener((message, sender) => {
   // console.warn("omMessage", message);
   const {cmd, args} = message;
   switch (cmd) {
     case 'updateContent': {
+      // async update to prevent block
       recheckBlock();
       return Promise.resolve(true);
     }
   }
 });
 
-// in case that sourceUrl is alreally unblocked
+// in case that sourceUrl is already unblocked
 recheckBlock().then(() => {
   return utils.getOptions([
     "showUnblockButton",

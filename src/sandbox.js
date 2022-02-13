@@ -4,9 +4,9 @@ document.addEventListener('DOMContentLoaded', (event) => {
   const frame = document.querySelector('#viewer');
   const loading = document.querySelector('#loading');
 
-  const url = new URL(location.href).searchParams.get('src');
+  const u = new URL(new URL(location.href).searchParams.get('src'));
 
-  fetch(url, {credentials: 'include'}).then((response) => {
+  fetch(u, {credentials: 'include'}).then((response) => {
     return response.blob();
   }).then((blob) => {
     return utils.readFileAsDocument(blob).then((doc) => {
@@ -15,31 +15,23 @@ document.addEventListener('DOMContentLoaded', (event) => {
       const headElem = doc.querySelector('head');
 
       // respect original base but redirect links to parent frame
-      Array.prototype.forEach.call(doc.querySelectorAll('base'), (elem) => {
+      for (const elem of doc.querySelectorAll('base')) {
         elem.target = '_parent';
-      });
+      }
 
       // add base
       const baseElem = doc.createElement('base');
-      baseElem.href = url;
+      baseElem.href = u.href;
       baseElem.target = '_parent';
       headElem.insertBefore(baseElem, headElem.firstChild);
 
       // remove original meta charset and content security policy
-      Array.prototype.forEach.call(doc.querySelectorAll('meta'), (elem) => {
-        if (elem.hasAttribute("charset")) {
-          elem.remove();
-        } else if (elem.hasAttribute("http-equiv") && elem.hasAttribute("content")) {
-          const httpEquiv = elem.getAttribute("http-equiv").toLowerCase();
-          if (httpEquiv === "content-type" || httpEquiv === "content-security-policy") {
-            elem.remove();
-          }
-        }
-      });
+      for (const elem of doc.querySelectorAll('meta[charset], meta[http-equiv="content-type"], meta[http-equiv="content-security-policy"]')) {
+        elem.remove();
+      }
 
       // add content security policy to block offensive contents
       // the iframe cannot be loaded without "frame-src blob:"
-      const u = new URL(url);
       const host = punycode.toASCII(u.host);
       const hostSubdomains = "*." + host.replace(/^www[.]/, '');
       const hostSources = `http://${host} https://${host} http://${hostSubdomains} https://${hostSubdomains}`;
@@ -60,7 +52,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
       return new Blob([html], {type: 'text/html'});
     });
   }).then((blob) => {
-    const blobUrl = URL.createObjectURL(blob) + new URL(url).hash;
+    const blobUrl = URL.createObjectURL(blob) + u.hash;
     const parent = frame.parentNode;
     const next = frame.nextSibling;
     parent.removeChild(frame);

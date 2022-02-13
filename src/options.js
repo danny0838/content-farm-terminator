@@ -68,7 +68,25 @@ function saveOptions() {
   });
 }
 
-document.addEventListener('DOMContentLoaded', (event) => {
+function onReset(event) {
+  event.preventDefault();
+  if (!confirm(utils.lang("resetConfirm"))) {
+    return;
+  }
+  return utils.clearOptions().then(() => {
+    return loadOptions();
+  });
+}
+
+function onSubmit(event) {
+  event.preventDefault();
+  return saveOptions().then(() => {
+    return utils.back();
+  });
+}
+
+
+function init(event) {
   utils.loadLanguages(document);
 
   // hide some options if contextMenus is not available
@@ -88,7 +106,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
     document.querySelector('#suppressHistory').hidden = true;
   }
 
-  loadOptions();
+  loadOptions(); // async
 
   try {
     const url = new URL(location.href).searchParams.get('from');
@@ -100,20 +118,8 @@ document.addEventListener('DOMContentLoaded', (event) => {
     console.error(ex);
   }
 
-  document.querySelector('#resetButton').addEventListener('click', (event) => {
-    event.preventDefault();
-    if (!confirm(utils.lang("resetConfirm"))) {
-      return;
-    }
-    return utils.clearOptions().then(() => {
-      return loadOptions();
-    });
-  });
+  document.querySelector('#resetButton').addEventListener('click', onReset);
+  document.querySelector('#submitButton').addEventListener('click', onSubmit);
+}
 
-  document.querySelector('#submitButton').addEventListener('click', (event) => {
-    event.preventDefault();
-    return saveOptions().then(() => {
-      return utils.back();
-    });
-  });
-});
+document.addEventListener('DOMContentLoaded', init);

@@ -33,7 +33,7 @@ function recheckCurrentUrl(urlChanged = false) {
       // skip further check if this tab is temporarily unblocked
       if (isTempUnblocked) { return urlChanged; }
 
-      // check if the current document URL is blocked
+      // redirect if the current document URL is blocked
       return browser.runtime.sendMessage({
         cmd: 'isUrlBlocked',
         args: {url: docHref},
@@ -402,9 +402,9 @@ function updateLinkMarker(elem) {
 }
 
 function updateLinkMarkersAll(root = document) {
-  Array.prototype.forEach.call(root.querySelectorAll('a[href], area[href]'), (elem) => {
-    updateLinkMarker(elem);
-  });
+  for (const elem of root.querySelectorAll('a[href], area[href]')) {
+    updateLinkMarker(elem); // async
+  }
   return updateLinkMarkerPromise;
 }
 
@@ -419,24 +419,24 @@ function observeDomUpdates() {
       // console.warn("DOM update", mutation);
       for (let node of mutation.addedNodes) {
         if (isAnchor(node)) {
-          updateLinkMarker(node);
+          updateLinkMarker(node); // async
           ancObserver.observe(node, ancObserverConf);
         }
         if (node.nodeType === 1) {
-          Array.prototype.forEach.call(node.querySelectorAll("a, area"), (elem) => {
-            updateLinkMarker(elem);
+          for (const elem of node.querySelectorAll("a, area")) {
+            updateLinkMarker(elem); // async
             ancObserver.observe(elem, ancObserverConf);
-          });
+          }
         }
       }
       for (let node of mutation.removedNodes) {
         if (isAnchor(node)) {
-          updateLinkMarker(node);
+          updateLinkMarker(node); // async
         }
         if (node.nodeType === 1) {
-          Array.prototype.forEach.call(node.querySelectorAll("a, area"), (elem) => {
-            updateLinkMarker(elem);
-          });
+          for (const elem of node.querySelectorAll("a, area")) {
+            updateLinkMarker(elem); // async
+          }
         }
       }
     }
@@ -447,15 +447,15 @@ function observeDomUpdates() {
     for (let mutation of mutations) {
       // console.warn("Anchor update", mutation);
       const node = mutation.target;
-      updateLinkMarker(node);
+      updateLinkMarker(node); // async
     }
   });
   const ancObserverConf = {attributes: true, attributeFilter: ["href"]};
 
   docObserver.observe(document.documentElement, docObserverConf);
-  Array.prototype.forEach.call(document.querySelectorAll("a, area"), (elem) => {
+  for (const elem of document.querySelectorAll("a, area")) {
     ancObserver.observe(elem, ancObserverConf);
-  });
+  }
 }
 
 browser.runtime.onMessage.addListener((message, sender) => {
@@ -505,9 +505,9 @@ browser.runtime.onMessage.addListener((message, sender) => {
         let node;
         while (node = walker.nextNode()) {
           const a = node;
-          const p = getRedirectedUrlOrHostname(a).then((redirected) => {
-            return redirected || a.href;
-          }).catch((ex) => {});
+          const p = getRedirectedUrlOrHostname(a)
+            .then((redirected) => redirected || a.href)
+            .catch((ex) => {});
           rv.push(p);
         }
       }
@@ -515,9 +515,7 @@ browser.runtime.onMessage.addListener((message, sender) => {
     }
     case 'getRedirectedLinkUrl': {
       const anchor = lastRightClickedElem.closest('a[href], area[href]');
-      return getRedirectedUrlOrHostname(anchor).then((urlOrHostname) => {
-        return urlOrHostname;
-      });
+      return getRedirectedUrlOrHostname(anchor);
     }
     case 'alert': {
       alert(args.msg);
@@ -553,9 +551,9 @@ window.addEventListener("contextmenu", (event) => {
 }, true);
 
 // Remove stale link markers when the addon is re-enabled
-Array.prototype.forEach.call(document.querySelectorAll('img[data-content-farm-terminator-marker]'), (elem) => {
+for (const elem of document.querySelectorAll('img[data-content-farm-terminator-marker]')) {
   elem.remove();
-});
+}
 
 utils.getOptions([
   "showLinkMarkers",

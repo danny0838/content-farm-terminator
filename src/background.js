@@ -282,7 +282,7 @@ function onBeforeRequestBlocker(details) {
     // Using data URI with meta or script refresh works but generates
     // an extra history entry.
     if (utils.userAgent.soup.has('firefox') && utils.userAgent.major < 56) {
-      browser.tabs.update(details.tabId, {url: redirectUrl});
+      browser.tabs.update(details.tabId, {url: redirectUrl}); // async
       return {cancel: true};
     }
 
@@ -439,11 +439,11 @@ function initStorageChangeListener() {
     }
 
     if ("suppressHistory" in changes) {
-      historyController.refresh();
+      historyController.refresh(); // async
     }
 
     if ("webBlacklistsUpdateInterval" in changes) {
-      autoUpdateFilter();
+      autoUpdateFilter(); // async
     }
 
     {
@@ -484,7 +484,7 @@ function initInstallListener() {
           "webBlacklists": undefined,
         }).then((options) => {
           if (options.webBlacklist && (typeof options.webBlacklists === "undefined")) {
-            let newWebBlacklists = utils.defaultOptions.webBlacklists + "\n" + options.webBlacklist;
+            const newWebBlacklists = utils.defaultOptions.webBlacklists + "\n" + options.webBlacklist;
             return utils.setOptions({webBlacklists: newWebBlacklists}).then(() => {
               updateFilter();
             });

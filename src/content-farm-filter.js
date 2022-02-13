@@ -47,8 +47,7 @@ class ContentFarmFilter {
         }
       }
 
-      // retrieve rules from web
-      // if no cache or cache has expired
+      // retrieve rules from web if no cache or cache has expired
       return fetch(url, {
         credentials: 'include',
         cache: 'no-cache',
@@ -511,8 +510,9 @@ class ContentFarmFilter {
   }
 
   setWebListCache(url, time, rulesText) {
+    const key = this.webListCacheKey(url);
     return browser.storage.local.set({
-      [this.webListCacheKey(url)]: {time, rulesText}
+      [key]: {time, rulesText},
     })
       .catch((ex) => {
         console.error(ex);
