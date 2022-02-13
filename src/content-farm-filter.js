@@ -503,7 +503,7 @@ class ContentFarmFilter {
 
   getWebListCache(url) {
     const key = this.webListCacheKey(url);
-    return browser.storage.local.get(key);
+    return browser.storage.local.get(key).then(response => response[key]);
   }
 
   setWebListCache(url, time, rulesText) {
