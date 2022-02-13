@@ -48,22 +48,24 @@ class ContentFarmFilter {
       }
 
       // retrieve rules from web if no cache or cache has expired
-      return fetch(url, {
-        credentials: 'include',
-        cache: 'no-cache',
-      }).then((response) => {
-        if (!response.ok) { throw new Error("response not ok"); }
-        return response.text();
+      return Promise.resolve().then(() => {
+        return fetch(url, {
+          credentials: 'include',
+          cache: 'no-cache',
+        }).then((response) => {
+          if (!response.ok) { throw new Error("response not ok"); }
+          return response.text();
+        }).then((text) => {
+          if (doNotCache) { return text; }
+          // store retrieved rules to cache
+          return this.setWebListCache(url, time, text)
+            .catch(() => {})
+            .then(() => text);
+        });
       }).catch((ex) => {
         console.error(`Unable to get blocklist from: '${url}'`);
         // fallback to cached version if web version not accessible
         return cacheRulesText;
-      }).then((text) => {
-        if (doNotCache) { return text; }
-        // store retrieved rules to cache
-        return this.setWebListCache(url, time, text).then(() => {
-          return text;
-        });
       });
     }).then((text) => {
       this.addBlackList(this.validateRulesText(text));
