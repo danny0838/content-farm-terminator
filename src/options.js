@@ -29,19 +29,25 @@ function saveOptions() {
   const quickContextMenuCommands = document.querySelector('#quickContextMenuCommands input').checked;
   const showUnblockButton = document.querySelector('#showUnblockButton input').checked;
 
-  // @TODO:
-  // On Firefox 55 (and upwards?) the request prompts repeatedly even if the
-  // permissions are already granted.
-  return Promise.resolve().then(() => {
+  // Firefox < 54: No browser.permissions.
+  //
+  // @FIXME:
+  // Firefox < 56: the request dialog prompts repeatedly even if the
+  // permissions are already granted. Checking permissions.contains() in
+  // prior doesn't work as Promise.then() breaks tracing of the user input
+  // event handler and makes the request always fail (for Firefox < 60).
+  // https://bugzilla.mozilla.org/show_bug.cgi?id=1398833
+  return (() => {
     if (!suppressHistory || !browser.permissions) {
-      return false;
+      return Promise.resolve(false);
     }
 
-    return browser.permissions.request({permissions: ['history']});
-  }).catch((ex) => {
-    return false;
-  }).then((response) => {
-    if (!response) {
+    return browser.permissions.request({permissions: ['history']}).catch((ex) => {
+      console.error(ex);
+      return false;
+    });
+  })().then((granted) => {
+    if (!granted) {
       suppressHistory = document.querySelector('#suppressHistory input').checked = false;
     }
   }).then(() => {
