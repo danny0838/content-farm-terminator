@@ -168,7 +168,7 @@
   },
 
   "urlInfo": {
-    "message": "最近访问: $URL$ ($URL_REGEX$)",
+    "message": "最近访问: $URL$\n最近访问 (regex): $URL_REGEX$",
     "description": "Description of the recent visited URL in options page",
     "placeholders": {
       "url": {
