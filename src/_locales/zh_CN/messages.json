@@ -182,6 +182,21 @@
     }
   },
 
+  "urlReferrerInfo": {
+    "message": "重导向自: $URL$\n重导向自 (regex): $URL_REGEX$",
+    "description": "Description of the referrer of the recent visited URL in options page",
+    "placeholders": {
+      "url": {
+        "content": "$1",
+        "example": "http://example.com"
+      },
+      "url_regex": {
+        "content": "$2",
+        "example": "/^http://example\\.com/$$/"
+      }
+    }
+  },
+
   "allBlacklist": {
     "message": "作用中的黑名单",
     "description": "Label of allBlacklist field in options page"

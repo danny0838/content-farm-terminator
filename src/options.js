@@ -118,6 +118,16 @@ function init(event) {
     console.error(ex);
   }
 
+  try {
+    const url = new URL(location.href).searchParams.get('ref');
+    if (url) {
+      const urlRegex = `/^${utils.escapeRegExp(url, true)}$/`;
+      document.querySelector('#urlReferrerInfo').textContent = utils.lang('urlReferrerInfo', [url, urlRegex]);
+    }
+  } catch (ex) {
+    console.error(ex);
+  }
+
   document.querySelector('#resetButton').addEventListener('click', onReset);
   document.querySelector('#submitButton').addEventListener('click', onSubmit);
 }

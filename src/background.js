@@ -271,11 +271,15 @@ function onBeforeRequestBlocker(details) {
   }
 
   const url = details.url;
+
+  // Chromium uses .initiator, Firefox uses .originUrl
+  const referrer = details.initiator || details.originUrl;
+
   const blockType = filter.isBlocked(url);
   if (!blockType) { return; }
 
   if (details.type === "main_frame") {
-    const redirectUrl = utils.getBlockedPageUrl(url, {blockType, inFrame: false});
+    const redirectUrl = utils.getBlockedPageUrl(url, {blockType, inFrame: false, referrer});
 
     // Firefox < 56 does not allow redirecting to an extension page
     // even if it is listed in web_accessible_resources.
@@ -288,7 +292,7 @@ function onBeforeRequestBlocker(details) {
 
     return {redirectUrl: redirectUrl};
   } else {
-    const redirectUrl = utils.getBlockedPageUrl(url, {blockType, inFrame: true});
+    const redirectUrl = utils.getBlockedPageUrl(url, {blockType, inFrame: true, referrer});
     return {redirectUrl: redirectUrl};
   }
 };

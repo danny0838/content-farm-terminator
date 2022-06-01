@@ -31,7 +31,7 @@ body {
   opacity: 0.6;
 }
 
-#urlInfo {
+#urlInfo, #urlReferrerInfo {
   word-break: break-all;
   white-space: pre-wrap;
 }

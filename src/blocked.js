@@ -1,5 +1,6 @@
 const urlObj = new URL(location.href);
 const sourceUrl = urlObj.searchParams.get('to');
+const referrerUrl = urlObj.searchParams.get('ref');
 
 function recheckBlock() {
   return browser.runtime.sendMessage({
@@ -119,7 +120,10 @@ function init() {
       document.querySelector('#warningUrl').appendChild(elem);
     }
 
-    document.querySelector('#detailsLink').href = `options.html?from=${encodeURIComponent(sourceUrl)}`;
+    const detailsUrl = new URL(browser.runtime.getURL('options.html'));
+    detailsUrl.searchParams.set('from', sourceUrl);
+    if (referrerUrl) { detailsUrl.searchParams.set('ref', referrerUrl); }
+    document.querySelector('#detailsLink').href = detailsUrl.href;
 
     /**
      * Events

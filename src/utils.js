@@ -287,9 +287,15 @@ const utils = {
     });
   },
 
-  getBlockedPageUrl(url, {blockType = 1, inFrame = false} = {}) {
+  getBlockedPageUrl(url, {blockType = 1, inFrame = false, referrer = null} = {}) {
     url = utils.getNormalizedUrl(new URL(url));
-    const redirectUrl = `${browser.runtime.getURL('blocked.html')}?to=${encodeURIComponent(url)}&type=${blockType}`;
+    referrer = referrer ? utils.getNormalizedUrl(new URL(referrer)) : null;
+
+    const redirectUrlObj = new URL(browser.runtime.getURL('blocked.html'));
+    redirectUrlObj.searchParams.set('to', url);
+    if (referrer) { redirectUrlObj.searchParams.set('ref', referrer); }
+    redirectUrlObj.searchParams.set('type', blockType);
+    const redirectUrl = redirectUrlObj.href;
 
     // A frame may be too small to show full description about blocking.
     // Display a link for opening in a new tab instead.
