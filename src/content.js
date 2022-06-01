@@ -40,7 +40,7 @@ function recheckCurrentUrl(urlChanged = false) {
       }).then((blockType) => {
         if (blockType) {
           const inFrame = (self !== top);
-          const redirectUrl = utils.getBlockedPageUrl(docHref, blockType, inFrame);
+          const redirectUrl = utils.getBlockedPageUrl(docHref, {blockType, inFrame});
           location.replace(redirectUrl);
         }
         return urlChanged;

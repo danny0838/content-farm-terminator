@@ -275,7 +275,7 @@ function onBeforeRequestBlocker(details) {
   if (!blockType) { return; }
 
   if (details.type === "main_frame") {
-    const redirectUrl = utils.getBlockedPageUrl(url, blockType, false);
+    const redirectUrl = utils.getBlockedPageUrl(url, {blockType, inFrame: false});
 
     // Firefox < 56 does not allow redirecting to an extension page
     // even if it is listed in web_accessible_resources.
@@ -288,7 +288,7 @@ function onBeforeRequestBlocker(details) {
 
     return {redirectUrl: redirectUrl};
   } else {
-    const redirectUrl = utils.getBlockedPageUrl(url, blockType, true);
+    const redirectUrl = utils.getBlockedPageUrl(url, {blockType, inFrame: true});
     return {redirectUrl: redirectUrl};
   }
 };

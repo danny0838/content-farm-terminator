@@ -287,7 +287,7 @@ const utils = {
     });
   },
 
-  getBlockedPageUrl(url, blockType = 1, inFrame = false) {
+  getBlockedPageUrl(url, {blockType = 1, inFrame = false} = {}) {
     url = utils.getNormalizedUrl(new URL(url));
     const redirectUrl = `${browser.runtime.getURL('blocked.html')}?to=${encodeURIComponent(url)}&type=${blockType}`;
 
