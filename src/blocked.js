@@ -53,16 +53,24 @@ async function autoUpdateUnblockButton() {
   elem.disabled = true; // Firefox might record status causing non-disabled
   elem.textContent = utils.lang("unblockBtnCountdown", [countdown / 1000]);
 
-  let t = setInterval(() => {
-    countdown -= 1000;
-    if (countdown > 0) {
-      elem.textContent = utils.lang("unblockBtnCountdown", [countdown / 1000]);
-    } else {
-      clearInterval(t);
-      elem.textContent = utils.lang("unblockBtn");
-      elem.disabled = false;
-    }
-  }, 1000);
+  if (countdown > 0) {
+    let t = setInterval(() => {
+      countdown -= 1000;
+      if (countdown > 0) {
+        elem.textContent = utils.lang("unblockBtnCountdown", [countdown / 1000]);
+      } else {
+        clearInterval(t);
+        unblock();
+      }
+    }, 1000);
+  } else {
+    unblock();
+  }
+
+  function unblock() {
+    elem.textContent = utils.lang("unblockBtn");
+    elem.disabled = false;
+  }
 }
 
 async function onViewClick(event) {
