@@ -80,9 +80,8 @@ const utils = {
   async clearOptions() {
     try {
       await browser.storage.sync.clear();
-    } catch (ex) {
-      await browser.storage.local.clear();
-    }
+    } catch (ex) {}
+    await browser.storage.local.clear();
   },
 
   /**
