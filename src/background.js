@@ -12,53 +12,39 @@ const contextMenuController = {
     // Available only in Firefox >= 53.
     if (browser.contextMenus.ContextType.TAB) {
       browser.contextMenus.create({
+        id: "blockTab",
         title: utils.lang("blockTab"),
         contexts: ["tab"],
         documentUrlPatterns: ["http://*/*", "https://*/*"],
-        onclick: async (info, tab) => {
-          return await blockSite(info.pageUrl, tab.id, 0, this.quickMode);
-        },
       });
     }
 
     browser.contextMenus.create({
+      id: "blockPage",
       title: utils.lang("blockPage"),
       contexts: ["page"],
       documentUrlPatterns: ["http://*/*", "https://*/*"],
-      onclick: async (info, tab) => {
-        return await blockSite(info.pageUrl, tab.id, info.frameId, this.quickMode);
-      },
     });
 
     browser.contextMenus.create({
+      id: "blockLink",
       title: utils.lang("blockLink"),
       contexts: ["link"],
       documentUrlPatterns: ["http://*/*", "https://*/*"],
-      onclick: async (info, tab) => {
-        const redirectedUrl = await browser.tabs.sendMessage(tab.id, {
-          cmd: 'getRedirectedLinkUrl',
-        }, {frameId: info.frameId});
-        const rule = redirectedUrl || info.linkUrl;
-        return await blockSite(rule, tab.id, info.frameId, this.quickMode);
-      },
     });
 
     browser.contextMenus.create({
+      id: "blockSelection",
       title: utils.lang("blockSelection"),
       contexts: ["selection"],
       documentUrlPatterns: ["http://*/*", "https://*/*"],
-      onclick: async (info, tab) => {
-        return await blockSite(info.selectionText, tab.id, info.frameId, this.quickMode);
-      },
     });
 
     browser.contextMenus.create({
+      id: "blockSelectedLinks",
       title: utils.lang("blockSelectedLinks"),
       contexts: ["selection"],
       documentUrlPatterns: ["http://*/*", "https://*/*"],
-      onclick: async (info, tab) => {
-        return await blockSelectedLinks(tab.id, info.frameId, this.quickMode);
-      },
     });
   },
 
@@ -75,9 +61,35 @@ const contextMenuController = {
     }
 
     if (typeof showContextMenuCommands !== 'undefined') {
+      browser.contextMenus.onClicked.removeListener(this.onClicked);
       browser.contextMenus.removeAll();
       if (showContextMenuCommands) {
         this.create();
+        browser.contextMenus.onClicked.addListener(this.onClicked);
+      }
+    }
+  },
+
+  async onClicked(info, tab) {
+    switch (info.menuItemId) {
+      case "blockTab": {
+        return await blockSite(info.pageUrl, tab.id, 0, this.quickMode);
+      }
+      case "blockPage": {
+        return await blockSite(info.pageUrl, tab.id, info.frameId, this.quickMode);
+      }
+      case "blockLink": {
+        const redirectedUrl = await browser.tabs.sendMessage(tab.id, {
+          cmd: 'getRedirectedLinkUrl',
+        }, {frameId: info.frameId});
+        const rule = redirectedUrl || info.linkUrl;
+        return await blockSite(rule, tab.id, info.frameId, this.quickMode);
+      }
+      case "blockSelection": {
+        return await blockSite(info.selectionText, tab.id, info.frameId, this.quickMode);
+      }
+      case "blockSelectedLinks": {
+        return await blockSelectedLinks(tab.id, info.frameId, this.quickMode);
       }
     }
   },
