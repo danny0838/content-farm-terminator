@@ -5,7 +5,7 @@ let updateFilterPromise;
 let requestRecorder = new Map();
 let tempUnblockTabs = new Set();
 
-const contextMenuController = {
+const menusController = {
   quickMode: false,
 
   async init() {
@@ -612,7 +612,7 @@ function initStorageChangeListener() {
     } = changes;
 
     if (showContextMenuCommands || quickContextMenuCommands) {
-      contextMenuController.refresh(
+      menusController.refresh(
         showContextMenuCommands?.newValue,
         quickContextMenuCommands?.newValue,
       );
@@ -714,8 +714,8 @@ function initAlarmsListener() {
   });
 }
 
-function initBrowserAction() {
-  browser.browserAction.onClicked.addListener((tab) => {
+function initAction() {
+  browser.action.onClicked.addListener((tab) => {
     const u = new URL(browser.runtime.getURL("options.html"));
     u.searchParams.set('t', tab.id);
     u.searchParams.set('url', tab.url);
@@ -729,9 +729,9 @@ function init() {
   initStorageChangeListener();
   initInstallListener();
   initAlarmsListener();
-  initBrowserAction();
+  initAction();
 
-  contextMenuController.init(); // async
+  menusController.init(); // async
   historyController.refresh(); // async
 
   updateFilter() // async
