@@ -75,9 +75,9 @@ const contextMenuController = {
     }
 
     if (typeof showContextMenuCommands !== 'undefined') {
-      await browser.contextMenus.removeAll();
+      browser.contextMenus.removeAll();
       if (showContextMenuCommands) {
-        return this.create();
+        this.create();
       }
     }
   },
@@ -524,7 +524,7 @@ function init() {
   updateFilter() // async
     .then(() => {
       onBeforeRequestCallback = onBeforeRequestBlocker;
-      return autoUpdateFilter();
+      autoUpdateFilter();
     });
 }
 
