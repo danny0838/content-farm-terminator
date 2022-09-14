@@ -1,5 +1,5 @@
 {
-  "manifest_version": 2,
+  "manifest_version": 3,
   "name": "__MSG_appName__",
   "version": "5.15.1",
   "description": "__MSG_appDesc__",
@@ -22,6 +22,11 @@
     "48": "img/content-farm-marker_48.png"
   },
 
+  "host_permissions": [
+    "http://*/*",
+    "https://*/*"
+  ],
+
   "permissions": [
     "contextMenus",
     "tabs",
@@ -29,8 +34,7 @@
     "webRequest",
     "webRequestBlocking",
     "storage",
-    "http://*/*",
-    "https://*/*"
+    "alarms"
   ],
 
   "optional_permissions": [
@@ -68,17 +72,19 @@
   },
 
   "web_accessible_resources": [
-    "blocked.html",
-    "sandbox.html",
-    "img/*"
+    {
+      "resources": [
+        "blocked.html",
+        "sandbox.html",
+        "img/*"
+      ],
+      "matches": [
+        "<all_urls>"
+      ]
+    }
   ],
 
-  "browser_action": {
-    "default_icon": "img/content-farm-marker_48.png",
-    "default_title": "__MSG_appName__"
-  },
-
-  "page_action": {
+  "action": {
     "default_icon": "img/content-farm-marker_48.png",
     "default_title": "__MSG_appName__"
   }

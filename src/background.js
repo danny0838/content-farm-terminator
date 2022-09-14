@@ -2,7 +2,6 @@ const REQUEST_RECORDS_LIMIT = 20;
 
 let filter = new ContentFarmFilter();
 let updateFilterPromise;
-let autoUpdateAssetsTimer;
 let requestRecorder = new Map();
 let tempUnblockTabs = new Set();
 
@@ -208,15 +207,14 @@ async function updateAssets() {
 }
 
 async function autoUpdateAssets(webBlacklistsUpdateInterval) {
-  if (autoUpdateAssetsTimer) {
-    clearTimeout(autoUpdateAssetsTimer);
-    autoUpdateAssetsTimer = null;
-  }
+  browser.alarms.clear("autoUpdateAssets");
 
   if (typeof webBlacklistsUpdateInterval === 'undefined') {
     ({webBlacklistsUpdateInterval} = await utils.getOptions(["webBlacklistsUpdateInterval"]));
   }
-  autoUpdateAssetsTimer = setTimeout(updateAssets, webBlacklistsUpdateInterval);
+  browser.alarms.create("autoUpdateAssets", {
+    delayInMinutes: webBlacklistsUpdateInterval / (60 * 1000),
+  });
 }
 
 async function blockSite(urlOrHostname, tabId, frameId, quickMode) {
@@ -703,8 +701,19 @@ function initInstallListener() {
   });
 }
 
+function initAlarmsListener() {
+  browser.alarms.onAlarm.addListener((alarm) => {
+    switch (alarm.name) {
+      case "autoUpdateAssets": {
+        updateAssets();
+        break;
+      }
+    }
+  });
+}
+
 function initBrowserAction() {
-  browser.browserAction.onClicked.addListener((tab) => {
+  browser.action.onClicked.addListener((tab) => {
     const u = new URL(browser.runtime.getURL("options.html"));
     u.searchParams.set('t', tab.id);
     u.searchParams.set('url', tab.url);
@@ -717,6 +726,7 @@ function init() {
   initMessageListener();
   initStorageChangeListener();
   initInstallListener();
+  initAlarmsListener();
   initBrowserAction();
 
   contextMenuController.refresh(); // async
