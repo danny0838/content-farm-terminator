@@ -1,12 +1,12 @@
 {
-  "manifest_version": 2,
+  "manifest_version": 3,
   "name": "__MSG_appName__",
   "version": "5.15.0",
   "description": "__MSG_appDesc__",
   "author": "Danny Lin",
   "default_locale": "en",
 
-  "minimum_chrome_version": "58",
+  "minimum_chrome_version": "88",
 
   "homepage_url": "https://danny0838.github.io/content-farm-terminator/",
 
@@ -16,6 +16,11 @@
     "48": "img/content-farm-marker_48.png"
   },
 
+  "host_permissions": [
+    "http://*/",
+    "https://*/"
+  ],
+
   "permissions": [
     "contextMenus",
     "tabs",
@@ -23,8 +28,7 @@
     "webRequest",
     "webRequestBlocking",
     "storage",
-    "http://*/",
-    "https://*/"
+    "alarms"
   ],
 
   "optional_permissions": [
@@ -32,14 +36,7 @@
   ],
 
   "background": {
-    "persistent": true,
-    "scripts": [
-      "lib/browser-polyfill.js",
-      "lib/Regex.js",
-      "content-farm-filter.js",
-      "utils.js",
-      "background.js"
-    ]
+    "service_worker": "background-sw.js"
   },
 
   "content_scripts": [
@@ -60,18 +57,24 @@
   ],
 
   "options_ui": {
-    "chrome_style": false,
     "open_in_tab": true,
     "page": "options.html"
   },
 
   "web_accessible_resources": [
-    "blocked.html",
-    "sandbox.html",
-    "img/*"
+    {
+      "resources": [
+        "blocked.html",
+        "sandbox.html",
+        "img/*"
+      ],
+      "matches": [
+        "<all_urls>"
+      ]
+    }
   ],
 
-  "browser_action": {
+  "action": {
     "default_icon": "img/content-farm-marker_48.png",
     "default_title": "__MSG_appName__"
   }
