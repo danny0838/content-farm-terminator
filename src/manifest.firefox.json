@@ -39,12 +39,7 @@
   ],
 
   "background": {
-    "scripts": [
-      "lib/Regex.js",
-      "content-farm-filter.js",
-      "utils.js",
-      "background.js"
-    ]
+    "page": "background-page.html"
   },
 
   "content_scripts": [

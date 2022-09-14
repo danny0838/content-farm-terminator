@@ -1,3 +1,10 @@
+// Polyfill for MV2
+if (typeof browser !== 'undefined') {
+  if (browser?.browserAction && !browser?.action) {
+    browser.action = browser.browserAction;
+  }
+}
+
 (function (root, factory) {
   // Browser globals
   root.utils = factory(
