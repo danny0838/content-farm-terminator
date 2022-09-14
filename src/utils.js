@@ -107,7 +107,7 @@
       };
 
       const dispatch = () => {
-        window.dispatchEvent(new CustomEvent('browserInfoLoaded'));
+        window && window.dispatchEvent(new CustomEvent('browserInfoLoaded'));
       };
 
       // Whether this is a dev build.

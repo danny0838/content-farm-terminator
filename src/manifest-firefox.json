@@ -1,5 +1,5 @@
 {
-  "manifest_version": 2,
+  "manifest_version": 3,
   "name": "__MSG_appName__",
   "version": "5.15.2",
   "description": "__MSG_appDesc__",
@@ -9,7 +9,7 @@
   "browser_specific_settings": {
     "gecko": {
       "id": "content-farm-terminator-mv3@danny0838.addons.mozilla.org",
-      "strict_min_version": "68.0"
+      "strict_min_version": "109.0"
     },
     "gecko_android": {
       "strict_min_version": "113.0"
@@ -29,21 +29,20 @@
     "webRequest",
     "webRequestBlocking",
     "storage",
-    "http://*/*",
-    "https://*/*"
+    "alarms"
   ],
 
   "optional_permissions": [
     "history"
   ],
 
+  "host_permissions": [
+    "http://*/*",
+    "https://*/*"
+  ],
+
   "background": {
-    "scripts": [
-      "lib/Regex.js",
-      "content-farm-filter.js",
-      "utils.js",
-      "background.js"
-    ]
+    "page": "background-page.html"
   },
 
   "content_scripts": [
@@ -62,23 +61,24 @@
   ],
 
   "options_ui": {
-    "browser_style": false,
     "open_in_tab": true,
     "page": "options.html"
   },
 
   "web_accessible_resources": [
-    "blocked.html",
-    "sandbox.html",
-    "img/*"
+    {
+      "resources": [
+        "blocked.html",
+        "sandbox.html",
+        "img/*"
+      ],
+      "matches": [
+        "<all_urls>"
+      ]
+    }
   ],
 
-  "browser_action": {
-    "default_icon": "img/content-farm-marker_48.png",
-    "default_title": "__MSG_appName__"
-  },
-
-  "page_action": {
+  "action": {
     "default_icon": "img/content-farm-marker_48.png",
     "default_title": "__MSG_appName__"
   }
