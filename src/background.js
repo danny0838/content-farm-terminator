@@ -473,6 +473,8 @@ function initStorageChangeListener() {
         if (changes.webBlacklists) {
           filter.clearStaleWebListCache(changes.webBlacklists);
         }
+      } else if ("showLinkMarkers" in changes) {
+        refreshTabs();  // async
       }
     }
   });
