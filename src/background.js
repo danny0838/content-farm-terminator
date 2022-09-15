@@ -121,6 +121,17 @@ const historyController = {
   },
 };
 
+async function refreshTabs() {
+  const tabs = await browser.tabs.query({});
+  await Promise.all(tabs.map((tab) => {
+    return browser.tabs.sendMessage(tab.id, {
+      cmd: 'updateContent',
+    }).catch((ex) => {
+      return false;
+    });
+  }));
+}
+
 async function updateFilter() {
   return updateFilterPromise = (async () => {
     try {
@@ -136,15 +147,8 @@ async function updateFilter() {
       newFilter.makeCachedRules();
       filter = newFilter;
 
-      // async update tabs to prevent block
-      const tabs = await browser.tabs.query({});
-      await Promise.all(tabs.map((tab) => {
-        return browser.tabs.sendMessage(tab.id, {
-          cmd: 'updateContent',
-        }).catch((ex) => {
-          return false;
-        });
-      }));
+      // async refresh tabs to prevent block
+      refreshTabs();
 
       return true;
     } catch (ex) {
