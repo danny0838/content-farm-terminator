@@ -4,9 +4,23 @@ let docHostname = docUrlObj.hostname;
 let docPathname = docUrlObj.pathname;
 
 const anchorMarkerMap = new Map();
-let updateLinkMarkerPromise = Promise.resolve();
 let lastRightClickedElem;
 let showLinkMarkers = true;
+
+let loadOptionsPromiseResolver;
+let loadOptionsPromise = new Promise((resolve) => {
+  loadOptionsPromiseResolver = resolve;
+});
+
+let domLoadPromiseResolver;
+let domLoadPromise = new Promise((resolve) => {
+  domLoadPromiseResolver = resolve;
+});
+
+let updateLinkMarkerPromise = Promise.all([
+  loadOptionsPromise,
+  domLoadPromise,
+]);
 
 /**
  * @param urlChanged {boolean} a recent URL change has been presumed
@@ -456,109 +470,99 @@ function observeDomUpdates() {
   }
 }
 
-browser.runtime.onMessage.addListener((message, sender) => {
-  //console.warn("omMessage", message);
-  const {cmd, args} = message;
-  switch (cmd) {
-    case 'updateContent': {
-      // async update to prevent block
-      utils.getOptions([
-        "showLinkMarkers",
-      ]).then((options) => {
-        showLinkMarkers = options.showLinkMarkers;
-        return updateLinkMarkersAll();
-      });
-
-      return Promise.resolve(true);
-    }
-    case 'blockSite': {
-      const rule = prompt(utils.lang("blockSite"), args.rule);
-      return Promise.resolve(rule);
-    }
-    case 'blockSites': {
-      const confirmed = confirm(utils.lang("blockSites", args.rules.join('\n')));
-      return Promise.resolve(confirmed);
-    }
-    case 'blockSelectedLinks': {
-      const rv = [];
-      const sel = document.getSelection();
-      const nodeRange = document.createRange();
-      for(let i = 0, I = sel.rangeCount; i < I; i++) {
-        const range = sel.getRangeAt(i);
-        if (range.collapsed) {
-          continue;
-        }
-        const walker = document.createTreeWalker(range.commonAncestorContainer, 1, {
-          acceptNode: (node) => {
-            nodeRange.selectNode(node);
-            if (nodeRange.compareBoundaryPoints(Range.START_TO_START, range) >= 0
-                && nodeRange.compareBoundaryPoints(Range.END_TO_END, range) <= 0) {
-              if (node.matches('a[href], area[href]')) {
-                return NodeFilter.FILTER_ACCEPT;
-              }
-            }
-            return NodeFilter.FILTER_SKIP;
-          },
+function initMessageListener() {
+  browser.runtime.onMessage.addListener((message, sender) => {
+    //console.warn("omMessage", message);
+    const {cmd, args} = message;
+    switch (cmd) {
+      case 'updateContent': {
+        // async update to prevent block
+        utils.getOptions([
+          "showLinkMarkers",
+        ]).then((options) => {
+          showLinkMarkers = options.showLinkMarkers;
+          return updateLinkMarkersAll();
         });
-        let node;
-        while (node = walker.nextNode()) {
-          const a = node;
-          const p = getRedirectedUrlOrHostname(a)
-            .then((redirected) => redirected || a.href)
-            .catch((ex) => {});
-          rv.push(p);
-        }
-      }
-      return Promise.all(rv).then(rv => rv.filter(x => x));
-    }
-    case 'getRedirectedLinkUrl': {
-      const anchor = lastRightClickedElem.closest('a[href], area[href]');
-      return getRedirectedUrlOrHostname(anchor);
-    }
-    case 'alert': {
-      alert(args.msg);
-      return Promise.resolve(true);
-    }
-  }
-});
 
-async function onPotentialUrlChange() {
-  if (onPotentialUrlChange.checking) { return; }
-  onPotentialUrlChange.checking = true;
-  const urlChanged = await recheckCurrentUrl();
-  onPotentialUrlChange.checking = false;
+        return Promise.resolve(true);
+      }
+      case 'blockSite': {
+        const rule = prompt(utils.lang("blockSite"), args.rule);
+        return Promise.resolve(rule);
+      }
+      case 'blockSites': {
+        const confirmed = confirm(utils.lang("blockSites", args.rules.join('\n')));
+        return Promise.resolve(confirmed);
+      }
+      case 'blockSelectedLinks': {
+        const rv = [];
+        const sel = document.getSelection();
+        const nodeRange = document.createRange();
+        for(let i = 0, I = sel.rangeCount; i < I; i++) {
+          const range = sel.getRangeAt(i);
+          if (range.collapsed) {
+            continue;
+          }
+          const walker = document.createTreeWalker(range.commonAncestorContainer, 1, {
+            acceptNode: (node) => {
+              nodeRange.selectNode(node);
+              if (nodeRange.compareBoundaryPoints(Range.START_TO_START, range) >= 0
+                  && nodeRange.compareBoundaryPoints(Range.END_TO_END, range) <= 0) {
+                if (node.matches('a[href], area[href]')) {
+                  return NodeFilter.FILTER_ACCEPT;
+                }
+              }
+              return NodeFilter.FILTER_SKIP;
+            },
+          });
+          let node;
+          while (node = walker.nextNode()) {
+            const a = node;
+            const p = getRedirectedUrlOrHostname(a)
+              .then((redirected) => redirected || a.href)
+              .catch((ex) => {});
+            rv.push(p);
+          }
+        }
+        return Promise.all(rv).then(rv => rv.filter(x => x));
+      }
+      case 'getRedirectedLinkUrl': {
+        const anchor = lastRightClickedElem.closest('a[href], area[href]');
+        return getRedirectedUrlOrHostname(anchor);
+      }
+      case 'alert': {
+        alert(args.msg);
+        return Promise.resolve(true);
+      }
+    }
+  });
 }
 
 /**
  * Check for a potential document URL change
- *
- * There is no event handler for a URL change made by history.pushState
- * or history.replaceState. Use a perioridic recheck to do this.
  */
-setInterval(onPotentialUrlChange, 750);
+function initUrlChangeListener() {
+  async function onPotentialUrlChange() {
+    if (checkingUrl) { return; }
+    checkingUrl = true;
+    const urlChanged = await recheckCurrentUrl();
+    checkingUrl = false;
+  }
 
-// address bar, click link, location.assign() with only hash change
-window.addEventListener("hashchange", onPotentialUrlChange, true);
+  let checkingUrl = false;
 
-// history.back(), history.go()
-window.addEventListener("popstate", onPotentialUrlChange, true);
+  // There is no event handler for a URL change made by history.pushState
+  // or history.replaceState. Use a perioridic recheck to do this.
+  setInterval(onPotentialUrlChange, 750);
 
-window.addEventListener("contextmenu", (event) => {
-  lastRightClickedElem = event.target;
-}, true);
+  // address bar, click link, location.assign() with only hash change
+  window.addEventListener("hashchange", onPotentialUrlChange, true);
 
-// Remove stale link markers when the addon is re-enabled
-for (const elem of document.querySelectorAll('img[data-content-farm-terminator-marker]')) {
-  elem.remove();
+  // history.back(), history.go()
+  window.addEventListener("popstate", onPotentialUrlChange, true);
 }
 
-(async () => {
-  const options = await utils.getOptions([
-    "showLinkMarkers",
-  ]);
-
-  showLinkMarkers = options.showLinkMarkers;
-
+async function onDomContentLoaded() {
   // Check whether the current page is blocked, as a supplement
   // for content farm pages not blocked by background onBeforeRequest.
   // This could happen when the page is loaded before the extension
@@ -566,6 +570,40 @@ for (const elem of document.querySelectorAll('img[data-content-farm-terminator-m
   //
   // @TODO: Some ads are still loaded even if we block the page here.
   await recheckCurrentUrl(true);
+
+  // Remove stale link markers when the add-on is re-enabled
+  for (const elem of document.querySelectorAll('img[data-content-farm-terminator-marker]')) {
+    elem.remove();
+  }
+
   observeDomUpdates();
+
+  domLoadPromiseResolver();
+
   await updateLinkMarkersAll();
-})();
+}
+
+function init() {
+  initUrlChangeListener();
+  initMessageListener();
+
+  // async
+  utils.getOptions([
+    "showLinkMarkers",
+  ]).then((options) => {
+    showLinkMarkers = options.showLinkMarkers;
+    loadOptionsPromiseResolver();
+  });
+
+  window.addEventListener("contextmenu", (event) => {
+    lastRightClickedElem = event.target;
+  }, true);
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", onDomContentLoaded, true);
+  } else {
+    onDomContentLoaded(); // async
+  }
+}
+
+init(); // async
