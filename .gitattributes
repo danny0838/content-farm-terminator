@@ -1,3 +1,6 @@
+.gitattributes text
+.gitignore text
 *.txt text
 *.md text
 *.html text
+*.json text
