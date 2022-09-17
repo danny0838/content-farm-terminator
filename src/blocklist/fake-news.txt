@@ -194,7 +194,7 @@ bvanews.com //unreliable //bias //fake
 callthecops.net //satire
 canadafreepress.com //conspiracy //bias
 cap-news.com //fake
-cato.org/blog //political //reliable
+domain-path:cato.org/blog //political //reliable
 cbsnews.com.co //fake
 celebtricity.com //satire
 centerforsecuritypolicy.org //bias //conspiracy
@@ -321,7 +321,7 @@ eaglerising.com //bias //clickbait
 ebolahoax.com //conspiracy
 ecowatch.com //political
 educate-yourself.org //conspiracy //junksci
-educateinspirechange.org/health //clickbait //junksci
+domain-path:educateinspirechange.org/health //clickbait //junksci
 electionnightgatekeepers.com //conspiracy //unreliable
 elelephantintheroom.blogspot.com //bias
 elitereaders.com //clickbait
@@ -549,11 +549,11 @@ newswatch28.com //fake
 newswatch33.com //fake
 newswire-24.com //clickbait //rumor //unreliable
 newswithviews.com //fake //conspiracy
-newyorker.com/humor //satire
+domain-path:newyorker.com/humor //satire
 newyorker.comhumorborowitz-report
 nodisinfo.com //clickbait //conspiracy //unreliable
 nomorefakenews.com //conspiracy
-nonaiswa.org/wordpress //unknown
+domain-path:nonaiswa.org/wordpress //unknown
 northcrane.com //unreliable
 notallowedto.com //clickbait //fake
 notime4bull.com //unknown
@@ -701,8 +701,8 @@ silverdoctors.com //conspiracy //bias
 silverstealers.net //conspiracy
 sjlendman.blogspot.com //bias
 skeptiko.com //conspiracy //junksci
-smartknowledgeu.com/blog //unknown
-solari.com/blog //unknown
+domain-path:smartknowledgeu.com/blog //unknown
+domain-path:solari.com/blog //unknown
 sonsoflibertyradio.com //conspiracy //bias //unreliable
 sott.net //unknown
 sourceplanet.net //unknown
@@ -734,7 +734,7 @@ surrealscoop.com //satire
 survivalblog.com //unknown
 survivalknowhow.net //unknown
 survivopedia.com //unknown
-szandorblestman.com/index.php //unknown
+domain-path:szandorblestman.com/index.php //unknown
 tap-news.com //unknown
 tdnewswire.com //unknown
 teapartyeconomist.com //unknown
@@ -779,7 +779,7 @@ theforbiddenknowledge.com //conspiracy //junksci
 thefreepatriot.org //fake //bias //clickbait
 thefreethoughtproject.com //unreliable //conspiracy //clickbait
 thegatewaypundit.com //bias //conspiracy //unreliable
-thegoldandoilguy.com/articles //unreliable
+domain-path:thegoldandoilguy.com/articles //unreliable
 thegoldwater.com //unknown
 thehardtimes.net //satire
 theineptowl.com //satire

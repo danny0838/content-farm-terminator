@@ -70,6 +70,9 @@ build:
 
   - source: blocklist/fake-news.txt
     publish: blocklist/fake-news.txt
+    data:
+      schemes:
+        domain-path: *domain_path_scheme_cft
 
   - source: blocklist/scam-sites.txt
     publish: blocklist/scam-sites.txt
@@ -161,6 +164,8 @@ build:
       Expires: 3 days
       Homepage: https://github.com/danny0838/content-farm-terminator/tree/gh-pages
       Licence: MIT License
+      schemes:
+        domain-path: *domain_path_scheme_ubo
 
   - source: blocklist/scam-sites.txt
     publish: blocklist-ubo/scam-sites.txt
