@@ -1,0 +1,105 @@
+build:
+  - source: blocklist/content-farms.txt
+    publish: blocklist/content-farms.txt
+
+  - source: blocklist/nearly-content-farms.txt
+    publish: blocklist/nearly-content-farms.txt
+
+  - source: blocklist/sns-content-farms.txt
+    publish: blocklist/sns-content-farms.txt
+
+  - source: blocklist/fake-news.txt
+    publish: blocklist/fake-news.txt
+
+  - source: blocklist/scam-sites.txt
+    publish: blocklist/scam-sites.txt
+
+  - source: blocklist/content-farms.txt
+    publish: blocklist-hosts/content-farms.txt
+    type: hosts
+    data:
+      Title: Content Farm Filters
+      Description: Filter for general content farms, mostly in Chinese.
+      Homepage: https://github.com/danny0838/content-farm-terminator/tree/gh-pages
+      Licence: MIT License
+      preprocessors:
+        - type: domain
+          pattern: blogspot\.\*$
+          replacement: blogspot.com
+
+  - source: blocklist/nearly-content-farms.txt
+    publish: blocklist-hosts/nearly-content-farms.txt
+    type: hosts
+    data:
+      Title: Nearly Content Farm Filters
+      Description: Filter for content-farm-like sites, mostly in Chinese.
+      Homepage: https://github.com/danny0838/content-farm-terminator/tree/gh-pages
+      Licence: MIT License
+
+  - source: blocklist/fake-news.txt
+    publish: blocklist-hosts/fake-news.txt
+    type: hosts
+    data:
+      Title: Fake News Filters
+      Description: Filter for fake news sites. (for reference)
+      Homepage: https://github.com/danny0838/content-farm-terminator/tree/gh-pages
+      Licence: MIT License
+
+  - source: blocklist/scam-sites.txt
+    publish: blocklist-hosts/scam-sites.txt
+    type: hosts
+    data:
+      Title: Scam Sites Filters
+      Description: Filter for scam sites. (for reference)
+      Homepage: https://github.com/danny0838/content-farm-terminator/tree/gh-pages
+      Licence: MIT License
+
+  - source: blocklist/content-farms.txt
+    publish: blocklist-ubo/content-farms.txt
+    type: ubo
+    data:
+      Title: Content Farm Filters
+      Description: Filter for general content farms, mostly in Chinese.
+      Expires: 3 days
+      Homepage: https://github.com/danny0838/content-farm-terminator/tree/gh-pages
+      Licence: MIT License
+
+  - source: blocklist/nearly-content-farms.txt
+    publish: blocklist-ubo/nearly-content-farms.txt
+    type: ubo
+    data:
+      Title: Nearly Content Farm Filters
+      Description: Filter for content-farm-like sites, mostly in Chinese.
+      Expires: 3 days
+      Homepage: https://github.com/danny0838/content-farm-terminator/tree/gh-pages
+      Licence: MIT License
+
+  - source: blocklist/sns-content-farms.txt
+    publish: blocklist-ubo/sns-content-farms.txt
+    type: ubo
+    data:
+      Title: SNS Content Farm Filters
+      Description: Filter for content-farm related social media, mostly in Chinese.
+      Expires: 3 days
+      Homepage: https://github.com/danny0838/content-farm-terminator/tree/gh-pages
+      Licence: MIT License
+
+  - source: blocklist/fake-news.txt
+    publish: blocklist-ubo/fake-news.txt
+    type: ubo
+    data:
+      Title: Fake News Filters
+      Description: Filter for fake news sites. (for reference)
+      Expires: 3 days
+      Homepage: https://github.com/danny0838/content-farm-terminator/tree/gh-pages
+      Licence: MIT License
+
+  - source: blocklist/scam-sites.txt
+    publish: blocklist-ubo/scam-sites.txt
+    type: ubo
+    data:
+      Title: Scam Sites Filters
+      Description: Filter for scam sites. (for reference)
+      Expires: 3 days
+      Homepage: https://github.com/danny0838/content-farm-terminator/tree/gh-pages
+      Licence: MIT License
