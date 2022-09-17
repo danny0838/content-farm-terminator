@@ -1,6 +1,6 @@
 # Title: Fake News Filters
 # Description: Filter for fake news sites. (for reference)
-# Last modified: 2022-09-18T02:12:22+00:00
+# Last modified: 2022-09-18T02:15:09+00:00
 # Homepage: https://github.com/danny0838/content-farm-terminator/tree/gh-pages
 # Licence: MIT License
 127.0.0.1 100percentfedup.com  # bias
@@ -85,7 +85,7 @@
 127.0.0.1 blackagendareport.com  # unreliable
 127.0.0.1 blackgenocide.org  # conspiracy //bias //hate
 127.0.0.1 blacklistednews.com  # clickbait //unreliable
-127.0.0.1 blastingnews.com
+127.0.0.1 blastingnews.com  # satire //unreliable
 127.0.0.1 bluenationreview.com  # clickbait //unreliable
 127.0.0.1 boilingfrogspost.com  # unreliable
 127.0.0.1 borowitzreport.com  # satire
@@ -784,7 +784,6 @@
 127.0.0.1 unitedmediapublishing.com  # fake
 127.0.0.1 universepolitics.com  # fake
 127.0.0.1 unz.com  # bias
-127.0.0.1 us.blastingnews.com  # satire //unreliable
 127.0.0.1 usa2016elections.com  # fake
 127.0.0.1 usadailypolitics.com  # fake
 127.0.0.1 usadailytime.com  # fake
