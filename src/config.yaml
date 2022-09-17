@@ -72,6 +72,7 @@ build:
     publish: blocklist/fake-news.txt
     data:
       schemes:
+        domain-part: *domain_part_scheme_cft
         domain-path: *domain_path_scheme_cft
 
   - source: blocklist/scam-sites.txt
@@ -165,6 +166,7 @@ build:
       Homepage: https://github.com/danny0838/content-farm-terminator/tree/gh-pages
       Licence: MIT License
       schemes:
+        domain-part: *domain_part_scheme_ubo
         domain-path: *domain_path_scheme_ubo
 
   - source: blocklist/scam-sites.txt
