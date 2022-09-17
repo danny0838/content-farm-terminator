@@ -1,12 +1,72 @@
 build:
   - source: blocklist/content-farms.txt
     publish: blocklist/content-farms.txt
+    data:
+      schemes: &content_farms_schemes
+        domain-part: &domain_part_scheme_cft
+          value: /https?://(?:[\w-]+\.)*(?:{value})(?:\.[\w-]+)*(?=[/?#]|$)/
+          escape: regex
+          grouping: "|"
+          max: 2097152
+        domain-path: &domain_path_scheme_cft
+          value: /https?://(?:www\.)?(?:{value})(?=[/?#]|$)/
+          escape: regex
+          grouping: "|"
+          max: 2097152
+        xuite: &content_farms_scheme
+          value: /^https?://(?:(?:m\.)?(?:[bv]log|photo)\.xuite\.net|m\.xuite\.net/blog)/(?:{value})(?=[/?#]|$)/
+          escape: regex
+          grouping: "|"
+          max: 2097152
+        udn:
+          <<: *content_farms_scheme
+          value: /^https?://(?:blog|album)\.udn\.com/(?:mobile/)?(?:{value})(?=[/?#]|$)/
+        pchome:
+          <<: *content_farms_scheme
+          value: /^https?://mypaper\.(?:m\.)?pchome\.com\.tw/(?:{value})(?=[/?#]|$)/
 
   - source: blocklist/nearly-content-farms.txt
     publish: blocklist/nearly-content-farms.txt
 
   - source: blocklist/sns-content-farms.txt
     publish: blocklist/sns-content-farms.txt
+    data:
+      schemes: &sns_content_farms_schemes
+        facebook: &sns_content_farms_scheme
+          value: /^https?://(?:(?:[\w-]+\.)?facebook\.com(?:/(?:pg/)?|\b[^#]+#!/)|(?:fb|m)\.(?:com|me)/)(?:{value})(?=[/?#]|$)/
+          escape: regex
+          grouping: "|"
+          max: 2097152
+        facebook-num:
+          <<: *sns_content_farms_scheme
+          value: /^https?://(?:(?:[\w-]+\.)?facebook\.com(?:/(?:pg/)?|\b[^#]+#!/)|(?:fb|m)\.(?:com|me)/)(?:[^?#]+/)?(?:[^/?#]+-)?(?:{value})(?=[/?#]|$)/
+        facebook-group:
+          <<: *sns_content_farms_scheme
+          value: /^https?://(?:(?:[\w-]+\.)?facebook\.com(?:/|\b[^#]+#!/)|(?:fb|m)\.(?:com|me)/)groups/(?:{value})(?=[/?#]|$)/
+        twitter:
+          <<: *sns_content_farms_scheme
+          value: /^https?://(?:\w+\.)?twitter\.com/(?:{value})(?=[/?#]|$)/
+        youtube-channel:
+          <<: *sns_content_farms_scheme
+          value: /^https?://(?:\w+\.)?youtube\.com/channel/(?:{value})(?=[/?#]|$)/
+        youtube-user:
+          <<: *sns_content_farms_scheme
+          value: /^https?://(?:\w+\.)?youtube\.com/user/(?:{value})(?=[/?#]|$)/
+        instagram:
+          <<: *sns_content_farms_scheme
+          value: /^https?://(?:www\.)?instagram\.com/(?:{value})(?=[/?#]|$)/
+        pinterest:
+          <<: *sns_content_farms_scheme
+          value: /^https?://(?:www\.)?pinterest(?:\.[a-z]+)+/(?:{value})(?=[/?#]|$)/
+        plurk:
+          <<: *sns_content_farms_scheme
+          value: /^https?://(?:www\.)?plurk\.com/(?:m/p/)?(?:{value})(?=[/?#]|$)/
+        line-page:
+          <<: *sns_content_farms_scheme
+          value: /^https?://page\.line\.me/(?:{value})(?=[/?#]|$)/
+        line-timeline:
+          <<: *sns_content_farms_scheme
+          value: /^https?://timeline\.line\.me/(?:\w+?)/(?:{value})(?=[/?#]|$)/
 
   - source: blocklist/fake-news.txt
     publish: blocklist/fake-news.txt
@@ -63,6 +123,12 @@ build:
       Expires: 3 days
       Homepage: https://github.com/danny0838/content-farm-terminator/tree/gh-pages
       Licence: MIT License
+      schemes:
+        <<: *content_farms_schemes
+        domain-part: &domain_part_scheme_ubo
+          value: "||{value}^"
+        domain-path: &domain_path_scheme_ubo
+          value: "||{value}^"
 
   - source: blocklist/nearly-content-farms.txt
     publish: blocklist-ubo/nearly-content-farms.txt
@@ -83,6 +149,8 @@ build:
       Expires: 3 days
       Homepage: https://github.com/danny0838/content-farm-terminator/tree/gh-pages
       Licence: MIT License
+      schemes:
+        <<: *sns_content_farms_schemes
 
   - source: blocklist/fake-news.txt
     publish: blocklist-ubo/fake-news.txt
