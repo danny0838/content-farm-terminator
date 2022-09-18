@@ -103,10 +103,6 @@ class Linter:
             if self.check_rule(rule):
                 new_rules.append(rule)
 
-        new_rules = self.deduplicate_rules(new_rules)
-        new_rules = self.check_covered_rules(new_rules)
-        # new_rules.sort(key=lambda rule: f'{rule.rule}{rule.sep}{rule.comment}')
-
         if self.auto_fix and new_rules != rules:
             log.info('saving auto-fixed %s ...', subpath)
             with open(file, 'w', encoding='UTF-8') as fh:
@@ -134,58 +130,6 @@ class Linter:
                 return False
 
         return True
-
-    def deduplicate_rules(self, rules):
-        new_rules = []
-
-        rules_dict = {}
-        for rule in rules:
-            if rule.rule:
-                try:
-                    rule2 = rules_dict[rule.rule]
-                except KeyError:
-                    rules_dict[rule.rule] = rule
-                else:
-                    log.info('%s:%i: rule "%s" duplicates rule "%s" (:%i)',
-                             rule.path, rule.line_no, rule.rule, rule2.rule, rule2.line_no)
-                    continue
-            new_rules.append(rule)
-
-        return new_rules
-
-    def check_covered_rules(self, rules):
-        new_rules = []
-
-        regex_dict = {}
-        for rule in rules:
-            if rule.type == 'domain':
-                regex_dict[rule] = re.compile(
-                    r'^([\w*-]+\.)*'
-                    + rule.rule.replace(r'*', r'[\w*-]').replace(r'.', r'\.')
-                    + '$')
-
-        for rule in rules:
-            ok = True
-            if rule.type == 'domain':
-                for rule2 in rules:
-                    if rule2.line_no == rule.line_no:
-                        continue
-
-                    try:
-                        regex = regex_dict[rule2]
-                    except KeyError:
-                        continue
-
-                    if regex.search(rule.rule):
-                        log.info('%s:%i: domain "%s" is covered by rule "%s" (:%i)',
-                                 rule.path, rule.line_no, rule.rule, rule2.rule, rule2.line_no)
-                        ok = False
-                        continue
-
-            if ok:
-                new_rules.append(rule)
-
-        return new_rules
 
 
 class Builder:
