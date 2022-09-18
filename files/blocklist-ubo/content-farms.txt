@@ -1,7 +1,7 @@
 ! Title: Content Farm Filters
 ! Description: Filter for general content farms, mostly in Chinese.
 ! Expires: 3 days
-! Last modified: 2022-09-18T02:15:09+00:00
+! Last modified: 2022-09-18T02:22:33+00:00
 ! Homepage: https://github.com/danny0838/content-farm-terminator/tree/gh-pages
 ! Licence: MIT License
 /^https?://www\.ettoday\.net/dalemon/$document
@@ -205,6 +205,7 @@
 ||115wl.cn^
 ||115ze2.cn^
 ||116547.com^
+||11708.cn^
 ||118.193.38.103^
 ||119fs.cn^
 ||119qk.com^
@@ -440,6 +441,7 @@
 ||21shipping-ams.buzz^
 ||21zhongyao.com^
 ||2201343.cn^
+||22068.cn^
 ||222.186.45.128^
 ||2277449.cn^
 ||228cp.cn^
@@ -563,6 +565,7 @@
 ||33pp.com^
 ||33spa.com^
 ||33tr5f.cn^
+||34006.cn^
 ||3407001.com^
 ||3456wan.cn^
 ||345l.cn^
@@ -588,6 +591,7 @@
 ||369bt.cn^
 ||36ho.com^
 ||36wi.com^
+||37078.cn^
 ||3723nbc.co^
 ||373023.com^
 ||373039.com^
@@ -768,6 +772,7 @@
 ||414h.com^
 ||41725.cn^
 ||41887.cn^
+||41954.shop^
 ||41boss.com^
 ||42464.cn^
 ||42598.cn^
@@ -947,6 +952,7 @@
 ||52tfutr.cn^
 ||52wbt.com^
 ||52wuji.cn^
+||52yuer.cn^
 ||52zrm.com^
 ||52zswl.com^
 ||535love.com^
@@ -989,6 +995,7 @@
 ||58xuanzhi.com^
 ||591736.com^
 ||591car.cn^
+||59708.cn^
 ||59796988.com^
 ||59cjdlv.cn^
 ||59txdxf.cn^
@@ -1137,6 +1144,7 @@
 ||706qjdu.cn^
 ||707o.com^
 ||70thvictory.com.tw^
+||7117125.com^
 ||71usrc.cn^
 ||7200500.com^
 ||720com.cn^
@@ -1150,7 +1158,9 @@
 ||73ss.cn^
 ||741963.com^
 ||74koj8y.cn^
+||7511156.com^
 ||755hunqing.com^
+||76098.cn^
 ||7609ix5.cn^
 ||760cf.com^
 ||7624.net^
@@ -1221,9 +1231,11 @@
 ||800newyork.buzz^
 ||800party.buzz^
 ||800rags.buzz^
+||80296.cn^
 ||8063855.com^
 ||80691110.com^
 ||8084d.com^
+||80932.cn^
 ||80jep4o.cn^
 ||8107778.com^
 ||81823333.com^
@@ -1236,9 +1248,12 @@
 ||81jmqz.com^
 ||81pics.com^
 ||81zbp.cn^
+||82099.cn^
+||82301.cn^
 ||8230788.com^
 ||82475866.com^
 ||82858790.com^
+||83870.cn^
 ||83889196.com^
 ||840q02k.cn^
 ||840qmc5.cn^
@@ -1268,6 +1283,7 @@
 ||88lovelypet.com^
 ||88pig.cn^
 ||895733-com.com^
+||89602.cn^
 ||89d48xf.cn^
 ||8ae438a.cn^
 ||8awnd8p.cn^
@@ -1828,7 +1844,9 @@
 ||aof96qo87r.pixnet.net^
 ||aol.my^
 ||aom09rs65r.pixnet.net^
+||aoqk.cn^
 ||aorfei524.pixnet.net^
+||aorp.cn^
 ||aorqu.com^
 ||aorta-ad.cn^
 ||aoshengfs.com^
@@ -1923,6 +1941,7 @@
 ||arttagtw.com^
 ||artzcn4517.pixnet.net^
 ||aru35wf99m.blog.fc2.com^
+||aruq.cn^
 ||arv87jm17f.blog.fc2.com^
 ||as25587065.pixnet.net^
 ||as419.cn^
@@ -1971,7 +1990,10 @@
 ||attentionone.buzz^
 ||attjp4.cn^
 ||atziv3.cn^
+||atzv.cn^
 ||auabu.com^
+||aubz.cn^
+||aucp.cn^
 ||audreyglacd.pixnet.net^
 ||audreyjmj56.pixnet.net^
 ||aufzug-roesler.buzz^
@@ -2048,6 +2070,7 @@
 ||b1x9p9djxh.pixnet.net^
 ||b20s2p3.pixnet.net^
 ||b2b0w98zyq.pixnet.net^
+||b2bso.com^
 ||b2gzq19.cn^
 ||b2ptcf1.cn^
 ||b2r9n1.wordpress.com^
@@ -4436,6 +4459,8 @@
 ||eqi85oa27i.blog.fc2.com^
 ||eqk34hz19r.blog.fc2.com^
 ||eqkuoz.co^
+||eqlj.cn^
+||eqps.cn^
 ||eqve8n3.cn^
 ||eqwvd5a.cn^
 ||eqy5ym6.cn^
@@ -4459,6 +4484,7 @@
 ||erucdph.cn^
 ||erwinedu.com^
 ||eryunews.com^
+||erzhizhu.cn^
 ||es57784162.pixnet.net^
 ||esc0769.com^
 ||escco.cn^
@@ -4778,6 +4804,7 @@
 ||fedexclis.co^
 ||fehex.com^
 ||feilitj.com^
+||feishuxiangmu.cn^
 ||feiyue120.com^
 ||felixlawrilh.pixnet.net^
 ||femmewetalk.com^
@@ -4989,6 +5016,7 @@
 ||frecksbingandgas.co^
 ||frednbf5dqm7w.pixnet.net^
 ||fredpeterpxc.pixnet.net^
+||freedomymqcb.sa.com^
 ||freeguo.com^
 ||freek.jp.net^
 ||freesexvideosonline.buzz^
@@ -5212,6 +5240,7 @@
 ||gailarnoldray.pixnet.net^
 ||galleri50.com^
 ||game2.tw^
+||gamecasa.cn^
 ||gamejs123.com^
 ||gamer-ps3-ps4-web-3ds.blogspot.*^$document
 ||gamergamer.net^
@@ -7138,6 +7167,7 @@
 ||jhua365.com^
 ||ji32239111.blog.fc2.com^
 ||ji981m0.pixnet.net^
+||jia12.com^
 ||jiahea.cn^
 ||jiahonggas.com^
 ||jiajiaxz.com^
@@ -8869,6 +8899,7 @@
 ||mh33.cn^
 ||mh96.cn^
 ||mhgoodtimes.com^
+||mhgrtzs.cn^
 ||mhk5rkt.cn^
 ||mhl31kl37x.blog.fc2.com^
 ||mhona.buzz^
@@ -9125,6 +9156,7 @@
 ||mvcomcz.cn^
 ||mvpautrtes.co^
 ||mvpode.co^
+||mvs77.com^
 ||mvvvg796zn.blog.fc2.com^
 ||mwboad.co^
 ||mwd8.cn^
@@ -10395,6 +10427,7 @@
 ||pnelwjz.cn^
 ||pnih1wn.cn^
 ||pnjzt53719.pixnet.net^
+||pnk2.com^
 ||pnk659.com^
 ||pns8.cn^
 ||pny555.com^
@@ -10490,6 +10523,7 @@
 ||printfinshingstre.co^
 ||printfog.co^
 ||prisci61.pixnet.net^
+||privacyesgbt.ru.com^
 ||privod.me^
 ||priyiuc.cn^
 ||prm17xs73g.blog.fc2.com^
@@ -10643,6 +10677,7 @@
 ||pyax021.cn^
 ||pyk556.com^
 ||pylllw.com^
+||pyn5.com^
 ||python.iitter.com^
 ||pythonheidong.com^
 ||pzdyj.com^
@@ -11126,6 +11161,7 @@
 ||ran2000.buzz^
 ||rangegunbroad.top^
 ||ranjgzo.cn^
+||rankintw.com^
 ||rantasa.me^
 ||raolve.com^
 ||rapelling.eu^
@@ -11208,6 +11244,7 @@
 ||retiylife.co^
 ||retrplusapp.co^
 ||return-on-ideas.buzz^
+||revanauto.cn^
 ||reviewiki.com^
 ||rexuecn.com^
 ||reynoldchardg.pixnet.net^
@@ -11883,6 +11920,7 @@
 ||sjguoyi.com^
 ||sjhtyl.com^
 ||sjjfr.com^
+||sjqps.com^
 ||sjr8.cn^
 ||sjsp168.com^
 ||sjwencr.cn^
@@ -11933,6 +11971,7 @@
 ||sm45577204.pixnet.net^
 ||sm62470210.pixnet.net^
 ||sm82k09.pixnet.net^
+||smabaike.com^
 ||smaijie.com^
 ||smallmediumlarge.co^
 ||smallpopo.com^
@@ -14001,6 +14040,7 @@
 ||wuyaogexing.com^
 ||wuyec.com^
 ||wuyou9.com^
+||wuzhuiso.com^
 ||wv1204c.pixnet.net^
 ||wvcause.com^
 ||wvccfgo.cn^
@@ -14930,6 +14970,7 @@
 ||ythm368.com^
 ||ythuijie.com^
 ||ythyyy14.com^
+||ytn55.com^
 ||ytplqb.com^
 ||ytsfc.com^
 ||ytu567.monster^
@@ -14960,6 +15001,7 @@
 ||yuleall.com^
 ||yulinkehong.cn^
 ||yulongwujinsujiao.cn^
+||yumaitie.com^
 ||yumiaio688.com^
 ||yundabao.net.cn^
 ||yungou86.com^
@@ -15290,6 +15332,7 @@
 ||zhixinlu.com^
 ||zhizhejie.com^
 ||zhizhiguan.com^
+||zhizhuccc.cn^
 ||zhj818.com^
 ||zhjfood.com^
 ||zhji599ooj.blog.fc2.com^
@@ -15451,6 +15494,7 @@
 ||ztxjh13517.pixnet.net^
 ||ztzqc.com^
 ||zub2yiw.cn^
+||zuichufa.com^
 ||zuilvu.com^
 ||zukunftswerkstatt.buzz^
 ||zungxvehuan.pixnet.net^
