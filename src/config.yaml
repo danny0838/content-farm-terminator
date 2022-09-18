@@ -189,3 +189,61 @@ build:
       Homepage: https://github.com/danny0838/content-farm-terminator/tree/gh-pages
       Licence: MIT License
       Source: https://github.com/danny0838/content-farm-terminator/blob/gh-pages/files/blocklist-ubo/scam-sites.txt
+
+  - source: blocklist/content-farms.txt
+    publish: blocklist-ublacklist/content-farms.txt
+    type: ublacklist
+    data:
+      Title: Content Farm Filters
+      Description: Filter for general content farms, mostly in Chinese.
+      Homepage: https://github.com/danny0838/content-farm-terminator/tree/gh-pages
+      Licence: MIT License
+      Source: https://github.com/danny0838/content-farm-terminator/blob/gh-pages/files/blocklist-ublacklist/content-farms.txt
+      processors:
+        - type: domain
+          pattern: ^([\w-]+)\.blogspot\.\*$
+          replacement: blogspot:\1
+      schemes:
+        <<: *content_farms_schemes
+        domain-part: &domain_part_scheme_ublacklist
+          value: "*://*.{value}.*/*"
+        domain-path: &domain_path_scheme_ublacklist
+          value: "*://*.{value}/*"
+        blogspot:
+          value: /https?://(?:[\w-]+\.)*(?:{value})\.blogspot\.(?:[\w.-]+)(?=[:\/?#]|$)/
+          escape: regex
+          grouping: "|"
+          max: 2097152
+
+  - source: blocklist/nearly-content-farms.txt
+    publish: blocklist-ublacklist/nearly-content-farms.txt
+    type: ublacklist
+    data:
+      Title: Nearly Content Farm Filters
+      Description: Filter for content-farm-like sites, mostly in Chinese.
+      Homepage: https://github.com/danny0838/content-farm-terminator/tree/gh-pages
+      Licence: MIT License
+      Source: https://github.com/danny0838/content-farm-terminator/blob/gh-pages/files/blocklist-ublacklist/nearly-content-farms.txt
+
+  - source: blocklist/fake-news.txt
+    publish: blocklist-ublacklist/fake-news.txt
+    type: ublacklist
+    data:
+      Title: Fake News Filters
+      Description: Filter for fake news sites. (for reference)
+      Homepage: https://github.com/danny0838/content-farm-terminator/tree/gh-pages
+      Licence: MIT License
+      Source: https://github.com/danny0838/content-farm-terminator/blob/gh-pages/files/blocklist-ublacklist/fake-news.txt
+      schemes:
+        domain-part: *domain_part_scheme_ublacklist
+        domain-path: *domain_path_scheme_ublacklist
+
+  - source: blocklist/scam-sites.txt
+    publish: blocklist-ublacklist/scam-sites.txt
+    type: ublacklist
+    data:
+      Title: Scam Sites Filters
+      Description: Filter for scam sites. (for reference)
+      Homepage: https://github.com/danny0838/content-farm-terminator/tree/gh-pages
+      Licence: MIT License
+      Source: https://github.com/danny0838/content-farm-terminator/blob/gh-pages/files/blocklist-ublacklist/scam-sites.txt

@@ -17,7 +17,7 @@
 
 * [詐騙網站清單](https://danny0838.github.io/content-farm-terminator/files/blocklist/scam-sites.txt): 詐騙網站清單，取自 Chrome 擴充功能「[詐騙網站及內容農場評價系統](https://chrome.google.com/webstore/detail/%E8%A9%90%E9%A8%99%E7%B6%B2%E7%AB%99%E5%8F%8A%E5%85%A7%E5%AE%B9%E8%BE%B2%E5%A0%B4%E8%A9%95%E5%83%B9%E7%B3%BB%E7%B5%B1/mpeppilpojkpjkplhihbcfapmlnlkckb)」。備查。
 
-上述清單亦提供 [uBlock Origin](https://github.com/danny0838/content-farm-terminator/tree/gh-pages/files/blocklist-ubo) 及 [hosts 檔案](https://github.com/danny0838/content-farm-terminator/tree/gh-pages/files/blocklist-hosts)版本。
+上述清單亦提供 [uBlock Origin](https://github.com/danny0838/content-farm-terminator/tree/gh-pages/files/blocklist-ubo)、 [uBlacklist](https://github.com/danny0838/content-farm-terminator/tree/gh-pages/files/blocklist-ublacklist)、及 [hosts 檔案](https://github.com/danny0838/content-farm-terminator/tree/gh-pages/files/blocklist-hosts)版本。
 
 ## 網址轉換規則清單
 

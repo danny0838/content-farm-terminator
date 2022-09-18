@@ -20,6 +20,12 @@ RE_SPACE_MATCHER = re.compile(r'^(\S*)(\s*)(.*)$')
 RE_DOMAIN_RULE = re.compile(r'^(?:[0-9a-z*-]+)(?:\.[0-9a-z*-]+)*$')
 RE_SCHEME_RULE = re.compile(r'^([a-z][0-9a-z+.-]+):(.*)$')
 RE_REGEX_RULE = re.compile(r'^/(.*)/([a-z]*)$')
+RE_REGEX_SLASH_ESCAPER = re.compile(r'(\\.)|/')
+
+
+def escape_regex_slash(text):
+    """Escape "/"s in a (possibly escaped) regex."""
+    return RE_REGEX_SLASH_ESCAPER.sub(lambda m: m.group(1) or r'\/', text)
 
 
 class Rule:
@@ -52,6 +58,8 @@ class Rule:
         m = RE_REGEX_RULE.search(self.rule)
         if m:
             self.type = 'regex'
+            self.pattern = m.group(1)
+            self.flags = m.group(2)
             return
 
         m = RE_SCHEME_RULE.search(self.rule)
@@ -526,6 +534,42 @@ class ConverterUbo(Converter):
 
         elif rule.type == 'raw':
             print(rule.rule)
+
+
+class ConverterUblacklist(Converter):
+    """Convert to an uBlacklist blocklist.
+
+    https://github.com/iorate/ublacklist
+    """
+    def print_info(self):
+        for field in ('Title', 'Description', 'Last modified', 'Homepage', 'Licence', 'Source', 'Note'):
+            if self.info.get(field):
+                print(f'# {field}: {self.info[field]}')
+
+            elif field == 'Last modified':
+                lm = self.date.astimezone(timezone.utc).isoformat(timespec='seconds')
+                print(f'# {field}: {lm}')
+
+    def print_rule(self, rule):
+        comment = '  # ' + re.sub(r'^\s*(?://|#)\s*', r'', rule.comment) if rule.comment else ''
+
+        if rule.type == 'regex':
+            print(f'/{escape_regex_slash(rule.pattern)}/{rule.flags}{comment}')
+
+        elif rule.type == 'domain':
+            domain = rule.rule
+
+            # uBlacklist supports host match pattern,
+            # which requires "*." be at the start of domain.
+            # Replace with a regex rule to get it work.
+            if '*' in domain:
+                domain = re.escape(domain).replace(r'\*', r'[\w.-]*')
+                print(rf'/https?:\/\/(?:[\w-]+\.)*(?:{domain})(?=[:\/?#]|$)/{comment}')
+            else:
+                print(f'*://*.{domain}/*{comment}')
+
+        elif rule.type == 'raw':
+            print(f'{rule.rule}{comment}')
 
 
 def parse_args(argv=None):
