@@ -3,7 +3,6 @@
 import argparse
 import inspect
 import logging
-import math
 import os
 import re
 from contextlib import redirect_stdout
@@ -279,7 +278,7 @@ class Builder:
 
 class Converter:
     """Convert a source file."""
-    allow_scheme = True
+    allow_schemes = True
 
     def __init__(self, fh, info, date):
         self.fh = fh
@@ -289,7 +288,6 @@ class Converter:
     def run(self):
         self.print_info()
 
-        schemes = self.info.get('schemes', {})
         scheme_groups = {}
         for line in self.fh:
             line = line.rstrip('\n')
@@ -303,97 +301,18 @@ class Converter:
             self.process_rule(rule, self.info.get('processors', []))
 
             # special handling for a scheme rule, which forcely defines the raw output rule
-            if self.allow_scheme and rule.type == 'scheme':
-                scheme = schemes.get(rule.scheme)
+            if self.allow_schemes and rule.type == 'scheme':
+                self.handle_scheme_rule(rule, scheme_groups)
 
-                if scheme is None:
-                    log.warning('rule "%s" has an undefined scheme', rule.rule)
+                # A rule should be set to another type if handled. This is
+                # either specially handled for grouping or invalid, and should
+                # be skipped here.
+                if rule.type == 'scheme':
                     continue
-
-                # determine the value, which may be pre-modified by escapers
-                value = rule.value
-                for escaper in scheme.get('escape', '').split(','):
-                    escaper = escaper.strip()
-                    if not escaper:
-                        continue
-                    try:
-                        escaper = getattr(self, f'escape_{escaper}')
-                    except AttributeError:
-                        log.warning('escaper "%s" is not defined', escaper)
-                    else:
-                        value = escaper(value)
-
-                if not value:
-                    continue
-
-                # special handling for grouping rules
-                if scheme.get('grouping'):
-                    scheme_groups.setdefault(rule.scheme, []).append(value)
-                    continue
-
-                value = scheme.get('value', '').format(value=value)
-
-                scheme_max = scheme.get('max')
-                if scheme_max is not None and len(value) > scheme_max:
-                    log.warning('rule "%s" exceeds max length %i', rule.rule, scheme_max)
-                    continue
-
-                rule.set_rule_raw(value)
 
             self.print_rule(rule)
 
-        # output grouping scheme rules
-        def get_joined_value(pos=None):
-            value = scheme_sep.join(values[i] for i in range(pos))
-            value = scheme_value.format(value=value)
-            return value
-
-        def bsearch(values):
-            # test if all values can fit
-            pos = len(values)
-            value = get_joined_value(pos)
-            if len(value) <= scheme_max:
-                return pos, value
-
-            # binary search to get the max pos that fits
-            pos_max = pos - 1
-            pos_min = 0
-            while pos_min != pos_max:
-                pos = math.ceil((pos_max + pos_min) / 2)
-                value = get_joined_value(pos)
-                if len(value) <= scheme_max:
-                    pos_min = pos
-                else:
-                    pos_max = pos - 1
-
-            pos = pos_min
-            if pos > 0:
-                return pos, get_joined_value(pos)
-            else:
-                return pos, None
-
-        for scheme_group, values in scheme_groups.items():
-            scheme = schemes[scheme_group]
-            scheme_value = scheme.get('value', '')
-            scheme_sep = scheme['grouping']
-            scheme_max = scheme.get('max')
-
-            if scheme_max is not None:
-                outputs = []
-                while values:
-                    pos, value = bsearch(values)
-                    if pos > 0:
-                        outputs.append(value)
-                        values = values[pos:]
-                    else:
-                        log.warning('rule "%s:%s" exceeds max length %i', scheme_group, values[0], scheme_max)
-                        values = values[1:]
-
-            else:
-                outputs = [get_joined_value()]
-
-            for output in outputs:
-                print(output)
+        self.handle_grouping_scheme_rules(scheme_groups)
 
     def process_rule(self, rule, processors):
         """Modify a rule using given processors."""
@@ -422,6 +341,98 @@ class Converter:
                 rule.set_rule(new_rule)
 
             return
+
+    def handle_scheme_rule(self, rule, scheme_groups):
+        """Handle a scheme rule."""
+        scheme = self.info.get('schemes', {}).get(rule.scheme)
+        if scheme is None:
+            log.warning('rule "%s" has an undefined scheme', rule.rule)
+            return
+
+        value = rule.value
+        if not value:
+            return
+
+        # apply escapers
+        for escaper in scheme.get('escape', '').split(','):
+            escaper = escaper.strip()
+            if not escaper:
+                continue
+
+            try:
+                escaper = getattr(self, f'escape_{escaper}')
+            except AttributeError:
+                log.warning('escaper "%s" is not defined', escaper)
+            else:
+                value = escaper(value)
+
+        # special handling for grouping rules:
+        # store the value in the dict for later processing
+        if scheme.get('grouping'):
+            scheme_groups.setdefault(rule.scheme, []).append((value, rule))
+            return
+
+        value = scheme.get('value', '').format(value=value)
+
+        # apply max length limit
+        scheme_max = scheme.get('max')
+        if scheme_max is not None:
+            if len(value) > scheme_max:
+                log.warning('rule "%s" exceeds max length %i', rule.rule, scheme_max)
+                return
+
+        rule.set_rule_raw(value)
+
+    def handle_grouping_scheme_rules(self, scheme_groups):
+        """Output collected grouping scheme rules."""
+        def get_joined_value(pos=None):
+            rng = range(len(items) if pos is None else pos)
+            value = scheme_sep.join(items[i][0] for i in rng)
+            value = scheme_value.format(value=value)
+            return value
+
+        def bsearch(items):
+            """Search for the max pos that all values can fit within the max length."""
+            # Check if all can fit, which should be the most common case.
+            pos = len(items)
+            value = get_joined_value(pos)
+            if len(value) <= scheme_max:
+                return pos, value
+
+            # Modified binary search to find the max fitting pos.
+            pos_max = pos - 1  # skip last pos, which has been checked
+            pos_min = 0
+            while pos_min <= pos_max:
+                pos = pos_min + (pos_max - pos_min) // 2
+                value = get_joined_value(pos)
+                if len(value) <= scheme_max:
+                    pos_min = pos + 1
+                else:
+                    pos_max = pos - 1
+            return pos, value
+
+        schemes = self.info.get('schemes', {})
+        for scheme_name, items in scheme_groups.items():
+            scheme = schemes[scheme_name]
+            scheme_value = scheme.get('value', '')
+            scheme_sep = scheme['grouping']
+            scheme_max = scheme.get('max')
+
+            outputs = []
+            if scheme_max is None:
+                outputs.append(get_joined_value())
+            else:
+                while items:
+                    pos, value = bsearch(items)
+                    if pos > 0:
+                        outputs.append(value)
+                        items = items[pos:]
+                    else:
+                        log.warning('rule "%s" exceeds max length %i', items[0][1].rule, scheme_max)
+                        items = items[1:]
+
+            for output in outputs:
+                print(output)
 
     def print_info(self):
         pass
@@ -453,7 +464,7 @@ class ConverterHosts(Converter):
     - Windows: %SystemRoot%\System32\drivers\etc\hosts
     - *nix: /etc/hosts
     """
-    allow_scheme = False
+    allow_schemes = False
 
     def print_info(self):
         for field in ('Title', 'Description', 'Expires', 'Last modified', 'Homepage', 'Licence', 'Source', 'Note'):
