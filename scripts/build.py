@@ -294,7 +294,7 @@ class Converter:
         self.date = date
 
     def run(self):
-        self.print_info()
+        self.print_headers()
 
         scheme_groups = {}
         for line in self.fh:
@@ -452,8 +452,17 @@ class Converter:
                     rule.set_rule(output)
                 self.print_rule(rule)
 
-    def print_info(self):
-        pass
+    def print_headers(self):
+        try:
+            headers = self.info['headers']
+        except KeyError:
+            return
+
+        headers = headers.rstrip('\n').format(
+            now=self.date.astimezone(timezone.utc).isoformat(timespec='seconds'),
+        )
+        headers = '\n'.join(f'# {s}' for s in headers.split('\n'))
+        print(headers)
 
     def print_rule(self, rule):
         print(rule.rule + rule.sep + rule.comment)
@@ -467,6 +476,18 @@ class Converter:
 
 class ConverterCft(Converter):
     """Convert to a canonical Content Farm Terminator blocklist."""
+    def print_headers(self):
+        try:
+            headers = self.info['headers']
+        except KeyError:
+            return
+
+        headers = headers.rstrip('\n').format(
+            now=self.date.astimezone(timezone.utc).isoformat(timespec='seconds'),
+        )
+        headers = '\n'.join(f'  # {s}' for s in headers.split('\n'))
+        print(headers)
+
     def print_rule(self, rule):
         # skip invalid rule
         if rule.type is None and rule.rule:
@@ -483,15 +504,6 @@ class ConverterHosts(Converter):
     - *nix: /etc/hosts
     """
     allow_schemes = False
-
-    def print_info(self):
-        for field in ('Title', 'Description', 'Expires', 'Last modified', 'Homepage', 'Licence', 'Source', 'Note'):
-            if self.info.get(field):
-                print(f'# {field}: {self.info[field]}')
-
-            elif field == 'Last modified':
-                lm = self.date.astimezone(timezone.utc).isoformat(timespec='seconds')
-                print(f'# {field}: {lm}')
 
     def print_rule(self, rule):
         # skip unsupported rules
@@ -511,14 +523,17 @@ class ConverterUbo(Converter):
     https://github.com/gorhill/uBlock/wiki/Static-filter-syntax
     https://help.eyeo.com/en/adblockplus/how-to-write-filters
     """
-    def print_info(self):
-        for field in ('Title', 'Description', 'Expires', 'Last modified', 'Homepage', 'Licence', 'Source', 'Note'):
-            if self.info.get(field):
-                print(f'! {field}: {self.info[field]}')
+    def print_headers(self):
+        try:
+            headers = self.info['headers']
+        except KeyError:
+            return
 
-            elif field == 'Last modified':
-                lm = self.date.astimezone(timezone.utc).isoformat(timespec='seconds')
-                print(f'! {field}: {lm}')
+        headers = headers.rstrip('\n').format(
+            now=self.date.astimezone(timezone.utc).isoformat(timespec='seconds'),
+        )
+        headers = '\n'.join(f'! {s}' for s in headers.split('\n'))
+        print(headers)
 
     def print_rule(self, rule):
         if rule.type == 'regex':
@@ -541,15 +556,6 @@ class ConverterUblacklist(Converter):
 
     https://github.com/iorate/ublacklist
     """
-    def print_info(self):
-        for field in ('Title', 'Description', 'Last modified', 'Homepage', 'Licence', 'Source', 'Note'):
-            if self.info.get(field):
-                print(f'# {field}: {self.info[field]}')
-
-            elif field == 'Last modified':
-                lm = self.date.astimezone(timezone.utc).isoformat(timespec='seconds')
-                print(f'# {field}: {lm}')
-
     def print_rule(self, rule):
         comment = '  # ' + re.sub(r'^\s*(?://|#)\s*', r'', rule.comment) if rule.comment else ''
 
