@@ -1,7 +1,7 @@
 ! Title: Fake News Filters
 ! Description: Filter for fake news sites. (for reference)
 ! Expires: 3 days
-! Last modified: 2022-09-18T09:46:07+00:00
+! Last modified: 2022-09-18T16:35:18+00:00
 ! Homepage: https://github.com/danny0838/content-farm-terminator/tree/gh-pages
 ! Licence: MIT License
 ! Source: https://github.com/danny0838/content-farm-terminator/blob/gh-pages/files/blocklist-ubo/fake-news.txt
@@ -103,7 +103,6 @@
 ||callthecops.net^
 ||canadafreepress.com^
 ||cap-news.com^
-||cato.org/blog^
 ||cbsnews.com.co^
 ||celebtricity.com^
 ||centerforsecuritypolicy.org^
@@ -292,6 +291,14 @@
 ||vnews24^
 ||voxnews^
 ||webitalia360^
+||cato.org/blog^
+||educateinspirechange.org/health^
+||newyorker.com/humor^
+||nonaiswa.org/wordpress^
+||smartknowledgeu.com/blog^
+||solari.com/blog^
+||szandorblestman.com/index.php^
+||thegoldandoilguy.com/articles^
 ||donaldtrumpnews.co^
 ||dont-tread-on.me^
 ||downtrend.com^
@@ -308,7 +315,6 @@
 ||economicnoise.com^
 ||ecowatch.com^
 ||educate-yourself.org^
-||educateinspirechange.org/health^
 ||electionnightgatekeepers.com^
 ||elelephantintheroom.blogspot.com^
 ||elitereaders.com^
@@ -547,11 +553,9 @@
 ||newswatch33.com^
 ||newswire-24.com^
 ||newswithviews.com^
-||newyorker.com/humor^
 ||newyorker.comhumorborowitz-report^
 ||nodisinfo.com^
 ||nomorefakenews.com^
-||nonaiswa.org/wordpress^
 ||northcrane.com^
 ||notallowedto.com^
 ||notime4bull.com^
@@ -705,8 +709,6 @@
 ||silverstealers.net^
 ||sjlendman.blogspot.com^
 ||skeptiko.com^
-||smartknowledgeu.com/blog^
-||solari.com/blog^
 ||sonsoflibertyradio.com^
 ||sott.net^
 ||sourceplanet.net^
@@ -738,7 +740,6 @@
 ||survivalblog.com^
 ||survivalknowhow.net^
 ||survivopedia.com^
-||szandorblestman.com/index.php^
 ||tap-news.com^
 ||tdnewswire.com^
 ||teapartyeconomist.com^
@@ -783,7 +784,6 @@
 ||thefreepatriot.org^
 ||thefreethoughtproject.com^
 ||thegatewaypundit.com^
-||thegoldandoilguy.com/articles^
 ||thegoldwater.com^
 ||thehardtimes.net^
 ||theineptowl.com^
