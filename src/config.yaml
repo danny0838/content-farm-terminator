@@ -87,7 +87,7 @@ build:
       Homepage: https://github.com/danny0838/content-farm-terminator/tree/gh-pages
       Licence: MIT License
       Source: https://github.com/danny0838/content-farm-terminator/blob/gh-pages/files/blocklist-hosts/content-farms.txt
-      preprocessors:
+      processors:
         - type: domain
           pattern: blogspot\.\*$
           replacement: blogspot.com

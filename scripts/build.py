@@ -299,15 +299,8 @@ class Converter:
             if rule.type is None:
                 continue
 
-            # apply preprocessors, which modifies the rule content
-            new_rule = self.process_rule(rule, self.info.get('preprocessors', []))
-            if new_rule is not None:
-                rule.set_rule(new_rule)
-
-            # apply processors, which forcely defines the raw output rule
-            new_rule = self.process_rule(rule, self.info.get('processors', []))
-            if new_rule is not None:
-                rule.set_rule_raw(new_rule)
+            # apply processors
+            self.process_rule(rule, self.info.get('processors', []))
 
             # special handling for a scheme rule, which forcely defines the raw output rule
             if self.allow_scheme and rule.type == 'scheme':
@@ -403,21 +396,32 @@ class Converter:
                 print(output)
 
     def process_rule(self, rule, processors):
-        """Process a rule.
+        """Modify a rule using given processors."""
+        for processor in processors:
+            if processor.get('type') not in (rule.type, None):
+                continue
 
-        Returns:
-            *: the new rule string or None if not processed
-        """
-        text = rule.rule
-        for pp in processors:
-            if pp.get('type') in (rule.type, None):
-                find = pp.get('find')
-                regex = re.compile(pp.get('pattern', ''))
-                if regex.search(text) if find is None else find in text:
-                    new_rule = regex.sub(pp.get('replacement', ''), text)
-                    return new_rule
+            find = processor.get('find')
+            pattern = processor.get('pattern')
+            regex = re.compile(pattern) if pattern is not None else None
+            text = rule.rule
+            if find is not None:
+                if find not in text:
+                    continue
+            elif regex is not None:
+                if not regex.search(text):
+                    continue
 
-        return None
+            replacement = processor.get('replacement', '')
+            new_rule = replacement if regex is None else regex.sub(replacement, text)
+
+            mode = processor.get('mode')
+            if mode == 'raw':
+                rule.set_rule_raw(new_rule)
+            else:
+                rule.set_rule(new_rule)
+
+            return
 
     def print_info(self):
         pass
