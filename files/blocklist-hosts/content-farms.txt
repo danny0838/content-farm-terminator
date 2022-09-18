@@ -1,6 +1,6 @@
 # Title: Content Farm Filters
 # Description: Filter for general content farms, mostly in Chinese.
-# Last modified: 2022-09-19T01:04:22+00:00
+# Last modified: 2022-09-19T01:05:31+00:00
 # Homepage: https://github.com/danny0838/content-farm-terminator/tree/gh-pages
 # Licence: MIT License
 # Source: https://github.com/danny0838/content-farm-terminator/blob/gh-pages/files/blocklist-hosts/content-farms.txt
@@ -2702,6 +2702,7 @@
 127.0.0.1 btcharts.com  # redirects to shangmeiyiliao.com
 127.0.0.1 btgrcc.com  # redirects to g.penzai.com
 127.0.0.1 bth8.cn  # redirects to g.penzai.com
+127.0.0.1 bthss.com
 127.0.0.1 btjtz75357.pixnet.net
 127.0.0.1 btlhxzz.com  # redirects to g.penzai.com
 127.0.0.1 btnf6vx31f.blog.fc2.com
@@ -5697,6 +5698,7 @@
 127.0.0.1 gzhecha.com  # redirects to g.penzai.com
 127.0.0.1 gzhlqy.com  # redirects to g.penzai.com
 127.0.0.1 gzhsqs.com  # redirects to g.penzai.com
+127.0.0.1 gzhttp.com
 127.0.0.1 gzhysh.com  # redirects to g.penzai.com
 127.0.0.1 gzjtxf666.com  # redirects to g.penzai.com
 127.0.0.1 gzjyhzx.com  # redirects to g.penzai.com
@@ -6743,6 +6745,7 @@
 127.0.0.1 imagina-tech.buzz  # !redirects to g.penzai.com
 127.0.0.1 imama.tw
 127.0.0.1 imccar.com  # redirects to g.penzai.com
+127.0.0.1 imdailyheadlines.com
 127.0.0.1 imengstar.com  # redirects to g.penzai.com
 127.0.0.1 imenomassaetre.co  # !redirects to ppcnzi.xyz
 127.0.0.1 imkerdarf.co  # !redirects to procnw.xyz
@@ -7377,6 +7380,7 @@
 127.0.0.1 joycewillimbd.pixnet.net
 127.0.0.1 joyfulcelebrationsinc.buzz  # redirects to g.penzai.com
 127.0.0.1 joygarzaqfm.pixnet.net
+127.0.0.1 joyk.com
 127.0.0.1 joykaper.co  # !redirects to procnw.xyz
 127.0.0.1 joylah.co
 127.0.0.1 joylah.com
@@ -9012,6 +9016,7 @@
 127.0.0.1 mlg8.cn  # redirects to g.penzai.com
 127.0.0.1 mlgongyi.com  # redirects to g.penzai.com
 127.0.0.1 mlj518.com  # redirects to g.penzai.com
+127.0.0.1 mlog.club
 127.0.0.1 mlps6q6.cn  # redirects to g.penzai.com
 127.0.0.1 mlq90rw.cn  # redirects to g.penzai.com
 127.0.0.1 mlr8.cn  # redirects to g.penzai.com
@@ -9520,6 +9525,7 @@
 127.0.0.1 ngffs.com  # !redirects to g.penzai.com
 127.0.0.1 ngjsur1.cn  # redirects to g.penzai.com
 127.0.0.1 nglesivo.co  # !redirects to keecnya.xyz
+127.0.0.1 ngnnn.com
 127.0.0.1 ngoisaotinhyeu.buzz  # !redirects to g.penzai.com
 127.0.0.1 nh11351573.blog.fc2.com
 127.0.0.1 nh99513557.blog.fc2.com
@@ -9631,6 +9637,7 @@
 127.0.0.1 normanmills10.pixnet.net
 127.0.0.1 not32hu32z.pixnet.net
 127.0.0.1 notd-angle.com
+127.0.0.1 notebz.com
 127.0.0.1 notesfrmthclud.co
 127.0.0.1 nothingshare.com
 127.0.0.1 notmyfirstrodeoblog.me  # redirects to ppcnzi.xyz
@@ -9960,6 +9967,7 @@
 127.0.0.1 ool76h2.pixnet.net
 127.0.0.1 ooli71371030.wordpress.com
 127.0.0.1 oomake.com
+127.0.0.1 oomfz.com
 127.0.0.1 oot4r4.pixnet.net
 127.0.0.1 oovgov.com
 127.0.0.1 op081ek.cn  # redirects to g.penzai.com
@@ -10596,6 +10604,7 @@
 127.0.0.1 ptt.reviews
 127.0.0.1 ptt.social
 127.0.0.1 ptt01.cc
+127.0.0.1 ptt01.net
 127.0.0.1 ptt01.tv
 127.0.0.1 ptt0w0.cn  # redirects to g.penzai.com
 127.0.0.1 ptt101.com
@@ -13770,6 +13779,7 @@
 127.0.0.1 wandarogerss.pixnet.net
 127.0.0.1 wanderpping.com  # redirects to meetwill.xyz
 127.0.0.1 wangleju.com  # redirects to g.penzai.com
+127.0.0.1 wangluoliuxing.com
 127.0.0.1 wangyanni.cn  # !redirects to g.penzai.com
 127.0.0.1 wangyou888.com  # redirects to g.penzai.com
 127.0.0.1 wangzhisai.com  # !redirects to g.penzai.com
@@ -15544,6 +15554,7 @@
 127.0.0.1 zoo851w.pixnet.net
 127.0.0.1 zoohcpj.cn  # redirects to g.penzai.com
 127.0.0.1 zoomftolk.xyz  # !redirects to keecnya.xyz
+127.0.0.1 zoukankan.com
 127.0.0.1 zoxuenl.cn  # redirects to g.penzai.com
 127.0.0.1 zp51jp9x.blog.fc2.com
 127.0.0.1 zpfyp.cn  # redirects to g.penzai.com
