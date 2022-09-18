@@ -381,7 +381,11 @@ class Converter:
                 log.warning('rule "%s" exceeds max length %i', rule.rule, scheme_max)
                 return
 
-        rule.set_rule_raw(value)
+        mode = scheme.get('mode')
+        if mode == 'raw':
+            rule.set_rule_raw(value)
+        else:
+            rule.set_rule(value)
 
     def handle_grouping_scheme_rules(self, scheme_groups):
         """Output collected grouping scheme rules."""
@@ -431,8 +435,14 @@ class Converter:
                         log.warning('rule "%s" exceeds max length %i', items[0][1].rule, scheme_max)
                         items = items[1:]
 
+            mode = scheme.get('mode')
             for output in outputs:
-                print(output)
+                rule = Rule('')
+                if mode == 'raw':
+                    rule.set_rule_raw(output)
+                else:
+                    rule.set_rule(output)
+                self.print_rule(rule)
 
     def print_info(self):
         pass

@@ -136,8 +136,10 @@ build:
         <<: *content_farms_schemes
         domain-part: &domain_part_scheme_ubo
           value: "||{value}^"
+          mode: raw
         domain-path: &domain_path_scheme_ubo
           value: "||{value}^"
+          mode: raw
 
   - source: blocklist/nearly-content-farms.txt
     publish: blocklist-ubo/nearly-content-farms.txt
