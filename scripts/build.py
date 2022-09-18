@@ -139,6 +139,101 @@ class Linter:
         return True
 
 
+class Uniquifier:
+    """Check for duplicated rules of the source files."""
+    def __init__(self, root, cross_files=False, auto_fix=False):
+        self.root = root
+        self.cross_files = cross_files
+        self.auto_fix = auto_fix
+
+    def run(self):
+        rules = []
+        for file in iglob(os.path.join(self.root, 'src', 'blocklist', '*.txt')):
+            subpath = os.path.relpath(file, self.root)
+            with open(file, encoding='UTF-8-SIG') as fh:
+                for i, line in enumerate(fh):
+                    line = line.rstrip('\n')
+                    rule = Rule(line, path=subpath, line_no=i + 1)
+                    rules.append(rule)
+
+        if self.cross_files:
+            new_rules = self.deduplicate_rules(rules)
+            new_rules = self.check_covered_rules(new_rules)
+            if self.auto_fix and new_rules != rules:
+                rulegroups = {}
+                for rule in new_rules:
+                    rulegroups.setdefault(rule.path, []).append(rule)
+                for subpath, new_rules in rulegroups.items():
+                    self.save_fixed_file(subpath, new_rules)
+
+        else:
+            rulegroups = {}
+            for rule in rules:
+                rulegroups.setdefault(rule.path, []).append(rule)
+            for subpath, rules in rulegroups.items():
+                new_rules = self.deduplicate_rules(rules)
+                new_rules = self.check_covered_rules(new_rules)
+                if self.auto_fix and new_rules != rules:
+                    self.save_fixed_file(subpath, new_rules)
+
+    def deduplicate_rules(self, rules):
+        new_rules = []
+        rules_dict = {}
+        for rule in rules:
+            if rule.rule:
+                try:
+                    rule2 = rules_dict[rule.rule]
+                except KeyError:
+                    rules_dict[rule.rule] = rule
+                else:
+                    log.info('%s:%i: rule "%s" duplicates %s:%i',
+                             rule.path, rule.line_no, rule.rule, rule2.path, rule2.line_no)
+                    continue
+            new_rules.append(rule)
+        return new_rules
+
+    def check_covered_rules(self, rules):
+        new_rules = []
+
+        regex_dict = {}
+        for rule in rules:
+            if rule.type == 'domain':
+                regex_dict[rule] = re.compile(
+                    r'^(?:[\w*-]+\.)*'
+                    + re.escape(rule.rule).replace(r'\*', r'[\w*-]*')
+                    + '$')
+
+        for rule in rules:
+            ok = True
+            if rule.type == 'domain':
+                for rule2 in rules:
+                    if rule2.path == rule.path and rule2.line_no == rule.line_no:
+                        continue
+
+                    try:
+                        regex = regex_dict[rule2]
+                    except KeyError:
+                        continue
+
+                    if regex.search(rule.rule):
+                        log.info('%s:%i: domain "%s" is covered by rule "%s" (%s:%i)',
+                                 rule.path, rule.line_no, rule.rule, rule2.rule, rule2.path, rule2.line_no)
+                        ok = False
+                        continue
+
+            if ok:
+                new_rules.append(rule)
+
+        return new_rules
+
+    def save_fixed_file(self, subpath, rules):
+        log.info('saving auto-fixed %s ...', subpath)
+        file = os.path.join(self.root, subpath)
+        with open(file, 'w', encoding='UTF-8') as fh:
+            for rule in rules:
+                print(f'{rule.rule}{rule.sep}{rule.comment}', file=fh)
+
+
 class Builder:
     """Build dist files from the source files."""
     def __init__(self, root, config=None):
@@ -421,7 +516,7 @@ def parse_args(argv=None):
 
     subparsers = parser.add_subparsers(
         metavar='ACTION', dest='action',
-        help="""the action to run (default: do all)""")
+        help="""the action to run (default: lint and build)""")
 
     # lint
     parser_lint = subparsers.add_parser(
@@ -437,6 +532,18 @@ def parse_args(argv=None):
     parser_lint.add_argument(
         '-r', '--remove-empty', action='store_true', default=False,
         help="""remove empty lines""")
+
+    # uniquify
+    parser_uniquify = subparsers.add_parser(
+        'uniquify',
+        help="""run the uniquifier""",
+        description=Uniquifier.__doc__)
+    parser_uniquify.add_argument(
+        '-c', '--cross-files', action='store_true', default=False,
+        help="""check for uniquity across files""")
+    parser_uniquify.add_argument(
+        '-a', '--auto-fix', action='store_true', default=False,
+        help="""automatically fix issues""")
 
     # build
     subparsers.add_parser(
@@ -460,6 +567,12 @@ def main():
         kwargs = {k: getattr(args, k, params[k].default)
                   for k in ('auto_fix', 'sort_rules', 'remove_empty')}
         Linter(args.root, **kwargs).run()
+
+    if args.action == 'uniquify':
+        params = inspect.signature(Uniquifier).parameters
+        kwargs = {k: getattr(args, k, params[k].default)
+                  for k in ('cross_files', 'auto_fix')}
+        Uniquifier(args.root, **kwargs).run()
 
     if args.action in ('build', None):
         Builder(args.root, config).run()
