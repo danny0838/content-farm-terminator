@@ -109,7 +109,7 @@ class Linter:
 
         if self.auto_fix and new_rules != rules:
             log.info('saving auto-fixed %s ...', subpath)
-            with open(file, 'w', encoding='UTF-8-SIG') as fh:
+            with open(file, 'w', encoding='UTF-8') as fh:
                 for rule in new_rules:
                     print(f'{rule.rule}{rule.sep}{rule.comment}', file=fh)
 
