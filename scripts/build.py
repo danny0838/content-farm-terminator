@@ -94,11 +94,9 @@ class Linter:
         subpath = os.path.relpath(file, self.root)
         rules = []
         with open(file, encoding='UTF-8-SIG') as fh:
-            i = 0
-            for line in fh:
-                i += 1
+            for i, line in enumerate(fh):
                 line = line.rstrip('\n')
-                rule = Rule(line, path=subpath, line_no=i)
+                rule = Rule(line, path=subpath, line_no=i + 1)
                 rules.append(rule)
 
         new_rules = []
