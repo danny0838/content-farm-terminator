@@ -86,6 +86,7 @@ build:
       Description: Filter for general content farms, mostly in Chinese.
       Homepage: https://github.com/danny0838/content-farm-terminator/tree/gh-pages
       Licence: MIT License
+      Source: https://github.com/danny0838/content-farm-terminator/blob/gh-pages/files/blocklist-hosts/content-farms.txt
       preprocessors:
         - type: domain
           pattern: blogspot\.\*$
@@ -99,6 +100,7 @@ build:
       Description: Filter for content-farm-like sites, mostly in Chinese.
       Homepage: https://github.com/danny0838/content-farm-terminator/tree/gh-pages
       Licence: MIT License
+      Source: https://github.com/danny0838/content-farm-terminator/blob/gh-pages/files/blocklist-hosts/nearly-content-farms.txt
 
   - source: blocklist/fake-news.txt
     publish: blocklist-hosts/fake-news.txt
@@ -108,6 +110,7 @@ build:
       Description: Filter for fake news sites. (for reference)
       Homepage: https://github.com/danny0838/content-farm-terminator/tree/gh-pages
       Licence: MIT License
+      Source: https://github.com/danny0838/content-farm-terminator/blob/gh-pages/files/blocklist-hosts/fake-news.txt
 
   - source: blocklist/scam-sites.txt
     publish: blocklist-hosts/scam-sites.txt
@@ -117,6 +120,7 @@ build:
       Description: Filter for scam sites. (for reference)
       Homepage: https://github.com/danny0838/content-farm-terminator/tree/gh-pages
       Licence: MIT License
+      Source: https://github.com/danny0838/content-farm-terminator/blob/gh-pages/files/blocklist-hosts/scam-sites.txt
 
   - source: blocklist/content-farms.txt
     publish: blocklist-ubo/content-farms.txt
@@ -127,6 +131,7 @@ build:
       Expires: 3 days
       Homepage: https://github.com/danny0838/content-farm-terminator/tree/gh-pages
       Licence: MIT License
+      Source: https://github.com/danny0838/content-farm-terminator/blob/gh-pages/files/blocklist-ubo/content-farms.txt
       schemes:
         <<: *content_farms_schemes
         domain-part: &domain_part_scheme_ubo
@@ -143,6 +148,7 @@ build:
       Expires: 3 days
       Homepage: https://github.com/danny0838/content-farm-terminator/tree/gh-pages
       Licence: MIT License
+      Source: https://github.com/danny0838/content-farm-terminator/blob/gh-pages/files/blocklist-ubo/nearly-content-farms.txt
 
   - source: blocklist/sns-content-farms.txt
     publish: blocklist-ubo/sns-content-farms.txt
@@ -153,6 +159,7 @@ build:
       Expires: 3 days
       Homepage: https://github.com/danny0838/content-farm-terminator/tree/gh-pages
       Licence: MIT License
+      Source: https://github.com/danny0838/content-farm-terminator/blob/gh-pages/files/blocklist-ubo/sns-content-farms.txt
       schemes:
         <<: *sns_content_farms_schemes
 
@@ -165,6 +172,7 @@ build:
       Expires: 3 days
       Homepage: https://github.com/danny0838/content-farm-terminator/tree/gh-pages
       Licence: MIT License
+      Source: https://github.com/danny0838/content-farm-terminator/blob/gh-pages/files/blocklist-ubo/fake-news.txt
       schemes:
         domain-part: *domain_part_scheme_ubo
         domain-path: *domain_path_scheme_ubo
@@ -178,3 +186,4 @@ build:
       Expires: 3 days
       Homepage: https://github.com/danny0838/content-farm-terminator/tree/gh-pages
       Licence: MIT License
+      Source: https://github.com/danny0838/content-farm-terminator/blob/gh-pages/files/blocklist-ubo/scam-sites.txt

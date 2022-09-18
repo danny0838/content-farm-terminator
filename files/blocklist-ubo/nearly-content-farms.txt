@@ -1,9 +1,10 @@
 ! Title: Nearly Content Farm Filters
 ! Description: Filter for content-farm-like sites, mostly in Chinese.
 ! Expires: 3 days
-! Last modified: 2022-09-18T09:36:58+00:00
+! Last modified: 2022-09-18T09:46:07+00:00
 ! Homepage: https://github.com/danny0838/content-farm-terminator/tree/gh-pages
 ! Licence: MIT License
+! Source: https://github.com/danny0838/content-farm-terminator/blob/gh-pages/files/blocklist-ubo/nearly-content-farms.txt
 ||0nion.com^
 ||25xt.com^
 ||94477.com^

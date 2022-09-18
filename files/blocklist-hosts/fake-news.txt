@@ -1,8 +1,9 @@
 # Title: Fake News Filters
 # Description: Filter for fake news sites. (for reference)
-# Last modified: 2022-09-18T02:20:28+00:00
+# Last modified: 2022-09-18T09:46:07+00:00
 # Homepage: https://github.com/danny0838/content-farm-terminator/tree/gh-pages
 # Licence: MIT License
+# Source: https://github.com/danny0838/content-farm-terminator/blob/gh-pages/files/blocklist-hosts/fake-news.txt
 127.0.0.1 100percentfedup.com  # bias
 127.0.0.1 21stcenturywire.com  # clickbait //conspiracy
 127.0.0.1 24newsflash.com  # fake

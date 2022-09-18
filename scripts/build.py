@@ -448,7 +448,7 @@ class ConverterHosts(Converter):
     allow_scheme = False
 
     def print_info(self):
-        for field in ('Title', 'Description', 'Expires', 'Last modified', 'Homepage', 'Licence'):
+        for field in ('Title', 'Description', 'Expires', 'Last modified', 'Homepage', 'Licence', 'Source', 'Note'):
             if self.info.get(field):
                 print(f'# {field}: {self.info[field]}')
 
@@ -475,7 +475,7 @@ class ConverterUbo(Converter):
     https://help.eyeo.com/en/adblockplus/how-to-write-filters
     """
     def print_info(self):
-        for field in ('Title', 'Description', 'Expires', 'Last modified', 'Homepage', 'Licence'):
+        for field in ('Title', 'Description', 'Expires', 'Last modified', 'Homepage', 'Licence', 'Source', 'Note'):
             if self.info.get(field):
                 print(f'! {field}: {self.info[field]}')
 
