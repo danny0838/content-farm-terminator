@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """Check and publish blocklists for Content Farm Terminator."""
 import argparse
+import inspect
 import logging
 import math
 import os
@@ -77,9 +78,11 @@ class Rule:
 
 class Linter:
     """Check for issues of the source files."""
-    def __init__(self, root, auto_fix=False):
+    def __init__(self, root, auto_fix=False, remove_empty=False, sort_rules=False):
         self.root = root
         self.auto_fix = auto_fix
+        self.remove_empty = remove_empty
+        self.sort_rules = sort_rules
 
     def run(self):
         for file in iglob(os.path.join(self.root, 'src', 'blocklist', '*.txt')):
@@ -103,6 +106,9 @@ class Linter:
             if self.check_rule(rule):
                 new_rules.append(rule)
 
+        if self.sort_rules:
+            new_rules.sort(key=lambda rule: f'{rule.rule}{rule.sep}{rule.comment}')
+
         if self.auto_fix and new_rules != rules:
             log.info('saving auto-fixed %s ...', subpath)
             with open(file, 'w', encoding='UTF-8') as fh:
@@ -111,15 +117,18 @@ class Linter:
 
     def check_rule(self, rule):
         if rule.type is None:
+            # A rule of None type should be empty; otherwise it has an invalid
+            # format that cannot be recognized as another type.
             if rule.rule.strip():
                 log.info('%s:%i: rule "%s" is invalid',
                          rule.path, rule.line_no, rule.rule)
                 return False
 
-            elif not rule.rule and not rule.comment:
-                log.info('%s:%i: rule "%s" is empty',
-                         rule.path, rule.line_no, rule.rule)
-                return False
+            if self.remove_empty:
+                if not rule.rule and not rule.comment:
+                    log.info('%s:%i: rule is empty',
+                             rule.path, rule.line_no)
+                    return False
 
         elif rule.type == 'regex':
             try:
@@ -421,10 +430,15 @@ def parse_args(argv=None):
         'lint',
         help="""run the linter""",
         description=Linter.__doc__)
-    parser.set_defaults(auto_fix=False)
     parser_lint.add_argument(
-        '-a', '--auto-fix', action='store_true',
+        '-a', '--auto-fix', action='store_true', default=False,
         help="""automatically fix issues""")
+    parser_lint.add_argument(
+        '-s', '--sort-rules', action='store_true', default=False,
+        help="""sort rules alphabetically""")
+    parser_lint.add_argument(
+        '-r', '--remove-empty', action='store_true', default=False,
+        help="""remove empty lines""")
 
     # build
     subparsers.add_parser(
@@ -444,7 +458,10 @@ def main():
         config = yaml.safe_load(fh)
 
     if args.action in ('lint', None):
-        Linter(args.root, auto_fix=args.auto_fix).run()
+        params = inspect.signature(Linter).parameters
+        kwargs = {k: getattr(args, k, params[k].default)
+                  for k in ('auto_fix', 'sort_rules', 'remove_empty')}
+        Linter(args.root, **kwargs).run()
 
     if args.action in ('build', None):
         Builder(args.root, config).run()
