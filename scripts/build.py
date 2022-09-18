@@ -435,7 +435,11 @@ class Converter:
 class ConverterCft(Converter):
     """Convert to a canonical Content Farm Terminator blocklist."""
     def print_rule(self, rule):
-        print(f'{rule.rule}{" " + rule.comment if rule.comment else ""}')
+        # skip invalid rule
+        if rule.type is None and rule.rule:
+            return
+
+        print(rule.rule + rule.sep + rule.comment)
 
 
 class ConverterHosts(Converter):
