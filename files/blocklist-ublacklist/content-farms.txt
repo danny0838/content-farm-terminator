@@ -1,6 +1,6 @@
 # Title: Content Farm Filters
 # Description: Filter for general content farms, mostly in Chinese.
-# Last modified: 2022-09-19T12:40:05+00:00
+# Last modified: 2022-09-19T22:35:15+00:00
 # Homepage: https://github.com/danny0838/content-farm-terminator/tree/gh-pages
 # Licence: MIT License
 # Source: https://github.com/danny0838/content-farm-terminator/blob/gh-pages/files/blocklist-ublacklist/content-farms.txt
@@ -206,7 +206,7 @@
 *://*.115ze2.cn/*  #redirects to g.penzai.com
 *://*.116547.com/*  #!redirects to g.penzai.com
 *://*.11708.cn/*
-*://*.118.193.38.103/*  #redirects to g.penzai.com
+*://118.193.38.103/*  #redirects to g.penzai.com
 *://*.119fs.cn/*  #redirects to g.penzai.com
 *://*.119qk.com/*  #redirects to g.penzai.com
 *://*.11admin.cn/*  #redirects to g.penzai.com
@@ -258,7 +258,7 @@
 *://*.163bk.cn/*  #redirects to g.penzai.com
 *://*.163jj.cn/*  #redirects to g.penzai.com
 *://*.163nvren.com/*
-*://*.165.227.24.198/*
+*://165.227.24.198/*
 *://*.16519.cc/*
 *://*.1681684.com/*  #redirects to g.penzai.com
 *://*.1688kaile.com/*  #redirects to g.penzai.com
@@ -290,7 +290,7 @@
 *://*.17sex.vip/*
 *://*.17travel.net/*
 *://*.17youhuiba.com/*  #redirects to g.penzai.com
-*://*.18.141.160.82/*  #g.penzai.com series
+*://18.141.160.82/*  #g.penzai.com series
 *://*.1800copy.buzz/*  #redirects to g.penzai.com
 *://*.1800gonow.buzz/*  #!redirects to g.penzai.com
 *://*.1837283.cn/*  #redirects to g.penzai.com
@@ -303,7 +303,7 @@
 *://*.1979studio.com/*  #redirects to g.penzai.com
 *://*.1981cn.com/*  #redirects to g.penzai.com
 *://*.198gz.cn/*  #redirects to g.penzai.com
-*://*.199.231.189.42/*
+*://199.231.189.42/*
 *://*.19au.com/*  #redirects to g.penzai.com
 *://*.19enzmh.cn/*  #redirects to g.penzai.com
 *://*.19globalnews.com/*
@@ -442,7 +442,7 @@
 *://*.21zhongyao.com/*  #redirects to g.penzai.com
 *://*.2201343.cn/*  #redirects to g.penzai.com
 *://*.22068.cn/*
-*://*.222.186.45.128/*
+*://222.186.45.128/*
 *://*.2277449.cn/*  #redirects to g.penzai.com
 *://*.228cp.cn/*  #redirects to g.penzai.com
 *://*.229cq.com/*  #redirects to g.penzai.com
@@ -1029,7 +1029,7 @@
 *://*.5vguanjia.com/*  #redirects to g.penzai.com
 *://*.5yffibz.cn/*  #redirects to g.penzai.com
 *://*.5yo128e.cn/*  #redirects to g.penzai.com
-*://*.60.12.236.60/*
+*://60.12.236.60/*
 *://*.602893.com/*  #redirects to g.penzai.com
 *://*.6090u6s.cn/*  #redirects to g.penzai.com
 *://*.60oi.com/*  #redirects to g.penzai.com
@@ -1061,7 +1061,7 @@
 *://*.618663.com/*
 *://*.618685.com/*
 *://*.61uda9c.cn/*  #redirects to g.penzai.com
-*://*.62.234.115.194/*
+*://62.234.115.194/*
 *://*.6200wq.cn/*  #!redirects to g.penzai.com
 *://*.620386.com/*  #redirects to g.penzai.com
 *://*.626191.com/*

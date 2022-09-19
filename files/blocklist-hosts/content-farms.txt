@@ -1,6 +1,6 @@
 # Title: Content Farm Filters
 # Description: Filter for general content farms, mostly in Chinese.
-# Last modified: 2022-09-19T12:40:05+00:00
+# Last modified: 2022-09-19T22:35:15+00:00
 # Homepage: https://github.com/danny0838/content-farm-terminator/tree/gh-pages
 # Licence: MIT License
 # Source: https://github.com/danny0838/content-farm-terminator/blob/gh-pages/files/blocklist-hosts/content-farms.txt
@@ -205,7 +205,6 @@
 127.0.0.1 115ze2.cn  #redirects to g.penzai.com
 127.0.0.1 116547.com  #!redirects to g.penzai.com
 127.0.0.1 11708.cn
-127.0.0.1 118.193.38.103  #redirects to g.penzai.com
 127.0.0.1 119fs.cn  #redirects to g.penzai.com
 127.0.0.1 119qk.com  #redirects to g.penzai.com
 127.0.0.1 11admin.cn  #redirects to g.penzai.com
@@ -257,7 +256,6 @@
 127.0.0.1 163bk.cn  #redirects to g.penzai.com
 127.0.0.1 163jj.cn  #redirects to g.penzai.com
 127.0.0.1 163nvren.com
-127.0.0.1 165.227.24.198
 127.0.0.1 16519.cc
 127.0.0.1 1681684.com  #redirects to g.penzai.com
 127.0.0.1 1688kaile.com  #redirects to g.penzai.com
@@ -289,7 +287,6 @@
 127.0.0.1 17sex.vip
 127.0.0.1 17travel.net
 127.0.0.1 17youhuiba.com  #redirects to g.penzai.com
-127.0.0.1 18.141.160.82  #g.penzai.com series
 127.0.0.1 1800copy.buzz  #redirects to g.penzai.com
 127.0.0.1 1800gonow.buzz  #!redirects to g.penzai.com
 127.0.0.1 1837283.cn  #redirects to g.penzai.com
@@ -302,7 +299,6 @@
 127.0.0.1 1979studio.com  #redirects to g.penzai.com
 127.0.0.1 1981cn.com  #redirects to g.penzai.com
 127.0.0.1 198gz.cn  #redirects to g.penzai.com
-127.0.0.1 199.231.189.42
 127.0.0.1 19au.com  #redirects to g.penzai.com
 127.0.0.1 19enzmh.cn  #redirects to g.penzai.com
 127.0.0.1 19globalnews.com
@@ -441,7 +437,6 @@
 127.0.0.1 21zhongyao.com  #redirects to g.penzai.com
 127.0.0.1 2201343.cn  #redirects to g.penzai.com
 127.0.0.1 22068.cn
-127.0.0.1 222.186.45.128
 127.0.0.1 2277449.cn  #redirects to g.penzai.com
 127.0.0.1 228cp.cn  #redirects to g.penzai.com
 127.0.0.1 229cq.com  #redirects to g.penzai.com
@@ -1028,7 +1023,6 @@
 127.0.0.1 5vguanjia.com  #redirects to g.penzai.com
 127.0.0.1 5yffibz.cn  #redirects to g.penzai.com
 127.0.0.1 5yo128e.cn  #redirects to g.penzai.com
-127.0.0.1 60.12.236.60
 127.0.0.1 602893.com  #redirects to g.penzai.com
 127.0.0.1 6090u6s.cn  #redirects to g.penzai.com
 127.0.0.1 60oi.com  #redirects to g.penzai.com
@@ -1060,7 +1054,6 @@
 127.0.0.1 618663.com
 127.0.0.1 618685.com
 127.0.0.1 61uda9c.cn  #redirects to g.penzai.com
-127.0.0.1 62.234.115.194
 127.0.0.1 6200wq.cn  #!redirects to g.penzai.com
 127.0.0.1 620386.com  #redirects to g.penzai.com
 127.0.0.1 626191.com

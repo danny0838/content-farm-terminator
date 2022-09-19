@@ -2,6 +2,7 @@
 """Check and publish blocklists for Content Farm Terminator."""
 import argparse
 import inspect
+import ipaddress
 import logging
 import os
 import re
@@ -55,6 +56,7 @@ class Rule:
         self.rule = rule
         self.type = None
 
+        # regex
         m = RE_REGEX_RULE.search(self.rule)
         if m:
             self.type = 'regex'
@@ -62,6 +64,7 @@ class Rule:
             self.flags = m.group(2)
             return
 
+        # scheme
         m = RE_SCHEME_RULE.search(self.rule)
         if m:
             self.type = 'scheme'
@@ -69,6 +72,28 @@ class Rule:
             self.value = m.group(2)
             return
 
+        # ipv6
+        if self.rule.startswith('[') and self.rule.endswith(']'):
+            try:
+                ip = ipaddress.ip_address(self.rule[1:-1])
+            except ValueError:
+                pass
+            else:
+                if ip.version == 6:
+                    self.type = 'ipv6'
+            return
+
+        # ipv4
+        try:
+            ip = ipaddress.ip_address(self.rule)
+        except ValueError:
+            pass
+        else:
+            if ip.version == 4:
+                self.type = 'ipv4'
+                return
+
+        # domain
         m = RE_DOMAIN_RULE.search(self.rule)
         if m:
             self.type = 'domain'
@@ -540,7 +565,7 @@ class ConverterUbo(Converter):
             regex = rule.rule
             print(f'{regex}$document')
 
-        elif rule.type == 'domain':
+        elif rule.type in ('domain', 'ipv4', 'ipv6'):
             domain = rule.rule
             if '*' in domain:
                 print(f'||{domain}^$document')
@@ -561,6 +586,9 @@ class ConverterUblacklist(Converter):
 
         if rule.type == 'regex':
             print(f'/{escape_regex_slash(rule.pattern)}/{rule.flags}{comment}')
+
+        elif rule.type in ('ipv4', 'ipv6'):
+            print(f'*://{rule.rule}/*{comment}')
 
         elif rule.type == 'domain':
             domain = rule.rule

@@ -1,6 +1,6 @@
 # Title: Fake News Filters
 # Description: Filter for fake news sites. (for reference)
-# Last modified: 2022-09-19T01:06:39+00:00
+# Last modified: 2022-09-19T22:35:15+00:00
 # Homepage: https://github.com/danny0838/content-farm-terminator/tree/gh-pages
 # Licence: MIT License
 # Source: https://github.com/danny0838/content-farm-terminator/blob/gh-pages/files/blocklist-hosts/fake-news.txt
@@ -10,7 +10,6 @@
 127.0.0.1 365usanews.com  #bias  #conspiracy
 127.0.0.1 4threvolutionarywar.wordpress.com  #bias  #conspiracy
 127.0.0.1 70news.wordpress.com  #fake
-127.0.0.1 82.221.129.208  #conspiracy  #fake
 127.0.0.1 aanirfan.blogspot.co.uk  #unreliable
 127.0.0.1 abcnews.com.co  #fake
 127.0.0.1 abcnewsgo.co  #fake
