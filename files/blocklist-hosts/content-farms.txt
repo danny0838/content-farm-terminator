@@ -1,6 +1,6 @@
 # Title: Content Farm Filters
 # Description: Filter for general content farms, mostly in Chinese.
-# Last modified: 2022-09-19T01:06:39+00:00
+# Last modified: 2022-09-19T12:40:05+00:00
 # Homepage: https://github.com/danny0838/content-farm-terminator/tree/gh-pages
 # Licence: MIT License
 # Source: https://github.com/danny0838/content-farm-terminator/blob/gh-pages/files/blocklist-hosts/content-farms.txt
@@ -3755,6 +3755,7 @@
 127.0.0.1 datatianji.com  #redirects to g.penzai.com
 127.0.0.1 datianlong.cn  #redirects to g.penzai.com
 127.0.0.1 datougou.cn
+127.0.0.1 daueac.co  #redirects to goake.top
 127.0.0.1 davedavis2659.pixnet.net
 127.0.0.1 davidsofell52.pixnet.net
 127.0.0.1 davidsonandrade.buzz  #!redirects to g.penzai.com
@@ -5469,6 +5470,7 @@
 127.0.0.1 gogonews.cc
 127.0.0.1 gogoreade.com
 127.0.0.1 gogoyahoo.buzz  #!redirects to g.penzai.com
+127.0.0.1 gogshgo.me  #redirects to aetop.top
 127.0.0.1 gohappyfoo.com
 127.0.0.1 gohappytify.com  #歡享網
 127.0.0.1 gohaveababy.com
@@ -8534,6 +8536,7 @@
 127.0.0.1 luetgebrune.buzz  #!redirects to g.penzai.com
 127.0.0.1 luggagetrunk.blog.fc2.com
 127.0.0.1 luguang.net.cn  #redirects to g.penzai.com
+127.0.0.1 lujuba.cc
 127.0.0.1 lukoince.co  #redirects to procnw.xyz
 127.0.0.1 lulugaobag.com  #redirects to g.penzai.com
 127.0.0.1 lunmm.com  #redirects to g.penzai.com
@@ -9378,6 +9381,7 @@
 127.0.0.1 n9w24r.pixnet.net
 127.0.0.1 n9z9x3ndfl.blog.fc2.com
 127.0.0.1 n9zvx53lhz.pixnet.net
+127.0.0.1 na-madagaskar.sk  #redirects to 194.pasboosoul.live
 127.0.0.1 nachvb9.cn  #redirects to g.penzai.com
 127.0.0.1 nacktfilm.buzz  #redirects to g.penzai.com
 127.0.0.1 nadenegrey.buzz  #!redirects to g.penzai.com
@@ -10238,6 +10242,7 @@
 127.0.0.1 parksjul23578.pixnet.net
 127.0.0.1 parliege.co  #!redirects to keecnya.xyz
 127.0.0.1 partwu.com.cn  #redirects to g.penzai.com
+127.0.0.1 pasboosoul.live
 127.0.0.1 pashfon.cn  #redirects to g.penzai.com
 127.0.0.1 pasikayc16.wordpress.com
 127.0.0.1 pass345.com
@@ -13109,6 +13114,7 @@
 127.0.0.1 tyo9793ybb.pixnet.net
 127.0.0.1 tysonwyq29.blog.fc2.com
 127.0.0.1 tyxhjj.com  #redirects to g.penzai.com
+127.0.0.1 tyzcat.co  #redirects to aetop.top
 127.0.0.1 tz137.com  #redirects to g.penzai.com
 127.0.0.1 tzbbd93779.pixnet.net
 127.0.0.1 tzg68owqd.pixnet.net

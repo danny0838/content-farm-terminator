@@ -1,6 +1,6 @@
 # Title: Content Farm Filters
 # Description: Filter for general content farms, mostly in Chinese.
-# Last modified: 2022-09-19T01:06:39+00:00
+# Last modified: 2022-09-19T12:40:05+00:00
 # Homepage: https://github.com/danny0838/content-farm-terminator/tree/gh-pages
 # Licence: MIT License
 # Source: https://github.com/danny0838/content-farm-terminator/blob/gh-pages/files/blocklist-ublacklist/content-farms.txt
@@ -3746,6 +3746,7 @@
 *://*.datatianji.com/*  #redirects to g.penzai.com
 *://*.datianlong.cn/*  #redirects to g.penzai.com
 *://*.datougou.cn/*
+*://*.daueac.co/*  #redirects to goake.top
 *://*.davedavis2659.pixnet.net/*
 *://*.davidsofell52.pixnet.net/*
 *://*.davidsonandrade.buzz/*  #!redirects to g.penzai.com
@@ -5445,6 +5446,7 @@
 *://*.gogonews.cc/*
 *://*.gogoreade.com/*
 *://*.gogoyahoo.buzz/*  #!redirects to g.penzai.com
+*://*.gogshgo.me/*  #redirects to aetop.top
 *://*.gohappyfoo.com/*
 *://*.gohappytify.com/*  #歡享網
 *://*.gohaveababy.com/*
@@ -8487,6 +8489,7 @@
 *://*.luetgebrune.buzz/*  #!redirects to g.penzai.com
 *://*.luggagetrunk.blog.fc2.com/*
 *://*.luguang.net.cn/*  #redirects to g.penzai.com
+*://*.lujuba.cc/*
 *://*.lukoince.co/*  #redirects to procnw.xyz
 *://*.lulugaobag.com/*  #redirects to g.penzai.com
 *://*.lunmm.com/*  #redirects to g.penzai.com
@@ -9324,6 +9327,7 @@
 *://*.n9w24r.pixnet.net/*
 *://*.n9z9x3ndfl.blog.fc2.com/*
 *://*.n9zvx53lhz.pixnet.net/*
+*://*.na-madagaskar.sk/*  #redirects to 194.pasboosoul.live
 *://*.nachvb9.cn/*  #redirects to g.penzai.com
 *://*.nacktfilm.buzz/*  #redirects to g.penzai.com
 *://*.nadenegrey.buzz/*  #!redirects to g.penzai.com
@@ -10179,6 +10183,7 @@
 *://*.parksjul23578.pixnet.net/*
 *://*.parliege.co/*  #!redirects to keecnya.xyz
 *://*.partwu.com.cn/*  #redirects to g.penzai.com
+*://*.pasboosoul.live/*
 *://*.pashfon.cn/*  #redirects to g.penzai.com
 *://*.pasikayc16.wordpress.com/*
 *://*.pass345.com/*
@@ -13027,6 +13032,7 @@
 *://*.tyo9793ybb.pixnet.net/*
 *://*.tysonwyq29.blog.fc2.com/*
 *://*.tyxhjj.com/*  #redirects to g.penzai.com
+*://*.tyzcat.co/*  #redirects to aetop.top
 *://*.tz137.com/*  #redirects to g.penzai.com
 *://*.tzbbd93779.pixnet.net/*
 *://*.tzg68owqd.pixnet.net/*
