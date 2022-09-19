@@ -1,903 +1,903 @@
 # Title: Fake News Filters
 # Description: Filter for fake news sites. (for reference)
-# Last modified: 2022-09-18T09:46:07+00:00
+# Last modified: 2022-09-19T01:06:39+00:00
 # Homepage: https://github.com/danny0838/content-farm-terminator/tree/gh-pages
 # Licence: MIT License
 # Source: https://github.com/danny0838/content-farm-terminator/blob/gh-pages/files/blocklist-hosts/fake-news.txt
-127.0.0.1 100percentfedup.com  # bias
-127.0.0.1 21stcenturywire.com  # clickbait //conspiracy
-127.0.0.1 24newsflash.com  # fake
-127.0.0.1 365usanews.com  # bias //conspiracy
-127.0.0.1 4threvolutionarywar.wordpress.com  # bias //conspiracy
-127.0.0.1 70news.wordpress.com  # fake
-127.0.0.1 82.221.129.208  # conspiracy //fake
-127.0.0.1 aanirfan.blogspot.co.uk  # unreliable
-127.0.0.1 abcnews.com.co  # fake
-127.0.0.1 abcnewsgo.co  # fake
-127.0.0.1 abeldanger.net  # conspiracy
-127.0.0.1 abovetopsecret.com  # conspiracy //rumor
-127.0.0.1 abriluno.com  # satire //fake
-127.0.0.1 aceflashman.wordpress.com  # satire
-127.0.0.1 acting-man.com  # unreliable //conspiracy
-127.0.0.1 activistpost.com  # clickbait //conspiracy
-127.0.0.1 addictinginfo.org  # clickbait //unreliable
-127.0.0.1 adobochronicles.com  # satire
-127.0.0.1 advocate.com  # political //reliable
-127.0.0.1 aheadoftheherd.com  # bias
-127.0.0.1 ahtribune.com  # unreliable //bias
-127.0.0.1 allnewspipeline.com  # unreliable //conspiracy
-127.0.0.1 alt-market.com  # conspiracy //bias
-127.0.0.1 alternativemediasyndicate.com  # fake
-127.0.0.1 alternet.org  # political //reliable
-127.0.0.1 americanblog.com  # unknown
-127.0.0.1 americanfreepress.net  # conspiracy //bias
-127.0.0.1 americankabuki.blogspot.com  # junksci
-127.0.0.1 americanlookout.com  # bias //clickbait
-127.0.0.1 americannews.com  # fake //fake
-127.0.0.1 americannewsx.com  # political //bias //satire
-127.0.0.1 americanoverlook.com  # fake
-127.0.0.1 americanpatriotdaily.com  # bias //clickbait
-127.0.0.1 americanprogress.org  # political //reliable
-127.0.0.1 americanreviewer.com  # conspiracy
-127.0.0.1 americanthinker.com  # bias
-127.0.0.1 americantoday.news  # rumor //bias
-127.0.0.1 americasfreedomfighters.com  # bias //clickbait
-127.0.0.1 ammoland.com  # bias
-127.0.0.1 amplifyingglass.com  # clickbait //satire
-127.0.0.1 amren.com  # hate //conspiracy
-127.0.0.1 amtvmedia.com  # rumor //unreliable
-127.0.0.1 amusmentic.com  # clickbait //rumor
-127.0.0.1 ancient-code.com  # junksci //unreliable
-127.0.0.1 angrypatriotmovement.com  # conspiracy
-127.0.0.1 anonews.co  # unreliable
-127.0.0.1 anonhq.com  # unreliable
-127.0.0.1 anonnews.co  # unreliable
-127.0.0.1 anotherdayintheempire.com  # bias //conspiracy
-127.0.0.1 antiwar.com  # bias //unreliable
-127.0.0.1 antoniusaquinas.wp.com  # bias //conspiracy
-127.0.0.1 asia-pacificresearch.com  # unreliable //satire
-127.0.0.1 assassinationscience.com  # conspiracy //junksci
-127.0.0.1 associatedmediacoverage.com  # satire
-127.0.0.1 attn.com  # political //clickbait
-127.0.0.1 automaticearth.com  # unreliable
-127.0.0.1 automotostar.com  # clickbait
-127.0.0.1 awarenessact.com  # conspiracy //junksci
-127.0.0.1 awazetribune.com  # satire
-127.0.0.1 awdnews.com  # conspiracy
-127.0.0.1 awm.com  # unreliable //bias //clickbait
-127.0.0.1 badsquad.com  # unknown
-127.0.0.1 baptistnews.com  # political
-127.0.0.1 barenakedislam.com  # hate
-127.0.0.1 bb4sp.com  # conspiracy //bias //bias
-127.0.0.1 beehivebugle.com  # satire
-127.0.0.1 beforeitsnews.com  # clickbait //fake //conspiracy //rumor
+127.0.0.1 100percentfedup.com  #bias
+127.0.0.1 21stcenturywire.com  #clickbait  #conspiracy
+127.0.0.1 24newsflash.com  #fake
+127.0.0.1 365usanews.com  #bias  #conspiracy
+127.0.0.1 4threvolutionarywar.wordpress.com  #bias  #conspiracy
+127.0.0.1 70news.wordpress.com  #fake
+127.0.0.1 82.221.129.208  #conspiracy  #fake
+127.0.0.1 aanirfan.blogspot.co.uk  #unreliable
+127.0.0.1 abcnews.com.co  #fake
+127.0.0.1 abcnewsgo.co  #fake
+127.0.0.1 abeldanger.net  #conspiracy
+127.0.0.1 abovetopsecret.com  #conspiracy  #rumor
+127.0.0.1 abriluno.com  #satire  #fake
+127.0.0.1 aceflashman.wordpress.com  #satire
+127.0.0.1 acting-man.com  #unreliable  #conspiracy
+127.0.0.1 activistpost.com  #clickbait  #conspiracy
+127.0.0.1 addictinginfo.org  #clickbait  #unreliable
+127.0.0.1 adobochronicles.com  #satire
+127.0.0.1 advocate.com  #political  #reliable
+127.0.0.1 aheadoftheherd.com  #bias
+127.0.0.1 ahtribune.com  #unreliable  #bias
+127.0.0.1 allnewspipeline.com  #unreliable  #conspiracy
+127.0.0.1 alt-market.com  #conspiracy  #bias
+127.0.0.1 alternativemediasyndicate.com  #fake
+127.0.0.1 alternet.org  #political  #reliable
+127.0.0.1 americanblog.com  #unknown
+127.0.0.1 americanfreepress.net  #conspiracy  #bias
+127.0.0.1 americankabuki.blogspot.com  #junksci
+127.0.0.1 americanlookout.com  #bias  #clickbait
+127.0.0.1 americannews.com  #fake  #fake
+127.0.0.1 americannewsx.com  #political  #bias  #satire
+127.0.0.1 americanoverlook.com  #fake
+127.0.0.1 americanpatriotdaily.com  #bias  #clickbait
+127.0.0.1 americanprogress.org  #political  #reliable
+127.0.0.1 americanreviewer.com  #conspiracy
+127.0.0.1 americanthinker.com  #bias
+127.0.0.1 americantoday.news  #rumor  #bias
+127.0.0.1 americasfreedomfighters.com  #bias  #clickbait
+127.0.0.1 ammoland.com  #bias
+127.0.0.1 amplifyingglass.com  #clickbait  #satire
+127.0.0.1 amren.com  #hate  #conspiracy
+127.0.0.1 amtvmedia.com  #rumor  #unreliable
+127.0.0.1 amusmentic.com  #clickbait  #rumor
+127.0.0.1 ancient-code.com  #junksci  #unreliable
+127.0.0.1 angrypatriotmovement.com  #conspiracy
+127.0.0.1 anonews.co  #unreliable
+127.0.0.1 anonhq.com  #unreliable
+127.0.0.1 anonnews.co  #unreliable
+127.0.0.1 anotherdayintheempire.com  #bias  #conspiracy
+127.0.0.1 antiwar.com  #bias  #unreliable
+127.0.0.1 antoniusaquinas.wp.com  #bias  #conspiracy
+127.0.0.1 asia-pacificresearch.com  #unreliable  #satire
+127.0.0.1 assassinationscience.com  #conspiracy  #junksci
+127.0.0.1 associatedmediacoverage.com  #satire
+127.0.0.1 attn.com  #political  #clickbait
+127.0.0.1 automaticearth.com  #unreliable
+127.0.0.1 automotostar.com  #clickbait
+127.0.0.1 awarenessact.com  #conspiracy  #junksci
+127.0.0.1 awazetribune.com  #satire
+127.0.0.1 awdnews.com  #conspiracy
+127.0.0.1 awm.com  #unreliable  #bias  #clickbait
+127.0.0.1 badsquad.com  #unknown
+127.0.0.1 baptistnews.com  #political
+127.0.0.1 barenakedislam.com  #hate
+127.0.0.1 bb4sp.com  #conspiracy  #bias  #bias
+127.0.0.1 beehivebugle.com  #satire
+127.0.0.1 beforeitsnews.com  #clickbait  #fake  #conspiracy  #rumor
 127.0.0.1 beingliberal.org
-127.0.0.1 betootaadvocate.com  # satire
-127.0.0.1 bients.com  # clickbait
-127.0.0.1 bigamericannews.com  # fake //satire
-127.0.0.1 bigbluedimension.com  # rumor //bias
-127.0.0.1 bigbluevision.com  # hate
-127.0.0.1 bigbluevision.org  # clickbait //bias
-127.0.0.1 bighairynews.com  # fake //conspiracy
-127.0.0.1 bignuggetnews.com  # bias //rumor
-127.0.0.1 bigpzone.com  # clickbait //unknown
-127.0.0.1 bipartisanreport.com  # clickbait //bias
+127.0.0.1 betootaadvocate.com  #satire
+127.0.0.1 bients.com  #clickbait
+127.0.0.1 bigamericannews.com  #fake  #satire
+127.0.0.1 bigbluedimension.com  #rumor  #bias
+127.0.0.1 bigbluevision.com  #hate
+127.0.0.1 bigbluevision.org  #clickbait  #bias
+127.0.0.1 bighairynews.com  #fake  #conspiracy
+127.0.0.1 bignuggetnews.com  #bias  #rumor
+127.0.0.1 bigpzone.com  #clickbait  #unknown
+127.0.0.1 bipartisanreport.com  #clickbait  #bias
 127.0.0.1 bizpacreview.com
-127.0.0.1 blackagendareport.com  # unreliable
-127.0.0.1 blackgenocide.org  # conspiracy //bias //hate
-127.0.0.1 blacklistednews.com  # clickbait //unreliable
-127.0.0.1 blastingnews.com  # satire //unreliable
-127.0.0.1 bluenationreview.com  # clickbait //unreliable
-127.0.0.1 boilingfrogspost.com  # unreliable
-127.0.0.1 borowitzreport.com  # satire
-127.0.0.1 bostonleader.com  # fake
-127.0.0.1 breaking911.com  # clickbait //unreliable
-127.0.0.1 breakpoint.org  # unreliable
-127.0.0.1 breitbart.com  # political //unreliable //bias
-127.0.0.1 brotherjohnf.com  # bias //conspiracy
-127.0.0.1 bullionbullscanada.com  # conspiracy
-127.0.0.1 burrardstreetjournal.com  # satire
-127.0.0.1 buzzfeedusa.com  # fake //rumor
-127.0.0.1 bvanews.com  # unreliable //bias //fake
-127.0.0.1 callthecops.net  # satire
-127.0.0.1 canadafreepress.com  # conspiracy //bias
-127.0.0.1 cap-news.com  # fake
-127.0.0.1 cbsnews.com.co  # fake
-127.0.0.1 celebtricity.com  # satire
-127.0.0.1 centerforsecuritypolicy.org  # bias //conspiracy
-127.0.0.1 channel-7-news.com  # fake
-127.0.0.1 charismanews.com  # bias
-127.0.0.1 chaser.com.au  # satire
-127.0.0.1 checkoutthehealthyworld.com  # junksci //clickbait
-127.0.0.1 chicksontheright.com  # clickbait //bias
-127.0.0.1 christianfightback.com  # hate //bias
-127.0.0.1 christianpost.com  # reliable //political
-127.0.0.1 christiantimesnewspaper.com  # rumor //bias //fake
-127.0.0.1 christwire.org  # fake //satire
-127.0.0.1 chronicle.su  # clickbait //satire
-127.0.0.1 chroniclesmagazine.org  # political
-127.0.0.1 citizensunited.org  # bias
-127.0.0.1 city-journal.org  # political
-127.0.0.1 cityworldnews.com  # fake
-127.0.0.1 civictribune.com  # fake //fake
-127.0.0.1 clashdaily.com  # fake //conspiracy //bias
-127.0.0.1 clickhole.com  # fake //satire
-127.0.0.1 cnnnext.com  # unreliable
-127.0.0.1 cnsnews.com  # unreliable //bias
-127.0.0.1 coasttocoastam.com  # clickbait //unreliable
-127.0.0.1 collective-evolution.com  # junksci
+127.0.0.1 blackagendareport.com  #unreliable
+127.0.0.1 blackgenocide.org  #conspiracy  #bias  #hate
+127.0.0.1 blacklistednews.com  #clickbait  #unreliable
+127.0.0.1 blastingnews.com  #satire  #unreliable
+127.0.0.1 bluenationreview.com  #clickbait  #unreliable
+127.0.0.1 boilingfrogspost.com  #unreliable
+127.0.0.1 borowitzreport.com  #satire
+127.0.0.1 bostonleader.com  #fake
+127.0.0.1 breaking911.com  #clickbait  #unreliable
+127.0.0.1 breakpoint.org  #unreliable
+127.0.0.1 breitbart.com  #political  #unreliable  #bias
+127.0.0.1 brotherjohnf.com  #bias  #conspiracy
+127.0.0.1 bullionbullscanada.com  #conspiracy
+127.0.0.1 burrardstreetjournal.com  #satire
+127.0.0.1 buzzfeedusa.com  #fake  #rumor
+127.0.0.1 bvanews.com  #unreliable  #bias  #fake
+127.0.0.1 callthecops.net  #satire
+127.0.0.1 canadafreepress.com  #conspiracy  #bias
+127.0.0.1 cap-news.com  #fake
+127.0.0.1 cbsnews.com.co  #fake
+127.0.0.1 celebtricity.com  #satire
+127.0.0.1 centerforsecuritypolicy.org  #bias  #conspiracy
+127.0.0.1 channel-7-news.com  #fake
+127.0.0.1 charismanews.com  #bias
+127.0.0.1 chaser.com.au  #satire
+127.0.0.1 checkoutthehealthyworld.com  #junksci  #clickbait
+127.0.0.1 chicksontheright.com  #clickbait  #bias
+127.0.0.1 christianfightback.com  #hate  #bias
+127.0.0.1 christianpost.com  #reliable  #political
+127.0.0.1 christiantimesnewspaper.com  #rumor  #bias  #fake
+127.0.0.1 christwire.org  #fake  #satire
+127.0.0.1 chronicle.su  #clickbait  #satire
+127.0.0.1 chroniclesmagazine.org  #political
+127.0.0.1 citizensunited.org  #bias
+127.0.0.1 city-journal.org  #political
+127.0.0.1 cityworldnews.com  #fake
+127.0.0.1 civictribune.com  #fake  #fake
+127.0.0.1 clashdaily.com  #fake  #conspiracy  #bias
+127.0.0.1 clickhole.com  #fake  #satire
+127.0.0.1 cnnnext.com  #unreliable
+127.0.0.1 cnsnews.com  #unreliable  #bias
+127.0.0.1 coasttocoastam.com  #clickbait  #unreliable
+127.0.0.1 collective-evolution.com  #junksci
 127.0.0.1 collectiveevolution
-127.0.0.1 collectivelyconscious.net  # junksci //conspiracy
-127.0.0.1 comingdepression.com  # unknown
-127.0.0.1 commentarymagazine.com  # political
-127.0.0.1 commondreams.org  # political //clickbait
-127.0.0.1 concisepolitics.com  # conspiracy //hate
-127.0.0.1 condividilo.org  # clickbait
-127.0.0.1 consciouslifenews.com  # clickbait //junksci
-127.0.0.1 conservapedia.com  # bias
-127.0.0.1 conservativebyte.com  # fake //bias
-127.0.0.1 conservativedailypost.com  # fake //unreliable
-127.0.0.1 conservativefighters.com  # fake
-127.0.0.1 conservativefiringline.com  # bias //conspiracy //clickbait
-127.0.0.1 conservativefrontline.com  # unknown
-127.0.0.1 conservativeheadlines.com  # unknown
-127.0.0.1 conservativehq.com  # bias
-127.0.0.1 conservativeinfidel.com  # fake //conspiracy
-127.0.0.1 conservativeoutfitters.com  # clickbait //unreliable
-127.0.0.1 conservativepapers.com  # bias
-127.0.0.1 conservativerefocus.com  # conspiracy
-127.0.0.1 conservativereview.com  # political
-127.0.0.1 conservativespirit.com  # bias
-127.0.0.1 conservativestate.com  # bias
-127.0.0.1 conservativetribune.com  # bias //conspiracy //unreliable
-127.0.0.1 consortiumnews.com  # reliable
-127.0.0.1 conspiracyplanet.com  # conspiracy
-127.0.0.1 conspiracywire.com  # conspiracy
-127.0.0.1 corbettreport.com  # conspiracy //conspiracy //bias
-127.0.0.1 corrieredelcorsaro.it  # fake
-127.0.0.1 countdowntozerotime.com  # clickbait //conspiracy
-127.0.0.1 countercurrentnews.com  # bias
-127.0.0.1 countercurrents.org  # political //unreliable
-127.0.0.1 counterinformation.wordpress.com  # political
-127.0.0.1 counterjihad.com  # bias
-127.0.0.1 counterpsyops.com  # clickbait //conspiracy
-127.0.0.1 counterpunch.com  # political
-127.0.0.1 counterpunch.org  # political
-127.0.0.1 cowgernation.com  # bias //conspiracy
-127.0.0.1 creambmp.com  # fake //satire
-127.0.0.1 cryptogon.com  # conspiracy //unreliable
-127.0.0.1 crystalair.com  # satire
+127.0.0.1 collectivelyconscious.net  #junksci  #conspiracy
+127.0.0.1 comingdepression.com  #unknown
+127.0.0.1 commentarymagazine.com  #political
+127.0.0.1 commondreams.org  #political  #clickbait
+127.0.0.1 concisepolitics.com  #conspiracy  #hate
+127.0.0.1 condividilo.org  #clickbait
+127.0.0.1 consciouslifenews.com  #clickbait  #junksci
+127.0.0.1 conservapedia.com  #bias
+127.0.0.1 conservativebyte.com  #fake  #bias
+127.0.0.1 conservativedailypost.com  #fake  #unreliable
+127.0.0.1 conservativefighters.com  #fake
+127.0.0.1 conservativefiringline.com  #bias  #conspiracy  #clickbait
+127.0.0.1 conservativefrontline.com  #unknown
+127.0.0.1 conservativeheadlines.com  #unknown
+127.0.0.1 conservativehq.com  #bias
+127.0.0.1 conservativeinfidel.com  #fake  #conspiracy
+127.0.0.1 conservativeoutfitters.com  #clickbait  #unreliable
+127.0.0.1 conservativepapers.com  #bias
+127.0.0.1 conservativerefocus.com  #conspiracy
+127.0.0.1 conservativereview.com  #political
+127.0.0.1 conservativespirit.com  #bias
+127.0.0.1 conservativestate.com  #bias
+127.0.0.1 conservativetribune.com  #bias  #conspiracy  #unreliable
+127.0.0.1 consortiumnews.com  #reliable
+127.0.0.1 conspiracyplanet.com  #conspiracy
+127.0.0.1 conspiracywire.com  #conspiracy
+127.0.0.1 corbettreport.com  #conspiracy  #conspiracy  #bias
+127.0.0.1 corrieredelcorsaro.it  #fake
+127.0.0.1 countdowntozerotime.com  #clickbait  #conspiracy
+127.0.0.1 countercurrentnews.com  #bias
+127.0.0.1 countercurrents.org  #political  #unreliable
+127.0.0.1 counterinformation.wordpress.com  #political
+127.0.0.1 counterjihad.com  #bias
+127.0.0.1 counterpsyops.com  #clickbait  #conspiracy
+127.0.0.1 counterpunch.com  #political
+127.0.0.1 counterpunch.org  #political
+127.0.0.1 cowgernation.com  #bias  #conspiracy
+127.0.0.1 creambmp.com  #fake  #satire
+127.0.0.1 cryptogon.com  #conspiracy  #unreliable
+127.0.0.1 crystalair.com  #satire
 127.0.0.1 dailiulian.net
-127.0.0.1 dailybuzzlive.com  # clickbait //fake
-127.0.0.1 dailycaller.com  # political //clickbait //bias
-127.0.0.1 dailycurrant.com  # fake //satire
-127.0.0.1 dailydiscord.com  # satire
-127.0.0.1 dailyheadlines.com  # fake
-127.0.0.1 dailyheadlines.net  # fake
-127.0.0.1 dailyken.com  # hate
-127.0.0.1 dailykos.com  # political //clickbait
-127.0.0.1 dailyleak.org  # parody //fake
-127.0.0.1 dailynewsbin.com  # bias //clickbait
-127.0.0.1 dailynewspolitic.com  # unknown
-127.0.0.1 dailyoccupation.com  # conspiracy //bias
-127.0.0.1 dailypolitics.info  # unknown
-127.0.0.1 dailypoliticsusa.com  # bias
-127.0.0.1 dailysignal.com  # bias
-127.0.0.1 dailysquib.co.uk  # satire
-127.0.0.1 dailystormer.com  # hate //conspiracy //bias
-127.0.0.1 dailytelegraph.com.au  # bias //rumor
-127.0.0.1 dailywire.com  # bias
-127.0.0.1 dandygoat.com  # satire
-127.0.0.1 darkmoon.me  # hate //bias
-127.0.0.1 darkpolitricks.com  # bias //conspiracy
-127.0.0.1 dataasylum.com  # conspiracy //junksci
-127.0.0.1 davejanda.com  # unreliable
-127.0.0.1 davidduke.com  # hate
-127.0.0.1 davidstockmanscontracorner.com  # political
-127.0.0.1 davidwolfe.com  # conspiracy
-127.0.0.1 dcclothesline.com  # conspiracy //junkscience //fake
-127.0.0.1 dcgazette.com  # fake //fake
-127.0.0.1 dcleaks.com  # unreliable
-127.0.0.1 deadlinelive.info  # political //conspiracy
-127.0.0.1 deadlyclear.wordpress.com  # bias //fake news
-127.0.0.1 debunkingskeptics.com  # bias //conspiracy
-127.0.0.1 defenddemocracy.press  # bias //political
-127.0.0.1 delectabledietofpics.net  # unknown
-127.0.0.1 dennismichaellynch.com  # political
-127.0.0.1 denverguardian.com  # fake
-127.0.0.1 departed.co  # fake
-127.0.0.1 der-postillon.com  # satire
-127.0.0.1 derfmagazine.com  # fake //satire
-127.0.0.1 dineal.com  # junksci
-127.0.0.1 direttanews.it  # clickbait
-127.0.0.1 disclose.tv  # clickbait //satire //conspiracy
-127.0.0.1 disclosuremedia.net  # conspiracy
-127.0.0.1 dissentmagazine.org  # political
-127.0.0.1 diversitychronicle.wordpress.com  # satire
-127.0.0.1 dollarvigilante.com  # bias
-127.0.0.1 donaldtrumpnews.co  # fake
-127.0.0.1 dont-tread-on.me  # conspiracy
-127.0.0.1 downtrend.com  # fake //satire
-127.0.0.1 dprogram.net  # unknown
-127.0.0.1 drrichswier.com  # hate //bias
-127.0.0.1 drudgereport.com  # political //bias
-127.0.0.1 drudgereport.com.co  # fake //fake
-127.0.0.1 duffleblog.com  # satire
-127.0.0.1 duhprogressive.com  # fake //satire
-127.0.0.1 dutchsinse.com  # conspiracy
+127.0.0.1 dailybuzzlive.com  #clickbait  #fake
+127.0.0.1 dailycaller.com  #political  #clickbait  #bias
+127.0.0.1 dailycurrant.com  #fake  #satire
+127.0.0.1 dailydiscord.com  #satire
+127.0.0.1 dailyheadlines.com  #fake
+127.0.0.1 dailyheadlines.net  #fake
+127.0.0.1 dailyken.com  #hate
+127.0.0.1 dailykos.com  #political  #clickbait
+127.0.0.1 dailyleak.org  #parody  #fake
+127.0.0.1 dailynewsbin.com  #bias  #clickbait
+127.0.0.1 dailynewspolitic.com  #unknown
+127.0.0.1 dailyoccupation.com  #conspiracy  #bias
+127.0.0.1 dailypolitics.info  #unknown
+127.0.0.1 dailypoliticsusa.com  #bias
+127.0.0.1 dailysignal.com  #bias
+127.0.0.1 dailysquib.co.uk  #satire
+127.0.0.1 dailystormer.com  #hate  #conspiracy  #bias
+127.0.0.1 dailytelegraph.com.au  #bias  #rumor
+127.0.0.1 dailywire.com  #bias
+127.0.0.1 dandygoat.com  #satire
+127.0.0.1 darkmoon.me  #hate  #bias
+127.0.0.1 darkpolitricks.com  #bias  #conspiracy
+127.0.0.1 dataasylum.com  #conspiracy  #junksci
+127.0.0.1 davejanda.com  #unreliable
+127.0.0.1 davidduke.com  #hate
+127.0.0.1 davidstockmanscontracorner.com  #political
+127.0.0.1 davidwolfe.com  #conspiracy
+127.0.0.1 dcclothesline.com  #conspiracy  #junkscience  #fake
+127.0.0.1 dcgazette.com  #fake  #fake
+127.0.0.1 dcleaks.com  #unreliable
+127.0.0.1 deadlinelive.info  #political  #conspiracy
+127.0.0.1 deadlyclear.wordpress.com  #bias  #fake news
+127.0.0.1 debunkingskeptics.com  #bias  #conspiracy
+127.0.0.1 defenddemocracy.press  #bias  #political
+127.0.0.1 delectabledietofpics.net  #unknown
+127.0.0.1 dennismichaellynch.com  #political
+127.0.0.1 denverguardian.com  #fake
+127.0.0.1 departed.co  #fake
+127.0.0.1 der-postillon.com  #satire
+127.0.0.1 derfmagazine.com  #fake  #satire
+127.0.0.1 dineal.com  #junksci
+127.0.0.1 direttanews.it  #clickbait
+127.0.0.1 disclose.tv  #clickbait  #satire  #conspiracy
+127.0.0.1 disclosuremedia.net  #conspiracy
+127.0.0.1 dissentmagazine.org  #political
+127.0.0.1 diversitychronicle.wordpress.com  #satire
+127.0.0.1 dollarvigilante.com  #bias
+127.0.0.1 donaldtrumpnews.co  #fake
+127.0.0.1 dont-tread-on.me  #conspiracy
+127.0.0.1 downtrend.com  #fake  #satire
+127.0.0.1 dprogram.net  #unknown
+127.0.0.1 drrichswier.com  #hate  #bias
+127.0.0.1 drudgereport.com  #political  #bias
+127.0.0.1 drudgereport.com.co  #fake  #fake
+127.0.0.1 duffleblog.com  #satire
+127.0.0.1 duhprogressive.com  #fake  #satire
+127.0.0.1 dutchsinse.com  #conspiracy
 127.0.0.1 e04.tv
-127.0.0.1 eaglerising.com  # bias //clickbait
-127.0.0.1 ebolahoax.com  # conspiracy
-127.0.0.1 economicnoise.com  # political //unreliable
-127.0.0.1 ecowatch.com  # political
-127.0.0.1 educate-yourself.org  # conspiracy //junksci
-127.0.0.1 electionnightgatekeepers.com  # conspiracy //unreliable
-127.0.0.1 elelephantintheroom.blogspot.com  # bias
-127.0.0.1 elitereaders.com  # clickbait
-127.0.0.1 elkoshary.com  # satire
-127.0.0.1 elmundotoday.com  # satire
-127.0.0.1 embols.com  # fake
-127.0.0.1 empireherald.com  # fake //satire
-127.0.0.1 empirenews.com  # fake
-127.0.0.1 empirenews.net  # fake //satire
-127.0.0.1 empiresports.co  # satire
-127.0.0.1 emptywheel.net  # political
-127.0.0.1 enabon.com  # fake
-127.0.0.1 endingthefed.com  # bias
-127.0.0.1 endoftheamericandream.com  # conspiracy //fake //political
-127.0.0.1 endtime.com  # bias //clickbait //political
-127.0.0.1 enduringvision.com  # fake //fake
-127.0.0.1 english.ruvr.ru  # unknown
-127.0.0.1 eutimes.net  # hate //conspiracy
-127.0.0.1 eutopia.buzz  # fake //satire //conspiracy
-127.0.0.1 everydayworldnews.com  # unknown
-127.0.0.1 everythingnewdaily.com  # unknown
-127.0.0.1 ewao.com  # junksci
-127.0.0.1 experimentalvaccines.org  # junksci //conspiracy
-127.0.0.1 expose1933.com  # conspiracy //hate
-127.0.0.1 express.co.uk  # rumor
-127.0.0.1 extraclubmagazine.com  # bias //clickbait //fake
-127.0.0.1 eyeopening.info  # conspiracy //junksci
-127.0.0.1 fakingnews.com  # fake //satire
-127.0.0.1 familysecuritymatters.org  # conspiracy //bias
-127.0.0.1 fantasticword.com  # unknown
-127.0.0.1 farmwars.info  # fake news //conspiracy
-127.0.0.1 federalistpress.com  # bias
-127.0.0.1 fellowshipoftheminds.com  # conspiracy //junksci
-127.0.0.1 filmsforaction.org  # political
-127.0.0.1 financialsurvivalnetwork.com  # unreliable //bias
-127.0.0.1 firearmscoalition.org  # bias //blog
-127.0.0.1 floridasunpost.com  # fake //satirical
-127.0.0.1 flyheight.com  # unknown
-127.0.0.1 fmobserver.com  # satire
-127.0.0.1 fognews.ru  # satire
-127.0.0.1 foodbabe.com  # junksci
-127.0.0.1 foreignpolicyjournal.com  # political
-127.0.0.1 fort-russ.com  # unknown
-127.0.0.1 fourwinds10.net  # conspiracy //junksci
-127.0.0.1 fprnradio.com  # clickbait //conspiracy //fake
-127.0.0.1 freakoutnation.com  # bias
-127.0.0.1 freebeacon.com  # bias
-127.0.0.1 freedomdaily.com  # fake
-127.0.0.1 freedomforceinternational.com  # conspiracy
-127.0.0.1 freedomoutpost.com  # conspiracy //bias
-127.0.0.1 freedomsphoenix.com  # bias //conspiracy
-127.0.0.1 freedomworks.org  # political
-127.0.0.1 freedomworldnews.com  # bias //unreliable
-127.0.0.1 freepatriot.org  # satire
-127.0.0.1 freewoodpost.com  # satire
-127.0.0.1 fridaymash.com  # satire
-127.0.0.1 fromthetrenchesworldreport.com  # conspiracy //junksci //bias
-127.0.0.1 frontpagemag.com  # bias //hate
-127.0.0.1 fusion.net  # political //reliable
-127.0.0.1 gaia.com  # conspiracy //junksci
-127.0.0.1 galacticconnection.com  # junksci
-127.0.0.1 gangstergovernment.com  # conspiracy //bias
-127.0.0.1 gatesofvienna.net  # hate //conspiracy
-127.0.0.1 geoengineeringwatch.org  # clickbait //junksci //conspiracy
-127.0.0.1 geopolmonitor.com  # political
-127.0.0.1 glaringhypocrisy.com  # hate //conspiracy
-127.0.0.1 globaleconomicanalysis.com  # unknown
-127.0.0.1 globalresearch.ca  # conspiracy //clickbait
-127.0.0.1 glossynews.com  # satire
-127.0.0.1 godlikeproductions.com  # conspiracy
-127.0.0.1 gomerblog.com  # satire
-127.0.0.1 goneleft.com  # fake
-127.0.0.1 gonzalolira.blogspot.com  # unknown
-127.0.0.1 gopthedailydose.com  # fake //conspiracy //bias
-127.0.0.1 govtslaves.info  # clickbait //conspiracy
-127.0.0.1 greanvillepost.com  # conspiracy
-127.0.0.1 greenmedinfo.com  # junksci
-127.0.0.1 guarda.one  # clickbait
-127.0.0.1 guardianlv.com  # political
-127.0.0.1 guccifer2.wordpress.com  # unreliable
-127.0.0.1 gulagbound.com  # bias //clickbait
-127.0.0.1 hangthebankers.com  # clickbait //conspiracy
-127.0.0.1 healthimpactnews.com  # junksci //bias
-127.0.0.1 healthnutnews.com  # junksci
-127.0.0.1 healthy-holistic-living.com  # junksci //clickbait
-127.0.0.1 heartland.org  # bias
-127.0.0.1 heatst.com  # clickbait //bias
-127.0.0.1 henrymakow.com  # conspiracy
-127.0.0.1 heresyblog.net  # bias //conspiracy //rumor
-127.0.0.1 heritage.org  # political
-127.0.0.1 holyobserver.com  # satire
-127.0.0.1 horowitzfreedomcenter.org  # bias
-127.0.0.1 humansarefree.com  # clickbait //conspiracy
-127.0.0.1 humortimes.com  # satire
-127.0.0.1 huzlers.com  # satire
-127.0.0.1 icr.org  # junksci
-127.0.0.1 ifyouonlynews.com  # unreliable //satire
-127.0.0.1 igrewupinusa.info  # unknown
-127.0.0.1 ihavethetruth.com  # bias //clickbait //fake
-127.0.0.1 ijr.com  # political //bias //unreliable
-127.0.0.1 ilcorriere.cloud  # fake
-127.0.0.1 illuminati-news.com  # conspiracy
-127.0.0.1 ilovemyfreedom.org  # bias //clickbait
-127.0.0.1 immediatesafety.org  # fake
-127.0.0.1 in5d.com  # junksci
-127.0.0.1 indiaarising.com  # clickbait //unreliable
-127.0.0.1 infiniteunknown.net  # conspiracy
-127.0.0.1 informationclearinghouse.info  # conspiracy //unreliable
-127.0.0.1 informetoday.com  # bias //unreliable
-127.0.0.1 infostormer.com  # fake //hate //conspiracy
-127.0.0.1 infowars.com  # clickbait //conspiracy
+127.0.0.1 eaglerising.com  #bias  #clickbait
+127.0.0.1 ebolahoax.com  #conspiracy
+127.0.0.1 economicnoise.com  #political  #unreliable
+127.0.0.1 ecowatch.com  #political
+127.0.0.1 educate-yourself.org  #conspiracy  #junksci
+127.0.0.1 electionnightgatekeepers.com  #conspiracy  #unreliable
+127.0.0.1 elelephantintheroom.blogspot.com  #bias
+127.0.0.1 elitereaders.com  #clickbait
+127.0.0.1 elkoshary.com  #satire
+127.0.0.1 elmundotoday.com  #satire
+127.0.0.1 embols.com  #fake
+127.0.0.1 empireherald.com  #fake  #satire
+127.0.0.1 empirenews.com  #fake
+127.0.0.1 empirenews.net  #fake  #satire
+127.0.0.1 empiresports.co  #satire
+127.0.0.1 emptywheel.net  #political
+127.0.0.1 enabon.com  #fake
+127.0.0.1 endingthefed.com  #bias
+127.0.0.1 endoftheamericandream.com  #conspiracy  #fake  #political
+127.0.0.1 endtime.com  #bias  #clickbait  #political
+127.0.0.1 enduringvision.com  #fake  #fake
+127.0.0.1 english.ruvr.ru  #unknown
+127.0.0.1 eutimes.net  #hate  #conspiracy
+127.0.0.1 eutopia.buzz  #fake  #satire  #conspiracy
+127.0.0.1 everydayworldnews.com  #unknown
+127.0.0.1 everythingnewdaily.com  #unknown
+127.0.0.1 ewao.com  #junksci
+127.0.0.1 experimentalvaccines.org  #junksci  #conspiracy
+127.0.0.1 expose1933.com  #conspiracy  #hate
+127.0.0.1 express.co.uk  #rumor
+127.0.0.1 extraclubmagazine.com  #bias  #clickbait  #fake
+127.0.0.1 eyeopening.info  #conspiracy  #junksci
+127.0.0.1 fakingnews.com  #fake  #satire
+127.0.0.1 familysecuritymatters.org  #conspiracy  #bias
+127.0.0.1 fantasticword.com  #unknown
+127.0.0.1 farmwars.info  #fake news  #conspiracy
+127.0.0.1 federalistpress.com  #bias
+127.0.0.1 fellowshipoftheminds.com  #conspiracy  #junksci
+127.0.0.1 filmsforaction.org  #political
+127.0.0.1 financialsurvivalnetwork.com  #unreliable  #bias
+127.0.0.1 firearmscoalition.org  #bias  #blog
+127.0.0.1 floridasunpost.com  #fake  #satirical
+127.0.0.1 flyheight.com  #unknown
+127.0.0.1 fmobserver.com  #satire
+127.0.0.1 fognews.ru  #satire
+127.0.0.1 foodbabe.com  #junksci
+127.0.0.1 foreignpolicyjournal.com  #political
+127.0.0.1 fort-russ.com  #unknown
+127.0.0.1 fourwinds10.net  #conspiracy  #junksci
+127.0.0.1 fprnradio.com  #clickbait  #conspiracy  #fake
+127.0.0.1 freakoutnation.com  #bias
+127.0.0.1 freebeacon.com  #bias
+127.0.0.1 freedomdaily.com  #fake
+127.0.0.1 freedomforceinternational.com  #conspiracy
+127.0.0.1 freedomoutpost.com  #conspiracy  #bias
+127.0.0.1 freedomsphoenix.com  #bias  #conspiracy
+127.0.0.1 freedomworks.org  #political
+127.0.0.1 freedomworldnews.com  #bias  #unreliable
+127.0.0.1 freepatriot.org  #satire
+127.0.0.1 freewoodpost.com  #satire
+127.0.0.1 fridaymash.com  #satire
+127.0.0.1 fromthetrenchesworldreport.com  #conspiracy  #junksci  #bias
+127.0.0.1 frontpagemag.com  #bias  #hate
+127.0.0.1 fusion.net  #political  #reliable
+127.0.0.1 gaia.com  #conspiracy  #junksci
+127.0.0.1 galacticconnection.com  #junksci
+127.0.0.1 gangstergovernment.com  #conspiracy  #bias
+127.0.0.1 gatesofvienna.net  #hate  #conspiracy
+127.0.0.1 geoengineeringwatch.org  #clickbait  #junksci  #conspiracy
+127.0.0.1 geopolmonitor.com  #political
+127.0.0.1 glaringhypocrisy.com  #hate  #conspiracy
+127.0.0.1 globaleconomicanalysis.com  #unknown
+127.0.0.1 globalresearch.ca  #conspiracy  #clickbait
+127.0.0.1 glossynews.com  #satire
+127.0.0.1 godlikeproductions.com  #conspiracy
+127.0.0.1 gomerblog.com  #satire
+127.0.0.1 goneleft.com  #fake
+127.0.0.1 gonzalolira.blogspot.com  #unknown
+127.0.0.1 gopthedailydose.com  #fake  #conspiracy  #bias
+127.0.0.1 govtslaves.info  #clickbait  #conspiracy
+127.0.0.1 greanvillepost.com  #conspiracy
+127.0.0.1 greenmedinfo.com  #junksci
+127.0.0.1 guarda.one  #clickbait
+127.0.0.1 guardianlv.com  #political
+127.0.0.1 guccifer2.wordpress.com  #unreliable
+127.0.0.1 gulagbound.com  #bias  #clickbait
+127.0.0.1 hangthebankers.com  #clickbait  #conspiracy
+127.0.0.1 healthimpactnews.com  #junksci  #bias
+127.0.0.1 healthnutnews.com  #junksci
+127.0.0.1 healthy-holistic-living.com  #junksci  #clickbait
+127.0.0.1 heartland.org  #bias
+127.0.0.1 heatst.com  #clickbait  #bias
+127.0.0.1 henrymakow.com  #conspiracy
+127.0.0.1 heresyblog.net  #bias  #conspiracy  #rumor
+127.0.0.1 heritage.org  #political
+127.0.0.1 holyobserver.com  #satire
+127.0.0.1 horowitzfreedomcenter.org  #bias
+127.0.0.1 humansarefree.com  #clickbait  #conspiracy
+127.0.0.1 humortimes.com  #satire
+127.0.0.1 huzlers.com  #satire
+127.0.0.1 icr.org  #junksci
+127.0.0.1 ifyouonlynews.com  #unreliable  #satire
+127.0.0.1 igrewupinusa.info  #unknown
+127.0.0.1 ihavethetruth.com  #bias  #clickbait  #fake
+127.0.0.1 ijr.com  #political  #bias  #unreliable
+127.0.0.1 ilcorriere.cloud  #fake
+127.0.0.1 illuminati-news.com  #conspiracy
+127.0.0.1 ilovemyfreedom.org  #bias  #clickbait
+127.0.0.1 immediatesafety.org  #fake
+127.0.0.1 in5d.com  #junksci
+127.0.0.1 indiaarising.com  #clickbait  #unreliable
+127.0.0.1 infiniteunknown.net  #conspiracy
+127.0.0.1 informationclearinghouse.info  #conspiracy  #unreliable
+127.0.0.1 informetoday.com  #bias  #unreliable
+127.0.0.1 infostormer.com  #fake  #hate  #conspiracy
+127.0.0.1 infowars.com  #clickbait  #conspiracy
 127.0.0.1 inquisitor.com
-127.0.0.1 instaworldnews.com  # bias
-127.0.0.1 intellihub.com  # clickbait //conspiracy //unreliable
-127.0.0.1 intrendtoday.com  # fake //clickbait
-127.0.0.1 intrepidreport.com  # bias
-127.0.0.1 investmentresearchdynamics.com  # conspiracy
-127.0.0.1 investmentwatchblog.com  # bias //fake
-127.0.0.1 ironictimes.com  # satire
-127.0.0.1 islamicanews.com  # satire
-127.0.0.1 itaglive.com  # fake
-127.0.0.1 itccs.org  # conspiracy
-127.0.0.1 itmakessenseblog.com  # fake
-127.0.0.1 iwanttoexplore.com  # fake
-127.0.0.1 jackpineradicals.com  # political
-127.0.0.1 jacobinmag.com  # political
-127.0.0.1 jamesrgrangerjr.com  # bias
-127.0.0.1 jesus-is-savior.com  # conspiracy
-127.0.0.1 jewsnews.co.il  # unreliable //bias //clickbait
-127.0.0.1 jihadwatch.org  # conspiracy //hate
-127.0.0.1 johnnyrobish.com  # satire
-127.0.0.1 jonesreport.com  # clickbait //conspiracy
-127.0.0.1 journal-neo.org  # bias
-127.0.0.1 judicialwatch.org  # political
-127.0.0.1 katehon.com  # bias
-127.0.0.1 katehon.org  # unknown
-127.0.0.1 kauilapele.wordpress.com  # unknown
-127.0.0.1 kingworldnews.com  # unknown
-127.0.0.1 knowledgeoftoday.org  # conspiracy
-127.0.0.1 krbcnews.com  # fake
-127.0.0.1 landoverbaptist.org  # satire
-127.0.0.1 lasera.altervista  # fake
-127.0.0.1 learnprogress.org  # fake //bias
-127.0.0.1 legorafi.fr  # unknown
-127.0.0.1 lewrockwell.com  # bias //unreliable //political //clickbait
-127.0.0.1 liberalamerica.org  # clickbait //bias
-127.0.0.1 liberalbias.com  # satire
-127.0.0.1 liberaldarkness.com  # satire //fake
-127.0.0.1 libertyblitzkrieg.com  # fake
-127.0.0.1 libertyfederation.com  # hate
-127.0.0.1 libertymovementradio.com  # conspiracy
-127.0.0.1 libertynews.com  # unreliable //bias
-127.0.0.1 libertytalk.fm  # clickbait //conspiracy
-127.0.0.1 libertyunyielding.com  # bias
-127.0.0.1 libertyvideos.org  # clickbait //conspiracy
-127.0.0.1 libertywritersnews.com  # clickbait //bias //unreliable
-127.0.0.1 lifeandabout.com  # bias
-127.0.0.1 lifenews.com  # bias //clickbait
-127.0.0.1 lifeprevention.com  # junksci
-127.0.0.1 lifesitenews.com  # clickbait //bias
-127.0.0.1 lifezette.com  # clickbait
-127.0.0.1 lightlybraisedturnip.com  # unknown
-127.0.0.1 liveactionnews.org  # bias
-127.0.0.1 livefreelivenatural.com  # unknown
-127.0.0.1 livevote.com  # clickbait
-127.0.0.1 loanpride.com  # rumor //clickbait
-127.0.0.1 lovethispic.com  # clickbait //junksci
-127.0.0.1 lushforlife.com  # satire
-127.0.0.1 mad-yet.blogspot.com  # unreliable
-127.0.0.1 madpatriots.com  # unreliable //clickbait
-127.0.0.1 madworldnews.com  # unreliable //clickbait //hate
-127.0.0.1 magafeed.com  # rumor //bias
-127.0.0.1 makeamericagreattoday.com  # bias //fake
-127.0.0.1 meanlefthook.com  # bias //clickbait
-127.0.0.1 mediamass.net  # fake //fake
-127.0.0.1 mediazone.news  # rumor //unreliable
-127.0.0.1 megafreshnews.com  # rumor
-127.0.0.1 megynkelly.us  # clickbait //fake
-127.0.0.1 militianews.com  # conspiracy //bias //hate
-127.0.0.1 mintpressnews.com  # political
-127.0.0.1 molonlabemedia.com  # bias //conspiracy
-127.0.0.1 moonofalabama.org  # bias
-127.0.0.1 morningledger.com  # unreliable //conspiracy
-127.0.0.1 morningnewsusa.com  # unreliable
-127.0.0.1 mpidailymagazine.com  # fake //bias
-127.0.0.1 mrc.org  # political //bias
-127.0.0.1 mrconservative.com  # fake //satire
+127.0.0.1 instaworldnews.com  #bias
+127.0.0.1 intellihub.com  #clickbait  #conspiracy  #unreliable
+127.0.0.1 intrendtoday.com  #fake  #clickbait
+127.0.0.1 intrepidreport.com  #bias
+127.0.0.1 investmentresearchdynamics.com  #conspiracy
+127.0.0.1 investmentwatchblog.com  #bias  #fake
+127.0.0.1 ironictimes.com  #satire
+127.0.0.1 islamicanews.com  #satire
+127.0.0.1 itaglive.com  #fake
+127.0.0.1 itccs.org  #conspiracy
+127.0.0.1 itmakessenseblog.com  #fake
+127.0.0.1 iwanttoexplore.com  #fake
+127.0.0.1 jackpineradicals.com  #political
+127.0.0.1 jacobinmag.com  #political
+127.0.0.1 jamesrgrangerjr.com  #bias
+127.0.0.1 jesus-is-savior.com  #conspiracy
+127.0.0.1 jewsnews.co.il  #unreliable  #bias  #clickbait
+127.0.0.1 jihadwatch.org  #conspiracy  #hate
+127.0.0.1 johnnyrobish.com  #satire
+127.0.0.1 jonesreport.com  #clickbait  #conspiracy
+127.0.0.1 journal-neo.org  #bias
+127.0.0.1 judicialwatch.org  #political
+127.0.0.1 katehon.com  #bias
+127.0.0.1 katehon.org  #unknown
+127.0.0.1 kauilapele.wordpress.com  #unknown
+127.0.0.1 kingworldnews.com  #unknown
+127.0.0.1 knowledgeoftoday.org  #conspiracy
+127.0.0.1 krbcnews.com  #fake
+127.0.0.1 landoverbaptist.org  #satire
+127.0.0.1 lasera.altervista  #fake
+127.0.0.1 learnprogress.org  #fake  #bias
+127.0.0.1 legorafi.fr  #unknown
+127.0.0.1 lewrockwell.com  #bias  #unreliable  #political  #clickbait
+127.0.0.1 liberalamerica.org  #clickbait  #bias
+127.0.0.1 liberalbias.com  #satire
+127.0.0.1 liberaldarkness.com  #satire  #fake
+127.0.0.1 libertyblitzkrieg.com  #fake
+127.0.0.1 libertyfederation.com  #hate
+127.0.0.1 libertymovementradio.com  #conspiracy
+127.0.0.1 libertynews.com  #unreliable  #bias
+127.0.0.1 libertytalk.fm  #clickbait  #conspiracy
+127.0.0.1 libertyunyielding.com  #bias
+127.0.0.1 libertyvideos.org  #clickbait  #conspiracy
+127.0.0.1 libertywritersnews.com  #clickbait  #bias  #unreliable
+127.0.0.1 lifeandabout.com  #bias
+127.0.0.1 lifenews.com  #bias  #clickbait
+127.0.0.1 lifeprevention.com  #junksci
+127.0.0.1 lifesitenews.com  #clickbait  #bias
+127.0.0.1 lifezette.com  #clickbait
+127.0.0.1 lightlybraisedturnip.com  #unknown
+127.0.0.1 liveactionnews.org  #bias
+127.0.0.1 livefreelivenatural.com  #unknown
+127.0.0.1 livevote.com  #clickbait
+127.0.0.1 loanpride.com  #rumor  #clickbait
+127.0.0.1 lovethispic.com  #clickbait  #junksci
+127.0.0.1 lushforlife.com  #satire
+127.0.0.1 mad-yet.blogspot.com  #unreliable
+127.0.0.1 madpatriots.com  #unreliable  #clickbait
+127.0.0.1 madworldnews.com  #unreliable  #clickbait  #hate
+127.0.0.1 magafeed.com  #rumor  #bias
+127.0.0.1 makeamericagreattoday.com  #bias  #fake
+127.0.0.1 meanlefthook.com  #bias  #clickbait
+127.0.0.1 mediamass.net  #fake  #fake
+127.0.0.1 mediazone.news  #rumor  #unreliable
+127.0.0.1 megafreshnews.com  #rumor
+127.0.0.1 megynkelly.us  #clickbait  #fake
+127.0.0.1 militianews.com  #conspiracy  #bias  #hate
+127.0.0.1 mintpressnews.com  #political
+127.0.0.1 molonlabemedia.com  #bias  #conspiracy
+127.0.0.1 moonofalabama.org  #bias
+127.0.0.1 morningledger.com  #unreliable  #conspiracy
+127.0.0.1 morningnewsusa.com  #unreliable
+127.0.0.1 mpidailymagazine.com  #fake  #bias
+127.0.0.1 mrc.org  #political  #bias
+127.0.0.1 mrconservative.com  #fake  #satire
 127.0.0.1 msnbc.com.co
-127.0.0.1 msnbc.website  # fake //fake
-127.0.0.1 mydailyrelaxation.com  # unknown
-127.0.0.1 myfreshnews.com  # fake //bias
-127.0.0.1 myzonetoday.com  # fake //bias
-127.0.0.1 nahadaily.com  # satire
-127.0.0.1 nakedcapitalism.com  # political
-127.0.0.1 nasamoonhoax.com  # conspiracy
-127.0.0.1 nationalreport.net  # fake //satire
-127.0.0.1 nationalreview.com  # political
-127.0.0.1 nationalufocenter.com  # conspiracy
-127.0.0.1 nationindistress.weebly.com  # conspiracy
-127.0.0.1 nationonenews.com  # fake //conspiracy
-127.0.0.1 naturalblaze.com  # junksci //conspiracy
-127.0.0.1 naturalnews.com  # clickbait //junksci //conspiracy
-127.0.0.1 naturalnewsblogs.com  # junksci
+127.0.0.1 msnbc.website  #fake  #fake
+127.0.0.1 mydailyrelaxation.com  #unknown
+127.0.0.1 myfreshnews.com  #fake  #bias
+127.0.0.1 myzonetoday.com  #fake  #bias
+127.0.0.1 nahadaily.com  #satire
+127.0.0.1 nakedcapitalism.com  #political
+127.0.0.1 nasamoonhoax.com  #conspiracy
+127.0.0.1 nationalreport.net  #fake  #satire
+127.0.0.1 nationalreview.com  #political
+127.0.0.1 nationalufocenter.com  #conspiracy
+127.0.0.1 nationindistress.weebly.com  #conspiracy
+127.0.0.1 nationonenews.com  #fake  #conspiracy
+127.0.0.1 naturalblaze.com  #junksci  #conspiracy
+127.0.0.1 naturalnews.com  #clickbait  #junksci  #conspiracy
+127.0.0.1 naturalnewsblogs.com  #junksci
 127.0.0.1 nbc-news.net
-127.0.0.1 nbc.com.co  # fake
-127.0.0.1 nbcpolitics.org  # unknown
-127.0.0.1 nbcpoll.com  # unknown
-127.0.0.1 ncscooper.com  # satire
-127.0.0.1 neonnettle.com  # conspiracy //bias //fake
-127.0.0.1 nevo.news  # unreliable //bias
-127.0.0.1 newcenturytimes.com  # unreliable //bias
-127.0.0.1 newcoldwar.org  # political
-127.0.0.1 newnotizie.it  # clickbait
-127.0.0.1 news-hound.com  # fake //unknown
-127.0.0.1 news-hound.org  # unknown
-127.0.0.1 news4ktla.com  # fake //satire
-127.0.0.1 newsbbc.net  # fake
-127.0.0.1 newsbiscuit.com  # fake //satire
-127.0.0.1 newsbreakers.org  # satire
-127.0.0.1 newsbuster.com  # unknown
+127.0.0.1 nbc.com.co  #fake
+127.0.0.1 nbcpolitics.org  #unknown
+127.0.0.1 nbcpoll.com  #unknown
+127.0.0.1 ncscooper.com  #satire
+127.0.0.1 neonnettle.com  #conspiracy  #bias  #fake
+127.0.0.1 nevo.news  #unreliable  #bias
+127.0.0.1 newcenturytimes.com  #unreliable  #bias
+127.0.0.1 newcoldwar.org  #political
+127.0.0.1 newnotizie.it  #clickbait
+127.0.0.1 news-hound.com  #fake  #unknown
+127.0.0.1 news-hound.org  #unknown
+127.0.0.1 news4ktla.com  #fake  #satire
+127.0.0.1 newsbbc.net  #fake
+127.0.0.1 newsbiscuit.com  #fake  #satire
+127.0.0.1 newsbreakers.org  #satire
+127.0.0.1 newsbuster.com  #unknown
 127.0.0.1 newsbuzzdaily.com
-127.0.0.1 newscenterusa.com  # unknown
-127.0.0.1 newscorpse.com  # political
-127.0.0.1 newsexaminer.net  # fake //satire
-127.0.0.1 newsfrompolitics.com  # fake
-127.0.0.1 newslo.com  # fake
-127.0.0.1 newslogue.com  # bias //fake
-127.0.0.1 newsmax.com  # unreliable //bias
-127.0.0.1 newsmutiny.com  # fake //satire
-127.0.0.1 newsninja2012.com  # bias
-127.0.0.1 newsopening.com  # unknown
-127.0.0.1 newstarget.com  # conspiracy
-127.0.0.1 newsthump.com  # satire
-127.0.0.1 newstoad.net  # satire
-127.0.0.1 newswatch28.com  # fake
-127.0.0.1 newswatch33.com  # fake
-127.0.0.1 newswire-24.com  # clickbait //rumor //unreliable
-127.0.0.1 newswithviews.com  # fake //conspiracy
+127.0.0.1 newscenterusa.com  #unknown
+127.0.0.1 newscorpse.com  #political
+127.0.0.1 newsexaminer.net  #fake  #satire
+127.0.0.1 newsfrompolitics.com  #fake
+127.0.0.1 newslo.com  #fake
+127.0.0.1 newslogue.com  #bias  #fake
+127.0.0.1 newsmax.com  #unreliable  #bias
+127.0.0.1 newsmutiny.com  #fake  #satire
+127.0.0.1 newsninja2012.com  #bias
+127.0.0.1 newsopening.com  #unknown
+127.0.0.1 newstarget.com  #conspiracy
+127.0.0.1 newsthump.com  #satire
+127.0.0.1 newstoad.net  #satire
+127.0.0.1 newswatch28.com  #fake
+127.0.0.1 newswatch33.com  #fake
+127.0.0.1 newswire-24.com  #clickbait  #rumor  #unreliable
+127.0.0.1 newswithviews.com  #fake  #conspiracy
 127.0.0.1 newyorker.comhumorborowitz-report
-127.0.0.1 nodisinfo.com  # clickbait //conspiracy //unreliable
-127.0.0.1 nomorefakenews.com  # conspiracy
-127.0.0.1 northcrane.com  # unreliable
-127.0.0.1 notallowedto.com  # clickbait //fake
-127.0.0.1 notime4bull.com  # unknown
-127.0.0.1 now8news.com  # fake
-127.0.0.1 nowtheendbegins.com  # clickbait //conspiracy
-127.0.0.1 npiamerica.org  # hate //bias
-127.0.0.1 nutritionalanarchy.com  # unreliable
-127.0.0.1 nutritionfacts.org  # reliable
-127.0.0.1 nymeta.co  # clickbait //satire
-127.0.0.1 nyuzer.com  # unknown
-127.0.0.1 oann.com  # political //reliable
-127.0.0.1 oathkeepers.org  # bias
-127.0.0.1 objectiveministries.org  # satire
-127.0.0.1 observatorial.com  # unknown
-127.0.0.1 observer.com  # political
-127.0.0.1 occupy.com  # political
-127.0.0.1 occupydemocrats.com  # clickbait //bias //unreliable
-127.0.0.1 occupyliberals.com  # bias //clickbait
-127.0.0.1 odgossip.com  # unknown
-127.0.0.1 off-guardian.org  # bias //conspiracy
-127.0.0.1 offgridsurvival.com  # conspiracy //bias
-127.0.0.1 oftwominds.com  # bias //conspiracy
-127.0.0.1 oilgeopolitics.net  # conspiracy
-127.0.0.1 onlineconservativepress.com  # fake //conspiracy //bias
-127.0.0.1 opednews.com  # unknown
-127.0.0.1 openmindmagazine.com  # bias //conspiracy
+127.0.0.1 nodisinfo.com  #clickbait  #conspiracy  #unreliable
+127.0.0.1 nomorefakenews.com  #conspiracy
+127.0.0.1 northcrane.com  #unreliable
+127.0.0.1 notallowedto.com  #clickbait  #fake
+127.0.0.1 notime4bull.com  #unknown
+127.0.0.1 now8news.com  #fake
+127.0.0.1 nowtheendbegins.com  #clickbait  #conspiracy
+127.0.0.1 npiamerica.org  #hate  #bias
+127.0.0.1 nutritionalanarchy.com  #unreliable
+127.0.0.1 nutritionfacts.org  #reliable
+127.0.0.1 nymeta.co  #clickbait  #satire
+127.0.0.1 nyuzer.com  #unknown
+127.0.0.1 oann.com  #political  #reliable
+127.0.0.1 oathkeepers.org  #bias
+127.0.0.1 objectiveministries.org  #satire
+127.0.0.1 observatorial.com  #unknown
+127.0.0.1 observer.com  #political
+127.0.0.1 occupy.com  #political
+127.0.0.1 occupydemocrats.com  #clickbait  #bias  #unreliable
+127.0.0.1 occupyliberals.com  #bias  #clickbait
+127.0.0.1 odgossip.com  #unknown
+127.0.0.1 off-guardian.org  #bias  #conspiracy
+127.0.0.1 offgridsurvival.com  #conspiracy  #bias
+127.0.0.1 oftwominds.com  #bias  #conspiracy
+127.0.0.1 oilgeopolitics.net  #conspiracy
+127.0.0.1 onlineconservativepress.com  #fake  #conspiracy  #bias
+127.0.0.1 opednews.com  #unknown
+127.0.0.1 openmindmagazine.com  #bias  #conspiracy
 127.0.0.1 opposingviews.com
-127.0.0.1 orientalreview.org  # bias //conspiracy
-127.0.0.1 other98.com  # clickbait //bias //unreliable
-127.0.0.1 pakalertpress.com  # clickbait //fake
-127.0.0.1 palmerreport.com  # bias
-127.0.0.1 pamelageller.com  # conspiracy //fake //bias
-127.0.0.1 patdollar.com  # bias //clickbait
-127.0.0.1 patriotarchives.blogspot.com  # unknown
-127.0.0.1 patriotchronicle.com  # bias //clickbait
-127.0.0.1 patriotnewsdaily.com  # bias //satire
-127.0.0.1 patriotpost.us  # bias
-127.0.0.1 patriotrising.com  # bias //conspiracy
-127.0.0.1 patriotupdate.com  # bias //conspiracy
-127.0.0.1 paulcraigroberts.org  # bias //conspiracy
+127.0.0.1 orientalreview.org  #bias  #conspiracy
+127.0.0.1 other98.com  #clickbait  #bias  #unreliable
+127.0.0.1 pakalertpress.com  #clickbait  #fake
+127.0.0.1 palmerreport.com  #bias
+127.0.0.1 pamelageller.com  #conspiracy  #fake  #bias
+127.0.0.1 patdollar.com  #bias  #clickbait
+127.0.0.1 patriotarchives.blogspot.com  #unknown
+127.0.0.1 patriotchronicle.com  #bias  #clickbait
+127.0.0.1 patriotnewsdaily.com  #bias  #satire
+127.0.0.1 patriotpost.us  #bias
+127.0.0.1 patriotrising.com  #bias  #conspiracy
+127.0.0.1 patriotupdate.com  #bias  #conspiracy
+127.0.0.1 paulcraigroberts.org  #bias  #conspiracy
 127.0.0.1 pet01.tv
-127.0.0.1 pjmedia.com  # political //bias
-127.0.0.1 platosguns.com  # bias //conspiracy
-127.0.0.1 policestateusa.com  # unknown
-127.0.0.1 policyreview.info  # unknown
-127.0.0.1 politcalpiehole.com  # unknown
-127.0.0.1 politicalblindspot.com  # clickbait //conspiracy //junksci
-127.0.0.1 politicalcult.com  # bias //clickbait //conspiracy
-127.0.0.1 politicalears.com  # fake //unreliable //clickbait
-127.0.0.1 politicalo.com  # fake
-127.0.0.1 politicalpiehole.com  # unknown
-127.0.0.1 politicalsitenews.com  # fake
-127.0.0.1 politicaltimes.org  # unknown
-127.0.0.1 politicaltracker.com  # unknown
-127.0.0.1 politicalupdator.com  # fake //clickbait //bias
-127.0.0.1 politicops.com  # satire //fake
-127.0.0.1 politicot.com  # satire //fake
-127.0.0.1 politicsbreaking.com  # unknown
-127.0.0.1 politicsinformation.com  # unknown
-127.0.0.1 politicsinfotoday.com  # unknown
-127.0.0.1 politicsintheusa.com  # unreliable //bias
-127.0.0.1 politicsinusa.com  # unknown
-127.0.0.1 politicususa.com  # clickbait //unreliable
-127.0.0.1 pollhype.com  # rumor //clickbait //bias
-127.0.0.1 powerlineblog.com  # unknown
-127.0.0.1 powerpoliticians.com  # unreliable
-127.0.0.1 pravda.ru  # bias //rumor //conspiracy
-127.0.0.1 pravdareport.com  # bias //rumor //conspiracy
-127.0.0.1 prepperwebsite.com  # conspiracy //fake
-127.0.0.1 presidentialvoting2016.com  # political //bias //unreliable
-127.0.0.1 press24.us  # unknown
-127.0.0.1 presstv.com  # bias //unreliable
-127.0.0.1 presstv.ir  # bias //unreliable
-127.0.0.1 prisonplanet.com  # clickbait //conspiracy //conspiracy
-127.0.0.1 prisonplanet.tv  # clickbait //conspiracy
-127.0.0.1 private-eye.co.uk  # fake
-127.0.0.1 prntly.com  # fake
-127.0.0.1 proamericanews.com  # unknown
-127.0.0.1 progressivestoday.com  # unknown
-127.0.0.1 projectveritas.com  # bias //unreliable //political
-127.0.0.1 proudcons.com  # fake //bias
-127.0.0.1 proudemocrat.com  # political
-127.0.0.1 publicintelligence.net  # unknown
-127.0.0.1 qpolitical.com  # bias //clickbait //junksci
-127.0.0.1 radio.goldseek.com  # unknown
-127.0.0.1 randpaulreview.com  # unknown
-127.0.0.1 rawforbeauty.com  # junksci
-127.0.0.1 rawstory.com  # political //clickbait
-127.0.0.1 rawws.com  # unknown
-127.0.0.1 rbth.com  # unknown
-127.0.0.1 react365.com  # fake
-127.0.0.1 readconservatives.news  # bias //fake //clickbait
-127.0.0.1 readynutrition.com  # unknown //conspiracy
-127.0.0.1 reagancoalition.com  # bias //fake //clickbait
-127.0.0.1 realfarmacy.com  # clickbait //junksci //conspiracy
-127.0.0.1 realnewsrightnow.com  # fake //fake //satire
-127.0.0.1 realplanetnews.com  # junksci
-127.0.0.1 realprogress.online  # unknown
-127.0.0.1 realtimepolitics.com  # bias //unreliable
-127.0.0.1 redflagnews.com  # bias //conspiracy //unreliable //clickbait
-127.0.0.1 redicecreations.com  # unknown
-127.0.0.1 redstate.com  # political //clickbait
-127.0.0.1 redstatewatcher.com  # bias //clickbait
-127.0.0.1 reductress.com  # satire
-127.0.0.1 regated.com  # bias
-127.0.0.1 remedydaily.com  # clickbait
-127.0.0.1 rense.com  # conspiracy //junksci
+127.0.0.1 pjmedia.com  #political  #bias
+127.0.0.1 platosguns.com  #bias  #conspiracy
+127.0.0.1 policestateusa.com  #unknown
+127.0.0.1 policyreview.info  #unknown
+127.0.0.1 politcalpiehole.com  #unknown
+127.0.0.1 politicalblindspot.com  #clickbait  #conspiracy  #junksci
+127.0.0.1 politicalcult.com  #bias  #clickbait  #conspiracy
+127.0.0.1 politicalears.com  #fake  #unreliable  #clickbait
+127.0.0.1 politicalo.com  #fake
+127.0.0.1 politicalpiehole.com  #unknown
+127.0.0.1 politicalsitenews.com  #fake
+127.0.0.1 politicaltimes.org  #unknown
+127.0.0.1 politicaltracker.com  #unknown
+127.0.0.1 politicalupdator.com  #fake  #clickbait  #bias
+127.0.0.1 politicops.com  #satire  #fake
+127.0.0.1 politicot.com  #satire  #fake
+127.0.0.1 politicsbreaking.com  #unknown
+127.0.0.1 politicsinformation.com  #unknown
+127.0.0.1 politicsinfotoday.com  #unknown
+127.0.0.1 politicsintheusa.com  #unreliable  #bias
+127.0.0.1 politicsinusa.com  #unknown
+127.0.0.1 politicususa.com  #clickbait  #unreliable
+127.0.0.1 pollhype.com  #rumor  #clickbait  #bias
+127.0.0.1 powerlineblog.com  #unknown
+127.0.0.1 powerpoliticians.com  #unreliable
+127.0.0.1 pravda.ru  #bias  #rumor  #conspiracy
+127.0.0.1 pravdareport.com  #bias  #rumor  #conspiracy
+127.0.0.1 prepperwebsite.com  #conspiracy  #fake
+127.0.0.1 presidentialvoting2016.com  #political  #bias  #unreliable
+127.0.0.1 press24.us  #unknown
+127.0.0.1 presstv.com  #bias  #unreliable
+127.0.0.1 presstv.ir  #bias  #unreliable
+127.0.0.1 prisonplanet.com  #clickbait  #conspiracy  #conspiracy
+127.0.0.1 prisonplanet.tv  #clickbait  #conspiracy
+127.0.0.1 private-eye.co.uk  #fake
+127.0.0.1 prntly.com  #fake
+127.0.0.1 proamericanews.com  #unknown
+127.0.0.1 progressivestoday.com  #unknown
+127.0.0.1 projectveritas.com  #bias  #unreliable  #political
+127.0.0.1 proudcons.com  #fake  #bias
+127.0.0.1 proudemocrat.com  #political
+127.0.0.1 publicintelligence.net  #unknown
+127.0.0.1 qpolitical.com  #bias  #clickbait  #junksci
+127.0.0.1 radio.goldseek.com  #unknown
+127.0.0.1 randpaulreview.com  #unknown
+127.0.0.1 rawforbeauty.com  #junksci
+127.0.0.1 rawstory.com  #political  #clickbait
+127.0.0.1 rawws.com  #unknown
+127.0.0.1 rbth.com  #unknown
+127.0.0.1 react365.com  #fake
+127.0.0.1 readconservatives.news  #bias  #fake  #clickbait
+127.0.0.1 readynutrition.com  #unknown  #conspiracy
+127.0.0.1 reagancoalition.com  #bias  #fake  #clickbait
+127.0.0.1 realfarmacy.com  #clickbait  #junksci  #conspiracy
+127.0.0.1 realnewsrightnow.com  #fake  #fake  #satire
+127.0.0.1 realplanetnews.com  #junksci
+127.0.0.1 realprogress.online  #unknown
+127.0.0.1 realtimepolitics.com  #bias  #unreliable
+127.0.0.1 redflagnews.com  #bias  #conspiracy  #unreliable  #clickbait
+127.0.0.1 redicecreations.com  #unknown
+127.0.0.1 redstate.com  #political  #clickbait
+127.0.0.1 redstatewatcher.com  #bias  #clickbait
+127.0.0.1 reductress.com  #satire
+127.0.0.1 regated.com  #bias
+127.0.0.1 remedydaily.com  #clickbait
+127.0.0.1 rense.com  #conspiracy  #junksci
 127.0.0.1 reporter.bz
-127.0.0.1 resistancereport.com  # political //unreliable
-127.0.0.1 responsibletechnology.org  # junksci
-127.0.0.1 returnofkings.com  # hate
-127.0.0.1 revolutions2040.com  # junksci //clickbait
-127.0.0.1 rhotv.com  # fake
-127.0.0.1 rickackerman.com  # unknown
-127.0.0.1 rickwells.us  # fake //conspiracy
-127.0.0.1 rightalert.com  # bias //unreliable
-127.0.0.1 righton.com  # unknown
-127.0.0.1 rightsidenews.com  # unknown
-127.0.0.1 rightwingnews.com  # bias //unreliable
-127.0.0.1 rilenews.com  # fake //fake //satire
-127.0.0.1 rinf.com  # political
-127.0.0.1 robadapazzi.com  # clickbait
-127.0.0.1 rockcitytimes.com  # satire
-127.0.0.1 ronpaulinstitute.org  # political
-127.0.0.1 rt.com  # state
-127.0.0.1 rumormillnews.com  # conspiracy //junksci //rumor
-127.0.0.1 runtogold.com  # unknown
-127.0.0.1 ruptly.tv  # political
-127.0.0.1 russia-direct.org  # unknown //political
-127.0.0.1 russia-insider.com  # bias //clickbait
+127.0.0.1 resistancereport.com  #political  #unreliable
+127.0.0.1 responsibletechnology.org  #junksci
+127.0.0.1 returnofkings.com  #hate
+127.0.0.1 revolutions2040.com  #junksci  #clickbait
+127.0.0.1 rhotv.com  #fake
+127.0.0.1 rickackerman.com  #unknown
+127.0.0.1 rickwells.us  #fake  #conspiracy
+127.0.0.1 rightalert.com  #bias  #unreliable
+127.0.0.1 righton.com  #unknown
+127.0.0.1 rightsidenews.com  #unknown
+127.0.0.1 rightwingnews.com  #bias  #unreliable
+127.0.0.1 rilenews.com  #fake  #fake  #satire
+127.0.0.1 rinf.com  #political
+127.0.0.1 robadapazzi.com  #clickbait
+127.0.0.1 rockcitytimes.com  #satire
+127.0.0.1 ronpaulinstitute.org  #political
+127.0.0.1 rt.com  #state
+127.0.0.1 rumormillnews.com  #conspiracy  #junksci  #rumor
+127.0.0.1 runtogold.com  #unknown
+127.0.0.1 ruptly.tv  #political
+127.0.0.1 russia-direct.org  #unknown  #political
+127.0.0.1 russia-insider.com  #bias  #clickbait
 127.0.0.1 samericannews.com
-127.0.0.1 satiratribune.com  # satire
-127.0.0.1 satirewire.com  # satire
-127.0.0.1 scrappleface.com  # satire
-127.0.0.1 seankerrigan.com  # unknown
-127.0.0.1 secretsofthefed.com  # conspiracy //junksci
-127.0.0.1 sensationalisttimes.com  # satire
-127.0.0.1 sentinelblog.com  # conspiracy //junksci
-127.0.0.1 sgtreport.com  # unknown
-127.0.0.1 shadowproof.com  # unknown
-127.0.0.1 shadowstats.com  # unknown
-127.0.0.1 shareblue.com  # unreliable //political //bias
-127.0.0.1 sheepkillers.com  # conspiracy //junksci
-127.0.0.1 shiftfrequency.com  # unknown
-127.0.0.1 shoebat.com  # conspiracy //bias
-127.0.0.1 shtfplan.com  # unknown
-127.0.0.1 silentmajoritypatriots.com  # unknown
-127.0.0.1 silver-coin-investor.com  # conspiracy //bias //unreliable
-127.0.0.1 silverbearcafe.com  # conspiracy
-127.0.0.1 silverdoctors.com  # conspiracy //bias
-127.0.0.1 silverstealers.net  # conspiracy
-127.0.0.1 sjlendman.blogspot.com  # bias
-127.0.0.1 skeptiko.com  # conspiracy //junksci
-127.0.0.1 sonsoflibertyradio.com  # conspiracy //bias //unreliable
-127.0.0.1 sott.net  # unknown
-127.0.0.1 sourceplanet.net  # unknown
-127.0.0.1 southfront.org  # unknown
-127.0.0.1 southweb.org  # unknown
-127.0.0.1 sovereignman.com  # unreliable
-127.0.0.1 speciallifeentertainment.com  # unknown
-127.0.0.1 speld.nl  # satire
-127.0.0.1 spinzon.com  # unknown
+127.0.0.1 satiratribune.com  #satire
+127.0.0.1 satirewire.com  #satire
+127.0.0.1 scrappleface.com  #satire
+127.0.0.1 seankerrigan.com  #unknown
+127.0.0.1 secretsofthefed.com  #conspiracy  #junksci
+127.0.0.1 sensationalisttimes.com  #satire
+127.0.0.1 sentinelblog.com  #conspiracy  #junksci
+127.0.0.1 sgtreport.com  #unknown
+127.0.0.1 shadowproof.com  #unknown
+127.0.0.1 shadowstats.com  #unknown
+127.0.0.1 shareblue.com  #unreliable  #political  #bias
+127.0.0.1 sheepkillers.com  #conspiracy  #junksci
+127.0.0.1 shiftfrequency.com  #unknown
+127.0.0.1 shoebat.com  #conspiracy  #bias
+127.0.0.1 shtfplan.com  #unknown
+127.0.0.1 silentmajoritypatriots.com  #unknown
+127.0.0.1 silver-coin-investor.com  #conspiracy  #bias  #unreliable
+127.0.0.1 silverbearcafe.com  #conspiracy
+127.0.0.1 silverdoctors.com  #conspiracy  #bias
+127.0.0.1 silverstealers.net  #conspiracy
+127.0.0.1 sjlendman.blogspot.com  #bias
+127.0.0.1 skeptiko.com  #conspiracy  #junksci
+127.0.0.1 sonsoflibertyradio.com  #conspiracy  #bias  #unreliable
+127.0.0.1 sott.net  #unknown
+127.0.0.1 sourceplanet.net  #unknown
+127.0.0.1 southfront.org  #unknown
+127.0.0.1 southweb.org  #unknown
+127.0.0.1 sovereignman.com  #unreliable
+127.0.0.1 speciallifeentertainment.com  #unknown
+127.0.0.1 speld.nl  #satire
+127.0.0.1 spinzon.com  #unknown
 127.0.0.1 sport01.tv
-127.0.0.1 sportspickle.com  # satire
-127.0.0.1 sprotspickle.com  # fake
-127.0.0.1 sputniknews.com  # bias //state //fake
-127.0.0.1 srsroccoreport.com  # unknown
-127.0.0.1 statenation.co  # unknown
-127.0.0.1 stawealth.com  # unknown
-127.0.0.1 stevequayle.com  # unknown
-127.0.0.1 stneotscitizen.com  # satire
-127.0.0.1 stormcloudsgathering.com  # fake
-127.0.0.1 strategic-culture.org  # unknown
-127.0.0.1 stuppid.com  # satire
-127.0.0.1 subjectpolitics.com  # fake //bias
-127.0.0.1 success-street.com  # fake //clickbait
-127.0.0.1 suggesthealthytips.com  # unknown
-127.0.0.1 superstation95.com  # unknown
-127.0.0.1 supremepatriot.com  # fake //bias
-127.0.0.1 surenews.com  # unknown
-127.0.0.1 surrealscoop.com  # satire
-127.0.0.1 survivalblog.com  # unknown
-127.0.0.1 survivalknowhow.net  # unknown
-127.0.0.1 survivopedia.com  # unknown
-127.0.0.1 tap-news.com  # unknown
-127.0.0.1 tdnewswire.com  # unknown
-127.0.0.1 teapartyeconomist.com  # unknown
-127.0.0.1 teapartytribune.com  # unknown
-127.0.0.1 tellmenow.com  # unknown
-127.0.0.1 tenthamendmentcenter.com  # unknown
-127.0.0.1 the-newspapers.com  # unknown
-127.0.0.1 theamericancause.org  # unknown
-127.0.0.1 theamericanindependent.wordpress.com  # fake //bias
-127.0.0.1 theamericanmirror.com  # unknown
-127.0.0.1 theantimedia.org  # unreliable //bias //conspiracy
-127.0.0.1 theaureport.com  # unknown
-127.0.0.1 theautogear.com  # unknown
-127.0.0.1 thebeaverton.com  # satire
-127.0.0.1 theblaze.com  # political //clickbait
-127.0.0.1 thebostontribune.com  # fake
-127.0.0.1 thebricspost.com  # unknown
-127.0.0.1 thebrowser.com  # unknown
-127.0.0.1 theburningplatform.com  # unknown
-127.0.0.1 thecarsmagazine.com  # unknown
-127.0.0.1 thecivilian.co.nz  # unknown
-127.0.0.1 thecommonsenseshow.com  # fake //conspiracy
-127.0.0.1 theconservativetreehouse.com  # unknown
-127.0.0.1 thecontroversialfiles.net  # fake //clickbait
-127.0.0.1 thecrowehouse.com  # unknown
-127.0.0.1 thedailybeast.com  # political
-127.0.0.1 thedailybell.com  # unknown
-127.0.0.1 thedailycoin.org  # unknown
-127.0.0.1 thedailycrux.com  # unknown
-127.0.0.1 thedailymash.co.uk  # satire
-127.0.0.1 thedailysheeple.com  # clickbait //conspiracy //bias
-127.0.0.1 thedailywtf.com  # satire
-127.0.0.1 thedemocratic.site  # unknown
-127.0.0.1 theduran.com  # unreliable
-127.0.0.1 theearthchild.co.za  # unknown
-127.0.0.1 theeconomiccollapseblog.com  # conspiracy //bias
-127.0.0.1 theeventchronicle.com  # conspiracy //junksci //clickbait
-127.0.0.1 theextinctionprotocol.com  # conspiracy
-127.0.0.1 thefederalistpapers.org  # bias //conspiracy
-127.0.0.1 thefifthcolumnnews.com  # political
-127.0.0.1 theforbiddenknowledge.com  # conspiracy //junksci
-127.0.0.1 thefreepatriot.org  # fake //bias //clickbait
-127.0.0.1 thefreethoughtproject.com  # unreliable //conspiracy //clickbait
-127.0.0.1 thegatewaypundit.com  # bias //conspiracy //unreliable
-127.0.0.1 thegoldwater.com  # unknown
-127.0.0.1 thehardtimes.net  # satire
-127.0.0.1 theineptowl.com  # satire
-127.0.0.1 theinformedamerican.net  # unreliable
-127.0.0.1 theintercept.com  # political
-127.0.0.1 thelastgreatstand.com  # fake //conspiracy //bias
-127.0.0.1 thelastlineofdefense.org  # satire
-127.0.0.1 thelibertybeacon.com  # conspiracy //junksci //bias
-127.0.0.1 thelibertymill.com  # unreliable //bias //conspiracy
-127.0.0.1 themadisonmisnomer.com  # satire
-127.0.0.1 themideastbeast.com  # satire
-127.0.0.1 themindunleashed.com  # conspiracy //junksci //clickbait
-127.0.0.1 themindunleashed.org  # conspiracy //junksci //clickbait
-127.0.0.1 themuslimissue.wordpress.com  # hate //conspiracy
-127.0.0.1 thenewamerican.com  # bias
-127.0.0.1 thenewinquiry.com  # unknown
-127.0.0.1 thenewsdoctors.com  # bias
-127.0.0.1 thenewsfile.com  # unknown
-127.0.0.1 thenewsnerd.com  # fake //satire
-127.0.0.1 theonion.com  # satire
-127.0.0.1 theopenscroll.blogspot.com  # unknown
-127.0.0.1 theorganicprepper.ca  # unknown
-127.0.0.1 theoutsiderclub.com  # unknown
-127.0.0.1 theoxymoron.co.uk  # unknown
-127.0.0.1 thepeoplescube.com  # unknown
-127.0.0.1 thepeoplesvoice.net  # unknown
-127.0.0.1 thephaser.com  # conspiracy
-127.0.0.1 thepoke.co.uk  # satire
-127.0.0.1 thepoliticalcesspool.com  # unknown //hate
-127.0.0.1 thepoliticalinsider.com  # conspiracy //bias //unreliable
-127.0.0.1 thepostemail.com  # unknown
-127.0.0.1 theracketreport.com  # fake //satire
-127.0.0.1 therealstrategy.com  # bias //conspiracy //hate
-127.0.0.1 therebel.media  # unknown
-127.0.0.1 thereporterz.com  # fake
-127.0.0.1 therightists.com  # fake //bias
-127.0.0.1 therightplanet.com  # unknown
-127.0.0.1 therightscoop.com  # fake //clickbait
-127.0.0.1 therightstuff.biz  # hate
-127.0.0.1 therundownlive.com  # clickbait //unknown
-127.0.0.1 therussophile.org  # unknown
-127.0.0.1 thesaker.is  # unknown
-127.0.0.1 theshovel.com.au  # satire
-127.0.0.1 theskunk.org  # satire
-127.0.0.1 thesleuthjournal.com  # unknown
-127.0.0.1 thespoof.com  # satire
-127.0.0.1 thestatelyharold.com  # satire
-127.0.0.1 thetimesoftheworld.com  # satire
-127.0.0.1 thetruthaboutcancer.com  # junksci
-127.0.0.1 thetruthdivision.com  # fake //bias
-127.0.0.1 thetruthseeker.co.uk  # fake //conspiracy //junksci
-127.0.0.1 thetruthwins.com  # junksci //conspiracy //clickbait
-127.0.0.1 theunrealtimes.com  # satire
-127.0.0.1 theuspatriot.com  # fake //satire
-127.0.0.1 thevalleyreport.com  # satire
-127.0.0.1 thevictoryreport.org  # unknown
-127.0.0.1 thewatchtowers.com  # bias //conspiracy //clickbait
-127.0.0.1 thewealthwatchman.com  # unknown
-127.0.0.1 theworldstyle.com  # unknown
-127.0.0.1 thinkprogress.org  # political
-127.0.0.1 thirdworldtraveler.com  # unknown
-127.0.0.1 thisismynewworld.com  # unknown
-127.0.0.1 threepercenternation.com  # fake //conspiracy //bias
-127.0.0.1 thrivemovement.com  # unknown
-127.0.0.1 tomwoods.com  # political //unrealiable
-127.0.0.1 topekasnews.com  # satire
-127.0.0.1 topinfopost.com  # clickbait //unreliable //conspiracy
-127.0.0.1 topnewspolitics.com  # unknown
-127.0.0.1 topratedviral.com  # unknown
-127.0.0.1 toprightnews.com  # unknown
-127.0.0.1 totalworldnews.com  # unknown
-127.0.0.1 traderdan.com  # unknown
-127.0.0.1 tradewithdave.com  # unknown
-127.0.0.1 tragedyandhope.com  # unknown
-127.0.0.1 trendingnewsguide.com  # unknown
-127.0.0.1 trendingnewstoday.net  # unknown
-127.0.0.1 tribuneherald.net  # unknown
-127.0.0.1 tribunist.com  # unknown
-127.0.0.1 trueactivist.com  # clickbait //unreliable
-127.0.0.1 trueeconomics.blogspot.com  # unknown
-127.0.0.1 truepundit.com  # bias //clickbait
-127.0.0.1 trumpvision365.com  # fake
-127.0.0.1 trunews.com  # unknown
-127.0.0.1 truthandaction.org  # bias //conspiracy //clickbait
-127.0.0.1 truthbroadcastnetwork.com  # conspiracy //clickbait
-127.0.0.1 truthfeed.com  # hate //bias //conspiracy
-127.0.0.1 truthfrequencyradio.com  # clickbait //conspiracy
-127.0.0.1 truthingold.com  # unknown
-127.0.0.1 truthinmedia.com  # unknown
-127.0.0.1 truthkings.com  # bias //conspiracy //junksci
-127.0.0.1 truthnetwork.com  # unknown
-127.0.0.1 truthrevolt.org  # bias //hate
-127.0.0.1 truthstreammedia.com  # unknown
-127.0.0.1 tunerspeed.com  # unknown
-127.0.0.1 turnerradionetwork.com  # unknown
-127.0.0.1 twitchy.com  # clickbait //rumor
-127.0.0.1 tyronetribulations.com  # unknown
-127.0.0.1 ufoholic.com  # conspiracy
-127.0.0.1 unclesamsmisguidedchildren.com  # bias
-127.0.0.1 unconfirmedsources.com  # clickbait //satire
-127.0.0.1 undergroundhealth.com  # unknown
-127.0.0.1 undergroundworldnews.com  # fake //conspiracy //bias
-127.0.0.1 unionleader.com  # unknown
-127.0.0.1 unitedmediapublishing.com  # fake
-127.0.0.1 universepolitics.com  # fake
-127.0.0.1 unz.com  # bias
-127.0.0.1 usa2016elections.com  # fake
-127.0.0.1 usadailypolitics.com  # fake
-127.0.0.1 usadailytime.com  # fake
-127.0.0.1 usahitman.com  # fake //conspiracy
-127.0.0.1 usainfobox.com  # fake
-127.0.0.1 usamagazinestudio.com  # fake
-127.0.0.1 usanewsflash.com  # fake //bias //clickbait
-127.0.0.1 usanewsinsider.com  # fake //bias //clickbait
-127.0.0.1 usanewspolitics.com  # fake
-127.0.0.1 usaonlinepolitics.com  # fake //clickbait
-127.0.0.1 usaphase.com  # fake //bias
-127.0.0.1 usapoliticsdaily.com  # unknown
-127.0.0.1 usapoliticsnow.com  # fake //bias
-127.0.0.1 usapoliticstoday.com  # bias //unreliable
-127.0.0.1 usapoliticus.com  # unknown
-127.0.0.1 usascan.com  # unknown
-127.0.0.1 usasupreme.com  # fake
-127.0.0.1 usatoday.com.co  # fake
-127.0.0.1 usatwentyfour.com  # fake
-127.0.0.1 usawatchdog.com  # bias
-127.0.0.1 uschronicle.com  # bias //conspiracy //hate
-127.0.0.1 usconservativetoday.com  # fake
-127.0.0.1 usdefensewatch.com  # unreliable
-127.0.0.1 usfanzone.com  # fake //bias
-127.0.0.1 ushealthyadvisor.com  # fake //conspiracy //junksci
-127.0.0.1 usherald.com  # bias //conspiracy //unreliable
-127.0.0.1 uslifetoday.com  # clickbait
-127.0.0.1 uspoliticslive.com  # fake //bias //conspiracy
-127.0.0.1 usuncut.com  # clickbait //bias //unreliable
-127.0.0.1 usviewer.com  # unreliable //fake
-127.0.0.1 vdare.com  # bias //hate
-127.0.0.1 veteransnewsnow.com  # unreliable //political
-127.0.0.1 veteranstoday.com  # bias //unreliable //clickbait
-127.0.0.1 vigilantcitizen.com  # fake //conspiracy
-127.0.0.1 viralliberty.com  # fake //bias //clickbait
-127.0.0.1 viraltube.nl  # clickbait
-127.0.0.1 wakeupthesheep.com  # conspiracy
-127.0.0.1 wakingtimes.com  # junksci
-127.0.0.1 wakingupwisconsin.com  # clickbait //conspiracy
-127.0.0.1 wallstreetonparade.com  # unreliable
-127.0.0.1 washingtonexaminer.com  # political //unreliable
-127.0.0.1 washingtonsblog.com  # bias //conspiracy //satire
-127.0.0.1 waterfordwhispersnews.com  # satire
-127.0.0.1 wealthcycles.com  # unknown
-127.0.0.1 wealthwire.com  # unknown
-127.0.0.1 wearechange.org  # bias //conspiracy
-127.0.0.1 weaselzippers.us  # unreliable //bias
-127.0.0.1 webdaily.com  # fake //conspiracy //bias
-127.0.0.1 weeklystandard.com  # political //bias
-127.0.0.1 weeklyworldnews.com  # fake //rumor //clickbait
-127.0.0.1 weshapelife.org  # conspiracy //junksci
-127.0.0.1 westernjournalism.com  # bias //clickbait
-127.0.0.1 whatdoesitmean.com  # conspiracy
-127.0.0.1 whatreallyhappened.com  # conspiracy //rumor
-127.0.0.1 whitepower.com  # hate //conspiracy //bias
-127.0.0.1 whowhatwhy.com  # unreliable
-127.0.0.1 whowhatwhy.org  # conspiracy
-127.0.0.1 whydontyoutrythis.com  # junksci //rumor
-127.0.0.1 wideawakeamerica.com  # unknown
-127.0.0.1 wideawakenews.com  # unknown
-127.0.0.1 wikileaks.com  # unreliable
-127.0.0.1 wikileaks.org  # unreliable
-127.0.0.1 wikispooks.com  # conspiracy
-127.0.0.1 williambanzai7.blogspot.com  # satire
-127.0.0.1 willyloman.wordpress.com  # conspiracy
-127.0.0.1 winkprogress.com  # satire
-127.0.0.1 winningdemocrats.com  # bias //unreliable
-127.0.0.1 witscience.org  # fake //satire
-127.0.0.1 wnd.com  # bias //clickbait //unreliable
-127.0.0.1 wolfstreet.com  # unreliable
-127.0.0.1 wonkie.com  # satire
-127.0.0.1 world24monitor.com  # unknown
-127.0.0.1 worldcallyoutoday.com  # unknown
-127.0.0.1 worlddaily.info  # unknown
-127.0.0.1 worldnewsdailyreport.com  # satire
-127.0.0.1 worldnewspolitics.com  # bias
-127.0.0.1 worldpoliticsus.com  # fake
-127.0.0.1 worldrumor.com  # fake
-127.0.0.1 worldstoriestoday.com  # fake
-127.0.0.1 worldtruth.tv  # clickbait //conspiracy //junksci
-127.0.0.1 worldwidehealthy.com  # junksci //clickbait
-127.0.0.1 wtoe5news.com  # fake //satire
-127.0.0.1 wundergroundmusic.com  # satire
-127.0.0.1 x22report.com  # conspiracy
-127.0.0.1 yellowhammernews.com  # political
-127.0.0.1 yesimright.com  # fake //bias
-127.0.0.1 youngcons.com  # bias //unreliable
-127.0.0.1 yourfunpage.com  # fake
-127.0.0.1 yournationnews.com  # clickbait
-127.0.0.1 yournewsline.wordpress.com  # unknown
-127.0.0.1 yournewswire.com  # clickbait //junksci
-127.0.0.1 zaytung.com  # unknown
-127.0.0.1 zengardner.com  # unknown
-127.0.0.1 zerohedge.com  # conspiracy
-127.0.0.1 zootfeed.com  # conspiracy
+127.0.0.1 sportspickle.com  #satire
+127.0.0.1 sprotspickle.com  #fake
+127.0.0.1 sputniknews.com  #bias  #state  #fake
+127.0.0.1 srsroccoreport.com  #unknown
+127.0.0.1 statenation.co  #unknown
+127.0.0.1 stawealth.com  #unknown
+127.0.0.1 stevequayle.com  #unknown
+127.0.0.1 stneotscitizen.com  #satire
+127.0.0.1 stormcloudsgathering.com  #fake
+127.0.0.1 strategic-culture.org  #unknown
+127.0.0.1 stuppid.com  #satire
+127.0.0.1 subjectpolitics.com  #fake  #bias
+127.0.0.1 success-street.com  #fake  #clickbait
+127.0.0.1 suggesthealthytips.com  #unknown
+127.0.0.1 superstation95.com  #unknown
+127.0.0.1 supremepatriot.com  #fake  #bias
+127.0.0.1 surenews.com  #unknown
+127.0.0.1 surrealscoop.com  #satire
+127.0.0.1 survivalblog.com  #unknown
+127.0.0.1 survivalknowhow.net  #unknown
+127.0.0.1 survivopedia.com  #unknown
+127.0.0.1 tap-news.com  #unknown
+127.0.0.1 tdnewswire.com  #unknown
+127.0.0.1 teapartyeconomist.com  #unknown
+127.0.0.1 teapartytribune.com  #unknown
+127.0.0.1 tellmenow.com  #unknown
+127.0.0.1 tenthamendmentcenter.com  #unknown
+127.0.0.1 the-newspapers.com  #unknown
+127.0.0.1 theamericancause.org  #unknown
+127.0.0.1 theamericanindependent.wordpress.com  #fake  #bias
+127.0.0.1 theamericanmirror.com  #unknown
+127.0.0.1 theantimedia.org  #unreliable  #bias  #conspiracy
+127.0.0.1 theaureport.com  #unknown
+127.0.0.1 theautogear.com  #unknown
+127.0.0.1 thebeaverton.com  #satire
+127.0.0.1 theblaze.com  #political  #clickbait
+127.0.0.1 thebostontribune.com  #fake
+127.0.0.1 thebricspost.com  #unknown
+127.0.0.1 thebrowser.com  #unknown
+127.0.0.1 theburningplatform.com  #unknown
+127.0.0.1 thecarsmagazine.com  #unknown
+127.0.0.1 thecivilian.co.nz  #unknown
+127.0.0.1 thecommonsenseshow.com  #fake  #conspiracy
+127.0.0.1 theconservativetreehouse.com  #unknown
+127.0.0.1 thecontroversialfiles.net  #fake  #clickbait
+127.0.0.1 thecrowehouse.com  #unknown
+127.0.0.1 thedailybeast.com  #political
+127.0.0.1 thedailybell.com  #unknown
+127.0.0.1 thedailycoin.org  #unknown
+127.0.0.1 thedailycrux.com  #unknown
+127.0.0.1 thedailymash.co.uk  #satire
+127.0.0.1 thedailysheeple.com  #clickbait  #conspiracy  #bias
+127.0.0.1 thedailywtf.com  #satire
+127.0.0.1 thedemocratic.site  #unknown
+127.0.0.1 theduran.com  #unreliable
+127.0.0.1 theearthchild.co.za  #unknown
+127.0.0.1 theeconomiccollapseblog.com  #conspiracy  #bias
+127.0.0.1 theeventchronicle.com  #conspiracy  #junksci  #clickbait
+127.0.0.1 theextinctionprotocol.com  #conspiracy
+127.0.0.1 thefederalistpapers.org  #bias  #conspiracy
+127.0.0.1 thefifthcolumnnews.com  #political
+127.0.0.1 theforbiddenknowledge.com  #conspiracy  #junksci
+127.0.0.1 thefreepatriot.org  #fake  #bias  #clickbait
+127.0.0.1 thefreethoughtproject.com  #unreliable  #conspiracy  #clickbait
+127.0.0.1 thegatewaypundit.com  #bias  #conspiracy  #unreliable
+127.0.0.1 thegoldwater.com  #unknown
+127.0.0.1 thehardtimes.net  #satire
+127.0.0.1 theineptowl.com  #satire
+127.0.0.1 theinformedamerican.net  #unreliable
+127.0.0.1 theintercept.com  #political
+127.0.0.1 thelastgreatstand.com  #fake  #conspiracy  #bias
+127.0.0.1 thelastlineofdefense.org  #satire
+127.0.0.1 thelibertybeacon.com  #conspiracy  #junksci  #bias
+127.0.0.1 thelibertymill.com  #unreliable  #bias  #conspiracy
+127.0.0.1 themadisonmisnomer.com  #satire
+127.0.0.1 themideastbeast.com  #satire
+127.0.0.1 themindunleashed.com  #conspiracy  #junksci  #clickbait
+127.0.0.1 themindunleashed.org  #conspiracy  #junksci  #clickbait
+127.0.0.1 themuslimissue.wordpress.com  #hate  #conspiracy
+127.0.0.1 thenewamerican.com  #bias
+127.0.0.1 thenewinquiry.com  #unknown
+127.0.0.1 thenewsdoctors.com  #bias
+127.0.0.1 thenewsfile.com  #unknown
+127.0.0.1 thenewsnerd.com  #fake  #satire
+127.0.0.1 theonion.com  #satire
+127.0.0.1 theopenscroll.blogspot.com  #unknown
+127.0.0.1 theorganicprepper.ca  #unknown
+127.0.0.1 theoutsiderclub.com  #unknown
+127.0.0.1 theoxymoron.co.uk  #unknown
+127.0.0.1 thepeoplescube.com  #unknown
+127.0.0.1 thepeoplesvoice.net  #unknown
+127.0.0.1 thephaser.com  #conspiracy
+127.0.0.1 thepoke.co.uk  #satire
+127.0.0.1 thepoliticalcesspool.com  #unknown  #hate
+127.0.0.1 thepoliticalinsider.com  #conspiracy  #bias  #unreliable
+127.0.0.1 thepostemail.com  #unknown
+127.0.0.1 theracketreport.com  #fake  #satire
+127.0.0.1 therealstrategy.com  #bias  #conspiracy  #hate
+127.0.0.1 therebel.media  #unknown
+127.0.0.1 thereporterz.com  #fake
+127.0.0.1 therightists.com  #fake  #bias
+127.0.0.1 therightplanet.com  #unknown
+127.0.0.1 therightscoop.com  #fake  #clickbait
+127.0.0.1 therightstuff.biz  #hate
+127.0.0.1 therundownlive.com  #clickbait  #unknown
+127.0.0.1 therussophile.org  #unknown
+127.0.0.1 thesaker.is  #unknown
+127.0.0.1 theshovel.com.au  #satire
+127.0.0.1 theskunk.org  #satire
+127.0.0.1 thesleuthjournal.com  #unknown
+127.0.0.1 thespoof.com  #satire
+127.0.0.1 thestatelyharold.com  #satire
+127.0.0.1 thetimesoftheworld.com  #satire
+127.0.0.1 thetruthaboutcancer.com  #junksci
+127.0.0.1 thetruthdivision.com  #fake  #bias
+127.0.0.1 thetruthseeker.co.uk  #fake  #conspiracy  #junksci
+127.0.0.1 thetruthwins.com  #junksci  #conspiracy  #clickbait
+127.0.0.1 theunrealtimes.com  #satire
+127.0.0.1 theuspatriot.com  #fake  #satire
+127.0.0.1 thevalleyreport.com  #satire
+127.0.0.1 thevictoryreport.org  #unknown
+127.0.0.1 thewatchtowers.com  #bias  #conspiracy  #clickbait
+127.0.0.1 thewealthwatchman.com  #unknown
+127.0.0.1 theworldstyle.com  #unknown
+127.0.0.1 thinkprogress.org  #political
+127.0.0.1 thirdworldtraveler.com  #unknown
+127.0.0.1 thisismynewworld.com  #unknown
+127.0.0.1 threepercenternation.com  #fake  #conspiracy  #bias
+127.0.0.1 thrivemovement.com  #unknown
+127.0.0.1 tomwoods.com  #political  #unrealiable
+127.0.0.1 topekasnews.com  #satire
+127.0.0.1 topinfopost.com  #clickbait  #unreliable  #conspiracy
+127.0.0.1 topnewspolitics.com  #unknown
+127.0.0.1 topratedviral.com  #unknown
+127.0.0.1 toprightnews.com  #unknown
+127.0.0.1 totalworldnews.com  #unknown
+127.0.0.1 traderdan.com  #unknown
+127.0.0.1 tradewithdave.com  #unknown
+127.0.0.1 tragedyandhope.com  #unknown
+127.0.0.1 trendingnewsguide.com  #unknown
+127.0.0.1 trendingnewstoday.net  #unknown
+127.0.0.1 tribuneherald.net  #unknown
+127.0.0.1 tribunist.com  #unknown
+127.0.0.1 trueactivist.com  #clickbait  #unreliable
+127.0.0.1 trueeconomics.blogspot.com  #unknown
+127.0.0.1 truepundit.com  #bias  #clickbait
+127.0.0.1 trumpvision365.com  #fake
+127.0.0.1 trunews.com  #unknown
+127.0.0.1 truthandaction.org  #bias  #conspiracy  #clickbait
+127.0.0.1 truthbroadcastnetwork.com  #conspiracy  #clickbait
+127.0.0.1 truthfeed.com  #hate  #bias  #conspiracy
+127.0.0.1 truthfrequencyradio.com  #clickbait  #conspiracy
+127.0.0.1 truthingold.com  #unknown
+127.0.0.1 truthinmedia.com  #unknown
+127.0.0.1 truthkings.com  #bias  #conspiracy  #junksci
+127.0.0.1 truthnetwork.com  #unknown
+127.0.0.1 truthrevolt.org  #bias  #hate
+127.0.0.1 truthstreammedia.com  #unknown
+127.0.0.1 tunerspeed.com  #unknown
+127.0.0.1 turnerradionetwork.com  #unknown
+127.0.0.1 twitchy.com  #clickbait  #rumor
+127.0.0.1 tyronetribulations.com  #unknown
+127.0.0.1 ufoholic.com  #conspiracy
+127.0.0.1 unclesamsmisguidedchildren.com  #bias
+127.0.0.1 unconfirmedsources.com  #clickbait  #satire
+127.0.0.1 undergroundhealth.com  #unknown
+127.0.0.1 undergroundworldnews.com  #fake  #conspiracy  #bias
+127.0.0.1 unionleader.com  #unknown
+127.0.0.1 unitedmediapublishing.com  #fake
+127.0.0.1 universepolitics.com  #fake
+127.0.0.1 unz.com  #bias
+127.0.0.1 usa2016elections.com  #fake
+127.0.0.1 usadailypolitics.com  #fake
+127.0.0.1 usadailytime.com  #fake
+127.0.0.1 usahitman.com  #fake  #conspiracy
+127.0.0.1 usainfobox.com  #fake
+127.0.0.1 usamagazinestudio.com  #fake
+127.0.0.1 usanewsflash.com  #fake  #bias  #clickbait
+127.0.0.1 usanewsinsider.com  #fake  #bias  #clickbait
+127.0.0.1 usanewspolitics.com  #fake
+127.0.0.1 usaonlinepolitics.com  #fake  #clickbait
+127.0.0.1 usaphase.com  #fake  #bias
+127.0.0.1 usapoliticsdaily.com  #unknown
+127.0.0.1 usapoliticsnow.com  #fake  #bias
+127.0.0.1 usapoliticstoday.com  #bias  #unreliable
+127.0.0.1 usapoliticus.com  #unknown
+127.0.0.1 usascan.com  #unknown
+127.0.0.1 usasupreme.com  #fake
+127.0.0.1 usatoday.com.co  #fake
+127.0.0.1 usatwentyfour.com  #fake
+127.0.0.1 usawatchdog.com  #bias
+127.0.0.1 uschronicle.com  #bias  #conspiracy  #hate
+127.0.0.1 usconservativetoday.com  #fake
+127.0.0.1 usdefensewatch.com  #unreliable
+127.0.0.1 usfanzone.com  #fake  #bias
+127.0.0.1 ushealthyadvisor.com  #fake  #conspiracy  #junksci
+127.0.0.1 usherald.com  #bias  #conspiracy  #unreliable
+127.0.0.1 uslifetoday.com  #clickbait
+127.0.0.1 uspoliticslive.com  #fake  #bias  #conspiracy
+127.0.0.1 usuncut.com  #clickbait  #bias  #unreliable
+127.0.0.1 usviewer.com  #unreliable  #fake
+127.0.0.1 vdare.com  #bias  #hate
+127.0.0.1 veteransnewsnow.com  #unreliable  #political
+127.0.0.1 veteranstoday.com  #bias  #unreliable  #clickbait
+127.0.0.1 vigilantcitizen.com  #fake  #conspiracy
+127.0.0.1 viralliberty.com  #fake  #bias  #clickbait
+127.0.0.1 viraltube.nl  #clickbait
+127.0.0.1 wakeupthesheep.com  #conspiracy
+127.0.0.1 wakingtimes.com  #junksci
+127.0.0.1 wakingupwisconsin.com  #clickbait  #conspiracy
+127.0.0.1 wallstreetonparade.com  #unreliable
+127.0.0.1 washingtonexaminer.com  #political  #unreliable
+127.0.0.1 washingtonsblog.com  #bias  #conspiracy  #satire
+127.0.0.1 waterfordwhispersnews.com  #satire
+127.0.0.1 wealthcycles.com  #unknown
+127.0.0.1 wealthwire.com  #unknown
+127.0.0.1 wearechange.org  #bias  #conspiracy
+127.0.0.1 weaselzippers.us  #unreliable  #bias
+127.0.0.1 webdaily.com  #fake  #conspiracy  #bias
+127.0.0.1 weeklystandard.com  #political  #bias
+127.0.0.1 weeklyworldnews.com  #fake  #rumor  #clickbait
+127.0.0.1 weshapelife.org  #conspiracy  #junksci
+127.0.0.1 westernjournalism.com  #bias  #clickbait
+127.0.0.1 whatdoesitmean.com  #conspiracy
+127.0.0.1 whatreallyhappened.com  #conspiracy  #rumor
+127.0.0.1 whitepower.com  #hate  #conspiracy  #bias
+127.0.0.1 whowhatwhy.com  #unreliable
+127.0.0.1 whowhatwhy.org  #conspiracy
+127.0.0.1 whydontyoutrythis.com  #junksci  #rumor
+127.0.0.1 wideawakeamerica.com  #unknown
+127.0.0.1 wideawakenews.com  #unknown
+127.0.0.1 wikileaks.com  #unreliable
+127.0.0.1 wikileaks.org  #unreliable
+127.0.0.1 wikispooks.com  #conspiracy
+127.0.0.1 williambanzai7.blogspot.com  #satire
+127.0.0.1 willyloman.wordpress.com  #conspiracy
+127.0.0.1 winkprogress.com  #satire
+127.0.0.1 winningdemocrats.com  #bias  #unreliable
+127.0.0.1 witscience.org  #fake  #satire
+127.0.0.1 wnd.com  #bias  #clickbait  #unreliable
+127.0.0.1 wolfstreet.com  #unreliable
+127.0.0.1 wonkie.com  #satire
+127.0.0.1 world24monitor.com  #unknown
+127.0.0.1 worldcallyoutoday.com  #unknown
+127.0.0.1 worlddaily.info  #unknown
+127.0.0.1 worldnewsdailyreport.com  #satire
+127.0.0.1 worldnewspolitics.com  #bias
+127.0.0.1 worldpoliticsus.com  #fake
+127.0.0.1 worldrumor.com  #fake
+127.0.0.1 worldstoriestoday.com  #fake
+127.0.0.1 worldtruth.tv  #clickbait  #conspiracy  #junksci
+127.0.0.1 worldwidehealthy.com  #junksci  #clickbait
+127.0.0.1 wtoe5news.com  #fake  #satire
+127.0.0.1 wundergroundmusic.com  #satire
+127.0.0.1 x22report.com  #conspiracy
+127.0.0.1 yellowhammernews.com  #political
+127.0.0.1 yesimright.com  #fake  #bias
+127.0.0.1 youngcons.com  #bias  #unreliable
+127.0.0.1 yourfunpage.com  #fake
+127.0.0.1 yournationnews.com  #clickbait
+127.0.0.1 yournewsline.wordpress.com  #unknown
+127.0.0.1 yournewswire.com  #clickbait  #junksci
+127.0.0.1 zaytung.com  #unknown
+127.0.0.1 zengardner.com  #unknown
+127.0.0.1 zerohedge.com  #conspiracy
+127.0.0.1 zootfeed.com  #conspiracy
