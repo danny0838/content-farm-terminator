@@ -513,7 +513,7 @@ class ConverterHosts(Converter):
         ):
             return
 
-        comment = '  # ' + re.sub(r'^\s*(?://|#)\s*', r'', rule.comment) if rule.comment else ''
+        comment = '  #' + re.sub(r'^\s*(?://|#)', r'', rule.comment) if rule.comment else ''
         print(f'127.0.0.1 {rule.rule}{comment}')
 
 
@@ -557,7 +557,7 @@ class ConverterUblacklist(Converter):
     https://github.com/iorate/ublacklist
     """
     def print_rule(self, rule):
-        comment = '  # ' + re.sub(r'^\s*(?://|#)\s*', r'', rule.comment) if rule.comment else ''
+        comment = '  #' + re.sub(r'^\s*(?://|#)', r'', rule.comment) if rule.comment else ''
 
         if rule.type == 'regex':
             print(f'/{escape_regex_slash(rule.pattern)}/{rule.flags}{comment}')
