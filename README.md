@@ -1,11 +1,9 @@
 終結內容農場後台資料庫
 ======================
 
-（[「終結內容農場」瀏覽器套件介紹](https://github.com/danny0838/content-farm-terminator)）
-
 ## 內容農場網路黑名單
 
-使用方法：複製黑名單的連結網址，貼到「終結內容農場」瀏覽器套件選項的網路黑名單列表。
+使用方法：複製黑名單的連結網址，貼到[「終結內容農場」瀏覽器套件](https://github.com/danny0838/content-farm-terminator)選項的網路黑名單列表。
 
 * [標準內容農場清單](https://danny0838.github.io/content-farm-terminator/files/blocklist/content-farms.txt)：「終結內容農場」的預設網路黑名單。收錄網站以「大量盜用原創內容」及「堆砌關鍵詞欺騙搜尋引擎」為主要判定原則，其他如「未妥善標示來源的大量轉載」、「無篩選編輯的大量轉載」、「大量網站複本」、「大量社群導流」、「過去有內容農場行為」、「隱匿作者及經營者的資訊」、「缺乏完整文章列表、RSS 等正常內容網站應有的索引功能」等等，也作為輔助判定原則。我們也會參考 [Google 對垃圾網站的描述](https://support.google.com/webmasters/answer/35769?hl=zh-Hant) 調整判斷原則。
 
@@ -17,11 +15,11 @@
 
 * [詐騙網站清單](https://danny0838.github.io/content-farm-terminator/files/blocklist/scam-sites.txt): 詐騙網站清單，取自 Chrome 擴充功能「[詐騙網站及內容農場評價系統](https://chrome.google.com/webstore/detail/%E8%A9%90%E9%A8%99%E7%B6%B2%E7%AB%99%E5%8F%8A%E5%85%A7%E5%AE%B9%E8%BE%B2%E5%A0%B4%E8%A9%95%E5%83%B9%E7%B3%BB%E7%B5%B1/mpeppilpojkpjkplhihbcfapmlnlkckb)」。備查。
 
-上述清單亦提供 [uBlock Origin](https://github.com/danny0838/content-farm-terminator/tree/gh-pages/files/blocklist-ubo)、 [uBlacklist](https://github.com/danny0838/content-farm-terminator/tree/gh-pages/files/blocklist-ublacklist)、及 [hosts 檔案](https://github.com/danny0838/content-farm-terminator/tree/gh-pages/files/blocklist-hosts)版本。
+上述黑名單亦提供 [uBlock Origin](https://github.com/danny0838/content-farm-terminator/tree/gh-pages/files/blocklist-ubo)、 [uBlacklist](https://github.com/danny0838/content-farm-terminator/tree/gh-pages/files/blocklist-ublacklist)、及 [hosts 檔案](https://github.com/danny0838/content-farm-terminator/tree/gh-pages/files/blocklist-hosts)版本。
 
 ## 網址轉換規則清單
 
-使用方法：進入清單，複製想用的轉換規則，貼到「終結內容農場」瀏覽器套件選項的網址轉換規則。
+使用方法：進入清單，複製想用的轉換規則，貼到[「終結內容農場」瀏覽器套件](https://github.com/danny0838/content-farm-terminator)選項的網址轉換規則。
 
 * [標準內容農場規則清單](https://danny0838.github.io/content-farm-terminator/files/url-transform-rules/content-farms.txt)
 
