@@ -1,9 +1,9 @@
 # Title: Content Farm Filters
 # Description: Filter for general content farms, mostly in Chinese.
-# Last modified: 2022-09-19T22:35:15+00:00
+# Last modified: 2022-09-20T08:12:12+00:00
 # Homepage: https://github.com/danny0838/content-farm-terminator/tree/gh-pages
 # Licence: MIT License
-# Source: https://github.com/danny0838/content-farm-terminator/blob/gh-pages/files/blocklist-hosts/content-farms.txt
+# Source: https://danny0838.github.io/content-farm-terminator/files/blocklist-hosts/content-farms.txt
 127.0.0.1 001553.cn  #redirects to g.penzai.com
 127.0.0.1 003zuqiu.com  #redirects to g.penzai.com
 127.0.0.1 006xb.cn  #redirects to g.penzai.com

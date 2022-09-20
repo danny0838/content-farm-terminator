@@ -1,9 +1,9 @@
 # Title: Nearly Content Farm Filters
 # Description: Filter for content-farm-like sites, mostly in Chinese.
-# Last modified: 2022-09-19T12:40:05+00:00
+# Last modified: 2022-09-20T08:12:12+00:00
 # Homepage: https://github.com/danny0838/content-farm-terminator/tree/gh-pages
 # Licence: MIT License
-# Source: https://github.com/danny0838/content-farm-terminator/blob/gh-pages/files/blocklist-hosts/nearly-content-farms.txt
+# Source: https://danny0838.github.io/content-farm-terminator/files/blocklist-hosts/nearly-content-farms.txt
 127.0.0.1 0nion.com  #網站已明確說明為學術性爬蟲且有附上來源，但似乎未事先取得被爬站方授權
 127.0.0.1 25xt.com  #內容有主題性且經過篩選，許多轉文有附來源但疑似未經授權
 127.0.0.1 94477.com  #轉發微信公眾號的平台，似乎未經作者授權

@@ -82,7 +82,7 @@ build:
         Last modified: {now}
         Homepage: https://github.com/danny0838/content-farm-terminator/tree/gh-pages
         Licence: MIT License
-        Source: https://github.com/danny0838/content-farm-terminator/blob/gh-pages/files/blocklist-hosts/content-farms.txt
+        Source: https://danny0838.github.io/content-farm-terminator/files/blocklist-hosts/content-farms.txt
       processors:
         - type: domain
           pattern: blogspot\.\*$
@@ -98,7 +98,7 @@ build:
         Last modified: {now}
         Homepage: https://github.com/danny0838/content-farm-terminator/tree/gh-pages
         Licence: MIT License
-        Source: https://github.com/danny0838/content-farm-terminator/blob/gh-pages/files/blocklist-hosts/nearly-content-farms.txt
+        Source: https://danny0838.github.io/content-farm-terminator/files/blocklist-hosts/nearly-content-farms.txt
 
   - source: blocklist/fake-news.txt
     publish: blocklist-hosts/fake-news.txt
@@ -110,7 +110,7 @@ build:
         Last modified: {now}
         Homepage: https://github.com/danny0838/content-farm-terminator/tree/gh-pages
         Licence: MIT License
-        Source: https://github.com/danny0838/content-farm-terminator/blob/gh-pages/files/blocklist-hosts/fake-news.txt
+        Source: https://danny0838.github.io/content-farm-terminator/files/blocklist-hosts/fake-news.txt
 
   - source: blocklist/scam-sites.txt
     publish: blocklist-hosts/scam-sites.txt
@@ -122,7 +122,7 @@ build:
         Last modified: {now}
         Homepage: https://github.com/danny0838/content-farm-terminator/tree/gh-pages
         Licence: MIT License
-        Source: https://github.com/danny0838/content-farm-terminator/blob/gh-pages/files/blocklist-hosts/scam-sites.txt
+        Source: https://danny0838.github.io/content-farm-terminator/files/blocklist-hosts/scam-sites.txt
 
   - source: blocklist/content-farms.txt
     publish: blocklist-ubo/content-farms.txt
@@ -135,7 +135,7 @@ build:
         Last modified: {now}
         Homepage: https://github.com/danny0838/content-farm-terminator/tree/gh-pages
         Licence: MIT License
-        Source: https://github.com/danny0838/content-farm-terminator/blob/gh-pages/files/blocklist-ubo/content-farms.txt
+        Source: https://danny0838.github.io/content-farm-terminator/files/blocklist-ubo/content-farms.txt
       schemes:
         <<: *content_farms_schemes
         domain-part: &domain_part_scheme_ubo
@@ -156,7 +156,7 @@ build:
         Last modified: {now}
         Homepage: https://github.com/danny0838/content-farm-terminator/tree/gh-pages
         Licence: MIT License
-        Source: https://github.com/danny0838/content-farm-terminator/blob/gh-pages/files/blocklist-ubo/nearly-content-farms.txt
+        Source: https://danny0838.github.io/content-farm-terminator/files/blocklist-ubo/nearly-content-farms.txt
 
   - source: blocklist/sns-content-farms.txt
     publish: blocklist-ubo/sns-content-farms.txt
@@ -169,7 +169,7 @@ build:
         Last modified: {now}
         Homepage: https://github.com/danny0838/content-farm-terminator/tree/gh-pages
         Licence: MIT License
-        Source: https://github.com/danny0838/content-farm-terminator/blob/gh-pages/files/blocklist-ubo/sns-content-farms.txt
+        Source: https://danny0838.github.io/content-farm-terminator/files/blocklist-ubo/sns-content-farms.txt
       schemes:
         <<: *sns_content_farms_schemes
 
@@ -184,7 +184,7 @@ build:
         Last modified: {now}
         Homepage: https://github.com/danny0838/content-farm-terminator/tree/gh-pages
         Licence: MIT License
-        Source: https://github.com/danny0838/content-farm-terminator/blob/gh-pages/files/blocklist-ubo/fake-news.txt
+        Source: https://danny0838.github.io/content-farm-terminator/files/blocklist-ubo/fake-news.txt
       schemes:
         domain-part: *domain_part_scheme_ubo
         domain-path: *domain_path_scheme_ubo
@@ -200,7 +200,7 @@ build:
         Last modified: {now}
         Homepage: https://github.com/danny0838/content-farm-terminator/tree/gh-pages
         Licence: MIT License
-        Source: https://github.com/danny0838/content-farm-terminator/blob/gh-pages/files/blocklist-ubo/scam-sites.txt
+        Source: https://danny0838.github.io/content-farm-terminator/files/blocklist-ubo/scam-sites.txt
 
   - source: blocklist/content-farms.txt
     publish: blocklist-ublacklist/content-farms.txt
@@ -212,7 +212,7 @@ build:
         Last modified: {now}
         Homepage: https://github.com/danny0838/content-farm-terminator/tree/gh-pages
         Licence: MIT License
-        Source: https://github.com/danny0838/content-farm-terminator/blob/gh-pages/files/blocklist-ublacklist/content-farms.txt
+        Source: https://danny0838.github.io/content-farm-terminator/files/blocklist-ublacklist/content-farms.txt
       processors:
         - type: domain
           pattern: ^([\w-]+)\.blogspot\.\*$
@@ -237,7 +237,7 @@ build:
         Last modified: {now}
         Homepage: https://github.com/danny0838/content-farm-terminator/tree/gh-pages
         Licence: MIT License
-        Source: https://github.com/danny0838/content-farm-terminator/blob/gh-pages/files/blocklist-ublacklist/nearly-content-farms.txt
+        Source: https://danny0838.github.io/content-farm-terminator/files/blocklist-ublacklist/nearly-content-farms.txt
 
   - source: blocklist/fake-news.txt
     publish: blocklist-ublacklist/fake-news.txt
@@ -249,7 +249,7 @@ build:
         Last modified: {now}
         Homepage: https://github.com/danny0838/content-farm-terminator/tree/gh-pages
         Licence: MIT License
-        Source: https://github.com/danny0838/content-farm-terminator/blob/gh-pages/files/blocklist-ublacklist/fake-news.txt
+        Source: https://danny0838.github.io/content-farm-terminator/files/blocklist-ublacklist/fake-news.txt
       schemes:
         domain-part: *domain_part_scheme_ublacklist
         domain-path: *domain_path_scheme_ublacklist
@@ -264,4 +264,4 @@ build:
         Last modified: {now}
         Homepage: https://github.com/danny0838/content-farm-terminator/tree/gh-pages
         Licence: MIT License
-        Source: https://github.com/danny0838/content-farm-terminator/blob/gh-pages/files/blocklist-ublacklist/scam-sites.txt
+        Source: https://danny0838.github.io/content-farm-terminator/files/blocklist-ublacklist/scam-sites.txt
