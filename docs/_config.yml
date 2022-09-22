@@ -1,0 +1,24 @@
+title: Content Farm Terminator
+description: A browser extension that marks and blocks content farms.
+languages:
+  en: English
+  zh: 中文
+  zh-cn: 中文(中国)
+
+exclude:
+  - src
+  - scripts
+
+remote_theme: pages-themes/slate@v0.2.0
+plugins:
+  - jekyll-remote-theme
+
+github:
+  is_project_page: true
+  repository_name: Content Farm Terminator
+  repository_url: https://github.com/danny0838/content-farm-terminator
+  owner_name: Danny Lin
+  owner_url: https://github.com/danny0838
+  show_downloads: false
+
+google_analytics: UA-29901151-5

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+{%- if page.lang == "zh" %}
+  {%- assign project_title = "終結內容農場" %}
+  {%- assign project_description = "標示及阻擋內容農場的瀏覽器套件" %}
+  {%- assign github_view = "檢視GitHub" %}
+  {%- assign privacy = "隱私權政策" %}
+{%- elsif page.lang == "zh-cn" %}
+  {%- assign project_title = "终结内容农场" %}
+  {%- assign project_description = "标示及阻挡内容农场的浏览器套件" %}
+  {%- assign github_view = "检视GitHub" %}
+  {%- assign privacy = "隐私权政策" %}
+{%- else %}
+  {%- assign project_title = site.title %}
+  {%- assign project_description = site.description %}
+  {%- assign github_view = "View on GitHub" %}
+  {%- assign privacy = "Privacy" %}
+{%- endif %}
+<html lang="{{ page.lang | default: 'en' }}">
+<head>
+<meta charset="utf-8">
+<title>
+{%- if page.title == project_title -%}
+  {{ project_title }}
+{%- else -%}
+  {{ page.title }} | {{ project_title }}
+{%- endif -%}
+</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width">
+<link rel="canonical" href="{{ page.url | absolute_url }}" />
+<link rel="shortcut icon" type="image/x-icon" href="{{ '/assets/images/favicon.ico' | relative_url }}">
+<link rel="icon" type="image/png" sizes="32x32" href="{{ '/assets/images/favicon-32x32.png' | relative_url }}">
+<link rel="icon" type="image/png" sizes="16x16" href="{{ '/assets/images/favicon-16x16.png' | relative_url }}">
+<link rel="stylesheet" type="text/css" media="screen" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
+{%- include head-custom-google-analytics.html %}
+</head>
+<body>
+<!-- HEADER -->
+<div id="header_wrap" class="outer">
+  <header class="inner">
+    {%- if site.github.is_project_page %}
+    <a id="forkme_banner" href="{{ site.github.repository_url }}">{{ github_view }}</a>
+    {%- endif %}
+    <h1 id="project_title"><a href="{{ '/' | append: page.lang | append: '/' | relative_url }}">{{ project_title }}</a></h1>
+    <h2 id="project_tagline">{{ project_description }}</h2>
+    {%- if site.show_downloads %}
+    <section id="downloads">
+      <a class="zip_download_link" href="{{ site.github.zip_url }}">Download this project as a .zip file</a>
+      <a class="tar_download_link" href="{{ site.github.tar_url }}">Download this project as a tar.gz file</a>
+    </section>
+    {%- endif %}
+  </header>
+</div>
+
+<!-- MAIN CONTENT -->
+<div id="main_content_wrap" class="outer">
+  <section id="main_content" class="inner">
+    {{ content }}
+  </section>
+</div>
+
+<!-- FOOTER  -->
+<div id="footer_wrap" class="outer">
+  <footer class="inner">
+    <p class="locales">Language: {% include locales.html %}</p>
+    <p class="privacy"><a href="{{ '/' | append: page.lang | append: '/privacy' | relative_url }}">{{ privacy }}</a></p>
+    <p>Published with <a href="https://pages.github.com">GitHub Pages</a></p>
+  </footer>
+</div>
+</body>
+</html>

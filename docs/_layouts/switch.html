@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<head>
+<meta charset="utf-8">
+<title>{{ site.title }}</title>
+</head>
+<body>
+<div id="locales">Language: {% include locales.html %}</div>
+<script>
+(function () {
+  var langParts = (((navigator.userLanguage || navigator.language).replace('-', '_')).toLowerCase()).split('_');
+  var anchor = getAnchorOfBestLang(langParts);
+  location.replace(anchor.href);
+
+  function getAnchorOfBestLang(parts) {
+    var elems = document.getElementById('locales').getElementsByTagName('a');
+    for (var i = parts.length; i > 0; i--) {
+      var lang = parts.join('-');
+      var anchor = getAnchor(lang, elems);
+      if (anchor) {
+        return anchor;
+      }
+      parts.pop();
+    }
+    return elems[0];
+  }
+  function getAnchor(lang, elems) {
+    for (var i= 0, I = elems.length; i < I; i++) {
+      var elem = elems[i];
+      if (elem.lang === lang) {
+        return elem;
+      }
+    }
+  }
+})();
+</script>
+</body>
