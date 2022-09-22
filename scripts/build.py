@@ -278,8 +278,8 @@ class Builder:
             self.run_task(task)
 
     def run_task(self, task):
-        src_file = os.path.normpath(os.path.join(self.root, 'src', task['source']))
-        dst_file = os.path.normpath(os.path.join(self.root, 'files', task['publish']))
+        src_file = os.path.normpath(os.path.join(self.root, task['source']))
+        dst_file = os.path.normpath(os.path.join(self.root, task['publish']))
 
         log.info('building "%s" from "%s" ...',
                  os.path.relpath(dst_file, self.root),

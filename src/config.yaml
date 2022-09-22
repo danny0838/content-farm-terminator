@@ -1,6 +1,6 @@
 build:
-  - source: blocklist/content-farms.txt
-    publish: blocklist/content-farms.txt
+  - source: src/blocklist/content-farms.txt
+    publish: files/blocklist/content-farms.txt
     data:
       schemes: &content_farms_schemes
         xuite: &grouping_regex_scheme
@@ -21,11 +21,11 @@ build:
           <<: *grouping_regex_scheme
           value: /https?://(?:www\.)?(?:{value})(?=[/?#]|$)/
 
-  - source: blocklist/nearly-content-farms.txt
-    publish: blocklist/nearly-content-farms.txt
+  - source: src/blocklist/nearly-content-farms.txt
+    publish: files/blocklist/nearly-content-farms.txt
 
-  - source: blocklist/sns-content-farms.txt
-    publish: blocklist/sns-content-farms.txt
+  - source: src/blocklist/sns-content-farms.txt
+    publish: files/blocklist/sns-content-farms.txt
     data:
       schemes: &sns_content_farms_schemes
         facebook:
@@ -62,18 +62,18 @@ build:
           <<: *grouping_regex_scheme
           value: /^https?://timeline\.line\.me/(?:\w+?)/(?:{value})(?=[/?#]|$)/
 
-  - source: blocklist/fake-news.txt
-    publish: blocklist/fake-news.txt
+  - source: src/blocklist/fake-news.txt
+    publish: files/blocklist/fake-news.txt
     data:
       schemes:
         domain-part: *domain_part_scheme_cft
         domain-path: *domain_path_scheme_cft
 
-  - source: blocklist/scam-sites.txt
-    publish: blocklist/scam-sites.txt
+  - source: src/blocklist/scam-sites.txt
+    publish: files/blocklist/scam-sites.txt
 
-  - source: blocklist/content-farms.txt
-    publish: blocklist-hosts/content-farms.txt
+  - source: src/blocklist/content-farms.txt
+    publish: files/blocklist-hosts/content-farms.txt
     type: hosts
     data:
       headers: |
@@ -88,8 +88,8 @@ build:
           pattern: blogspot\.\*$
           replacement: blogspot.com
 
-  - source: blocklist/nearly-content-farms.txt
-    publish: blocklist-hosts/nearly-content-farms.txt
+  - source: src/blocklist/nearly-content-farms.txt
+    publish: files/blocklist-hosts/nearly-content-farms.txt
     type: hosts
     data:
       headers: |
@@ -100,8 +100,8 @@ build:
         Licence: MIT License
         Source: https://danny0838.github.io/content-farm-terminator/files/blocklist-hosts/nearly-content-farms.txt
 
-  - source: blocklist/fake-news.txt
-    publish: blocklist-hosts/fake-news.txt
+  - source: src/blocklist/fake-news.txt
+    publish: files/blocklist-hosts/fake-news.txt
     type: hosts
     data:
       headers: |
@@ -112,8 +112,8 @@ build:
         Licence: MIT License
         Source: https://danny0838.github.io/content-farm-terminator/files/blocklist-hosts/fake-news.txt
 
-  - source: blocklist/scam-sites.txt
-    publish: blocklist-hosts/scam-sites.txt
+  - source: src/blocklist/scam-sites.txt
+    publish: files/blocklist-hosts/scam-sites.txt
     type: hosts
     data:
       headers: |
@@ -124,8 +124,8 @@ build:
         Licence: MIT License
         Source: https://danny0838.github.io/content-farm-terminator/files/blocklist-hosts/scam-sites.txt
 
-  - source: blocklist/content-farms.txt
-    publish: blocklist-ubo/content-farms.txt
+  - source: src/blocklist/content-farms.txt
+    publish: files/blocklist-ubo/content-farms.txt
     type: ubo
     data:
       headers: |
@@ -145,8 +145,8 @@ build:
           value: "||{value}^"
           mode: raw
 
-  - source: blocklist/nearly-content-farms.txt
-    publish: blocklist-ubo/nearly-content-farms.txt
+  - source: src/blocklist/nearly-content-farms.txt
+    publish: files/blocklist-ubo/nearly-content-farms.txt
     type: ubo
     data:
       headers: |
@@ -158,8 +158,8 @@ build:
         Licence: MIT License
         Source: https://danny0838.github.io/content-farm-terminator/files/blocklist-ubo/nearly-content-farms.txt
 
-  - source: blocklist/sns-content-farms.txt
-    publish: blocklist-ubo/sns-content-farms.txt
+  - source: src/blocklist/sns-content-farms.txt
+    publish: files/blocklist-ubo/sns-content-farms.txt
     type: ubo
     data:
       headers: |
@@ -173,8 +173,8 @@ build:
       schemes:
         <<: *sns_content_farms_schemes
 
-  - source: blocklist/fake-news.txt
-    publish: blocklist-ubo/fake-news.txt
+  - source: src/blocklist/fake-news.txt
+    publish: files/blocklist-ubo/fake-news.txt
     type: ubo
     data:
       headers: |
@@ -189,8 +189,8 @@ build:
         domain-part: *domain_part_scheme_ubo
         domain-path: *domain_path_scheme_ubo
 
-  - source: blocklist/scam-sites.txt
-    publish: blocklist-ubo/scam-sites.txt
+  - source: src/blocklist/scam-sites.txt
+    publish: files/blocklist-ubo/scam-sites.txt
     type: ubo
     data:
       headers: |
@@ -202,8 +202,8 @@ build:
         Licence: MIT License
         Source: https://danny0838.github.io/content-farm-terminator/files/blocklist-ubo/scam-sites.txt
 
-  - source: blocklist/content-farms.txt
-    publish: blocklist-ublacklist/content-farms.txt
+  - source: src/blocklist/content-farms.txt
+    publish: files/blocklist-ublacklist/content-farms.txt
     type: ublacklist
     data:
       headers: |
@@ -227,8 +227,8 @@ build:
           <<: *grouping_regex_scheme
           value: /https?://(?:[\w-]+\.)*(?:{value})\.blogspot\.(?:[\w.-]+)(?=[:\/?#]|$)/
 
-  - source: blocklist/nearly-content-farms.txt
-    publish: blocklist-ublacklist/nearly-content-farms.txt
+  - source: src/blocklist/nearly-content-farms.txt
+    publish: files/blocklist-ublacklist/nearly-content-farms.txt
     type: ublacklist
     data:
       headers: |
@@ -239,8 +239,8 @@ build:
         Licence: MIT License
         Source: https://danny0838.github.io/content-farm-terminator/files/blocklist-ublacklist/nearly-content-farms.txt
 
-  - source: blocklist/fake-news.txt
-    publish: blocklist-ublacklist/fake-news.txt
+  - source: src/blocklist/fake-news.txt
+    publish: files/blocklist-ublacklist/fake-news.txt
     type: ublacklist
     data:
       headers: |
@@ -254,8 +254,8 @@ build:
         domain-part: *domain_part_scheme_ublacklist
         domain-path: *domain_path_scheme_ublacklist
 
-  - source: blocklist/scam-sites.txt
-    publish: blocklist-ublacklist/scam-sites.txt
+  - source: src/blocklist/scam-sites.txt
+    publish: files/blocklist-ublacklist/scam-sites.txt
     type: ublacklist
     data:
       headers: |
