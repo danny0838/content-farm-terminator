@@ -25,3 +25,6 @@
 
   -- Vimeo
 /^https?://vimeo\.com/(user\d+)(?=[/?#]|$)/ /^https?://vimeo\.com/$1(?=[/?#]|$)/
+
+  -- 好看视频
+/https?://(?:haokan|sv)\.baidu\.com/author/(\w+)(?=[/?#]|$)/ /https?://(?:haokan|sv)\.baidu\.com/author/$1(?=[/?#]|$)/

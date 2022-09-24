@@ -72,6 +72,9 @@ build:
         line-timeline:
           <<: *grouping_regex_scheme
           value: /^https?://timeline\.line\.me/(?:\w+?)/(?:{value})(?=[/?#]|$)/
+        haokan-author:
+          <<: *grouping_regex_scheme
+          value: /https?://(?:haokan|sv)\.baidu\.com/author/(?:{value})(?=[/?#]|$)/
 
   - source: src/blocklist/fake-news.txt
     publish: docs/files/blocklist/fake-news.txt
