@@ -207,7 +207,7 @@ class Uniquifier:
 
         rules = []
         for file in files:
-            log.debug('Inspecting rules in %s ...', file)
+            log.debug('Adding rules for checking: %s ...', file)
             subpath = os.path.relpath(file, self.root)
             with open(file, encoding='UTF-8-SIG') as fh:
                 for i, line in enumerate(fh):
