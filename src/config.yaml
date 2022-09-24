@@ -1,3 +1,11 @@
+lint:
+  source:
+    - src/blocklist
+uniquify:
+  source:
+    - src/blocklist/content-farms.txt
+    - src/blocklist/nearly-content-farms.txt
+    - src/blocklist/sns-content-farms.txt
 build:
   - source: src/blocklist/content-farms.txt
     publish: docs/files/blocklist/content-farms.txt

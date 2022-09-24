@@ -110,14 +110,27 @@ class Rule:
 
 class Linter:
     """Check for issues of the source files."""
-    def __init__(self, root, auto_fix=False, remove_empty=False, sort_rules=False):
+    def __init__(self, root, config=None, files=None, auto_fix=False, remove_empty=False, sort_rules=False):
         self.root = root
+        self.config = config or {}
+        self.files = files or [
+            os.path.normpath(os.path.join(self.root, f))
+            for f in config.get('lint', {}).get('source', [])
+        ]
         self.auto_fix = auto_fix
         self.remove_empty = remove_empty
         self.sort_rules = sort_rules
 
     def run(self):
-        for file in iglob(os.path.join(self.root, 'src', 'blocklist', '*.txt')):
+        files = []
+        for file in self.files:
+            if os.path.isdir(file):
+                for f in iglob(os.path.join(file, '**.txt')):
+                    files.append(f)
+            else:
+                files.append(file)
+
+        for file in files:
             self.check_file(file)
 
     def check_file(self, file):
@@ -173,14 +186,28 @@ class Linter:
 
 class Uniquifier:
     """Check for duplicated rules of the source files."""
-    def __init__(self, root, cross_files=False, auto_fix=False):
+    def __init__(self, root, config=None, files=None, cross_files=False, auto_fix=False):
         self.root = root
+        self.config = config or {}
+        self.files = files or [
+            os.path.normpath(os.path.join(self.root, f))
+            for f in config.get('uniquify', {}).get('source', [])
+        ]
         self.cross_files = cross_files
         self.auto_fix = auto_fix
 
     def run(self):
+        files = []
+        for file in self.files:
+            if os.path.isdir(file):
+                for f in iglob(os.path.join(file, '**.txt')):
+                    files.append(f)
+            else:
+                files.append(file)
+
         rules = []
-        for file in iglob(os.path.join(self.root, 'src', 'blocklist', '*.txt')):
+        for file in files:
+            log.debug('Inspecting rules in %s ...', file)
             subpath = os.path.relpath(file, self.root)
             with open(file, encoding='UTF-8-SIG') as fh:
                 for i, line in enumerate(fh):
@@ -607,13 +634,18 @@ class ConverterUblacklist(Converter):
 
 
 def parse_args(argv=None):
+    root = os.path.normpath(os.path.join(__file__, '..', '..'))
     parser = argparse.ArgumentParser(description=__doc__)
     parser.set_defaults(
-        root=os.path.normpath(os.path.join(__file__, '..', '..')),
+        root=root,
+        config=os.path.join(root, 'src', 'config.yaml'),
         verbosity=logging.INFO)
     parser.add_argument(
         '--root',
         help="""root directory to manipulate (default: %(default)s)""")
+    parser.add_argument(
+        '--config',
+        help="""config file to use (default: %(default)s)""")
     parser.add_argument(
         '-q', '--quiet', dest='verbosity', action='store_const', const=logging.WARNING,
         help="""show only warnings or errors""")
@@ -631,6 +663,9 @@ def parse_args(argv=None):
         help="""run the linter""",
         description=Linter.__doc__)
     parser_lint.add_argument(
+        'files', metavar='file', action='extend', nargs='*', default=None,
+        help="""file(s) to check (default: by config)""")
+    parser_lint.add_argument(
         '-a', '--auto-fix', action='store_true', default=False,
         help="""automatically fix issues""")
     parser_lint.add_argument(
@@ -645,6 +680,9 @@ def parse_args(argv=None):
         'uniquify',
         help="""run the uniquifier""",
         description=Uniquifier.__doc__)
+    parser_uniquify.add_argument(
+        'files', metavar='file', action='extend', nargs='*', default=None,
+        help="""file(s) to check (default: by config)""")
     parser_uniquify.add_argument(
         '-c', '--cross-files', action='store_true', default=False,
         help="""check for uniquity across files""")
@@ -665,21 +703,20 @@ def main():
     args = parse_args()
     log.setLevel(args.verbosity)
 
-    config_file = os.path.join(args.root, 'src', 'config.yaml')
-    with open(config_file, 'rb') as fh:
+    with open(args.config, 'rb') as fh:
         config = yaml.safe_load(fh)
 
     if args.action in ('lint', None):
         params = inspect.signature(Linter).parameters
         kwargs = {k: getattr(args, k, params[k].default)
-                  for k in ('auto_fix', 'sort_rules', 'remove_empty')}
-        Linter(args.root, **kwargs).run()
+                  for k in ('files', 'auto_fix', 'sort_rules', 'remove_empty')}
+        Linter(args.root, config, **kwargs).run()
 
     if args.action == 'uniquify':
         params = inspect.signature(Uniquifier).parameters
         kwargs = {k: getattr(args, k, params[k].default)
-                  for k in ('cross_files', 'auto_fix')}
-        Uniquifier(args.root, **kwargs).run()
+                  for k in ('files', 'cross_files', 'auto_fix')}
+        Uniquifier(args.root, config, **kwargs).run()
 
     if args.action in ('build', None):
         Builder(args.root, config).run()
