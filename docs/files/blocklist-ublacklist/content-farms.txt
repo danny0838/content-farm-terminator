@@ -1,10 +1,11 @@
 # Title: Content Farm Filters
 # Description: Filter for general content farms, mostly in Chinese.
-# Last modified: 2022-09-25T04:00:31+00:00
+# Last modified: 2022-09-25T04:03:38+00:00
 # Homepage: https://danny0838.github.io/content-farm-terminator/
 # Licence: MIT License
 # Source: https://danny0838.github.io/content-farm-terminator/files/blocklist-ublacklist/content-farms.txt
 /^https?:\/\/www\.ettoday\.net\/dalemon/
+*://*.00000258.com/*
 *://*.001553.cn/*  #redirects to g.penzai.com
 *://*.003zuqiu.com/*  #redirects to g.penzai.com
 *://*.006xb.cn/*  #redirects to g.penzai.com
@@ -12,6 +13,7 @@
 *://*.007ly3e.cn/*  #redirects to g.penzai.com
 *://*.007sx.cn/*  #redirects to g.penzai.com
 *://*.0086cnc.com/*  #!redirects to g.penzai.com
+*://*.0099175.com/*
 *://*.00s3t3k.cn/*  #redirects to g.penzai.com
 *://*.0101.tw/*
 *://*.010826.cn/*  #redirects to g.penzai.com
@@ -23,6 +25,7 @@
 *://*.01pkh6r.cn/*  #redirects to g.penzai.com
 *://*.020pifuke.com/*  #redirects to g.penzai.com
 *://*.020qiyun.com/*  #redirects to g.penzai.com
+*://*.021senxi.com/*
 *://*.023fuwu.com/*  #redirects to g.penzai.com
 *://*.023smwx.com/*  #redirects to g.penzai.com
 *://*.024hfd.com/*  #redirects to g.penzai.com
@@ -171,6 +174,7 @@
 *://*.0w90qcd.cn/*  #redirects to g.penzai.com
 *://*.0w9jvg6.cn/*  #redirects to g.penzai.com
 *://*.0xjdhj.cn/*  #redirects to g.penzai.com
+*://*.0xpet.com/*
 *://*.0xzx.com/*
 *://*.0y4peu.cn/*  #redirects to g.penzai.com
 *://*.10000.tw/*
@@ -344,6 +348,7 @@
 *://*.1qplay.com/*  #redirects to g.penzai.com
 *://*.1qsd.com/*  #redirects to g.penzai.com
 *://*.1r1g.com/*
+*://*.1redirc.com/*
 *://*.1shouxi.com/*  #redirects to g.penzai.com
 *://*.1sta7r0.cn/*  #redirects to g.penzai.com
 *://*.1taoyuan.com/*  #redirects to g.penzai.com
@@ -388,6 +393,7 @@
 *://*.2103988.com/*  #redirects to g.penzai.com
 *://*.213012.com/*  #redirects to g.penzai.com
 *://*.2136836.com/*  #redirects to g.penzai.com
+*://*.21539.com/*
 *://*.2165yy.co/*  #redirects to procnw.xyz
 *://*.218113.com/*
 *://*.218127.com/*
@@ -703,6 +709,7 @@
 *://*.386h.com/*
 *://*.387u.com/*  #redirects to g.penzai.com
 *://*.388625.com/*  #redirects to g.penzai.com
+*://*.3990755.com/*
 *://*.3997025.com/*
 *://*.3adfo7.cn/*  #!redirects to g.penzai.com
 *://*.3agtl2.cn/*  #redirects to g.penzai.com
@@ -720,6 +727,7 @@
 *://*.3g-jp.220v110v.com/*  #!redirects to g.penzai.com
 *://*.3gebike.com/*  #redirects to g.penzai.com
 *://*.3gq1n4x.cn/*  #redirects to g.penzai.com
+*://*.3h3.com/*
 *://*.3hgs.cn/*  #redirects to g.penzai.com
 *://*.3ibb.cn/*  #redirects to g.penzai.com
 *://*.3ikm8mf.cn/*  #redirects to g.penzai.com
@@ -995,6 +1003,7 @@
 *://*.58xuanzhi.com/*  #redirects to g.penzai.com
 *://*.591736.com/*  #redirects to g.penzai.com
 *://*.591car.cn/*  #redirects to g.penzai.com
+*://*.592xz.com/*
 *://*.59708.cn/*
 *://*.59796988.com/*  #redirects to g.penzai.com
 *://*.59cjdlv.cn/*  #redirects to g.penzai.com
@@ -1389,6 +1398,7 @@
 *://*.9ct156h.cn/*  #redirects to g.penzai.com
 *://*.9dd3.cn/*  #redirects to g.penzai.com
 *://*.9g6ygu.cn/*  #!redirects to g.penzai.com
+*://*.9game.cn/*
 *://*.9gft.com/*  #redirects to g.penzai.com
 *://*.9go8lrt.cn/*  #redirects to g.penzai.com
 *://*.9j38dyc.cn/*  #redirects to g.penzai.com
@@ -1757,6 +1767,7 @@
 *://*.americankidswear.buzz/*  #redirects to g.penzai.com
 *://*.americantowns.com/*
 *://*.ameridrvice.co/*  #redirects to procnw.xyz
+*://*.amerrole892.com/*  #redirects to directcpmfwr.com
 *://*.amesburytownband.co.uk/*  #!redirects to se10.biz
 *://*.amgchanr.co/*  #!redirects to cacnka.xyz
 *://*.amh4806oul.blog.fc2.com/*
@@ -1798,6 +1809,7 @@
 *://*.aninoo.com/*  #redirects to g.penzai.com
 *://*.anjinxjhx.com/*  #redirects to g.penzai.com
 *://*.anjzhrz.cn/*  #redirects to g.penzai.com
+*://*.ankaili.com/*
 *://*.ankzp0v.cn/*  #redirects to g.penzai.com
 *://*.anlisy.com/*  #!redirects to g.penzai.com
 *://*.anmadradubh.buzz/*  #redirects to g.penzai.com
@@ -1865,6 +1877,7 @@
 *://*.apartca.fr/*  #redirects to cubicongardens.sk
 *://*.apartmentcenters.buzz/*  #redirects to g.penzai.com
 *://*.apasass.co/*  #redirects to procnw.xyz
+*://*.apehs.cn/*
 *://*.apkhr.com/*  #redirects to g.penzai.com
 *://*.apolmont.eu/*  #redirects to di02.biz
 *://*.apost.com/*
@@ -1883,6 +1896,7 @@
 *://*.appliances123.pixnet.net/*
 *://*.applicationsbuilder.buzz/*  #!redirects to g.penzai.com
 *://*.appliedlvittion.co/*  #!redirects to cacnka.xyz
+*://*.appliedsystem.com.cn/*
 *://*.appobs.com/*
 *://*.appolice.me/*  #!redirects to ppcnzi.xyz
 *://*.appqianbao.com/*  #!redirects to g.penzai.com
@@ -1918,6 +1932,8 @@
 *://*.arranaroma.ru/*  #redirects to isabel-lopez-kubben.at
 *://*.arrow-sales.buzz/*  #!redirects to g.penzai.com
 *://*.arruo.com/*  #redirects to g.penzai.com
+*://*.arsenal-zlato.ru/*
+*://*.arshhost.info/*
 *://*.art-chip.buzz/*  #redirects to g.penzai.com
 *://*.art-e-factum.buzz/*  #!redirects to g.penzai.com
 *://*.art027.cn/*  #redirects to g.penzai.com
@@ -2182,6 +2198,7 @@
 *://*.bahis2022.co/*  #!redirects to keecnya.xyz
 *://*.baibeisc.com/*  #redirects to g.penzai.com
 *://*.baicaisd.com/*  #redirects to g.penzai.com
+*://*.baidow.com/*
 *://*.baifusy.com/*  #redirects to g.penzai.com
 *://*.baijiabo365.com/*
 *://*.baileyrobin.buzz/*  #redirects to g.penzai.com
@@ -2217,6 +2234,7 @@
 *://*.bangqu.com/*
 *://*.banksovetnik-saratov.ru/*  #!redirects to file-sharing2022.xyz
 *://*.banmajita.com/*  #redirects to g.penzai.com
+*://*.banmashuo.com/*
 *://*.banquan3.com/*  #redirects to g.penzai.com
 *://*.bansui365.com/*  #redirects to g.penzai.com
 *://*.baobao.today/*  #大榴槤/大時代/GreatDaily/閃文聯盟/琦琦~
@@ -2329,6 +2347,7 @@
 *://*.beitetuwen.com/*  #redirects to g.penzai.com
 *://*.beiyi168.com/*  #redirects to g.penzai.com
 *://*.beiyuedu.com/*
+*://*.beizigen.com/*
 *://*.belgiusic.me/*  #redirects to meetwill.xyz
 *://*.belindanvj8.blog.fc2.com/*
 *://*.belleburg.co/*  #!redirects to procnw.xyz
@@ -2463,6 +2482,7 @@
 *://*.bj3fj0i.cn/*  #redirects to g.penzai.com
 *://*.bj48583808.pixnet.net/*
 *://*.bj91lqhmg.pixnet.net/*
+*://*.bjaftj.com/*
 *://*.bjb53vb37t.pixnet.net/*
 *://*.bjclyly.com/*  #redirects to g.penzai.com
 *://*.bjcyyjs.com/*  #redirects to g.penzai.com
@@ -2907,6 +2927,7 @@
 *://*.cartoontalking.com/*
 *://*.carucc.com/*  #redirects to g.penzai.com
 *://*.casaeams.me/*  #redirects to meetwill.xyz
+*://*.casainlatina.it/*  #redirects to na-madagaskar.sk
 *://*.caseyrobiu3.pixnet.net/*
 *://*.cashball85.pixnet.net/*
 *://*.cashchien.pixnet.net/*
@@ -3001,6 +3022,7 @@
 *://*.centrimediline.buzz/*  #!redirects to g.penzai.com
 *://*.centrobenessereintegra.it/*  #redirects to quing.im
 *://*.centroricercainsubria.it/*  #redirects to quing.im
+*://*.centrumdit.pl/*  #redirects to qabayz.site
 *://*.century21realtor.buzz/*  #redirects to g.penzai.com
 *://*.centurysun.cn/*  #redirects to g.penzai.com
 *://*.ceramic-industry.buzz/*  #redirects to g.penzai.com
@@ -3159,6 +3181,7 @@
 *://*.cj0n93c.cn/*  #redirects to g.penzai.com
 *://*.cj3f8.pixnet.net/*
 *://*.cjegnvd.cn/*  #redirects to g.penzai.com
+*://*.cjkfd.top/*
 *://*.cjnxfhy.cn/*  #redirects to g.penzai.com
 *://*.cjpzumg.cn/*  #redirects to g.penzai.com
 *://*.cjr35.cn/*  #redirects to g.penzai.com
@@ -3336,6 +3359,7 @@
 *://*.coms.pub/*
 *://*.conc100.pixnet.net/*
 *://*.congga.cn/*  #redirects to g.penzai.com
+*://*.conglinds.com/*
 *://*.conroy712.pixnet.net/*
 *://*.consta28.pixnet.net/*
 *://*.constair57.pixnet.net/*
@@ -3452,6 +3476,7 @@
 *://*.cshyyqj.com/*  #redirects to g.penzai.com
 *://*.csicqfk.cn/*  #redirects to g.penzai.com
 *://*.csiofrnce.co/*  #!redirects to cacnka.xyz
+*://*.csj-depu.com/*
 *://*.csjjys.com/*  #redirects to g.penzai.com
 *://*.csk8.cn/*  #redirects to g.penzai.com
 *://*.csmjjdfw.com/*  #redirects to g.penzai.com
@@ -3686,6 +3711,7 @@
 *://*.d9vhv3hzh5.blog.fc2.com/*
 *://*.d9zuq0zmup.pixnet.net/*
 *://*.da-quan.net/*
+*://*.da3h.com/*
 *://*.da65347603.pixnet.net/*
 *://*.da6v220.cn/*  #redirects to g.penzai.com
 *://*.da868.cn/*  #redirects to g.penzai.com
@@ -3768,6 +3794,7 @@
 *://*.dayspot.net/*
 *://*.daytime.cool/*
 *://*.dayuimage.com/*  #redirects to g.penzai.com
+*://*.dazhuanlan.com/*
 *://*.db55vz1j.blog.fc2.com/*
 *://*.db5ds.com/*  #redirects to g.penzai.com
 *://*.dbbsfs.cn/*  #redirects to g.penzai.com
@@ -3785,6 +3812,7 @@
 *://*.dc755wn.cn/*  #redirects to g.penzai.com
 *://*.dcchildcustody.buzz/*  #redirects to g.penzai.com
 *://*.dccneed.com/*
+*://*.dcep676.com/*
 *://*.dcr7slhorioss.pixnet.net/*
 *://*.dcscholpod.co/*  #!redirects to ppcnzi.xyz
 *://*.dd57315139.pixnet.net/*
@@ -3849,6 +3877,7 @@
 *://*.dental-prophylaxe.buzz/*  #!redirects to g.penzai.com
 *://*.deputech.fr/*  #!redirects to se10.biz
 *://*.derrichagt0.pixnet.net/*
+*://*.desatascosintegralescordoba.es/*  #redirects to quing.im
 *://*.descfhi.cn/*  #redirects to g.penzai.com
 *://*.desenoboschhcg.blog.fc2.com/*
 *://*.deshenghang.cn/*  #redirects to g.penzai.com
@@ -3905,6 +3934,7 @@
 *://*.dhrgm.com/*  #redirects to tspweb.com
 *://*.dhyjpkc.com/*  #!redirects to g.penzai.com
 *://*.di02.biz/*
+*://*.di06.biz/*
 *://*.di13.biz/*
 *://*.di50775354.blog.fc2.com/*
 *://*.dianebarnnoe.pixnet.net/*
@@ -3945,6 +3975,7 @@
 *://*.diollarrentacar.buzz/*  #!redirects to g.penzai.com
 *://*.dioys.com/*  #redirects to g.penzai.com
 *://*.direct-to-u.buzz/*  #redirects to g.penzai.com
+*://*.directcpmfwr.com/*  #redirects to yabohash.store
 *://*.directgrillage.fr/*  #redirects to qabayz.site
 *://*.directoriogratis.buzz/*  #!redirects to g.penzai.com
 *://*.direqx.com/*  #!redirects to g.penzai.com
@@ -4008,6 +4039,7 @@
 *://*.dn878ou.cn/*  #redirects to g.penzai.com
 *://*.dnc8.cn/*  #redirects to g.penzai.com
 *://*.dnd70ze49n.pixnet.net/*
+*://*.dnet-bangladesh.org/*
 *://*.dnews.cc/*
 *://*.dnf0451.com/*  #redirects to g.penzai.com
 *://*.dnf1121cru.pixnet.net/*
@@ -4135,6 +4167,7 @@
 *://*.duqingming.com/*  #redirects to g.penzai.com
 *://*.durenzhe.com/*  #redirects to g.penzai.com
 *://*.dushi0375.com/*  #!redirects to g.penzai.com
+*://*.dushiliangpin.com/*
 *://*.dushiqy.com/*  #redirects to g.penzai.com
 *://*.dustinwandcon.pixnet.net/*
 *://*.dutyio130.pixnet.net/*
@@ -4419,6 +4452,7 @@
 *://*.empire-clothing.buzz/*  #redirects to g.penzai.com
 *://*.emq7bfdelh84.pixnet.net/*
 *://*.en09223623.pixnet.net/*
+*://*.enaizh.co/*  #redirects to goake.top
 *://*.encdfvo.cn/*  #redirects to g.penzai.com
 *://*.endethod.co/*  #!redirects to cacnka.xyz
 *://*.endsm.cn/*  #redirects to g.penzai.com
@@ -4426,6 +4460,7 @@
 *://*.enews.com.tw/*
 *://*.enews.tw/*
 *://*.enewspace.com/*
+*://*.engineeringjobs4u.co.uk/*
 *://*.english-today.cn/*  #redirects to g.penzai.com
 *://*.english-tut.ru/*  #!redirects to agreebetteriron.top
 *://*.engrtext.buzz/*  #redirects to g.penzai.com
@@ -4521,6 +4556,7 @@
 *://*.euy90wr15e.pixnet.net/*
 *://*.ev3vtev.cn/*  #redirects to g.penzai.com
 *://*.evalvzw.cn/*  #redirects to g.penzai.com
+*://*.evanotty.net/*
 *://*.evanschristsi.pixnet.net/*
 *://*.evanshb2b877.pixnet.net/*
 *://*.evansrjs54xw.pixnet.net/*
@@ -4789,6 +4825,7 @@
 *://*.fdccpw.com/*  #redirects to g.penzai.com
 *://*.fdctop.cn/*  #redirects to g.penzai.com
 *://*.fddnv57991.pixnet.net/*
+*://*.fdf22.com/*
 *://*.fdf41.com/*
 *://*.fdf42.com/*
 *://*.fdf55.com/*
@@ -4899,6 +4936,7 @@
 *://*.fjbymy.com/*  #redirects to g.penzai.com
 *://*.fjcdt.com/*  #!redirects to g.penzai.com
 *://*.fjdingyun.com/*  #redirects to g.penzai.com
+*://*.fjhbg.cn/*
 *://*.fjhgm.com/*  #redirects to g.penzai.com
 *://*.fjjbwz.com/*  #redirects to g.penzai.com
 *://*.fjljbl.com/*  #!redirects to g.penzai.com
@@ -4957,6 +4995,7 @@
 *://*.fofunny.com/*
 *://*.folkswggn.co/*  #!redirects to cacnka.xyz
 *://*.foltolik.co/*  #!redirects to cacnka.xyz
+*://*.fondofgame.com/*
 *://*.foodtagtw.com/*
 *://*.foodytw.com/*
 *://*.forbb.cn/*  #redirects to g.penzai.com
@@ -5015,6 +5054,7 @@
 *://*.fredpeterpxc.pixnet.net/*
 *://*.freedomymqcb.sa.com/*
 *://*.freeguo.com/*  #redirects to g.penzai.com
+*://*.freejobalerts24.com/*
 *://*.freek.jp.net/*  #!redirects to se10.biz
 *://*.freesexvideosonline.buzz/*  #!redirects to g.penzai.com
 *://*.freesunn.co/*  #!redirects to keecnya.xyz
@@ -5236,6 +5276,7 @@
 *://*.gahongyun.com/*  #redirects to g.penzai.com
 *://*.gaiasam.co/*  #!redirects to cacnka.xyz
 *://*.gailarnoldray.pixnet.net/*
+*://*.galacticwraps.at/*  #redirects to na-madagaskar.sk
 *://*.galleri50.com/*  #redirects to g.penzai.com
 *://*.game2.tw/*
 *://*.gamecasa.cn/*
@@ -5310,6 +5351,7 @@
 *://*.georgistepur.pixnet.net/*
 *://*.geraldipie16.pixnet.net/*
 *://*.gerecippower.buzz/*  #!redirects to g.penzai.com
+*://*.gerenjianli.com/*
 *://*.gergj.top/*
 *://*.get-the-prize-ht3.live/*  #redirects to rnjklz.singlelettercry.top
 *://*.getaoquan.com/*  #redirects to g.penzai.com
@@ -5356,6 +5398,7 @@
 *://*.gigcasa.com/*
 *://*.gik48tq35k.blog.fc2.com/*
 *://*.ginafiroa.co/*  #!redirects to procnw.xyz
+*://*.ginseemore.live/*
 *://*.girard-lakecity.buzz/*  #!redirects to g.penzai.com
 *://*.girlboy.cn/*  #redirects to g.penzai.com
 *://*.giters.com/*
@@ -5505,6 +5548,8 @@
 *://*.goufangbj.cn/*  #redirects to g.penzai.com
 *://*.gougeili8.com/*  #redirects to g.penzai.com
 *://*.goulanyaozhai.com.cn/*  #redirects to g.penzai.com
+*://*.gouma.org/*
+*://*.goyeah.tw/*
 *://*.gp44512935.pixnet.net/*
 *://*.gp5vllt.cn/*  #redirects to g.penzai.com
 *://*.gpqii.com/*  #歡享網
@@ -5526,6 +5571,7 @@
 *://*.gradd.cn/*  #redirects to g.penzai.com
 *://*.grafiquesmaral.buzz/*  #!redirects to g.penzai.com
 *://*.grahamiy40.pixnet.net/*
+*://*.gramhir.com/*
 *://*.grantleerx.pixnet.net/*
 *://*.gravespagoyrr.pixnet.net/*
 *://*.grcamerada.com/*
@@ -5541,6 +5587,7 @@
 *://*.greattop.cn/*  #redirects to g.penzai.com
 *://*.greenelagawr.pixnet.net/*
 *://*.greeniolidays.me/*  #redirects to cznono.xyz
+*://*.greentekme.com/*
 *://*.greentravelnwanders.co/*  #!redirects to keecnya.xyz
 *://*.greenvallrepir.co/*  #!redirects to keecnya.xyz
 *://*.gregorbetrjdm.pixnet.net/*
@@ -5549,6 +5596,7 @@
 *://*.grhqrx.cn/*  #redirects to g.penzai.com
 *://*.griffik1xb1.pixnet.net/*
 *://*.grizwood.buzz/*  #!redirects to g.penzai.com
+*://*.grjlz.com/*
 *://*.grosse-chatte.buzz/*  #!redirects to g.penzai.com
 *://*.grosshaendler.me/*  #!redirects to ppcnzi.xyz
 *://*.groupcspsp.co/*  #!redirects to cacnka.xyz
@@ -5860,6 +5908,7 @@
 *://*.haojdwx.com/*
 *://*.haojiaya.com/*  #redirects to g.penzai.com
 *://*.haojvzi.com/*
+*://*.haokuaisou.cc/*
 *://*.haolookr.com/*
 *://*.haomeng168.com/*  #redirects to g.penzai.com
 *://*.haoqzk.com/*  #redirects to g.penzai.com
@@ -6161,6 +6210,7 @@
 *://*.hklaughpic.com/*  #愛縮兔 (農場轉址)
 *://*.hklocalpress.com/*  #愛縮兔 (農場轉址)
 *://*.hkltu73.cn/*  #redirects to g.penzai.com
+*://*.hkmysan.com/*
 *://*.hknews.live/*  #redirects to ifunblog.com
 *://*.hknews.pro/*
 *://*.hknewshub.com/*  #愛縮兔 (農場轉址)
@@ -6202,6 +6252,7 @@
 *://*.hmqcx263zf.pixnet.net/*
 *://*.hmrcaq.co/*
 *://*.hmsagwq.cn/*  #redirects to g.penzai.com
+*://*.hmshffj.com/*
 *://*.hmyds.com/*  #!redirects to g.penzai.com
 *://*.hmyecrk.cn/*  #redirects to g.penzai.com
 *://*.hn01182994.pixnet.net/*
@@ -6569,6 +6620,7 @@
 *://*.i7pbo2i5cfh.blog.fc2.com/*
 *://*.i7rpc9r4pto.pixnet.net/*
 *://*.i7w6w7.wordpress.com/*
+*://*.i88kk.com/*
 *://*.i8cio6uy22.blog.fc2.com/*
 *://*.i8i2c8d3rk7.blog.fc2.com/*
 *://*.i8jwl9n5sy4.pixnet.net/*
@@ -6830,16 +6882,19 @@
 *://*.it145.com/*
 *://*.it235.cn/*  #redirects to g.penzai.com
 *://*.it5120.com/*  #redirects to g.penzai.com
+*://*.it610.com/*
 *://*.itaiwanfood.com/*
 *://*.italgrip.buzz/*  #!redirects to g.penzai.com
 *://*.itaotaotao.com/*  #redirects to g.penzai.com
 *://*.itbaoku.cn/*
 *://*.itchosun.buzz/*  #!redirects to g.penzai.com
+*://*.itcn.blog/*
 *://*.itd1268dwy.blog.fc2.com/*
 *://*.itdminin.co/*  #!redirects to procnw.xyz
 *://*.ite85hg74z.pixnet.net/*
 *://*.iter01.com/*
 *://*.itestquiz.com/*
+*://*.itigic.com/*
 *://*.itishealthtime.com/*
 *://*.itislooker.com/*
 *://*.itislooker.net/*
@@ -7056,6 +7111,7 @@
 *://*.japare.com/*
 *://*.jasve.com/*
 *://*.javajgs.com/*
+*://*.javashuo.com/*
 *://*.javdiy.xyz/*
 *://*.jaweno.com/*  #redirects to g.penzai.com
 *://*.jayagy.com/*  #redirects to g.penzai.com
@@ -7129,6 +7185,7 @@
 *://*.jetsharon.com/*  #redirects to g.penzai.com
 *://*.jetxco.co/*  #!redirects to procnw.xyz
 *://*.jewishsuperstore.buzz/*  #redirects to g.penzai.com
+*://*.jf-tendais.com/*
 *://*.jf79577518.pixnet.net/*
 *://*.jfarmerk1.pixnet.net/*
 *://*.jfcxguan.com/*  #redirects to g.penzai.com
@@ -7184,6 +7241,7 @@
 *://*.jieshikj.com/*  #redirects to g.penzai.com
 *://*.jietouxzz.com/*  #!redirects to g.penzai.com
 *://*.jiewanju.com/*  #redirects to g.penzai.com
+*://*.jieyouw.com/*
 *://*.jifutang68.com/*  #redirects to g.penzai.com
 *://*.jihmypd.co/*  #!redirects to procnw.xyz
 *://*.jijisf.com/*  #redirects to g.penzai.com
@@ -7217,6 +7275,7 @@
 *://*.jinlvzdh.com/*  #redirects to g.penzai.com
 *://*.jinmeiba.com/*  #!redirects to g.penzai.com
 *://*.jinmeiting.com/*  #redirects to g.penzai.com
+*://*.jinrih.com/*
 *://*.jinweilw.com/*  #redirects to g.penzai.com
 *://*.jinxw.cn/*  #redirects to g.penzai.com
 *://*.jinzhan.me/*  #!redirects to ppcnzi.xyz
@@ -7334,6 +7393,7 @@
 *://*.jonygame.com/*
 *://*.joo51k1.pixnet.net/*
 *://*.joosangny.me/*  #redirects to meetwill.xyz
+*://*.jordanbeat.com/*
 *://*.josephbeckwol.pixnet.net/*
 *://*.josephmagazine.buzz/*  #redirects to g.penzai.com
 *://*.josephrodwood.pixnet.net/*
@@ -7624,6 +7684,7 @@
 *://*.kangkang.life/*
 *://*.kanglaikangqu.site/*
 *://*.kangmile.cn/*  #redirects to g.penzai.com
+*://*.kangquanfood.com/*  #nearly
 *://*.kanneenkruike.buzz/*  #!redirects to g.penzai.com
 *://*.kannewscast.com/*
 *://*.kanreport.com/*  #歡享網
@@ -7694,6 +7755,7 @@
 *://*.kexinfood.com/*  #redirects to g.penzai.com
 *://*.key8.net/*
 *://*.kf80464190.pixnet.net/*
+*://*.kfd.me/*  #偽造維基百科
 *://*.kfpza.cn/*  #redirects to g.penzai.com
 *://*.kg1xzz.cn/*  #redirects to g.penzai.com
 *://*.kg89734866.pixnet.net/*
@@ -7834,6 +7896,7 @@
 *://*.kpo14ho42p.blog.fc2.com/*
 *://*.kpoppunch.com/*
 *://*.kpraise.com/*  #!redirects to g.penzai.com
+*://*.kpzs.com/*
 *://*.kq3hxcw3.pixnet.net/*
 *://*.kq68.cn/*  #redirects to g.penzai.com
 *://*.kq82.cn/*  #redirects to g.penzai.com
@@ -8058,6 +8121,7 @@
 *://*.lancekatdwn2.pixnet.net/*
 *://*.landisem.com/*  #redirects to g.penzai.com
 *://*.langemfo.com/*  #redirects to g.penzai.com
+*://*.langningpiano.com/*
 *://*.lanh1.com/*  #redirects to g.penzai.com
 *://*.lansphoto.com/*  #redirects to g.penzai.com
 *://*.lantiga.buzz/*  #redirects to g.penzai.com
@@ -8118,6 +8182,7 @@
 *://*.ldc99.com/*  #redirects to g.penzai.com
 *://*.ldd91ld31z.blog.fc2.com/*
 *://*.ldjljmh.cn/*  #redirects to g.penzai.com
+*://*.ldlgzs.com/*
 *://*.ldmeyjimmyjed.pixnet.net/*
 *://*.ldnpslv.cn/*  #redirects to g.penzai.com
 *://*.ldoda.cn/*  #redirects to g.penzai.com
@@ -8691,6 +8756,7 @@
 *://*.malaysiatimes.site/*  #大榴槤/大時代/GreatDaily/閃文聯盟/琦琦~
 *://*.maldonaconalf.pixnet.net/*
 *://*.malilian.cn/*  #redirects to g.penzai.com
+*://*.malirstvi-nedorostek.cz/*  #redirects to topawardhere.life
 *://*.mall0530.com/*  #redirects to g.penzai.com
 *://*.mall0539.com/*  #!redirects to g.penzai.com
 *://*.mall0635.com/*  #redirects to g.penzai.com
@@ -8805,6 +8871,7 @@
 *://*.md93.cn/*  #redirects to g.penzai.com
 *://*.mdb12pg07h.pixnet.net/*
 *://*.mdcbbs.cn/*  #redirects to g.penzai.com
+*://*.mdeditor.tw/*
 *://*.mdgh8mn.cn/*  #redirects to g.penzai.com
 *://*.mdk85be66f.blog.fc2.com/*
 *://*.mdkp617.pixnet.net/*
@@ -8889,6 +8956,7 @@
 *://*.mh28h21.pixnet.net/*
 *://*.mh33.cn/*  #redirects to g.penzai.com
 *://*.mh96.cn/*  #redirects to g.penzai.com
+*://*.mhaohuo.com/*
 *://*.mhgoodtimes.com/*
 *://*.mhgrtzs.cn/*
 *://*.mhk5rkt.cn/*  #redirects to g.penzai.com
@@ -8980,6 +9048,7 @@
 *://*.mlq90rw.cn/*  #redirects to g.penzai.com
 *://*.mlr8.cn/*  #redirects to g.penzai.com
 *://*.mltwnyy.cn/*  #redirects to g.penzai.com
+*://*.mm110.net/*  #redirects to 1redirc.com
 *://*.mm32414045.pixnet.net/*
 *://*.mmfmzs.com/*  #redirects to g.penzai.com
 *://*.mmin12.club/*  #愛縮兔 (農場轉址)
@@ -9000,6 +9069,7 @@
 *://*.mnsf.net/*  #redirects to g.penzai.com
 *://*.mnykexv.cn/*  #redirects to g.penzai.com
 *://*.mo-dmp.buzz/*  #!redirects to g.penzai.com
+*://*.mo08.biz/*  #malicious ads scripts
 *://*.mo990.com/*
 *://*.moaera.com/*  #!redirects to g.penzai.com
 *://*.mobiccae.xyz/*  #redirects to keecnya.xyz
@@ -9200,6 +9270,7 @@
 *://*.myronlevoy.buzz/*  #!redirects to g.penzai.com
 *://*.mysgcw.com/*  #redirects to g.penzai.com
 *://*.myshop111.pixnet.net/*
+*://*.mysleniekreatywne.pl/*  #redirects to di02.biz
 *://*.myspotnews.com/*
 *://*.mystical.press/*
 *://*.mytieins.me/*  #redirects to meetwill.xyz
@@ -9343,6 +9414,7 @@
 *://*.naijapams.me/*  #!redirects to ppcnzi.xyz
 *://*.naijasme.buzz/*  #redirects to g.penzai.com
 *://*.nailaila.cn/*  #redirects to g.penzai.com
+*://*.naimei.com.tw/*
 *://*.najvagame.com/*
 *://*.namasteconnecticut.buzz/*  #redirects to g.penzai.com
 *://*.nameonly.cn/*  #redirects to g.penzai.com
@@ -9429,6 +9501,7 @@
 *://*.new0059.com/*  #redirects to g.penzai.com
 *://*.new2mh.com/*
 *://*.newbedev.com/*  #spider of stackoverflow.com
+*://*.newbolunesport.com/*
 *://*.newcoasrties.co/*  #!redirects to keecnya.xyz
 *://*.newdaily.cn/*  #redirects to g.penzai.com
 *://*.newdragonhostelbeijing.cn/*  #redirects to g.penzai.com
@@ -9576,6 +9649,7 @@
 *://*.noiseofmax.net/*  #redirects to g.penzai.com
 *://*.nomurlar.com/*  #!redirects to g.penzai.com
 *://*.nonamesrry.co/*  #!redirects to cacnka.xyz
+*://*.nongjia888.com/*
 *://*.nonglidqw.com/*  #!redirects to g.penzai.com
 *://*.nonglinyumu.com/*
 *://*.nonlehui.com/*  #redirects to g.penzai.com
@@ -9592,9 +9666,11 @@
 *://*.notd-angle.com/*
 *://*.notebz.com/*
 *://*.notesfrmthclud.co/*
+*://*.nothing82.com/*
 *://*.nothingshare.com/*
 *://*.notmyfirstrodeoblog.me/*  #redirects to ppcnzi.xyz
 *://*.nourite.co/*  #!redirects to cacnka.xyz
+*://*.novapromotion.fr/*  #redirects to cubicongardens.sk
 *://*.novbox.buzz/*  #redirects to g.penzai.com
 *://*.novelfeed.com/*
 *://*.nowlooker.com/*
@@ -9838,6 +9914,7 @@
 *://*.okhl4ak.cn/*  #redirects to g.penzai.com
 *://*.oklahios.me/*  #redirects to cznono.xyz
 *://*.okozen.co/*  #redirects to goake.top
+*://*.oktoberfest-bj.com/*
 *://*.oktree.cn/*  #redirects to g.penzai.com
 *://*.okungshoes.com/*  #redirects to g.penzai.com
 *://*.oky00ga44m.pixnet.net/*
@@ -9876,6 +9953,7 @@
 *://*.omgnews.cc/*
 *://*.omgnews.life/*
 *://*.omgtw.com/*  #boMb01
+*://*.omobi.cc/*
 *://*.omsri.cn/*  #redirects to g.penzai.com
 *://*.omura.me/*  #!redirects to ppcnzi.xyz
 *://*.omz666.com/*  #!redirects to g.penzai.com
@@ -9990,9 +10068,11 @@
 *://*.oszps059ze.pixnet.net/*
 *://*.ot1yc0v.cn/*  #redirects to g.penzai.com
 *://*.ot3lw4b.cn/*  #redirects to g.penzai.com
+*://*.otakufuns.com/*
 *://*.otakuni.co/*
 *://*.otcrong.com/*  #redirects to g.penzai.com
 *://*.oth03bk64n.blog.fc2.com/*
+*://*.otransformation.com/*
 *://*.otu80jn.cn/*  #redirects to g.penzai.com
 *://*.oubafeng.com/*
 *://*.oudebaosw.com/*
@@ -10001,6 +10081,7 @@
 *://*.ourfitnest.co/*  #redirects to procnw.xyz
 *://*.ourmercado.buzz/*  #!redirects to g.penzai.com
 *://*.ourplacelchsidelnclden.co/*  #!redirects to keecnya.xyz
+*://*.ourplay.net/*
 *://*.ourptt.com/*
 *://*.ours2008.com/*  #redirects to g.penzai.com
 *://*.ourstarsky.com/*
@@ -10226,9 +10307,11 @@
 *://*.pcmgkkv.co/*  #!redirects to keecnya.xyz
 *://*.pcnews.me/*  #愛縮兔 (農場轉址)
 *://*.pcpc.me/*
+*://*.pcppw.com/*
 *://*.pctantao.com/*
 *://*.pcuovl.cn/*  #redirects to g.penzai.com
 *://*.pcx41cx10p.blog.fc2.com/*
+*://*.pcying.com/*
 *://*.pczdyc.com/*  #redirects to g.penzai.com
 *://*.pd4xe56.cn/*  #redirects to g.penzai.com
 *://*.pdatopics.buzz/*  #!redirects to g.penzai.com
@@ -10423,6 +10506,7 @@
 *://*.pnk2.com/*
 *://*.pnk659.com/*
 *://*.pns8.cn/*  #redirects to g.penzai.com
+*://*.pny5.com/*
 *://*.pny555.com/*
 *://*.pny966.com/*
 *://*.pny995.com/*
@@ -10450,6 +10534,7 @@
 *://*.popeac.co/*  #redirects to aetop.top
 *://*.popllaf.cn/*  #redirects to g.penzai.com
 *://*.poporead.com/*
+*://*.poqna.top/*
 *://*.porn-girls.buzz/*  #redirects to g.penzai.com
 *://*.porno-rama.buzz/*  #redirects to g.penzai.com
 *://*.pornolesbians.buzz/*  #!redirects to g.penzai.com
@@ -10919,9 +11004,11 @@
 *://*.qtddbzm.cn/*  #redirects to g.penzai.com
 *://*.qtlil.me/*  #!redirects to ppcnzi.xyz
 *://*.qtsr36.cn/*  #!redirects to g.penzai.com
+*://*.qtvcd.com/*
 *://*.qu02.com/*
 *://*.quaaliean219.co/*  #!redirects to procnw.xyz
 *://*.quadriumk.co/*  #!redirects to keecnya.xyz
+*://*.quaiwang123.com/*
 *://*.qualidogs.co/*  #!redirects to procnw.xyz
 *://*.quality-info.cn/*  #redirects to g.penzai.com
 *://*.quangaoxie.com/*  #redirects to g.penzai.com
@@ -11223,11 +11310,13 @@
 *://*.renfas.com/*  #redirects to g.penzai.com
 *://*.renliuhs.cn/*  #redirects to g.penzai.com
 *://*.rentals-bg.buzz/*  #!redirects to g.penzai.com
+*://*.repingke.com/*
 *://*.replidelujo.co/*  #!redirects to keecnya.xyz
 *://*.replydiscusstool.xyz/*  #!malicious ads scripts
 *://*.reportry.co/*  #!redirects to keecnya.xyz
 *://*.reredispatch.com/*
 *://*.rerewo.com/*
+*://*.residence-lartdoise.eu/*  #redirects to videoplay-on.com
 *://*.resoleusa.buzz/*  #redirects to g.penzai.com
 *://*.resolutionrealtyinc.buzz/*  #!redirects to g.penzai.com
 *://*.retailtagtw.com/*
@@ -11267,6 +11356,7 @@
 *://*.rhw8.cn/*  #redirects to g.penzai.com
 *://*.ri61478467.blog.fc2.com/*
 *://*.ribenzyy.com/*  #redirects to g.penzai.com
+*://*.ribet333.com/*
 *://*.ricardolaur98.pixnet.net/*
 *://*.ricarhouse.co/*  #!redirects to keecnya.xyz
 *://*.ricefits.com/*
@@ -11394,6 +11484,7 @@
 *://*.rscmy365.com/*  #!redirects to g.penzai.com
 *://*.rsjn4h1.cn/*  #redirects to g.penzai.com
 *://*.rsk26.com/*  #redirects to tspweb.com
+*://*.rssing.com/*
 *://*.rstlnrok.co/*  #!redirects to procnw.xyz
 *://*.rstzjt.com/*  #redirects to g.penzai.com
 *://*.rsw59lk83d.blog.fc2.com/*
@@ -11480,6 +11571,7 @@
 *://*.rzhpv13537.pixnet.net/*
 *://*.rzso047.pixnet.net/*
 *://*.rzt8.cn/*  #redirects to g.penzai.com
+*://*.rzurl.com/*
 *://*.rzv16ki80w.blog.fc2.com/*
 *://*.s0411.com/*  #!redirects to g.penzai.com
 *://*.s0f5v35ah3.pixnet.net/*
@@ -11562,6 +11654,7 @@
 *://*.saloidant.co/*  #!redirects to procnw.xyz
 *://*.salonseudunasunnot.buzz/*  #redirects to g.penzai.com
 *://*.salrodriguez.me/*  #!redirects to ppcnzi.xyz
+*://*.saludarmonia.cl/*  #redirects to qabayz.site
 *://*.salute88.com/*
 *://*.salvadjifj27.pixnet.net/*
 *://*.sambamusst.co/*  #!redirects to procnw.xyz
@@ -11701,6 +11794,7 @@
 *://*.seoeol.com/*  #redirects to g.penzai.com
 *://*.seopupil.com/*  #redirects to g.penzai.com
 *://*.seortpa.co/*  #!redirects to procnw.xyz
+*://*.sergiofoto.lv/*  #redirects to ginseemore.live
 *://*.sergiogwqx.pixnet.net/*
 *://*.sexptt.tk/*  #168ptt.com
 *://*.sextoys-and-more.buzz/*  #!redirects to g.penzai.com
@@ -11820,6 +11914,7 @@
 *://*.shoucangzx.com/*  #redirects to g.penzai.com
 *://*.shoujidaren.com/*
 *://*.shoujifbb.com/*  #!redirects to g.penzai.com
+*://*.shoujiwan.com/*
 *://*.shoulu6.com/*  #redirects to g.penzai.com
 *://*.shoushu5551.cn/*  #redirects to g.penzai.com
 *://*.shouye-wang.com/*
@@ -11917,6 +12012,7 @@
 *://*.sjwencr.cn/*  #redirects to g.penzai.com
 *://*.sjxc2008.com/*  #redirects to g.penzai.com
 *://*.sjysjy78.co/*  #!redirects to procnw.xyz
+*://*.sjzjcjy.net/*
 *://*.sjzlangtai.com/*  #!redirects to g.penzai.com
 *://*.sjzp8.com/*  #redirects to g.penzai.com
 *://*.sjztdhg.com/*  #redirects to g.penzai.com
@@ -12030,6 +12126,7 @@
 *://*.soulbay.tw/*
 *://*.soumeiyi.com/*  #!redirects to g.penzai.com
 *://*.soumiyu.com/*
+*://*.sousou88.com/*
 *://*.southprong.buzz/*  #!redirects to g.penzai.com
 *://*.souxxw.co/*  #!redirects to procnw.xyz
 *://*.sovalvo.com/*
@@ -12104,6 +12201,7 @@
 *://*.stackoom.com/*
 *://*.stamp3.com/*
 *://*.stanaback.buzz/*  #redirects to g.penzai.com
+*://*.standardsversion.com/*
 *://*.standrwslt.co/*  #!redirects to cacnka.xyz
 *://*.stanleyguoflw.pixnet.net/*
 *://*.star-walk.buzz/*  #!redirects to g.penzai.com
@@ -12129,6 +12227,8 @@
 *://*.steamxo.com/*
 *://*.steelebrettmu.pixnet.net/*
 *://*.steelefra1066.pixnet.net/*
+*://*.steemit.com/*
+*://*.steffieshundesalon.ch/*  #redirects to topawardhere.life
 *://*.steinlingaerten.ch/*
 *://*.stendon.co/*  #!redirects to procnw.xyz
 *://*.stephedq541h.pixnet.net/*
@@ -12207,6 +12307,7 @@
 *://*.suomenut.co/*  #!redirects to ppcnzi.xyz
 *://*.suonci.co/*  #!redirects to procnw.xyz
 *://*.super-puppys.com/*
+*://*.super-unix.com/*
 *://*.super01.cc/*  #redirects to www.cocomy.net
 *://*.superbigapple.com/*
 *://*.superchanges.buzz/*  #redirects to g.penzai.com
@@ -12251,6 +12352,7 @@
 *://*.sxingzhe.com/*  #redirects to g.penzai.com
 *://*.sxjswhcm.com/*  #redirects to g.penzai.com
 *://*.sxp8.cn/*  #redirects to g.penzai.com
+*://*.sxqhmy.com/*
 *://*.sxsqsm.com/*  #!redirects to g.penzai.com
 *://*.sxtelp.cn/*  #redirects to g.penzai.com
 *://*.sxwddq.com/*  #redirects to g.penzai.com
@@ -12261,6 +12363,7 @@
 *://*.sy-pc.cn/*  #redirects to g.penzai.com
 *://*.sy4olsonsvv.pixnet.net/*
 *://*.sybw63phyflor.pixnet.net/*
+*://*.sycmd.com/*
 *://*.sydneytoday.com/*
 *://*.sydzzc.com/*  #!redirects to g.penzai.com
 *://*.syfckj.com/*  #redirects to g.penzai.com
@@ -12493,6 +12596,7 @@
 *://*.taiwandiginews.com.tw/*  #指動傳播科技有限公司
 *://*.taiwanfansclub.com/*
 *://*.taiwanlikes.com/*
+*://*.taiwanmoigov.com/*
 *://*.taiyoukotori.co/*  #!redirects to procnw.xyz
 *://*.tajz5c.cn/*  #redirects to g.penzai.com
 *://*.talksnew.com/*
@@ -12500,6 +12604,7 @@
 *://*.taluopp.com/*  #redirects to g.penzai.com
 *://*.talygc.com/*  #!redirects to g.penzai.com
 *://*.tamiloprk.co/*  #redirects to keecnya.xyz
+*://*.tamishe.cn/*
 *://*.tammyhawko5.pixnet.net/*
 *://*.tandeclub.com/*  #redirects to g.penzai.com
 *://*.tang-seo.com/*
@@ -12571,6 +12676,7 @@
 *://*.tec98226548shou.wordpress.com/*
 *://*.techgerdv.co/*  #!redirects to cacnka.xyz
 *://*.techroomage.com/*
+*://*.techrum.vn/*
 *://*.techtagtw.com/*
 *://*.tedperkinsv5.pixnet.net/*
 *://*.tedwardgl.co/*  #redirects to cacnka.xyz
@@ -12588,6 +12694,7 @@
 *://*.tellus.jp.net/*  #!redirects to se10.biz
 *://*.temedtns.co/*  #!redirects to cacnka.xyz
 *://*.tengxinzs.com/*  #redirects to g.penzai.com
+*://*.terabitweb.com/*
 *://*.termicasolar.net/*  #!redirects to g.penzai.com
 *://*.terrainal.co/*  #!redirects to procnw.xyz
 *://*.terraze96l.pixnet.net/*
@@ -12698,6 +12805,8 @@
 *://*.tibet-internal.buzz/*  #!redirects to g.penzai.com
 *://*.tiengtrung.cn/*
 *://*.tierre-laser.buzz/*  #!redirects to g.penzai.com
+*://*.tiezhushuo.com/*
+*://*.tiezhushuo.zhaopindi.cn/*
 *://*.tighdies.co/*  #!redirects to keecnya.xyz
 *://*.tigotool.com/*  #redirects to g.penzai.com
 *://*.tigw96207423.wordpress.com/*
@@ -12738,6 +12847,7 @@
 *://*.tjlbr57593.pixnet.net/*
 *://*.tjlianhe.com/*  #redirects to g.penzai.com
 *://*.tjlonghui.com/*
+*://*.tjlqtwx.com/*  #nearly #R18
 *://*.tjlxffmy.com/*  #redirects to g.penzai.com
 *://*.tjoivh9.cn/*  #redirects to g.penzai.com
 *://*.tjoqfl543.pixnet.net/*
@@ -12823,6 +12933,7 @@
 *://*.top-wechat.com/*  #redirects to g.penzai.com
 *://*.top0718.com/*  #redirects to g.penzai.com
 *://*.top10bikeguide.com.tw/*
+*://*.topawardhere.life/*  #redirects to ginseemore.live
 *://*.topbester.com/*
 *://*.topitinfo.com/*
 *://*.toplawfirm.cn/*  #redirects to g.penzai.com
@@ -12980,6 +13091,7 @@
 *://*.tw.begin-it.com/*
 *://*.tw.observer/*
 *://*.tw.phonecardsoftware.com/*
+*://*.tw.sumry.org/*
 *://*.tw1988.link/*
 *://*.tw520.me/*
 *://*.tw90427176.pixnet.net/*
@@ -13033,6 +13145,7 @@
 *://*.tyinfonet.buzz/*  #redirects to g.penzai.com
 *://*.tyjoa.com/*  #redirects to g.penzai.com
 *://*.tykudj.cn/*  #redirects to g.penzai.com
+*://*.tyldl.com/*
 *://*.tylersimsnpvg.pixnet.net/*
 *://*.tylerwaljgg.pixnet.net/*
 *://*.tym100.com/*  #!redirects to g.penzai.com
@@ -13144,6 +13257,7 @@
 *://*.ueubzya.cn/*  #!redirects to g.penzai.com
 *://*.uf4pagevirgil.pixnet.net/*
 *://*.ufakkk.buzz/*  #redirects to g.penzai.com
+*://*.ufgame.com/*
 *://*.ufmsjx6.cn/*  #redirects to g.penzai.com
 *://*.ufvpztw.cn/*  #redirects to g.penzai.com
 *://*.ugrfwt382.pixnet.net/*
@@ -13154,6 +13268,7 @@
 *://*.uhf8562ldw.blog.fc2.com/*
 *://*.uhlist.buzz/*  #redirects to g.penzai.com
 *://*.uhnupst5omnz.pixnet.net/*
+*://*.uhuacall.com/*
 *://*.uibtzj.cn/*  #redirects to g.penzai.com
 *://*.uibulo.com/*  #redirects to g.penzai.com
 *://*.uicf635.pixnet.net/*
@@ -13229,6 +13344,7 @@
 *://*.ustvchristnl.pixnet.net/*
 *://*.usy68as28y.blog.fc2.com/*
 *://*.utb6889veu.blog.fc2.com/*
+*://*.uthopiaprogettazione.it/*  #redirects to cubicongardens.sk
 *://*.utouchapp.com/*  #redirects to g.penzai.com
 *://*.utppzuj.buzz/*  #redirects to g.penzai.com
 *://*.utravelerpedia.com/*
@@ -13243,6 +13359,7 @@
 *://*.uutopic.com/*
 *://*.uuypf707qw.pixnet.net/*
 *://*.uv32iarnoldxu.pixnet.net/*
+*://*.uvc-protection.ch/*  #redirects to sergiofoto.lv
 *://*.uvuqs50.cn/*  #redirects to g.penzai.com
 *://*.uvvgov.com/*
 *://*.uw392.com/*  #redirects to g.penzai.com
@@ -13450,6 +13567,7 @@
 *://*.viddie.buzz/*  #redirects to g.penzai.com
 *://*.video-lab.net/*
 *://*.videogameplaza.buzz/*  #!redirects to g.penzai.com
+*://*.videoplay-on.com/*
 *://*.vidvuder.co/*  #!redirects to cacnka.xyz
 *://*.viennhotelta.co/*  #!redirects to keecnya.xyz
 *://*.viewpointcom.buzz/*  #!redirects to g.penzai.com
@@ -13810,7 +13928,10 @@
 *://*.wendylonnraf.pixnet.net/*
 *://*.wendymyrtlf.pixnet.net/*
 *://*.wenjutv.com/*
+*://*.wenku.51job.com/*
+*://*.wenku1.com/*
 *://*.wenlongkm.com/*  #redirects to g.penzai.com
+*://*.werkstatt-galerie.ch/*  #redirects to sergiofoto.lv
 *://*.werkthewb.co/*  #redirects to cacnka.xyz
 *://*.weswift.cn/*  #redirects to g.penzai.com
 *://*.wetalk.tw/*
@@ -14249,6 +14370,7 @@
 *://*.x9zpv59bzt.pixnet.net/*
 *://*.xabbt.com/*  #redirects to g.penzai.com
 *://*.xagtfqw.com/*  #redirects to g.penzai.com
+*://*.xahaihongbz.com/*
 *://*.xajgjz.com/*  #!redirects to g.penzai.com
 *://*.xameiwo.com/*  #redirects to g.penzai.com
 *://*.xapic.cn/*  #redirects to g.penzai.com
@@ -14341,6 +14463,7 @@
 *://*.xianyounet.com/*  #redirects to g.penzai.com
 *://*.xianzuoba6.com/*  #redirects to g.penzai.com
 *://*.xiao66688.com/*  #redirects to g.penzai.com
+*://*.xiaobenzi.com/*
 *://*.xiaoerlx.cn/*  #redirects to g.penzai.com
 *://*.xiaohua369.cn/*  #redirects to g.penzai.com
 *://*.xiaokaili.com/*  #redirects to g.penzai.com
@@ -14437,6 +14560,7 @@
 *://*.xm018v3.pixnet.net/*
 *://*.xm3mhn.com/*  #redirects to g.penzai.com
 *://*.xm66955047.pixnet.net/*
+*://*.xm680.com/*
 *://*.xm96t.pixnet.net/*
 *://*.xmbtcm.com/*  #redirects to g.penzai.com
 *://*.xmctyhb.com/*  #!redirects to g.penzai.com
@@ -14481,6 +14605,7 @@
 *://*.xomba.com/*
 *://*.xop61nx07q.pixnet.net/*
 *://*.xoso88.buzz/*  #!redirects to g.penzai.com
+*://*.xp.cn/*
 *://*.xp373g9acd.blog.fc2.com/*
 *://*.xp7rb9.cn/*  #!redirects to g.penzai.com
 *://*.xp88925678.pixnet.net/*
@@ -14679,6 +14804,7 @@
 *://*.ya01z94wlb.pixnet.net/*
 *://*.ya0ue38.cn/*  #redirects to g.penzai.com
 *://*.yab168.co/*  #!redirects to procnw.xyz
+*://*.yabohash.store/*
 *://*.yadgu8g.cn/*  #redirects to g.penzai.com
 *://*.yadongfish.com/*  #redirects to g.penzai.com
 *://*.yafuzhenzhi.cn/*  #redirects to g.penzai.com
@@ -14778,6 +14904,7 @@
 *://*.yhjlgw.com/*  #redirects to g.penzai.com
 *://*.yhnnc.com/*  #redirects to g.penzai.com
 *://*.yhstnc.com/*  #redirects to g.penzai.com
+*://*.yhtwww.cn/*
 *://*.yhvhamt.cn/*  #redirects to g.penzai.com
 *://*.yhwdl.com/*  #!redirects to g.penzai.com
 *://*.yhyg08l.pixnet.net/*
@@ -15278,6 +15405,7 @@
 *://*.zg2rqg.cn/*  #redirects to g.penzai.com
 *://*.zgaodeli.com/*  #redirects to g.penzai.com
 *://*.zgd88yc96o.blog.fc2.com/*
+*://*.zgfs0563.com/*
 *://*.zggsgg.com/*  #redirects to g.penzai.com
 *://*.zghj114.cn/*  #redirects to g.penzai.com
 *://*.zgiqwns.cn/*  #redirects to g.penzai.com
@@ -15445,6 +15573,7 @@
 *://*.znfushi.com/*  #redirects to g.penzai.com
 *://*.zngy57z.cn/*  #redirects to g.penzai.com
 *://*.znh53hj59z.pixnet.net/*
+*://*.znj.com/*
 *://*.znkji.com/*  #redirects to g.penzai.com
 *://*.znljiayou.com/*
 *://*.znxjv19713.pixnet.net/*
@@ -15592,6 +15721,7 @@
 *://*.zzzhtrade.com/*  #redirects to g.penzai.com
 *://*.zzzxmryy.com/*  #redirects to g.penzai.com
 *://*.zzzysy.com/*  #redirects to g.penzai.com
+/https?:\/\/(?:www\.|(?!www\.))[\w.-]+\.(?:y2mate\.com)(?=[:\/?#]|$)/
 /https?:\/\/(?:[\w-]+\.)*(?:against24|ajbdfs|anytime999|atatyyu|axn2000|batadfg|bbstoplist|bjartga|bqaeghj|ccolorsky|chinanewstruth|chinesearticle666|dgaera|dghfhjf15jik|dioks|dsfgfhg12|dy7wywi|eghsbs|faminereports|fashionmanbuy|febeshopping|fgj47451s1os|fhjgh45fgj188|fsnwlkdonlw|fxghghj105|gamer\-ps3\-ps4\-web\-3ds|gbfdfsdf33|goodmemearticle|gsdtgfrhg18|haejare|haetgad|hittt\-fun|hittt|hyesfe31|hyfgfrg55|iagabz|iaherg|inspirationaltouching|ishare777|isuduw|itmd3|jgerwya|jhggtgy140|jradgf|keketest2|khgfgf42|khyhgy09|lengyuexuan213|lhhfgf35|ljnfgh|mababy168|meaeya|mf98etyt411|mnraga|momdata|mt47esfgj|myytaoli|nasrba|nayaadf|nbarga|ndfxvd|nrtasd|peopleinsider|pogood123|ptthot|pttweb|readingfromtheheart|rhashra|rthtyjt7425gyhht|satehj|sdfsdfsdfsdfb|share520s|soul66666|soulmate888|sportconwk|sportvlkwnld|swghn|swwgvszv|takesurveysforcash911|timlucky88|touchingstory3|touchingstory4|touchingstory5|touchingstory6|tw223com|underwears99|vahaea|vbsdfsda|vdsdss|vsafgjff|vsdgha|vygqef|wgdbsd|wghsf|whbsdfju|whgsb|xafgbnj|xatwe|xgthjea|xguha|xhkdse|xlnwkldonlw|xtgewag|xthqdsf|xzhreee|yadtrga|yhjaysd|zongyizixun|zxhrh|zzcsfe)\.blogspot\.(?:[\w.-]+)(?=[:\/?#]|$)/
 /^https?:\/\/mypaper\.(?:m\.)?pchome\.com\.tw\/(?:qqd63qq60d)(?=[\/?#]|$)/
 /^https?:\/\/(?:blog|album)\.udn\.com\/(?:mobile\/)?(?:a94xpv|aarongrmif4|aaronsghugd6j|adamcgy86b024|adf4p61|adrianb4wru|adrianq7331|ae94iw|agnesxnp1bjln|albertgv87c|albertie45u|alfredj46744|aliciaimrxqom|allanl854k7|almal4fn8k4ih|alvinl133jh|alvinw6y7ork4|amandaxesyx7|amybd35x2x2|amyco323j1b|anam14o36s8|anderscvv43x3|andersy38ui6|andreww841u|andyrodjk7ce|anital3fi780|anitav4be40w|annaip70y21w3|annehfgo6hy33|annettw8cmi81|anngylx64sq2|ap5858033e3|aprilkb7oatvu|arleneg0658|armstrj85y3|ashleywetk4|austinye2e7|b0721j7|b13g1hm1|b192wvr|b1p0tu32|b1p14h2v|b1rf1j17|b1wl3p|b1zl9d2|b2zp18f|b4rjd52|b7n5n579vl7|b8i12wx1|b9f1rs2|b9fp9q|ba22j2e|ba86533jge2|bakerm4rxug3p|bakeru323a01|barbardkkgoq|barbarfn7rki|barbere7360|barberit54jy|barkerb6dfmf|barnesa333f4|barnetl05rnwe|barretg54531|batesamm516q|batess4b2t21|bb112s4hj|bb15u1ar0|bb16i2xr1|bb4ikt25|bbcs47h|bbd1l123i|bbh2l4f5|bbjd266w|bbjh9e9|bblh13w|bbphk912|bbti1z172|bbvx2d45|beatrin8j805|beckerfrhlv1k|beckersr314k|bennetce1p4d2|bensonyv7758y|bernart7a486o|bernarwhdi3|bernicwk3t7r|berryjt2rfo0d|bessieiqny88e|beverlq883384|beverlvf6hn|bf0ct41|bi5s2h4|billiegmtxr|blairhp62i6|bobbiebi3o0c|bobbieu6tx381|bradlechmgx6|bradleg244x3|bradlerc0fn0q|brads22jixjy|brandosg3ch0y|brandypd867|brettgk80644|brittad13m4vk|bryantx35u8|bsrv428|burkesqy6kx|burnsew7nce|burtonw8434|butlerc68rd6t|bxit24|bxj84t2|byrds873p3d|byrdu6fukxx1|byrdv3l05af|c1ld2k01|c213vua|c23lj2h|c6kji9n5wcr|c7vqk3|c9q0bjt1p|carlav1w5ch|carlosmrv76|carlsohf5416|carlsom210s|carlsosn7bn|carolee8w351|carolefcqf48|caroleoo5i0|carolet87jd|caroln75rfo3|carolyiw517i|carolym7161|carpenve7307|carried566u36|carrm41cn63k6|carroljparc3|carterwbui6|caseyffs3d3|caseykg24tm22|castilwpl75ag|castroi461q|cecilk0r286|cecily0s66nw|cesb1gj40p|cha15gg76t|chadn6bl1xk|chandlbegp31h|chapmahlt7g75|charlie3n180|charlij8itmo4|charlos3k8l|chavezm5l8djh|cherylw5u3uj1|christbw6141|christl0iemc|christlf6qh6|christln466|christo1m316n|christswpfv7o|christsyr762d|chugey84|cj140xq|cl0wjcrpk4|claytom47ob7|cliffowm638|cliftorc5f0p|clintot28u8w|cn3mx8q4r2|cohenv6g0nsya|colemawkg43|colemay8083hb|coleyr5ade5i|colleed7xc2b|connerbhf71|conneri5k1gex|connerk5s41|connieix28e|connieymavtkj|constal454an5|cookd4822rk|coreyoto47h|coreyteh366|courtnyy6an|cpv174t|crawfoku4ds|crossg77sy8x|crossh52e046|cruzi8su4e833|crystak3262|cumminfm7l31t|cumminlxmj3|cunninod64o2|cunninx3ojlu|currytd7t7e|curtisjr67m8r|curtist238310|cx2zq67|d182pbbt|d19mzp2|d1l3qn2|d21ysz|d25r4pbb|d3a7lr|d3g1x8t|d3nqw211|d4x25rb|d6pso7i0qep|d9pjb9|danahd0l71tb|dang85all48|danieldd60pv|daniele2evdf|danielt10y06k|dannyn2161527|danxrg1v5aq4|darrelm00b1|darrelnuk0pq|darrylv38b4g|davecggb3ul8b|davidsueirwj4|dawnh8n2v1d|dawnnvbb3ha14|dawnt451srl4|dawsonlge8gou|dawsonnu8068|dawsonr7nc1|daybo0oj1353|dayfallim11|db1l1q23|dbbwr218|de2vf02|deankknct3423|deanqko585id|deanr2fu1y6f3|deb8i3|debradqr506|debrag2mfuv2|debrayb0xxw|deniseqlbuc|dennisdwq55|dennisml5j0g|dennisq3g11v1|dennist5qv5e1|derricpfh170b|derricq4w714b|derrictplmu1q|df4n21v1|dianaamq0mkby|dianeii5h3bg|diannef2yao|diannefvg4aw|diazcap81f0w|dixonh62287r8|dixontgr21bb|dixonx1g03j|dk9s12bb|dmpf821|dolorerl6j7s6|donaldmr1tm|donaldwcq71hi|donnagij0p03|donnaj05wdvq|donqp5vd07b|donqth6oh2p4|dont34n21m4|dony8pd72fr02|douglam08312|douglarj2u2ba|douglay213537|dr21b61j|dunnvc50n6o|dustinacn23b|dustinv462v08|duwr861|dw3i15nxq3|dwightgvmubce|dz2c67j|e1u0w15b|e2x6nt7|e7a0f2h2oq2|earlw8nn40tu|ebp244z|eddiecll147w2|edgarxnc3c58|ednarp620t752|eduardbv173x|edwardbqdiet|edwardi4b1ds8|edwardo75gm2i|eg530qp|eia2f31|eileeng21q6|eileenn71e8i0|ej51kfni73|elainebc4jw2n|elaineya1h3o|elizabj5s7k|elizabmcxj18|elizabv3ovq1|ellama854qhu4|elliotx73b016|elmero283v288|elmerog3554|emmaf0kdi46|emya5r5g552|enriqudp870k5|enriqupa0g472|erickst2e24|ericrus5t81|ericup3fi52b2|erinaehu88u|erinv28bvh6|erinwo5tuvkb|ernestdsct1l|ernesto2pu17|ernesto51iap|ernestyyjl6|esta37|ethels248pg5|eugeneo85606|evanstwd5y2|evelynf4226a|evelynnm522l|exrjl762s4|f2m2d3r|f2t1jyy|f3qx6m|f4p52xb|f8kz3m|f8ls4oo|fb1q12d0|felixmnu5q1|fergushjxkuw3|fergusi46c5h|fernannjpnf|fernany5jv6|fieldse26hp|fieldsi7pexo|fisherb76d13|fleminn256a0|florenh8r07|floresis58j|flowerje8s07m|fm1127jd|fowlerod8x0l|fowlerr11127|fowlerwwpvs0e|fp1ty201|fpzn55|francifgt48n|frankla60fek1|franklbl81c2|franklpsig0|freddil2wh2m|freemag1l446|ft31m2q1|fullerf822u|fullerjh2iawk|fv5u5vx4xa2|fvg900owqpbg|fyemsd73|fzb123s1|garciarigx7f8|garretqgpt1s7|garzap6e3l0g|gi0c31y|gilberbvv0i41|gj9q9k|gladysp02cy|gladysr2jen7|gladysyq7c5u|glendair4w6n5|glendaj41018|glennj88v0rw8|gonzalrar6y0|gonzalrf38x|gonzalsv80576|gr83pg4d554|gravesy4x788t|grayc48tg25va|greenf0vg5s4m|greenl8f87x7|greggp2xa512|gregori8c76|griffilein6|griffis7stp8v|griffiw35q7v6|guyr8606fvd2|guzmany0o1523|guzmanyb7f6|gwendoj30lvj|h11km32d|h19s2yz|h1p21t6b|h1xb53d|h1zjj5t9tlz|h2bbj171v|h31l1a2v|h3fu5k0|h5u2in|hallrk5sif0c|hallx8x7yty|hamiltt0151o|hamptoi36il|hamptoun065k5|hansonrb0tiua|harmonc1k6w1|harperb5yhx2|harrydavitqu|harryl3ulbv|harryw6s6g00|harty7tjn6h|hayesdhh0y3bt|hayesr442i5c|haynesglogqgd|haynesp722k4u|hazelf8dx35t|hazelm75h33y1|hc7a5ejnk3|heatheov0hyfc|helenohovd837|henderk02e6k3|henrycuku3ng|hernanj2q7j0|hernanw2m1o6|hernany3a7r42|hi8f21yy|higginaf0nqfi|hillhtdfjw5x|hilli5kew17|hillm8f7un48|hillpuqvl8e23|hinese17504|hinesug2j8p|hit21yy61|hn0s51w|hodgesdf2u54|hoffmay1207|holtbvn1u40|hortond165wl|howardb2rx4|howardr10eh62|hq0y3e6|ht1w1ol02|htr36c|hunterd654x4|huntero6btk54|huntgq321lx33|huntpm6x4564q|hwyy12q20|hx03l5n|hx4m11k2|i1b1h2t7|i1e120lp|i3zt2b2|ianb4m5yctwm2|ifz8bb71|ih618nt|ingramjf438vb|ior1js14|ipvgjalic6914|irh99m|irmai2jc6t8l|iv1yr2|ixo71y|j1212mfz|j1md4h|j36hyx0|j3bbw22x|j5pm5e|j7bb1d1w2|j7zpk9r9ccp|j83vpyy|j9i4pa|jacobsm02s5uh|jacquey26tv0|janicehr4n8rt|jaybyle121p62|jb114p2v|jeannetrs55b|jennienn1jo|jenninm211p|jenninm4610h|jenninpq53p4w|jennyn0ky37|jensenh76rsvk|jensenh8q78i|jeremyui8wmro|jerrylexmg3|jesush037e3jl|jg07kf3t434|jk3v22m|jns12k41|joannervk12|joecgunws3813|joeo87y0po7|jofm77qef33|johnniw54wx6j|jonathtp8wi|jonesaov201|jonesd33v7h8|jonmaj0twb2|jordanh4pg6|jordanl0dmp|jorgev0wh70|josee73554rw|joseo1q846t|josephxyjgp5|joseyj1l8dd40|joycel452q4l2|jt91nr8|judya1ap6mi|julianom5p212|juliant21x3|juliantcd0huw|juliay41n51|juliob627h62|juliohr8nva44|julioum6bv5n4|jv21yd|jxt7112n|jy12qt|jy19i2k|k3ebbw8|karend8464wn4|karenquag7c67|kathleb467wp|kathlee8d6dj|kathlen7t0e|kathrycay76yg|kathyrtalmeyf|kayap4c16m4y2|kayu3ja64xt1|kellerh10wq70|kellerw86na|kelleydi6m7|keni3x5g5q3|kennedf60s51|kennedi68oai|kennetfkh454|kenqx31c7id73|kgf82z4|kimg733py35|kingh0a82uoay|kingm0wtn16|kmd1r29|kn2u121c|kn55li|knx05q1|krd5m8|kristedv16b|kristexky3q0|kristie2db28|kurtf74b6t2q4|kurtk4w8u3ul|l11f23md|l121ol3pz|l1bbr71o|l1btd3t3xxf|l1pm50v|l1zh05n|l218dmz|l29e1qn|l2hz54bb|l2u1hd4|l3nd2f2|l91qpn8|la25vh|lamberfr8c155|lancerrk33c3|larsonls5q3|laurav2qby1|laurenlnbvcqp|lawsonc4uk6|lawsoncqwl81|lcwx1621|leahuw52h1x|leoe1ef4xt5|leonae1c0u1|leonafut1es1|leonarbowokw|leonarg3b66|lerj3011|lestergu2kt|lesterq103wo|lewisdrj46b|li757blgr4|lillieow5co|lk11b7j1|lmq1271h|lmz2114d|ln1u22k|lneec4t163|loise7842t87|loisey5hsk7e|longbb54gj7|longfu5yok0f6|longps7g1ta|lonnievxe0e|louiseodh33v6|lovevqm78ck43|lp4v6n|lr1v2n71|lu115wx|lucillv0t6um|lv1ulc12w34|lv5xn01|lve74n|lyonsh046ml4|lyonso14rw3jo|m11hf1k7|m19zjq0|m1rp4d|m21u2ez|maloneinvs1|maloneo6t2174|malonet76tde3|manng5y5g08|manninnb38vvm|manuelp1fm3d|marciaoh2i34|marcl20j40737|mariewb7bbv|mariok423m6|mariokrf6481|marionanj70|mariovm8u4h|markfsc0760b3|marlenfq85671|marshaf30k0|marshaxgpkn|marvinnmc6uy|marvinx443f6|masonkn6w80|matthetr48c1s|mattiebj573|mauricey1xcvq|maxinegf20g37|mccoyg8x6117|mcgeef6tg7w1|medinacq50lt0|medinagp5v6|meganpdd34g4|meganv4qdf5s|meganxr0lsg4|melaniasy3ab|melindvk7b7d|mendezh6b37rj|mendeznj0mw|meyerq1rbdo|mg6rm41ckj3|mh8tw5|mi1vz142|mi4xw32|mi611k2r|mi8f5q|michelff5ja|micheli1xn2g|michels7s41|michelt87me|mildrep5qe7k|milese766xy|milesm8sh584|millerasdh1gx|millsa5s5eic|millsw0801q7|miltonj1pwf|minnieldb02|miriami4tj5|mistyeni800|mistyisuu1s6q|mistykic660b2|mitchegnn2s8|mitchehgrx8j|mitchei43p45|mitcheomuna|mjs7e3mu0x2|mkt16i4|ml1qf123|monicagm46cl|montgocn870|moorets3b0445|morgankr1kw|mq1i8cl423|murraysk265k|mv41qf|mws8v3|myersby3ss0wm|myrtled3pi1u5|myrtlej74xf|n15de0v|n1hd9r2|n201dv2q|n222mcs|n22cu1v|n2a2e1z|n52wsd2|n55dlt|n6c9fz2|n861drz|nancyw585l4x8|naomis13yei3v|nathanfyd33|nd1f22c|ndhj1142|nealdfd5r6xs|nellier7huy0|newmanmr7x0|newtonr08hs|newtonrmp3r|nf9st4|nicholcf3kok|nicholxyml3kt|nicholy2ux7c|nicolef2757|njr153blh5nr|nl63fp|nmu656uovq30|normandop1rm|norrisak4ykh1|norrisk1a82m|np6f81e|ns1w41q2|nx11si17|o0ackmekm|objnsd31|obrienykn5om3|oeb484x2g0|ol1p3qw12|ol2k2st3|ol2q10sz1|ol311wzq2|olgala4v371|olivere6p38|oliverf220u|oljt02k11|olsonl2y8t3j1|oopx253u|oowje84|or4ks6i|ortizysp17e|owensa53u3j|palmerww0o5v|parksw28jyibx|parksw68bvqv|payney7sexp|pbb4i112z|pedrorg52fr|pedrox2f3v078|peggyef8j3enr|pennywntc32xn|pfc6s72|philiph7f8q7n|philipry226|phillibv6da|phillij4847|philliomexn0|phillirvm76y3|plhn38|porterpf8g2pd|porterpio1l|powellsi1u06|powellw0j04|q1y9vz2|q2p45db|q4c8rz|qc93a0b|qc94xw|qm51rd|qn6t2h7|qr21p3a|qs112pa3|qx1124bbw|r16ooh8p|r232jbx|r322yyqd|r3mej8|r84c2vz|r8bbhq3|ralphkgek4h8|ramonaas30b0|ramosnw5pxu|ramseyf52tw|randytx6131v|rayvp6t103i|rebeccvw8p4|reedn0i1a5p|reesei6324v8|reevess2q06|reginagg43o|reginahd0wr1s|reginan1r2d|reginaoq0r76|reynolvi0p8|ricardj1l4kx|ricepn4734k|ricex8q40p6|richarc2668|richarn4f536l|rileyxflxwm3r|riverar2265|rkz7u62|rmd7112x|robbineko4qs|robbinp40rh|robertbg4r87h|robertd10iqm|robertq0o2d7|robertv868gw0|robertvcu3j4|robertvg532i|robertw82d0sq|rodgerp52nq8|rogersql3h65|romeroco1xbq|romeroekd8x45|romerot742r|ronniegr25ln|ronniemkdydxf|rossly0k77wl3|rowex2f3650yc|rt3b0jakl2|rtn3u21|ruiznkne0b853|ruizx3020sk|rx1h3y|s0aq31c2|s111d7ic|s1n68dz|s211kb4v|s2bbz11r7|s312hml1|s8bbk12h|s91n2ex|sallyy0fm4t1p|samantb2x5003|sanderbv652i|santiamg5uu7|santiamlo65e7|santiayt1po|santosc7lboj|sarahjs306wj|sb2114fz|schneiig1dxk|schneilwn06k|schultb542832|schultn1574|sergioa3cv5en|sfpb1312|shanew37ykycc|sharpc3dvrb|shellyn6gknd|sherryfu43i8i|shirleb08rp|shirleu7584n|si61z21n|sidneyp3btp5|sidneyvire2gt|silvaiycwq3|silvaw6x336b|sira2016c84|sjx32bb2|sl0122bj|snyderb4553r|sr4121dm|srrxos2d344|staceyfxn2v6|staceyqtx3vgk|stacykrm0b27|stephey674u|stevea8hx65y|stevend68s10|steveqbv5s21|steveudh6y53|stewarw2p4t2k|strickcmpp01|strickj1b68|suek3433klq|sullivdu527|susanq3y8or|susanw12716|svr5112yy|sylviatshlyry|t1r1h377rz7|t2i8mx1|t50nd1w|tammyfoofow6|tatej6qqnpi|taylorsq73d1|tc19bf0|tedb5r37320c|terrii166ug05|terrio66yfnxs|theodop0xxi|theodoq7w33u2|theresyp7uf57|thompsmtj72w|tinaoh2f4n23a|tinaopm7uxso|tinay4812r34|tjryy306|tm1312hr|tm2q8h1|tommypsfvns73|tonyaf54u2x3|tonyatvajl8n|tonyxi28sp26h|torresnn6c8|tqdb13|traceyey8q7e|troyie6c404v|troyo5u1206b4|tuprsmt7024|tx91d8c|tylercm65b2|tyroneh106m|tz16pa4|tzb14h|tzjy51|u46a1fx|ubxfiz60|v0y9ax3|v2s1m31p|valeric5bn14|vaughncwknts|vegaf0o836y26|velmac34mvf0v|velmahh33em|velmak12wf6u|velmax0gy5q24|vickieae3y1lw|vickig37542i5|vickih1ofupff|vincenw3oei1p|violeta23100|virgildkl84|viviandt5jt2|vivianknddx5|vlx8m12|vmti15|vo87s271x03|vu2ji67|vx4u8e2|w15ki1u|w1n01z1v|w1olfi162|w22m3sl|w2s91nx|w3epc6|w88v1mf|w8fbp42|waderj481jg|wagnerej0vm|wagnersb517ch|wagnerx0uuj3i|walkerhw1tb|walkerwjg25ga|waltonw5nbq0q|wandal5mfhup|warrenrluxvw5|watsonxt4h1ow|wattsi6i7k5f|wattss3cnft|wb81hr7|weaverxe3e8|webernwvm02h|websteh3l3q2d|webstel0rge|welchp2seo2|westu8u8t1i|westuig6j0sq|wheeledijo6|wheelej2x4h|willargy85l|willari4p660|willariu7b2e|willarthr71|williahns30|williar8u78j2|williecfs2xoo|willisg4cpl|willisq685m3j|wilsonw85s6\/|wj7m121i|wl2ur14|wns104k1|wp252km|wpi128m|wqbbe681|wql12m9|wt3b22p|wtfb091|wy15ih|wyk84q|x1kr71y2|x1r31t2c|x1s2vyy9|x211l2ej|x2131yzh|x22qt3b|x2p2k2y|x3z5z915hbl|x4mlz8g1czz|x58mhf|xbi921f|xj22q3b|xp41dm|xt5sn5|xw231jm1|y1k2qv|y81lk9|yatescw4j54e|ydl1271i|yh921rq|yy216dik1|yy2qh22r|z123tm1k|z18hjn9|z1j2mf14|z1s23qm1|z22rxm3|z2611xkb|z3n2k1s|z49qka|zacharmeo23|zf81sb8|zmh58s|zn1c21d2)(?=[\/?#]|$)/

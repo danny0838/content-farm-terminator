@@ -1,9 +1,10 @@
 # Title: Content Farm Filters
 # Description: Filter for general content farms, mostly in Chinese.
-# Last modified: 2022-09-25T04:00:31+00:00
+# Last modified: 2022-09-25T04:03:38+00:00
 # Homepage: https://danny0838.github.io/content-farm-terminator/
 # Licence: MIT License
 # Source: https://danny0838.github.io/content-farm-terminator/files/blocklist-hosts/content-farms.txt
+127.0.0.1 00000258.com
 127.0.0.1 001553.cn  #redirects to g.penzai.com
 127.0.0.1 003zuqiu.com  #redirects to g.penzai.com
 127.0.0.1 006xb.cn  #redirects to g.penzai.com
@@ -11,6 +12,7 @@
 127.0.0.1 007ly3e.cn  #redirects to g.penzai.com
 127.0.0.1 007sx.cn  #redirects to g.penzai.com
 127.0.0.1 0086cnc.com  #!redirects to g.penzai.com
+127.0.0.1 0099175.com
 127.0.0.1 00s3t3k.cn  #redirects to g.penzai.com
 127.0.0.1 0101.tw
 127.0.0.1 010826.cn  #redirects to g.penzai.com
@@ -22,6 +24,7 @@
 127.0.0.1 01pkh6r.cn  #redirects to g.penzai.com
 127.0.0.1 020pifuke.com  #redirects to g.penzai.com
 127.0.0.1 020qiyun.com  #redirects to g.penzai.com
+127.0.0.1 021senxi.com
 127.0.0.1 023fuwu.com  #redirects to g.penzai.com
 127.0.0.1 023smwx.com  #redirects to g.penzai.com
 127.0.0.1 024hfd.com  #redirects to g.penzai.com
@@ -170,6 +173,7 @@
 127.0.0.1 0w90qcd.cn  #redirects to g.penzai.com
 127.0.0.1 0w9jvg6.cn  #redirects to g.penzai.com
 127.0.0.1 0xjdhj.cn  #redirects to g.penzai.com
+127.0.0.1 0xpet.com
 127.0.0.1 0xzx.com
 127.0.0.1 0y4peu.cn  #redirects to g.penzai.com
 127.0.0.1 10000.tw
@@ -339,6 +343,7 @@
 127.0.0.1 1qplay.com  #redirects to g.penzai.com
 127.0.0.1 1qsd.com  #redirects to g.penzai.com
 127.0.0.1 1r1g.com
+127.0.0.1 1redirc.com
 127.0.0.1 1shouxi.com  #redirects to g.penzai.com
 127.0.0.1 1sta7r0.cn  #redirects to g.penzai.com
 127.0.0.1 1taoyuan.com  #redirects to g.penzai.com
@@ -383,6 +388,7 @@
 127.0.0.1 2103988.com  #redirects to g.penzai.com
 127.0.0.1 213012.com  #redirects to g.penzai.com
 127.0.0.1 2136836.com  #redirects to g.penzai.com
+127.0.0.1 21539.com
 127.0.0.1 2165yy.co  #redirects to procnw.xyz
 127.0.0.1 218113.com
 127.0.0.1 218127.com
@@ -697,6 +703,7 @@
 127.0.0.1 386h.com
 127.0.0.1 387u.com  #redirects to g.penzai.com
 127.0.0.1 388625.com  #redirects to g.penzai.com
+127.0.0.1 3990755.com
 127.0.0.1 3997025.com
 127.0.0.1 3adfo7.cn  #!redirects to g.penzai.com
 127.0.0.1 3agtl2.cn  #redirects to g.penzai.com
@@ -714,6 +721,7 @@
 127.0.0.1 3g-jp.220v110v.com  #!redirects to g.penzai.com
 127.0.0.1 3gebike.com  #redirects to g.penzai.com
 127.0.0.1 3gq1n4x.cn  #redirects to g.penzai.com
+127.0.0.1 3h3.com
 127.0.0.1 3hgs.cn  #redirects to g.penzai.com
 127.0.0.1 3ibb.cn  #redirects to g.penzai.com
 127.0.0.1 3ikm8mf.cn  #redirects to g.penzai.com
@@ -989,6 +997,7 @@
 127.0.0.1 58xuanzhi.com  #redirects to g.penzai.com
 127.0.0.1 591736.com  #redirects to g.penzai.com
 127.0.0.1 591car.cn  #redirects to g.penzai.com
+127.0.0.1 592xz.com
 127.0.0.1 59708.cn
 127.0.0.1 59796988.com  #redirects to g.penzai.com
 127.0.0.1 59cjdlv.cn  #redirects to g.penzai.com
@@ -1381,6 +1390,7 @@
 127.0.0.1 9ct156h.cn  #redirects to g.penzai.com
 127.0.0.1 9dd3.cn  #redirects to g.penzai.com
 127.0.0.1 9g6ygu.cn  #!redirects to g.penzai.com
+127.0.0.1 9game.cn
 127.0.0.1 9gft.com  #redirects to g.penzai.com
 127.0.0.1 9go8lrt.cn  #redirects to g.penzai.com
 127.0.0.1 9j38dyc.cn  #redirects to g.penzai.com
@@ -1751,6 +1761,7 @@
 127.0.0.1 americankidswear.buzz  #redirects to g.penzai.com
 127.0.0.1 americantowns.com
 127.0.0.1 ameridrvice.co  #redirects to procnw.xyz
+127.0.0.1 amerrole892.com  #redirects to directcpmfwr.com
 127.0.0.1 amesburytownband.co.uk  #!redirects to se10.biz
 127.0.0.1 amgchanr.co  #!redirects to cacnka.xyz
 127.0.0.1 amh4806oul.blog.fc2.com
@@ -1792,6 +1803,7 @@
 127.0.0.1 aninoo.com  #redirects to g.penzai.com
 127.0.0.1 anjinxjhx.com  #redirects to g.penzai.com
 127.0.0.1 anjzhrz.cn  #redirects to g.penzai.com
+127.0.0.1 ankaili.com
 127.0.0.1 ankzp0v.cn  #redirects to g.penzai.com
 127.0.0.1 anlisy.com  #!redirects to g.penzai.com
 127.0.0.1 anmadradubh.buzz  #redirects to g.penzai.com
@@ -1860,6 +1872,7 @@
 127.0.0.1 apartca.fr  #redirects to cubicongardens.sk
 127.0.0.1 apartmentcenters.buzz  #redirects to g.penzai.com
 127.0.0.1 apasass.co  #redirects to procnw.xyz
+127.0.0.1 apehs.cn
 127.0.0.1 apkhr.com  #redirects to g.penzai.com
 127.0.0.1 apolmont.eu  #redirects to di02.biz
 127.0.0.1 apost.com
@@ -1878,6 +1891,7 @@
 127.0.0.1 appliances123.pixnet.net
 127.0.0.1 applicationsbuilder.buzz  #!redirects to g.penzai.com
 127.0.0.1 appliedlvittion.co  #!redirects to cacnka.xyz
+127.0.0.1 appliedsystem.com.cn
 127.0.0.1 appobs.com
 127.0.0.1 appolice.me  #!redirects to ppcnzi.xyz
 127.0.0.1 appqianbao.com  #!redirects to g.penzai.com
@@ -1913,6 +1927,8 @@
 127.0.0.1 arranaroma.ru  #redirects to isabel-lopez-kubben.at
 127.0.0.1 arrow-sales.buzz  #!redirects to g.penzai.com
 127.0.0.1 arruo.com  #redirects to g.penzai.com
+127.0.0.1 arsenal-zlato.ru
+127.0.0.1 arshhost.info
 127.0.0.1 art-chip.buzz  #redirects to g.penzai.com
 127.0.0.1 art-e-factum.buzz  #!redirects to g.penzai.com
 127.0.0.1 art027.cn  #redirects to g.penzai.com
@@ -2179,6 +2195,7 @@
 127.0.0.1 bahis2022.co  #!redirects to keecnya.xyz
 127.0.0.1 baibeisc.com  #redirects to g.penzai.com
 127.0.0.1 baicaisd.com  #redirects to g.penzai.com
+127.0.0.1 baidow.com
 127.0.0.1 baifusy.com  #redirects to g.penzai.com
 127.0.0.1 baijiabo365.com
 127.0.0.1 baileyrobin.buzz  #redirects to g.penzai.com
@@ -2214,6 +2231,7 @@
 127.0.0.1 bangqu.com
 127.0.0.1 banksovetnik-saratov.ru  #!redirects to file-sharing2022.xyz
 127.0.0.1 banmajita.com  #redirects to g.penzai.com
+127.0.0.1 banmashuo.com
 127.0.0.1 banquan3.com  #redirects to g.penzai.com
 127.0.0.1 bansui365.com  #redirects to g.penzai.com
 127.0.0.1 baobao.today  #大榴槤/大時代/GreatDaily/閃文聯盟/琦琦~
@@ -2328,6 +2346,7 @@
 127.0.0.1 beitetuwen.com  #redirects to g.penzai.com
 127.0.0.1 beiyi168.com  #redirects to g.penzai.com
 127.0.0.1 beiyuedu.com
+127.0.0.1 beizigen.com
 127.0.0.1 belgiusic.me  #redirects to meetwill.xyz
 127.0.0.1 belindanvj8.blog.fc2.com
 127.0.0.1 belleburg.co  #!redirects to procnw.xyz
@@ -2462,6 +2481,7 @@
 127.0.0.1 bj3fj0i.cn  #redirects to g.penzai.com
 127.0.0.1 bj48583808.pixnet.net
 127.0.0.1 bj91lqhmg.pixnet.net
+127.0.0.1 bjaftj.com
 127.0.0.1 bjartga.blogspot.com
 127.0.0.1 bjb53vb37t.pixnet.net
 127.0.0.1 bjclyly.com  #redirects to g.penzai.com
@@ -2908,6 +2928,7 @@
 127.0.0.1 cartoontalking.com
 127.0.0.1 carucc.com  #redirects to g.penzai.com
 127.0.0.1 casaeams.me  #redirects to meetwill.xyz
+127.0.0.1 casainlatina.it  #redirects to na-madagaskar.sk
 127.0.0.1 caseyrobiu3.pixnet.net
 127.0.0.1 cashball85.pixnet.net
 127.0.0.1 cashchien.pixnet.net
@@ -3003,6 +3024,7 @@
 127.0.0.1 centrimediline.buzz  #!redirects to g.penzai.com
 127.0.0.1 centrobenessereintegra.it  #redirects to quing.im
 127.0.0.1 centroricercainsubria.it  #redirects to quing.im
+127.0.0.1 centrumdit.pl  #redirects to qabayz.site
 127.0.0.1 century21realtor.buzz  #redirects to g.penzai.com
 127.0.0.1 centurysun.cn  #redirects to g.penzai.com
 127.0.0.1 ceramic-industry.buzz  #redirects to g.penzai.com
@@ -3163,6 +3185,7 @@
 127.0.0.1 cj0n93c.cn  #redirects to g.penzai.com
 127.0.0.1 cj3f8.pixnet.net
 127.0.0.1 cjegnvd.cn  #redirects to g.penzai.com
+127.0.0.1 cjkfd.top
 127.0.0.1 cjnxfhy.cn  #redirects to g.penzai.com
 127.0.0.1 cjpzumg.cn  #redirects to g.penzai.com
 127.0.0.1 cjr35.cn  #redirects to g.penzai.com
@@ -3340,6 +3363,7 @@
 127.0.0.1 coms.pub
 127.0.0.1 conc100.pixnet.net
 127.0.0.1 congga.cn  #redirects to g.penzai.com
+127.0.0.1 conglinds.com
 127.0.0.1 conroy712.pixnet.net
 127.0.0.1 consta28.pixnet.net
 127.0.0.1 constair57.pixnet.net
@@ -3456,6 +3480,7 @@
 127.0.0.1 cshyyqj.com  #redirects to g.penzai.com
 127.0.0.1 csicqfk.cn  #redirects to g.penzai.com
 127.0.0.1 csiofrnce.co  #!redirects to cacnka.xyz
+127.0.0.1 csj-depu.com
 127.0.0.1 csjjys.com  #redirects to g.penzai.com
 127.0.0.1 csk8.cn  #redirects to g.penzai.com
 127.0.0.1 csmjjdfw.com  #redirects to g.penzai.com
@@ -3690,6 +3715,7 @@
 127.0.0.1 d9vhv3hzh5.blog.fc2.com
 127.0.0.1 d9zuq0zmup.pixnet.net
 127.0.0.1 da-quan.net
+127.0.0.1 da3h.com
 127.0.0.1 da65347603.pixnet.net
 127.0.0.1 da6v220.cn  #redirects to g.penzai.com
 127.0.0.1 da868.cn  #redirects to g.penzai.com
@@ -3770,6 +3796,7 @@
 127.0.0.1 dayspot.net
 127.0.0.1 daytime.cool
 127.0.0.1 dayuimage.com  #redirects to g.penzai.com
+127.0.0.1 dazhuanlan.com
 127.0.0.1 db55vz1j.blog.fc2.com
 127.0.0.1 db5ds.com  #redirects to g.penzai.com
 127.0.0.1 dbbsfs.cn  #redirects to g.penzai.com
@@ -3787,6 +3814,7 @@
 127.0.0.1 dc755wn.cn  #redirects to g.penzai.com
 127.0.0.1 dcchildcustody.buzz  #redirects to g.penzai.com
 127.0.0.1 dccneed.com
+127.0.0.1 dcep676.com
 127.0.0.1 dcr7slhorioss.pixnet.net
 127.0.0.1 dcscholpod.co  #!redirects to ppcnzi.xyz
 127.0.0.1 dd57315139.pixnet.net
@@ -3851,6 +3879,7 @@
 127.0.0.1 dental-prophylaxe.buzz  #!redirects to g.penzai.com
 127.0.0.1 deputech.fr  #!redirects to se10.biz
 127.0.0.1 derrichagt0.pixnet.net
+127.0.0.1 desatascosintegralescordoba.es  #redirects to quing.im
 127.0.0.1 descfhi.cn  #redirects to g.penzai.com
 127.0.0.1 desenoboschhcg.blog.fc2.com
 127.0.0.1 deshenghang.cn  #redirects to g.penzai.com
@@ -3909,6 +3938,7 @@
 127.0.0.1 dhrgm.com  #redirects to tspweb.com
 127.0.0.1 dhyjpkc.com  #!redirects to g.penzai.com
 127.0.0.1 di02.biz
+127.0.0.1 di06.biz
 127.0.0.1 di13.biz
 127.0.0.1 di50775354.blog.fc2.com
 127.0.0.1 dianebarnnoe.pixnet.net
@@ -3950,6 +3980,7 @@
 127.0.0.1 diollarrentacar.buzz  #!redirects to g.penzai.com
 127.0.0.1 dioys.com  #redirects to g.penzai.com
 127.0.0.1 direct-to-u.buzz  #redirects to g.penzai.com
+127.0.0.1 directcpmfwr.com  #redirects to yabohash.store
 127.0.0.1 directgrillage.fr  #redirects to qabayz.site
 127.0.0.1 directoriogratis.buzz  #!redirects to g.penzai.com
 127.0.0.1 direqx.com  #!redirects to g.penzai.com
@@ -4013,6 +4044,7 @@
 127.0.0.1 dn878ou.cn  #redirects to g.penzai.com
 127.0.0.1 dnc8.cn  #redirects to g.penzai.com
 127.0.0.1 dnd70ze49n.pixnet.net
+127.0.0.1 dnet-bangladesh.org
 127.0.0.1 dnews.cc
 127.0.0.1 dnf0451.com  #redirects to g.penzai.com
 127.0.0.1 dnf1121cru.pixnet.net
@@ -4141,6 +4173,7 @@
 127.0.0.1 duqingming.com  #redirects to g.penzai.com
 127.0.0.1 durenzhe.com  #redirects to g.penzai.com
 127.0.0.1 dushi0375.com  #!redirects to g.penzai.com
+127.0.0.1 dushiliangpin.com
 127.0.0.1 dushiqy.com  #redirects to g.penzai.com
 127.0.0.1 dustinwandcon.pixnet.net
 127.0.0.1 dutyio130.pixnet.net
@@ -4427,6 +4460,7 @@
 127.0.0.1 empire-clothing.buzz  #redirects to g.penzai.com
 127.0.0.1 emq7bfdelh84.pixnet.net
 127.0.0.1 en09223623.pixnet.net
+127.0.0.1 enaizh.co  #redirects to goake.top
 127.0.0.1 encdfvo.cn  #redirects to g.penzai.com
 127.0.0.1 endethod.co  #!redirects to cacnka.xyz
 127.0.0.1 endsm.cn  #redirects to g.penzai.com
@@ -4434,6 +4468,7 @@
 127.0.0.1 enews.com.tw
 127.0.0.1 enews.tw
 127.0.0.1 enewspace.com
+127.0.0.1 engineeringjobs4u.co.uk
 127.0.0.1 english-today.cn  #redirects to g.penzai.com
 127.0.0.1 english-tut.ru  #!redirects to agreebetteriron.top
 127.0.0.1 engrtext.buzz  #redirects to g.penzai.com
@@ -4529,6 +4564,7 @@
 127.0.0.1 euy90wr15e.pixnet.net
 127.0.0.1 ev3vtev.cn  #redirects to g.penzai.com
 127.0.0.1 evalvzw.cn  #redirects to g.penzai.com
+127.0.0.1 evanotty.net
 127.0.0.1 evanschristsi.pixnet.net
 127.0.0.1 evanshb2b877.pixnet.net
 127.0.0.1 evansrjs54xw.pixnet.net
@@ -4799,6 +4835,7 @@
 127.0.0.1 fdccpw.com  #redirects to g.penzai.com
 127.0.0.1 fdctop.cn  #redirects to g.penzai.com
 127.0.0.1 fddnv57991.pixnet.net
+127.0.0.1 fdf22.com
 127.0.0.1 fdf41.com
 127.0.0.1 fdf42.com
 127.0.0.1 fdf55.com
@@ -4912,6 +4949,7 @@
 127.0.0.1 fjbymy.com  #redirects to g.penzai.com
 127.0.0.1 fjcdt.com  #!redirects to g.penzai.com
 127.0.0.1 fjdingyun.com  #redirects to g.penzai.com
+127.0.0.1 fjhbg.cn
 127.0.0.1 fjhgm.com  #redirects to g.penzai.com
 127.0.0.1 fjjbwz.com  #redirects to g.penzai.com
 127.0.0.1 fjljbl.com  #!redirects to g.penzai.com
@@ -4970,6 +5008,7 @@
 127.0.0.1 fofunny.com
 127.0.0.1 folkswggn.co  #!redirects to cacnka.xyz
 127.0.0.1 foltolik.co  #!redirects to cacnka.xyz
+127.0.0.1 fondofgame.com
 127.0.0.1 foodtagtw.com
 127.0.0.1 foodytw.com
 127.0.0.1 forbb.cn  #redirects to g.penzai.com
@@ -5028,6 +5067,7 @@
 127.0.0.1 fredpeterpxc.pixnet.net
 127.0.0.1 freedomymqcb.sa.com
 127.0.0.1 freeguo.com  #redirects to g.penzai.com
+127.0.0.1 freejobalerts24.com
 127.0.0.1 freek.jp.net  #!redirects to se10.biz
 127.0.0.1 freesexvideosonline.buzz  #!redirects to g.penzai.com
 127.0.0.1 freesunn.co  #!redirects to keecnya.xyz
@@ -5251,6 +5291,7 @@
 127.0.0.1 gahongyun.com  #redirects to g.penzai.com
 127.0.0.1 gaiasam.co  #!redirects to cacnka.xyz
 127.0.0.1 gailarnoldray.pixnet.net
+127.0.0.1 galacticwraps.at  #redirects to na-madagaskar.sk
 127.0.0.1 galleri50.com  #redirects to g.penzai.com
 127.0.0.1 game2.tw
 127.0.0.1 gamecasa.cn
@@ -5327,6 +5368,7 @@
 127.0.0.1 georgistepur.pixnet.net
 127.0.0.1 geraldipie16.pixnet.net
 127.0.0.1 gerecippower.buzz  #!redirects to g.penzai.com
+127.0.0.1 gerenjianli.com
 127.0.0.1 gergj.top
 127.0.0.1 get-the-prize-ht3.live  #redirects to rnjklz.singlelettercry.top
 127.0.0.1 getaoquan.com  #redirects to g.penzai.com
@@ -5373,6 +5415,7 @@
 127.0.0.1 gigcasa.com
 127.0.0.1 gik48tq35k.blog.fc2.com
 127.0.0.1 ginafiroa.co  #!redirects to procnw.xyz
+127.0.0.1 ginseemore.live
 127.0.0.1 girard-lakecity.buzz  #!redirects to g.penzai.com
 127.0.0.1 girlboy.cn  #redirects to g.penzai.com
 127.0.0.1 giters.com
@@ -5523,6 +5566,8 @@
 127.0.0.1 goufangbj.cn  #redirects to g.penzai.com
 127.0.0.1 gougeili8.com  #redirects to g.penzai.com
 127.0.0.1 goulanyaozhai.com.cn  #redirects to g.penzai.com
+127.0.0.1 gouma.org
+127.0.0.1 goyeah.tw
 127.0.0.1 gp44512935.pixnet.net
 127.0.0.1 gp5vllt.cn  #redirects to g.penzai.com
 127.0.0.1 gpqii.com  #歡享網
@@ -5544,6 +5589,7 @@
 127.0.0.1 gradd.cn  #redirects to g.penzai.com
 127.0.0.1 grafiquesmaral.buzz  #!redirects to g.penzai.com
 127.0.0.1 grahamiy40.pixnet.net
+127.0.0.1 gramhir.com
 127.0.0.1 grantleerx.pixnet.net
 127.0.0.1 gravespagoyrr.pixnet.net
 127.0.0.1 grcamerada.com
@@ -5559,6 +5605,7 @@
 127.0.0.1 greattop.cn  #redirects to g.penzai.com
 127.0.0.1 greenelagawr.pixnet.net
 127.0.0.1 greeniolidays.me  #redirects to cznono.xyz
+127.0.0.1 greentekme.com
 127.0.0.1 greentravelnwanders.co  #!redirects to keecnya.xyz
 127.0.0.1 greenvallrepir.co  #!redirects to keecnya.xyz
 127.0.0.1 gregorbetrjdm.pixnet.net
@@ -5567,6 +5614,7 @@
 127.0.0.1 grhqrx.cn  #redirects to g.penzai.com
 127.0.0.1 griffik1xb1.pixnet.net
 127.0.0.1 grizwood.buzz  #!redirects to g.penzai.com
+127.0.0.1 grjlz.com
 127.0.0.1 grosse-chatte.buzz  #!redirects to g.penzai.com
 127.0.0.1 grosshaendler.me  #!redirects to ppcnzi.xyz
 127.0.0.1 groupcspsp.co  #!redirects to cacnka.xyz
@@ -5881,6 +5929,7 @@
 127.0.0.1 haojdwx.com
 127.0.0.1 haojiaya.com  #redirects to g.penzai.com
 127.0.0.1 haojvzi.com
+127.0.0.1 haokuaisou.cc
 127.0.0.1 haolookr.com
 127.0.0.1 haomeng168.com  #redirects to g.penzai.com
 127.0.0.1 haoqzk.com  #redirects to g.penzai.com
@@ -6184,6 +6233,7 @@
 127.0.0.1 hklaughpic.com  #愛縮兔 (農場轉址)
 127.0.0.1 hklocalpress.com  #愛縮兔 (農場轉址)
 127.0.0.1 hkltu73.cn  #redirects to g.penzai.com
+127.0.0.1 hkmysan.com
 127.0.0.1 hknews.live  #redirects to ifunblog.com
 127.0.0.1 hknews.pro
 127.0.0.1 hknewshub.com  #愛縮兔 (農場轉址)
@@ -6225,6 +6275,7 @@
 127.0.0.1 hmqcx263zf.pixnet.net
 127.0.0.1 hmrcaq.co
 127.0.0.1 hmsagwq.cn  #redirects to g.penzai.com
+127.0.0.1 hmshffj.com
 127.0.0.1 hmyds.com  #!redirects to g.penzai.com
 127.0.0.1 hmyecrk.cn  #redirects to g.penzai.com
 127.0.0.1 hn01182994.pixnet.net
@@ -6594,6 +6645,7 @@
 127.0.0.1 i7pbo2i5cfh.blog.fc2.com
 127.0.0.1 i7rpc9r4pto.pixnet.net
 127.0.0.1 i7w6w7.wordpress.com
+127.0.0.1 i88kk.com
 127.0.0.1 i8cio6uy22.blog.fc2.com
 127.0.0.1 i8i2c8d3rk7.blog.fc2.com
 127.0.0.1 i8jwl9n5sy4.pixnet.net
@@ -6860,16 +6912,19 @@
 127.0.0.1 it145.com
 127.0.0.1 it235.cn  #redirects to g.penzai.com
 127.0.0.1 it5120.com  #redirects to g.penzai.com
+127.0.0.1 it610.com
 127.0.0.1 itaiwanfood.com
 127.0.0.1 italgrip.buzz  #!redirects to g.penzai.com
 127.0.0.1 itaotaotao.com  #redirects to g.penzai.com
 127.0.0.1 itbaoku.cn
 127.0.0.1 itchosun.buzz  #!redirects to g.penzai.com
+127.0.0.1 itcn.blog
 127.0.0.1 itd1268dwy.blog.fc2.com
 127.0.0.1 itdminin.co  #!redirects to procnw.xyz
 127.0.0.1 ite85hg74z.pixnet.net
 127.0.0.1 iter01.com
 127.0.0.1 itestquiz.com
+127.0.0.1 itigic.com
 127.0.0.1 itishealthtime.com
 127.0.0.1 itislooker.com
 127.0.0.1 itislooker.net
@@ -7087,6 +7142,7 @@
 127.0.0.1 japare.com
 127.0.0.1 jasve.com
 127.0.0.1 javajgs.com
+127.0.0.1 javashuo.com
 127.0.0.1 javdiy.xyz
 127.0.0.1 jaweno.com  #redirects to g.penzai.com
 127.0.0.1 jayagy.com  #redirects to g.penzai.com
@@ -7160,6 +7216,7 @@
 127.0.0.1 jetsharon.com  #redirects to g.penzai.com
 127.0.0.1 jetxco.co  #!redirects to procnw.xyz
 127.0.0.1 jewishsuperstore.buzz  #redirects to g.penzai.com
+127.0.0.1 jf-tendais.com
 127.0.0.1 jf79577518.pixnet.net
 127.0.0.1 jfarmerk1.pixnet.net
 127.0.0.1 jfcxguan.com  #redirects to g.penzai.com
@@ -7217,6 +7274,7 @@
 127.0.0.1 jieshikj.com  #redirects to g.penzai.com
 127.0.0.1 jietouxzz.com  #!redirects to g.penzai.com
 127.0.0.1 jiewanju.com  #redirects to g.penzai.com
+127.0.0.1 jieyouw.com
 127.0.0.1 jifutang68.com  #redirects to g.penzai.com
 127.0.0.1 jihmypd.co  #!redirects to procnw.xyz
 127.0.0.1 jijisf.com  #redirects to g.penzai.com
@@ -7250,6 +7308,7 @@
 127.0.0.1 jinlvzdh.com  #redirects to g.penzai.com
 127.0.0.1 jinmeiba.com  #!redirects to g.penzai.com
 127.0.0.1 jinmeiting.com  #redirects to g.penzai.com
+127.0.0.1 jinrih.com
 127.0.0.1 jinweilw.com  #redirects to g.penzai.com
 127.0.0.1 jinxw.cn  #redirects to g.penzai.com
 127.0.0.1 jinzhan.me  #!redirects to ppcnzi.xyz
@@ -7367,6 +7426,7 @@
 127.0.0.1 jonygame.com
 127.0.0.1 joo51k1.pixnet.net
 127.0.0.1 joosangny.me  #redirects to meetwill.xyz
+127.0.0.1 jordanbeat.com
 127.0.0.1 josephbeckwol.pixnet.net
 127.0.0.1 josephmagazine.buzz  #redirects to g.penzai.com
 127.0.0.1 josephrodwood.pixnet.net
@@ -7658,6 +7718,7 @@
 127.0.0.1 kangkang.life
 127.0.0.1 kanglaikangqu.site
 127.0.0.1 kangmile.cn  #redirects to g.penzai.com
+127.0.0.1 kangquanfood.com  #nearly
 127.0.0.1 kanneenkruike.buzz  #!redirects to g.penzai.com
 127.0.0.1 kannewscast.com
 127.0.0.1 kanreport.com  #歡享網
@@ -7729,6 +7790,7 @@
 127.0.0.1 kexinfood.com  #redirects to g.penzai.com
 127.0.0.1 key8.net
 127.0.0.1 kf80464190.pixnet.net
+127.0.0.1 kfd.me  #偽造維基百科
 127.0.0.1 kfpza.cn  #redirects to g.penzai.com
 127.0.0.1 kg1xzz.cn  #redirects to g.penzai.com
 127.0.0.1 kg89734866.pixnet.net
@@ -7871,6 +7933,7 @@
 127.0.0.1 kpo14ho42p.blog.fc2.com
 127.0.0.1 kpoppunch.com
 127.0.0.1 kpraise.com  #!redirects to g.penzai.com
+127.0.0.1 kpzs.com
 127.0.0.1 kq3hxcw3.pixnet.net
 127.0.0.1 kq68.cn  #redirects to g.penzai.com
 127.0.0.1 kq82.cn  #redirects to g.penzai.com
@@ -8095,6 +8158,7 @@
 127.0.0.1 lancekatdwn2.pixnet.net
 127.0.0.1 landisem.com  #redirects to g.penzai.com
 127.0.0.1 langemfo.com  #redirects to g.penzai.com
+127.0.0.1 langningpiano.com
 127.0.0.1 lanh1.com  #redirects to g.penzai.com
 127.0.0.1 lansphoto.com  #redirects to g.penzai.com
 127.0.0.1 lantiga.buzz  #redirects to g.penzai.com
@@ -8155,6 +8219,7 @@
 127.0.0.1 ldc99.com  #redirects to g.penzai.com
 127.0.0.1 ldd91ld31z.blog.fc2.com
 127.0.0.1 ldjljmh.cn  #redirects to g.penzai.com
+127.0.0.1 ldlgzs.com
 127.0.0.1 ldmeyjimmyjed.pixnet.net
 127.0.0.1 ldnpslv.cn  #redirects to g.penzai.com
 127.0.0.1 ldoda.cn  #redirects to g.penzai.com
@@ -8732,6 +8797,7 @@
 127.0.0.1 malaysiatimes.site  #大榴槤/大時代/GreatDaily/閃文聯盟/琦琦~
 127.0.0.1 maldonaconalf.pixnet.net
 127.0.0.1 malilian.cn  #redirects to g.penzai.com
+127.0.0.1 malirstvi-nedorostek.cz  #redirects to topawardhere.life
 127.0.0.1 mall0530.com  #redirects to g.penzai.com
 127.0.0.1 mall0539.com  #!redirects to g.penzai.com
 127.0.0.1 mall0635.com  #redirects to g.penzai.com
@@ -8846,6 +8912,7 @@
 127.0.0.1 md93.cn  #redirects to g.penzai.com
 127.0.0.1 mdb12pg07h.pixnet.net
 127.0.0.1 mdcbbs.cn  #redirects to g.penzai.com
+127.0.0.1 mdeditor.tw
 127.0.0.1 mdgh8mn.cn  #redirects to g.penzai.com
 127.0.0.1 mdk85be66f.blog.fc2.com
 127.0.0.1 mdkp617.pixnet.net
@@ -8932,6 +8999,7 @@
 127.0.0.1 mh28h21.pixnet.net
 127.0.0.1 mh33.cn  #redirects to g.penzai.com
 127.0.0.1 mh96.cn  #redirects to g.penzai.com
+127.0.0.1 mhaohuo.com
 127.0.0.1 mhgoodtimes.com
 127.0.0.1 mhgrtzs.cn
 127.0.0.1 mhk5rkt.cn  #redirects to g.penzai.com
@@ -9023,6 +9091,7 @@
 127.0.0.1 mlq90rw.cn  #redirects to g.penzai.com
 127.0.0.1 mlr8.cn  #redirects to g.penzai.com
 127.0.0.1 mltwnyy.cn  #redirects to g.penzai.com
+127.0.0.1 mm110.net  #redirects to 1redirc.com
 127.0.0.1 mm32414045.pixnet.net
 127.0.0.1 mmfmzs.com  #redirects to g.penzai.com
 127.0.0.1 mmin12.club  #愛縮兔 (農場轉址)
@@ -9044,6 +9113,7 @@
 127.0.0.1 mnsf.net  #redirects to g.penzai.com
 127.0.0.1 mnykexv.cn  #redirects to g.penzai.com
 127.0.0.1 mo-dmp.buzz  #!redirects to g.penzai.com
+127.0.0.1 mo08.biz  #malicious ads scripts
 127.0.0.1 mo990.com
 127.0.0.1 moaera.com  #!redirects to g.penzai.com
 127.0.0.1 mobiccae.xyz  #redirects to keecnya.xyz
@@ -9246,6 +9316,7 @@
 127.0.0.1 myronlevoy.buzz  #!redirects to g.penzai.com
 127.0.0.1 mysgcw.com  #redirects to g.penzai.com
 127.0.0.1 myshop111.pixnet.net
+127.0.0.1 mysleniekreatywne.pl  #redirects to di02.biz
 127.0.0.1 myspotnews.com
 127.0.0.1 mystical.press
 127.0.0.1 mytieins.me  #redirects to meetwill.xyz
@@ -9390,6 +9461,7 @@
 127.0.0.1 naijapams.me  #!redirects to ppcnzi.xyz
 127.0.0.1 naijasme.buzz  #redirects to g.penzai.com
 127.0.0.1 nailaila.cn  #redirects to g.penzai.com
+127.0.0.1 naimei.com.tw
 127.0.0.1 najvagame.com
 127.0.0.1 namasteconnecticut.buzz  #redirects to g.penzai.com
 127.0.0.1 nameonly.cn  #redirects to g.penzai.com
@@ -9480,6 +9552,7 @@
 127.0.0.1 new0059.com  #redirects to g.penzai.com
 127.0.0.1 new2mh.com
 127.0.0.1 newbedev.com  #spider of stackoverflow.com
+127.0.0.1 newbolunesport.com
 127.0.0.1 newcoasrties.co  #!redirects to keecnya.xyz
 127.0.0.1 newdaily.cn  #redirects to g.penzai.com
 127.0.0.1 newdragonhostelbeijing.cn  #redirects to g.penzai.com
@@ -9627,6 +9700,7 @@
 127.0.0.1 noiseofmax.net  #redirects to g.penzai.com
 127.0.0.1 nomurlar.com  #!redirects to g.penzai.com
 127.0.0.1 nonamesrry.co  #!redirects to cacnka.xyz
+127.0.0.1 nongjia888.com
 127.0.0.1 nonglidqw.com  #!redirects to g.penzai.com
 127.0.0.1 nonglinyumu.com
 127.0.0.1 nonlehui.com  #redirects to g.penzai.com
@@ -9643,9 +9717,11 @@
 127.0.0.1 notd-angle.com
 127.0.0.1 notebz.com
 127.0.0.1 notesfrmthclud.co
+127.0.0.1 nothing82.com
 127.0.0.1 nothingshare.com
 127.0.0.1 notmyfirstrodeoblog.me  #redirects to ppcnzi.xyz
 127.0.0.1 nourite.co  #!redirects to cacnka.xyz
+127.0.0.1 novapromotion.fr  #redirects to cubicongardens.sk
 127.0.0.1 novbox.buzz  #redirects to g.penzai.com
 127.0.0.1 novelfeed.com
 127.0.0.1 nowlooker.com
@@ -9890,6 +9966,7 @@
 127.0.0.1 okhl4ak.cn  #redirects to g.penzai.com
 127.0.0.1 oklahios.me  #redirects to cznono.xyz
 127.0.0.1 okozen.co  #redirects to goake.top
+127.0.0.1 oktoberfest-bj.com
 127.0.0.1 oktree.cn  #redirects to g.penzai.com
 127.0.0.1 okungshoes.com  #redirects to g.penzai.com
 127.0.0.1 oky00ga44m.pixnet.net
@@ -9928,6 +10005,7 @@
 127.0.0.1 omgnews.cc
 127.0.0.1 omgnews.life
 127.0.0.1 omgtw.com  #boMb01
+127.0.0.1 omobi.cc
 127.0.0.1 omsri.cn  #redirects to g.penzai.com
 127.0.0.1 omura.me  #!redirects to ppcnzi.xyz
 127.0.0.1 omz666.com  #!redirects to g.penzai.com
@@ -10042,9 +10120,11 @@
 127.0.0.1 oszps059ze.pixnet.net
 127.0.0.1 ot1yc0v.cn  #redirects to g.penzai.com
 127.0.0.1 ot3lw4b.cn  #redirects to g.penzai.com
+127.0.0.1 otakufuns.com
 127.0.0.1 otakuni.co
 127.0.0.1 otcrong.com  #redirects to g.penzai.com
 127.0.0.1 oth03bk64n.blog.fc2.com
+127.0.0.1 otransformation.com
 127.0.0.1 otu80jn.cn  #redirects to g.penzai.com
 127.0.0.1 oubafeng.com
 127.0.0.1 oudebaosw.com
@@ -10053,6 +10133,7 @@
 127.0.0.1 ourfitnest.co  #redirects to procnw.xyz
 127.0.0.1 ourmercado.buzz  #!redirects to g.penzai.com
 127.0.0.1 ourplacelchsidelnclden.co  #!redirects to keecnya.xyz
+127.0.0.1 ourplay.net
 127.0.0.1 ourptt.com
 127.0.0.1 ours2008.com  #redirects to g.penzai.com
 127.0.0.1 ourstarsky.com
@@ -10278,9 +10359,11 @@
 127.0.0.1 pcmgkkv.co  #!redirects to keecnya.xyz
 127.0.0.1 pcnews.me  #愛縮兔 (農場轉址)
 127.0.0.1 pcpc.me
+127.0.0.1 pcppw.com
 127.0.0.1 pctantao.com
 127.0.0.1 pcuovl.cn  #redirects to g.penzai.com
 127.0.0.1 pcx41cx10p.blog.fc2.com
+127.0.0.1 pcying.com
 127.0.0.1 pczdyc.com  #redirects to g.penzai.com
 127.0.0.1 pd4xe56.cn  #redirects to g.penzai.com
 127.0.0.1 pdatopics.buzz  #!redirects to g.penzai.com
@@ -10476,6 +10559,7 @@
 127.0.0.1 pnk2.com
 127.0.0.1 pnk659.com
 127.0.0.1 pns8.cn  #redirects to g.penzai.com
+127.0.0.1 pny5.com
 127.0.0.1 pny555.com
 127.0.0.1 pny966.com
 127.0.0.1 pny995.com
@@ -10504,6 +10588,7 @@
 127.0.0.1 popeac.co  #redirects to aetop.top
 127.0.0.1 popllaf.cn  #redirects to g.penzai.com
 127.0.0.1 poporead.com
+127.0.0.1 poqna.top
 127.0.0.1 porn-girls.buzz  #redirects to g.penzai.com
 127.0.0.1 porno-rama.buzz  #redirects to g.penzai.com
 127.0.0.1 pornolesbians.buzz  #!redirects to g.penzai.com
@@ -10975,9 +11060,11 @@
 127.0.0.1 qtddbzm.cn  #redirects to g.penzai.com
 127.0.0.1 qtlil.me  #!redirects to ppcnzi.xyz
 127.0.0.1 qtsr36.cn  #!redirects to g.penzai.com
+127.0.0.1 qtvcd.com
 127.0.0.1 qu02.com
 127.0.0.1 quaaliean219.co  #!redirects to procnw.xyz
 127.0.0.1 quadriumk.co  #!redirects to keecnya.xyz
+127.0.0.1 quaiwang123.com
 127.0.0.1 qualidogs.co  #!redirects to procnw.xyz
 127.0.0.1 quality-info.cn  #redirects to g.penzai.com
 127.0.0.1 quangaoxie.com  #redirects to g.penzai.com
@@ -11280,11 +11367,13 @@
 127.0.0.1 renfas.com  #redirects to g.penzai.com
 127.0.0.1 renliuhs.cn  #redirects to g.penzai.com
 127.0.0.1 rentals-bg.buzz  #!redirects to g.penzai.com
+127.0.0.1 repingke.com
 127.0.0.1 replidelujo.co  #!redirects to keecnya.xyz
 127.0.0.1 replydiscusstool.xyz  #!malicious ads scripts
 127.0.0.1 reportry.co  #!redirects to keecnya.xyz
 127.0.0.1 reredispatch.com
 127.0.0.1 rerewo.com
+127.0.0.1 residence-lartdoise.eu  #redirects to videoplay-on.com
 127.0.0.1 resoleusa.buzz  #redirects to g.penzai.com
 127.0.0.1 resolutionrealtyinc.buzz  #!redirects to g.penzai.com
 127.0.0.1 retailtagtw.com
@@ -11325,6 +11414,7 @@
 127.0.0.1 rhw8.cn  #redirects to g.penzai.com
 127.0.0.1 ri61478467.blog.fc2.com
 127.0.0.1 ribenzyy.com  #redirects to g.penzai.com
+127.0.0.1 ribet333.com
 127.0.0.1 ricardolaur98.pixnet.net
 127.0.0.1 ricarhouse.co  #!redirects to keecnya.xyz
 127.0.0.1 ricefits.com
@@ -11452,6 +11542,7 @@
 127.0.0.1 rscmy365.com  #!redirects to g.penzai.com
 127.0.0.1 rsjn4h1.cn  #redirects to g.penzai.com
 127.0.0.1 rsk26.com  #redirects to tspweb.com
+127.0.0.1 rssing.com
 127.0.0.1 rstlnrok.co  #!redirects to procnw.xyz
 127.0.0.1 rstzjt.com  #redirects to g.penzai.com
 127.0.0.1 rsw59lk83d.blog.fc2.com
@@ -11539,6 +11630,7 @@
 127.0.0.1 rzhpv13537.pixnet.net
 127.0.0.1 rzso047.pixnet.net
 127.0.0.1 rzt8.cn  #redirects to g.penzai.com
+127.0.0.1 rzurl.com
 127.0.0.1 rzv16ki80w.blog.fc2.com
 127.0.0.1 s0411.com  #!redirects to g.penzai.com
 127.0.0.1 s0f5v35ah3.pixnet.net
@@ -11621,6 +11713,7 @@
 127.0.0.1 saloidant.co  #!redirects to procnw.xyz
 127.0.0.1 salonseudunasunnot.buzz  #redirects to g.penzai.com
 127.0.0.1 salrodriguez.me  #!redirects to ppcnzi.xyz
+127.0.0.1 saludarmonia.cl  #redirects to qabayz.site
 127.0.0.1 salute88.com
 127.0.0.1 salvadjifj27.pixnet.net
 127.0.0.1 sambamusst.co  #!redirects to procnw.xyz
@@ -11762,6 +11855,7 @@
 127.0.0.1 seoeol.com  #redirects to g.penzai.com
 127.0.0.1 seopupil.com  #redirects to g.penzai.com
 127.0.0.1 seortpa.co  #!redirects to procnw.xyz
+127.0.0.1 sergiofoto.lv  #redirects to ginseemore.live
 127.0.0.1 sergiogwqx.pixnet.net
 127.0.0.1 sexptt.tk  #168ptt.com
 127.0.0.1 sextoys-and-more.buzz  #!redirects to g.penzai.com
@@ -11882,6 +11976,7 @@
 127.0.0.1 shoucangzx.com  #redirects to g.penzai.com
 127.0.0.1 shoujidaren.com
 127.0.0.1 shoujifbb.com  #!redirects to g.penzai.com
+127.0.0.1 shoujiwan.com
 127.0.0.1 shoulu6.com  #redirects to g.penzai.com
 127.0.0.1 shoushu5551.cn  #redirects to g.penzai.com
 127.0.0.1 shouye-wang.com
@@ -11979,6 +12074,7 @@
 127.0.0.1 sjwencr.cn  #redirects to g.penzai.com
 127.0.0.1 sjxc2008.com  #redirects to g.penzai.com
 127.0.0.1 sjysjy78.co  #!redirects to procnw.xyz
+127.0.0.1 sjzjcjy.net
 127.0.0.1 sjzlangtai.com  #!redirects to g.penzai.com
 127.0.0.1 sjzp8.com  #redirects to g.penzai.com
 127.0.0.1 sjztdhg.com  #redirects to g.penzai.com
@@ -12094,6 +12190,7 @@
 127.0.0.1 soulmate888.blogspot.com
 127.0.0.1 soumeiyi.com  #!redirects to g.penzai.com
 127.0.0.1 soumiyu.com
+127.0.0.1 sousou88.com
 127.0.0.1 southprong.buzz  #!redirects to g.penzai.com
 127.0.0.1 souxxw.co  #!redirects to procnw.xyz
 127.0.0.1 sovalvo.com
@@ -12170,6 +12267,7 @@
 127.0.0.1 stackoom.com
 127.0.0.1 stamp3.com
 127.0.0.1 stanaback.buzz  #redirects to g.penzai.com
+127.0.0.1 standardsversion.com
 127.0.0.1 standrwslt.co  #!redirects to cacnka.xyz
 127.0.0.1 stanleyguoflw.pixnet.net
 127.0.0.1 star-walk.buzz  #!redirects to g.penzai.com
@@ -12195,6 +12293,8 @@
 127.0.0.1 steamxo.com
 127.0.0.1 steelebrettmu.pixnet.net
 127.0.0.1 steelefra1066.pixnet.net
+127.0.0.1 steemit.com
+127.0.0.1 steffieshundesalon.ch  #redirects to topawardhere.life
 127.0.0.1 steinlingaerten.ch
 127.0.0.1 stendon.co  #!redirects to procnw.xyz
 127.0.0.1 stephedq541h.pixnet.net
@@ -12273,6 +12373,7 @@
 127.0.0.1 suomenut.co  #!redirects to ppcnzi.xyz
 127.0.0.1 suonci.co  #!redirects to procnw.xyz
 127.0.0.1 super-puppys.com
+127.0.0.1 super-unix.com
 127.0.0.1 super01.cc  #redirects to www.cocomy.net
 127.0.0.1 superbigapple.com
 127.0.0.1 superchanges.buzz  #redirects to g.penzai.com
@@ -12319,6 +12420,7 @@
 127.0.0.1 sxingzhe.com  #redirects to g.penzai.com
 127.0.0.1 sxjswhcm.com  #redirects to g.penzai.com
 127.0.0.1 sxp8.cn  #redirects to g.penzai.com
+127.0.0.1 sxqhmy.com
 127.0.0.1 sxsqsm.com  #!redirects to g.penzai.com
 127.0.0.1 sxtelp.cn  #redirects to g.penzai.com
 127.0.0.1 sxwddq.com  #redirects to g.penzai.com
@@ -12329,6 +12431,7 @@
 127.0.0.1 sy-pc.cn  #redirects to g.penzai.com
 127.0.0.1 sy4olsonsvv.pixnet.net
 127.0.0.1 sybw63phyflor.pixnet.net
+127.0.0.1 sycmd.com
 127.0.0.1 sydneytoday.com
 127.0.0.1 sydzzc.com  #!redirects to g.penzai.com
 127.0.0.1 syfckj.com  #redirects to g.penzai.com
@@ -12561,6 +12664,7 @@
 127.0.0.1 taiwandiginews.com.tw  #指動傳播科技有限公司
 127.0.0.1 taiwanfansclub.com
 127.0.0.1 taiwanlikes.com
+127.0.0.1 taiwanmoigov.com
 127.0.0.1 taiyoukotori.co  #!redirects to procnw.xyz
 127.0.0.1 tajz5c.cn  #redirects to g.penzai.com
 127.0.0.1 takesurveysforcash911.blogspot.com
@@ -12569,6 +12673,7 @@
 127.0.0.1 taluopp.com  #redirects to g.penzai.com
 127.0.0.1 talygc.com  #!redirects to g.penzai.com
 127.0.0.1 tamiloprk.co  #redirects to keecnya.xyz
+127.0.0.1 tamishe.cn
 127.0.0.1 tammyhawko5.pixnet.net
 127.0.0.1 tandeclub.com  #redirects to g.penzai.com
 127.0.0.1 tang-seo.com
@@ -12640,6 +12745,7 @@
 127.0.0.1 tec98226548shou.wordpress.com
 127.0.0.1 techgerdv.co  #!redirects to cacnka.xyz
 127.0.0.1 techroomage.com
+127.0.0.1 techrum.vn
 127.0.0.1 techtagtw.com
 127.0.0.1 tedperkinsv5.pixnet.net
 127.0.0.1 tedwardgl.co  #redirects to cacnka.xyz
@@ -12657,6 +12763,7 @@
 127.0.0.1 tellus.jp.net  #!redirects to se10.biz
 127.0.0.1 temedtns.co  #!redirects to cacnka.xyz
 127.0.0.1 tengxinzs.com  #redirects to g.penzai.com
+127.0.0.1 terabitweb.com
 127.0.0.1 termicasolar.net  #!redirects to g.penzai.com
 127.0.0.1 terrainal.co  #!redirects to procnw.xyz
 127.0.0.1 terraze96l.pixnet.net
@@ -12767,6 +12874,8 @@
 127.0.0.1 tibet-internal.buzz  #!redirects to g.penzai.com
 127.0.0.1 tiengtrung.cn
 127.0.0.1 tierre-laser.buzz  #!redirects to g.penzai.com
+127.0.0.1 tiezhushuo.com
+127.0.0.1 tiezhushuo.zhaopindi.cn
 127.0.0.1 tighdies.co  #!redirects to keecnya.xyz
 127.0.0.1 tigotool.com  #redirects to g.penzai.com
 127.0.0.1 tigw96207423.wordpress.com
@@ -12808,6 +12917,7 @@
 127.0.0.1 tjlbr57593.pixnet.net
 127.0.0.1 tjlianhe.com  #redirects to g.penzai.com
 127.0.0.1 tjlonghui.com
+127.0.0.1 tjlqtwx.com  #nearly #R18
 127.0.0.1 tjlxffmy.com  #redirects to g.penzai.com
 127.0.0.1 tjoivh9.cn  #redirects to g.penzai.com
 127.0.0.1 tjoqfl543.pixnet.net
@@ -12893,6 +13003,7 @@
 127.0.0.1 top-wechat.com  #redirects to g.penzai.com
 127.0.0.1 top0718.com  #redirects to g.penzai.com
 127.0.0.1 top10bikeguide.com.tw
+127.0.0.1 topawardhere.life  #redirects to ginseemore.live
 127.0.0.1 topbester.com
 127.0.0.1 topitinfo.com
 127.0.0.1 toplawfirm.cn  #redirects to g.penzai.com
@@ -13054,6 +13165,7 @@
 127.0.0.1 tw.begin-it.com
 127.0.0.1 tw.observer
 127.0.0.1 tw.phonecardsoftware.com
+127.0.0.1 tw.sumry.org
 127.0.0.1 tw1988.link
 127.0.0.1 tw223com.blogspot.com
 127.0.0.1 tw520.me
@@ -13108,6 +13220,7 @@
 127.0.0.1 tyinfonet.buzz  #redirects to g.penzai.com
 127.0.0.1 tyjoa.com  #redirects to g.penzai.com
 127.0.0.1 tykudj.cn  #redirects to g.penzai.com
+127.0.0.1 tyldl.com
 127.0.0.1 tylersimsnpvg.pixnet.net
 127.0.0.1 tylerwaljgg.pixnet.net
 127.0.0.1 tym100.com  #!redirects to g.penzai.com
@@ -13219,6 +13332,7 @@
 127.0.0.1 ueubzya.cn  #!redirects to g.penzai.com
 127.0.0.1 uf4pagevirgil.pixnet.net
 127.0.0.1 ufakkk.buzz  #redirects to g.penzai.com
+127.0.0.1 ufgame.com
 127.0.0.1 ufmsjx6.cn  #redirects to g.penzai.com
 127.0.0.1 ufvpztw.cn  #redirects to g.penzai.com
 127.0.0.1 ugrfwt382.pixnet.net
@@ -13229,6 +13343,7 @@
 127.0.0.1 uhf8562ldw.blog.fc2.com
 127.0.0.1 uhlist.buzz  #redirects to g.penzai.com
 127.0.0.1 uhnupst5omnz.pixnet.net
+127.0.0.1 uhuacall.com
 127.0.0.1 uibtzj.cn  #redirects to g.penzai.com
 127.0.0.1 uibulo.com  #redirects to g.penzai.com
 127.0.0.1 uicf635.pixnet.net
@@ -13305,6 +13420,7 @@
 127.0.0.1 ustvchristnl.pixnet.net
 127.0.0.1 usy68as28y.blog.fc2.com
 127.0.0.1 utb6889veu.blog.fc2.com
+127.0.0.1 uthopiaprogettazione.it  #redirects to cubicongardens.sk
 127.0.0.1 utouchapp.com  #redirects to g.penzai.com
 127.0.0.1 utppzuj.buzz  #redirects to g.penzai.com
 127.0.0.1 utravelerpedia.com
@@ -13319,6 +13435,7 @@
 127.0.0.1 uutopic.com
 127.0.0.1 uuypf707qw.pixnet.net
 127.0.0.1 uv32iarnoldxu.pixnet.net
+127.0.0.1 uvc-protection.ch  #redirects to sergiofoto.lv
 127.0.0.1 uvuqs50.cn  #redirects to g.penzai.com
 127.0.0.1 uvvgov.com
 127.0.0.1 uw392.com  #redirects to g.penzai.com
@@ -13529,6 +13646,7 @@
 127.0.0.1 viddie.buzz  #redirects to g.penzai.com
 127.0.0.1 video-lab.net
 127.0.0.1 videogameplaza.buzz  #!redirects to g.penzai.com
+127.0.0.1 videoplay-on.com
 127.0.0.1 vidvuder.co  #!redirects to cacnka.xyz
 127.0.0.1 viennhotelta.co  #!redirects to keecnya.xyz
 127.0.0.1 viewpointcom.buzz  #!redirects to g.penzai.com
@@ -13892,7 +14010,10 @@
 127.0.0.1 wendylonnraf.pixnet.net
 127.0.0.1 wendymyrtlf.pixnet.net
 127.0.0.1 wenjutv.com
+127.0.0.1 wenku.51job.com
+127.0.0.1 wenku1.com
 127.0.0.1 wenlongkm.com  #redirects to g.penzai.com
+127.0.0.1 werkstatt-galerie.ch  #redirects to sergiofoto.lv
 127.0.0.1 werkthewb.co  #redirects to cacnka.xyz
 127.0.0.1 weswift.cn  #redirects to g.penzai.com
 127.0.0.1 wetalk.tw
@@ -14336,6 +14457,7 @@
 127.0.0.1 xabbt.com  #redirects to g.penzai.com
 127.0.0.1 xafgbnj.blogspot.com
 127.0.0.1 xagtfqw.com  #redirects to g.penzai.com
+127.0.0.1 xahaihongbz.com
 127.0.0.1 xajgjz.com  #!redirects to g.penzai.com
 127.0.0.1 xameiwo.com  #redirects to g.penzai.com
 127.0.0.1 xapic.cn  #redirects to g.penzai.com
@@ -14432,6 +14554,7 @@
 127.0.0.1 xianyounet.com  #redirects to g.penzai.com
 127.0.0.1 xianzuoba6.com  #redirects to g.penzai.com
 127.0.0.1 xiao66688.com  #redirects to g.penzai.com
+127.0.0.1 xiaobenzi.com
 127.0.0.1 xiaoerlx.cn  #redirects to g.penzai.com
 127.0.0.1 xiaohua369.cn  #redirects to g.penzai.com
 127.0.0.1 xiaokaili.com  #redirects to g.penzai.com
@@ -14529,6 +14652,7 @@
 127.0.0.1 xm018v3.pixnet.net
 127.0.0.1 xm3mhn.com  #redirects to g.penzai.com
 127.0.0.1 xm66955047.pixnet.net
+127.0.0.1 xm680.com
 127.0.0.1 xm96t.pixnet.net
 127.0.0.1 xmbtcm.com  #redirects to g.penzai.com
 127.0.0.1 xmctyhb.com  #!redirects to g.penzai.com
@@ -14573,6 +14697,7 @@
 127.0.0.1 xomba.com
 127.0.0.1 xop61nx07q.pixnet.net
 127.0.0.1 xoso88.buzz  #!redirects to g.penzai.com
+127.0.0.1 xp.cn
 127.0.0.1 xp373g9acd.blog.fc2.com
 127.0.0.1 xp7rb9.cn  #!redirects to g.penzai.com
 127.0.0.1 xp88925678.pixnet.net
@@ -14774,6 +14899,7 @@
 127.0.0.1 ya01z94wlb.pixnet.net
 127.0.0.1 ya0ue38.cn  #redirects to g.penzai.com
 127.0.0.1 yab168.co  #!redirects to procnw.xyz
+127.0.0.1 yabohash.store
 127.0.0.1 yadgu8g.cn  #redirects to g.penzai.com
 127.0.0.1 yadongfish.com  #redirects to g.penzai.com
 127.0.0.1 yadtrga.blogspot.com
@@ -14875,6 +15001,7 @@
 127.0.0.1 yhjlgw.com  #redirects to g.penzai.com
 127.0.0.1 yhnnc.com  #redirects to g.penzai.com
 127.0.0.1 yhstnc.com  #redirects to g.penzai.com
+127.0.0.1 yhtwww.cn
 127.0.0.1 yhvhamt.cn  #redirects to g.penzai.com
 127.0.0.1 yhwdl.com  #!redirects to g.penzai.com
 127.0.0.1 yhyg08l.pixnet.net
@@ -15375,6 +15502,7 @@
 127.0.0.1 zg2rqg.cn  #redirects to g.penzai.com
 127.0.0.1 zgaodeli.com  #redirects to g.penzai.com
 127.0.0.1 zgd88yc96o.blog.fc2.com
+127.0.0.1 zgfs0563.com
 127.0.0.1 zggsgg.com  #redirects to g.penzai.com
 127.0.0.1 zghj114.cn  #redirects to g.penzai.com
 127.0.0.1 zgiqwns.cn  #redirects to g.penzai.com
@@ -15542,6 +15670,7 @@
 127.0.0.1 znfushi.com  #redirects to g.penzai.com
 127.0.0.1 zngy57z.cn  #redirects to g.penzai.com
 127.0.0.1 znh53hj59z.pixnet.net
+127.0.0.1 znj.com
 127.0.0.1 znkji.com  #redirects to g.penzai.com
 127.0.0.1 znljiayou.com
 127.0.0.1 znxjv19713.pixnet.net

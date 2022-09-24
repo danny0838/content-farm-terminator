@@ -1,7 +1,7 @@
 ! Title: Nearly Content Farm Filters
 ! Description: Filter for content-farm-like sites, mostly in Chinese.
 ! Expires: 3 days
-! Last modified: 2022-09-25T04:00:31+00:00
+! Last modified: 2022-09-25T04:03:38+00:00
 ! Homepage: https://danny0838.github.io/content-farm-terminator/
 ! Licence: MIT License
 ! Source: https://danny0838.github.io/content-farm-terminator/files/blocklist-ubo/nearly-content-farms.txt
@@ -16,6 +16,7 @@
 ||disp.cc^
 ||entertainment14.net^
 ||helplib.com^
+||itdaan.com^
 ||iwaishin.com^
 ||jimpop.core5.org^
 ||looknews.us^
@@ -25,6 +26,7 @@
 ||playbuzz.com^
 ||ptt.jimpop.org^
 ||readfog.com^
+||technoglitz.com^
 ||today.line.me^
 ||ubuntuqa.com^
 ||unsafe.sh^
