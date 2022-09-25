@@ -89,7 +89,7 @@ build:
         Title: Content Farm Filters
         Description: Filter for general content farms, mostly in Chinese.
         Last modified: {now}
-        Homepage: https://github.com/danny0838/content-farm-terminator/tree/gh-pages
+        Homepage: https://danny0838.github.io/content-farm-terminator/
         Licence: MIT License
         Source: https://danny0838.github.io/content-farm-terminator/files/blocklist-hosts/content-farms.txt
       processors:
@@ -105,7 +105,7 @@ build:
         Title: Nearly Content Farm Filters
         Description: Filter for content-farm-like sites, mostly in Chinese.
         Last modified: {now}
-        Homepage: https://github.com/danny0838/content-farm-terminator/tree/gh-pages
+        Homepage: https://danny0838.github.io/content-farm-terminator/
         Licence: MIT License
         Source: https://danny0838.github.io/content-farm-terminator/files/blocklist-hosts/nearly-content-farms.txt
 
@@ -117,7 +117,7 @@ build:
         Title: Fake News Filters
         Description: Filter for fake news sites. (for reference)
         Last modified: {now}
-        Homepage: https://github.com/danny0838/content-farm-terminator/tree/gh-pages
+        Homepage: https://danny0838.github.io/content-farm-terminator/
         Licence: MIT License
         Source: https://danny0838.github.io/content-farm-terminator/files/blocklist-hosts/fake-news.txt
 
@@ -129,7 +129,7 @@ build:
         Title: Scam Sites Filters
         Description: Filter for scam sites. (for reference)
         Last modified: {now}
-        Homepage: https://github.com/danny0838/content-farm-terminator/tree/gh-pages
+        Homepage: https://danny0838.github.io/content-farm-terminator/
         Licence: MIT License
         Source: https://danny0838.github.io/content-farm-terminator/files/blocklist-hosts/scam-sites.txt
 
@@ -142,7 +142,7 @@ build:
         Description: Filter for general content farms, mostly in Chinese.
         Expires: 3 days
         Last modified: {now}
-        Homepage: https://github.com/danny0838/content-farm-terminator/tree/gh-pages
+        Homepage: https://danny0838.github.io/content-farm-terminator/
         Licence: MIT License
         Source: https://danny0838.github.io/content-farm-terminator/files/blocklist-ubo/content-farms.txt
       schemes:
@@ -163,7 +163,7 @@ build:
         Description: Filter for content-farm-like sites, mostly in Chinese.
         Expires: 3 days
         Last modified: {now}
-        Homepage: https://github.com/danny0838/content-farm-terminator/tree/gh-pages
+        Homepage: https://danny0838.github.io/content-farm-terminator/
         Licence: MIT License
         Source: https://danny0838.github.io/content-farm-terminator/files/blocklist-ubo/nearly-content-farms.txt
 
@@ -176,7 +176,7 @@ build:
         Description: Filter for content-farm related social media, mostly in Chinese.
         Expires: 3 days
         Last modified: {now}
-        Homepage: https://github.com/danny0838/content-farm-terminator/tree/gh-pages
+        Homepage: https://danny0838.github.io/content-farm-terminator/
         Licence: MIT License
         Source: https://danny0838.github.io/content-farm-terminator/files/blocklist-ubo/sns-content-farms.txt
       schemes:
@@ -191,7 +191,7 @@ build:
         Description: Filter for fake news sites. (for reference)
         Expires: 3 days
         Last modified: {now}
-        Homepage: https://github.com/danny0838/content-farm-terminator/tree/gh-pages
+        Homepage: https://danny0838.github.io/content-farm-terminator/
         Licence: MIT License
         Source: https://danny0838.github.io/content-farm-terminator/files/blocklist-ubo/fake-news.txt
       schemes:
@@ -207,7 +207,7 @@ build:
         Description: Filter for scam sites. (for reference)
         Expires: 3 days
         Last modified: {now}
-        Homepage: https://github.com/danny0838/content-farm-terminator/tree/gh-pages
+        Homepage: https://danny0838.github.io/content-farm-terminator/
         Licence: MIT License
         Source: https://danny0838.github.io/content-farm-terminator/files/blocklist-ubo/scam-sites.txt
 
@@ -219,7 +219,7 @@ build:
         Title: Content Farm Filters
         Description: Filter for general content farms, mostly in Chinese.
         Last modified: {now}
-        Homepage: https://github.com/danny0838/content-farm-terminator/tree/gh-pages
+        Homepage: https://danny0838.github.io/content-farm-terminator/
         Licence: MIT License
         Source: https://danny0838.github.io/content-farm-terminator/files/blocklist-ublacklist/content-farms.txt
       processors:
@@ -244,7 +244,7 @@ build:
         Title: Nearly Content Farm Filters
         Description: Filter for content-farm-like sites, mostly in Chinese.
         Last modified: {now}
-        Homepage: https://github.com/danny0838/content-farm-terminator/tree/gh-pages
+        Homepage: https://danny0838.github.io/content-farm-terminator/
         Licence: MIT License
         Source: https://danny0838.github.io/content-farm-terminator/files/blocklist-ublacklist/nearly-content-farms.txt
 
@@ -256,7 +256,7 @@ build:
         Title: Fake News Filters
         Description: Filter for fake news sites. (for reference)
         Last modified: {now}
-        Homepage: https://github.com/danny0838/content-farm-terminator/tree/gh-pages
+        Homepage: https://danny0838.github.io/content-farm-terminator/
         Licence: MIT License
         Source: https://danny0838.github.io/content-farm-terminator/files/blocklist-ublacklist/fake-news.txt
       schemes:
@@ -271,6 +271,6 @@ build:
         Title: Scam Sites Filters
         Description: Filter for scam sites. (for reference)
         Last modified: {now}
-        Homepage: https://github.com/danny0838/content-farm-terminator/tree/gh-pages
+        Homepage: https://danny0838.github.io/content-farm-terminator/
         Licence: MIT License
         Source: https://danny0838.github.io/content-farm-terminator/files/blocklist-ublacklist/scam-sites.txt
