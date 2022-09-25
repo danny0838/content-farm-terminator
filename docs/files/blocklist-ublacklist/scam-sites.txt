@@ -1,6 +1,6 @@
 # Title: Scam Sites Filters
 # Description: Filter for scam sites. (for reference)
-# Last modified: 2022-09-25T04:00:31+00:00
+# Last modified: 2022-09-25T04:02:49+00:00
 # Homepage: https://danny0838.github.io/content-farm-terminator/
 # Licence: MIT License
 # Source: https://danny0838.github.io/content-farm-terminator/files/blocklist-ublacklist/scam-sites.txt
@@ -255,7 +255,6 @@
 *://*.awsdf.top/*
 *://*.axbktw.com/*
 *://*.axinai.com/*
-/https?:\/\/(?:[\w-]+\.)*(?:axn2000\.blogspot\.[\w.-]*)(?=[:\/?#]|$)/
 *://*.aydqi.com/*
 *://*.azrrr.com/*
 *://*.azumr.com/*
@@ -729,7 +728,6 @@
 *://*.fairforce.top/*
 *://*.fallowleather.top/*
 *://*.falyme.com/*
-/https?:\/\/(?:[\w-]+\.)*(?:faminereports\.blogspot\.[\w.-]*)(?=[:\/?#]|$)/
 *://*.fancygoodbuy.com/*
 *://*.fangfeishop.com/*
 *://*.fantastictw.com/*
@@ -1651,7 +1649,6 @@
 *://*.peacil.com/*
 *://*.peafoo.com/*
 *://*.peasestore.com/*
-/https?:\/\/(?:[\w-]+\.)*(?:peopleinsider\.blogspot\.[\w.-]*)(?=[:\/?#]|$)/
 *://*.perfectbhcare.com/*
 *://*.perouoc.com/*
 *://*.perstuff.com/*
@@ -2764,3 +2761,4 @@
 *://*.zzphomme.com/*
 *://*.zzstoo.com/*
 *://*.zztzv.com/*
+/https?:\/\/(?:[\w-]+\.)*(?:axn2000|faminereports|peopleinsider)\.blogspot\.(?:[\w.-]+)(?=[:\/?#]|$)/

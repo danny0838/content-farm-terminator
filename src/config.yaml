@@ -23,15 +23,17 @@ build:
         pchome:
           <<: *grouping_regex_scheme
           value: /^https?://mypaper\.(?:m\.)?pchome\.com\.tw/(?:{value})(?=[/?#]|$)/
-        domain-part: &domain_part_scheme_cft
+        domain-part:
           <<: *grouping_regex_scheme
           value: /https?://(?:[\w-]+\.)*(?:{value})(?:\.[\w-]+)*(?=[:/?#]|$)/
-        domain-path: &domain_path_scheme_cft
+        domain-path:
           <<: *grouping_regex_scheme
           value: /https?://(?:www\.)?(?:{value})(?=[/?#]|$)/
 
   - source: src/blocklist/nearly-content-farms.txt
     publish: docs/files/blocklist/nearly-content-farms.txt
+    data:
+      schemes: *content_farms_schemes
 
   - source: src/blocklist/sns-content-farms.txt
     publish: docs/files/blocklist/sns-content-farms.txt
@@ -74,12 +76,12 @@ build:
   - source: src/blocklist/fake-news.txt
     publish: docs/files/blocklist/fake-news.txt
     data:
-      schemes:
-        domain-part: *domain_part_scheme_cft
-        domain-path: *domain_path_scheme_cft
+      schemes: *content_farms_schemes
 
   - source: src/blocklist/scam-sites.txt
     publish: docs/files/blocklist/scam-sites.txt
+    data:
+      schemes: *content_farms_schemes
 
   - source: src/blocklist/content-farms.txt
     publish: docs/files/blocklist-hosts/content-farms.txt
@@ -145,19 +147,19 @@ build:
         Homepage: https://danny0838.github.io/content-farm-terminator/
         Licence: MIT License
         Source: https://danny0838.github.io/content-farm-terminator/files/blocklist-ubo/content-farms.txt
-      processors:
+      processors: &content_farms_processors_ubo
         - type: domain
           pattern: ^\*\.([\w.-]+)$
           replacement: domain-suffix:\1
-      schemes:
+      schemes: &content_farms_schemes_ubo
         <<: *content_farms_schemes
-        domain-part: &domain_part_scheme_ubo
+        domain-part:
           value: "||{value}^\n||{value}.*^$document"
           mode: raw
-        domain-path: &domain_path_scheme_ubo
+        domain-path:
           value: "||{value}^$document"
           mode: raw
-        domain-suffix: &domain_suffix_scheme_ubo
+        domain-suffix:
           <<: *grouping_regex_scheme
           value: /https?://(?:www\.|(?!www\.))[\w.-]+\.(?:{value})(?=[:/?#]|$)/
 
@@ -173,6 +175,8 @@ build:
         Homepage: https://danny0838.github.io/content-farm-terminator/
         Licence: MIT License
         Source: https://danny0838.github.io/content-farm-terminator/files/blocklist-ubo/nearly-content-farms.txt
+      processors: *content_farms_processors_ubo
+      schemes: *content_farms_schemes_ubo
 
   - source: src/blocklist/sns-content-farms.txt
     publish: docs/files/blocklist-ubo/sns-content-farms.txt
@@ -201,9 +205,8 @@ build:
         Homepage: https://danny0838.github.io/content-farm-terminator/
         Licence: MIT License
         Source: https://danny0838.github.io/content-farm-terminator/files/blocklist-ubo/fake-news.txt
-      schemes:
-        domain-part: *domain_part_scheme_ubo
-        domain-path: *domain_path_scheme_ubo
+      processors: *content_farms_processors_ubo
+      schemes: *content_farms_schemes_ubo
 
   - source: src/blocklist/scam-sites.txt
     publish: docs/files/blocklist-ubo/scam-sites.txt
@@ -217,6 +220,8 @@ build:
         Homepage: https://danny0838.github.io/content-farm-terminator/
         Licence: MIT License
         Source: https://danny0838.github.io/content-farm-terminator/files/blocklist-ubo/scam-sites.txt
+      processors: *content_farms_processors_ubo
+      schemes: *content_farms_schemes_ubo
 
   - source: src/blocklist/content-farms.txt
     publish: docs/files/blocklist-ublacklist/content-farms.txt
@@ -229,22 +234,22 @@ build:
         Homepage: https://danny0838.github.io/content-farm-terminator/
         Licence: MIT License
         Source: https://danny0838.github.io/content-farm-terminator/files/blocklist-ublacklist/content-farms.txt
-      processors:
+      processors: &content_farms_processors_ublacklist
         - type: domain
           pattern: ^\*\.([\w.-]+)$
           replacement: domain-suffix:\1
         - type: domain
           pattern: ^([\w-]+)\.blogspot\.\*$
           replacement: blogspot:\1
-      schemes:
+      schemes: &content_farms_schemes_ublacklist
         <<: *content_farms_schemes
-        domain-part: &domain_part_scheme_ublacklist
+        domain-part:
           <<: *grouping_regex_scheme
           value: /https?://(?:[\w-]+\.)*(?:{value})(?:\.[\w-]+)*(?=[:\/?#]|$)/
-        domain-path: &domain_path_scheme_ublacklist
+        domain-path:
           value: "*://*.{value}\n*://*.{value}/*"
           mode: raw
-        domain-suffix: &domain_suffix_scheme_ublacklist
+        domain-suffix:
           <<: *grouping_regex_scheme
           value: /https?://(?:www\.|(?!www\.))[\w.-]+\.(?:{value})(?=[:/?#]|$)/
         blogspot:
@@ -262,6 +267,8 @@ build:
         Homepage: https://danny0838.github.io/content-farm-terminator/
         Licence: MIT License
         Source: https://danny0838.github.io/content-farm-terminator/files/blocklist-ublacklist/nearly-content-farms.txt
+      processors: *content_farms_processors_ublacklist
+      schemes: *content_farms_schemes_ublacklist
 
   - source: src/blocklist/fake-news.txt
     publish: docs/files/blocklist-ublacklist/fake-news.txt
@@ -274,9 +281,8 @@ build:
         Homepage: https://danny0838.github.io/content-farm-terminator/
         Licence: MIT License
         Source: https://danny0838.github.io/content-farm-terminator/files/blocklist-ublacklist/fake-news.txt
-      schemes:
-        domain-part: *domain_part_scheme_ublacklist
-        domain-path: *domain_path_scheme_ublacklist
+      processors: *content_farms_processors_ublacklist
+      schemes: *content_farms_schemes_ublacklist
 
   - source: src/blocklist/scam-sites.txt
     publish: docs/files/blocklist-ublacklist/scam-sites.txt
@@ -289,3 +295,5 @@ build:
         Homepage: https://danny0838.github.io/content-farm-terminator/
         Licence: MIT License
         Source: https://danny0838.github.io/content-farm-terminator/files/blocklist-ublacklist/scam-sites.txt
+      processors: *content_farms_processors_ublacklist
+      schemes: *content_farms_schemes_ublacklist
