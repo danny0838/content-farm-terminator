@@ -25,7 +25,7 @@ build:
           value: /^https?://mypaper\.(?:m\.)?pchome\.com\.tw/(?:{value})(?=[/?#]|$)/
         domain-part: &domain_part_scheme_cft
           <<: *grouping_regex_scheme
-          value: /https?://(?:[\w-]+\.)*(?:{value})(?:\.[\w-]+)*(?=[/?#]|$)/
+          value: /https?://(?:[\w-]+\.)*(?:{value})(?:\.[\w-]+)*(?=[:/?#]|$)/
         domain-path: &domain_path_scheme_cft
           <<: *grouping_regex_scheme
           value: /https?://(?:www\.)?(?:{value})(?=[/?#]|$)/
@@ -148,10 +148,10 @@ build:
       schemes:
         <<: *content_farms_schemes
         domain-part: &domain_part_scheme_ubo
-          value: "||{value}^"
+          value: "||{value}^\n||{value}.*^$document"
           mode: raw
         domain-path: &domain_path_scheme_ubo
-          value: "||{value}^"
+          value: "||{value}^$document"
           mode: raw
 
   - source: src/blocklist/nearly-content-farms.txt
@@ -229,9 +229,11 @@ build:
       schemes:
         <<: *content_farms_schemes
         domain-part: &domain_part_scheme_ublacklist
-          value: "*://*.{value}.*/*"
+          <<: *grouping_regex_scheme
+          value: /https?://(?:[\w-]+\.)*(?:{value})(?:\.[\w-]+)*(?=[:\/?#]|$)/
         domain-path: &domain_path_scheme_ublacklist
-          value: "*://*.{value}/*"
+          value: "*://*.{value}\n*://*.{value}/*"
+          mode: raw
         blogspot:
           <<: *grouping_regex_scheme
           value: /https?://(?:[\w-]+\.)*(?:{value})\.blogspot\.(?:[\w.-]+)(?=[:\/?#]|$)/

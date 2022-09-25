@@ -1,6 +1,6 @@
 # Title: Fake News Filters
 # Description: Filter for fake news sites. (for reference)
-# Last modified: 2022-09-25T04:00:31+00:00
+# Last modified: 2022-09-25T04:01:03+00:00
 # Homepage: https://danny0838.github.io/content-farm-terminator/
 # Licence: MIT License
 # Source: https://danny0838.github.io/content-farm-terminator/files/blocklist-ublacklist/fake-news.txt
@@ -215,6 +215,22 @@
 *://*.dissentmagazine.org/*  #political
 *://*.diversitychronicle.wordpress.com/*  #satire
 *://*.dollarvigilante.com/*  #bias
+*://*.cato.org/blog
+*://*.cato.org/blog/*  #political  #reliable
+*://*.educateinspirechange.org/health
+*://*.educateinspirechange.org/health/*  #clickbait  #junksci
+*://*.newyorker.com/humor
+*://*.newyorker.com/humor/*  #satire
+*://*.nonaiswa.org/wordpress
+*://*.nonaiswa.org/wordpress/*  #unknown
+*://*.smartknowledgeu.com/blog
+*://*.smartknowledgeu.com/blog/*  #unknown
+*://*.solari.com/blog
+*://*.solari.com/blog/*  #unknown
+*://*.szandorblestman.com/index.php
+*://*.szandorblestman.com/index.php/*  #unknown
+*://*.thegoldandoilguy.com/articles
+*://*.thegoldandoilguy.com/articles/*  #unreliable
 *://*.donaldtrumpnews.co/*  #fake
 *://*.dont-tread-on.me/*  #conspiracy
 *://*.downtrend.com/*  #fake  #satire
@@ -901,3 +917,4 @@
 *://*.zengardner.com/*  #unknown
 *://*.zerohedge.com/*  #conspiracy
 *://*.zootfeed.com/*  #conspiracy
+/https?:\/\/(?:[\w-]+\.)*(?:24orenotizie|attivotv|capnews|catenaumana|chesuccede|conspiracywire|coriere|corrieredellanotte|corrieredellapera|corrieredelmattino|corrieredisera|coscienzaitaliana|curiosandoonline|curiosity2013|cvdiariodelpollineo|dionidream|direttanews|direttanews24|direttanfo|essenzialmentedonna|fattoquotidaino|gazzetta24|gazzettadellasera|gazzettanews24|giomale|ilblogdellattivista|ilmessaggio|ilradicale|iltelegrafo|imigliorivideo|indecisionforever|informazionelibera|italianiuniti|italianosveglia|italianotizie24|italiapatriamia|italiarialzati|jedanews|kevideo|lanozione|lapillolarossa|last\-webs|libero\-notizie|liberogiornale|lmr|mafiacapitale|mattoquotidiano|news24roma|newscronaca|newsitalys|nocensura|notixonline|notixweb|notiziariosegreto|panorana|perdavvero|quotidaino|rebubblica|repubblica24|retenews24|riscattonazionale|rubrica24|segretodistato|skytg24news|socialbuzz|tg24h|tg5stelle|tgnewsitalia|tuttiicriminidegliimmigrati|tzetze|ultimaora24|videoviraliweb|vnews24|voxnews|webitalia360)(?:\.[\w-]+)*(?=[:\/?#]|$)/
