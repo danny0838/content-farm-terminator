@@ -145,6 +145,10 @@ build:
         Homepage: https://danny0838.github.io/content-farm-terminator/
         Licence: MIT License
         Source: https://danny0838.github.io/content-farm-terminator/files/blocklist-ubo/content-farms.txt
+      processors:
+        - type: domain
+          pattern: ^\*\.([\w.-]+)$
+          replacement: domain-suffix:\1
       schemes:
         <<: *content_farms_schemes
         domain-part: &domain_part_scheme_ubo
@@ -153,6 +157,9 @@ build:
         domain-path: &domain_path_scheme_ubo
           value: "||{value}^$document"
           mode: raw
+        domain-suffix: &domain_suffix_scheme_ubo
+          <<: *grouping_regex_scheme
+          value: /https?://(?:www\.|(?!www\.))[\w.-]+\.(?:{value})(?=[:/?#]|$)/
 
   - source: src/blocklist/nearly-content-farms.txt
     publish: docs/files/blocklist-ubo/nearly-content-farms.txt
@@ -224,6 +231,9 @@ build:
         Source: https://danny0838.github.io/content-farm-terminator/files/blocklist-ublacklist/content-farms.txt
       processors:
         - type: domain
+          pattern: ^\*\.([\w.-]+)$
+          replacement: domain-suffix:\1
+        - type: domain
           pattern: ^([\w-]+)\.blogspot\.\*$
           replacement: blogspot:\1
       schemes:
@@ -234,6 +244,9 @@ build:
         domain-path: &domain_path_scheme_ublacklist
           value: "*://*.{value}\n*://*.{value}/*"
           mode: raw
+        domain-suffix: &domain_suffix_scheme_ublacklist
+          <<: *grouping_regex_scheme
+          value: /https?://(?:www\.|(?!www\.))[\w.-]+\.(?:{value})(?=[:/?#]|$)/
         blogspot:
           <<: *grouping_regex_scheme
           value: /https?://(?:[\w-]+\.)*(?:{value})\.blogspot\.(?:[\w.-]+)(?=[:\/?#]|$)/
