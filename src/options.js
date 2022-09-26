@@ -113,6 +113,19 @@ async function init(event) {
       if (searchParams.get('type') === 'block') {
         document.querySelector('#infoUrl dt').textContent = utils.lang('infoUrlBlocked');
         document.querySelector('#infoUrlRegex dt').textContent = utils.lang('infoUrlBlockedRegex');
+
+        (async () => {
+          const blocker = await browser.runtime.sendMessage({
+            cmd: 'getUrlBlocker',
+            args: {url},
+          });
+          document.querySelector('#infoUrlBlocker').hidden = false;
+          document.querySelector('#infoUrlBlockerSrc').hidden = false;
+          document.querySelector('#infoUrlBlocker dd').textContent = [blocker.rule, blocker.sep, blocker.comment].join('');
+          if (blocker.src) {
+            document.querySelector('#infoUrlBlockerSrc dd').textContent = blocker.src;
+          }
+        })();
       }
     }
   }

@@ -197,6 +197,16 @@
     "description": "Label of the regex of the referrer of the recently visited URL in options page"
   },
 
+  "infoUrlBlocker": {
+    "message": "Blocking rule:",
+    "description": "Label of the rule for the recently blocked URL in options page"
+  },
+
+  "infoUrlBlockerSrc": {
+    "message": "Blocking rule source:",
+    "description": "Label of the rule source for the recently blocked URL in options page"
+  },
+
   "allBlacklist": {
     "message": "Loaded Blacklist",
     "description": "Label of allBlacklist field in options page"

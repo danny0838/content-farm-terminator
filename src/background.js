@@ -340,6 +340,12 @@ function initMessageListener() {
           return await filter.isBlocked(args.url);
         })();
       }
+      case 'getUrlBlocker': {
+        return (async () => {
+          await updateFilterPromise;
+          return await filter.getBlocker(args.url);
+        })();
+      }
       case 'isTempUnblocked': {
         return (async () => {
           return tempUnblockTabs.has(sender.tab.id);
