@@ -144,7 +144,7 @@
       };
       const urlMatchBlockList = (url, blocklist) => {
         const rv = new Map();
-        for (const regex of blocklist.regexes) {
+        for (const [regex] of blocklist.regexRulesDict) {
           regex.lastIndex = 0;
           if (regex.test(url)) {
             // @TODO: reference the matched rule
@@ -436,64 +436,19 @@
 
       const cacheRules = (blockList) => {
         const standardRulesDict = new Trie();
-        const mapFlagRules = new Map();
-        const mapAdvancedRegexRules = new Map();
+        const regexRulesDict = new Map();
         for (const [rule] of blockList.rules) {
           if (reRegexRule.test(rule)) {
             // RegExp rule
-            const regexText = RegExp.$1;
-            const regexFlags = [...new Set(RegExp.$2)].sort().join('');
-            if (isAdvancedRegex(regexText)) {
-              const regex = new RegExp(regexText, regexFlags);
-              mapAdvancedRegexRules.set(regex, rule);
-            } else {
-              let rules = mapFlagRules.get(regexFlags);
-              if (!rules) {
-                rules = new Map();
-                mapFlagRules.set(regexFlags, rules);
-              }
-              rules.set(isAdvancedRegex.regexText, rule);
-            }
+            regexRulesDict.set(new RegExp(RegExp.$1, RegExp.$2), rule);
           } else {
             // standard rule
             let rewrittenRule = rule;
             standardRulesDict.add(rewrittenRule, rule);
           }
         }
-
-        const regexes = [];
-        let regexTexts = [];
-        let len = 0;
-        const mergeRegexes = (regexFlags) => {
-          const regex = new RegExp(regexTexts.join('|'), regexFlags);
-          regexes.push(regex);
-          regexTexts = [];
-          len = 0;
-        };
-        for (const [regexFlags, rules] of mapFlagRules) {
-          for (const [regexText, rule] of rules) {
-            if (regexTexts.length + 1 > reMaxGroups) {
-              mergeRegexes(regexFlags);
-            }
-
-            const newLen = (len ? len + 3 : 2) + regexText.length;
-            if (newLen > reMaxLength && regexTexts.length) {
-              mergeRegexes(regexFlags);
-            }
-
-            regexTexts.push(regexText);
-            len = newLen;
-          }
-          if (regexTexts.length) {
-            mergeRegexes(regexFlags);
-          }
-        }
-        for (const [regex, rule] of mapAdvancedRegexRules) {
-          regexes.push(regex);
-        }
-
         blockList.standardRulesDict = standardRulesDict;
-        blockList.regexes = regexes;
+        blockList.regexRulesDict = regexRulesDict;
       };
 
       const fn = this.makeCachedRules = () => {
