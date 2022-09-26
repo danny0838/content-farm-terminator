@@ -268,10 +268,10 @@
 
     validateRule(...args) {
       const reRegexRule = /^\/(.*)\/([a-z]*)$/;
-      const reHostEscaper = /[xX*]/g;
-      const reHostUnescaper = /x[xa]/g;
-      const mapHostEscaper = {"x": "xx", "X": "xX", "*": "xa"};
-      const mapHostUnescaper = {xx: "x", xX: "X", xa: "*"};
+      const reHostEscaper = /[-*]/g;
+      const reHostUnescaper = /-[-a]/g;
+      const mapHostEscaper = {"-": "--", "*": "-a"};
+      const mapHostUnescaper = {"--": "-", "-a": "*"};
       const fnHostEscaper = m => mapHostEscaper[m];
       const fnHostUnescaper = m => mapHostUnescaper[m];
       const reSchemeChecker = /^[A-Za-z][0-9A-za-z.+-]*:\/\//;
