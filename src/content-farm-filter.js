@@ -111,9 +111,18 @@
 
     /**
      * @param {string} urlOrHostname - url or hostname
-     * @return {number} 0: not blocked; 1: blocked by standard rule; 2: blocked by regex rule
+     * @returns {BlockType}
      */
-    isBlocked(...args) {
+    isBlocked(urlOrHostname) {
+      const blocker = this.getBlocker(urlOrHostname);
+      return this.getBlockType(blocker);
+    }
+
+    /**
+     * @param {string} urlOrHostname - url or hostname
+     * @returns {?Rule}
+     */
+    getBlocker(...args) {
       const reSchemeChecker = /^[A-Za-z][0-9A-za-z.+-]*:\/\//;
       const reIpv4 = /^\d{1,3}(?:\.\d{1,3}){3}$/;
       const hostnameMatchBlockList = (hostname, blocklist) => {
@@ -127,33 +136,29 @@
           hostname = hostname.slice(4);
         }
 
-        const rv = new Map();
         let domain = hostname;
         let pos;
         while (true) {
           const m = blocklist.standardRulesDict.match(domain);
-          for (const [k, v] of m) {
-            rv.set(k, v);
-            return rv; // return first match
+          for (const [rule] of m) {
+            return rule;  // return first match
           }
           pos = domain.indexOf('.');
           if (pos === -1) { break; }
           domain = domain.slice(pos + 1);
         }
-        return rv;
+        return null;
       };
       const urlMatchBlockList = (url, blocklist) => {
-        const rv = new Map();
-        for (const [regex] of blocklist.regexRulesDict) {
+        for (const [regex, rule] of blocklist.regexRulesDict) {
           regex.lastIndex = 0;
           if (regex.test(url)) {
-            // @TODO: reference the matched rule
-            rv.set(true, true);
+            return rule;  // return first match
           }
         }
-        return rv;
+        return null;
       };
-      const fn = this.isBlocked = (urlOrHostname) => {
+      const fn = this.getBlocker = (urlOrHostname) => {
         let urlObj;
         try {
           urlObj = new URL(reSchemeChecker.test(urlOrHostname) ? urlOrHostname : 'http://' + urlOrHostname);
@@ -167,38 +172,58 @@
         // URL.hostname is not punycoded in some old browsers (e.g. Firefox 52)
         const h = punycode.toASCII(urlObj.hostname);
 
-        let rules;
+        let rule;
         let blocklist;
 
         blocklist = this._whitelist;
 
-        rules = hostnameMatchBlockList(h, blocklist);
-        if (rules.size) {
-          return 0;
+        rule = hostnameMatchBlockList(h, blocklist);
+        if (rule) {
+          return null;
         }
 
         const url = utils.getNormalizedUrl(urlObj);
 
-        rules = urlMatchBlockList(url, blocklist);
-        if (rules.size) {
-          return 0;
+        rule = urlMatchBlockList(url, blocklist);
+        if (rule) {
+          return null;
         }
 
         blocklist = this._blacklist;
 
-        rules = hostnameMatchBlockList(h, blocklist);
-        if (rules.size) {
-          return 1;
+        rule = hostnameMatchBlockList(h, blocklist);
+        if (rule) {
+          return rule;
         }
 
-        rules = urlMatchBlockList(url, blocklist);
-        if (rules.size) {
-          return 2;
+        rule = urlMatchBlockList(url, blocklist);
+        if (rule) {
+          return rule;
         }
 
-        return 0;
+        return null;
       };
       return fn(...args);
+    }
+
+    /**
+     * A number representing the type of a block.
+     * 0: not blocked; 1: blocked by standard rule; 2: blocked by regex rule
+     * @typedef {number} BlockType
+     */
+
+    /**
+     * @param {?Rule} rule
+     * @returns {BlockType}
+     */
+    getBlockType(rule) {
+      if (rule) {
+        if (rule.rule && rule.rule.startsWith('/')) {
+          return 2;
+        }
+        return 1;
+      }
+      return 0;
     }
 
     isInBlacklist(ruleLine) {
@@ -335,10 +360,18 @@
     }
 
     /**
+     * @typedef {Object} Rule
+     * @property {string} rule
+     * @property {string} sep
+     * @property {string} comment
+     */
+
+    /**
      * @param {Object} options
-     *     - {boolean} validate
-     *     - {boolean} transform
-     *     - {boolean} asString
+     *     - {boolean} options.validate
+     *     - {boolean} options.transform
+     *     - {boolean} options.asString
+     * @returns {Rule}
      */
     parseRuleLine(...args) {
       const reSpaceMatcher = /^(\S*)(\s*)(.*)$/;
@@ -437,13 +470,13 @@
       const cacheRules = (blockList) => {
         const standardRulesDict = new Trie();
         const regexRulesDict = new Map();
-        for (const [rule] of blockList.rules) {
-          if (reRegexRule.test(rule)) {
+        for (const [, rule] of blockList.rules) {
+          if (reRegexRule.test(rule.rule)) {
             // RegExp rule
             regexRulesDict.set(new RegExp(RegExp.$1, RegExp.$2), rule);
           } else {
             // standard rule
-            let rewrittenRule = rule;
+            let rewrittenRule = rule.rule;
             standardRulesDict.add(rewrittenRule, rule);
           }
         }
