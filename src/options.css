@@ -31,9 +31,19 @@ body {
   opacity: 0.6;
 }
 
-#urlInfo, #urlReferrerInfo {
-  word-break: break-all;
-  white-space: pre-wrap;
+.info {
+  overflow: auto;
+}
+
+.info > div > dt, .info > div > dd {
+  margin: 0;
+  padding: 0;
+  display: inline;
+  white-space: pre;
+}
+
+.info > div > dt {
+  margin-__MSG_@@bidi_end_edge__: .5em;
 }
 
 .field {

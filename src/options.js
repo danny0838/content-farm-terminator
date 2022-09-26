@@ -75,6 +75,9 @@ async function onSubmit(event) {
 }
 
 async function init(event) {
+  document.querySelector('#resetButton').addEventListener('click', onReset);
+  document.querySelector('#submitButton').addEventListener('click', onSubmit);
+
   utils.loadLanguages(document);
 
   // hide some options if contextMenus is not available
@@ -96,28 +99,34 @@ async function init(event) {
 
   loadOptions(); // async
 
-  try {
-    const url = new URL(location.href).searchParams.get('from');
+  const searchParams = new URL(location.href).searchParams;
+
+  {
+    const url = searchParams.get('from');
     if (url) {
       const urlRegex = `/^${utils.escapeRegExp(url, true)}$/`;
-      document.querySelector('#urlInfo').textContent = utils.lang('urlInfo', [url, urlRegex]);
+      document.querySelector('#infoUrl dd').textContent = url;
+      document.querySelector('#infoUrlRegex dd').textContent = urlRegex;
+      document.querySelector('#infoUrl').hidden = false;
+      document.querySelector('#infoUrlRegex').hidden = false;
+
+      if (searchParams.get('type') === 'block') {
+        document.querySelector('#infoUrl dt').textContent = utils.lang('infoUrlBlocked');
+        document.querySelector('#infoUrlRegex dt').textContent = utils.lang('infoUrlBlockedRegex');
+      }
     }
-  } catch (ex) {
-    console.error(ex);
   }
 
-  try {
-    const url = new URL(location.href).searchParams.get('ref');
+  {
+    const url = searchParams.get('ref');
     if (url) {
       const urlRegex = `/^${utils.escapeRegExp(url, true)}$/`;
-      document.querySelector('#urlReferrerInfo').textContent = utils.lang('urlReferrerInfo', [url, urlRegex]);
+      document.querySelector('#infoUrlReferrer dd').textContent = url;
+      document.querySelector('#infoUrlReferrerRegex dd').textContent = urlRegex;
+      document.querySelector('#infoUrlReferrer').hidden = false;
+      document.querySelector('#infoUrlReferrerRegex').hidden = false;
     }
-  } catch (ex) {
-    console.error(ex);
   }
-
-  document.querySelector('#resetButton').addEventListener('click', onReset);
-  document.querySelector('#submitButton').addEventListener('click', onSubmit);
 }
 
 document.addEventListener('DOMContentLoaded', init);

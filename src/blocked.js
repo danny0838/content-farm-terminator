@@ -132,6 +132,7 @@ async function init(event) {
   const detailsUrl = new URL(browser.runtime.getURL('options.html'));
   detailsUrl.searchParams.set('from', sourceUrl);
   if (referrerUrl) { detailsUrl.searchParams.set('ref', referrerUrl); }
+  detailsUrl.searchParams.set('type', 'block');
   document.querySelector('#detailsLink').href = detailsUrl.href;
 
   /**

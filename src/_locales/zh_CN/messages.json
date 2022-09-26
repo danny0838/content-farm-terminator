@@ -167,34 +167,34 @@
     "description": "Title and alt text for the image marker of a link targeting a content farm page."
   },
 
-  "urlInfo": {
-    "message": "最近访问: $URL$\n最近访问 (regex): $URL_REGEX$",
-    "description": "Description of the recent visited URL in options page",
-    "placeholders": {
-      "url": {
-        "content": "$1",
-        "example": "http://example.com"
-      },
-      "url_regex": {
-        "content": "$2",
-        "example": "/^http://example\\.com/$$/"
-      }
-    }
+  "infoUrl": {
+    "message": "最近访问:",
+    "description": "Label of the recently visited URL in options page"
   },
 
-  "urlReferrerInfo": {
-    "message": "重导向自: $URL$\n重导向自 (regex): $URL_REGEX$",
-    "description": "Description of the referrer of the recent visited URL in options page",
-    "placeholders": {
-      "url": {
-        "content": "$1",
-        "example": "http://example.com"
-      },
-      "url_regex": {
-        "content": "$2",
-        "example": "/^http://example\\.com/$$/"
-      }
-    }
+  "infoUrlRegex": {
+    "message": "最近访问 (regex):",
+    "description": "Label of the regex of the recently visited URL in options page"
+  },
+
+  "infoUrlBlocked": {
+    "message": "最近封锁:",
+    "description": "Label of the recently blocked URL in options page"
+  },
+
+  "infoUrlBlockedRegex": {
+    "message": "最近封锁 (regex):",
+    "description": "Label of the regex of the recently blocked URL in options page"
+  },
+
+  "infoUrlReferrer": {
+    "message": "重导向自:",
+    "description": "Label of the referrer of the recently visited URL in options page"
+  },
+
+  "infoUrlReferrerRegex": {
+    "message": "重导向自 (regex):",
+    "description": "Label of the regex of the referrer of the recently visited URL in options page"
   },
 
   "allBlacklist": {
