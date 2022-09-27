@@ -41,6 +41,11 @@ body {
   word-break: break-all;
 }
 
+#warningUrl.regex,
+#warningUrl.invalid {
+  font-size: 0.8em;
+}
+
 #messageText {
   margin-top: 1.8rem;
   margin-bottom: 2.2rem;

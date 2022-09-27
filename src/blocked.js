@@ -116,27 +116,29 @@ async function init(event) {
   // -- UI
   utils.loadLanguages(document);
 
-  try {
-    const sourceUrlObj = new URL(sourceUrl);
-    if (!(sourceUrlObj.protocol === 'http:' || sourceUrlObj.protocol === 'https:')) {
-      throw new Error('URL not under http(s) protocol.');
+  showUrl: {
+    const urlElem = document.querySelector('#warningUrl');
+    let sourceUrlObj;
+    try {
+      sourceUrlObj = new URL(sourceUrl);
+      if (!(sourceUrlObj.protocol === 'http:' || sourceUrlObj.protocol === 'https:')) {
+        throw new Error('URL not under http(s) protocol.');
+      }
+    } catch (ex) {
+      // sourceUrl is invalid, show raw sourceUrl
+      // this should not happen unless the user manually enters the URL
+      urlElem.textContent = sourceUrl;
+      urlElem.classList.add('invalid');
+      break showUrl;
     }
+
     if (urlObj.searchParams.get('type') == 2) {
-      const url = utils.getNormalizedUrl(sourceUrlObj);
-      const elem = document.createElement('span');
-      elem.textContent = url;
-      elem.style.fontSize = '0.8em';
-      document.querySelector('#warningUrl').appendChild(elem);
-    } else {
-      document.querySelector('#warningUrl').textContent = punycode.toASCII(sourceUrlObj.hostname);
+      urlElem.textContent = utils.getNormalizedUrl(sourceUrlObj);
+      urlElem.classList.add('regex');
+      break showUrl;
     }
-  } catch (ex) {
-    // sourceUrl is invalid, show raw sourceUrl
-    // this should not happen unless the user manually enters the URL
-    const elem = document.createElement('span');
-    elem.textContent = sourceUrl;
-    elem.style.fontSize = '0.8em';
-    document.querySelector('#warningUrl').appendChild(elem);
+
+    urlElem.textContent = punycode.toASCII(sourceUrlObj.hostname);
   }
 
   const detailsUrl = new URL(browser.runtime.getURL('options.html'));
