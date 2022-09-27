@@ -1,7 +1,7 @@
 ! Title: Content Farm Filters
 ! Description: Filter for general content farms, mostly in Chinese.
 ! Expires: 3 days
-! Last modified: 2022-09-25T04:04:27+00:00
+! Last modified: 2022-09-27T15:20:26+00:00
 ! Homepage: https://danny0838.github.io/content-farm-terminator/
 ! Licence: MIT License
 ! Source: https://danny0838.github.io/content-farm-terminator/files/blocklist-ubo/content-farms.txt
@@ -3444,11 +3444,13 @@
 ||corkyevans.buzz^
 ||corningfranklinhealth.buzz^
 ||corp.com.tw^
+||corpoamar.cl^
 ||corporatediversions.buzz^
 ||corumrld.co^
 ||cosni.cn^
 ||cosoread.com^
 ||coswayvalueclubth.buzz^
+||cotpedra.co^
 ||couekid.co^
 ||courhub.com^
 ||couronet.buzz^
@@ -3487,6 +3489,7 @@
 ||cqo999.com^
 ||cqpgw.cn^
 ||cqrfny.com^
+||cqsdys.com^
 ||cqshuzhuo.com^
 ||cqtt.cc^
 ||cqw4im48.blog.fc2.com^
@@ -4113,6 +4116,7 @@
 ||doak5vx.cn^
 ||doaner.me^
 ||doapk.co^
+||dobs-tds.com^
 ||doc01.cc^
 ||docgord.buzz^
 ||docs01.com^
@@ -4662,6 +4666,7 @@
 ||ext7429zoq.blog.fc2.com^
 ||extreme-mac.buzz^
 ||exzt93615356muan.wordpress.com^
+||eyctm.com^
 ||eyn2425fernwq.pixnet.net^
 ||eyuth.com^
 ||eyutong.net.cn^
@@ -4892,15 +4897,34 @@
 ||fcx06ue40g.pixnet.net^
 ||fcykzn802.pixnet.net^
 ||fcz0369khe.blog.fc2.com^
+||fd84.com^
 ||fdbpj51131.pixnet.net^
 ||fdbtf97779.pixnet.net^
 ||fdccpw.com^
 ||fdctop.cn^
 ||fddnv57991.pixnet.net^
 ||fdf22.com^
+||fdf35.com^
+||fdf36.com^
+||fdf38.com^
+||fdf39.com^
+||fdf40.com^
 ||fdf41.com^
 ||fdf42.com^
+||fdf43.com^
+||fdf44.com^
+||fdf45.com^
+||fdf46.com^
+||fdf47.com^
+||fdf48.com^
+||fdf50.com^
+||fdf53.com^
 ||fdf55.com^
+||fdf57.com^
+||fdf58.com^
+||fdf59.com^
+||fdf60.com^
+||fdf62.com^
 ||fdjm99.com^
 ||fdmwcl4.cn^
 ||fdnybensopere.pixnet.net^
@@ -4908,6 +4932,7 @@
 ||fdxbk.com^
 ||fe21889019.blog.fc2.com^
 ||fe3596236zhu.wordpress.com^
+||fearof.org^
 ||febeshopping.blogspot.*^$document
 ||fedexclis.co^
 ||fehex.com^
@@ -4920,6 +4945,7 @@
 ||feng-rong.cn^
 ||fengdagroup.cn^
 ||fengliask.com^
+||fengnew.org^
 ||fenguotuan.com^
 ||fengwoxin.com^
 ||fenomendak.co^
@@ -7395,6 +7421,7 @@
 ||jirouxx.com^
 ||jis74lx44f.pixnet.net^
 ||jishuabao.com^
+||jishuwen.com^
 ||jitashouce.com^
 ||jiu518.cn^
 ||jiutaihao.com^
@@ -8211,6 +8238,7 @@
 ||label-america.buzz^
 ||lacasajaguar.buzz^
 ||lace11111.com^
+||lacivettanelcamino.it^
 ||lacocinaderosa.es^
 ||lacommandebessau.co^
 ||ladabohacova.cz^
@@ -8391,6 +8419,7 @@
 ||lianyi0898.com^
 ||lianyigcsl.com^
 ||liao521.com^
+||liaocheng.cc^
 ||liasophblg.co^
 ||libertyquiltshop.buzz^
 ||libinlipin.com^
@@ -8453,6 +8482,7 @@
 ||linjiamm.com^
 ||link4399.cn^
 ||linkptt.com^
+||linnateras.fi^
 ||linnseed.me^
 ||lino.jp.net^
 ||linyuanfs.com^
@@ -8970,8 +9000,10 @@
 ||mbme-tr.buzz^
 ||mc26.com^
 ||mc26.net^
+||mca735.com^
 ||mcaren.com^
 ||mcark.com^
+||mcastrouned.es^
 ||mccoyeugeblbu.pixnet.net^
 ||mcdonald11.pixnet.net^
 ||mcheoch.co^
@@ -9321,6 +9353,7 @@
 ||mtgohqa.cn^
 ||mtktk.com^
 ||mtn88.com^
+||mtp-pechstein.de^
 ||mtsinaiinfo.buzz^
 ||mttmp.com^
 ||mtvcafe.buzz^
@@ -9905,6 +9938,7 @@
 ||ny5ih9z.cn^
 ||ny9400533lia.wordpress.com^
 ||nyccz.com^
+||nyist.net^
 ||nyj1201ooj.blog.fc2.com^
 ||nyjcjy.com^
 ||nyjjl.com^
@@ -11685,6 +11719,7 @@
 ||ruralredoubt.me^
 ||rurqckv.cn^
 ||rushouxw.com^
+||rustlenews.com^
 ||rv6oo5.pixnet.net^
 ||rvegov.com^
 ||rvhvc27.cn^
@@ -11819,6 +11854,7 @@
 ||samsonne456.wordpress.com^
 ||samsteelgma.pixnet.net^
 ||samsungcopier.buzz^
+||samuilfoto.ru^
 ||sanajp.cn^
 ||sancakltiv.co^
 ||sanchezrebee6.pixnet.net^
@@ -12266,6 +12302,7 @@
 ||sogrbber.me^
 ||soho-village.buzz^
 ||sohopromo.buzz^
+||soikids.co^
 ||soinside.com^
 ||solarthrmx.co^
 ||soltysdrukuje.pl^
@@ -12452,6 +12489,7 @@
 ||suite101.com^
 ||sullivajens8j.pixnet.net^
 ||sullivberdere.pixnet.net^
+||sultanada-music.ru^
 ||sumrzuj.cn^
 ||sun.advividnetwork.com^
 ||sunburstkrea.co^
@@ -12992,6 +13030,7 @@
 ||timetraxtech.com^
 ||timetw.com^
 ||timlucky88.blogspot.*^$document
+||timoristorante.it^
 ||tingguqinapp.com^
 ||tingmeiw.com^
 ||tio93ob80m.blog.fc2.com^
@@ -14222,6 +14261,7 @@
 ||wj17z7m.cn^
 ||wj4leonardai.pixnet.net^
 ||wjbex.cn^
+||wjbk.site^
 ||wjbutton.cn^
 ||wjimgji744.pixnet.net^
 ||wjka001.com^
@@ -14932,6 +14972,7 @@
 ||xysdjz.com^
 ||xytuwen.com^
 ||xyun.org^
+||xywy.com^
 ||xyzhaha.com^
 ||xyzhuanshu.com^
 ||xyzptt.com^
@@ -15627,6 +15668,7 @@
 ||zfyysci.cn^
 ||zg2rqg.cn^
 ||zgaodeli.com^
+||zgchaye.cn^
 ||zgd88yc96o.blog.fc2.com^
 ||zgfs0563.com^
 ||zggsgg.com^

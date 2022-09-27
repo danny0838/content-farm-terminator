@@ -1,6 +1,6 @@
 # Title: Content Farm Filters
 # Description: Filter for general content farms, mostly in Chinese.
-# Last modified: 2022-09-25T04:04:27+00:00
+# Last modified: 2022-09-27T15:20:26+00:00
 # Homepage: https://danny0838.github.io/content-farm-terminator/
 # Licence: MIT License
 # Source: https://danny0838.github.io/content-farm-terminator/files/blocklist-hosts/content-farms.txt
@@ -3433,11 +3433,13 @@
 127.0.0.1 corkyevans.buzz  #redirects to g.penzai.com
 127.0.0.1 corningfranklinhealth.buzz  #!redirects to g.penzai.com
 127.0.0.1 corp.com.tw
+127.0.0.1 corpoamar.cl  #redirects to quing.im
 127.0.0.1 corporatediversions.buzz  #redirects to g.penzai.com
 127.0.0.1 corumrld.co  #!redirects to keecnya.xyz
 127.0.0.1 cosni.cn  #redirects to g.penzai.com
 127.0.0.1 cosoread.com  #樂享網
 127.0.0.1 coswayvalueclubth.buzz  #!redirects to g.penzai.com
+127.0.0.1 cotpedra.co  #redirects to soonmiss.top
 127.0.0.1 couekid.co  #!redirects to ppcnzi.xyz
 127.0.0.1 courhub.com  #redirects to g.penzai.com
 127.0.0.1 couronet.buzz  #redirects to g.penzai.com
@@ -3476,6 +3478,7 @@
 127.0.0.1 cqo999.com  #redirects to g.penzai.com
 127.0.0.1 cqpgw.cn  #redirects to g.penzai.com
 127.0.0.1 cqrfny.com  #redirects to g.penzai.com
+127.0.0.1 cqsdys.com
 127.0.0.1 cqshuzhuo.com  #redirects to g.penzai.com
 127.0.0.1 cqtt.cc  #redirects to ksou.cc
 127.0.0.1 cqw4im48.blog.fc2.com
@@ -4100,6 +4103,7 @@
 127.0.0.1 doak5vx.cn  #redirects to g.penzai.com
 127.0.0.1 doaner.me  #redirects to soonmiss.top
 127.0.0.1 doapk.co  #R18
+127.0.0.1 dobs-tds.com
 127.0.0.1 doc01.cc
 127.0.0.1 docgord.buzz  #!redirects to g.penzai.com
 127.0.0.1 docs01.com
@@ -4649,6 +4653,7 @@
 127.0.0.1 ext7429zoq.blog.fc2.com
 127.0.0.1 extreme-mac.buzz  #!redirects to g.penzai.com
 127.0.0.1 exzt93615356muan.wordpress.com
+127.0.0.1 eyctm.com
 127.0.0.1 eyn2425fernwq.pixnet.net
 127.0.0.1 eyuth.com  #redirects to g.penzai.com
 127.0.0.1 eyutong.net.cn
@@ -4879,15 +4884,34 @@
 127.0.0.1 fcx06ue40g.pixnet.net
 127.0.0.1 fcykzn802.pixnet.net
 127.0.0.1 fcz0369khe.blog.fc2.com
+127.0.0.1 fd84.com  #R18
 127.0.0.1 fdbpj51131.pixnet.net
 127.0.0.1 fdbtf97779.pixnet.net
 127.0.0.1 fdccpw.com  #redirects to g.penzai.com
 127.0.0.1 fdctop.cn  #redirects to g.penzai.com
 127.0.0.1 fddnv57991.pixnet.net
 127.0.0.1 fdf22.com
+127.0.0.1 fdf35.com
+127.0.0.1 fdf36.com
+127.0.0.1 fdf38.com
+127.0.0.1 fdf39.com
+127.0.0.1 fdf40.com
 127.0.0.1 fdf41.com
 127.0.0.1 fdf42.com
+127.0.0.1 fdf43.com
+127.0.0.1 fdf44.com
+127.0.0.1 fdf45.com
+127.0.0.1 fdf46.com
+127.0.0.1 fdf47.com
+127.0.0.1 fdf48.com
+127.0.0.1 fdf50.com
+127.0.0.1 fdf53.com
 127.0.0.1 fdf55.com
+127.0.0.1 fdf57.com
+127.0.0.1 fdf58.com
+127.0.0.1 fdf59.com
+127.0.0.1 fdf60.com
+127.0.0.1 fdf62.com
 127.0.0.1 fdjm99.com  #redirects to g.penzai.com
 127.0.0.1 fdmwcl4.cn  #redirects to g.penzai.com
 127.0.0.1 fdnybensopere.pixnet.net
@@ -4895,6 +4919,7 @@
 127.0.0.1 fdxbk.com  #!redirects to g.penzai.com
 127.0.0.1 fe21889019.blog.fc2.com
 127.0.0.1 fe3596236zhu.wordpress.com
+127.0.0.1 fearof.org
 127.0.0.1 febeshopping.blogspot.com
 127.0.0.1 fedexclis.co  #!redirects to keecnya.xyz
 127.0.0.1 fehex.com  #redirects to g.penzai.com
@@ -4907,6 +4932,7 @@
 127.0.0.1 feng-rong.cn  #redirects to g.penzai.com
 127.0.0.1 fengdagroup.cn  #redirects to g.penzai.com
 127.0.0.1 fengliask.com
+127.0.0.1 fengnew.org
 127.0.0.1 fenguotuan.com  #!redirects to g.penzai.com
 127.0.0.1 fengwoxin.com  #redirects to g.penzai.com
 127.0.0.1 fenomendak.co  #!redirects to ppcnzi.xyz
@@ -7382,6 +7408,7 @@
 127.0.0.1 jirouxx.com  #redirects to g.penzai.com
 127.0.0.1 jis74lx44f.pixnet.net
 127.0.0.1 jishuabao.com  #redirects to g.penzai.com
+127.0.0.1 jishuwen.com  #redirects to mdeditor.tw
 127.0.0.1 jitashouce.com
 127.0.0.1 jiu518.cn  #redirects to g.penzai.com
 127.0.0.1 jiutaihao.com  #redirects to g.penzai.com
@@ -8198,6 +8225,7 @@
 127.0.0.1 label-america.buzz  #redirects to g.penzai.com
 127.0.0.1 lacasajaguar.buzz  #!redirects to g.penzai.com
 127.0.0.1 lace11111.com  #redirects to g.penzai.com
+127.0.0.1 lacivettanelcamino.it  #redirects to quing.im
 127.0.0.1 lacocinaderosa.es
 127.0.0.1 lacommandebessau.co  #!redirects to cacnka.xyz
 127.0.0.1 ladabohacova.cz  #redirects to quing.im
@@ -8378,6 +8406,7 @@
 127.0.0.1 lianyi0898.com  #redirects to g.penzai.com
 127.0.0.1 lianyigcsl.com  #!redirects to g.penzai.com
 127.0.0.1 liao521.com  #redirects to g.penzai.com
+127.0.0.1 liaocheng.cc
 127.0.0.1 liasophblg.co  #!redirects to cacnka.xyz
 127.0.0.1 libertyquiltshop.buzz  #redirects to g.penzai.com
 127.0.0.1 libinlipin.com  #!redirects to g.penzai.com
@@ -8440,6 +8469,7 @@
 127.0.0.1 linjiamm.com
 127.0.0.1 link4399.cn  #redirects to g.penzai.com
 127.0.0.1 linkptt.com
+127.0.0.1 linnateras.fi  #redirects to na-madagaskar.sk
 127.0.0.1 linnseed.me  #redirects to soonmiss.top
 127.0.0.1 lino.jp.net  #!redirects to se10.biz
 127.0.0.1 linyuanfs.com  #redirects to g.penzai.com
@@ -8957,8 +8987,10 @@
 127.0.0.1 mbme-tr.buzz  #redirects to g.penzai.com
 127.0.0.1 mc26.com
 127.0.0.1 mc26.net
+127.0.0.1 mca735.com
 127.0.0.1 mcaren.com  #redirects to g.penzai.com
 127.0.0.1 mcark.com  #redirects to g.penzai.com
+127.0.0.1 mcastrouned.es
 127.0.0.1 mccoyeugeblbu.pixnet.net
 127.0.0.1 mcdonald11.pixnet.net
 127.0.0.1 mcheoch.co  #!redirects to ppcnzi.xyz
@@ -9308,6 +9340,7 @@
 127.0.0.1 mtgohqa.cn  #redirects to g.penzai.com
 127.0.0.1 mtktk.com  #!redirects to g.penzai.com
 127.0.0.1 mtn88.com  #!redirects to g.penzai.com
+127.0.0.1 mtp-pechstein.de  #redirects to cubicongardens.sk
 127.0.0.1 mtsinaiinfo.buzz  #redirects to g.penzai.com
 127.0.0.1 mttmp.com
 127.0.0.1 mtvcafe.buzz  #!redirects to g.penzai.com
@@ -9892,6 +9925,7 @@
 127.0.0.1 ny5ih9z.cn  #redirects to g.penzai.com
 127.0.0.1 ny9400533lia.wordpress.com
 127.0.0.1 nyccz.com  #redirects to g.penzai.com
+127.0.0.1 nyist.net
 127.0.0.1 nyj1201ooj.blog.fc2.com
 127.0.0.1 nyjcjy.com  #redirects to g.penzai.com
 127.0.0.1 nyjjl.com  #!redirects to g.penzai.com
@@ -11672,6 +11706,7 @@
 127.0.0.1 ruralredoubt.me  #!redirects to ppcnzi.xyz
 127.0.0.1 rurqckv.cn  #redirects to g.penzai.com
 127.0.0.1 rushouxw.com  #redirects to g.penzai.com
+127.0.0.1 rustlenews.com
 127.0.0.1 rv6oo5.pixnet.net
 127.0.0.1 rvegov.com
 127.0.0.1 rvhvc27.cn  #redirects to g.penzai.com
@@ -11806,6 +11841,7 @@
 127.0.0.1 samsonne456.wordpress.com
 127.0.0.1 samsteelgma.pixnet.net
 127.0.0.1 samsungcopier.buzz  #redirects to g.penzai.com
+127.0.0.1 samuilfoto.ru
 127.0.0.1 sanajp.cn  #redirects to g.penzai.com
 127.0.0.1 sancakltiv.co  #!redirects to procnw.xyz
 127.0.0.1 sanchezrebee6.pixnet.net
@@ -12253,6 +12289,7 @@
 127.0.0.1 sogrbber.me  #redirects to soonmiss.top
 127.0.0.1 soho-village.buzz  #redirects to g.penzai.com
 127.0.0.1 sohopromo.buzz  #!redirects to g.penzai.com
+127.0.0.1 soikids.co  #redirects to aetop.top
 127.0.0.1 soinside.com
 127.0.0.1 solarthrmx.co  #!redirects to keecnya.xyz
 127.0.0.1 soltysdrukuje.pl  #redirects to di02.biz
@@ -12439,6 +12476,7 @@
 127.0.0.1 suite101.com
 127.0.0.1 sullivajens8j.pixnet.net
 127.0.0.1 sullivberdere.pixnet.net
+127.0.0.1 sultanada-music.ru
 127.0.0.1 sumrzuj.cn  #redirects to g.penzai.com
 127.0.0.1 sun.advividnetwork.com
 127.0.0.1 sunburstkrea.co  #!redirects to keecnya.xyz
@@ -12979,6 +13017,7 @@
 127.0.0.1 timetraxtech.com
 127.0.0.1 timetw.com
 127.0.0.1 timlucky88.blogspot.com
+127.0.0.1 timoristorante.it  #redirects to cubicongardens.sk
 127.0.0.1 tingguqinapp.com  #!redirects to g.penzai.com
 127.0.0.1 tingmeiw.com  #!redirects to g.penzai.com
 127.0.0.1 tio93ob80m.blog.fc2.com
@@ -14209,6 +14248,7 @@
 127.0.0.1 wj17z7m.cn  #redirects to g.penzai.com
 127.0.0.1 wj4leonardai.pixnet.net
 127.0.0.1 wjbex.cn  #redirects to g.penzai.com
+127.0.0.1 wjbk.site  #redirects to m.hk.llhlf.com, tw.studiodahu.com, etc.
 127.0.0.1 wjbutton.cn  #redirects to g.penzai.com
 127.0.0.1 wjimgji744.pixnet.net
 127.0.0.1 wjka001.com  #redirects to g.penzai.com
@@ -14919,6 +14959,7 @@
 127.0.0.1 xysdjz.com  #redirects to g.penzai.com
 127.0.0.1 xytuwen.com  #redirects to g.penzai.com
 127.0.0.1 xyun.org
+127.0.0.1 xywy.com
 127.0.0.1 xyzhaha.com
 127.0.0.1 xyzhuanshu.com  #歡享網
 127.0.0.1 xyzptt.com
@@ -15614,6 +15655,7 @@
 127.0.0.1 zfyysci.cn  #redirects to g.penzai.com
 127.0.0.1 zg2rqg.cn  #redirects to g.penzai.com
 127.0.0.1 zgaodeli.com  #redirects to g.penzai.com
+127.0.0.1 zgchaye.cn
 127.0.0.1 zgd88yc96o.blog.fc2.com
 127.0.0.1 zgfs0563.com
 127.0.0.1 zggsgg.com  #redirects to g.penzai.com
