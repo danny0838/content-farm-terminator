@@ -659,7 +659,7 @@ def parse_args(argv=None):
 
     # lint
     parser_lint = subparsers.add_parser(
-        'lint',
+        'lint', aliases=['l'],
         help="""run the linter""",
         description=Linter.__doc__)
     parser_lint.add_argument(
@@ -677,7 +677,7 @@ def parse_args(argv=None):
 
     # uniquify
     parser_uniquify = subparsers.add_parser(
-        'uniquify',
+        'uniquify', aliases=['u'],
         help="""run the uniquifier""",
         description=Uniquifier.__doc__)
     parser_uniquify.add_argument(
@@ -692,7 +692,7 @@ def parse_args(argv=None):
 
     # build
     subparsers.add_parser(
-        'build',
+        'build', aliases=['b'],
         help="""run the builder""",
         description=Builder.__doc__)
 
@@ -725,21 +725,21 @@ def main():
             cls(args.root, config, **kwargs).run()
         return
 
-    if args.action == 'lint':
+    if args.action in ('lint', 'l'):
         params = inspect.signature(Linter).parameters
         kwargs = {k: getattr(args, k, params[k].default)
                   for k in ('files', 'auto_fix', 'sort_rules', 'remove_empty')}
         Linter(args.root, config, **kwargs).run()
         return
 
-    if args.action == 'uniquify':
+    if args.action in ('uniquify', 'u'):
         params = inspect.signature(Uniquifier).parameters
         kwargs = {k: getattr(args, k, params[k].default)
                   for k in ('files', 'cross_files', 'auto_fix')}
         Uniquifier(args.root, config, **kwargs).run()
         return
 
-    if args.action == 'build':
+    if args.action in ('build', 'b'):
         Builder(args.root, config).run()
         return
 
