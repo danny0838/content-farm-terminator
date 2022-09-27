@@ -98,13 +98,23 @@ async function onBackClick(event) {
   return utils.back();
 }
 
-async function init(event) {
-  utils.loadLanguages(document);
+function initMessageListener() {
+  browser.runtime.onMessage.addListener((message, sender) => {
+    // console.warn("omMessage", message);
+    const {cmd, args} = message;
+    switch (cmd) {
+      case 'updateContent': {
+        // async update to prevent block
+        recheckBlock();
+        return Promise.resolve(true);
+      }
+    }
+  });
+}
 
-  // recheck in case that sourceUrl is already unblocked
-  if (!await recheckBlock()) {
-    return;
-  }
+async function init(event) {
+  // -- UI
+  utils.loadLanguages(document);
 
   try {
     const sourceUrlObj = new URL(sourceUrl);
@@ -135,26 +145,19 @@ async function init(event) {
   detailsUrl.searchParams.set('type', 'block');
   document.querySelector('#detailsLink').href = detailsUrl.href;
 
-  /**
-   * Events
-   */
+  // -- events
   document.querySelector('#view').addEventListener('click', onViewClick);
   document.querySelector('#unblock').addEventListener('click', onUnblockClick);
   document.querySelector('#back').addEventListener('click', onBackClick);
 
-  autoUpdateUnblockButton(); // async
+  // -- async tasks
+  autoUpdateUnblockButton();
+
+  // recheck in case that sourceUrl is already unblocked
+  (async () => {
+    await recheckBlock();
+    initMessageListener();
+  })();
 }
 
 document.addEventListener('DOMContentLoaded', init);
-
-browser.runtime.onMessage.addListener((message, sender) => {
-  // console.warn("omMessage", message);
-  const {cmd, args} = message;
-  switch (cmd) {
-    case 'updateContent': {
-      // async update to prevent block
-      recheckBlock();
-      return Promise.resolve(true);
-    }
-  }
-});
