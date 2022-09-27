@@ -29,6 +29,28 @@ def escape_regex_slash(text):
     return RE_REGEX_SLASH_ESCAPER.sub(lambda m: m.group(1) or r'\/', text)
 
 
+def file_strip_eol(file):
+    """Strips ending linefeeds for a file."""
+    with open(file, 'r+b') as fh:
+        pos = fh.seek(0, os.SEEK_END)
+        if pos == 0:
+            # the file is empty and doesn't need truncating
+            return
+
+        pos = fh.seek(-1, os.SEEK_CUR)
+        while True:
+            byte_ = fh.read(1)
+            if byte_ not in (b'\n', b'\r'):
+                break
+            if pos == 0:
+                # first byte is an eol
+                fh.seek(-1, os.SEEK_CUR)
+                break
+            pos = fh.seek(-2, os.SEEK_CUR)
+
+        fh.truncate()
+
+
 class Rule:
     """A class that represents a rule line."""
     def __init__(self, input, path='.', line_no=-1):
@@ -110,7 +132,8 @@ class Rule:
 
 class Linter:
     """Check for issues of the source files."""
-    def __init__(self, root, config=None, files=None, auto_fix=False, remove_empty=False, sort_rules=False):
+    def __init__(self, root, config=None, files=None, auto_fix=False,
+                 remove_empty=False, sort_rules=False, strip_eol=False):
         self.root = root
         self.config = config or {}
         self.files = files or [
@@ -120,6 +143,7 @@ class Linter:
         self.auto_fix = auto_fix
         self.remove_empty = remove_empty
         self.sort_rules = sort_rules
+        self.strip_eol = strip_eol
 
     def run(self):
         files = []
@@ -172,11 +196,16 @@ class Linter:
 
             new_rules = sort_rules(new_rules)
 
-        if self.auto_fix and new_rules != rules:
-            log.info('saving auto-fixed %s ...', subpath)
-            with open(file, 'w', encoding='UTF-8') as fh:
-                for rule in new_rules:
-                    print(f'{rule.rule}{rule.sep}{rule.comment}', file=fh)
+        if self.auto_fix:
+            if new_rules != rules:
+                log.info('saving auto-fixed %s ...', subpath)
+                with open(file, 'w', encoding='UTF-8') as fh:
+                    for rule in new_rules:
+                        print(f'{rule.rule}{rule.sep}{rule.comment}', file=fh)
+
+            if self.strip_eol:
+                log.debug('stripping eol for %s ...', subpath)
+                file_strip_eol(file)
 
     def check_rule(self, rule):
         if rule.type is None:
@@ -206,7 +235,8 @@ class Linter:
 
 class Uniquifier:
     """Check for duplicated rules of the source files."""
-    def __init__(self, root, config=None, files=None, cross_files=False, auto_fix=False):
+    def __init__(self, root, config=None, files=None, cross_files=False,
+                 auto_fix=False, strip_eol=False):
         self.root = root
         self.config = config or {}
         self.files = files or [
@@ -215,6 +245,7 @@ class Uniquifier:
         ]
         self.cross_files = cross_files
         self.auto_fix = auto_fix
+        self.strip_eol = strip_eol
 
     def run(self):
         files = []
@@ -311,6 +342,9 @@ class Uniquifier:
         with open(file, 'w', encoding='UTF-8') as fh:
             for rule in rules:
                 print(f'{rule.rule}{rule.sep}{rule.comment}', file=fh)
+        if self.strip_eol:
+            log.debug('stripping eol for %s ...', subpath)
+            file_strip_eol(file)
 
 
 class Builder:
@@ -694,6 +728,9 @@ def parse_args(argv=None):
     parser_lint.add_argument(
         '-r', '--remove-empty', action='store_true', default=False,
         help="""remove empty lines""")
+    parser_lint.add_argument(
+        '-t', '--strip-eol', action='store_true', default=False,
+        help="""remove ending linefeeds""")
 
     # uniquify
     parser_uniquify = subparsers.add_parser(
@@ -709,6 +746,9 @@ def parse_args(argv=None):
     parser_uniquify.add_argument(
         '-a', '--auto-fix', action='store_true', default=False,
         help="""automatically fix issues""")
+    parser_uniquify.add_argument(
+        '-t', '--strip-eol', action='store_true', default=False,
+        help="""remove ending linefeeds""")
 
     # build
     subparsers.add_parser(
@@ -748,14 +788,14 @@ def main():
     if args.action in ('lint', 'l'):
         params = inspect.signature(Linter).parameters
         kwargs = {k: getattr(args, k, params[k].default)
-                  for k in ('files', 'auto_fix', 'sort_rules', 'remove_empty')}
+                  for k in ('files', 'auto_fix', 'sort_rules', 'remove_empty', 'strip_eol')}
         Linter(args.root, config, **kwargs).run()
         return
 
     if args.action in ('uniquify', 'u'):
         params = inspect.signature(Uniquifier).parameters
         kwargs = {k: getattr(args, k, params[k].default)
-                  for k in ('files', 'cross_files', 'auto_fix')}
+                  for k in ('files', 'cross_files', 'auto_fix', 'strip_eol')}
         Uniquifier(args.root, config, **kwargs).run()
         return
 
