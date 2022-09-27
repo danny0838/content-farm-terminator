@@ -21,22 +21,25 @@
       this._transformRules = [];
     }
 
-    addBlockList(listText, blockList) {
+    addBlockList(blockList, listText, url) {
       utils.getLines(listText).forEach((ruleLine) => {
         if (!ruleLine.trim()) { return; }
         blockList.lines.add(ruleLine);
-        const parsed = this.parseRuleLine(ruleLine);
-        blockList.rules.set(parsed.rule, parsed);
+        const rule = this.parseRuleLine(ruleLine);
+        if (url) {
+          rule.src = url;
+        }
+        blockList.rules.set(rule.rule, rule);
       });
       this._listUpdated = true;
     }
 
-    addBlackList(listText) {
-      this.addBlockList(listText, this._blacklist);
+    addBlackList(listText, url) {
+      this.addBlockList(this._blacklist, listText, url);
     }
 
-    addWhiteList(listText) {
-      this.addBlockList(listText, this._whitelist);
+    addWhiteList(listText, url) {
+      this.addBlockList(this._whitelist, listText, url);
     }
 
     /**
@@ -80,7 +83,7 @@
           }
           return text;
         })();
-        this.addBlackList(this.validateRulesText(text));
+        this.addBlackList(this.validateRulesText(text), url);
       } catch (ex) {
         console.error(ex);
       }
@@ -364,6 +367,7 @@
      * @property {string} rule
      * @property {string} sep
      * @property {string} comment
+     * @property {string} [src] - Source URL of the rule.
      */
 
     /**
