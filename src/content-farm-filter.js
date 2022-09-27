@@ -11,11 +11,11 @@
     constructor() {
       this._listUpdated = true;
       this._blacklist = {
-        lines: new Set(),
+        rawRules: [],
         rules: new Map(),
       };
       this._whitelist = {
-        lines: new Set(),
+        rawRules: [],
         rules: new Map(),
       };
       this._transformRules = [];
@@ -23,13 +23,14 @@
 
     addBlockList(blockList, listText, url) {
       utils.getLines(listText).forEach((ruleLine) => {
-        if (!ruleLine.trim()) { return; }
-        blockList.lines.add(ruleLine);
         const rule = this.parseRuleLine(ruleLine);
         if (url) {
           rule.src = url;
         }
-        blockList.rules.set(rule.rule, rule);
+        blockList.rawRules.push(rule);
+        if (rule.rule) {
+          blockList.rules.set(rule.rule, rule);
+        }
       });
       this._listUpdated = true;
     }
@@ -500,7 +501,12 @@
     }
 
     getMergedBlacklist() {
-      return [...this._blacklist.lines].join("\n");
+      return this._blacklist.rawRules.reduce((rv, rule) => {
+        if (rule.rule) {
+          rv.push([rule.rule, rule.sep, rule.comment].join(''));
+        }
+        return rv;
+      }, []).join('\n');
     }
 
     webListCacheKey(url) {

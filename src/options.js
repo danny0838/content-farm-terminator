@@ -9,11 +9,6 @@ async function loadOptions() {
   document.querySelector('#showContextMenuCommands input').checked = options.showContextMenuCommands;
   document.querySelector('#quickContextMenuCommands input').checked = options.quickContextMenuCommands;
   document.querySelector('#showUnblockButton input').checked = options.showUnblockButton;
-
-  const blacklist = await browser.runtime.sendMessage({
-    cmd: 'getMergedBlacklist',
-  });
-  document.querySelector('#allBlacklist textarea').value = blacklist;
 }
 
 async function saveOptions() {

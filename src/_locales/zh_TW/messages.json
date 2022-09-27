@@ -212,9 +212,9 @@
     "description": "Label of allBlacklist field in options page"
   },
 
-  "allBlacklistDesc": {
-    "message": "已載入且正在使用的黑名單 (唯讀)",
-    "description": "Description of allBlacklist field in options page"
+  "allBlacklistLink": {
+    "message": "檢視",
+    "description": "Label of the link of allBlacklist field in options page"
   },
 
   "webBlacklists": {

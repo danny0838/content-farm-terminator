@@ -212,9 +212,9 @@
     "description": "Label of allBlacklist field in options page"
   },
 
-  "allBlacklistDesc": {
-    "message": "Loaded and working Blacklist (Read-only).",
-    "description": "Description of allBlacklist field in options page"
+  "allBlacklistLink": {
+    "message": "View",
+    "description": "Label of the link of allBlacklist field in options page"
   },
 
   "webBlacklists": {
