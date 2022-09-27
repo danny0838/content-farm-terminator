@@ -334,10 +334,10 @@
     },
 
     async back() {
-      if (history.length > 1) {
-        history.go(-1);
-        return;
-      }
+      const url = location.href;
+      history.back();
+      await this.sleep(100);
+      if (location.href !== url) { return; }
 
       const tab = await browser.tabs.getCurrent();
       return await browser.runtime.sendMessage({
