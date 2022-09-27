@@ -329,6 +329,10 @@
       return redirectUrl;
     },
 
+    async sleep(ms) {
+      await new Promise(r => setTimeout(() => r(), ms));
+    },
+
     async back() {
       if (history.length > 1) {
         history.go(-1);
