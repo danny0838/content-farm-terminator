@@ -10,6 +10,14 @@ uniquify:
     - src/blocklist/nearly-content-farms.txt
     - src/blocklist/sns-content-farms.txt
     - src/blocklist/not-content-farms.txt
+aggregate:
+  - source:
+      - url: https://raw.githubusercontent.com/arosh/ublacklist-stackoverflow-translation/master/uBlacklist.txt
+        type: ublacklist
+      - url: https://raw.githubusercontent.com/arosh/ublacklist-github-translation/master/uBlacklist.txt
+        type: ublacklist
+    dest: src/blocklist/bad-cloners.txt
+
 build:
   - source: src/blocklist/content-farms.txt
     publish: docs/files/blocklist/content-farms.txt

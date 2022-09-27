@@ -6,11 +6,12 @@ import ipaddress
 import logging
 import os
 import re
-from contextlib import redirect_stdout
+from contextlib import contextmanager, redirect_stdout
 from datetime import datetime, timezone
 from glob import iglob
 from urllib.parse import quote
 
+import requests
 import yaml
 
 logging.basicConfig(level=logging.INFO, format='%(levelname)s - %(message)s')
@@ -54,6 +55,15 @@ def file_strip_eol(file):
 def to_uppercamelcase(text, delim='_'):
     """Convert delimited_text to UpperCamelCase."""
     return ''.join(w.title() for w in text.split(delim))
+
+
+@contextmanager
+def switch_verbosity(verbosity):
+    """A context manager that switches log verbosity temporarily."""
+    verbosity_ = log.getEffectiveLevel()
+    log.setLevel(verbosity)
+    yield
+    log.setLevel(verbosity_)
 
 
 class Rule:
@@ -692,6 +702,93 @@ class ConverterUblacklist(Converter):
             print(f'{rule.rule}{comment}')
 
 
+class Aggregator:
+    """Aggregate blocklists from external files."""
+    def __init__(self, root, config=None):
+        self.root = root
+        self.config = config or {}
+
+    def run(self):
+        for task in self.config.get('aggregate', []):
+            self.run_task(task)
+
+    def run_task(self, task):
+        sources = task['source']
+        dest = os.path.normpath(os.path.join(self.root, task['dest']))
+        strip_eol = task.get('strip_eol', False)
+
+        rules = []
+        for source in sources:
+            url = source['url']
+            type = source['type']
+            log.info('aggregating rules from "%s" ...', url)
+            try:
+                r = requests.get(url)
+            except requests.exceptions.RequestException as exc:
+                log.error('failed to fetch "%s": %s', url, exc)
+                return
+
+            if not r.ok:
+                log.error('failed to fetch "%s": %i', url, r.status_code)
+                return
+
+            text = r.text
+            rules += self.convert_rules(type, text, url)
+
+        log.info('mixing aggregated rules to %s ...', dest)
+        os.makedirs(os.path.dirname(dest), exist_ok=True)
+        try:
+            fh = open(dest, 'r', encoding='UTF-8-SIG')
+        except FileNotFoundError:
+            text = ''
+        else:
+            with fh as fh:
+                text = fh.read()
+
+        for source in sources:
+            url = source['url']
+
+            output = ''.join(
+                f'{rule.rule} {rule.comment}{" " if rule.comment else ""}#!aggregated\n'
+                for rule in rules
+                if rule.path == url
+            )
+            output = f'  #!aggregated source: {url}\n{output}'
+
+            m = re.search(fr'^\s+#!aggregated source: {re.escape(url)}\n(.*?)\n(?=^\s+#!aggregated\b|\Z)',
+                          text,
+                          flags=re.M + re.S)
+            if m:
+                text = text[:m.start(0)] + ('\n' if m.start(0) else '') + output + text[m.end(0):]
+            else:
+                text += ('\n' if text else '') + output
+
+        with open(dest, 'w', encoding='UTF-8') as fh:
+            fh.write(text)
+
+        if strip_eol:
+            log.debug('stripping eol for %s ...', dest)
+            file_strip_eol(dest)
+
+    def convert_rules(self, type, text, url):
+        fn = getattr(self, f'convert_rules_{type}')
+        return fn(text, url)
+
+    def convert_rules_ublacklist(self, text, url):
+        rules = []
+        for i, line in enumerate(text.split('\n')):
+            if not line.strip():
+                continue
+
+            m = re.search(r'^\*://(?:\*\.)?(?:www\.)?([\w.-]+)/\*(?=\s*#|$)', line)
+            if m:
+                rule = Rule(m.group(1), path=url, line_no=i + 1)
+                rules.append(rule)
+                continue
+
+        return rules
+
+
 def parse_args(argv=None):
     root = os.path.normpath(os.path.join(__file__, '..', '..'))
     parser = argparse.ArgumentParser(description=__doc__)
@@ -761,6 +858,12 @@ def parse_args(argv=None):
         help="""run the builder""",
         description=Builder.__doc__)
 
+    # aggregate
+    subparsers.add_parser(
+        'aggregate', aliases=['a'],
+        help="""run the aggregrator""",
+        description=Aggregator.__doc__)
+
     return parser.parse_args(argv)
 
 
@@ -784,6 +887,8 @@ def main():
                 cls = Uniquifier
             elif action == 'build':
                 cls = Builder
+            elif action == 'aggregate':
+                cls = Aggregator
             else:
                 continue
             kwargs = task.get('kwargs', {})
@@ -806,6 +911,10 @@ def main():
 
     if args.action in ('build', 'b'):
         Builder(args.root, config).run()
+        return
+
+    if args.action in ('aggregate', 'a'):
+        Aggregator(args.root, config).run()
         return
 
 
