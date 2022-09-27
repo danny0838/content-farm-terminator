@@ -655,7 +655,7 @@ def parse_args(argv=None):
 
     subparsers = parser.add_subparsers(
         metavar='ACTION', dest='action',
-        help="""the action to run (default: lint and build)""")
+        help="""the action to run (default: run auto tasks by config)""")
 
     # lint
     parser_lint = subparsers.add_parser(
@@ -706,20 +706,42 @@ def main():
     with open(args.config, 'rb') as fh:
         config = yaml.safe_load(fh)
 
-    if args.action in ('lint', None):
+    if args.action is None:
+        # switch CWD so that passed paths in kwargs are resolved from root
+        os.chdir(args.root)
+
+        log.debug('running auto tasks at %s ...', os.getcwd())
+        for task in config.get('auto_tasks', []):
+            action = task.get('action')
+            if action == 'lint':
+                cls = Linter
+            elif action == 'uniquify':
+                cls = Uniquifier
+            elif action == 'build':
+                cls = Builder
+            else:
+                continue
+            kwargs = task.get('kwargs', {})
+            cls(args.root, config, **kwargs).run()
+        return
+
+    if args.action == 'lint':
         params = inspect.signature(Linter).parameters
         kwargs = {k: getattr(args, k, params[k].default)
                   for k in ('files', 'auto_fix', 'sort_rules', 'remove_empty')}
         Linter(args.root, config, **kwargs).run()
+        return
 
     if args.action == 'uniquify':
         params = inspect.signature(Uniquifier).parameters
         kwargs = {k: getattr(args, k, params[k].default)
                   for k in ('files', 'cross_files', 'auto_fix')}
         Uniquifier(args.root, config, **kwargs).run()
+        return
 
-    if args.action in ('build', None):
+    if args.action == 'build':
         Builder(args.root, config).run()
+        return
 
 
 if __name__ == '__main__':

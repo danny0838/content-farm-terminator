@@ -1,3 +1,6 @@
+auto_tasks:
+  - action: lint
+  - action: build
 lint:
   source:
     - src/blocklist
