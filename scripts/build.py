@@ -51,6 +51,11 @@ def file_strip_eol(file):
         fh.truncate()
 
 
+def to_uppercamelcase(text, delim='_'):
+    """Convert delimited_text to UpperCamelCase."""
+    return ''.join(w.title() for w in text.split(delim))
+
+
 class Rule:
     """A class that represents a rule line."""
     def __init__(self, input, path='.', line_no=-1):
@@ -369,25 +374,21 @@ class Builder:
         with open(src_file, 'r', encoding='UTF-8-SIG') as ih, \
              open(dst_file, 'w', encoding='UTF-8') as oh:
             with redirect_stdout(oh):
-                converter = self.get_converter(task.get('type', 'cft'))
+                converter = get_converter(task.get('type', 'cft'))
                 converter(ih, task.get('data', {}), self.date).run()
 
-    @staticmethod
-    def to_uppercamelcase(text, delim='_'):
-        """Convert delimited_text to UpperCamelCase."""
-        return ''.join(w.title() for w in text.split(delim))
 
-    @staticmethod
-    def get_converter(name):
-        converter = globals().get('Converter' + Builder.to_uppercamelcase(name))
+def get_converter(name):
+    """Get a converter of name."""
+    converter = globals().get('Converter' + to_uppercamelcase(name))
 
-        # make sure it's really a subclass of Converter
-        try:
-            assert issubclass(converter, Converter)
-        except (TypeError, AssertionError):
-            return None
+    # make sure it's really a subclass of Converter
+    try:
+        assert issubclass(converter, Converter)
+    except (TypeError, AssertionError):
+        return None
 
-        return converter
+    return converter
 
 
 class Converter:
