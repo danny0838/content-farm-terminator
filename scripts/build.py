@@ -421,6 +421,7 @@ class Converter:
 
             # skip empty rule
             if rule.type is None:
+                self.print_rule(rule)
                 continue
 
             # apply processors
@@ -624,15 +625,17 @@ class ConverterHosts(Converter):
     allow_schemes = False
 
     def print_rule(self, rule):
-        # skip unsupported rules
-        if not (
+        comment = '  #' + re.sub(r'^\s*(?://|#)', r'', rule.comment) if rule.comment else ''
+
+        if (
             rule.type == 'domain' and '*' not in rule.rule
             or rule.type == 'raw'
         ):
-            return
+            print(f'127.0.0.1 {rule.rule}{comment}')
 
-        comment = '  #' + re.sub(r'^\s*(?://|#)', r'', rule.comment) if rule.comment else ''
-        print(f'127.0.0.1 {rule.rule}{comment}')
+        elif rule.type is None:
+            if rule.comment and not rule.rule:
+                print(comment.lstrip())
 
 
 class ConverterUbo(Converter):
@@ -668,6 +671,11 @@ class ConverterUbo(Converter):
         elif rule.type == 'raw':
             print(rule.rule)
 
+        elif rule.type is None:
+            if rule.comment and not rule.rule:
+                comment = '#' + re.sub(r'^\s*(?://|#)', r'', rule.comment)
+                print(comment)
+
 
 class ConverterUblacklist(Converter):
     """Convert to an uBlacklist blocklist.
@@ -697,6 +705,10 @@ class ConverterUblacklist(Converter):
 
         elif rule.type == 'raw':
             print(f'{rule.rule}{comment}')
+
+        elif rule.type is None:
+            if rule.comment and not rule.rule:
+                print(comment.lstrip())
 
 
 class Aggregator:
