@@ -241,7 +241,7 @@ class Linter:
 class Uniquifier:
     """Check for duplicated rules of the source files."""
     def __init__(self, root, config=None, files=None, cross_files=False,
-                 auto_fix=False, strip_eol=False):
+                 auto_fix=False, auto_fix_excludes=None, strip_eol=False):
         self.root = root
         self.config = config or {}
         self.files = files or [
@@ -250,6 +250,7 @@ class Uniquifier:
         ]
         self.cross_files = cross_files
         self.auto_fix = auto_fix
+        self.auto_fix_excludes = set(auto_fix_excludes or [])
         self.strip_eol = strip_eol
 
     def run(self):
@@ -342,8 +343,11 @@ class Uniquifier:
         return new_rules
 
     def save_fixed_file(self, subpath, rules):
-        log.info('saving auto-fixed %s ...', subpath)
         file = os.path.join(self.root, subpath)
+        if any(os.path.samefile(file, f) for f in self.auto_fix_excludes):
+            return
+
+        log.info('saving auto-fixed %s ...', subpath)
         with open(file, 'w', encoding='UTF-8') as fh:
             for rule in rules:
                 print(f'{rule.rule}{rule.sep}{rule.comment}', file=fh)
