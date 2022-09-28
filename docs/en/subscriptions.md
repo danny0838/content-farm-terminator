@@ -12,6 +12,8 @@ Usage: Copy the link of a blacklist and paste into the web blacklists field in t
 
 * [Nearly content farm list](../files/blocklist/nearly-content-farms.txt): Sites that looks like a content farm. This includes suspected or borderline content farms and may be subjective. Use with judgement and care. Read the comments in the list for more info.
 
+* [Bad cloner list](../files/blocklist/bad-cloners.txt): Sites that clones data from Wikipedia, Stack Overflow, GitHub, etc. Although the contents are mostly licensed, these sites do not add any value for them, and are thus considered spams in some point of view.
+
 * [SNS content farm list](../files/blocklist/sns-content-farms.txt): Content farm related social network system (SNS) pages. Which may share content farm contents extensively. Due to the nature of SNS, this may not cover all related pages.
 
 * [Fake news list](../files/blocklist/fake-news.txt): A list of fake news sites organized from [<s>Fake News Alert</s>](https://github.com/bfeldman/fake-site-alert), [<s>Fake News Guard</s>](https://www.fakenewsguard.com/), [Fake news detector](https://chrome.google.com/webstore/detail/fake-news-detector/aebaikmeedenaijgjcfmndfknoobahep), [Real or Satire](https://realorsatire.com/). For reference.

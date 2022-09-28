@@ -59,6 +59,8 @@ aggregate:
         type: ublacklist
       - url: https://raw.githubusercontent.com/arosh/ublacklist-github-translation/master/uBlacklist.txt
         type: ublacklist
+      - url: https://raw.githubusercontent.com/wdmpa/content-farm-list/main/domains/machine-translated/stackoverflow.txt
+        type: ublacklist
     dest: src/blocklist/bad-cloners.txt
 
 build:
@@ -130,6 +132,11 @@ build:
           <<: *grouping_regex_scheme
           value: /https?://(?:haokan|sv)\.baidu\.com/author/(?:{value})(?=[/?#]|$)/
 
+  - source: src/blocklist/bad-cloners.txt
+    publish: docs/files/blocklist/bad-cloners.txt
+    data:
+      schemes: *content_farms_schemes
+
   - source: src/blocklist/fake-news.txt
     publish: docs/files/blocklist/fake-news.txt
     data:
@@ -167,6 +174,17 @@ build:
         Homepage: https://danny0838.github.io/content-farm-terminator/
         Licence: MIT License
         Source: https://danny0838.github.io/content-farm-terminator/files/blocklist-hosts/nearly-content-farms.txt
+
+  - source: src/blocklist/bad-cloners.txt
+    publish: docs/files/blocklist-hosts/bad-cloners.txt
+    type: hosts
+    data:
+      headers: |
+        Title: Bad Cloners
+        Description: Filter for bad clone sites.
+        Last modified: {now}
+        Homepage: https://danny0838.github.io/content-farm-terminator/
+        Source: https://danny0838.github.io/content-farm-terminator/files/blocklist-hosts/bad-cloners.txt
 
   - source: src/blocklist/fake-news.txt
     publish: docs/files/blocklist-hosts/fake-news.txt
@@ -250,6 +268,19 @@ build:
       schemes:
         <<: *sns_content_farms_schemes
 
+  - source: src/blocklist/bad-cloners.txt
+    publish: docs/files/blocklist-ubo/bad-cloners.txt
+    type: ubo
+    data:
+      headers: |
+        Title: Bad Cloners
+        Description: Filter for bad clone sites.
+        Last modified: {now}
+        Homepage: https://danny0838.github.io/content-farm-terminator/
+        Source: https://danny0838.github.io/content-farm-terminator/files/blocklist-ubo/bad-cloners.txt
+      processors: *content_farms_processors_ubo
+      schemes: *content_farms_schemes_ubo
+
   - source: src/blocklist/fake-news.txt
     publish: docs/files/blocklist-ubo/fake-news.txt
     type: ubo
@@ -324,6 +355,19 @@ build:
         Homepage: https://danny0838.github.io/content-farm-terminator/
         Licence: MIT License
         Source: https://danny0838.github.io/content-farm-terminator/files/blocklist-ublacklist/nearly-content-farms.txt
+      processors: *content_farms_processors_ublacklist
+      schemes: *content_farms_schemes_ublacklist
+
+  - source: src/blocklist/bad-cloners.txt
+    publish: docs/files/blocklist-ublacklist/bad-cloners.txt
+    type: ublacklist
+    data:
+      headers: |
+        Title: Bad Cloners
+        Description: Filter for bad clone sites.
+        Last modified: {now}
+        Homepage: https://danny0838.github.io/content-farm-terminator/
+        Source: https://danny0838.github.io/content-farm-terminator/files/blocklist-ublacklist/bad-cloners.txt
       processors: *content_farms_processors_ublacklist
       schemes: *content_farms_schemes_ublacklist
 

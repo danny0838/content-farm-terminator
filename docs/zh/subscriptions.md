@@ -12,6 +12,8 @@ lang: zh
 
 * [類內容農場清單](../files/blocklist/nearly-content-farms.txt)：類似內容農場的網站，例如疑似大量盜用圖文但尚未找到明確證據，或者有相當比例主題性或原創性的網站。這些網站通常品質良莠不齊、常見誇大的標題與貧乏的內容，也可能曾被一些評論者認定為內容農場。此清單篩選較為主觀且可能有爭議，請自行甄酌使用，有疑惑可先參見清單中的註解。
 
+* [劣質複製農場清單](../files/blocklist/bad-cloners.txt)：使用機器爬取維基百科、Stack Overflow、GitHub 等網站資料重製而成。此類網站爬取的資料多符合開放授權，但只提供了機器、劣質翻譯或些微介面變化，缺少附加價值，某方面可視為垃圾網站。
+
 * [社群內容農場清單](../files/blocklist/sns-content-farms.txt)：內容農場相關的社群網站頁面，例如大量分享、導流內容農場的臉書粉絲團，或盜用他人文章剪輯成影片的 Youtube 帳號等。由於社群網站架構因素，可能無法涵蓋所有相關頁面。
 
 * [假新聞網站清單](../files/blocklist/fake-news.txt): 假新聞網站清單，整併自 [<s>Fake News Alert</s>](https://github.com/bfeldman/fake-site-alert)、[<s>Fake News Guard</s>](https://www.fakenewsguard.com/)、[Fake news detector](https://chrome.google.com/webstore/detail/fake-news-detector/aebaikmeedenaijgjcfmndfknoobahep)、[Real or Satire](https://realorsatire.com/)。備查。

@@ -15,5 +15,6 @@ See [main subscription page](./subscriptions) for details of the blacklists.
 ## Blacklists
 * [Content farm list](../files/blocklist-hosts/content-farms.txt)
 * [Nearly content farm list](../files/blocklist-hosts/nearly-content-farms.txt)
+* [Bad cloner list](../files/blocklist-hosts/bad-cloners.txt)
 * [Fake news list](../files/blocklist-hosts/fake-news.txt)
 * [Scam sites list](../files/blocklist-hosts/scam-sites.txt)
