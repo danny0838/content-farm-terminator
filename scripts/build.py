@@ -810,7 +810,7 @@ def parse_args(argv=None):
         help="""show debug information""")
 
     subparsers = parser.add_subparsers(
-        metavar='ACTION', dest='action',
+        metavar='ACTION', dest='action', required=True,
         help="""the action to run (default: run auto tasks by config)""")
 
     # lint
@@ -864,6 +864,15 @@ def parse_args(argv=None):
         help="""run the aggregrator""",
         description=Aggregator.__doc__)
 
+    # auto
+    parser_auto = subparsers.add_parser(
+        'auto',
+        help="""run auto task""",
+        description="""Run a configured auto task.""")
+    parser_auto.add_argument(
+        'task', metavar='name', nargs='?', default='default',
+        help="""the task name to run (default: %(default)s)""")
+
     return parser.parse_args(argv)
 
 
@@ -873,27 +882,6 @@ def main():
 
     with open(args.config, 'rb') as fh:
         config = yaml.safe_load(fh)
-
-    if args.action is None:
-        # switch CWD so that passed paths in kwargs are resolved from root
-        os.chdir(args.root)
-
-        log.debug('running auto tasks at %s ...', os.getcwd())
-        for task in config.get('auto_tasks', []):
-            action = task.get('action')
-            if action == 'lint':
-                cls = Linter
-            elif action == 'uniquify':
-                cls = Uniquifier
-            elif action == 'build':
-                cls = Builder
-            elif action == 'aggregate':
-                cls = Aggregator
-            else:
-                continue
-            kwargs = task.get('kwargs', {})
-            cls(args.root, config, **kwargs).run()
-        return
 
     if args.action in ('lint', 'l'):
         params = inspect.signature(Linter).parameters
@@ -915,6 +903,27 @@ def main():
 
     if args.action in ('aggregate', 'a'):
         Aggregator(args.root, config).run()
+        return
+
+    if args.action == 'auto':
+        # switch CWD so that passed paths in kwargs are resolved from root
+        os.chdir(args.root)
+
+        log.debug('Running auto task "%s" at %s ...', args.task, os.getcwd())
+        for task in config.get('auto_tasks', {}).get(args.task, []):
+            action = task.get('action')
+            if action == 'lint':
+                cls = Linter
+            elif action == 'uniquify':
+                cls = Uniquifier
+            elif action == 'build':
+                cls = Builder
+            elif action == 'aggregate':
+                cls = Aggregator
+            else:
+                continue
+            kwargs = task.get('kwargs', {})
+            cls(args.root, config, **kwargs).run()
         return
 
 
