@@ -2,15 +2,6 @@ auto_tasks:
   default:
     - action: lint
     - action: build
-lint:
-  source:
-    - src/blocklist
-uniquify:
-  source:
-    - src/blocklist/content-farms.txt
-    - src/blocklist/nearly-content-farms.txt
-    - src/blocklist/sns-content-farms.txt
-    - src/blocklist/not-content-farms.txt
 aggregate:
   - source:
       - url: https://raw.githubusercontent.com/arosh/ublacklist-stackoverflow-translation/master/uBlacklist.txt

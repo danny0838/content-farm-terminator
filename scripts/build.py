@@ -151,10 +151,7 @@ class Linter:
                  remove_empty=False, sort_rules=False, strip_eol=False):
         self.root = root
         self.config = config or {}
-        self.files = files or [
-            os.path.normpath(os.path.join(self.root, f))
-            for f in config.get('lint', {}).get('source', [])
-        ]
+        self.files = files or []
         self.auto_fix = auto_fix
         self.remove_empty = remove_empty
         self.sort_rules = sort_rules
@@ -254,10 +251,7 @@ class Uniquifier:
                  auto_fix=False, auto_fix_excludes=None, strip_eol=False):
         self.root = root
         self.config = config or {}
-        self.files = files or [
-            os.path.normpath(os.path.join(self.root, f))
-            for f in config.get('uniquify', {}).get('source', [])
-        ]
+        self.files = files or []
         self.cross_files = cross_files
         self.auto_fix = auto_fix
         self.auto_fix_excludes = set(auto_fix_excludes or [])
@@ -819,8 +813,8 @@ def parse_args(argv=None):
         help="""run the linter""",
         description=Linter.__doc__)
     parser_lint.add_argument(
-        'files', metavar='file', action='extend', nargs='*', default=None,
-        help="""file(s) to check (default: by config)""")
+        'files', metavar='file', action='extend', nargs='+',
+        help="""file(s) to check""")
     parser_lint.add_argument(
         '-a', '--auto-fix', action='store_true', default=False,
         help="""automatically fix issues""")
@@ -840,8 +834,8 @@ def parse_args(argv=None):
         help="""run the uniquifier""",
         description=Uniquifier.__doc__)
     parser_uniquify.add_argument(
-        'files', metavar='file', action='extend', nargs='*', default=None,
-        help="""file(s) to check (default: by config)""")
+        'files', metavar='file', action='extend', nargs='+',
+        help="""file(s) to check""")
     parser_uniquify.add_argument(
         '-c', '--cross-files', action='store_true', default=False,
         help="""check for uniquity across files""")
