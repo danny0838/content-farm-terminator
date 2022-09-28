@@ -149,8 +149,28 @@ class Linter:
             if self.check_rule(rule):
                 new_rules.append(rule)
 
+        # keep empty rules in-place
         if self.sort_rules:
-            new_rules.sort(key=lambda rule: f'{rule.rule}{rule.sep}{rule.comment}')
+            def sort_rules(rules):
+                def append_stack():
+                    if not stack:
+                        return
+                    stack.sort(key=lambda rule: (rule.rule, rule.sep, rule.comment))
+                    new_rules.extend(stack)
+                    stack.clear()
+
+                new_rules = []
+                stack = []
+                for rule in rules:
+                    if not rule.rule:
+                        append_stack()
+                        new_rules.append(rule)
+                    else:
+                        stack.append(rule)
+                append_stack()
+                return new_rules
+
+            new_rules = sort_rules(new_rules)
 
         if self.auto_fix and new_rules != rules:
             log.info('saving auto-fixed %s ...', subpath)
