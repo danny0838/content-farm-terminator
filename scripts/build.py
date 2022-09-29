@@ -931,6 +931,7 @@ def parse_args(argv=None):
 
 def main():
     args = parse_args()
+    start_time = datetime.now()
     log.setLevel(args.verbosity)
 
     with open(args.config, 'rb') as fh:
@@ -941,24 +942,20 @@ def main():
         kwargs = {k: getattr(args, k, params[k].default)
                   for k in ('files', 'auto_fix', 'sort_rules', 'remove_empty', 'strip_eol')}
         Linter(args.root, config, **kwargs).run()
-        return
 
-    if args.action in ('uniquify', 'u'):
+    elif args.action in ('uniquify', 'u'):
         params = inspect.signature(Uniquifier).parameters
         kwargs = {k: getattr(args, k, params[k].default)
                   for k in ('files', 'advanced', 'cross_files', 'auto_fix', 'strip_eol')}
         Uniquifier(args.root, config, **kwargs).run()
-        return
 
-    if args.action in ('build', 'b'):
+    elif args.action in ('build', 'b'):
         Builder(args.root, config).run()
-        return
 
-    if args.action in ('aggregate', 'a'):
+    elif args.action in ('aggregate', 'a'):
         Aggregator(args.root, config).run()
-        return
 
-    if args.action == 'auto':
+    elif args.action == 'auto':
         # switch CWD so that passed paths in kwargs are resolved from root
         os.chdir(args.root)
 
@@ -977,7 +974,8 @@ def main():
                 continue
             kwargs = task.get('kwargs', {})
             cls(args.root, config, **kwargs).run()
-        return
+
+    log.debug('Time spent: %s', datetime.now() - start_time)
 
 
 if __name__ == '__main__':
