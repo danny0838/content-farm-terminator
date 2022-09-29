@@ -247,11 +247,12 @@ class Linter:
 
 class Uniquifier:
     """Check for duplicated rules of the source files."""
-    def __init__(self, root, config=None, files=None, cross_files=False,
+    def __init__(self, root, config=None, files=None, advanced=False, cross_files=False,
                  auto_fix=False, auto_fix_excludes=None, strip_eol=False):
         self.root = root
         self.config = config or {}
         self.files = [os.path.normpath(f) for f in (files or [])]
+        self.advanced = advanced
         self.cross_files = cross_files
         self.auto_fix = auto_fix
         self.auto_fix_excludes = {os.path.normpath(f) for f in (auto_fix_excludes or [])}
@@ -278,7 +279,8 @@ class Uniquifier:
 
         if self.cross_files:
             new_rules = self.deduplicate_rules(rules)
-            new_rules = self.check_covered_rules(new_rules)
+            if self.advanced:
+                new_rules = self.check_covered_rules(new_rules)
             if self.auto_fix and new_rules != rules:
                 rulegroups = {}
                 for rule in new_rules:
@@ -292,7 +294,8 @@ class Uniquifier:
                 rulegroups.setdefault(rule.path, []).append(rule)
             for subpath, rules in rulegroups.items():
                 new_rules = self.deduplicate_rules(rules)
-                new_rules = self.check_covered_rules(new_rules)
+                if self.advanced:
+                    new_rules = self.check_covered_rules(new_rules)
                 if self.auto_fix and new_rules != rules:
                     self.save_fixed_file(subpath, new_rules)
 
@@ -837,6 +840,9 @@ def parse_args(argv=None):
         'files', metavar='file', action='extend', nargs='+',
         help="""file(s) to check""")
     parser_uniquify.add_argument(
+        '--advanced', action='store_true', default=False,
+        help="""check for advanced rule coverage (may take long time)""")
+    parser_uniquify.add_argument(
         '-c', '--cross-files', action='store_true', default=False,
         help="""check for uniquity across files""")
     parser_uniquify.add_argument(
@@ -887,7 +893,7 @@ def main():
     if args.action in ('uniquify', 'u'):
         params = inspect.signature(Uniquifier).parameters
         kwargs = {k: getattr(args, k, params[k].default)
-                  for k in ('files', 'cross_files', 'auto_fix', 'strip_eol')}
+                  for k in ('files', 'advanced', 'cross_files', 'auto_fix', 'strip_eol')}
         Uniquifier(args.root, config, **kwargs).run()
         return
 
