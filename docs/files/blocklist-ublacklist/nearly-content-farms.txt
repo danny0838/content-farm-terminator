@@ -1,6 +1,6 @@
 # Title: Nearly Content Farm Filters
 # Description: Filter for content-farm-like sites, mostly in Chinese.
-# Last modified: 2022-09-25T04:03:38+00:00
+# Last modified: 2022-09-29T04:34:59+00:00
 # Homepage: https://danny0838.github.io/content-farm-terminator/
 # Licence: MIT License
 # Source: https://danny0838.github.io/content-farm-terminator/files/blocklist-ublacklist/nearly-content-farms.txt
@@ -15,7 +15,6 @@
 *://*.disp.cc/*  #轉文服務，有註明出處，疑大量未授權轉載
 *://*.entertainment14.net/*  #疑大量未經授權轉載
 *://*.helplib.com/*  #內容多機器翻譯自CC或MIT等專案，但常未載明來源
-*://*.itdaan.com/*  #有提供部分線上程式及註明出處，疑大量未授權轉載
 *://*.iwaishin.com/*  #www.~, news.~, article.~, ... 大量轉貼全文，疑未經授權
 *://*.jimpop.core5.org/*  #PTT文章轉寄服務，可能有未授權轉載
 *://*.looknews.us/*  #毫無篩選大量轉貼其他新聞媒體的網站，有附出處，使用.us網域，留言其各處介面都怪怪的，不似正常企業經營的網站
