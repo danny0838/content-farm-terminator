@@ -84,7 +84,7 @@
           }
           return text;
         })();
-        this.addBlackList(this.validateRulesText(text), url);
+        this.addBlackList(this.validateRulesText(text, {validate: 'strict'}), url);
       } catch (ex) {
         console.error(ex);
       }
@@ -350,16 +350,16 @@
       return fn(...args);
     }
 
-    validateRulesText(rulesText, transform = false) {
-      const parseOptions = {validate: true, transform: transform, asString: true};
+    validateRulesText(rulesText, {validate = 'standard', transform, asString = true} = {}) {
+      const parseOptions = {validate, transform, asString};
       return utils
         .getLines(rulesText)
         .map(ruleLine => this.parseRuleLine(ruleLine, parseOptions))
         .join("\n");
     }
 
-    validateTransformRulesText(rulesText) {
-      const parseOptions = {validate: true, asString: true};
+    validateTransformRulesText(rulesText, {validate = 'standard', asString = true} = {}) {
+      const parseOptions = {validate, asString};
       return utils
         .getLines(rulesText)
         .map(ruleLine => this.parseTransformRuleLine(ruleLine, parseOptions))
@@ -376,7 +376,7 @@
 
     /**
      * @param {Object} options
-     * @param {boolean} options.validate
+     * @param {string} options.validate
      * @param {string} options.transform
      * @param {boolean} options.asString
      * @returns {(Rule|string)}
@@ -406,8 +406,15 @@
             break;
         }
 
-        if (options.validate) {
-          rule = this.validateRule(rule);
+        switch (options.validate) {
+          case 'standard':
+            rule = this.validateRule(rule);
+            break;
+          case 'strict':
+            const rule0 = rule;
+            rule = this.validateRule(rule);
+            if (rule !== rule0) { rule = ''; }
+            break;
         }
 
         if (options.asString) {
@@ -421,7 +428,7 @@
 
     /**
      * @param {Object} options
-     * @param {boolean} options.validate
+     * @param {string} options.validate
      * @param {boolean} options.asString
      */
     parseTransformRuleLine(...args) {
@@ -429,8 +436,15 @@
       const fn = this.parseTransformRuleLine = (ruleLine, options = {}) => {
         let [, pattern, sep, replace, sep2, comment] = (ruleLine || "").match(reSpaceMatcher);
 
-        if (options.validate) {
-          pattern = this.validateRule(pattern);
+        switch (options.validate) {
+          case 'standard':
+            pattern = this.validateRule(pattern);
+            break;
+          case 'strict':
+            const pattern0 = pattern;
+            pattern = this.validateRule(pattern);
+            if (pattern !== pattern0) { pattern = ''; }
+            break;
         }
 
         if (options.asString) {

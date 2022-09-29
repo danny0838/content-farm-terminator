@@ -159,7 +159,7 @@ async function updateFilter() {
 
 async function blockSite(rule, tabId, frameId, quickMode) {
   rule = (rule || "").trim();
-  rule = filter.parseRuleLine(rule, {validate: true, transform: 'standard', asString: true});
+  rule = filter.parseRuleLine(rule, {validate: 'standard', transform: 'standard', asString: true});
 
   if (!quickMode) {
     let newRule = await browser.tabs.sendMessage(tabId, {
@@ -169,7 +169,7 @@ async function blockSite(rule, tabId, frameId, quickMode) {
 
     if (newRule) {
       // validate the user-modified rule
-      newRule =  filter.parseRuleLine(newRule, {validate: true, asString: true});
+      newRule =  filter.parseRuleLine(newRule, {validate: 'standard', asString: true});
     }
 
     rule = newRule;
@@ -218,7 +218,7 @@ async function blockSelectedLinks(tabId, frameId, quickMode) {
 
   let rules = list.map((rule) => {
     rule = (rule || "").trim();
-    rule = filter.parseRuleLine(rule, {validate: true, transform: 'standard', asString: true});
+    rule = filter.parseRuleLine(rule, {validate: 'standard', transform: 'standard', asString: true});
     return rule;
   }).filter(rule => !filter.isInBlacklist(rule));
 
@@ -401,8 +401,8 @@ function initMessageListener() {
           const validator = new ContentFarmFilter();
           args.transformRules = validator.validateTransformRulesText(args.transformRules);
           validator.addTransformRules(args.transformRules);
-          args.userBlacklist = validator.validateRulesText(args.userBlacklist, 'url');
-          args.userWhitelist = validator.validateRulesText(args.userWhitelist, 'url');
+          args.userBlacklist = validator.validateRulesText(args.userBlacklist, {transform: 'url'});
+          args.userWhitelist = validator.validateRulesText(args.userWhitelist, {transform: 'url'});
           await utils.setOptions(args);
           return true;
         })();
