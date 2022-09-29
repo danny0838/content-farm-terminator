@@ -6,6 +6,15 @@ auto_tasks:
       kwargs:
         files:
           - src/blocklist/not-content-farms.txt
+          - src/blocklist/content-farms.txt
+        auto_fix_excludes:
+          - src/blocklist/not-content-farms.txt
+        cross_files: true
+        auto_fix: true
+    - action: uniquify
+      kwargs:
+        files:
+          - src/blocklist/not-content-farms.txt
           - src/blocklist/bad-cloners.txt
         auto_fix_excludes:
           - src/blocklist/not-content-farms.txt
@@ -14,6 +23,7 @@ auto_tasks:
     - action: lint
       kwargs:
         files:
+          - src/blocklist/content-farms.txt
           - src/blocklist/bad-cloners.txt
         auto_fix: true
         sort_rules: true
@@ -54,6 +64,10 @@ auto_tasks:
         auto_fix: true
 
 aggregate:
+  - source:
+      - url: https://raw.githubusercontent.com/mxt305/smashXxcnxx/main/filters/xxcnxx-list.json
+        type: domains_json
+    dest: src/blocklist/content-farms.txt
   - source:
       - url: https://raw.githubusercontent.com/arosh/ublacklist-stackoverflow-translation/master/uBlacklist.txt
         type: ublacklist

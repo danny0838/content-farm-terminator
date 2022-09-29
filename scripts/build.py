@@ -3,6 +3,7 @@
 import argparse
 import inspect
 import ipaddress
+import json
 import logging
 import os
 import re
@@ -802,6 +803,16 @@ class Aggregator:
     def convert_rules(self, type, text, url):
         fn = getattr(self, f'convert_rules_{type}')
         return fn(text, url)
+
+    def convert_rules_domains_json(self, text, url):
+        """Parse a JSON with an Array of domains."""
+        rules = []
+        for domain in json.loads(text):
+            if not domain.strip():
+                continue
+            rule = Rule(domain, path=url)
+            rules.append(rule)
+        return rules
 
     def convert_rules_ublacklist(self, text, url):
         rules = []
