@@ -376,10 +376,10 @@
 
     /**
      * @param {Object} options
-     *     - {boolean} options.validate
-     *     - {boolean} options.transform
-     *     - {boolean} options.asString
-     * @returns {Rule}
+     * @param {boolean} options.validate
+     * @param {string} options.transform
+     * @param {boolean} options.asString
+     * @returns {(Rule|string)}
      */
     parseRuleLine(...args) {
       const reSpaceMatcher = /^(\S*)(\s*)(.*)$/;
@@ -388,24 +388,22 @@
       const fn = this.parseRuleLine = (ruleLine, options = {}) => {
         let [, rule, sep, comment] = (ruleLine || "").match(reSpaceMatcher);
 
-        if (options.transform) {
-          switch (options.transform) {
-            case 'standard':
-              if (!reRegexRule.test(rule)) {
+        switch (options.transform) {
+          case 'standard':
+            if (!reRegexRule.test(rule)) {
+              rule = this.transformRule(rule);
+            }
+            break;
+          case 'url':
+            if (!reRegexRule.test(rule)) {
+              if (reSchemeChecker.test(rule)) {
                 rule = this.transformRule(rule);
               }
-              break;
-            case 'url':
-              if (!reRegexRule.test(rule)) {
-                if (reSchemeChecker.test(rule)) {
-                  rule = this.transformRule(rule);
-                }
-              }
-              break;
-            default:
-              rule = this.transformRule(rule);
-              break;
-          }
+            }
+            break;
+          default:
+            rule = this.transformRule(rule);
+            break;
         }
 
         if (options.validate) {
@@ -423,8 +421,8 @@
 
     /**
      * @param {Object} options
-     *     - {boolean} validate
-     *     - {boolean} asString
+     * @param {boolean} options.validate
+     * @param {boolean} options.asString
      */
     parseTransformRuleLine(...args) {
       const reSpaceMatcher = /^(\S*)(\s*)(\S*)(\s*)(.*)$/;
