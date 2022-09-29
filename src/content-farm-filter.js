@@ -297,13 +297,13 @@
 
     validateRule(...args) {
       const reRegexRule = /^\/(.*)\/([a-z]*)$/;
-      const reHostEscaper = /[-*]/g;
-      const reHostUnescaper = /-[-a]/g;
-      const mapHostEscaper = {"-": "--", "*": "-a"};
-      const mapHostUnescaper = {"--": "-", "-a": "*"};
+      const reHostEscaper = /[xX*]/g;
+      const reHostUnescaper = /x[xa]/g;
+      const mapHostEscaper = {"x": "xx", "X": "xX", "*": "xa"};
+      const mapHostUnescaper = {xx: "x", xX: "X", xa: "*"};
       const fnHostEscaper = m => mapHostEscaper[m];
       const fnHostUnescaper = m => mapHostUnescaper[m];
-      const reSchemeChecker = /^[A-Za-z][0-9A-za-z.+-]*:\/\//;
+      const reSchemeChecker = /^[A-Za-z][0-9A-za-z.+-]*:/;
       const reWwwRemover = /^www\./;
       const reAsteriskFixer = /\*+(?=\*)/g;
       const fn = this.validateRule = (rule) => {
@@ -327,7 +327,10 @@
             // add a scheme if none to make a valid URL
             if (!reSchemeChecker.test(t)) { t = "http://" + t; }
             // get hostname
-            t = new URL(t).hostname;
+            // force using http to make sure hostname work
+            t = new URL(t);
+            t.protocol = 'https:';
+            t = t.hostname;
             // unescape "*"
             t = t.replace(reHostUnescaper, fnHostUnescaper);
             // replace "**..." with "*"
