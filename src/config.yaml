@@ -69,6 +69,12 @@ aggregate:
         type: domains_json
       - url: https://raw.githubusercontent.com/wdmpa/content-farm-list/main/domains/spam/g.penzai.com.txt
         type: ublacklist
+      - url: https://raw.githubusercontent.com/wdmpa/content-farm-list/main/domains/spam/cxyzjd.txt
+        type: ublacklist
+      - url: https://raw.githubusercontent.com/wdmpa/content-farm-list/main/domains/spam/ksou.cc.txt
+        type: ublacklist
+      - url: https://raw.githubusercontent.com/wdmpa/content-farm-list/main/domains/spam/www.6532033.com.txt
+        type: ublacklist
     dest: src/blocklist/content-farms.txt
   - source:
       - url: https://raw.githubusercontent.com/arosh/ublacklist-stackoverflow-translation/master/uBlacklist.txt
