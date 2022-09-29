@@ -804,6 +804,16 @@ class Aggregator:
         fn = getattr(self, f'convert_rules_{type}')
         return fn(text, url)
 
+    def convert_rules_domains_txt(self, text, url):
+        """Parse a file with line-separated domains."""
+        rules = []
+        for i, domain in enumerate(text.split('\n')):
+            if not domain.strip():
+                continue
+            rule = Rule(domain, path=url, line_no=i + 1)
+            rules.append(rule)
+        return rules
+
     def convert_rules_domains_json(self, text, url):
         """Parse a JSON with an Array of domains."""
         rules = []

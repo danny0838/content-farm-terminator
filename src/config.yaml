@@ -20,10 +20,22 @@ auto_tasks:
           - src/blocklist/not-content-farms.txt
         cross_files: true
         auto_fix: true
+    - action: uniquify
+      kwargs:
+        files:
+          - src/blocklist/not-content-farms.txt
+          - src/blocklist/content-farms.txt
+          - src/blocklist/nearly-content-farms.txt
+        auto_fix_excludes:
+          - src/blocklist/not-content-farms.txt
+          - src/blocklist/content-farms.txt
+        cross_files: true
+        auto_fix: true
     - action: lint
       kwargs:
         files:
           - src/blocklist/content-farms.txt
+          - src/blocklist/nearly-content-farms.txt
           - src/blocklist/bad-cloners.txt
         auto_fix: true
         sort_rules: true
@@ -84,6 +96,10 @@ aggregate:
       - url: https://raw.githubusercontent.com/wdmpa/content-farm-list/main/domains/machine-translated/stackoverflow.txt
         type: ublacklist
     dest: src/blocklist/bad-cloners.txt
+  - source:
+      - url: https://raw.githubusercontent.com/cobaltdisco/Google-Chinese-Results-Blocklist/master/GHHbD_perma_ban_list.txt
+        type: domains_txt
+    dest: src/blocklist/nearly-content-farms.txt
 
 build:
   - source: src/blocklist/content-farms.txt
