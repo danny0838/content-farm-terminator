@@ -593,6 +593,26 @@ class Converter:
         return quote(value)
 
 
+class ConverterCopy(Converter):
+    """Copy to the target and add a header."""
+    def run(self):
+        self.print_headers()
+
+        for line in self.fh:
+            print(line, end='')
+
+    def print_headers(self):
+        try:
+            headers = self.info['headers']
+        except KeyError:
+            return
+
+        headers = headers.rstrip('\n').format(
+            now=self.date.astimezone(timezone.utc).isoformat(timespec='seconds'),
+        )
+        print(headers)
+
+
 class ConverterCft(Converter):
     """Convert to a canonical Content Farm Terminator blocklist."""
     def print_headers(self):

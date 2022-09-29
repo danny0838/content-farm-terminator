@@ -1,0 +1,11 @@
+  -- Blogspot
+/^https?://(\w+)\.blogspot\.(?:\w+)(?=[/?#]|$)/ $1.blogspot.*
+
+  -- Xuite
+/^https?://(?:(?:m\.)?(?:[bv]log|photo)\.xuite\.net|m\.xuite\.net/blog)/([\w.-]+)(?=[/?#]|$)/ /^https?://(?:(?:m\.)?(?:[bv]log|photo)\.xuite\.net|m\.xuite\.net/blog)/$1(?=[/?#]|$)/
+
+  -- UDN
+/^https?://(?:blog|album)\.udn\.com/(?:mobile/)?([\w.-]+)(?=[/?#]|$)/ /^https?://(?:blog|album)\.udn\.com/(?:mobile/)?$1(?=[/?#]|$)/
+
+  -- PChome
+/^https?://mypaper\.(?:m\.)?pchome\.com\.tw/([\w-.]+)(?=[/?#]|$)/ /^https?://mypaper\.(?:m\.)?pchome\.com\.tw/$1(?=[/?#]|$)/

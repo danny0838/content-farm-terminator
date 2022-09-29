@@ -354,3 +354,11 @@ build:
         Source: https://danny0838.github.io/content-farm-terminator/files/blocklist-ublacklist/scam-sites.txt
       processors: *content_farms_processors_ublacklist
       schemes: *content_farms_schemes_ublacklist
+
+  - source: src/url-transform-rules/content-farms.txt
+    publish: docs/files/url-transform-rules/content-farms.txt
+    type: copy
+
+  - source: src/url-transform-rules/sns-content-farms.txt
+    publish: docs/files/url-transform-rules/sns-content-farms.txt
+    type: copy
