@@ -151,7 +151,7 @@ class Linter:
                  remove_empty=False, sort_rules=False, strip_eol=False):
         self.root = root
         self.config = config or {}
-        self.files = files or []
+        self.files = [os.path.normpath(f) for f in (files or [])]
         self.auto_fix = auto_fix
         self.remove_empty = remove_empty
         self.sort_rules = sort_rules
@@ -251,10 +251,10 @@ class Uniquifier:
                  auto_fix=False, auto_fix_excludes=None, strip_eol=False):
         self.root = root
         self.config = config or {}
-        self.files = files or []
+        self.files = [os.path.normpath(f) for f in (files or [])]
         self.cross_files = cross_files
         self.auto_fix = auto_fix
-        self.auto_fix_excludes = set(auto_fix_excludes or [])
+        self.auto_fix_excludes = {os.path.normpath(f) for f in (auto_fix_excludes or [])}
         self.strip_eol = strip_eol
 
     def run(self):
