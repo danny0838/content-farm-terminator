@@ -2,1062 +2,1062 @@
 ! Description: Filter for fake news sites. (For reference)
 !     This list is slightly organized from several sources only and is NOT actively maintained.
 ! Expires: 3 days
-! Last modified: 2022-10-01T00:04:32+00:00
+! Last modified: 2022-10-01T00:13:59+00:00
 ! Homepage: https://danny0838.github.io/content-farm-terminator/
 ! Licence: MIT License
 ! Source: https://danny0838.github.io/content-farm-terminator/files/blocklist-ubo/fake-news.txt
-||100percentfedup.com^
-||21stcenturywire.com^
-||24newsflash.com^
-||365usanews.com^
-||4threvolutionarywar.wordpress.com^
-||70news.wordpress.com^
-||82.221.129.208^
-||aanirfan.blogspot.co.uk^
-||abcnews.com.co^
-||abcnewsgo.co^
-||abeldanger.net^
-||abovetopsecret.com^
-||abriluno.com^
-||aceflashman.wordpress.com^
-||acting-man.com^
-||activistpost.com^
-||addictinginfo.org^
-||adobochronicles.com^
-||advocate.com^
-||aheadoftheherd.com^
-||ahtribune.com^
-||allnewspipeline.com^
-||alt-market.com^
-||alternativemediasyndicate.com^
-||alternet.org^
-||americanblog.com^
-||americanfreepress.net^
-||americankabuki.blogspot.com^
-||americanlookout.com^
-||americannews.com^
-||americannewsx.com^
-||americanoverlook.com^
-||americanpatriotdaily.com^
-||americanprogress.org^
-||americanreviewer.com^
-||americanthinker.com^
-||americantoday.news^
-||americasfreedomfighters.com^
-||ammoland.com^
-||amplifyingglass.com^
-||amren.com^
-||amtvmedia.com^
-||amusmentic.com^
-||ancient-code.com^
-||angrypatriotmovement.com^
-||anonews.co^
-||anonhq.com^
-||anonnews.co^
-||anotherdayintheempire.com^
-||antiwar.com^
-||antoniusaquinas.wp.com^
-||asia-pacificresearch.com^
-||assassinationscience.com^
-||associatedmediacoverage.com^
-||attn.com^
-||automaticearth.com^
-||automotostar.com^
-||awarenessact.com^
-||awazetribune.com^
-||awdnews.com^
-||awm.com^
-||badsquad.com^
-||baptistnews.com^
-||barenakedislam.com^
-||bb4sp.com^
-||beehivebugle.com^
-||beforeitsnews.com^
+||100percentfedup.com^  #bias
+||21stcenturywire.com^  #clickbait  #conspiracy
+||24newsflash.com^  #fake
+||365usanews.com^  #bias  #conspiracy
+||4threvolutionarywar.wordpress.com^  #bias  #conspiracy
+||70news.wordpress.com^  #fake
+||82.221.129.208^  #conspiracy  #fake
+||aanirfan.blogspot.co.uk^  #unreliable
+||abcnews.com.co^  #fake
+||abcnewsgo.co^  #fake
+||abeldanger.net^  #conspiracy
+||abovetopsecret.com^  #conspiracy  #rumor
+||abriluno.com^  #satire  #fake
+||aceflashman.wordpress.com^  #satire
+||acting-man.com^  #unreliable  #conspiracy
+||activistpost.com^  #clickbait  #conspiracy
+||addictinginfo.org^  #clickbait  #unreliable
+||adobochronicles.com^  #satire
+||advocate.com^  #political  #reliable
+||aheadoftheherd.com^  #bias
+||ahtribune.com^  #unreliable  #bias
+||allnewspipeline.com^  #unreliable  #conspiracy
+||alt-market.com^  #conspiracy  #bias
+||alternativemediasyndicate.com^  #fake
+||alternet.org^  #political  #reliable
+||americanblog.com^  #unknown
+||americanfreepress.net^  #conspiracy  #bias
+||americankabuki.blogspot.com^  #junksci
+||americanlookout.com^  #bias  #clickbait
+||americannews.com^  #fake  #fake
+||americannewsx.com^  #political  #bias  #satire
+||americanoverlook.com^  #fake
+||americanpatriotdaily.com^  #bias  #clickbait
+||americanprogress.org^  #political  #reliable
+||americanreviewer.com^  #conspiracy
+||americanthinker.com^  #bias
+||americantoday.news^  #rumor  #bias
+||americasfreedomfighters.com^  #bias  #clickbait
+||ammoland.com^  #bias
+||amplifyingglass.com^  #clickbait  #satire
+||amren.com^  #hate  #conspiracy
+||amtvmedia.com^  #rumor  #unreliable
+||amusmentic.com^  #clickbait  #rumor
+||ancient-code.com^  #junksci  #unreliable
+||angrypatriotmovement.com^  #conspiracy
+||anonews.co^  #unreliable
+||anonhq.com^  #unreliable
+||anonnews.co^  #unreliable
+||anotherdayintheempire.com^  #bias  #conspiracy
+||antiwar.com^  #bias  #unreliable
+||antoniusaquinas.wp.com^  #bias  #conspiracy
+||asia-pacificresearch.com^  #unreliable  #satire
+||assassinationscience.com^  #conspiracy  #junksci
+||associatedmediacoverage.com^  #satire
+||attn.com^  #political  #clickbait
+||automaticearth.com^  #unreliable
+||automotostar.com^  #clickbait
+||awarenessact.com^  #conspiracy  #junksci
+||awazetribune.com^  #satire
+||awdnews.com^  #conspiracy
+||awm.com^  #unreliable  #bias  #clickbait
+||badsquad.com^  #unknown
+||baptistnews.com^  #political
+||barenakedislam.com^  #hate
+||bb4sp.com^  #conspiracy  #bias  #bias
+||beehivebugle.com^  #satire
+||beforeitsnews.com^  #clickbait  #fake  #conspiracy  #rumor
 ||beingliberal.org^
-||betootaadvocate.com^
-||bients.com^
-||bigamericannews.com^
-||bigbluedimension.com^
-||bigbluevision.com^
-||bigbluevision.org^
-||bighairynews.com^
-||bignuggetnews.com^
-||bigpzone.com^
-||bipartisanreport.com^
+||betootaadvocate.com^  #satire
+||bients.com^  #clickbait
+||bigamericannews.com^  #fake  #satire
+||bigbluedimension.com^  #rumor  #bias
+||bigbluevision.com^  #hate
+||bigbluevision.org^  #clickbait  #bias
+||bighairynews.com^  #fake  #conspiracy
+||bignuggetnews.com^  #bias  #rumor
+||bigpzone.com^  #clickbait  #unknown
+||bipartisanreport.com^  #clickbait  #bias
 ||bizpacreview.com^
-||blackagendareport.com^
-||blackgenocide.org^
-||blacklistednews.com^
-||blastingnews.com^
-||bluenationreview.com^
-||boilingfrogspost.com^
-||borowitzreport.com^
-||bostonleader.com^
-||breaking911.com^
-||breakpoint.org^
-||breitbart.com^
-||brotherjohnf.com^
-||bullionbullscanada.com^
-||burrardstreetjournal.com^
-||buzzfeedusa.com^
-||bvanews.com^
-||callthecops.net^
-||canadafreepress.com^
-||cap-news.com^
-||cbsnews.com.co^
-||celebtricity.com^
-||centerforsecuritypolicy.org^
-||channel-7-news.com^
-||charismanews.com^
-||chaser.com.au^
-||checkoutthehealthyworld.com^
-||chicksontheright.com^
-||christianfightback.com^
-||christianpost.com^
-||christiantimesnewspaper.com^
-||christwire.org^
-||chronicle.su^
-||chroniclesmagazine.org^
-||citizensunited.org^
-||city-journal.org^
-||cityworldnews.com^
-||civictribune.com^
-||clashdaily.com^
-||clickhole.com^
-||cnnnext.com^
-||cnsnews.com^
-||coasttocoastam.com^
-||collective-evolution.com^
+||blackagendareport.com^  #unreliable
+||blackgenocide.org^  #conspiracy  #bias  #hate
+||blacklistednews.com^  #clickbait  #unreliable
+||blastingnews.com^  #satire  #unreliable
+||bluenationreview.com^  #clickbait  #unreliable
+||boilingfrogspost.com^  #unreliable
+||borowitzreport.com^  #satire
+||bostonleader.com^  #fake
+||breaking911.com^  #clickbait  #unreliable
+||breakpoint.org^  #unreliable
+||breitbart.com^  #political  #unreliable  #bias
+||brotherjohnf.com^  #bias  #conspiracy
+||bullionbullscanada.com^  #conspiracy
+||burrardstreetjournal.com^  #satire
+||buzzfeedusa.com^  #fake  #rumor
+||bvanews.com^  #unreliable  #bias  #fake
+||callthecops.net^  #satire
+||canadafreepress.com^  #conspiracy  #bias
+||cap-news.com^  #fake
+||cbsnews.com.co^  #fake
+||celebtricity.com^  #satire
+||centerforsecuritypolicy.org^  #bias  #conspiracy
+||channel-7-news.com^  #fake
+||charismanews.com^  #bias
+||chaser.com.au^  #satire
+||checkoutthehealthyworld.com^  #junksci  #clickbait
+||chicksontheright.com^  #clickbait  #bias
+||christianfightback.com^  #hate  #bias
+||christianpost.com^  #reliable  #political
+||christiantimesnewspaper.com^  #rumor  #bias  #fake
+||christwire.org^  #fake  #satire
+||chronicle.su^  #clickbait  #satire
+||chroniclesmagazine.org^  #political
+||citizensunited.org^  #bias
+||city-journal.org^  #political
+||cityworldnews.com^  #fake
+||civictribune.com^  #fake  #fake
+||clashdaily.com^  #fake  #conspiracy  #bias
+||clickhole.com^  #fake  #satire
+||cnnnext.com^  #unreliable
+||cnsnews.com^  #unreliable  #bias
+||coasttocoastam.com^  #clickbait  #unreliable
+||collective-evolution.com^  #junksci
 ||collectiveevolution^
-||collectivelyconscious.net^
-||comingdepression.com^
-||commentarymagazine.com^
-||commondreams.org^
-||concisepolitics.com^
-||condividilo.org^
-||consciouslifenews.com^
-||conservapedia.com^
-||conservativebyte.com^
-||conservativedailypost.com^
-||conservativefighters.com^
-||conservativefiringline.com^
-||conservativefrontline.com^
-||conservativeheadlines.com^
-||conservativehq.com^
-||conservativeinfidel.com^
-||conservativeoutfitters.com^
-||conservativepapers.com^
-||conservativerefocus.com^
-||conservativereview.com^
-||conservativespirit.com^
-||conservativestate.com^
-||conservativetribune.com^
-||consortiumnews.com^
-||conspiracyplanet.com^
-||conspiracywire.com^
-||corbettreport.com^
-||corrieredelcorsaro.it^
-||countdowntozerotime.com^
-||countercurrentnews.com^
-||countercurrents.org^
-||counterinformation.wordpress.com^
-||counterjihad.com^
-||counterpsyops.com^
-||counterpunch.com^
-||counterpunch.org^
-||cowgernation.com^
-||creambmp.com^
-||cryptogon.com^
-||crystalair.com^
+||collectivelyconscious.net^  #junksci  #conspiracy
+||comingdepression.com^  #unknown
+||commentarymagazine.com^  #political
+||commondreams.org^  #political  #clickbait
+||concisepolitics.com^  #conspiracy  #hate
+||condividilo.org^  #clickbait
+||consciouslifenews.com^  #clickbait  #junksci
+||conservapedia.com^  #bias
+||conservativebyte.com^  #fake  #bias
+||conservativedailypost.com^  #fake  #unreliable
+||conservativefighters.com^  #fake
+||conservativefiringline.com^  #bias  #conspiracy  #clickbait
+||conservativefrontline.com^  #unknown
+||conservativeheadlines.com^  #unknown
+||conservativehq.com^  #bias
+||conservativeinfidel.com^  #fake  #conspiracy
+||conservativeoutfitters.com^  #clickbait  #unreliable
+||conservativepapers.com^  #bias
+||conservativerefocus.com^  #conspiracy
+||conservativereview.com^  #political
+||conservativespirit.com^  #bias
+||conservativestate.com^  #bias
+||conservativetribune.com^  #bias  #conspiracy  #unreliable
+||consortiumnews.com^  #reliable
+||conspiracyplanet.com^  #conspiracy
+||conspiracywire.com^  #conspiracy
+||corbettreport.com^  #conspiracy  #conspiracy  #bias
+||corrieredelcorsaro.it^  #fake
+||countdowntozerotime.com^  #clickbait  #conspiracy
+||countercurrentnews.com^  #bias
+||countercurrents.org^  #political  #unreliable
+||counterinformation.wordpress.com^  #political
+||counterjihad.com^  #bias
+||counterpsyops.com^  #clickbait  #conspiracy
+||counterpunch.com^  #political
+||counterpunch.org^  #political
+||cowgernation.com^  #bias  #conspiracy
+||creambmp.com^  #fake  #satire
+||cryptogon.com^  #conspiracy  #unreliable
+||crystalair.com^  #satire
 ||dailiulian.net^
-||dailybuzzlive.com^
-||dailycaller.com^
-||dailycurrant.com^
-||dailydiscord.com^
-||dailyheadlines.com^
-||dailyheadlines.net^
-||dailyken.com^
-||dailykos.com^
-||dailyleak.org^
-||dailynewsbin.com^
-||dailynewspolitic.com^
-||dailyoccupation.com^
-||dailypolitics.info^
-||dailypoliticsusa.com^
-||dailysignal.com^
-||dailysquib.co.uk^
-||dailystormer.com^
-||dailytelegraph.com.au^
-||dailywire.com^
-||dandygoat.com^
-||darkmoon.me^
-||darkpolitricks.com^
-||dataasylum.com^
-||davejanda.com^
-||davidduke.com^
-||davidstockmanscontracorner.com^
-||davidwolfe.com^
-||dcclothesline.com^
-||dcgazette.com^
-||dcleaks.com^
-||deadlinelive.info^
-||deadlyclear.wordpress.com^
-||debunkingskeptics.com^
-||defenddemocracy.press^
-||delectabledietofpics.net^
-||dennismichaellynch.com^
-||denverguardian.com^
-||departed.co^
-||der-postillon.com^
-||derfmagazine.com^
-||dineal.com^
-||direttanews.it^
-||disclose.tv^
-||disclosuremedia.net^
-||dissentmagazine.org^
-||diversitychronicle.wordpress.com^
-||dollarvigilante.com^
+||dailybuzzlive.com^  #clickbait  #fake
+||dailycaller.com^  #political  #clickbait  #bias
+||dailycurrant.com^  #fake  #satire
+||dailydiscord.com^  #satire
+||dailyheadlines.com^  #fake
+||dailyheadlines.net^  #fake
+||dailyken.com^  #hate
+||dailykos.com^  #political  #clickbait
+||dailyleak.org^  #parody  #fake
+||dailynewsbin.com^  #bias  #clickbait
+||dailynewspolitic.com^  #unknown
+||dailyoccupation.com^  #conspiracy  #bias
+||dailypolitics.info^  #unknown
+||dailypoliticsusa.com^  #bias
+||dailysignal.com^  #bias
+||dailysquib.co.uk^  #satire
+||dailystormer.com^  #hate  #conspiracy  #bias
+||dailytelegraph.com.au^  #bias  #rumor
+||dailywire.com^  #bias
+||dandygoat.com^  #satire
+||darkmoon.me^  #hate  #bias
+||darkpolitricks.com^  #bias  #conspiracy
+||dataasylum.com^  #conspiracy  #junksci
+||davejanda.com^  #unreliable
+||davidduke.com^  #hate
+||davidstockmanscontracorner.com^  #political
+||davidwolfe.com^  #conspiracy
+||dcclothesline.com^  #conspiracy  #junkscience  #fake
+||dcgazette.com^  #fake  #fake
+||dcleaks.com^  #unreliable
+||deadlinelive.info^  #political  #conspiracy
+||deadlyclear.wordpress.com^  #bias  #fake news
+||debunkingskeptics.com^  #bias  #conspiracy
+||defenddemocracy.press^  #bias  #political
+||delectabledietofpics.net^  #unknown
+||dennismichaellynch.com^  #political
+||denverguardian.com^  #fake
+||departed.co^  #fake
+||der-postillon.com^  #satire
+||derfmagazine.com^  #fake  #satire
+||dineal.com^  #junksci
+||direttanews.it^  #clickbait
+||disclose.tv^  #clickbait  #satire  #conspiracy
+||disclosuremedia.net^  #conspiracy
+||dissentmagazine.org^  #political
+||diversitychronicle.wordpress.com^  #satire
+||dollarvigilante.com^  #bias
 ||24orenotizie^
-||24orenotizie.*^$document
+||24orenotizie.*^$document  #clickbait
 ||attivotv^
-||attivotv.*^$document
+||attivotv.*^$document  #clickbait
 ||capnews^
-||capnews.*^$document
+||capnews.*^$document  #fake
 ||catenaumana^
-||catenaumana.*^$document
+||catenaumana.*^$document  #clickbait
 ||chesuccede^
-||chesuccede.*^$document
+||chesuccede.*^$document  #clickbait
 ||conspiracywire^
-||conspiracywire.*^$document
+||conspiracywire.*^$document  #clickbait
 ||coriere^
-||coriere.*^$document
+||coriere.*^$document  #fake
 ||corrieredellanotte^
-||corrieredellanotte.*^$document
+||corrieredellanotte.*^$document  #fake
 ||corrieredellapera^
-||corrieredellapera.*^$document
+||corrieredellapera.*^$document  #fake
 ||corrieredelmattino^
-||corrieredelmattino.*^$document
+||corrieredelmattino.*^$document  #fake
 ||corrieredisera^
-||corrieredisera.*^$document
+||corrieredisera.*^$document  #clickbait
 ||coscienzaitaliana^
-||coscienzaitaliana.*^$document
+||coscienzaitaliana.*^$document  #clickbait
 ||curiosandoonline^
-||curiosandoonline.*^$document
+||curiosandoonline.*^$document  #clickbait
 ||curiosity2013^
-||curiosity2013.*^$document
+||curiosity2013.*^$document  #clickbait
 ||cvdiariodelpollineo^
-||cvdiariodelpollineo.*^$document
+||cvdiariodelpollineo.*^$document  #clickbait
 ||dionidream^
-||dionidream.*^$document
+||dionidream.*^$document  #clickbait
 ||direttanews^
-||direttanews.*^$document
+||direttanews.*^$document  #clickbait
 ||direttanews24^
-||direttanews24.*^$document
+||direttanews24.*^$document  #clickbait  #fake
 ||direttanfo^
-||direttanfo.*^$document
+||direttanfo.*^$document  #clickbait
 ||essenzialmentedonna^
-||essenzialmentedonna.*^$document
+||essenzialmentedonna.*^$document  #clickbait
 ||fattoquotidaino^
-||fattoquotidaino.*^$document
+||fattoquotidaino.*^$document  #fake
 ||gazzetta24^
-||gazzetta24.*^$document
+||gazzetta24.*^$document  #clickbait
 ||gazzettadellasera^
-||gazzettadellasera.*^$document
+||gazzettadellasera.*^$document  #fake
 ||gazzettanews24^
-||gazzettanews24.*^$document
+||gazzettanews24.*^$document  #clickbait
 ||giomale^
-||giomale.*^$document
+||giomale.*^$document  #fake
 ||ilblogdellattivista^
-||ilblogdellattivista.*^$document
+||ilblogdellattivista.*^$document  #clickbait
 ||ilmessaggio^
-||ilmessaggio.*^$document
+||ilmessaggio.*^$document  #fake
 ||ilradicale^
-||ilradicale.*^$document
+||ilradicale.*^$document  #clickbait
 ||iltelegrafo^
-||iltelegrafo.*^$document
+||iltelegrafo.*^$document  #fake
 ||imigliorivideo^
-||imigliorivideo.*^$document
+||imigliorivideo.*^$document  #clickbait
 ||indecisionforever^
-||indecisionforever.*^$document
+||indecisionforever.*^$document  #fake
 ||informazionelibera^
-||informazionelibera.*^$document
+||informazionelibera.*^$document  #clickbait
 ||italianiuniti^
-||italianiuniti.*^$document
+||italianiuniti.*^$document  #clickbait
 ||italianosveglia^
-||italianosveglia.*^$document
+||italianosveglia.*^$document  #clickbait
 ||italianotizie24^
-||italianotizie24.*^$document
+||italianotizie24.*^$document  #fake
 ||italiapatriamia^
-||italiapatriamia.*^$document
+||italiapatriamia.*^$document  #clickbait
 ||italiarialzati^
-||italiarialzati.*^$document
+||italiarialzati.*^$document  #clickbait
 ||jedanews^
-||jedanews.*^$document
+||jedanews.*^$document  #clickbait
 ||kevideo^
-||kevideo.*^$document
+||kevideo.*^$document  #clickbait
 ||lanozione^
-||lanozione.*^$document
+||lanozione.*^$document  #fake
 ||lapillolarossa^
-||lapillolarossa.*^$document
+||lapillolarossa.*^$document  #clickbait
 ||last-webs^
-||last-webs.*^$document
+||last-webs.*^$document  #clickbait
 ||libero-notizie^
-||libero-notizie.*^$document
+||libero-notizie.*^$document  #fake
 ||liberogiornale^
-||liberogiornale.*^$document
+||liberogiornale.*^$document  #fake
 ||lmr^
-||lmr.*^$document
+||lmr.*^$document  #clickbait
 ||mafiacapitale^
-||mafiacapitale.*^$document
+||mafiacapitale.*^$document  #clickbait
 ||mattoquotidiano^
-||mattoquotidiano.*^$document
+||mattoquotidiano.*^$document  #fake
 ||news24roma^
-||news24roma.*^$document
+||news24roma.*^$document  #fake
 ||newscronaca^
-||newscronaca.*^$document
+||newscronaca.*^$document  #clickbait
 ||newsitalys^
-||newsitalys.*^$document
+||newsitalys.*^$document  #fake
 ||nocensura^
-||nocensura.*^$document
+||nocensura.*^$document  #clickbait
 ||notixonline^
-||notixonline.*^$document
+||notixonline.*^$document  #clickbait
 ||notixweb^
-||notixweb.*^$document
+||notixweb.*^$document  #clickbait
 ||notiziariosegreto^
-||notiziariosegreto.*^$document
+||notiziariosegreto.*^$document  #fake
 ||panorana^
-||panorana.*^$document
+||panorana.*^$document  #fake
 ||perdavvero^
-||perdavvero.*^$document
+||perdavvero.*^$document  #clickbait
 ||quotidaino^
-||quotidaino.*^$document
+||quotidaino.*^$document  #fake
 ||rebubblica^
-||rebubblica.*^$document
+||rebubblica.*^$document  #fake
 ||repubblica24^
-||repubblica24.*^$document
+||repubblica24.*^$document  #clickbait
 ||retenews24^
-||retenews24.*^$document
+||retenews24.*^$document  #clickbait  #fake
 ||riscattonazionale^
-||riscattonazionale.*^$document
+||riscattonazionale.*^$document  #clickbait
 ||rubrica24^
-||rubrica24.*^$document
+||rubrica24.*^$document  #fake
 ||segretodistato^
-||segretodistato.*^$document
+||segretodistato.*^$document  #clickbait
 ||skytg24news^
-||skytg24news.*^$document
+||skytg24news.*^$document  #clickbait
 ||socialbuzz^
-||socialbuzz.*^$document
+||socialbuzz.*^$document  #clickbait
 ||tg24h^
-||tg24h.*^$document
+||tg24h.*^$document  #fake
 ||tg5stelle^
-||tg5stelle.*^$document
+||tg5stelle.*^$document  #clickbait
 ||tgnewsitalia^
-||tgnewsitalia.*^$document
+||tgnewsitalia.*^$document  #clickbait  #clickbait
 ||tuttiicriminidegliimmigrati^
-||tuttiicriminidegliimmigrati.*^$document
+||tuttiicriminidegliimmigrati.*^$document  #clickbait
 ||tzetze^
-||tzetze.*^$document
+||tzetze.*^$document  #clickbait
 ||ultimaora24^
-||ultimaora24.*^$document
+||ultimaora24.*^$document  #fake
 ||videoviraliweb^
-||videoviraliweb.*^$document
+||videoviraliweb.*^$document  #clickbait
 ||vnews24^
-||vnews24.*^$document
+||vnews24.*^$document  #clickbait  #clickbait
 ||voxnews^
-||voxnews.*^$document
+||voxnews.*^$document  #clickbait
 ||webitalia360^
-||webitalia360.*^$document
-||cato.org/blog^$document
-||educateinspirechange.org/health^$document
-||newyorker.com/humor^$document
-||nonaiswa.org/wordpress^$document
-||smartknowledgeu.com/blog^$document
-||solari.com/blog^$document
-||szandorblestman.com/index.php^$document
-||thegoldandoilguy.com/articles^$document
-||donaldtrumpnews.co^
-||dont-tread-on.me^
-||downtrend.com^
-||dprogram.net^
-||drrichswier.com^
-||drudgereport.com^
-||drudgereport.com.co^
-||duffleblog.com^
-||duhprogressive.com^
-||dutchsinse.com^
+||webitalia360.*^$document  #clickbait
+||cato.org/blog^$document  #political  #reliable
+||educateinspirechange.org/health^$document  #clickbait  #junksci
+||newyorker.com/humor^$document  #satire
+||nonaiswa.org/wordpress^$document  #unknown
+||smartknowledgeu.com/blog^$document  #unknown
+||solari.com/blog^$document  #unknown
+||szandorblestman.com/index.php^$document  #unknown
+||thegoldandoilguy.com/articles^$document  #unreliable
+||donaldtrumpnews.co^  #fake
+||dont-tread-on.me^  #conspiracy
+||downtrend.com^  #fake  #satire
+||dprogram.net^  #unknown
+||drrichswier.com^  #hate  #bias
+||drudgereport.com^  #political  #bias
+||drudgereport.com.co^  #fake  #fake
+||duffleblog.com^  #satire
+||duhprogressive.com^  #fake  #satire
+||dutchsinse.com^  #conspiracy
 ||e04.tv^
-||eaglerising.com^
-||ebolahoax.com^
-||economicnoise.com^
-||ecowatch.com^
-||educate-yourself.org^
-||electionnightgatekeepers.com^
-||elelephantintheroom.blogspot.com^
-||elitereaders.com^
-||elkoshary.com^
-||elmundotoday.com^
-||embols.com^
-||empireherald.com^
-||empirenews.com^
-||empirenews.net^
-||empiresports.co^
-||emptywheel.net^
-||enabon.com^
-||endingthefed.com^
-||endoftheamericandream.com^
-||endtime.com^
-||enduringvision.com^
-||english.ruvr.ru^
-||eutimes.net^
-||eutopia.buzz^
-||everydayworldnews.com^
-||everythingnewdaily.com^
-||ewao.com^
-||experimentalvaccines.org^
-||expose1933.com^
-||express.co.uk^
-||extraclubmagazine.com^
-||eyeopening.info^
-||fakingnews.com^
-||familysecuritymatters.org^
-||fantasticword.com^
-||farmwars.info^
-||federalistpress.com^
-||fellowshipoftheminds.com^
-||filmsforaction.org^
-||financialsurvivalnetwork.com^
-||firearmscoalition.org^
-||floridasunpost.com^
-||flyheight.com^
-||fmobserver.com^
-||fognews.ru^
-||foodbabe.com^
-||foreignpolicyjournal.com^
-||fort-russ.com^
-||fourwinds10.net^
-||fprnradio.com^
-||freakoutnation.com^
-||freebeacon.com^
-||freedomdaily.com^
-||freedomforceinternational.com^
-||freedomoutpost.com^
-||freedomsphoenix.com^
-||freedomworks.org^
-||freedomworldnews.com^
-||freepatriot.org^
-||freewoodpost.com^
-||fridaymash.com^
-||fromthetrenchesworldreport.com^
-||frontpagemag.com^
-||fusion.net^
-||gaia.com^
-||galacticconnection.com^
-||gangstergovernment.com^
-||gatesofvienna.net^
-||geoengineeringwatch.org^
-||geopolmonitor.com^
-||glaringhypocrisy.com^
-||globaleconomicanalysis.com^
-||globalresearch.ca^
-||glossynews.com^
-||godlikeproductions.com^
-||gomerblog.com^
-||goneleft.com^
-||gonzalolira.blogspot.com^
-||gopthedailydose.com^
-||govtslaves.info^
-||greanvillepost.com^
-||greenmedinfo.com^
-||guarda.one^
-||guardianlv.com^
-||guccifer2.wordpress.com^
-||gulagbound.com^
-||hangthebankers.com^
-||healthimpactnews.com^
-||healthnutnews.com^
-||healthy-holistic-living.com^
-||heartland.org^
-||heatst.com^
-||henrymakow.com^
-||heresyblog.net^
-||heritage.org^
-||holyobserver.com^
-||horowitzfreedomcenter.org^
-||humansarefree.com^
-||humortimes.com^
-||huzlers.com^
-||icr.org^
-||ifyouonlynews.com^
-||igrewupinusa.info^
-||ihavethetruth.com^
-||ijr.com^
-||ilcorriere.cloud^
-||illuminati-news.com^
-||ilovemyfreedom.org^
-||immediatesafety.org^
-||in5d.com^
-||indiaarising.com^
-||infiniteunknown.net^
-||informationclearinghouse.info^
-||informetoday.com^
-||infostormer.com^
-||infowars.com^
+||eaglerising.com^  #bias  #clickbait
+||ebolahoax.com^  #conspiracy
+||economicnoise.com^  #political  #unreliable
+||ecowatch.com^  #political
+||educate-yourself.org^  #conspiracy  #junksci
+||electionnightgatekeepers.com^  #conspiracy  #unreliable
+||elelephantintheroom.blogspot.com^  #bias
+||elitereaders.com^  #clickbait
+||elkoshary.com^  #satire
+||elmundotoday.com^  #satire
+||embols.com^  #fake
+||empireherald.com^  #fake  #satire
+||empirenews.com^  #fake
+||empirenews.net^  #fake  #satire
+||empiresports.co^  #satire
+||emptywheel.net^  #political
+||enabon.com^  #fake
+||endingthefed.com^  #bias
+||endoftheamericandream.com^  #conspiracy  #fake  #political
+||endtime.com^  #bias  #clickbait  #political
+||enduringvision.com^  #fake  #fake
+||english.ruvr.ru^  #unknown
+||eutimes.net^  #hate  #conspiracy
+||eutopia.buzz^  #fake  #satire  #conspiracy
+||everydayworldnews.com^  #unknown
+||everythingnewdaily.com^  #unknown
+||ewao.com^  #junksci
+||experimentalvaccines.org^  #junksci  #conspiracy
+||expose1933.com^  #conspiracy  #hate
+||express.co.uk^  #rumor
+||extraclubmagazine.com^  #bias  #clickbait  #fake
+||eyeopening.info^  #conspiracy  #junksci
+||fakingnews.com^  #fake  #satire
+||familysecuritymatters.org^  #conspiracy  #bias
+||fantasticword.com^  #unknown
+||farmwars.info^  #fake news  #conspiracy
+||federalistpress.com^  #bias
+||fellowshipoftheminds.com^  #conspiracy  #junksci
+||filmsforaction.org^  #political
+||financialsurvivalnetwork.com^  #unreliable  #bias
+||firearmscoalition.org^  #bias  #blog
+||floridasunpost.com^  #fake  #satirical
+||flyheight.com^  #unknown
+||fmobserver.com^  #satire
+||fognews.ru^  #satire
+||foodbabe.com^  #junksci
+||foreignpolicyjournal.com^  #political
+||fort-russ.com^  #unknown
+||fourwinds10.net^  #conspiracy  #junksci
+||fprnradio.com^  #clickbait  #conspiracy  #fake
+||freakoutnation.com^  #bias
+||freebeacon.com^  #bias
+||freedomdaily.com^  #fake
+||freedomforceinternational.com^  #conspiracy
+||freedomoutpost.com^  #conspiracy  #bias
+||freedomsphoenix.com^  #bias  #conspiracy
+||freedomworks.org^  #political
+||freedomworldnews.com^  #bias  #unreliable
+||freepatriot.org^  #satire
+||freewoodpost.com^  #satire
+||fridaymash.com^  #satire
+||fromthetrenchesworldreport.com^  #conspiracy  #junksci  #bias
+||frontpagemag.com^  #bias  #hate
+||fusion.net^  #political  #reliable
+||gaia.com^  #conspiracy  #junksci
+||galacticconnection.com^  #junksci
+||gangstergovernment.com^  #conspiracy  #bias
+||gatesofvienna.net^  #hate  #conspiracy
+||geoengineeringwatch.org^  #clickbait  #junksci  #conspiracy
+||geopolmonitor.com^  #political
+||glaringhypocrisy.com^  #hate  #conspiracy
+||globaleconomicanalysis.com^  #unknown
+||globalresearch.ca^  #conspiracy  #clickbait
+||glossynews.com^  #satire
+||godlikeproductions.com^  #conspiracy
+||gomerblog.com^  #satire
+||goneleft.com^  #fake
+||gonzalolira.blogspot.com^  #unknown
+||gopthedailydose.com^  #fake  #conspiracy  #bias
+||govtslaves.info^  #clickbait  #conspiracy
+||greanvillepost.com^  #conspiracy
+||greenmedinfo.com^  #junksci
+||guarda.one^  #clickbait
+||guardianlv.com^  #political
+||guccifer2.wordpress.com^  #unreliable
+||gulagbound.com^  #bias  #clickbait
+||hangthebankers.com^  #clickbait  #conspiracy
+||healthimpactnews.com^  #junksci  #bias
+||healthnutnews.com^  #junksci
+||healthy-holistic-living.com^  #junksci  #clickbait
+||heartland.org^  #bias
+||heatst.com^  #clickbait  #bias
+||henrymakow.com^  #conspiracy
+||heresyblog.net^  #bias  #conspiracy  #rumor
+||heritage.org^  #political
+||holyobserver.com^  #satire
+||horowitzfreedomcenter.org^  #bias
+||humansarefree.com^  #clickbait  #conspiracy
+||humortimes.com^  #satire
+||huzlers.com^  #satire
+||icr.org^  #junksci
+||ifyouonlynews.com^  #unreliable  #satire
+||igrewupinusa.info^  #unknown
+||ihavethetruth.com^  #bias  #clickbait  #fake
+||ijr.com^  #political  #bias  #unreliable
+||ilcorriere.cloud^  #fake
+||illuminati-news.com^  #conspiracy
+||ilovemyfreedom.org^  #bias  #clickbait
+||immediatesafety.org^  #fake
+||in5d.com^  #junksci
+||indiaarising.com^  #clickbait  #unreliable
+||infiniteunknown.net^  #conspiracy
+||informationclearinghouse.info^  #conspiracy  #unreliable
+||informetoday.com^  #bias  #unreliable
+||infostormer.com^  #fake  #hate  #conspiracy
+||infowars.com^  #clickbait  #conspiracy
 ||inquisitor.com^
-||instaworldnews.com^
-||intellihub.com^
-||intrendtoday.com^
-||intrepidreport.com^
-||investmentresearchdynamics.com^
-||investmentwatchblog.com^
-||ironictimes.com^
-||islamicanews.com^
-||itaglive.com^
-||itccs.org^
-||itmakessenseblog.com^
-||iwanttoexplore.com^
-||jackpineradicals.com^
-||jacobinmag.com^
-||jamesrgrangerjr.com^
-||jesus-is-savior.com^
-||jewsnews.co.il^
-||jihadwatch.org^
-||johnnyrobish.com^
-||jonesreport.com^
-||journal-neo.org^
-||judicialwatch.org^
-||katehon.com^
-||katehon.org^
-||kauilapele.wordpress.com^
-||kingworldnews.com^
-||knowledgeoftoday.org^
-||krbcnews.com^
-||landoverbaptist.org^
-||lasera.altervista^
-||learnprogress.org^
-||legorafi.fr^
-||lewrockwell.com^
-||liberalamerica.org^
-||liberalbias.com^
-||liberaldarkness.com^
-||libertyblitzkrieg.com^
-||libertyfederation.com^
-||libertymovementradio.com^
-||libertynews.com^
-||libertytalk.fm^
-||libertyunyielding.com^
-||libertyvideos.org^
-||libertywritersnews.com^
-||lifeandabout.com^
-||lifenews.com^
-||lifeprevention.com^
-||lifesitenews.com^
-||lifezette.com^
-||lightlybraisedturnip.com^
-||liveactionnews.org^
-||livefreelivenatural.com^
-||livevote.com^
-||loanpride.com^
-||lovethispic.com^
-||lushforlife.com^
-||mad-yet.blogspot.com^
-||madpatriots.com^
-||madworldnews.com^
-||magafeed.com^
-||makeamericagreattoday.com^
-||meanlefthook.com^
-||mediamass.net^
-||mediazone.news^
-||megafreshnews.com^
-||megynkelly.us^
-||militianews.com^
-||mintpressnews.com^
-||molonlabemedia.com^
-||moonofalabama.org^
-||morningledger.com^
-||morningnewsusa.com^
-||mpidailymagazine.com^
-||mrc.org^
-||mrconservative.com^
+||instaworldnews.com^  #bias
+||intellihub.com^  #clickbait  #conspiracy  #unreliable
+||intrendtoday.com^  #fake  #clickbait
+||intrepidreport.com^  #bias
+||investmentresearchdynamics.com^  #conspiracy
+||investmentwatchblog.com^  #bias  #fake
+||ironictimes.com^  #satire
+||islamicanews.com^  #satire
+||itaglive.com^  #fake
+||itccs.org^  #conspiracy
+||itmakessenseblog.com^  #fake
+||iwanttoexplore.com^  #fake
+||jackpineradicals.com^  #political
+||jacobinmag.com^  #political
+||jamesrgrangerjr.com^  #bias
+||jesus-is-savior.com^  #conspiracy
+||jewsnews.co.il^  #unreliable  #bias  #clickbait
+||jihadwatch.org^  #conspiracy  #hate
+||johnnyrobish.com^  #satire
+||jonesreport.com^  #clickbait  #conspiracy
+||journal-neo.org^  #bias
+||judicialwatch.org^  #political
+||katehon.com^  #bias
+||katehon.org^  #unknown
+||kauilapele.wordpress.com^  #unknown
+||kingworldnews.com^  #unknown
+||knowledgeoftoday.org^  #conspiracy
+||krbcnews.com^  #fake
+||landoverbaptist.org^  #satire
+||lasera.altervista^  #fake
+||learnprogress.org^  #fake  #bias
+||legorafi.fr^  #unknown
+||lewrockwell.com^  #bias  #unreliable  #political  #clickbait
+||liberalamerica.org^  #clickbait  #bias
+||liberalbias.com^  #satire
+||liberaldarkness.com^  #satire  #fake
+||libertyblitzkrieg.com^  #fake
+||libertyfederation.com^  #hate
+||libertymovementradio.com^  #conspiracy
+||libertynews.com^  #unreliable  #bias
+||libertytalk.fm^  #clickbait  #conspiracy
+||libertyunyielding.com^  #bias
+||libertyvideos.org^  #clickbait  #conspiracy
+||libertywritersnews.com^  #clickbait  #bias  #unreliable
+||lifeandabout.com^  #bias
+||lifenews.com^  #bias  #clickbait
+||lifeprevention.com^  #junksci
+||lifesitenews.com^  #clickbait  #bias
+||lifezette.com^  #clickbait
+||lightlybraisedturnip.com^  #unknown
+||liveactionnews.org^  #bias
+||livefreelivenatural.com^  #unknown
+||livevote.com^  #clickbait
+||loanpride.com^  #rumor  #clickbait
+||lovethispic.com^  #clickbait  #junksci
+||lushforlife.com^  #satire
+||mad-yet.blogspot.com^  #unreliable
+||madpatriots.com^  #unreliable  #clickbait
+||madworldnews.com^  #unreliable  #clickbait  #hate
+||magafeed.com^  #rumor  #bias
+||makeamericagreattoday.com^  #bias  #fake
+||meanlefthook.com^  #bias  #clickbait
+||mediamass.net^  #fake  #fake
+||mediazone.news^  #rumor  #unreliable
+||megafreshnews.com^  #rumor
+||megynkelly.us^  #clickbait  #fake
+||militianews.com^  #conspiracy  #bias  #hate
+||mintpressnews.com^  #political
+||molonlabemedia.com^  #bias  #conspiracy
+||moonofalabama.org^  #bias
+||morningledger.com^  #unreliable  #conspiracy
+||morningnewsusa.com^  #unreliable
+||mpidailymagazine.com^  #fake  #bias
+||mrc.org^  #political  #bias
+||mrconservative.com^  #fake  #satire
 ||msnbc.com.co^
-||msnbc.website^
-||mydailyrelaxation.com^
-||myfreshnews.com^
-||myzonetoday.com^
-||nahadaily.com^
-||nakedcapitalism.com^
-||nasamoonhoax.com^
-||nationalreport.net^
-||nationalreview.com^
-||nationalufocenter.com^
-||nationindistress.weebly.com^
-||nationonenews.com^
-||naturalblaze.com^
-||naturalnews.com^
-||naturalnewsblogs.com^
+||msnbc.website^  #fake  #fake
+||mydailyrelaxation.com^  #unknown
+||myfreshnews.com^  #fake  #bias
+||myzonetoday.com^  #fake  #bias
+||nahadaily.com^  #satire
+||nakedcapitalism.com^  #political
+||nasamoonhoax.com^  #conspiracy
+||nationalreport.net^  #fake  #satire
+||nationalreview.com^  #political
+||nationalufocenter.com^  #conspiracy
+||nationindistress.weebly.com^  #conspiracy
+||nationonenews.com^  #fake  #conspiracy
+||naturalblaze.com^  #junksci  #conspiracy
+||naturalnews.com^  #clickbait  #junksci  #conspiracy
+||naturalnewsblogs.com^  #junksci
 ||nbc-news.net^
-||nbc.com.co^
-||nbcpolitics.org^
-||nbcpoll.com^
-||ncscooper.com^
-||neonnettle.com^
-||nevo.news^
-||newcenturytimes.com^
-||newcoldwar.org^
-||newnotizie.it^
-||news-hound.com^
-||news-hound.org^
-||news4ktla.com^
-||newsbbc.net^
-||newsbiscuit.com^
-||newsbreakers.org^
-||newsbuster.com^
+||nbc.com.co^  #fake
+||nbcpolitics.org^  #unknown
+||nbcpoll.com^  #unknown
+||ncscooper.com^  #satire
+||neonnettle.com^  #conspiracy  #bias  #fake
+||nevo.news^  #unreliable  #bias
+||newcenturytimes.com^  #unreliable  #bias
+||newcoldwar.org^  #political
+||newnotizie.it^  #clickbait
+||news-hound.com^  #fake  #unknown
+||news-hound.org^  #unknown
+||news4ktla.com^  #fake  #satire
+||newsbbc.net^  #fake
+||newsbiscuit.com^  #fake  #satire
+||newsbreakers.org^  #satire
+||newsbuster.com^  #unknown
 ||newsbuzzdaily.com^
-||newscenterusa.com^
-||newscorpse.com^
-||newsexaminer.net^
-||newsfrompolitics.com^
-||newslo.com^
-||newslogue.com^
-||newsmax.com^
-||newsmutiny.com^
-||newsninja2012.com^
-||newsopening.com^
-||newstarget.com^
-||newsthump.com^
-||newstoad.net^
-||newswatch28.com^
-||newswatch33.com^
-||newswire-24.com^
-||newswithviews.com^
+||newscenterusa.com^  #unknown
+||newscorpse.com^  #political
+||newsexaminer.net^  #fake  #satire
+||newsfrompolitics.com^  #fake
+||newslo.com^  #fake
+||newslogue.com^  #bias  #fake
+||newsmax.com^  #unreliable  #bias
+||newsmutiny.com^  #fake  #satire
+||newsninja2012.com^  #bias
+||newsopening.com^  #unknown
+||newstarget.com^  #conspiracy
+||newsthump.com^  #satire
+||newstoad.net^  #satire
+||newswatch28.com^  #fake
+||newswatch33.com^  #fake
+||newswire-24.com^  #clickbait  #rumor  #unreliable
+||newswithviews.com^  #fake  #conspiracy
 ||newyorker.comhumorborowitz-report^
-||nodisinfo.com^
-||nomorefakenews.com^
-||northcrane.com^
-||notallowedto.com^
-||notime4bull.com^
-||now8news.com^
-||nowtheendbegins.com^
-||npiamerica.org^
-||nutritionalanarchy.com^
-||nutritionfacts.org^
-||nymeta.co^
-||nyuzer.com^
-||oann.com^
-||oathkeepers.org^
-||objectiveministries.org^
-||observatorial.com^
-||observer.com^
-||occupy.com^
-||occupydemocrats.com^
-||occupyliberals.com^
-||odgossip.com^
-||off-guardian.org^
-||offgridsurvival.com^
-||oftwominds.com^
-||oilgeopolitics.net^
-||onlineconservativepress.com^
-||opednews.com^
-||openmindmagazine.com^
+||nodisinfo.com^  #clickbait  #conspiracy  #unreliable
+||nomorefakenews.com^  #conspiracy
+||northcrane.com^  #unreliable
+||notallowedto.com^  #clickbait  #fake
+||notime4bull.com^  #unknown
+||now8news.com^  #fake
+||nowtheendbegins.com^  #clickbait  #conspiracy
+||npiamerica.org^  #hate  #bias
+||nutritionalanarchy.com^  #unreliable
+||nutritionfacts.org^  #reliable
+||nymeta.co^  #clickbait  #satire
+||nyuzer.com^  #unknown
+||oann.com^  #political  #reliable
+||oathkeepers.org^  #bias
+||objectiveministries.org^  #satire
+||observatorial.com^  #unknown
+||observer.com^  #political
+||occupy.com^  #political
+||occupydemocrats.com^  #clickbait  #bias  #unreliable
+||occupyliberals.com^  #bias  #clickbait
+||odgossip.com^  #unknown
+||off-guardian.org^  #bias  #conspiracy
+||offgridsurvival.com^  #conspiracy  #bias
+||oftwominds.com^  #bias  #conspiracy
+||oilgeopolitics.net^  #conspiracy
+||onlineconservativepress.com^  #fake  #conspiracy  #bias
+||opednews.com^  #unknown
+||openmindmagazine.com^  #bias  #conspiracy
 ||opposingviews.com^
-||orientalreview.org^
-||other98.com^
-||pakalertpress.com^
-||palmerreport.com^
-||pamelageller.com^
-||patdollar.com^
-||patriotarchives.blogspot.com^
-||patriotchronicle.com^
-||patriotnewsdaily.com^
-||patriotpost.us^
-||patriotrising.com^
-||patriotupdate.com^
-||paulcraigroberts.org^
+||orientalreview.org^  #bias  #conspiracy
+||other98.com^  #clickbait  #bias  #unreliable
+||pakalertpress.com^  #clickbait  #fake
+||palmerreport.com^  #bias
+||pamelageller.com^  #conspiracy  #fake  #bias
+||patdollar.com^  #bias  #clickbait
+||patriotarchives.blogspot.com^  #unknown
+||patriotchronicle.com^  #bias  #clickbait
+||patriotnewsdaily.com^  #bias  #satire
+||patriotpost.us^  #bias
+||patriotrising.com^  #bias  #conspiracy
+||patriotupdate.com^  #bias  #conspiracy
+||paulcraigroberts.org^  #bias  #conspiracy
 ||pet01.tv^
-||pjmedia.com^
-||platosguns.com^
-||policestateusa.com^
-||policyreview.info^
-||politcalpiehole.com^
-||politicalblindspot.com^
-||politicalcult.com^
-||politicalears.com^
-||politicalo.com^
-||politicalpiehole.com^
-||politicalsitenews.com^
-||politicaltimes.org^
-||politicaltracker.com^
-||politicalupdator.com^
-||politicops.com^
-||politicot.com^
-||politicsbreaking.com^
-||politicsinformation.com^
-||politicsinfotoday.com^
-||politicsintheusa.com^
-||politicsinusa.com^
-||politicususa.com^
-||pollhype.com^
-||powerlineblog.com^
-||powerpoliticians.com^
-||pravda.ru^
-||pravdareport.com^
-||prepperwebsite.com^
-||presidentialvoting2016.com^
-||press24.us^
-||presstv.com^
-||presstv.ir^
-||prisonplanet.com^
-||prisonplanet.tv^
-||private-eye.co.uk^
-||prntly.com^
-||proamericanews.com^
-||progressivestoday.com^
-||projectveritas.com^
-||proudcons.com^
-||proudemocrat.com^
-||publicintelligence.net^
-||qpolitical.com^
-||radio.goldseek.com^
-||randpaulreview.com^
-||rawforbeauty.com^
-||rawstory.com^
-||rawws.com^
-||rbth.com^
-||react365.com^
-||readconservatives.news^
-||readynutrition.com^
-||reagancoalition.com^
-||realfarmacy.com^
-||realnewsrightnow.com^
-||realplanetnews.com^
-||realprogress.online^
-||realtimepolitics.com^
-||redflagnews.com^
-||redicecreations.com^
-||redstate.com^
-||redstatewatcher.com^
-||reductress.com^
-||regated.com^
-||remedydaily.com^
-||rense.com^
+||pjmedia.com^  #political  #bias
+||platosguns.com^  #bias  #conspiracy
+||policestateusa.com^  #unknown
+||policyreview.info^  #unknown
+||politcalpiehole.com^  #unknown
+||politicalblindspot.com^  #clickbait  #conspiracy  #junksci
+||politicalcult.com^  #bias  #clickbait  #conspiracy
+||politicalears.com^  #fake  #unreliable  #clickbait
+||politicalo.com^  #fake
+||politicalpiehole.com^  #unknown
+||politicalsitenews.com^  #fake
+||politicaltimes.org^  #unknown
+||politicaltracker.com^  #unknown
+||politicalupdator.com^  #fake  #clickbait  #bias
+||politicops.com^  #satire  #fake
+||politicot.com^  #satire  #fake
+||politicsbreaking.com^  #unknown
+||politicsinformation.com^  #unknown
+||politicsinfotoday.com^  #unknown
+||politicsintheusa.com^  #unreliable  #bias
+||politicsinusa.com^  #unknown
+||politicususa.com^  #clickbait  #unreliable
+||pollhype.com^  #rumor  #clickbait  #bias
+||powerlineblog.com^  #unknown
+||powerpoliticians.com^  #unreliable
+||pravda.ru^  #bias  #rumor  #conspiracy
+||pravdareport.com^  #bias  #rumor  #conspiracy
+||prepperwebsite.com^  #conspiracy  #fake
+||presidentialvoting2016.com^  #political  #bias  #unreliable
+||press24.us^  #unknown
+||presstv.com^  #bias  #unreliable
+||presstv.ir^  #bias  #unreliable
+||prisonplanet.com^  #clickbait  #conspiracy  #conspiracy
+||prisonplanet.tv^  #clickbait  #conspiracy
+||private-eye.co.uk^  #fake
+||prntly.com^  #fake
+||proamericanews.com^  #unknown
+||progressivestoday.com^  #unknown
+||projectveritas.com^  #bias  #unreliable  #political
+||proudcons.com^  #fake  #bias
+||proudemocrat.com^  #political
+||publicintelligence.net^  #unknown
+||qpolitical.com^  #bias  #clickbait  #junksci
+||radio.goldseek.com^  #unknown
+||randpaulreview.com^  #unknown
+||rawforbeauty.com^  #junksci
+||rawstory.com^  #political  #clickbait
+||rawws.com^  #unknown
+||rbth.com^  #unknown
+||react365.com^  #fake
+||readconservatives.news^  #bias  #fake  #clickbait
+||readynutrition.com^  #unknown  #conspiracy
+||reagancoalition.com^  #bias  #fake  #clickbait
+||realfarmacy.com^  #clickbait  #junksci  #conspiracy
+||realnewsrightnow.com^  #fake  #fake  #satire
+||realplanetnews.com^  #junksci
+||realprogress.online^  #unknown
+||realtimepolitics.com^  #bias  #unreliable
+||redflagnews.com^  #bias  #conspiracy  #unreliable  #clickbait
+||redicecreations.com^  #unknown
+||redstate.com^  #political  #clickbait
+||redstatewatcher.com^  #bias  #clickbait
+||reductress.com^  #satire
+||regated.com^  #bias
+||remedydaily.com^  #clickbait
+||rense.com^  #conspiracy  #junksci
 ||reporter.bz^
-||resistancereport.com^
-||responsibletechnology.org^
-||returnofkings.com^
-||revolutions2040.com^
-||rhotv.com^
-||rickackerman.com^
-||rickwells.us^
-||rightalert.com^
-||righton.com^
-||rightsidenews.com^
-||rightwingnews.com^
-||rilenews.com^
-||rinf.com^
-||robadapazzi.com^
-||rockcitytimes.com^
-||ronpaulinstitute.org^
-||rt.com^
-||rumormillnews.com^
-||runtogold.com^
-||ruptly.tv^
-||russia-direct.org^
-||russia-insider.com^
+||resistancereport.com^  #political  #unreliable
+||responsibletechnology.org^  #junksci
+||returnofkings.com^  #hate
+||revolutions2040.com^  #junksci  #clickbait
+||rhotv.com^  #fake
+||rickackerman.com^  #unknown
+||rickwells.us^  #fake  #conspiracy
+||rightalert.com^  #bias  #unreliable
+||righton.com^  #unknown
+||rightsidenews.com^  #unknown
+||rightwingnews.com^  #bias  #unreliable
+||rilenews.com^  #fake  #fake  #satire
+||rinf.com^  #political
+||robadapazzi.com^  #clickbait
+||rockcitytimes.com^  #satire
+||ronpaulinstitute.org^  #political
+||rt.com^  #state
+||rumormillnews.com^  #conspiracy  #junksci  #rumor
+||runtogold.com^  #unknown
+||ruptly.tv^  #political
+||russia-direct.org^  #unknown  #political
+||russia-insider.com^  #bias  #clickbait
 ||samericannews.com^
-||satiratribune.com^
-||satirewire.com^
-||scrappleface.com^
-||seankerrigan.com^
-||secretsofthefed.com^
-||sensationalisttimes.com^
-||sentinelblog.com^
-||sgtreport.com^
-||shadowproof.com^
-||shadowstats.com^
-||shareblue.com^
-||sheepkillers.com^
-||shiftfrequency.com^
-||shoebat.com^
-||shtfplan.com^
-||silentmajoritypatriots.com^
-||silver-coin-investor.com^
-||silverbearcafe.com^
-||silverdoctors.com^
-||silverstealers.net^
-||sjlendman.blogspot.com^
-||skeptiko.com^
-||sonsoflibertyradio.com^
-||sott.net^
-||sourceplanet.net^
-||southfront.org^
-||southweb.org^
-||sovereignman.com^
-||speciallifeentertainment.com^
-||speld.nl^
-||spinzon.com^
+||satiratribune.com^  #satire
+||satirewire.com^  #satire
+||scrappleface.com^  #satire
+||seankerrigan.com^  #unknown
+||secretsofthefed.com^  #conspiracy  #junksci
+||sensationalisttimes.com^  #satire
+||sentinelblog.com^  #conspiracy  #junksci
+||sgtreport.com^  #unknown
+||shadowproof.com^  #unknown
+||shadowstats.com^  #unknown
+||shareblue.com^  #unreliable  #political  #bias
+||sheepkillers.com^  #conspiracy  #junksci
+||shiftfrequency.com^  #unknown
+||shoebat.com^  #conspiracy  #bias
+||shtfplan.com^  #unknown
+||silentmajoritypatriots.com^  #unknown
+||silver-coin-investor.com^  #conspiracy  #bias  #unreliable
+||silverbearcafe.com^  #conspiracy
+||silverdoctors.com^  #conspiracy  #bias
+||silverstealers.net^  #conspiracy
+||sjlendman.blogspot.com^  #bias
+||skeptiko.com^  #conspiracy  #junksci
+||sonsoflibertyradio.com^  #conspiracy  #bias  #unreliable
+||sott.net^  #unknown
+||sourceplanet.net^  #unknown
+||southfront.org^  #unknown
+||southweb.org^  #unknown
+||sovereignman.com^  #unreliable
+||speciallifeentertainment.com^  #unknown
+||speld.nl^  #satire
+||spinzon.com^  #unknown
 ||sport01.tv^
-||sportspickle.com^
-||sprotspickle.com^
-||sputniknews.com^
-||srsroccoreport.com^
-||statenation.co^
-||stawealth.com^
-||stevequayle.com^
-||stneotscitizen.com^
-||stormcloudsgathering.com^
-||strategic-culture.org^
-||stuppid.com^
-||subjectpolitics.com^
-||success-street.com^
-||suggesthealthytips.com^
-||superstation95.com^
-||supremepatriot.com^
-||surenews.com^
-||surrealscoop.com^
-||survivalblog.com^
-||survivalknowhow.net^
-||survivopedia.com^
-||tap-news.com^
-||tdnewswire.com^
-||teapartyeconomist.com^
-||teapartytribune.com^
-||tellmenow.com^
-||tenthamendmentcenter.com^
-||the-newspapers.com^
-||theamericancause.org^
-||theamericanindependent.wordpress.com^
-||theamericanmirror.com^
-||theantimedia.org^
-||theaureport.com^
-||theautogear.com^
-||thebeaverton.com^
-||theblaze.com^
-||thebostontribune.com^
-||thebricspost.com^
-||thebrowser.com^
-||theburningplatform.com^
-||thecarsmagazine.com^
-||thecivilian.co.nz^
-||thecommonsenseshow.com^
-||theconservativetreehouse.com^
-||thecontroversialfiles.net^
-||thecrowehouse.com^
-||thedailybeast.com^
-||thedailybell.com^
-||thedailycoin.org^
-||thedailycrux.com^
-||thedailymash.co.uk^
-||thedailysheeple.com^
-||thedailywtf.com^
-||thedemocratic.site^
-||theduran.com^
-||theearthchild.co.za^
-||theeconomiccollapseblog.com^
-||theeventchronicle.com^
-||theextinctionprotocol.com^
-||thefederalistpapers.org^
-||thefifthcolumnnews.com^
-||theforbiddenknowledge.com^
-||thefreepatriot.org^
-||thefreethoughtproject.com^
-||thegatewaypundit.com^
-||thegoldwater.com^
-||thehardtimes.net^
-||theineptowl.com^
-||theinformedamerican.net^
-||theintercept.com^
-||thelastgreatstand.com^
-||thelastlineofdefense.org^
-||thelibertybeacon.com^
-||thelibertymill.com^
-||themadisonmisnomer.com^
-||themideastbeast.com^
-||themindunleashed.com^
-||themindunleashed.org^
-||themuslimissue.wordpress.com^
-||thenewamerican.com^
-||thenewinquiry.com^
-||thenewsdoctors.com^
-||thenewsfile.com^
-||thenewsnerd.com^
-||theonion.com^
-||theopenscroll.blogspot.com^
-||theorganicprepper.ca^
-||theoutsiderclub.com^
-||theoxymoron.co.uk^
-||thepeoplescube.com^
-||thepeoplesvoice.net^
-||thephaser.com^
-||thepoke.co.uk^
-||thepoliticalcesspool.com^
-||thepoliticalinsider.com^
-||thepostemail.com^
-||theracketreport.com^
-||therealstrategy.com^
-||therebel.media^
-||thereporterz.com^
-||therightists.com^
-||therightplanet.com^
-||therightscoop.com^
-||therightstuff.biz^
-||therundownlive.com^
-||therussophile.org^
-||thesaker.is^
-||theshovel.com.au^
-||theskunk.org^
-||thesleuthjournal.com^
-||thespoof.com^
-||thestatelyharold.com^
-||thetimesoftheworld.com^
-||thetruthaboutcancer.com^
-||thetruthdivision.com^
-||thetruthseeker.co.uk^
-||thetruthwins.com^
-||theunrealtimes.com^
-||theuspatriot.com^
-||thevalleyreport.com^
-||thevictoryreport.org^
-||thewatchtowers.com^
-||thewealthwatchman.com^
-||theworldstyle.com^
-||thinkprogress.org^
-||thirdworldtraveler.com^
-||thisismynewworld.com^
-||threepercenternation.com^
-||thrivemovement.com^
-||tomwoods.com^
-||topekasnews.com^
-||topinfopost.com^
-||topnewspolitics.com^
-||topratedviral.com^
-||toprightnews.com^
-||totalworldnews.com^
-||traderdan.com^
-||tradewithdave.com^
-||tragedyandhope.com^
-||trendingnewsguide.com^
-||trendingnewstoday.net^
-||tribuneherald.net^
-||tribunist.com^
-||trueactivist.com^
-||trueeconomics.blogspot.com^
-||truepundit.com^
-||trumpvision365.com^
-||trunews.com^
-||truthandaction.org^
-||truthbroadcastnetwork.com^
-||truthfeed.com^
-||truthfrequencyradio.com^
-||truthingold.com^
-||truthinmedia.com^
-||truthkings.com^
-||truthnetwork.com^
-||truthrevolt.org^
-||truthstreammedia.com^
-||tunerspeed.com^
-||turnerradionetwork.com^
-||twitchy.com^
-||tyronetribulations.com^
-||ufoholic.com^
-||unclesamsmisguidedchildren.com^
-||unconfirmedsources.com^
-||undergroundhealth.com^
-||undergroundworldnews.com^
-||unionleader.com^
-||unitedmediapublishing.com^
-||universepolitics.com^
-||unz.com^
-||usa2016elections.com^
-||usadailypolitics.com^
-||usadailytime.com^
-||usahitman.com^
-||usainfobox.com^
-||usamagazinestudio.com^
-||usanewsflash.com^
-||usanewsinsider.com^
-||usanewspolitics.com^
-||usaonlinepolitics.com^
-||usaphase.com^
-||usapoliticsdaily.com^
-||usapoliticsnow.com^
-||usapoliticstoday.com^
-||usapoliticus.com^
-||usascan.com^
-||usasupreme.com^
-||usatoday.com.co^
-||usatwentyfour.com^
-||usawatchdog.com^
-||uschronicle.com^
-||usconservativetoday.com^
-||usdefensewatch.com^
-||usfanzone.com^
-||ushealthyadvisor.com^
-||usherald.com^
-||uslifetoday.com^
-||uspoliticslive.com^
-||usuncut.com^
-||usviewer.com^
-||vdare.com^
-||veteransnewsnow.com^
-||veteranstoday.com^
-||vigilantcitizen.com^
-||viralliberty.com^
-||viraltube.nl^
-||wakeupthesheep.com^
-||wakingtimes.com^
-||wakingupwisconsin.com^
-||wallstreetonparade.com^
-||washingtonexaminer.com^
-||washingtonsblog.com^
-||waterfordwhispersnews.com^
-||wealthcycles.com^
-||wealthwire.com^
-||wearechange.org^
-||weaselzippers.us^
-||webdaily.com^
-||weeklystandard.com^
-||weeklyworldnews.com^
-||weshapelife.org^
-||westernjournalism.com^
-||whatdoesitmean.com^
-||whatreallyhappened.com^
-||whitepower.com^
-||whowhatwhy.com^
-||whowhatwhy.org^
-||whydontyoutrythis.com^
-||wideawakeamerica.com^
-||wideawakenews.com^
-||wikileaks.com^
-||wikileaks.org^
-||wikispooks.com^
-||williambanzai7.blogspot.com^
-||willyloman.wordpress.com^
-||winkprogress.com^
-||winningdemocrats.com^
-||witscience.org^
-||wnd.com^
-||wolfstreet.com^
-||wonkie.com^
-||world24monitor.com^
-||worldcallyoutoday.com^
-||worlddaily.info^
-||worldnewsdailyreport.com^
-||worldnewspolitics.com^
-||worldpoliticsus.com^
-||worldrumor.com^
-||worldstoriestoday.com^
-||worldtruth.tv^
-||worldwidehealthy.com^
-||wtoe5news.com^
-||wundergroundmusic.com^
-||x22report.com^
-||yellowhammernews.com^
-||yesimright.com^
-||youngcons.com^
-||yourfunpage.com^
-||yournationnews.com^
-||yournewsline.wordpress.com^
-||yournewswire.com^
-||zaytung.com^
-||zengardner.com^
-||zerohedge.com^
-||zootfeed.com^
+||sportspickle.com^  #satire
+||sprotspickle.com^  #fake
+||sputniknews.com^  #bias  #state  #fake
+||srsroccoreport.com^  #unknown
+||statenation.co^  #unknown
+||stawealth.com^  #unknown
+||stevequayle.com^  #unknown
+||stneotscitizen.com^  #satire
+||stormcloudsgathering.com^  #fake
+||strategic-culture.org^  #unknown
+||stuppid.com^  #satire
+||subjectpolitics.com^  #fake  #bias
+||success-street.com^  #fake  #clickbait
+||suggesthealthytips.com^  #unknown
+||superstation95.com^  #unknown
+||supremepatriot.com^  #fake  #bias
+||surenews.com^  #unknown
+||surrealscoop.com^  #satire
+||survivalblog.com^  #unknown
+||survivalknowhow.net^  #unknown
+||survivopedia.com^  #unknown
+||tap-news.com^  #unknown
+||tdnewswire.com^  #unknown
+||teapartyeconomist.com^  #unknown
+||teapartytribune.com^  #unknown
+||tellmenow.com^  #unknown
+||tenthamendmentcenter.com^  #unknown
+||the-newspapers.com^  #unknown
+||theamericancause.org^  #unknown
+||theamericanindependent.wordpress.com^  #fake  #bias
+||theamericanmirror.com^  #unknown
+||theantimedia.org^  #unreliable  #bias  #conspiracy
+||theaureport.com^  #unknown
+||theautogear.com^  #unknown
+||thebeaverton.com^  #satire
+||theblaze.com^  #political  #clickbait
+||thebostontribune.com^  #fake
+||thebricspost.com^  #unknown
+||thebrowser.com^  #unknown
+||theburningplatform.com^  #unknown
+||thecarsmagazine.com^  #unknown
+||thecivilian.co.nz^  #unknown
+||thecommonsenseshow.com^  #fake  #conspiracy
+||theconservativetreehouse.com^  #unknown
+||thecontroversialfiles.net^  #fake  #clickbait
+||thecrowehouse.com^  #unknown
+||thedailybeast.com^  #political
+||thedailybell.com^  #unknown
+||thedailycoin.org^  #unknown
+||thedailycrux.com^  #unknown
+||thedailymash.co.uk^  #satire
+||thedailysheeple.com^  #clickbait  #conspiracy  #bias
+||thedailywtf.com^  #satire
+||thedemocratic.site^  #unknown
+||theduran.com^  #unreliable
+||theearthchild.co.za^  #unknown
+||theeconomiccollapseblog.com^  #conspiracy  #bias
+||theeventchronicle.com^  #conspiracy  #junksci  #clickbait
+||theextinctionprotocol.com^  #conspiracy
+||thefederalistpapers.org^  #bias  #conspiracy
+||thefifthcolumnnews.com^  #political
+||theforbiddenknowledge.com^  #conspiracy  #junksci
+||thefreepatriot.org^  #fake  #bias  #clickbait
+||thefreethoughtproject.com^  #unreliable  #conspiracy  #clickbait
+||thegatewaypundit.com^  #bias  #conspiracy  #unreliable
+||thegoldwater.com^  #unknown
+||thehardtimes.net^  #satire
+||theineptowl.com^  #satire
+||theinformedamerican.net^  #unreliable
+||theintercept.com^  #political
+||thelastgreatstand.com^  #fake  #conspiracy  #bias
+||thelastlineofdefense.org^  #satire
+||thelibertybeacon.com^  #conspiracy  #junksci  #bias
+||thelibertymill.com^  #unreliable  #bias  #conspiracy
+||themadisonmisnomer.com^  #satire
+||themideastbeast.com^  #satire
+||themindunleashed.com^  #conspiracy  #junksci  #clickbait
+||themindunleashed.org^  #conspiracy  #junksci  #clickbait
+||themuslimissue.wordpress.com^  #hate  #conspiracy
+||thenewamerican.com^  #bias
+||thenewinquiry.com^  #unknown
+||thenewsdoctors.com^  #bias
+||thenewsfile.com^  #unknown
+||thenewsnerd.com^  #fake  #satire
+||theonion.com^  #satire
+||theopenscroll.blogspot.com^  #unknown
+||theorganicprepper.ca^  #unknown
+||theoutsiderclub.com^  #unknown
+||theoxymoron.co.uk^  #unknown
+||thepeoplescube.com^  #unknown
+||thepeoplesvoice.net^  #unknown
+||thephaser.com^  #conspiracy
+||thepoke.co.uk^  #satire
+||thepoliticalcesspool.com^  #unknown  #hate
+||thepoliticalinsider.com^  #conspiracy  #bias  #unreliable
+||thepostemail.com^  #unknown
+||theracketreport.com^  #fake  #satire
+||therealstrategy.com^  #bias  #conspiracy  #hate
+||therebel.media^  #unknown
+||thereporterz.com^  #fake
+||therightists.com^  #fake  #bias
+||therightplanet.com^  #unknown
+||therightscoop.com^  #fake  #clickbait
+||therightstuff.biz^  #hate
+||therundownlive.com^  #clickbait  #unknown
+||therussophile.org^  #unknown
+||thesaker.is^  #unknown
+||theshovel.com.au^  #satire
+||theskunk.org^  #satire
+||thesleuthjournal.com^  #unknown
+||thespoof.com^  #satire
+||thestatelyharold.com^  #satire
+||thetimesoftheworld.com^  #satire
+||thetruthaboutcancer.com^  #junksci
+||thetruthdivision.com^  #fake  #bias
+||thetruthseeker.co.uk^  #fake  #conspiracy  #junksci
+||thetruthwins.com^  #junksci  #conspiracy  #clickbait
+||theunrealtimes.com^  #satire
+||theuspatriot.com^  #fake  #satire
+||thevalleyreport.com^  #satire
+||thevictoryreport.org^  #unknown
+||thewatchtowers.com^  #bias  #conspiracy  #clickbait
+||thewealthwatchman.com^  #unknown
+||theworldstyle.com^  #unknown
+||thinkprogress.org^  #political
+||thirdworldtraveler.com^  #unknown
+||thisismynewworld.com^  #unknown
+||threepercenternation.com^  #fake  #conspiracy  #bias
+||thrivemovement.com^  #unknown
+||tomwoods.com^  #political  #unrealiable
+||topekasnews.com^  #satire
+||topinfopost.com^  #clickbait  #unreliable  #conspiracy
+||topnewspolitics.com^  #unknown
+||topratedviral.com^  #unknown
+||toprightnews.com^  #unknown
+||totalworldnews.com^  #unknown
+||traderdan.com^  #unknown
+||tradewithdave.com^  #unknown
+||tragedyandhope.com^  #unknown
+||trendingnewsguide.com^  #unknown
+||trendingnewstoday.net^  #unknown
+||tribuneherald.net^  #unknown
+||tribunist.com^  #unknown
+||trueactivist.com^  #clickbait  #unreliable
+||trueeconomics.blogspot.com^  #unknown
+||truepundit.com^  #bias  #clickbait
+||trumpvision365.com^  #fake
+||trunews.com^  #unknown
+||truthandaction.org^  #bias  #conspiracy  #clickbait
+||truthbroadcastnetwork.com^  #conspiracy  #clickbait
+||truthfeed.com^  #hate  #bias  #conspiracy
+||truthfrequencyradio.com^  #clickbait  #conspiracy
+||truthingold.com^  #unknown
+||truthinmedia.com^  #unknown
+||truthkings.com^  #bias  #conspiracy  #junksci
+||truthnetwork.com^  #unknown
+||truthrevolt.org^  #bias  #hate
+||truthstreammedia.com^  #unknown
+||tunerspeed.com^  #unknown
+||turnerradionetwork.com^  #unknown
+||twitchy.com^  #clickbait  #rumor
+||tyronetribulations.com^  #unknown
+||ufoholic.com^  #conspiracy
+||unclesamsmisguidedchildren.com^  #bias
+||unconfirmedsources.com^  #clickbait  #satire
+||undergroundhealth.com^  #unknown
+||undergroundworldnews.com^  #fake  #conspiracy  #bias
+||unionleader.com^  #unknown
+||unitedmediapublishing.com^  #fake
+||universepolitics.com^  #fake
+||unz.com^  #bias
+||usa2016elections.com^  #fake
+||usadailypolitics.com^  #fake
+||usadailytime.com^  #fake
+||usahitman.com^  #fake  #conspiracy
+||usainfobox.com^  #fake
+||usamagazinestudio.com^  #fake
+||usanewsflash.com^  #fake  #bias  #clickbait
+||usanewsinsider.com^  #fake  #bias  #clickbait
+||usanewspolitics.com^  #fake
+||usaonlinepolitics.com^  #fake  #clickbait
+||usaphase.com^  #fake  #bias
+||usapoliticsdaily.com^  #unknown
+||usapoliticsnow.com^  #fake  #bias
+||usapoliticstoday.com^  #bias  #unreliable
+||usapoliticus.com^  #unknown
+||usascan.com^  #unknown
+||usasupreme.com^  #fake
+||usatoday.com.co^  #fake
+||usatwentyfour.com^  #fake
+||usawatchdog.com^  #bias
+||uschronicle.com^  #bias  #conspiracy  #hate
+||usconservativetoday.com^  #fake
+||usdefensewatch.com^  #unreliable
+||usfanzone.com^  #fake  #bias
+||ushealthyadvisor.com^  #fake  #conspiracy  #junksci
+||usherald.com^  #bias  #conspiracy  #unreliable
+||uslifetoday.com^  #clickbait
+||uspoliticslive.com^  #fake  #bias  #conspiracy
+||usuncut.com^  #clickbait  #bias  #unreliable
+||usviewer.com^  #unreliable  #fake
+||vdare.com^  #bias  #hate
+||veteransnewsnow.com^  #unreliable  #political
+||veteranstoday.com^  #bias  #unreliable  #clickbait
+||vigilantcitizen.com^  #fake  #conspiracy
+||viralliberty.com^  #fake  #bias  #clickbait
+||viraltube.nl^  #clickbait
+||wakeupthesheep.com^  #conspiracy
+||wakingtimes.com^  #junksci
+||wakingupwisconsin.com^  #clickbait  #conspiracy
+||wallstreetonparade.com^  #unreliable
+||washingtonexaminer.com^  #political  #unreliable
+||washingtonsblog.com^  #bias  #conspiracy  #satire
+||waterfordwhispersnews.com^  #satire
+||wealthcycles.com^  #unknown
+||wealthwire.com^  #unknown
+||wearechange.org^  #bias  #conspiracy
+||weaselzippers.us^  #unreliable  #bias
+||webdaily.com^  #fake  #conspiracy  #bias
+||weeklystandard.com^  #political  #bias
+||weeklyworldnews.com^  #fake  #rumor  #clickbait
+||weshapelife.org^  #conspiracy  #junksci
+||westernjournalism.com^  #bias  #clickbait
+||whatdoesitmean.com^  #conspiracy
+||whatreallyhappened.com^  #conspiracy  #rumor
+||whitepower.com^  #hate  #conspiracy  #bias
+||whowhatwhy.com^  #unreliable
+||whowhatwhy.org^  #conspiracy
+||whydontyoutrythis.com^  #junksci  #rumor
+||wideawakeamerica.com^  #unknown
+||wideawakenews.com^  #unknown
+||wikileaks.com^  #unreliable
+||wikileaks.org^  #unreliable
+||wikispooks.com^  #conspiracy
+||williambanzai7.blogspot.com^  #satire
+||willyloman.wordpress.com^  #conspiracy
+||winkprogress.com^  #satire
+||winningdemocrats.com^  #bias  #unreliable
+||witscience.org^  #fake  #satire
+||wnd.com^  #bias  #clickbait  #unreliable
+||wolfstreet.com^  #unreliable
+||wonkie.com^  #satire
+||world24monitor.com^  #unknown
+||worldcallyoutoday.com^  #unknown
+||worlddaily.info^  #unknown
+||worldnewsdailyreport.com^  #satire
+||worldnewspolitics.com^  #bias
+||worldpoliticsus.com^  #fake
+||worldrumor.com^  #fake
+||worldstoriestoday.com^  #fake
+||worldtruth.tv^  #clickbait  #conspiracy  #junksci
+||worldwidehealthy.com^  #junksci  #clickbait
+||wtoe5news.com^  #fake  #satire
+||wundergroundmusic.com^  #satire
+||x22report.com^  #conspiracy
+||yellowhammernews.com^  #political
+||yesimright.com^  #fake  #bias
+||youngcons.com^  #bias  #unreliable
+||yourfunpage.com^  #fake
+||yournationnews.com^  #clickbait
+||yournewsline.wordpress.com^  #unknown
+||yournewswire.com^  #clickbait  #junksci
+||zaytung.com^  #unknown
+||zengardner.com^  #unknown
+||zerohedge.com^  #conspiracy
+||zootfeed.com^  #conspiracy

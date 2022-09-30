@@ -703,24 +703,25 @@ class ConverterUbo(Converter):
         print(headers)
 
     def print_rule(self, rule):
+        comment = '  #' + re.sub(r'^\s*(?://|#)', r'', rule.comment) if rule.comment else ''
+
         if rule.type == 'regex':
             regex = rule.rule
-            print(f'{regex}$document')
+            print(f'{regex}$document{comment}')
 
         elif rule.type in ('domain', 'ipv4', 'ipv6'):
             domain = rule.rule
             if '*' in domain:
-                print(f'||{domain}^$document')
+                print(f'||{domain}^$document{comment}')
             else:
-                print(f'||{domain}^')
+                print(f'||{domain}^{comment}')
 
         elif rule.type == 'raw':
-            print(rule.rule)
+            print(f'{rule.rule}{comment}')
 
         elif rule.type is None:
             if rule.comment and not rule.rule:
-                comment = '#' + re.sub(r'^\s*(?://|#)', r'', rule.comment)
-                print(comment)
+                print(comment.lstrip())
 
 
 class ConverterUblacklist(Converter):
