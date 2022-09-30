@@ -38,6 +38,15 @@ auto_tasks:
       kwargs:
         files:
           - src/blocklist/not-content-farms.txt
+          - src/blocklist/extra-content-farms.txt
+        auto_fix_excludes:
+          - src/blocklist/not-content-farms.txt
+        cross_files: true
+        auto_fix: true
+    - action: uniquify
+      kwargs:
+        files:
+          - src/blocklist/not-content-farms.txt
           - src/blocklist/bad-cloners.txt
         auto_fix_excludes:
           - src/blocklist/not-content-farms.txt
@@ -65,6 +74,17 @@ auto_tasks:
           - src/blocklist/not-content-farms.txt
           - src/blocklist/content-farms.txt
           - src/blocklist/nearly-content-farms.txt
+        cross_files: true
+        auto_fix: true
+    - action: uniquify
+      kwargs:
+        files:
+          - src/blocklist/not-content-farms.txt
+          - src/blocklist/extra-content-farms.txt
+          - src/aggregations/extra-content-farms/
+        auto_fix_excludes:
+          - src/blocklist/not-content-farms.txt
+          - src/blocklist/extra-content-farms.txt
         cross_files: true
         auto_fix: true
     - action: uniquify
@@ -103,6 +123,7 @@ auto_tasks:
           - src/blocklist/not-content-farms.txt
           - src/blocklist/content-farms.txt
           - src/blocklist/nearly-content-farms.txt
+          - src/blocklist/extra-content-farms.txt
           - src/blocklist/bad-cloners.txt
           - src/blocklist/sns-content-farms.txt
         auto_fix_excludes:
@@ -137,11 +158,6 @@ aggregate:
     source: https://raw.githubusercontent.com/wdmpa/content-farm-list/main/domains/spam/www.6532033.com.txt
     dest: src/aggregations/content-farms/www.6532033.com.txt
     type: ublacklist
-  - name: GHHbD
-    homepage: https://github.com/cobaltdisco/Google-Chinese-Results-Blocklist
-    source: https://raw.githubusercontent.com/cobaltdisco/Google-Chinese-Results-Blocklist/master/GHHbD_perma_ban_list.txt
-    dest: src/aggregations/nearly-content-farms/google-chinese-results-blocklist.txt
-    type: domains_txt
   - name: ublSoT
     homepage: https://github.com/arosh/ublacklist-stackoverflow-translation
     source: https://raw.githubusercontent.com/arosh/ublacklist-stackoverflow-translation/master/uBlacklist.txt
@@ -157,6 +173,11 @@ aggregate:
     source: https://raw.githubusercontent.com/wdmpa/content-farm-list/main/domains/machine-translated/stackoverflow.txt
     dest: src/aggregations/bad-cloners/wdmpa-machine-translated-stackoverflow.txt
     type: ublacklist
+  - name: GHHbD
+    homepage: https://github.com/cobaltdisco/Google-Chinese-Results-Blocklist
+    source: https://raw.githubusercontent.com/cobaltdisco/Google-Chinese-Results-Blocklist/master/GHHbD_perma_ban_list.txt
+    dest: src/aggregations/extra-content-farms/google-chinese-results-blocklist.txt
+    type: domains_txt
 
 build:
   - source:
@@ -190,9 +211,7 @@ build:
           <<: *grouping_regex_scheme
           value: /https?://(?:www\.)?(?:{value})(?=[/?#]|$)/
 
-  - source:
-      - src/blocklist/nearly-content-farms.txt
-      - src/aggregations/nearly-content-farms/
+  - source: src/blocklist/nearly-content-farms.txt
     publish: docs/files/blocklist/nearly-content-farms.txt
     data:
       headers: |
@@ -202,6 +221,20 @@ build:
         Homepage: https://danny0838.github.io/content-farm-terminator/
         Licence: MIT License
         Source: https://danny0838.github.io/content-farm-terminator/files/blocklist/nearly-content-farms.txt
+      schemes: *content_farms_schemes
+
+  - source:
+      - src/blocklist/extra-content-farms.txt
+      - src/aggregations/extra-content-farms/
+    publish: docs/files/blocklist/extra-content-farms.txt
+    data:
+      headers: |
+        Title: Extra Content Farm Filters
+        Description: Extra filter for content-farm-like sites, mostly aggregated from other sources.
+        Last modified: {now}
+        Homepage: https://danny0838.github.io/content-farm-terminator/
+        Licence: MIT License
+        Source: https://danny0838.github.io/content-farm-terminator/files/blocklist/extra-content-farms.txt
       schemes: *content_farms_schemes
 
   - source: src/blocklist/sns-content-farms.txt
@@ -315,9 +348,7 @@ build:
           pattern: blogspot\.\*$
           replacement: blogspot.com
 
-  - source:
-      - src/blocklist/nearly-content-farms.txt
-      - src/aggregations/nearly-content-farms/
+  - source: src/blocklist/nearly-content-farms.txt
     publish: docs/files/blocklist-hosts/nearly-content-farms.txt
     type: hosts
     data:
@@ -328,6 +359,20 @@ build:
         Homepage: https://danny0838.github.io/content-farm-terminator/
         Licence: MIT License
         Source: https://danny0838.github.io/content-farm-terminator/files/blocklist-hosts/nearly-content-farms.txt
+
+  - source:
+      - src/blocklist/extra-content-farms.txt
+      - src/aggregations/extra-content-farms/
+    publish: docs/files/blocklist-hosts/extra-content-farms.txt
+    type: hosts
+    data:
+      headers: |
+        Title: Extra Content Farm Filters
+        Description: Extra filter for content-farm-like sites, mostly aggregated from other sources.
+        Last modified: {now}
+        Homepage: https://danny0838.github.io/content-farm-terminator/
+        Licence: MIT License
+        Source: https://danny0838.github.io/content-farm-terminator/files/blocklist-hosts/extra-content-farms.txt
 
   - source:
       - src/blocklist/bad-cloners.txt
@@ -402,9 +447,7 @@ build:
           <<: *grouping_regex_scheme
           value: /https?://(?:www\.|(?!www\.))[\w.-]+\.(?:{value})(?=[:/?#]|$)/
 
-  - source:
-      - src/blocklist/nearly-content-farms.txt
-      - src/aggregations/nearly-content-farms/
+  - source: src/blocklist/nearly-content-farms.txt
     publish: docs/files/blocklist-ubo/nearly-content-farms.txt
     type: ubo
     data:
@@ -416,6 +459,23 @@ build:
         Homepage: https://danny0838.github.io/content-farm-terminator/
         Licence: MIT License
         Source: https://danny0838.github.io/content-farm-terminator/files/blocklist-ubo/nearly-content-farms.txt
+      processors: *content_farms_processors_ubo
+      schemes: *content_farms_schemes_ubo
+
+  - source:
+      - src/blocklist/extra-content-farms.txt
+      - src/aggregations/extra-content-farms/
+    publish: docs/files/blocklist-ubo/extra-content-farms.txt
+    type: ubo
+    data:
+      headers: |
+        Title: Extra Content Farm Filters
+        Description: Extra filter for content-farm-like sites, mostly aggregated from other sources.
+        Expires: 3 days
+        Last modified: {now}
+        Homepage: https://danny0838.github.io/content-farm-terminator/
+        Licence: MIT License
+        Source: https://danny0838.github.io/content-farm-terminator/files/blocklist-ubo/extra-content-farms.txt
       processors: *content_farms_processors_ubo
       schemes: *content_farms_schemes_ubo
 
@@ -523,9 +583,7 @@ build:
           <<: *grouping_regex_scheme
           value: /https?://(?:[\w-]+\.)*(?:{value})\.blogspot\.(?:[\w.-]+)(?=[:\/?#]|$)/
 
-  - source:
-      - src/blocklist/nearly-content-farms.txt
-      - src/aggregations/nearly-content-farms/
+  - source: src/blocklist/nearly-content-farms.txt
     publish: docs/files/blocklist-ublacklist/nearly-content-farms.txt
     type: ublacklist
     data:
@@ -536,6 +594,22 @@ build:
         Homepage: https://danny0838.github.io/content-farm-terminator/
         Licence: MIT License
         Source: https://danny0838.github.io/content-farm-terminator/files/blocklist-ublacklist/nearly-content-farms.txt
+      processors: *content_farms_processors_ublacklist
+      schemes: *content_farms_schemes_ublacklist
+
+  - source:
+      - src/blocklist/extra-content-farms.txt
+      - src/aggregations/extra-content-farms/
+    publish: docs/files/blocklist-ublacklist/extra-content-farms.txt
+    type: ublacklist
+    data:
+      headers: |
+        Title: Extra Content Farm Filters
+        Description: Extra filter for content-farm-like sites, mostly aggregated from other sources.
+        Last modified: {now}
+        Homepage: https://danny0838.github.io/content-farm-terminator/
+        Licence: MIT License
+        Source: https://danny0838.github.io/content-farm-terminator/files/blocklist-ublacklist/extra-content-farms.txt
       processors: *content_farms_processors_ublacklist
       schemes: *content_farms_schemes_ublacklist
 

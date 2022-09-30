@@ -11,6 +11,7 @@ uBlacklist 黑名單
 ## 黑名單列表
 * [標準內容農場清單](../files/blocklist-ublacklist/content-farms.txt)
 * [類內容農場清單](../files/blocklist-ublacklist/nearly-content-farms.txt)
+* [擴充內容農場清單](../files/blocklist-ublacklist/extra-content-farms.txt)
 * [劣質複製農場清單](../files/blocklist-ublacklist/bad-cloners.txt)
 * [假新聞網站清單](../files/blocklist-ublacklist/fake-news.txt)
 * [詐騙網站清單](../files/blocklist-ublacklist/scam-sites.txt)
