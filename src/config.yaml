@@ -239,7 +239,7 @@ build:
           value: /https?://(?:[\w-]+\.)*(?:{value})(?:\.[\w-]+)*(?=[:/?#]|$)/
         domain-path:
           <<: *grouping_regex_scheme
-          value: /https?://(?:www\.)?(?:{value})(?=[/?#]|$)/
+          value: /https?://(?:[\w-]+\.)*(?:{value})(?=[/?#]|$)/
 
   - source: src/blocklist/nearly-content-farms.txt
     publish: docs/files/blocklist/nearly-content-farms.txt

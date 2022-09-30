@@ -1,7 +1,7 @@
   # Title: Fake News Filters
   # Description: Filter for fake news sites. (For reference)
   #     This list is slightly organized from several sources only and is NOT actively maintained.
-  # Last modified: 2022-10-01T00:04:32+00:00
+  # Last modified: 2022-10-01T00:12:42+00:00
   # Homepage: https://danny0838.github.io/content-farm-terminator/
   # Licence: MIT License
   # Source: https://danny0838.github.io/content-farm-terminator/files/blocklist/fake-news.txt
@@ -903,4 +903,4 @@ zengardner.com  #unknown
 zerohedge.com  #conspiracy
 zootfeed.com  #conspiracy
 /https?://(?:[\w-]+\.)*(?:24orenotizie|attivotv|capnews|catenaumana|chesuccede|conspiracywire|coriere|corrieredellanotte|corrieredellapera|corrieredelmattino|corrieredisera|coscienzaitaliana|curiosandoonline|curiosity2013|cvdiariodelpollineo|dionidream|direttanews|direttanews24|direttanfo|essenzialmentedonna|fattoquotidaino|gazzetta24|gazzettadellasera|gazzettanews24|giomale|ilblogdellattivista|ilmessaggio|ilradicale|iltelegrafo|imigliorivideo|indecisionforever|informazionelibera|italianiuniti|italianosveglia|italianotizie24|italiapatriamia|italiarialzati|jedanews|kevideo|lanozione|lapillolarossa|last\-webs|libero\-notizie|liberogiornale|lmr|mafiacapitale|mattoquotidiano|news24roma|newscronaca|newsitalys|nocensura|notixonline|notixweb|notiziariosegreto|panorana|perdavvero|quotidaino|rebubblica|repubblica24|retenews24|riscattonazionale|rubrica24|segretodistato|skytg24news|socialbuzz|tg24h|tg5stelle|tgnewsitalia|tuttiicriminidegliimmigrati|tzetze|ultimaora24|videoviraliweb|vnews24|voxnews|webitalia360)(?:\.[\w-]+)*(?=[:/?#]|$)/
-/https?://(?:www\.)?(?:cato\.org/blog|educateinspirechange\.org/health|newyorker\.com/humor|nonaiswa\.org/wordpress|smartknowledgeu\.com/blog|solari\.com/blog|szandorblestman\.com/index\.php|thegoldandoilguy\.com/articles)(?=[/?#]|$)/
+/https?://(?:[\w-]+\.)*(?:cato\.org/blog|educateinspirechange\.org/health|newyorker\.com/humor|nonaiswa\.org/wordpress|smartknowledgeu\.com/blog|solari\.com/blog|szandorblestman\.com/index\.php|thegoldandoilguy\.com/articles)(?=[/?#]|$)/
