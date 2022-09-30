@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """Check and publish blocklists for Content Farm Terminator."""
 import argparse
+import glob
 import inspect
 import ipaddress
 import json
@@ -9,7 +10,6 @@ import os
 import re
 from contextlib import contextmanager, redirect_stdout
 from datetime import datetime, timezone
-from glob import iglob
 from urllib.parse import quote
 
 import requests
@@ -51,6 +51,25 @@ def file_strip_eol(file):
             pos = fh.seek(-2, os.SEEK_CUR)
 
         fh.truncate()
+
+
+def flatten_files(files, match_pattern='**/*.txt'):
+    """Flatten directories in a file list into containing files.
+
+    - Follow alphabetical order.
+    - Also normalize file names.
+    """
+    new_files = []
+    for file in files:
+        if os.path.isdir(file):
+            it = glob.iglob(
+                os.path.normpath(os.path.join(glob.escape(file), match_pattern)),
+                recursive=True,
+            )
+            new_files.extend(sorted(it))
+        else:
+            new_files.append(os.path.normpath(file))
+    return new_files
 
 
 def to_uppercamelcase(text, delim='_'):
@@ -152,22 +171,14 @@ class Linter:
                  remove_empty=False, sort_rules=False, strip_eol=False):
         self.root = root
         self.config = config or {}
-        self.files = [os.path.normpath(f) for f in (files or [])]
+        self.files = flatten_files(files or [])
         self.auto_fix = auto_fix
         self.remove_empty = remove_empty
         self.sort_rules = sort_rules
         self.strip_eol = strip_eol
 
     def run(self):
-        files = []
         for file in self.files:
-            if os.path.isdir(file):
-                for f in iglob(os.path.join(file, '**.txt')):
-                    files.append(f)
-            else:
-                files.append(file)
-
-        for file in files:
             self.check_file(file)
 
     def check_file(self, file):
@@ -252,24 +263,16 @@ class Uniquifier:
                  auto_fix=False, auto_fix_excludes=None, strip_eol=False):
         self.root = root
         self.config = config or {}
-        self.files = [os.path.normpath(f) for f in (files or [])]
+        self.files = flatten_files(files or [])
         self.advanced = advanced
         self.cross_files = cross_files
         self.auto_fix = auto_fix
-        self.auto_fix_excludes = {os.path.normpath(f) for f in (auto_fix_excludes or [])}
+        self.auto_fix_excludes = set(flatten_files(auto_fix_excludes or []))
         self.strip_eol = strip_eol
 
     def run(self):
-        files = []
-        for file in self.files:
-            if os.path.isdir(file):
-                for f in iglob(os.path.join(file, '**.txt')):
-                    files.append(f)
-            else:
-                files.append(file)
-
         rules = []
-        for file in files:
+        for file in self.files:
             log.debug('Adding rules for checking: %s ...', file)
             subpath = os.path.relpath(file, self.root)
             with open(file, encoding='UTF-8-SIG') as fh:
