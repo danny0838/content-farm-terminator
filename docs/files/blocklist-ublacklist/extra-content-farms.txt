@@ -1,10 +1,12 @@
 # Title: Extra Content Farm Filters
 # Description: Extra filter for content-farm-like sites, mostly aggregated from other sources.
-# Last modified: 2022-10-01T00:10:47+00:00
+# Last modified: 2022-10-01T00:17:20+00:00
 # Homepage: https://danny0838.github.io/content-farm-terminator/
 # Licence: MIT License
 # Source: https://danny0838.github.io/content-farm-terminator/files/blocklist-ublacklist/extra-content-farms.txt
 #!aggreg-diveng: https://raw.githubusercontent.com/DivineEngine/uBlacklist/master/blacklist.txt (https://github.com/DivineEngine/uBlacklist)
+/epochtimes\.+/  #!aggreg-diveng
+/falundafa\.+/  #!aggreg-diveng
 *://*.07yue.com/*  #!aggreg-diveng
 *://*.1377003.com/*  #!aggreg-diveng
 *://*.2612610.com/*  #!aggreg-diveng
@@ -289,6 +291,14 @@
 *://*.mnkan.com/*  #!aggreg-diveng
 *://*.moe.am/*  #!aggreg-diveng
 *://*.mofalin.com/*  #!aggreg-diveng
+*://cloud.tencent.com/developer/*  #!aggreg-diveng
+*://cn.aliyun.com/ss/*  #!aggreg-diveng
+*://cn.aliyun.com/sswm/*  #!aggreg-diveng
+*://developer.aliyun.com/ask/*  #!aggreg-diveng
+*://juejin.cn/s/*  #!aggreg-diveng
+*://www.aliyun.com/sswd/*  #!aggreg-diveng
+*://www.huaweicloud.com/theme/*  #!aggreg-diveng
+*://*.ntdtv.com//*  #!aggreg-diveng
 *://*.muzijie.com/*  #!aggreg-diveng
 *://*.mvpsky.com/*  #!aggreg-diveng
 *://*.mycleanmymac.com/*  #!aggreg-diveng
@@ -72413,6 +72423,14 @@
 *://*.zzzz0013.com/*  #!aggreg-gyli
 *://*.zzzzbj.com/*  #!aggreg-gyli
 #!aggreg-nonpnt: https://raw.githubusercontent.com/nonPointer/uBlacklist-Subscription/master/blacklist.txt (https://github.com/nonPointer/uBlacklist-Subscription)
+/(?:.*\.){0,1}[\d]{4}[a-z0-9]{5}\.com\.cn/  #!aggreg-nonpnt
+/(?:www.)[a-z]{2,3}[0-9]{2,3}\.com/  #!aggreg-nonpnt
+/(?:www\.){0,1}www[\-]*[\w]{4,8}\.com/  #!aggreg-nonpnt
+/.*\/.*\?(?:s|so)=.*/  #!aggreg-nonpnt
+/.*\/so\.php/  #!aggreg-nonpnt
+/.*\:\/\/www\..*?\.com\/showinfo\-\d+-\d+-\d+\.html/  #!aggreg-nonpnt
+/^https?\:\/\/.*?\/list\?q=[a-zA-Z%0-9]*$/  #!aggreg-nonpnt
+/m\.[\w]{5,6}\.[\w]{6,7}\.(?:site|vip).*/  #!aggreg-nonpnt
 *://*.00w5.com/*  #!aggreg-nonpnt
 *://*.010xww.com/*  #!aggreg-nonpnt
 *://*.021east.com/*  #!aggreg-nonpnt
@@ -73015,6 +73033,55 @@
 *://*.mostexpo.com/*  #!aggreg-nonpnt
 *://*.mostud.com/*  #!aggreg-nonpnt
 *://*.mozzinovo.club/*  #!aggreg-nonpnt
+*://baike.baidu.com/tashuo/*  #!aggreg-nonpnt
+*://blog.csdn.net/holybin/*  #!aggreg-nonpnt
+*://blog.csdn.net/weixin_35909238/*  #!aggreg-nonpnt
+*://book.jd.com/publish/Search?*  #!aggreg-nonpnt
+*://cloud.tencent.com/developer/article/*  #!aggreg-nonpnt
+*://cloud.tencent.com/developer/ask/*  #!aggreg-nonpnt
+*://cloud.tencent.com/developer/information/*  #!aggreg-nonpnt
+*://developer.aliyun.com/articlezt/*  #!aggreg-nonpnt
+*://iknow.baidu.com/search?word=*  #!aggreg-nonpnt
+*://my.oschina.net/u/4394125/*  #!aggreg-nonpnt
+*://new.qq.com/omn/*  #!aggreg-nonpnt
+*://news.futunn.com/post/*  #!aggreg-nonpnt
+*://pic.sogou.com/pic/searchList.jsp?*  #!aggreg-nonpnt
+*://www.163.com/dy/article/*  #!aggreg-nonpnt
+*://www.baidu.com/sf/*  #!aggreg-nonpnt
+*://www.csdn.net/gather_*  #!aggreg-nonpnt
+*://www.csdn.net/tags/*  #!aggreg-nonpnt
+*://www.huaweicloud.com/articles/*  #!aggreg-nonpnt
+*://www.lagou.com/lgeduarticle/*  #!aggreg-nonpnt
+*://www.pconline.com.cn/3g/*  #!aggreg-nonpnt
+*://www.pconline.com.cn/other_pic*  #!aggreg-nonpnt
+*://www.right.com.cn/FORUM/search.php?*  #!aggreg-nonpnt
+*://www.sohu.com/a/*  #!aggreg-nonpnt
+*://www.sojson.com/blog/*  #!aggreg-nonpnt
+*://www.west.cn/docs/*  #!aggreg-nonpnt
+*://www.xinnet.com/xinzhi/*  #!aggreg-nonpnt
+*://zhidaocommit.baidu.com/search?*  #!aggreg-nonpnt
+*://zidao.baidu.com/search?*  #!aggreg-nonpnt
+*://*.4hou.com/posts/*  #!aggreg-nonpnt
+*://*.baidu.com/s?word=*  #!aggreg-nonpnt
+*://*.csdn.net/weixin_26722031/article/*  #!aggreg-nonpnt
+*://*.dongchedi.com/tag/*  #!aggreg-nonpnt
+*://*.imooc.com/wenda/*  #!aggreg-nonpnt
+*://*.juejin.cn/s/*  #!aggreg-nonpnt
+*://*.lete.com/kdwenda/*  #!aggreg-nonpnt
+*://*.liangliangmama.com/blogs/news/*  #!aggreg-nonpnt
+*://*.ourplay.net/ask/*  #!aggreg-nonpnt
+*://*.ourplay.net/qazt/*  #!aggreg-nonpnt
+*://*.pc6.com/infoview/*  #!aggreg-nonpnt
+*://*.toutiao.com/search/*  #!aggreg-nonpnt
+*://*.toutiao.com/search?keyword=*  #!aggreg-nonpnt
+*://*.wuzhuiso.com/s?q=*  #!aggreg-nonpnt
+*://*/?s=*  #!aggreg-nonpnt
+*://*/cha.php?s=*  #!aggreg-nonpnt
+*://*/home.php?mod=space*  #!aggreg-nonpnt
+*://*/list.php?s=*  #!aggreg-nonpnt
+*://*/so.php  #!aggreg-nonpnt
+*://*/so.php?s=*  #!aggreg-nonpnt
+*://*/so/*  #!aggreg-nonpnt
 *://*.msfxt.com/*  #!aggreg-nonpnt
 *://*.muzoic.org/*  #!aggreg-nonpnt
 *://*.mxj.com.cn/*  #!aggreg-nonpnt

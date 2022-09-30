@@ -617,6 +617,9 @@ class Converter:
     def escape_regex(self, value):
         return re.escape(value)
 
+    def escape_regex_with_wildcard_a(self, value):
+        return '.*'.join(re.escape(s) for s in value.split('*'))
+
     def escape_url(self, value):
         return quote(value)
 
@@ -827,16 +830,93 @@ class Aggregator:
         return rules
 
     def convert_rules_ublacklist(self, text, url):
+        def re_line():
+            """Line parser for uBlacklist.
+
+            - Taken from the source code of uBlacklist.
+            """
+            spaceBeforeRuleOrComment = rf"""(?P<spaceBeforeRuleOrComment>\s+)"""  # noqa: N806, F541
+            color = rf"""(?P<color>0|[1-9]\d*)"""  # noqa: N806, F541
+            highlight = rf"""(?P<highlight>@{color}?)"""  # noqa: N806, F541
+            spaceAfterHighlight = rf"""(?P<spaceAfterHighlight>\s+)"""  # noqa: N806, F541
+            scheme = rf"""(?P<scheme>\*|[Hh][Tt][Tt][Pp][Ss]?|[Ff][Tt][Pp])"""  # noqa: N806, F541
+            label = rf"""(?:[0-9A-Za-z](?:[-0-9A-Za-z]*[0-9A-Za-z])?)"""  # noqa: N806, F541
+            host = rf"""(?P<host>(?:\*|{label})(?:\.{label})*)"""  # noqa: N806, F541
+            path = rf"""(?P<path>/(?:\*|[-0-9A-Za-z._~:/?[\]@!$&'()+,;=]|%[0-9A-Fa-f]{2})*)"""  # noqa: N806, F541
+            matchPattern = rf"""(?P<matchPattern>{scheme}://{host}{path})"""  # noqa: N806, F541
+            prop = rf"""(?P<prop>u(?:rl)?|t(?:itle)?)"""  # noqa: N806, F541
+            backslashSequence = rf"""(?:\\.)"""  # noqa: N806, F541
+            class_ = rf"""(?:\[(?:[^\]\\]|{backslashSequence})*])"""  # noqa: N806, F541
+            firstChar = rf"""(?:[^*\\/[]|{backslashSequence}|{class_})"""  # noqa: N806, F541
+            char = rf"""(?:[^\\/[]|{backslashSequence}|{class_})"""  # noqa: N806, F541
+            pattern = rf"""(?P<pattern>{firstChar}{char}*)"""  # noqa: N806, F541
+            flags = rf"""(?P<flags>iu?|ui?)"""  # noqa: N806, F541
+            regularExpression = rf"""(?P<regularExpression>{prop}?/{pattern}/{flags}?)"""  # noqa: N806, F541
+            rule = rf"""(?P<rule>({highlight}{spaceAfterHighlight}?)?(?:{matchPattern}|{regularExpression}))"""  # noqa: N806, F541
+            spaceAfterRule = rf"""(?P<spaceAfterRule>\s+)"""  # noqa: N806, F541
+            comment = rf"""(?P<comment>#.*)"""  # noqa: N806, F541
+            line = rf"""^{spaceBeforeRuleOrComment}?(?:{rule}{spaceAfterRule}?)?{comment}?$"""  # noqa: N806, F541
+            return re.compile(line)
+
+        regex = re_line()
         rules = []
         for i, line in enumerate(text.split('\n')):
             if not line.strip():
                 continue
 
-            m = re.search(r'^\*://(?:\*\.)?(?:www\.)?([\w.-]+)/\*(?=\s*#|$)', line)
-            if m:
-                rule = Rule(m.group(1), path=url, line_no=i + 1)
-                rules.append(rule)
+            m = regex.search(line)
+            if not m:
                 continue
+
+            # a highlight rule does not block
+            if m.group('highlight'):
+                continue
+
+            comment = f' {m.group("comment")}' if m.group('comment') else ''
+            if m.group('matchPattern'):
+                if m.group('host') != '*' and m.group('path') in ('/*', '/'):
+                    # treat "*://*.example.com/" as "*://*.example.com/*"
+                    domain = m.group('host')
+
+                    # treat "*://example.com/*" as "*://*.example.com/*"
+                    if domain.startswith('*.'):
+                        domain = domain[2:]
+
+                    # treat "*://www.example.com/*" as "*://*.example.com/*"
+                    if domain.startswith('www.'):
+                        domain = domain[4:]
+
+                    # treat "*://*.example.com/" as "*://*.example.com/*"
+                    if m.group('path') in ('/*', '/'):
+                        rule = f'{domain}{comment}'
+                    else:
+                        pattern = re.escape(m.group('domain'))
+                        re.escape(m.group('path')).replace(r'\*', r'.*')
+                        rule = f'domain-path-re:{pattern}{comment}'
+
+                else:
+                    path = m.group('path')
+                    domain = m.group('host')
+                    if domain == '*':
+                        rule = f'mp-path:{path[1:]}'
+                    elif domain.startswith('*.'):
+                        rule = f'mp-hosts-path:{domain[2:]}{path}'
+                    else:
+                        rule = f'mp-host-path:{domain}{path}'
+
+            elif m.group('regularExpression'):
+                # title match is not supported
+                if m.group('prop') in ('title', 't'):
+                    continue
+
+                rule = f'/{m.group("pattern")}/{m.group("flags") or ""}{comment}'
+
+            else:
+                # non-rule, such as comment line
+                continue
+
+            rule = Rule(rule, path=url, line_no=i + 1)
+            rules.append(rule)
 
         return rules
 

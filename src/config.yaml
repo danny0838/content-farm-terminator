@@ -240,6 +240,18 @@ build:
         domain-path:
           <<: *grouping_regex_scheme
           value: /https?://(?:[\w-]+\.)*(?:{value})(?=[/?#]|$)/
+        mp-path:
+          <<: *grouping_regex_scheme
+          escape: regex_with_wildcard_a
+          value: /https?://(?:[\w-]+\.)*[\w-]+/(?:{value})$/
+        mp-hosts-path:
+          <<: *grouping_regex_scheme
+          escape: regex_with_wildcard_a
+          value: /https?://(?:[\w-]+\.)*(?:{value})$/
+        mp-host-path:
+          <<: *grouping_regex_scheme
+          escape: regex_with_wildcard_a
+          value: /https?://(?:{value})$/
 
   - source: src/blocklist/nearly-content-farms.txt
     publish: docs/files/blocklist/nearly-content-farms.txt
@@ -609,6 +621,15 @@ build:
         domain-suffix:
           <<: *grouping_regex_scheme
           value: /https?://(?:www\.|(?!www\.))[\w.-]+\.(?:{value})(?=[:/?#]|$)/
+        mp-path:
+          value: '*://*/{value}'
+          mode: raw
+        mp-hosts-path:
+          value: '*://*.{value}'
+          mode: raw
+        mp-host-path:
+          value: '*://{value}'
+          mode: raw
         blogspot:
           <<: *grouping_regex_scheme
           value: /https?://(?:[\w-]+\.)*(?:{value})\.blogspot\.(?:[\w.-]+)(?=[:\/?#]|$)/

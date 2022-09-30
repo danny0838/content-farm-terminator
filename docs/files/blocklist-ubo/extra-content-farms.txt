@@ -1,11 +1,13 @@
 ! Title: Extra Content Farm Filters
 ! Description: Extra filter for content-farm-like sites, mostly aggregated from other sources.
 ! Expires: 3 days
-! Last modified: 2022-10-01T00:13:59+00:00
+! Last modified: 2022-10-01T00:17:20+00:00
 ! Homepage: https://danny0838.github.io/content-farm-terminator/
 ! Licence: MIT License
 ! Source: https://danny0838.github.io/content-farm-terminator/files/blocklist-ubo/extra-content-farms.txt
 #!aggreg-diveng: https://raw.githubusercontent.com/DivineEngine/uBlacklist/master/blacklist.txt (https://github.com/DivineEngine/uBlacklist)
+/epochtimes\.+/$document  #!aggreg-diveng
+/falundafa\.+/$document  #!aggreg-diveng
 ||07yue.com^  #!aggreg-diveng
 ||1377003.com^  #!aggreg-diveng
 ||2612610.com^  #!aggreg-diveng
@@ -463,6 +465,8 @@
 ||zvtt.cc^  #!aggreg-diveng
 ||zxsou.cc^  #!aggreg-diveng
 ||zymseo.com^  #!aggreg-diveng
+/https?://(?:cloud\.tencent\.com/developer/.*|cn\.aliyun\.com/ss/.*|cn\.aliyun\.com/sswm/.*|developer\.aliyun\.com/ask/.*|juejin\.cn/s/.*|www\.aliyun\.com/sswd/.*|www\.huaweicloud\.com/theme/.*)$/$document
+/https?://(?:[\w-]+\.)*(?:ntdtv\.com//.*)$/$document
 #!aggreg-GHHbD: https://raw.githubusercontent.com/cobaltdisco/Google-Chinese-Results-Blocklist/master/GHHbD_perma_ban_list.txt (https://github.com/cobaltdisco/Google-Chinese-Results-Blocklist)
 ||005i.com^  #!aggreg-GHHbD
 ||01-123.com^  #!aggreg-GHHbD
@@ -72414,6 +72418,14 @@
 ||zzzz0013.com^  #!aggreg-gyli
 ||zzzzbj.com^  #!aggreg-gyli
 #!aggreg-nonpnt: https://raw.githubusercontent.com/nonPointer/uBlacklist-Subscription/master/blacklist.txt (https://github.com/nonPointer/uBlacklist-Subscription)
+/(?:.*\.){0,1}[\d]{4}[a-z0-9]{5}\.com\.cn/$document  #!aggreg-nonpnt
+/(?:www.)[a-z]{2,3}[0-9]{2,3}\.com/$document  #!aggreg-nonpnt
+/(?:www\.){0,1}www[\-]*[\w]{4,8}\.com/$document  #!aggreg-nonpnt
+/.*\/.*\?(?:s|so)=.*/$document  #!aggreg-nonpnt
+/.*\/so\.php/$document  #!aggreg-nonpnt
+/.*\:\/\/www\..*?\.com\/showinfo\-\d+-\d+-\d+\.html/$document  #!aggreg-nonpnt
+/^https?\:\/\/.*?\/list\?q=[a-zA-Z%0-9]*$/$document  #!aggreg-nonpnt
+/m\.[\w]{5,6}\.[\w]{6,7}\.(?:site|vip).*/$document  #!aggreg-nonpnt
 ||00w5.com^  #!aggreg-nonpnt
 ||010xww.com^  #!aggreg-nonpnt
 ||021east.com^  #!aggreg-nonpnt
@@ -73410,6 +73422,9 @@
 ||zx75551.com^  #!aggreg-nonpnt
 ||zybashi.com^  #!aggreg-nonpnt
 ||zzchenhui.com^  #!aggreg-nonpnt
+/https?://(?:baike\.baidu\.com/tashuo/.*|blog\.csdn\.net/holybin/.*|blog\.csdn\.net/weixin_35909238/.*|book\.jd\.com/publish/Search\?.*|cloud\.tencent\.com/developer/article/.*|cloud\.tencent\.com/developer/ask/.*|cloud\.tencent\.com/developer/information/.*|developer\.aliyun\.com/articlezt/.*|iknow\.baidu\.com/search\?word=.*|my\.oschina\.net/u/4394125/.*|new\.qq\.com/omn/.*|news\.futunn\.com/post/.*|pic\.sogou\.com/pic/searchList\.jsp\?.*|www\.163\.com/dy/article/.*|www\.baidu\.com/sf/.*|www\.csdn\.net/gather_.*|www\.csdn\.net/tags/.*|www\.huaweicloud\.com/articles/.*|www\.lagou\.com/lgeduarticle/.*|www\.pconline\.com\.cn/3g/.*|www\.pconline\.com\.cn/other_pic.*|www\.right\.com\.cn/FORUM/search\.php\?.*|www\.sohu\.com/a/.*|www\.sojson\.com/blog/.*|www\.west\.cn/docs/.*|www\.xinnet\.com/xinzhi/.*|zhidaocommit\.baidu\.com/search\?.*|zidao\.baidu\.com/search\?.*)$/$document
+/https?://(?:[\w-]+\.)*(?:4hou\.com/posts/.*|baidu\.com/s\?word=.*|csdn\.net/weixin_26722031/article/.*|dongchedi\.com/tag/.*|imooc\.com/wenda/.*|juejin\.cn/s/.*|lete\.com/kdwenda/.*|liangliangmama\.com/blogs/news/.*|ourplay\.net/ask/.*|ourplay\.net/qazt/.*|pc6\.com/infoview/.*|toutiao\.com/search/.*|toutiao\.com/search\?keyword=.*|wuzhuiso\.com/s\?q=.*)$/$document
+/https?://(?:[\w-]+\.)*[\w-]+/(?:\?s=.*|cha\.php\?s=.*|home\.php\?mod=space.*|list\.php\?s=.*|so\.php|so\.php\?s=.*|so/.*)$/$document
 #!aggreg-scyrte: https://raw.githubusercontent.com/scyrte/uBlacklist-Subscription/master/blacklist.txt (https://github.com/scyrte/uBlacklist-Subscription)
 ||000.org.cn^  #!aggreg-scyrte
 ||010bom.com^  #!aggreg-scyrte

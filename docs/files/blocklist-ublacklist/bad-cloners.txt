@@ -2,7 +2,7 @@
 # Description: Filter for cloner sites that are mostly free of copyright issue since the source site
 #     is copyleft or copyfree, but provide only trivial layout change or poor-quality bot translation
 #     and are thus spam-like.
-# Last modified: 2022-10-01T00:04:32+00:00
+# Last modified: 2022-10-01T00:17:20+00:00
 # Homepage: https://danny0838.github.io/content-farm-terminator/
 # Licence: MIT License
 # Source: https://danny0838.github.io/content-farm-terminator/files/blocklist-ublacklist/bad-cloners.txt
@@ -257,6 +257,10 @@
 *://*.kb.kutu66.com/*  #!aggreg-wdmpaMtSo
 *://*.koubeiblog.com/*  #!aggreg-wdmpaMtSo
 *://*.mlog.club/*  #!aggreg-wdmpaMtSo
+*://codingdict.com/questions/*  #!aggreg-wdmpaMtSo
+*://twitter.com/qastack/*  #!aggreg-wdmpaMtSo
+*://www.coder.work/article/*  #!aggreg-wdmpaMtSo
+*://xbuba.com/questions/*  #!aggreg-wdmpaMtSo
 *://*.qa.1r1g.com/*  #!aggreg-wdmpaMtSo
 *://*.qastack.in/*  #!aggreg-wdmpaMtSo
 *://*.qastack.lk/*  #!aggreg-wdmpaMtSo
