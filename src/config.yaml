@@ -178,6 +178,36 @@ aggregate:
     source: https://raw.githubusercontent.com/cobaltdisco/Google-Chinese-Results-Blocklist/master/GHHbD_perma_ban_list.txt
     dest: src/aggregations/extra-content-farms/google-chinese-results-blocklist.txt
     type: domains_txt
+  - name: gyli
+    homepage: https://github.com/gyli/Blocklist
+    source: https://raw.githubusercontent.com/gyli/Blocklist/master/BLOCKLIST_uBlacklist
+    dest: src/aggregations/extra-content-farms/gyli.txt
+    type: ublacklist
+  - name: gyli
+    homepage: https://github.com/gyli/Blocklist
+    source: https://raw.githubusercontent.com/gyli/Blocklist/master/BLOCKLIST_uBlacklist
+    dest: src/aggregations/extra-content-farms/gyli.txt
+    type: ublacklist
+  - name: nonpnt
+    homepage: https://github.com/nonPointer/uBlacklist-Subscription
+    source: https://raw.githubusercontent.com/nonPointer/uBlacklist-Subscription/master/blacklist.txt
+    dest: src/aggregations/extra-content-farms/non-pointer.txt
+    type: ublacklist
+  - name: scyrte
+    homepage: https://github.com/scyrte/uBlacklist-Subscription
+    source: https://raw.githubusercontent.com/scyrte/uBlacklist-Subscription/master/blacklist.txt
+    dest: src/aggregations/extra-content-farms/scyrte.txt
+    type: ublacklist
+  - name: diveng
+    homepage: https://github.com/DivineEngine/uBlacklist
+    source: https://raw.githubusercontent.com/DivineEngine/uBlacklist/master/blacklist.txt
+    dest: src/aggregations/extra-content-farms/diveng.txt
+    type: ublacklist
+  - name: yesil
+    homepage: https://github.com/YeSilin/uBlacklist
+    source: https://raw.githubusercontent.com/YeSilin/uBlacklist/master/list.txt
+    dest: src/aggregations/extra-content-farms/yesil.txt
+    type: ublacklist
 
 build:
   - source:
