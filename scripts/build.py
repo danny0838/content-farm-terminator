@@ -186,11 +186,17 @@ class Linter:
 
         subpath = os.path.relpath(file, self.root)
         rules = []
-        with open(file, encoding='UTF-8-SIG') as fh:
-            for i, line in enumerate(fh):
-                line = line.rstrip('\n')
-                rule = Rule(line, path=subpath, line_no=i + 1)
-                rules.append(rule)
+        try:
+            fh = open(file, encoding='UTF-8-SIG')
+        except OSError as exc:
+            log.warning('Unable to check file "%s": %s', subpath, exc)
+            return
+        else:
+            with fh as fh:
+                for i, line in enumerate(fh):
+                    line = line.rstrip('\n')
+                    rule = Rule(line, path=subpath, line_no=i + 1)
+                    rules.append(rule)
 
         new_rules = []
         for rule in rules:
@@ -273,13 +279,18 @@ class Uniquifier:
     def run(self):
         rules = []
         for file in self.files:
-            log.debug('Adding rules for checking: %s ...', file)
+            log.debug('Adding rules for uniquification: %s ...', file)
             subpath = os.path.relpath(file, self.root)
-            with open(file, encoding='UTF-8-SIG') as fh:
-                for i, line in enumerate(fh):
-                    line = line.rstrip('\n')
-                    rule = Rule(line, path=subpath, line_no=i + 1)
-                    rules.append(rule)
+            try:
+                fh = open(file, encoding='UTF-8-SIG')
+            except OSError as exc:
+                log.warning('Unable to add source "%s" for uniquification: %s', subpath, exc)
+            else:
+                with fh as fh:
+                    for i, line in enumerate(fh):
+                        line = line.rstrip('\n')
+                        rule = Rule(line, path=subpath, line_no=i + 1)
+                        rules.append(rule)
 
         if self.cross_files:
             new_rules = self.deduplicate_rules(rules)
