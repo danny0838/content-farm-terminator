@@ -1,7 +1,7 @@
 ! Title: Nearly Content Farm Filters
 ! Description: Filter for content-farm-like sites, mostly in Chinese.
 ! Expires: 3 days
-! Last modified: 2022-09-29T04:37:31+00:00
+! Last modified: 2022-10-01T00:02:50+00:00
 ! Homepage: https://danny0838.github.io/content-farm-terminator/
 ! Licence: MIT License
 ! Source: https://danny0838.github.io/content-farm-terminator/files/blocklist-ubo/nearly-content-farms.txt
@@ -29,7 +29,7 @@
 ||today.line.me^
 ||ubuntuqa.com^
 ||unsafe.sh^
-#!aggregated source: https://raw.githubusercontent.com/cobaltdisco/Google-Chinese-Results-Blocklist/master/GHHbD_perma_ban_list.txt
+#!aggreg-GHHbD: https://raw.githubusercontent.com/cobaltdisco/Google-Chinese-Results-Blocklist/master/GHHbD_perma_ban_list.txt (https://github.com/cobaltdisco/Google-Chinese-Results-Blocklist)
 ||005i.com^
 ||01-123.com^
 ||01-800.cn^
@@ -75,6 +75,7 @@
 ||15211104249.com^
 ||15300.cn^
 ||1587555.com^
+||159.138.37.243^
 ||15meili.com^
 ||163081.com^
 ||1666yl.com^
@@ -103,8 +104,10 @@
 ||218747.com^
 ||218849.com^
 ||23.95.222.127^
+||231395.com^
 ||231715.com^
 ||231727.com^
+||23cpc.com^
 ||23scg.cn^
 ||25065.net^
 ||252yy.net^
@@ -228,7 +231,9 @@
 ||a1fz.com^
 ||a372.cn^
 ||aaiv.net^
+||aasou.cc^
 ||abadisurvey.com^
+||abcsou.cc^
 ||abdwap.work^
 ||abks.hfges.top^
 ||ac590.com^
@@ -237,6 +242,7 @@
 ||adwithaglobal.com^
 ||aeo.com.cn^
 ||aew-sdn.com^
+||ahaqsyfj.com^
 ||ahm7.com^
 ||ai46.com^
 ||aibu8w.com^
@@ -374,6 +380,7 @@
 ||chagzh.com^
 ||changhe-china.com^
 ||chaojiss.com^
+||chaosou.cc^
 ||chaoyue.link^
 ||check4herpes.com^
 ||chengzi1058.com^
@@ -415,6 +422,9 @@
 ||cuoshuo.com^
 ||custompatches4u.com^
 ||cxjygj.com^
+||cxybb.com^
+||cxymm.net^
+||cxyzjd.com^
 ||cy-hl.com^
 ||cybei.com^
 ||cybermedicine2000.com^
@@ -424,6 +434,7 @@
 ||czmuhe.com^
 ||czsjsb.com^
 ||dacongyun.com^
+||dafx.cc^
 ||daidaigou.org^
 ||daigoupiggy.com^
 ||dainifei.info^
@@ -602,6 +613,7 @@
 ||gouo.cn^
 ||graphenstone-china.com^
 ||greenengineeringgroup.com^
+||greentravelnwanders.co^
 ||grinstreet.ru^
 ||gsmxm.com^
 ||guangdongecu.com^
@@ -737,6 +749,10 @@
 ||it880880.com^
 ||itectec.com^
 ||itranslater.com^
+||its203.com^
+||its304.com^
+||its401.com^
+||its404.com^
 ||iuham.com^
 ||iy80.com^
 ||iyangzhi.com^
@@ -792,7 +808,9 @@
 ||jshyjj.com^
 ||jskf999.com^
 ||jslzx.com^
+||jsnongnong.com^
 ||jsso.cc^
+||jssou.cc^
 ||jswyhq.com^
 ||jun365.net^
 ||jusoso.com^
@@ -804,6 +822,7 @@
 ||jzxfz.com^
 ||k0w0m.com^
 ||k3m8dr.cn^
+||k5uc.com^
 ||kabaresta.com^
 ||kaifa99.com^
 ||kaitianqi.com^
@@ -826,7 +845,9 @@
 ||kuaisan9588.cc^
 ||kuaiso.hk^
 ||kuaisounews.com^
+||kuaisusou.cc^
 ||kubh.lkcpz.download^
+||kusearch.cc^
 ||kushalinfra.com^
 ||kushibar.com.tw^
 ||kxwo.com^
@@ -854,6 +875,7 @@
 ||lighteningtikes.com^
 ||lightfly.com.cn^
 ||likeji.net^
+||linksou.cc^
 ||linksure.cn^
 ||linqq.net^
 ||lisaxie.com^
@@ -963,6 +985,7 @@
 ||newcastle.net.cn^
 ||news.yszx2a.com^
 ||nexteer.cc^
+||nicesou.cc^
 ||nimasou.me^
 ||ninisanj.com^
 ||niostack.com^
@@ -1025,6 +1048,7 @@
 ||paruze.com^
 ||pcok100.com^
 ||peiyige.com^
+||penzai.com^
 ||pervalkoje.lt^
 ||pexim.vn^
 ||photoplayhouse.com^
@@ -1052,6 +1076,7 @@
 ||pzft.xekjn.top^
 ||q2xaea.aqzlmy.pw^
 ||q5j.org^
+||q8ab.com^
 ||qastack.cn^
 ||qcuao.top^
 ||qdjjldaigou.com^
@@ -1230,6 +1255,7 @@
 ||sou.sfe8.com^
 ||soudiy.com^
 ||soumoye.com^
+||sounote.cc^
 ||souzhuang.cn^
 ||soydemac.com^
 ||specialty-tire.com^
@@ -1267,12 +1293,15 @@
 ||takedown.icu^
 ||talleralcubo.com^
 ||tanghtine.com^
+||taofx.cc^
 ||taozx.cn^
 ||taptapdashonline.com^
 ||tarinaka.com^
 ||tauferer-ahrntal.eu^
+||tbbee.cc^
 ||tceic.com^
 ||tdjgw.com^
+||teamumwelt.buzz^
 ||techwrestler.com^
 ||teentube18.org^
 ||telanganatopnews.com^
@@ -1294,6 +1323,7 @@
 ||tihaofree.com^
 ||tinystm.org^
 ||tipsandtricks.tech^
+||tititi.cc^
 ||tixixuexi.com^
 ||tizuh.cn^
 ||tjjltx.com^
@@ -1319,6 +1349,7 @@
 ||tsns.xyz^
 ||tttiii.cc^
 ||tujour.com^
+||tuokehj.com^
 ||tvkrimpenerwaard.nl^
 ||tw511.com^
 ||twgjy.com^
@@ -1397,6 +1428,7 @@
 ||westsectionclub.com^
 ||whitneytembelis.com^
 ||whjjms.com^
+||whldl.com^
 ||whysw88.com^
 ||wienfm.com^
 ||wikioi.com^
@@ -1416,6 +1448,8 @@
 ||woso.cn^
 ||wowoka.com^
 ||wpwfg.cn^
+||wsearch.cc^
+||wtsearch.cc^
 ||wui5.com^
 ||wuji8.com^
 ||wumeiyoupin.com^
@@ -1446,7 +1480,9 @@
 ||xieetuuy.com^
 ||xilr.uwudk.top^
 ||xima.org^
+||xindd.cc^
 ||xinfuq.cn^
+||xinfx.cc^
 ||xinguge.cn^
 ||xiroou.com^
 ||xjdpg.cn^
@@ -1482,12 +1518,14 @@
 ||yfytw.com^
 ||yibinyd.com^
 ||yidiansousuo.com^
+||yifx.cc^
 ||yingyuwen.com^
 ||yinweiaihuoguo.com^
 ||yinxiu266.com^
 ||yinyan.org^
 ||yiper.cn^
 ||yirenkeji.com^
+||yisearch.cc^
 ||yiyou3.com^
 ||yjebh.com^
 ||yjhxw.cn^
@@ -1508,6 +1546,7 @@
 ||yqzxdq.com^
 ||ys2344.com^
 ||ysboss.cn^
+||ysou.cc^
 ||ysou.pw^
 ||yteh.xpwqq.download^
 ||ytmushroom.com^
@@ -1578,6 +1617,7 @@
 ||zvazx.link^
 ||zx001.com.cn^
 ||zxbx.awejp.top^
+||zxsou.cc^
 ||zxsy5.com^
 ||zyldjd.com^
 ||zymseo.com^

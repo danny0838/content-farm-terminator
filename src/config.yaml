@@ -2,44 +2,82 @@ auto_tasks:
   # aggregate sources and build all
   default:
     - action: aggregate
-    - action: uniquify
-      kwargs:
-        files:
-          - src/blocklist/not-content-farms.txt
-          - src/blocklist/content-farms.txt
-        auto_fix_excludes:
-          - src/blocklist/not-content-farms.txt
-        cross_files: true
-        auto_fix: true
-    - action: uniquify
-      kwargs:
-        files:
-          - src/blocklist/not-content-farms.txt
-          - src/blocklist/bad-cloners.txt
-        auto_fix_excludes:
-          - src/blocklist/not-content-farms.txt
-        cross_files: true
-        auto_fix: true
-    - action: uniquify
-      kwargs:
-        files:
-          - src/blocklist/not-content-farms.txt
-          - src/blocklist/content-farms.txt
-          - src/blocklist/nearly-content-farms.txt
-        auto_fix_excludes:
-          - src/blocklist/not-content-farms.txt
-          - src/blocklist/content-farms.txt
-        cross_files: true
-        auto_fix: true
     - action: lint
       kwargs:
         files:
-          - src/blocklist/content-farms.txt
-          - src/blocklist/nearly-content-farms.txt
-          - src/blocklist/bad-cloners.txt
+          - src/blocklist/
+          - src/aggregations/
         auto_fix: true
         sort_rules: true
-        remove_empty: true
+    - action: uniquify
+      kwargs:
+        files:
+          - src/blocklist/not-content-farms.txt
+        auto_fix: true
+    - action: uniquify
+      kwargs:
+        files:
+          - src/blocklist/not-content-farms.txt
+          - src/blocklist/content-farms.txt
+        auto_fix_excludes:
+          - src/blocklist/not-content-farms.txt
+        cross_files: true
+        auto_fix: true
+    - action: uniquify
+      kwargs:
+        files:
+          - src/blocklist/not-content-farms.txt
+          - src/blocklist/content-farms.txt
+          - src/blocklist/nearly-content-farms.txt
+        auto_fix_excludes:
+          - src/blocklist/not-content-farms.txt
+          - src/blocklist/content-farms.txt
+        cross_files: true
+        auto_fix: true
+    - action: uniquify
+      kwargs:
+        files:
+          - src/blocklist/not-content-farms.txt
+          - src/blocklist/bad-cloners.txt
+        auto_fix_excludes:
+          - src/blocklist/not-content-farms.txt
+        cross_files: true
+        auto_fix: true
+    - action: uniquify
+      kwargs:
+        files:
+          - src/blocklist/not-content-farms.txt
+          - src/blocklist/content-farms.txt
+          - src/aggregations/content-farms/
+        auto_fix_excludes:
+          - src/blocklist/not-content-farms.txt
+          - src/blocklist/content-farms.txt
+        cross_files: true
+        auto_fix: true
+    - action: uniquify
+      kwargs:
+        files:
+          - src/blocklist/not-content-farms.txt
+          - src/blocklist/content-farms.txt
+          - src/blocklist/nearly-content-farms.txt
+          - src/aggregations/nearly-content-farms/
+        auto_fix_excludes:
+          - src/blocklist/not-content-farms.txt
+          - src/blocklist/content-farms.txt
+          - src/blocklist/nearly-content-farms.txt
+        cross_files: true
+        auto_fix: true
+    - action: uniquify
+      kwargs:
+        files:
+          - src/blocklist/not-content-farms.txt
+          - src/blocklist/bad-cloners.txt
+          - src/aggregations/bad-cloners/
+        auto_fix_excludes:
+          - src/blocklist/not-content-farms.txt
+          - src/blocklist/bad-cloners.txt
+        cross_files: true
+        auto_fix: true
     - action: build
 
   # lint all general blacklists
@@ -47,10 +85,7 @@ auto_tasks:
     - action: lint
       kwargs:
         files:
-          - src/blocklist/not-content-farms.txt
-          - src/blocklist/content-farms.txt
-          - src/blocklist/nearly-content-farms.txt
-          - src/blocklist/sns-content-farms.txt
+          - src/blocklist/
         auto_fix: true
         sort_rules: true
 
@@ -68,41 +103,65 @@ auto_tasks:
           - src/blocklist/not-content-farms.txt
           - src/blocklist/content-farms.txt
           - src/blocklist/nearly-content-farms.txt
+          - src/blocklist/bad-cloners.txt
           - src/blocklist/sns-content-farms.txt
-        advanced: true
-        cross_files: true
         auto_fix_excludes:
           - src/blocklist/not-content-farms.txt
+        advanced: true
+        cross_files: true
         auto_fix: true
 
 aggregate:
-  - source:
-      - url: https://raw.githubusercontent.com/mxt305/smashXxcnxx/main/filters/xxcnxx-list.json
-        type: domains_json
-      - url: https://raw.githubusercontent.com/wdmpa/content-farm-list/main/domains/spam/g.penzai.com.txt
-        type: ublacklist
-      - url: https://raw.githubusercontent.com/wdmpa/content-farm-list/main/domains/spam/cxyzjd.txt
-        type: ublacklist
-      - url: https://raw.githubusercontent.com/wdmpa/content-farm-list/main/domains/spam/ksou.cc.txt
-        type: ublacklist
-      - url: https://raw.githubusercontent.com/wdmpa/content-farm-list/main/domains/spam/www.6532033.com.txt
-        type: ublacklist
-    dest: src/blocklist/content-farms.txt
-  - source:
-      - url: https://raw.githubusercontent.com/arosh/ublacklist-stackoverflow-translation/master/uBlacklist.txt
-        type: ublacklist
-      - url: https://raw.githubusercontent.com/arosh/ublacklist-github-translation/master/uBlacklist.txt
-        type: ublacklist
-      - url: https://raw.githubusercontent.com/wdmpa/content-farm-list/main/domains/machine-translated/stackoverflow.txt
-        type: ublacklist
-    dest: src/blocklist/bad-cloners.txt
-  - source:
-      - url: https://raw.githubusercontent.com/cobaltdisco/Google-Chinese-Results-Blocklist/master/GHHbD_perma_ban_list.txt
-        type: domains_txt
-    dest: src/blocklist/nearly-content-farms.txt
+  - name: xxcnxx
+    homepage: https://github.com/mxt305/smashXxcnxx
+    source: https://raw.githubusercontent.com/mxt305/smashXxcnxx/main/filters/xxcnxx-list.json
+    dest: src/aggregations/content-farms/xxcnxx-list.txt
+    type: domains_json
+  - name: penzai
+    homepage: https://github.com/wdmpa/content-farm-list
+    source: https://raw.githubusercontent.com/wdmpa/content-farm-list/main/domains/spam/g.penzai.com.txt
+    dest: src/aggregations/content-farms/g.penzai.com.txt
+    type: ublacklist
+  - name: cxyzjd
+    homepage: https://github.com/wdmpa/content-farm-list
+    source: https://raw.githubusercontent.com/wdmpa/content-farm-list/main/domains/spam/cxyzjd.txt
+    dest: src/aggregations/content-farms/cxyzjd.txt
+    type: ublacklist
+  - name: ksou
+    homepage: https://github.com/wdmpa/content-farm-list
+    source: https://raw.githubusercontent.com/wdmpa/content-farm-list/main/domains/spam/ksou.cc.txt
+    dest: src/aggregations/content-farms/ksou.cc.txt
+    type: ublacklist
+  - name: www6532033
+    homepage: https://github.com/wdmpa/content-farm-list
+    source: https://raw.githubusercontent.com/wdmpa/content-farm-list/main/domains/spam/www.6532033.com.txt
+    dest: src/aggregations/content-farms/www.6532033.com.txt
+    type: ublacklist
+  - name: GHHbD
+    homepage: https://github.com/cobaltdisco/Google-Chinese-Results-Blocklist
+    source: https://raw.githubusercontent.com/cobaltdisco/Google-Chinese-Results-Blocklist/master/GHHbD_perma_ban_list.txt
+    dest: src/aggregations/nearly-content-farms/google-chinese-results-blocklist.txt
+    type: domains_txt
+  - name: ublSoT
+    homepage: https://github.com/arosh/ublacklist-stackoverflow-translation
+    source: https://raw.githubusercontent.com/arosh/ublacklist-stackoverflow-translation/master/uBlacklist.txt
+    dest: src/aggregations/bad-cloners/ublacklist-stackoverflow-translation.txt
+    type: ublacklist
+  - name: ublGhT
+    homepage: https://github.com/arosh/ublacklist-github-translation
+    source: https://raw.githubusercontent.com/arosh/ublacklist-github-translation/master/uBlacklist.txt
+    dest: src/aggregations/bad-cloners/ublacklist-github-translation.txt
+    type: ublacklist
+  - name: wdmpaMtSo
+    homepage: https://github.com/wdmpa/content-farm-list
+    source: https://raw.githubusercontent.com/wdmpa/content-farm-list/main/domains/machine-translated/stackoverflow.txt
+    dest: src/aggregations/bad-cloners/wdmpa-machine-translated-stackoverflow.txt
+    type: ublacklist
 
 build:
-  - source: src/blocklist/content-farms.txt
+  - source:
+      - src/blocklist/content-farms.txt
+      - src/aggregations/content-farms/
     publish: docs/files/blocklist/content-farms.txt
     data:
       schemes: &content_farms_schemes
@@ -124,7 +183,9 @@ build:
           <<: *grouping_regex_scheme
           value: /https?://(?:www\.)?(?:{value})(?=[/?#]|$)/
 
-  - source: src/blocklist/nearly-content-farms.txt
+  - source:
+      - src/blocklist/nearly-content-farms.txt
+      - src/aggregations/nearly-content-farms/
     publish: docs/files/blocklist/nearly-content-farms.txt
     data:
       schemes: *content_farms_schemes
@@ -170,7 +231,9 @@ build:
           <<: *grouping_regex_scheme
           value: /https?://(?:haokan|sv)\.baidu\.com/author/(?:{value})(?=[/?#]|$)/
 
-  - source: src/blocklist/bad-cloners.txt
+  - source:
+      - src/blocklist/bad-cloners.txt
+      - src/aggregations/bad-cloners/
     publish: docs/files/blocklist/bad-cloners.txt
     data:
       schemes: *content_farms_schemes
@@ -185,7 +248,9 @@ build:
     data:
       schemes: *content_farms_schemes
 
-  - source: src/blocklist/content-farms.txt
+  - source:
+      - src/blocklist/content-farms.txt
+      - src/aggregations/content-farms/
     publish: docs/files/blocklist-hosts/content-farms.txt
     type: hosts
     data:
@@ -201,7 +266,9 @@ build:
           pattern: blogspot\.\*$
           replacement: blogspot.com
 
-  - source: src/blocklist/nearly-content-farms.txt
+  - source:
+      - src/blocklist/nearly-content-farms.txt
+      - src/aggregations/nearly-content-farms/
     publish: docs/files/blocklist-hosts/nearly-content-farms.txt
     type: hosts
     data:
@@ -213,7 +280,9 @@ build:
         Licence: MIT License
         Source: https://danny0838.github.io/content-farm-terminator/files/blocklist-hosts/nearly-content-farms.txt
 
-  - source: src/blocklist/bad-cloners.txt
+  - source:
+      - src/blocklist/bad-cloners.txt
+      - src/aggregations/bad-cloners/
     publish: docs/files/blocklist-hosts/bad-cloners.txt
     type: hosts
     data:
@@ -248,7 +317,9 @@ build:
         Licence: MIT License
         Source: https://danny0838.github.io/content-farm-terminator/files/blocklist-hosts/scam-sites.txt
 
-  - source: src/blocklist/content-farms.txt
+  - source:
+      - src/blocklist/content-farms.txt
+      - src/aggregations/content-farms/
     publish: docs/files/blocklist-ubo/content-farms.txt
     type: ubo
     data:
@@ -276,7 +347,9 @@ build:
           <<: *grouping_regex_scheme
           value: /https?://(?:www\.|(?!www\.))[\w.-]+\.(?:{value})(?=[:/?#]|$)/
 
-  - source: src/blocklist/nearly-content-farms.txt
+  - source:
+      - src/blocklist/nearly-content-farms.txt
+      - src/aggregations/nearly-content-farms/
     publish: docs/files/blocklist-ubo/nearly-content-farms.txt
     type: ubo
     data:
@@ -306,7 +379,9 @@ build:
       schemes:
         <<: *sns_content_farms_schemes
 
-  - source: src/blocklist/bad-cloners.txt
+  - source:
+      - src/blocklist/bad-cloners.txt
+      - src/aggregations/bad-cloners/
     publish: docs/files/blocklist-ubo/bad-cloners.txt
     type: ubo
     data:
@@ -349,7 +424,9 @@ build:
       processors: *content_farms_processors_ubo
       schemes: *content_farms_schemes_ubo
 
-  - source: src/blocklist/content-farms.txt
+  - source:
+      - src/blocklist/content-farms.txt
+      - src/aggregations/content-farms/
     publish: docs/files/blocklist-ublacklist/content-farms.txt
     type: ublacklist
     data:
@@ -382,7 +459,9 @@ build:
           <<: *grouping_regex_scheme
           value: /https?://(?:[\w-]+\.)*(?:{value})\.blogspot\.(?:[\w.-]+)(?=[:\/?#]|$)/
 
-  - source: src/blocklist/nearly-content-farms.txt
+  - source:
+      - src/blocklist/nearly-content-farms.txt
+      - src/aggregations/nearly-content-farms/
     publish: docs/files/blocklist-ublacklist/nearly-content-farms.txt
     type: ublacklist
     data:
@@ -396,7 +475,9 @@ build:
       processors: *content_farms_processors_ublacklist
       schemes: *content_farms_schemes_ublacklist
 
-  - source: src/blocklist/bad-cloners.txt
+  - source:
+      - src/blocklist/bad-cloners.txt
+      - src/aggregations/bad-cloners/
     publish: docs/files/blocklist-ublacklist/bad-cloners.txt
     type: ublacklist
     data:

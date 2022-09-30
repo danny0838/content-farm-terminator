@@ -1,9 +1,42 @@
 ! Title: Bad Cloners
 ! Description: Filter for bad clone sites.
-! Last modified: 2022-09-29T04:33:01+00:00
+! Last modified: 2022-10-01T00:02:50+00:00
 ! Homepage: https://danny0838.github.io/content-farm-terminator/
 ! Source: https://danny0838.github.io/content-farm-terminator/files/blocklist-ubo/bad-cloners.txt
-#!aggregated source: https://raw.githubusercontent.com/arosh/ublacklist-stackoverflow-translation/master/uBlacklist.txt
+#!aggreg-ublGhT: https://raw.githubusercontent.com/arosh/ublacklist-github-translation/master/uBlacklist.txt (https://github.com/arosh/ublacklist-github-translation)
+||awesomeopensource.com^
+||bestofcpp.com^
+||bestrustcrates.com^
+||bleepcoder.com^
+||codesti.com^
+||curatedgo.com^
+||findbestopensource.com^
+||gitanswer.com^
+||gitanswer.net^
+||giters.com^
+||github.innominds.com^
+||githubhelp.com^
+||githubhot.com^
+||githubja.com^
+||githublab.com^
+||githubmate.com^
+||githubmemory.com^
+||githubplus.com^
+||gitmemory.cn^
+||gitmemory.com^
+||golangrepo.com^
+||higithub.com^
+||issueantenna.com^
+||issuehint.com^
+||kandi.openweaver.com^
+||openprojectrepo.com^
+||opensourcelibs.com^
+||pythonissues.com^
+||pythonrepo.com^
+||reposhub.com^
+||rustrepo.com^
+||wenyanet.com^
+#!aggreg-ublSoT: https://raw.githubusercontent.com/arosh/ublacklist-stackoverflow-translation/master/uBlacklist.txt (https://github.com/arosh/ublacklist-stackoverflow-translation)
 ||16892.net^
 ||1r1g.com^
 ||55276.net^
@@ -167,6 +200,7 @@
 ||stackguides.com^
 ||stackoom.com^
 ||stackovergo.com^
+||stackubuntu.com^
 ||string.quest^
 ||sunflowercreations.org^
 ||super-unix.com^
@@ -212,40 +246,7 @@
 ||zaizhele.cn^
 ||zaizhele.net^
 ||zsharp.org^
-#!aggregated source: https://raw.githubusercontent.com/arosh/ublacklist-github-translation/master/uBlacklist.txt
-||awesomeopensource.com^
-||bestofcpp.com^
-||bestrustcrates.com^
-||bleepcoder.com^
-||codesti.com^
-||curatedgo.com^
-||findbestopensource.com^
-||gitanswer.com^
-||gitanswer.net^
-||giters.com^
-||github.innominds.com^
-||githubhelp.com^
-||githubhot.com^
-||githubja.com^
-||githublab.com^
-||githubmate.com^
-||githubmemory.com^
-||githubplus.com^
-||gitmemory.cn^
-||gitmemory.com^
-||golangrepo.com^
-||higithub.com^
-||issueantenna.com^
-||issuehint.com^
-||kandi.openweaver.com^
-||openprojectrepo.com^
-||opensourcelibs.com^
-||pythonissues.com^
-||pythonrepo.com^
-||reposhub.com^
-||rustrepo.com^
-||wenyanet.com^
-#!aggregated source: https://raw.githubusercontent.com/wdmpa/content-farm-list/main/domains/machine-translated/stackoverflow.txt
+#!aggreg-wdmpaMtSo: https://raw.githubusercontent.com/wdmpa/content-farm-list/main/domains/machine-translated/stackoverflow.txt (https://github.com/wdmpa/content-farm-list)
 ||366service.com^
 ||androidcookie.com^
 ||ask.helplib.com^

@@ -390,18 +390,33 @@ class Builder:
             self.run_task(task)
 
     def run_task(self, task):
-        src_file = os.path.normpath(os.path.join(self.root, task['source']))
+        src_files = task['source']
+        src_files = [src_files] if isinstance(src_files, str) else src_files
+        src_files = flatten_files(os.path.join(self.root, f) for f in src_files)
+
         dst_file = os.path.normpath(os.path.join(self.root, task['publish']))
 
-        log.info('building "%s" from "%s" ...',
-                 os.path.relpath(dst_file, self.root),
-                 os.path.relpath(src_file, self.root))
+        log.info('building "%s" ...', os.path.relpath(dst_file, self.root))
         os.makedirs(os.path.dirname(dst_file), exist_ok=True)
-        with open(src_file, 'r', encoding='UTF-8-SIG') as ih, \
-             open(dst_file, 'w', encoding='UTF-8') as oh:
+
+        with open(dst_file, 'w', encoding='UTF-8') as oh:
             with redirect_stdout(oh):
                 converter = get_converter(task.get('type', 'cft'))
-                converter(ih, task.get('data', {}), self.date).run()
+                converter(None, task.get('data', {}), self.date).print_headers()
+
+                for src_file in src_files:
+                    log.info('adding "%s" ...', os.path.relpath(src_file, self.root))
+                    try:
+                        ih = open(src_file, 'r', encoding='UTF-8-SIG')
+                    except OSError as exc:
+                        log.warning('Unable to add source "%s" when building "%s": %s',
+                                    os.path.relpath(src_file, self.root),
+                                    os.path.relpath(dst_file, self.root),
+                                    exc)
+                    else:
+                        with ih as ih:
+                            converter = get_converter(task.get('type', 'cft'))
+                            converter(ih, task.get('data', {}), self.date).run()
 
 
 def get_converter(name):
@@ -427,8 +442,6 @@ class Converter:
         self.date = date
 
     def run(self):
-        self.print_headers()
-
         scheme_groups = {}
         for line in self.fh:
             line = line.rstrip('\n')
@@ -611,8 +624,6 @@ class Converter:
 class ConverterCopy(Converter):
     """Copy to the target and add a header."""
     def run(self):
-        self.print_headers()
-
         for line in self.fh:
             print(line, end='')
 
@@ -753,62 +764,38 @@ class Aggregator:
         self.config = config or {}
 
     def run(self):
-        for task in self.config.get('aggregate', []):
-            self.run_task(task)
+        for i, task in enumerate(self.config.get('aggregate', [])):
+            self.run_task(task, i)
 
-    def run_task(self, task):
-        sources = task['source']
+    def run_task(self, task, index):
+        name = task.get('name', str(index + 1))
+        homepage = task.get('homepage')
+        url = task['source']
         dest = os.path.normpath(os.path.join(self.root, task['dest']))
+        type = task.get('type', 'domains_txt')
         strip_eol = task.get('strip_eol', False)
 
-        rules = []
-        for source in sources:
-            url = source['url']
-            type = source['type']
-            log.info('aggregating rules from "%s" ...', url)
-            try:
-                r = requests.get(url)
-            except requests.exceptions.RequestException as exc:
-                log.error('failed to fetch "%s": %s', url, exc)
-                return
-
-            if not r.ok:
-                log.error('failed to fetch "%s": %i', url, r.status_code)
-                return
-
-            text = r.text
-            rules += self.convert_rules(type, text, url)
-
-        log.info('mixing aggregated rules to %s ...', dest)
-        os.makedirs(os.path.dirname(dest), exist_ok=True)
+        log.info('aggregating rules from "%s" to %s ...', url, dest)
         try:
-            fh = open(dest, 'r', encoding='UTF-8-SIG')
-        except FileNotFoundError:
-            text = ''
-        else:
-            with fh as fh:
-                text = fh.read()
+            r = requests.get(url)
+        except requests.exceptions.RequestException as exc:
+            log.error('failed to fetch "%s": %s', url, exc)
+            return
 
-        for source in sources:
-            url = source['url']
+        if not r.ok:
+            log.error('failed to fetch "%s": %i', url, r.status_code)
+            return
 
-            output = ''.join(
-                f'{rule.rule} {rule.comment}{" " if rule.comment else ""}#!aggregated\n'
-                for rule in rules
-                if rule.path == url
-            )
-            output = f'  #!aggregated source: {url}\n{output}'
+        text = r.text
+        rules = self.convert_rules(type, text, url)
 
-            m = re.search(fr'^\s+#!aggregated source: {re.escape(url)}\n(.*?)\n(?=^\s+#!aggregated\b|\Z)',
-                          text,
-                          flags=re.M + re.S)
-            if m:
-                text = text[:m.start(0)] + ('\n' if m.start(0) else '') + output + text[m.end(0):]
-            else:
-                text += ('\n' if text else '') + output
-
+        s_homepage = f' ({homepage})' if homepage else ''
+        os.makedirs(os.path.dirname(dest), exist_ok=True)
         with open(dest, 'w', encoding='UTF-8') as fh:
-            fh.write(text)
+            with redirect_stdout(fh):
+                print(f'  #!aggreg-{name}: {url}{s_homepage}')
+                for rule in rules:
+                    print(f'{rule.rule} {rule.comment}{" " if rule.comment else ""}#!aggreg-{name}')
 
         if strip_eol:
             log.debug('stripping eol for %s ...', dest)
