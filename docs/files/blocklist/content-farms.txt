@@ -1,3 +1,9 @@
+  # Title: Content Farm Filters
+  # Description: Filter for general content farms, mostly in Chinese.
+  # Last modified: 2022-10-01T00:04:32+00:00
+  # Homepage: https://danny0838.github.io/content-farm-terminator/
+  # Licence: MIT License
+  # Source: https://danny0838.github.io/content-farm-terminator/files/blocklist/content-farms.txt
 *.y2mate.com
 /^https?://www\.ettoday\.net/dalemon/
 00000258.com

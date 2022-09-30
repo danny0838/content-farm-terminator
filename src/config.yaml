@@ -164,6 +164,13 @@ build:
       - src/aggregations/content-farms/
     publish: docs/files/blocklist/content-farms.txt
     data:
+      headers: |
+        Title: Content Farm Filters
+        Description: Filter for general content farms, mostly in Chinese.
+        Last modified: {now}
+        Homepage: https://danny0838.github.io/content-farm-terminator/
+        Licence: MIT License
+        Source: https://danny0838.github.io/content-farm-terminator/files/blocklist/content-farms.txt
       schemes: &content_farms_schemes
         xuite: &grouping_regex_scheme
           value: /^https?://(?:(?:m\.)?(?:[bv]log|photo)\.xuite\.net|m\.xuite\.net/blog)/(?:{value})(?=[/?#]|$)/
@@ -188,11 +195,27 @@ build:
       - src/aggregations/nearly-content-farms/
     publish: docs/files/blocklist/nearly-content-farms.txt
     data:
+      headers: |
+        Title: Nearly Content Farm Filters
+        Description: Filter for content-farm-like sites, mostly in Chinese.
+        Last modified: {now}
+        Homepage: https://danny0838.github.io/content-farm-terminator/
+        Licence: MIT License
+        Source: https://danny0838.github.io/content-farm-terminator/files/blocklist/nearly-content-farms.txt
       schemes: *content_farms_schemes
 
   - source: src/blocklist/sns-content-farms.txt
     publish: docs/files/blocklist/sns-content-farms.txt
     data:
+      headers: |
+        Title: SNS Content Farm Filters
+        Description: Filter for content-farm-like or related social network service (SNS) URLs, mostly in Chinese.
+            This may not work well for all cases as many things cannot be fully determined by URL.
+            This list is mostly regex-based and may have a negative effect on performance.
+        Last modified: {now}
+        Homepage: https://danny0838.github.io/content-farm-terminator/
+        Licence: MIT License
+        Source: https://danny0838.github.io/content-farm-terminator/files/blocklist/sns-content-farms.txt
       schemes: &sns_content_farms_schemes
         facebook:
           <<: *grouping_regex_scheme
@@ -236,16 +259,42 @@ build:
       - src/aggregations/bad-cloners/
     publish: docs/files/blocklist/bad-cloners.txt
     data:
+      headers: |
+        Title: Bad Cloners
+        Description: Filter for cloner sites that are mostly free of copyright issue since the source site
+            is copyleft or copyfree, but provide only trivial layout change or poor-quality bot translation
+            and are thus spam-like.
+        Last modified: {now}
+        Homepage: https://danny0838.github.io/content-farm-terminator/
+        Licence: MIT License
+        Source: https://danny0838.github.io/content-farm-terminator/files/blocklist/bad-cloners.txt
       schemes: *content_farms_schemes
 
   - source: src/blocklist/fake-news.txt
     publish: docs/files/blocklist/fake-news.txt
     data:
+      headers: |
+        Title: Fake News Filters
+        Description: Filter for fake news sites. (For reference)
+            This list is slightly organized from several sources only and is NOT actively maintained.
+        Last modified: {now}
+        Homepage: https://danny0838.github.io/content-farm-terminator/
+        Licence: MIT License
+        Source: https://danny0838.github.io/content-farm-terminator/files/blocklist/fake-news.txt
       schemes: *content_farms_schemes
 
   - source: src/blocklist/scam-sites.txt
     publish: docs/files/blocklist/scam-sites.txt
     data:
+      headers: |
+        Title: Scam Sites Filters
+        Description: Filter for scam sites. (For reference)
+            This list is slightly organized from the database of ContenFarm Filter and Critic
+            (https://github.com/xianshengyou8/filterfarm) and is NOT actively maintained.
+        Last modified: {now}
+        Homepage: https://danny0838.github.io/content-farm-terminator/
+        Licence: MIT License
+        Source: https://danny0838.github.io/content-farm-terminator/files/blocklist/scam-sites.txt
       schemes: *content_farms_schemes
 
   - source:
@@ -288,9 +337,12 @@ build:
     data:
       headers: |
         Title: Bad Cloners
-        Description: Filter for bad clone sites.
+        Description: Filter for cloner sites that are mostly free of copyright issue since the source site
+            is copyleft or copyfree, but provide only trivial layout change or poor-quality bot translation
+            and are thus spam-like.
         Last modified: {now}
         Homepage: https://danny0838.github.io/content-farm-terminator/
+        Licence: MIT License
         Source: https://danny0838.github.io/content-farm-terminator/files/blocklist-hosts/bad-cloners.txt
 
   - source: src/blocklist/fake-news.txt
@@ -299,7 +351,8 @@ build:
     data:
       headers: |
         Title: Fake News Filters
-        Description: Filter for fake news sites. (for reference)
+        Description: Filter for fake news sites. (For reference)
+            This list is slightly organized from several sources only and is NOT actively maintained.
         Last modified: {now}
         Homepage: https://danny0838.github.io/content-farm-terminator/
         Licence: MIT License
@@ -311,7 +364,9 @@ build:
     data:
       headers: |
         Title: Scam Sites Filters
-        Description: Filter for scam sites. (for reference)
+        Description: Filter for scam sites. (For reference)
+            This list is slightly organized from the database of ContenFarm Filter and Critic
+            (https://github.com/xianshengyou8/filterfarm) and is NOT actively maintained.
         Last modified: {now}
         Homepage: https://danny0838.github.io/content-farm-terminator/
         Licence: MIT License
@@ -370,7 +425,9 @@ build:
     data:
       headers: |
         Title: SNS Content Farm Filters
-        Description: Filter for content-farm related social media, mostly in Chinese.
+        Description: Filter for content-farm-like or related social network service (SNS) URLs, mostly in Chinese.
+            This may not work well for all cases as many things cannot be fully determined by URL.
+            This list is mostly regex-based and may have a negative effect on performance.
         Expires: 3 days
         Last modified: {now}
         Homepage: https://danny0838.github.io/content-farm-terminator/
@@ -387,9 +444,13 @@ build:
     data:
       headers: |
         Title: Bad Cloners
-        Description: Filter for bad clone sites.
+        Description: Filter for cloner sites that are mostly free of copyright issue since the source site
+            is copyleft or copyfree, but provide only trivial layout change or poor-quality bot translation
+            and are thus spam-like.
+        Expires: 3 days
         Last modified: {now}
         Homepage: https://danny0838.github.io/content-farm-terminator/
+        Licence: MIT License
         Source: https://danny0838.github.io/content-farm-terminator/files/blocklist-ubo/bad-cloners.txt
       processors: *content_farms_processors_ubo
       schemes: *content_farms_schemes_ubo
@@ -400,7 +461,8 @@ build:
     data:
       headers: |
         Title: Fake News Filters
-        Description: Filter for fake news sites. (for reference)
+        Description: Filter for fake news sites. (For reference)
+            This list is slightly organized from several sources only and is NOT actively maintained.
         Expires: 3 days
         Last modified: {now}
         Homepage: https://danny0838.github.io/content-farm-terminator/
@@ -415,7 +477,9 @@ build:
     data:
       headers: |
         Title: Scam Sites Filters
-        Description: Filter for scam sites. (for reference)
+        Description: Filter for scam sites. (For reference)
+            This list is slightly organized from the database of ContenFarm Filter and Critic
+            (https://github.com/xianshengyou8/filterfarm) and is NOT actively maintained.
         Expires: 3 days
         Last modified: {now}
         Homepage: https://danny0838.github.io/content-farm-terminator/
@@ -483,9 +547,12 @@ build:
     data:
       headers: |
         Title: Bad Cloners
-        Description: Filter for bad clone sites.
+        Description: Filter for cloner sites that are mostly free of copyright issue since the source site
+            is copyleft or copyfree, but provide only trivial layout change or poor-quality bot translation
+            and are thus spam-like.
         Last modified: {now}
         Homepage: https://danny0838.github.io/content-farm-terminator/
+        Licence: MIT License
         Source: https://danny0838.github.io/content-farm-terminator/files/blocklist-ublacklist/bad-cloners.txt
       processors: *content_farms_processors_ublacklist
       schemes: *content_farms_schemes_ublacklist
@@ -496,7 +563,8 @@ build:
     data:
       headers: |
         Title: Fake News Filters
-        Description: Filter for fake news sites. (for reference)
+        Description: Filter for fake news sites. (For reference)
+            This list is slightly organized from several sources only and is NOT actively maintained.
         Last modified: {now}
         Homepage: https://danny0838.github.io/content-farm-terminator/
         Licence: MIT License
@@ -510,7 +578,9 @@ build:
     data:
       headers: |
         Title: Scam Sites Filters
-        Description: Filter for scam sites. (for reference)
+        Description: Filter for scam sites. (For reference)
+            This list is slightly organized from the database of ContenFarm Filter and Critic
+            (https://github.com/xianshengyou8/filterfarm) and is NOT actively maintained.
         Last modified: {now}
         Homepage: https://danny0838.github.io/content-farm-terminator/
         Licence: MIT License
