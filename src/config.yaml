@@ -67,19 +67,6 @@ auto_tasks:
       kwargs:
         files:
           - src/blocklist/not-content-farms.txt
-          - src/blocklist/content-farms.txt
-          - src/blocklist/nearly-content-farms.txt
-          - src/aggregations/nearly-content-farms/
-        auto_fix_excludes:
-          - src/blocklist/not-content-farms.txt
-          - src/blocklist/content-farms.txt
-          - src/blocklist/nearly-content-farms.txt
-        cross_files: true
-        auto_fix: true
-    - action: uniquify
-      kwargs:
-        files:
-          - src/blocklist/not-content-farms.txt
           - src/blocklist/extra-content-farms.txt
           - src/aggregations/extra-content-farms/
         auto_fix_excludes:
