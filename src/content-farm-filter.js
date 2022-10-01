@@ -28,7 +28,7 @@
           rule.src = url;
         }
         blockList.rawRules.push(rule);
-        if (rule.rule) {
+        if (rule.rule && !blockList.rules.has(rule.rule)) {
           blockList.rules.set(rule.rule, rule);
         }
       });
