@@ -1,12 +1,11 @@
 auto_tasks:
-  # aggregate sources and build all
+  # lint general blacklists and build all
+  # -- should aggregate first
   default:
-    - action: aggregate
     - action: lint
       kwargs:
         files:
           - src/blocklist/
-          - src/aggregations/
         auto_fix: true
         sort_rules: true
     - action: uniquify
@@ -50,39 +49,6 @@ auto_tasks:
           - src/blocklist/bad-cloners.txt
         auto_fix_excludes:
           - src/blocklist/not-content-farms.txt
-        cross_files: true
-        auto_fix: true
-    - action: uniquify
-      kwargs:
-        files:
-          - src/blocklist/not-content-farms.txt
-          - src/blocklist/content-farms.txt
-          - src/aggregations/content-farms/
-        auto_fix_excludes:
-          - src/blocklist/not-content-farms.txt
-          - src/blocklist/content-farms.txt
-        cross_files: true
-        auto_fix: true
-    - action: uniquify
-      kwargs:
-        files:
-          - src/blocklist/not-content-farms.txt
-          - src/blocklist/extra-content-farms.txt
-          - src/aggregations/extra-content-farms/
-        auto_fix_excludes:
-          - src/blocklist/not-content-farms.txt
-          - src/blocklist/extra-content-farms.txt
-        cross_files: true
-        auto_fix: true
-    - action: uniquify
-      kwargs:
-        files:
-          - src/blocklist/not-content-farms.txt
-          - src/blocklist/bad-cloners.txt
-          - src/aggregations/bad-cloners/
-        auto_fix_excludes:
-          - src/blocklist/not-content-farms.txt
-          - src/blocklist/bad-cloners.txt
         cross_files: true
         auto_fix: true
     - action: build
@@ -118,6 +84,52 @@ auto_tasks:
         advanced: true
         cross_files: true
         auto_fix: true
+
+  # aggregate sources, tidy, and uniquify against general blacklists
+  aggregate: &tasks_aggregate
+    - action: aggregate
+    - action: lint
+      kwargs:
+        files:
+          - src/aggregations/
+        auto_fix: true
+        sort_rules: true
+    - action: uniquify
+      kwargs:
+        files:
+          - src/blocklist/not-content-farms.txt
+          - src/blocklist/content-farms.txt
+          - src/aggregations/content-farms/
+        auto_fix_excludes:
+          - src/blocklist/not-content-farms.txt
+          - src/blocklist/content-farms.txt
+        cross_files: true
+        auto_fix: true
+    - action: uniquify
+      kwargs:
+        files:
+          - src/blocklist/not-content-farms.txt
+          - src/blocklist/extra-content-farms.txt
+          - src/aggregations/extra-content-farms/
+        auto_fix_excludes:
+          - src/blocklist/not-content-farms.txt
+          - src/blocklist/extra-content-farms.txt
+        cross_files: true
+        auto_fix: true
+    - action: uniquify
+      kwargs:
+        files:
+          - src/blocklist/not-content-farms.txt
+          - src/blocklist/bad-cloners.txt
+          - src/aggregations/bad-cloners/
+        auto_fix_excludes:
+          - src/blocklist/not-content-farms.txt
+          - src/blocklist/bad-cloners.txt
+        cross_files: true
+        auto_fix: true
+
+  # shortcut
+  a: *tasks_aggregate
 
 aggregate:
   - name: xxcnxx
