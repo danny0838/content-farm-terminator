@@ -118,7 +118,8 @@ async function init(event) {
           document.querySelector('#infoUrlBlockerSrc').hidden = false;
           document.querySelector('#infoUrlBlocker dd').textContent = [blocker.rule, blocker.sep, blocker.comment].join('');
           if (blocker.src) {
-            document.querySelector('#infoUrlBlockerSrc dd').textContent = blocker.src;
+            const anchor = document.querySelector('#infoUrlBlockerSrc dd').appendChild(document.createElement('a'));
+            anchor.href = anchor.textContent = blocker.src;
           }
         })();
       }
