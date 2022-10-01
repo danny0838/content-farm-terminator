@@ -140,10 +140,10 @@ async function updateFilter() {
       newFilter.addTransformRules(options.transformRules);
       newFilter.addBlackList(options.userBlacklist);
       newFilter.addWhiteList(options.userWhitelist);
-      const tasks = newFilter
-        .urlsTextToLines(options.webBlacklists)
-        .map(u => newFilter.addBlackListFromUrl(u, options.webBlacklistsCacheDuration));
-      await Promise.all(tasks);
+      await newFilter.addWebBlackLists(
+        options.webBlacklists,
+        options.webBlacklistsCacheDuration
+      );
       newFilter.makeCachedRules();
       filter = newFilter;
 
