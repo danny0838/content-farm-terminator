@@ -228,13 +228,13 @@ class Linter:
 
         if self.auto_fix:
             if new_rules != rules:
-                log.info('saving auto-fixed %s ...', subpath)
+                log.info('Saving auto-fixed %s ...', subpath)
                 with open(file, 'w', encoding='UTF-8') as fh:
                     for rule in new_rules:
                         print(f'{rule.rule}{rule.sep}{rule.comment}', file=fh)
 
             if self.strip_eol:
-                log.debug('stripping eol for %s ...', subpath)
+                log.debug('Stripping eol for %s ...', subpath)
                 file_strip_eol(file)
 
     def check_rule(self, rule):
@@ -369,12 +369,12 @@ class Uniquifier:
         if any(os.path.samefile(file, f) for f in self.auto_fix_excludes):
             return
 
-        log.info('saving auto-fixed %s ...', subpath)
+        log.info('Saving auto-fixed %s ...', subpath)
         with open(file, 'w', encoding='UTF-8') as fh:
             for rule in rules:
                 print(f'{rule.rule}{rule.sep}{rule.comment}', file=fh)
         if self.strip_eol:
-            log.debug('stripping eol for %s ...', subpath)
+            log.debug('Stripping eol for %s ...', subpath)
             file_strip_eol(file)
 
 
@@ -396,7 +396,7 @@ class Builder:
 
         dst_file = os.path.normpath(os.path.join(self.root, task['publish']))
 
-        log.info('building "%s" ...', os.path.relpath(dst_file, self.root))
+        log.info('Building "%s" ...', os.path.relpath(dst_file, self.root))
         os.makedirs(os.path.dirname(dst_file), exist_ok=True)
 
         with open(dst_file, 'w', encoding='UTF-8') as oh:
@@ -405,7 +405,7 @@ class Builder:
                 converter(None, task.get('data', {}), self.date).print_headers()
 
                 for src_file in src_files:
-                    log.info('adding "%s" ...', os.path.relpath(src_file, self.root))
+                    log.info('Adding "%s" ...', os.path.relpath(src_file, self.root))
                     try:
                         ih = open(src_file, 'r', encoding='UTF-8-SIG')
                     except OSError as exc:
@@ -501,7 +501,7 @@ class Converter:
         """Handle a scheme rule."""
         scheme = self.info.get('schemes', {}).get(rule.scheme)
         if scheme is None:
-            log.warning('rule "%s" has an undefined scheme', rule.rule)
+            log.warning('Rule "%s" has an undefined scheme', rule.rule)
             return
 
         value = rule.value
@@ -517,7 +517,7 @@ class Converter:
             try:
                 escaper = getattr(self, f'escape_{escaper}')
             except AttributeError:
-                log.warning('escaper "%s" is not defined', escaper)
+                log.warning('Escaper "%s" is not defined', escaper)
             else:
                 value = escaper(value)
 
@@ -533,7 +533,7 @@ class Converter:
         scheme_max = scheme.get('max')
         if scheme_max is not None:
             if len(value) > scheme_max:
-                log.warning('rule "%s" exceeds max length %i', rule.rule, scheme_max)
+                log.warning('Rule "%s" exceeds max length %i', rule.rule, scheme_max)
                 return
 
         mode = scheme.get('mode')
@@ -587,7 +587,7 @@ class Converter:
                         outputs.append(value)
                         items = items[pos:]
                     else:
-                        log.warning('rule "%s" exceeds max length %i', items[0][1].rule, scheme_max)
+                        log.warning('Rule "%s" exceeds max length %i', items[0][1].rule, scheme_max)
                         items = items[1:]
 
             mode = scheme.get('mode')
@@ -779,15 +779,15 @@ class Aggregator:
         type = task.get('type', 'domains_txt')
         strip_eol = task.get('strip_eol', False)
 
-        log.info('aggregating rules from "%s" to %s ...', url, dest)
+        log.info('Aggregating rules from "%s" to %s ...', url, dest)
         try:
             r = requests.get(url)
         except requests.exceptions.RequestException as exc:
-            log.error('failed to fetch "%s": %s', url, exc)
+            log.error('Failed to fetch "%s": %s', url, exc)
             return
 
         if not r.ok:
-            log.error('failed to fetch "%s": %i', url, r.status_code)
+            log.error('Failed to fetch "%s": %i', url, r.status_code)
             return
 
         text = r.text
@@ -802,7 +802,7 @@ class Aggregator:
                     print(f'{rule.rule} {rule.comment}{" " if rule.comment else ""}#!aggreg-{name}')
 
         if strip_eol:
-            log.debug('stripping eol for %s ...', dest)
+            log.debug('Stripping eol for %s ...', dest)
             file_strip_eol(dest)
 
     def convert_rules(self, type, text, url):
