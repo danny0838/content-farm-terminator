@@ -1,7 +1,7 @@
 ! Title: Content Farm Filters
 ! Description: Filter for general content farms, mostly in Chinese.
 ! Expires: 3 days
-! Last modified: 2022-10-01T00:13:59+00:00
+! Last modified: 2022-10-01T00:20:34+00:00
 ! Homepage: https://danny0838.github.io/content-farm-terminator/
 ! Licence: MIT License
 ! Source: https://danny0838.github.io/content-farm-terminator/files/blocklist-ubo/content-farms.txt
@@ -2896,6 +2896,7 @@
 ||codeantenna.com^
 ||codebug.vip^
 ||codeday.me^
+||codehero.jp^
 ||codeleading.com^
 ||codenong.com^
 ||codeprj.com^
@@ -6081,6 +6082,7 @@
 ||ispot.news^
 ||isth2020.it^  #redirects to isabel-lopez-kubben.at
 ||isuduw.blogspot.*^$document
+||it-mure.jp.net^
 ||it-swarm.asia^
 ||it1256.com^  #redirects to g.penzai.com
 ||it1352.com^

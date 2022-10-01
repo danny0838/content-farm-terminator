@@ -1,6 +1,6 @@
 # Title: Content Farm Filters
 # Description: Filter for general content farms, mostly in Chinese.
-# Last modified: 2022-10-01T00:02:50+00:00
+# Last modified: 2022-10-01T00:20:34+00:00
 # Homepage: https://danny0838.github.io/content-farm-terminator/
 # Licence: MIT License
 # Source: https://danny0838.github.io/content-farm-terminator/files/blocklist-hosts/content-farms.txt
@@ -2885,6 +2885,7 @@
 127.0.0.1 codeantenna.com
 127.0.0.1 codebug.vip
 127.0.0.1 codeday.me
+127.0.0.1 codehero.jp
 127.0.0.1 codeleading.com
 127.0.0.1 codenong.com
 127.0.0.1 codeprj.com
@@ -6068,6 +6069,7 @@
 127.0.0.1 ispot.news
 127.0.0.1 isth2020.it  #redirects to isabel-lopez-kubben.at
 127.0.0.1 isuduw.blogspot.com
+127.0.0.1 it-mure.jp.net
 127.0.0.1 it-swarm.asia
 127.0.0.1 it1256.com  #redirects to g.penzai.com
 127.0.0.1 it1352.com
