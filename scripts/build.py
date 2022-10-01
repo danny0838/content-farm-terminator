@@ -1042,20 +1042,25 @@ def main():
         os.chdir(args.root)
 
         log.debug('Running auto task "%s" at %s ...', args.task, os.getcwd())
-        for task in config.get('auto_tasks', {}).get(args.task, []):
-            action = task.get('action')
-            if action == 'lint':
-                cls = Linter
-            elif action == 'uniquify':
-                cls = Uniquifier
-            elif action == 'build':
-                cls = Builder
-            elif action == 'aggregate':
-                cls = Aggregator
-            else:
-                continue
-            kwargs = task.get('kwargs', {})
-            cls(args.root, config, **kwargs).run()
+        try:
+            tasks = config.get('auto_tasks', {})[args.task]
+        except KeyError:
+            log.error('Failed to run auto task "%s": task not found', args.task)
+        else:
+            for task in tasks:
+                action = task.get('action')
+                if action == 'lint':
+                    cls = Linter
+                elif action == 'uniquify':
+                    cls = Uniquifier
+                elif action == 'build':
+                    cls = Builder
+                elif action == 'aggregate':
+                    cls = Aggregator
+                else:
+                    continue
+                kwargs = task.get('kwargs', {})
+                cls(args.root, config, **kwargs).run()
 
     log.debug('Time spent: %s', datetime.now() - start_time)
 
