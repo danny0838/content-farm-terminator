@@ -458,34 +458,6 @@
 
     makeCachedRules(...args) {
       const reRegexRule = /^\/(.*)\/([a-z]*)$/;
-      const reAdvancedRegex = new RegExp([
-        // capture group 1: \n or \k<name>
-        // @TODO: prevent false positive for something like \k<\b>
-        '(' + '\\\\(?:[1-9]|k<[^>]+>)' + ')',
-        '\\\\.',
-        '\\[(?:[^\\\\\\]]*(?:\\\\.[^\\\\\\]]*)*)\\]',
-        // capture group 2: (foo) or (?<name>foo)
-        '(' + '\\((?:(?!\\?)|\\?<(?![!=])[^>]+>)' + ')',
-      ].join('|'), 'g');
-      const reMaxGroups = 16384;
-      const reMaxLength = 8192 * 256;
-
-      // An "advanced" RegExp is one that contains a backreference like \1 or
-      // \k<name>, and cannot be merged.
-      const isAdvancedRegex = (regexText) => {
-        let rv = false;
-        isAdvancedRegex.regexText = regexText.replace(reAdvancedRegex, (m, m1, m2) => {
-          if (m1) {
-            rv = true;
-            return m;
-          }
-          if (m2) {
-            return '(?:';
-          }
-          return m;
-        });
-        return rv;
-      };
 
       const cacheRules = (blockList) => {
         const standardRulesDict = new Trie();
