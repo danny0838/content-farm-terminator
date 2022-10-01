@@ -1,6 +1,6 @@
 # Title: Content Farm Filters
 # Description: Filter for general content farms, mostly in Chinese.
-# Last modified: 2022-10-01T07:30:07+00:00
+# Last modified: 2022-10-01T17:22:41+00:00
 # Homepage: https://danny0838.github.io/content-farm-terminator/
 # Licence: MIT License
 # Source: https://danny0838.github.io/content-farm-terminator/files/blocklist-ublacklist/content-farms.txt
@@ -11,6 +11,7 @@
 *://*.006xb.cn/*  #redirects to g.penzai.com
 *://*.007ly3e.cn/*  #redirects to g.penzai.com
 *://*.007sx.cn/*  #redirects to g.penzai.com
+*://*.0099033.com/*
 *://*.0099175.com/*
 *://*.00s3t3k.cn/*  #redirects to g.penzai.com
 *://*.0101.tw/*
@@ -164,6 +165,7 @@
 *://*.100lucky.net/*
 *://*.100pagame.com/*
 *://*.100ve.com/*
+*://*.100wehs.com/*  #R18
 *://*.1010host.buzz/*  #redirects to g.penzai.com
 *://*.1018272.cn/*  #redirects to g.penzai.com
 *://*.101dot.com/*
@@ -190,9 +192,11 @@
 *://*.11bysj.com/*  #redirects to g.penzai.com
 *://*.11i.info/*
 *://*.11zyggljfa.com/*
+*://120.79.43.150/*  #R18
 *://*.121-254-64-91.veetime.com/*  #指動傳播科技有限公司
 *://*.1220220.cc/*
 *://*.1220243.cc/*
+*://*.1220320.cc/*  #R18
 *://*.12312399.cn/*  #redirects to g.penzai.com
 *://*.123kxj.com/*  #redirects to g.penzai.com
 *://*.123lulu.cn/*  #redirects to g.penzai.com
@@ -213,6 +217,7 @@
 *://*.130ucid.cn/*  #redirects to g.penzai.com
 *://*.1344q2x.cn/*  #redirects to g.penzai.com
 *://*.136hh.com/*  #redirects to g.penzai.com
+*://*.1377003.com/*
 *://*.137wl.cn/*  #redirects to g.penzai.com
 *://*.13800138002.com/*
 *://*.138usa.com/*  #redirects to g.penzai.com
@@ -224,6 +229,7 @@
 *://*.14nh003.cn/*  #redirects to g.penzai.com
 *://*.151yutm.cn/*  #redirects to g.penzai.com
 *://*.1546805.cn/*  #redirects to g.penzai.com
+*://*.1565758.com/*
 *://*.158mz.cn/*  #redirects to g.penzai.com
 *://*.1594331.cn/*  #redirects to g.penzai.com
 *://*.15jb.net/*
@@ -405,6 +411,7 @@
 *://*.228cp.cn/*  #redirects to g.penzai.com
 *://*.2291x.com/*
 *://*.229cq.com/*  #redirects to g.penzai.com
+*://*.22au.co/*  #R18
 *://*.22ggg.cn/*  #redirects to g.penzai.com
 *://*.22head.com/*  #redirects to g.penzai.com
 *://*.231127.com/*
@@ -419,6 +426,7 @@
 *://*.23233.com.cn/*  #redirects to g.penzai.com
 *://*.23539876.com/*  #redirects to g.penzai.com
 *://*.23e8.com/*  #redirects to g.penzai.com
+*://*.23yyuu.xyz/*  #R18
 *://*.241614.com/*
 *://*.2441107.cc/*
 *://*.2462x.com/*
@@ -456,6 +464,7 @@
 *://*.26wb9lf.cn/*  #redirects to g.penzai.com
 *://*.270r.com/*  #redirects to g.penzai.com
 *://*.272422.com/*  #redirects to g.penzai.com
+*://*.28.sc.cn/*  #R18
 *://*.289a.com/*
 *://*.28f57.com/*  #redirects to g.penzai.com
 *://*.28hyl.com/*  #redirects to g.penzai.com
@@ -770,6 +779,7 @@
 *://*.4bisblw.cn/*  #redirects to g.penzai.com
 *://*.4bulldogs.buzz/*  #redirects to g.penzai.com
 *://*.4christiansingles.buzz/*  #redirects to g.penzai.com
+*://*.4d38vibo2iir2.com/*  #R18
 *://*.4d3yfbf.cn/*  #redirects to g.penzai.com
 *://*.4dgarch.buzz/*  #redirects to g.penzai.com
 *://*.4dkmbza.cn/*  #redirects to g.penzai.com
@@ -906,6 +916,7 @@
 *://*.55mjd3s.cn/*  #redirects to g.penzai.com
 *://*.5610930.cc/*
 *://*.5611061.cc/*
+*://*.5611161.cc/*  #R18
 *://*.5634111.com/*  #redirects to g.penzai.com
 *://*.565zt2.cn/*  #redirects to g.penzai.com
 *://*.568159.com/*
@@ -1075,6 +1086,7 @@
 *://*.707o.com/*  #redirects to g.penzai.com
 *://*.70thvictory.com.tw/*
 *://*.7117125.com/*
+*://*.718kp.vip/*  #redirects to 22au.co
 *://*.7200500.com/*
 *://*.720com.cn/*  #redirects to g.penzai.com
 *://*.720exl.cn/*  #redirects to g.penzai.com
@@ -1703,6 +1715,7 @@
 *://*.apotheken-bestellung.buzz/*  #redirects to g.penzai.com
 *://*.app-good.com/*  #redirects to g.penzai.com
 *://*.app.mobileai.net/*
+*://*.app001.org/*  #R18
 *://*.apple01.cc/*
 *://*.apple01.co/*
 *://*.apple01.net/*
@@ -2660,6 +2673,7 @@
 *://*.cecilhm5t360.pixnet.net/*
 *://*.ceeshare.com/*
 *://*.cefotiam.com/*  #redirects to g.penzai.com
+*://*.cegui.co/*  #R18
 *://*.ceibul508.pixnet.net/*
 *://*.ceiqq248.blog.fc2.com/*
 *://*.celgov.com/*
@@ -2678,6 +2692,7 @@
 *://*.cf628.com/*  #redirects to g.penzai.com
 *://*.cf6h0hw.cn/*  #redirects to g.penzai.com
 *://*.cfjliu.cn/*  #redirects to g.penzai.com
+*://*.cfkeai.co/*  #R18
 *://*.cfnsxh.com/*  #redirects to g.penzai.com
 *://*.cfo1299yrp.blog.fc2.com/*
 *://*.cfsksupport.co/*  #redirects to cacnka.xyz
@@ -3420,6 +3435,7 @@
 *://*.dfkwos654.pixnet.net/*
 *://*.dfnvn33773.pixnet.net/*
 *://*.dfrvd91355.pixnet.net/*
+*://*.dfxiaoshuo.com/*
 *://*.dg24790414.pixnet.net/*
 *://*.dg4567.com/*  #redirects to g.penzai.com
 *://*.dgboligang.com/*
@@ -3505,6 +3521,7 @@
 *://*.djfd11.cn/*  #redirects to g.penzai.com
 *://*.djlbom.com/*  #R18
 *://*.djlin10550.pixnet.net/*
+*://*.djnecn.com/*
 *://*.djnegroup.com/*
 *://*.djxentnment.me/*  #redirects to meetwill.xyz
 *://*.djzz0q.cn/*  #redirects to g.penzai.com
@@ -4924,6 +4941,7 @@
 *://*.gpt1j84p53239.pixnet.net/*
 *://*.gpuhiyk.cn/*  #redirects to g.penzai.com
 *://*.gq05zh7.cn/*  #redirects to g.penzai.com
+*://*.gq0m2geuww.xyz/*  #R18
 *://*.gq22.cn/*  #redirects to g.penzai.com
 *://*.gqbtwld.com/*  #redirects to g.penzai.com
 *://*.gqd90bq72e.blog.fc2.com/*
@@ -5023,6 +5041,7 @@
 *://*.guygyg.cn/*  #redirects to g.penzai.com
 *://*.guymichellaj.pixnet.net/*
 *://*.guzhuangts.com/*  #redirects to g.penzai.com
+*://*.gv4u7p.cc/*  #R18
 *://*.gvxih891tv.blog.fc2.com/*
 *://*.gw50727724.pixnet.net/*
 *://*.gwendoe74l34.pixnet.net/*
@@ -6301,6 +6320,7 @@
 *://*.j9zhj7pfrz.pixnet.net/*
 *://*.jabal-umar.buzz/*  #redirects to g.penzai.com
 *://*.jabir4721.pixnet.net/*
+*://*.jablehk.co/*  #R18
 *://*.jackasswax.buzz/*  #redirects to g.penzai.com
 *://*.jacobsholn5.pixnet.net/*
 *://*.jacobsrileydv.pixnet.net/*
@@ -6912,6 +6932,7 @@
 *://*.khkxbs.com/*  #redirects to g.penzai.com
 *://*.khocc05.cn/*  #redirects to g.penzai.com
 *://*.khostia.com/*  #redirects to bestbonus-zone.life
+*://*.khuidaf.com/*  #redirects to 100wehs.com
 *://*.ki7p643662.pixnet.net/*
 *://*.kib49bb52g.blog.fc2.com/*
 *://*.kibristarihi.buzz/*  #redirects to g.penzai.com
@@ -8396,6 +8417,7 @@
 *://*.nbp33xj31d.pixnet.net/*
 *://*.nbqiandu.cn/*  #redirects to g.penzai.com
 *://*.nbsd0923.com/*  #R18
+*://*.nbssmy.cn/*  #R18
 *://*.nbtfglxs.com/*  #redirects to g.penzai.com
 *://*.nbtv.tw/*
 *://*.nbxiyaf.cn/*  #redirects to g.penzai.com
@@ -8813,6 +8835,7 @@
 *://*.ojqofdo.cn/*  #redirects to g.penzai.com
 *://*.ok25543043.blog.fc2.com/*
 *://*.ok78lro.cn/*  #redirects to g.penzai.com
+*://*.okdwe.com/*  #redirects to 80owashd.com
 *://*.okecc5t.cn/*  #redirects to g.penzai.com
 *://*.okhl4ak.cn/*  #redirects to g.penzai.com
 *://*.oklahios.me/*  #redirects to cznono.xyz
@@ -9700,6 +9723,7 @@
 *://*.qiigov.tv/*
 *://*.qikan519.com/*  #redirects to g.penzai.com
 *://*.qilook.com/*
+*://*.qimowly.top/*
 *://*.qinggua.net/*
 *://*.qingkeyy.com/*  #redirects to g.penzai.com
 *://*.qingpingshan.com/*
@@ -9831,6 +9855,7 @@
 *://*.qw03593617.pixnet.net/*
 *://*.qwb8.cn/*  #redirects to g.penzai.com
 *://*.qwcv4426857baya.wordpress.com/*
+*://*.qwdy222.cn/*  #R18
 *://*.qwe1234.com/*  #redirects to g.penzai.com
 *://*.qwe2498.cn/*  #redirects to g.penzai.com
 *://*.qwerscc.cn/*  #redirects to g.penzai.com
@@ -10202,6 +10227,7 @@
 *://*.rqkeonl.cn/*  #redirects to g.penzai.com
 *://*.rqtaze4.cn/*  #redirects to g.penzai.com
 *://*.rqtkg.cn/*  #redirects to g.penzai.com
+*://*.rqwdvgfjgcw.vip/*  #R18
 *://*.rqy25uzp9i.pixnet.net/*
 *://*.rr31133571.pixnet.net/*
 *://*.rrfox.com/*  #redirects to g.penzai.com
@@ -10421,6 +10447,7 @@
 *://*.sckangbo.com/*  #redirects to g.penzai.com
 *://*.sckwujt.cn/*  #redirects to g.penzai.com
 *://*.sclxys.com/*  #redirects to g.penzai.com
+*://*.scmshare.com/*  #R18
 *://*.scorui.com/*  #redirects to g.penzai.com
 *://*.scottct5775yw.pixnet.net/*
 *://*.scottpatanapl.pixnet.net/*
@@ -10479,6 +10506,7 @@
 *://*.seopupil.com/*  #redirects to g.penzai.com
 *://*.sergiofoto.lv/*  #redirects to ginseemore.live
 *://*.sergiogwqx.pixnet.net/*
+*://*.seselu.co/*  #R18
 *://*.sexcc.co/*  #R18
 *://*.sexptt.tk/*  #168ptt.com
 *://*.sexyphotographs.buzz/*  #redirects to g.penzai.com
@@ -10665,6 +10693,7 @@
 *://*.skcard.cn/*  #redirects to g.penzai.com
 *://*.ske0g.xyz/*  #R18
 *://*.skflawyer.com/*  #redirects to g.penzai.com
+*://*.skgcd.com/*  #R18
 *://*.skh1oni.cn/*  #redirects to g.penzai.com
 *://*.sklbv40.cn/*  #redirects to g.penzai.com
 *://*.skocoims0.pixnet.net/*
@@ -11540,6 +11569,7 @@
 *://*.tualau.co/*  #redirects to soonmiss.top
 *://*.tuasiann.com/*  #boMb01
 *://*.tubu9.com/*  #redirects to g.penzai.com
+*://*.tubx.shop/*  #R18
 *://*.tuconsultor.buzz/*  #redirects to g.penzai.com
 *://*.tudou478.cn/*  #redirects to g.penzai.com
 *://*.tues221394583.wordpress.com/*
@@ -11606,6 +11636,7 @@
 *://*.tx579ez.cn/*  #redirects to g.penzai.com
 *://*.txagr.com/*  #redirects to g.penzai.com
 *://*.txeendx.buzz/*  #redirects to g.penzai.com
+*://*.txinbs.com/*  #R18
 *://*.txjtp95375.pixnet.net/*
 *://*.txl5695195xich.wordpress.com/*
 *://*.txm28dz56t.pixnet.net/*
@@ -11723,6 +11754,7 @@
 *://*.ue40.com/*
 *://*.ueca00cm.wordpress.com/*
 *://*.uefprb290.pixnet.net/*
+*://*.uegqre.com/*  #R18
 *://*.ueswq68446.pixnet.net/*
 *://*.uetie.com/*
 *://*.uf4pagevirgil.pixnet.net/*
@@ -12326,6 +12358,7 @@
 *://*.wekghi.com/*
 *://*.wekie.cn/*  #redirects to g.penzai.com
 *://*.weknow.wiki/*
+*://*.welcomehg.us/*  #R18
 *://*.welfareml.com/*
 *://*.wellbay.cc/*
 *://*.wellren.com/*  #redirects to g.penzai.com
@@ -12815,6 +12848,7 @@
 *://*.xh34860999.pixnet.net/*
 *://*.xha9rnc.cn/*  #redirects to g.penzai.com
 *://*.xhbxgg.com/*
+*://*.xhf37.com/*  #R18
 *://*.xhfree.com/*  #redirects to g.penzai.com
 *://*.xhg.net.cn/*  #redirects to g.penzai.com
 *://*.xhhuoma.cn/*  #redirects to g.penzai.com
@@ -12846,6 +12880,7 @@
 *://*.xiaoerlx.cn/*  #redirects to g.penzai.com
 *://*.xiaohua369.cn/*  #redirects to g.penzai.com
 *://*.xiaokaili.com/*  #redirects to g.penzai.com
+*://*.xiaoshuolist.com/*
 *://*.xiaossx.com/*  #redirects to g.penzai.com
 *://*.xiaoyuanjiu.com/*
 *://*.xiaozhannk.com/*  #redirects to g.penzai.com
@@ -12983,6 +13018,7 @@
 *://*.xphym.com/*  #redirects to g.penzai.com
 *://*.xpj0411.cc/*
 *://*.xpj0477.cc/*
+*://*.xpj0524.cc/*  #R18
 *://*.xppul.com/*
 *://*.xpswrld.me/*  #redirects to meetwill.xyz
 *://*.xptian.com/*  #redirects to g.penzai.com
@@ -13028,6 +13064,7 @@
 *://*.xue59.cn/*  #redirects to g.penzai.com
 *://*.xuebaosan.com/*  #redirects to g.penzai.com
 *://*.xueduilian.com/*
+*://*.xueerbao.com/*
 *://*.xuehua.tw/*
 *://*.xuehua.us/*
 *://*.xuejingjia.com/*  #redirects to g.penzai.com
@@ -13776,6 +13813,7 @@
 *://*.zhl798.com/*  #redirects to g.penzai.com
 *://*.zhlxyjxj.com/*  #redirects to g.penzai.com
 *://*.zhnqmw.cn/*  #redirects to g.penzai.com
+*://*.zhonghongmy.com/*
 *://*.zhongjunch.com/*  #redirects to g.penzai.com
 *://*.zhongkd.com/*  #redirects to g.penzai.com
 *://*.zhongkn.cn/*  #redirects to g.penzai.com
