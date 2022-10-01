@@ -227,14 +227,14 @@
     "description": "Description of webBlacklists field in options page"
   },
 
-  "webBlacklistsLink": {
-    "message": "我们的网络黑名单",
-    "description": "Label of the link to web blacklists page"
-  },
-
   "webBlacklistsPlaceholder": {
     "message": "https://example.com/blacklist.txt (示例)",
     "description": "Placeholder of webBlacklists field in options page"
+  },
+
+  "webBlacklistsLink": {
+    "message": "我们的网络黑名单",
+    "description": "Label of the link to web blacklists page"
   },
 
   "userBlacklist": {
@@ -358,7 +358,7 @@
   },
 
   "helpTransformSyntaxContent": {
-    "message": "网址转换规则是每行一条规则，每一条规则的格式如下：\n\n    <寻找文本> <替换文本> <注解文字>\n\n<寻找文本> 须为有效的正则表达式 (RegExp)，头尾须为 \"/\"。<替换文本> 可以是任意文字，并可使用 \"$$\" 带入特殊内容：\n- \"$$$\": 带入 \"$$\" 符号。\n- \"$$n\": 带入 <寻找文本> 第 n 个括号匹配的字串（n 为正整数）。\n- \"$$&\": 带入与 <寻找文本> 匹配的字串。\n- \"$$`\": 带入与 <寻找文本> 匹配的字串前面的部分。\n- \"$$'\": 带入与 <寻找文本> 匹配的字串后面的部分。\n- 对于 \"$$n\"、\"$$&\"、\"$$`\"、\"$$'\"，如果 <替换文本> 是正则表达式规则（头尾皆为 \"/\"），带入的内容会自动做脱义处理。\n\n转换网址时，会由前后往逐一寻找及替换，找到符合的 <寻找文本> 就会把网址转换为 <替换文本> 并中止后续处理。若没有符合的，则不做任何转换。\n\n例如以下规则：\n\n    /^https?://example\\.com/(.*)/ $$1.example.com\n\n会把网址 \"https://example.com/my.job\" 转换为 \"my.job.example.com\"。\n\n而以下规则：\n\n    /^https?://example\\.com/(.*)/ /^https?://example\\.com/$$1/\n\n则会把网址 \"https://example.com/my.job\" 转换为 \"/^https?://example\\.com/my\\.job/\"。\n\n你可以在终结内容农场后台资料库（https://github.com/danny0838/content-farm-terminator/tree/gh-pages）找到一些站台的网址转换规则。",
+    "message": "网址转换规则是每行一条规则，每一条规则的格式如下：\n\n    <寻找文本> <替换文本> <注解文字>\n\n<寻找文本> 须为有效的正则表达式 (RegExp)，头尾须为 \"/\"。<替换文本> 可以是任意文字，并可使用 \"$$\" 带入特殊内容：\n- \"$$$\": 带入 \"$$\" 符号。\n- \"$$n\": 带入 <寻找文本> 第 n 个括号匹配的字串（n 为正整数）。\n- \"$$&\": 带入与 <寻找文本> 匹配的字串。\n- \"$$`\": 带入与 <寻找文本> 匹配的字串前面的部分。\n- \"$$'\": 带入与 <寻找文本> 匹配的字串后面的部分。\n- 对于 \"$$n\"、\"$$&\"、\"$$`\"、\"$$'\"，如果 <替换文本> 是正则表达式规则（头尾皆为 \"/\"），带入的内容会自动做脱义处理。\n\n转换网址时，会由前往后逐一寻找及替换，找到符合的 <寻找文本> 就会把网址转换为 <替换文本> 并中止后续处理。若没有符合的，则不做任何转换。\n\n例如以下规则：\n\n    /^https?://example\\.com/(.*)/ $$1.example.com\n\n会把网址 \"https://example.com/my.job\" 转换为 \"my.job.example.com\"。\n\n而以下规则：\n\n    /^https?://example\\.com/(.*)/ /^https?://example\\.com/$$1/\n\n则会把网址 \"https://example.com/my.job\" 转换为 \"/^https?://example\\.com/my\\.job/\"。\n\n可以在“我们的网络黑名单”找到一些站台的网址转换规则。",
     "description": "Content of the transform syntax help page"
   }
 }
