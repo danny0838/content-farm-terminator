@@ -143,9 +143,9 @@
         let domain = hostname;
         let pos;
         while (true) {
-          const m = blocklist.standardRulesDict.match(domain);
-          for (const [rule] of m) {
-            return rule;  // return first match
+          const rule = blocklist.standardRulesDict.match(domain);
+          if (rule) {
+            return rule;
           }
           pos = domain.indexOf('.');
           if (pos === -1) { break; }
@@ -559,8 +559,6 @@
 
     _match(parts, trie, i) {
       const queue = [[trie, i]];
-      const rv = new Map();
-
       while (queue.length) {
         const [trie, i] = queue.pop();
         const part = parts[i];
@@ -569,9 +567,8 @@
 
         switch (trie.token) {
           case TRIE_TOKEN_EOT: {
-            for (const [k, v] of trie) {
-              rv.set(k, v);
-              return rv; // return first match
+            for (const [rule, _] of trie) {
+              return rule; // return first match
             }
             break;
           }
@@ -611,7 +608,7 @@
         }
       }
 
-      return rv;
+      return null;
     }
   }
 
