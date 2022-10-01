@@ -2,10 +2,18 @@
   # Description: Filter for cloner sites that are mostly free of copyright issue since the source site
   #     is copyleft or copyfree, but provide only trivial layout change or poor-quality bot translation
   #     and are thus spam-like.
-  # Last modified: 2022-10-01T00:17:20+00:00
+  # Last modified: 2022-10-01T00:19:24+00:00
   # Homepage: https://danny0838.github.io/content-farm-terminator/
   # Licence: MIT License
   # Source: https://danny0838.github.io/content-farm-terminator/files/blocklist/bad-cloners.txt
+ewikizh.top
+itranslater.com
+qastack.cn
+stackoverflow.org.cn
+uwenku.com
+wake-up-neo.net
+wanweibaike.net
+wikiwand.com
   #!aggreg-ublGhT: https://raw.githubusercontent.com/arosh/ublacklist-github-translation/master/uBlacklist.txt (https://github.com/arosh/ublacklist-github-translation)
 awesomeopensource.com #!aggreg-ublGhT
 bestofcpp.com #!aggreg-ublGhT
@@ -125,7 +133,6 @@ it-swarm.jp.net #!aggreg-ublSoT
 itecnote.com #!aggreg-ublSoT
 itectec.com #!aggreg-ublSoT
 iteramos.com #!aggreg-ublSoT
-itranslater.com #!aggreg-ublSoT
 jablogs.com #!aggreg-ublSoT
 javaer101.com #!aggreg-ublSoT
 javafixing.com #!aggreg-ublSoT
@@ -162,7 +169,6 @@ projectbackpack.org #!aggreg-ublSoT
 qa-stack.pl #!aggreg-ublSoT
 qa.icopy.site #!aggreg-ublSoT
 qapicks.com #!aggreg-ublSoT
-qastack.cn #!aggreg-ublSoT
 qastack.co.in #!aggreg-ublSoT
 qastack.com.br #!aggreg-ublSoT
 qastack.com.de #!aggreg-ublSoT
@@ -223,12 +229,10 @@ ubuntu.buildwebhost.com #!aggreg-ublSoT
 ubuntuaa.com #!aggreg-ublSoT
 ubuntubin.com #!aggreg-ublSoT
 uebu-kaihatsu.jp.net #!aggreg-ublSoT
-uwenku.com #!aggreg-ublSoT
 vigge.cn #!aggreg-ublSoT
 vigge.net #!aggreg-ublSoT
 vigges.net #!aggreg-ublSoT
 voidcc.com #!aggreg-ublSoT
-wake-up-neo.net #!aggreg-ublSoT
 waldorf-am-see.org #!aggreg-ublSoT
 waymanamechurch.org #!aggreg-ublSoT
 web-dev-qa-db-fr.com #!aggreg-ublSoT

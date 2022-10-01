@@ -2,10 +2,18 @@
 # Description: Filter for cloner sites that are mostly free of copyright issue since the source site
 #     is copyleft or copyfree, but provide only trivial layout change or poor-quality bot translation
 #     and are thus spam-like.
-# Last modified: 2022-10-01T00:04:32+00:00
+# Last modified: 2022-10-01T00:19:24+00:00
 # Homepage: https://danny0838.github.io/content-farm-terminator/
 # Licence: MIT License
 # Source: https://danny0838.github.io/content-farm-terminator/files/blocklist-hosts/bad-cloners.txt
+127.0.0.1 ewikizh.top
+127.0.0.1 itranslater.com
+127.0.0.1 qastack.cn
+127.0.0.1 stackoverflow.org.cn
+127.0.0.1 uwenku.com
+127.0.0.1 wake-up-neo.net
+127.0.0.1 wanweibaike.net
+127.0.0.1 wikiwand.com
 #!aggreg-ublGhT: https://raw.githubusercontent.com/arosh/ublacklist-github-translation/master/uBlacklist.txt (https://github.com/arosh/ublacklist-github-translation)
 127.0.0.1 awesomeopensource.com  #!aggreg-ublGhT
 127.0.0.1 bestofcpp.com  #!aggreg-ublGhT
@@ -125,7 +133,6 @@
 127.0.0.1 itecnote.com  #!aggreg-ublSoT
 127.0.0.1 itectec.com  #!aggreg-ublSoT
 127.0.0.1 iteramos.com  #!aggreg-ublSoT
-127.0.0.1 itranslater.com  #!aggreg-ublSoT
 127.0.0.1 jablogs.com  #!aggreg-ublSoT
 127.0.0.1 javaer101.com  #!aggreg-ublSoT
 127.0.0.1 javafixing.com  #!aggreg-ublSoT
@@ -162,7 +169,6 @@
 127.0.0.1 qa-stack.pl  #!aggreg-ublSoT
 127.0.0.1 qa.icopy.site  #!aggreg-ublSoT
 127.0.0.1 qapicks.com  #!aggreg-ublSoT
-127.0.0.1 qastack.cn  #!aggreg-ublSoT
 127.0.0.1 qastack.co.in  #!aggreg-ublSoT
 127.0.0.1 qastack.com.br  #!aggreg-ublSoT
 127.0.0.1 qastack.com.de  #!aggreg-ublSoT
@@ -223,12 +229,10 @@
 127.0.0.1 ubuntuaa.com  #!aggreg-ublSoT
 127.0.0.1 ubuntubin.com  #!aggreg-ublSoT
 127.0.0.1 uebu-kaihatsu.jp.net  #!aggreg-ublSoT
-127.0.0.1 uwenku.com  #!aggreg-ublSoT
 127.0.0.1 vigge.cn  #!aggreg-ublSoT
 127.0.0.1 vigge.net  #!aggreg-ublSoT
 127.0.0.1 vigges.net  #!aggreg-ublSoT
 127.0.0.1 voidcc.com  #!aggreg-ublSoT
-127.0.0.1 wake-up-neo.net  #!aggreg-ublSoT
 127.0.0.1 waldorf-am-see.org  #!aggreg-ublSoT
 127.0.0.1 waymanamechurch.org  #!aggreg-ublSoT
 127.0.0.1 web-dev-qa-db-fr.com  #!aggreg-ublSoT
