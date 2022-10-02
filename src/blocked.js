@@ -1,6 +1,7 @@
 const urlObj = new URL(location.href);
-const sourceUrl = urlObj.searchParams.get('to');
+const sourceUrl = urlObj.searchParams.get('url');
 const referrerUrl = urlObj.searchParams.get('ref');
+const blockType = parseInt(urlObj.searchParams.get('type'), 10);
 
 async function recheckBlock() {
   const isTempUnblocked = await browser.runtime.sendMessage({
@@ -8,15 +9,14 @@ async function recheckBlock() {
     args: {},
   });
 
-  const isBlocked = isTempUnblocked ? false : await browser.runtime.sendMessage({
+  const blockType = isTempUnblocked ? 0 : await browser.runtime.sendMessage({
     cmd: 'getBlockType',
     args: {url: sourceUrl},
   });
 
-  if (!isBlocked) {
+  if (!blockType) {
     location.replace(sourceUrl);
   }
-  return isBlocked;
 }
 
 async function autoUpdateUnblockButton() {
@@ -112,47 +112,51 @@ function initMessageListener() {
   });
 }
 
-async function init(event) {
-  // -- UI
-  utils.loadLanguages(document);
-
-  showUrl: {
-    const urlElem = document.querySelector('#warningUrl');
-    let sourceUrlObj;
-    try {
-      sourceUrlObj = new URL(sourceUrl);
-      if (!(sourceUrlObj.protocol === 'http:' || sourceUrlObj.protocol === 'https:')) {
-        throw new Error('URL not under http(s) protocol.');
-      }
-    } catch (ex) {
-      // sourceUrl is invalid, show raw sourceUrl
-      // this should not happen unless the user manually enters the URL
-      urlElem.textContent = sourceUrl;
-      urlElem.classList.add('invalid');
-      break showUrl;
+function updateBlockingUi(blockType) {
+  const urlElem = document.querySelector('#warningUrl');
+  let sourceUrlObj;
+  try {
+    sourceUrlObj = new URL(sourceUrl);
+    if (!['http:', 'https:'].includes(sourceUrlObj.protocol)) {
+      throw new Error('URL not under http(s) protocol.');
     }
+  } catch (ex) {
+    // sourceUrl is invalid, show raw sourceUrl
+    // this should not happen unless the user manually enters the URL
+    urlElem.textContent = sourceUrl;
+    document.body.setAttribute('data-block-type', -1);
+    return;
+  }
 
-    if (urlObj.searchParams.get('type') == 2) {
+  document.body.setAttribute('data-block-type', blockType);
+  switch (blockType) {
+    case 2:
       urlElem.textContent = utils.getNormalizedUrl(sourceUrlObj);
       urlElem.classList.add('regex');
-      break showUrl;
-    }
-
-    urlElem.textContent = punycode.toASCII(sourceUrlObj.hostname);
+      break;
+    default:
+      urlElem.textContent = punycode.toASCII(sourceUrlObj.hostname);
+      break;
   }
 
   const detailsUrl = new URL(browser.runtime.getURL('options.html'));
-  detailsUrl.searchParams.set('from', sourceUrl);
+  detailsUrl.searchParams.set('url', sourceUrl);
   if (referrerUrl) { detailsUrl.searchParams.set('ref', referrerUrl); }
-  detailsUrl.searchParams.set('type', 'block');
+  detailsUrl.searchParams.set('type', blockType);
   document.querySelector('#detailsLink').href = detailsUrl.href;
+}
 
-  // -- events
+async function init(event) {
+  // UI
+  utils.loadLanguages(document);
+  updateBlockingUi(blockType);
+
+  // events
   document.querySelector('#view').addEventListener('click', onViewClick);
   document.querySelector('#unblock').addEventListener('click', onUnblockClick);
   document.querySelector('#back').addEventListener('click', onBackClick);
 
-  // -- async tasks
+  // async tasks
   autoUpdateUnblockButton();
 
   // recheck in case that sourceUrl is already unblocked

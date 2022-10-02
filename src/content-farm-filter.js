@@ -151,6 +151,7 @@
     getBlocker(...args) {
       const reSchemeChecker = /^[A-Za-z][0-9A-za-z.+-]*:\/\//;
       const reIpv4 = /^\d{1,3}(?:\.\d{1,3}){3}$/;
+
       const hostnameMatchBlockList = (hostname, blocklist) => {
         if ((hostname.startsWith('[') && hostname.endsWith(']')) || reIpv4.test(hostname)) {
           // IP hostname
@@ -175,6 +176,7 @@
         }
         return null;
       };
+
       const urlMatchBlockList = (url, blocklist) => {
         for (const [regex, rule] of blocklist.regexRulesDict) {
           regex.lastIndex = 0;
@@ -184,6 +186,59 @@
         }
         return null;
       };
+
+      const checkUrlOrHostname = (urlOrHostname) => {
+        const result = {
+          rule: null,
+          type: 0,
+        };
+
+        let urlObj;
+        try {
+          urlObj = new URL((reSchemeChecker.test(urlOrHostname) ? '' : 'http://') + urlOrHostname);
+        } catch (ex) {
+          // bad URL
+          return result;
+        }
+   
+        // URL.hostname is not punycoded in some old browsers (e.g. Firefox 52)
+        const h = punycode.toASCII(urlObj.hostname);
+
+        let rule;
+
+        // check whitelist
+        rule = hostnameMatchBlockList(h, this._whitelist);
+        if (rule) {
+          result.rule = rule;
+          return result;
+        }
+
+        const url = utils.getNormalizedUrl(urlObj);
+
+        rule = urlMatchBlockList(url, this._whitelist);
+        if (rule) {
+          result.rule = rule;
+          return result;
+        }
+
+        // check blacklist
+        rule = hostnameMatchBlockList(h, this._blacklist);
+        if (rule) {
+          result.rule = rule;
+          result.type = 1;
+          return result;
+        }
+
+        rule = urlMatchBlockList(url, this._blacklist);
+        if (rule) {
+          result.rule = rule;
+          result.type = 2;
+          return result;
+        }
+
+        return result;
+      };
+
       const fn = this.getBlocker = (source) => {
         const blocker = {
           source,
@@ -191,56 +246,14 @@
           type: 0,
         };
 
-        const {url: urlOrHostname} = source;
-
-        let urlObj;
-        try {
-          urlObj = new URL(reSchemeChecker.test(urlOrHostname) ? urlOrHostname : 'http://' + urlOrHostname);
-        } catch (ex) {
-          // bad URL
-          return blocker;
-        }
-
         this.makeCachedRules();
-   
-        // URL.hostname is not punycoded in some old browsers (e.g. Firefox 52)
-        const h = punycode.toASCII(urlObj.hostname);
 
-        let rule;
-        let blocklist;
-
-        blocklist = this._whitelist;
-
-        rule = hostnameMatchBlockList(h, blocklist);
-        if (rule) {
-          return blocker;
+        const {url: urlOrHostname} = source;
+        if (urlOrHostname) {
+          const check = checkUrlOrHostname(urlOrHostname);
+          Object.assign(blocker, check);
+          if (!check.type) { return blocker; }
         }
-
-        const url = utils.getNormalizedUrl(urlObj);
-
-        rule = urlMatchBlockList(url, blocklist);
-        if (rule) {
-          return blocker;
-        }
-
-        blocklist = this._blacklist;
-
-        rule = hostnameMatchBlockList(h, blocklist);
-        if (rule) {
-          return Object.assign(blocker, {
-            rule,
-            type: 1,
-          });
-        }
-
-        rule = urlMatchBlockList(url, blocklist);
-        if (rule) {
-          return Object.assign(blocker, {
-            rule,
-            type: 2,
-          });
-        }
-
         return blocker;
       };
       return fn(...args);

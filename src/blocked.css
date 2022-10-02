@@ -41,8 +41,8 @@ body {
   word-break: break-all;
 }
 
-#warningUrl.regex,
-#warningUrl.invalid {
+body[data-block-type="-1"] #warningUrl,
+body[data-block-type="2"] #warningUrl {
   font-size: 0.8em;
 }
 

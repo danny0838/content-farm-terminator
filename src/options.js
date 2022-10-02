@@ -97,7 +97,7 @@ async function init(event) {
   const searchParams = new URL(location.href).searchParams;
 
   {
-    const url = searchParams.get('from');
+    const url = searchParams.get('url');
     if (url) {
       const urlRegex = `/^${utils.escapeRegExp(url, true)}$/`;
       document.querySelector('#infoUrl dd').textContent = url;
@@ -105,7 +105,8 @@ async function init(event) {
       document.querySelector('#infoUrl').hidden = false;
       document.querySelector('#infoUrlRegex').hidden = false;
 
-      if (searchParams.get('type') === 'block') {
+      const blockType = parseInt(searchParams.get('type'), 10);
+      if (blockType > 0) {
         document.querySelector('#infoUrl dt').textContent = utils.lang('infoUrlBlocked');
         document.querySelector('#infoUrlRegex dt').textContent = utils.lang('infoUrlBlockedRegex');
 
@@ -114,7 +115,13 @@ async function init(event) {
             cmd: 'getBlocker',
             args: {url},
           });
+
           const rule = blocker.rule;
+          if (!rule) {
+            // this shouldn't happen
+            return;
+          }
+
           document.querySelector('#infoUrlBlocker').hidden = false;
           document.querySelector('#infoUrlBlockerSrc').hidden = false;
           document.querySelector('#infoUrlBlocker dd').textContent = [rule.rule, rule.sep, rule.comment].join('');

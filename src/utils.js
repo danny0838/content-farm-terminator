@@ -304,7 +304,7 @@
       referrer = referrer ? utils.getNormalizedUrl(new URL(referrer)) : null;
 
       const redirectUrlObj = new URL(browser.runtime.getURL('blocked.html'));
-      redirectUrlObj.searchParams.set('to', url);
+      redirectUrlObj.searchParams.set('url', url);
       if (referrer) { redirectUrlObj.searchParams.set('ref', referrer); }
       redirectUrlObj.searchParams.set('type', blockType);
       const redirectUrl = redirectUrlObj.href;
