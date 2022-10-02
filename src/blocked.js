@@ -14,6 +14,7 @@ async function recheckBlock() {
     args: {url: sourceUrl},
   });
 
+  updateBlockingUi(blockType);
   if (!blockType) {
     location.replace(sourceUrl);
   }
