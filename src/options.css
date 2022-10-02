@@ -65,8 +65,12 @@ body {
   font-size: 1.125rem;
 }
 
-.fieldLabel span {
+.fieldLabel p {
+  margin: .5em 0;
   font-size: 1rem;
+}
+
+.lowlight {
   opacity: 0.6;
 }
 
