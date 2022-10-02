@@ -1,0 +1,47 @@
+name: Aggregate sources and rebuild
+
+on:
+  schedule:
+    # 19:42 UTC every 3 month days
+    - cron: "42 19 */3 * *"
+
+  # push:
+    # branches:
+      # - gh-pages
+
+jobs:
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: ["3.10"]
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+        with:
+          ref: gh-pages
+          fetch-depth: 1
+
+      - name: Set up Python ${{ matrix.python-version }}
+        uses: actions/setup-python@v4
+        with:
+          python-version: ${{ matrix.python-version }}
+
+      - name: Install Python dependencies
+        run: |
+          python -m pip install -r scripts/requirements.txt
+
+      - name: Aggregate and build
+        run: |
+          rm -rf src/aggregations
+          python scripts/build.py auto aggregate
+          python scripts/build.py auto
+
+      - name: Commit files
+        run: |
+          git config user.name 'GitHub Action'
+          git config user.email 'actions@github.com'
+          git add -u .
+          git commit -m "cd: auto build at $(TZ=UTC date +'%F'T'%T'Z)"
+          git push --force-with-lease
