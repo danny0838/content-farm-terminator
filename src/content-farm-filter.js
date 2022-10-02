@@ -46,7 +46,7 @@
     async addWebBlackLists(urlsText, cacheDuration) {
       const urls = this.urlsTextToLines(urlsText);
       const tasks = urls.map(u => {
-        return this.getBlackListFromUrl(u, cacheDuration).catch(ex => {
+        return this.getBlackListFromUrl(u, {cacheDuration}).catch(ex => {
           console.error(ex);
         });
       });
@@ -61,7 +61,7 @@
     /**
      * @param {string} url - a URL with hash stripped
      */
-    async getBlackListFromUrl(url, cacheDuration = 0, doNotCache = false) {
+    async getBlackListFromUrl(url, {cacheDuration = 0, doNotCache = false} = {}) {
       const data = await this.getWebListCache(url);
       const time = Date.now();
 
