@@ -213,7 +213,7 @@
   },
 
   "allBlacklistLink": {
-    "message": "檢視",
+    "message": "檢視已載入的黑名單",
     "description": "Label of the link of allBlacklist field in options page"
   },
 
@@ -360,5 +360,20 @@
   "helpTransformSyntaxContent": {
     "message": "網址轉換規則是每行一條規則，每一條規則的格式如下：\n\n    <尋找文本> <替換文本> <註解文字>\n\n<尋找文本> 須為有效的正規表示式 (RegExp)，頭尾須為 \"/\"。<替換文本> 可以是任意文字，並可使用 \"$$\" 帶入特殊內容：\n- \"$$$\": 帶入 \"$$\" 符號。\n- \"$$n\": 帶入 <尋找文本> 第 n 個括號匹配的字串。（n 為正整數）\n- \"$$&\": 帶入與 <尋找文本> 匹配的字串。\n- \"$$`\": 帶入與 <尋找文本> 匹配的字串前面的部分。\n- \"$$'\": 帶入與 <尋找文本> 匹配的字串後面的部分。\n- 對於 \"$$n\"、\"$$&\"、\"$$`\"、\"$$'\"，如果 <替換文本> 是正規表示式規則（頭尾皆為 \"/\"），帶入的內容會自動做脫義處理。\n\n轉換網址時，會由前往後逐一尋找及替換，找到符合的 <尋找文本> 就會把網址轉換為 <替換文本> 並中止後續處理。若沒有符合的，則不做任何轉換。\n\n例如以下規則：\n\n    /^https?://example\\.com/(.*)/ $$1.example.com\n\n會把網址 \"https://example.com/my.job\" 轉換為 \"my.job.example.com\"。\n\n而以下規則：\n\n    /^https?://example\\.com/(.*)/ /^https?://example\\.com/$$1/\n\n則會把網址 \"https://example.com/my.job\" 轉換為 \"/^https?://example\\.com/my\\.job/\"。\n\n可以在「我們的網路黑名單」找到一些網站的網址轉換規則。",
     "description": "Content of the transform syntax help page"
+  },
+
+  "blacklistsTitle": {
+    "message": "已載入的黑名單",
+    "description": "Title of allBlacklists page"
+  },
+
+  "blacklistsAllTitle": {
+    "message": "作用中的規則",
+    "description": "Title of allBlacklists page when viewing merged blacklists"
+  },
+
+  "blacklistsAllLabel": {
+    "message": "檢視作用中的規則",
+    "description": "Label for the link of viewing merged blacklists of allBlacklists page"
   }
 }

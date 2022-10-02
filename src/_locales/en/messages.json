@@ -213,7 +213,7 @@
   },
 
   "allBlacklistLink": {
-    "message": "View",
+    "message": "View loaded blacklists",
     "description": "Label of the link of allBlacklist field in options page"
   },
 
@@ -360,5 +360,20 @@
   "helpTransformSyntaxContent": {
     "message": "URL transformation rules is one rule per line. The syntax of each rule is:\n\n    <pattern> <replacement> <comment>\n\nWhere <pattern> is a regular expression (RegExp) enclosed by \"/\", and <replacement> is any text with \"$$\" for special meaning:\n- \"$$$\": inserts a \"$$\".\n- \"$$n\": inserts the nth parenthesized submatch string. (n is a positive integer)\n- \"$$&\": inserts the matched substring.\n- \"$$`\": inserts the portion of the string that precedes the matched substring.\n- \"$$'\": inserts the portion of the string that follows the matched substring.\n- If <replacement> is a RegExp (enclosed by \"/\"), the inserted string will be escaped automatically.\n\nWhen trnsforming a URL, rules are matched one by one. When a matched <pattern> is found, the URL will be replaced with the corresponding <replacement> and further processing is skipped. If no match is found, the URL is not trnsformed.\n\nFor example, the following rule:\n\n    /^https?://example\\.com/(.*)/ $$1.example.com\n\ntransforms the URL \"https://example.com/my.job\" into \"my.job.example.com\".\n\nWhile the following rule:\n\n    /^https?://example\\.com/(.*)/ /^https?://example\\.com/$$1/\n\ntransforms the URL \"https://example.com/my.job\" into \"/^https?://example\\.com/my\\.job/\".\n\nTransform rules for several sites can be found in “Our blacklists”.",
     "description": "Content of the transform syntax help page"
+  },
+
+  "blacklistsTitle": {
+    "message": "Loaded blacklists",
+    "description": "Title of allBlacklists page"
+  },
+
+  "blacklistsAllTitle": {
+    "message": "Working rules",
+    "description": "Title of allBlacklists page when viewing merged blacklists"
+  },
+
+  "blacklistsAllLabel": {
+    "message": "View working rules",
+    "description": "Label for the link of viewing merged blacklists of allBlacklists page"
   }
 }

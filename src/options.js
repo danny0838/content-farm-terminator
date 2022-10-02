@@ -118,8 +118,12 @@ async function init(event) {
           document.querySelector('#infoUrlBlockerSrc').hidden = false;
           document.querySelector('#infoUrlBlocker dd').textContent = [blocker.rule, blocker.sep, blocker.comment].join('');
           if (blocker.src) {
+            const u = new URL(browser.runtime.getURL('blacklists.html'));
+            u.searchParams.set('url', blocker.src);
+
             const anchor = document.querySelector('#infoUrlBlockerSrc dd').appendChild(document.createElement('a'));
-            anchor.href = anchor.textContent = blocker.src;
+            anchor.textContent = blocker.src;
+            anchor.href = u.href;
           }
         })();
       }

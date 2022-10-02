@@ -11,10 +11,12 @@
     constructor() {
       this._listUpdated = true;
       this._blacklist = {
+        sources: [],
         rawRules: [],
         rules: new Map(),
       };
       this._whitelist = {
+        sources: [],
         rawRules: [],
         rules: new Map(),
       };
@@ -22,6 +24,9 @@
     }
 
     addBlockList(blockList, listText, url) {
+      if (url) {
+        blockList.sources.push(url);
+      }
       utils.getLines(listText).forEach((ruleLine) => {
         const rule = this.parseRuleLine(ruleLine);
         if (url) {
@@ -61,7 +66,7 @@
     /**
      * @param {string} url - a URL with hash stripped
      */
-    async getBlackListFromUrl(url, {cacheDuration = 0, doNotCache = false} = {}) {
+    async getBlackListFromUrl(url, {cacheDuration = 0, cacheOnly = false, doNotCache = false} = {}) {
       const data = await this.getWebListCache(url);
       const time = Date.now();
 
@@ -69,10 +74,15 @@
       let cacheRulesText, cacheTime;
       if (data) {
         ({time: cacheTime, rulesText: cacheRulesText} = data);
-        // use cached version if not expired
-        if (time - cacheTime < cacheDuration) {
+        // use cached version if not expired or cacheOnly
+        if (time - cacheTime < cacheDuration || cacheOnly) {
           return cacheRulesText;
         }
+      }
+
+      // return anyway if cacheOnly
+      if (cacheOnly) {
+        return cacheRulesText;
       }
 
       // retrieve rules from web if no cache or cache has expired
@@ -493,6 +503,10 @@
       };
 
       return fn(...args);
+    }
+
+    getWebBlacklists() {
+      return this._blacklist.sources;
     }
 
     getMergedBlacklist() {

@@ -4,6 +4,9 @@ html {
 
 body {
   font-size: 1rem; /* overwrite injected stylesheet */
+}
+
+pre {
   font-family: monospace;
   word-break: break-all;
   white-space: pre-wrap;

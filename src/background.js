@@ -390,10 +390,16 @@ function initMessageListener() {
           return true;
         })();
       }
+      case 'getWebBlacklists': {
+        return (async () => {
+          await updateFilterPromise;
+          return filter.getWebBlacklists();
+        })();
+      }
       case 'getMergedBlacklist': {
         return (async () => {
           await updateFilterPromise;
-          return await filter.getMergedBlacklist();
+          return filter.getMergedBlacklist();
         })();
       }
       case 'updateOptions': {
