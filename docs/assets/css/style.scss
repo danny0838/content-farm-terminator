@@ -2,5 +2,19 @@
 ---
 
 @import "{{ site.theme }}";
+
 b { font-weight: bold; }
+
 #project_title a { color: unset; }
+
+figure.gallery {
+  white-space: nowrap;
+  overflow-x: auto;
+}
+
+figure.gallery img {
+  margin: 0;
+  border: none;
+  object-fit: contain;
+  max-height: 300px;
+}
