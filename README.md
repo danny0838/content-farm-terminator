@@ -3,7 +3,7 @@ Content Farm Terminator (終結內容農場)
 
 *Content Farm Terminator* is a cross-platform browser extension that helps the user identify and repel [content farms](https://en.wikipedia.org/wiki/Content_farm), through marking hyperlinks that targets a content farm in any web page and blocking web requests that targets a content farm.
 
-[Homepage with more detailed introduction](https://danny0838.github.io/content-farm-terminator/).
+[Homepage with more detailed introduction](https://danny0838.github.io/content-farm-terminator/) (multi-language).
 
 ## Download
 * [Firefox](https://addons.mozilla.org/firefox/addon/content-farm-terminator/) (also: Firefox for Android, Tor Browser, etc.)
