@@ -133,7 +133,8 @@
 
     /**
      * @typedef {Object} Source
-     * @property {string} url - url or hostname
+     * @property {string} url - source URL
+     * @property {string} [urlRedirected] - redirected URL (or hostname only)
      */
 
     /**
@@ -248,11 +249,16 @@
 
         this.makeCachedRules();
 
-        const {url: urlOrHostname} = source;
+        const {url: urlOrHostname, urlRedirected} = source;
         if (urlOrHostname) {
-          const check = checkUrlOrHostname(urlOrHostname);
+          let check = checkUrlOrHostname(urlOrHostname);
+
+          // check redirected URL if source URL is not blocked
+          if (!check.type && urlRedirected) {
+            check = checkUrlOrHostname(urlRedirected);
+          }
+
           Object.assign(blocker, check);
-          if (!check.type) { return blocker; }
         }
         return blocker;
       };

@@ -337,23 +337,16 @@ async function updateLinkMarker(elem) {
     if (!(c === "http:" || c === "https:")) { return false; }
 
     // check whether the URL is blocked
-    const blockType = await browser.runtime.sendMessage({
-      cmd: 'getBlockType',
-      args: {url: u.href}
-    });
-    if (blockType) { return true; }
-
-    // check for a potential redirect by the current site (e.g. search engine or social network)
-    const urlOrHostname = await getRedirectedUrlOrHostname(elem);
-    if (!urlOrHostname) { return false; }
-
     return await browser.runtime.sendMessage({
       cmd: 'getBlockType',
-      args: {url: urlOrHostname},
+      args: {
+        url: u.href,
+        urlRedirected: await getRedirectedUrlOrHostname(elem),
+      },
     });
-  }).then((willBlock) => {
+  }).then((blockType) => {
     let marker = anchorMarkerMap.get(elem);
-    if (willBlock) {
+    if (blockType > 0) {
       if (!marker) {
         marker = elem.ownerDocument.createElement('img');
         marker.src = browser.runtime.getURL('img/content-farm-marker.svg');
