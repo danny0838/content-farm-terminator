@@ -132,17 +132,21 @@
     }
 
     /**
-     * @param {string} urlOrHostname - url or hostname
-     * @returns {BlockType}
+     * @typedef {Object} Source
+     * @property {string} url - url or hostname
      */
-    isBlocked(urlOrHostname) {
-      const blocker = this.getBlocker(urlOrHostname);
-      return this.getBlockType(blocker);
-    }
 
     /**
-     * @param {string} urlOrHostname - url or hostname
-     * @returns {?Rule}
+     * @typedef {Object} Blocker
+     * @property {Source} source
+     * @property {?Rule} rule
+     * @property {number} type - type of the block
+     *      0: not blocked; 1: blocked by standard rule; 2: blocked by regex rule
+     */
+
+    /**
+     * @param {Source} source
+     * @returns {Blocker}
      */
     getBlocker(...args) {
       const reSchemeChecker = /^[A-Za-z][0-9A-za-z.+-]*:\/\//;
@@ -180,13 +184,21 @@
         }
         return null;
       };
-      const fn = this.getBlocker = (urlOrHostname) => {
+      const fn = this.getBlocker = (source) => {
+        const blocker = {
+          source,
+          rule: null,
+          type: 0,
+        };
+
+        const {url: urlOrHostname} = source;
+
         let urlObj;
         try {
           urlObj = new URL(reSchemeChecker.test(urlOrHostname) ? urlOrHostname : 'http://' + urlOrHostname);
         } catch (ex) {
           // bad URL
-          return 0;
+          return blocker;
         }
 
         this.makeCachedRules();
@@ -201,51 +213,37 @@
 
         rule = hostnameMatchBlockList(h, blocklist);
         if (rule) {
-          return null;
+          return blocker;
         }
 
         const url = utils.getNormalizedUrl(urlObj);
 
         rule = urlMatchBlockList(url, blocklist);
         if (rule) {
-          return null;
+          return blocker;
         }
 
         blocklist = this._blacklist;
 
         rule = hostnameMatchBlockList(h, blocklist);
         if (rule) {
-          return rule;
+          return Object.assign(blocker, {
+            rule,
+            type: 1,
+          });
         }
 
         rule = urlMatchBlockList(url, blocklist);
         if (rule) {
-          return rule;
+          return Object.assign(blocker, {
+            rule,
+            type: 2,
+          });
         }
 
-        return null;
+        return blocker;
       };
       return fn(...args);
-    }
-
-    /**
-     * A number representing the type of a block.
-     * 0: not blocked; 1: blocked by standard rule; 2: blocked by regex rule
-     * @typedef {number} BlockType
-     */
-
-    /**
-     * @param {?Rule} rule
-     * @returns {BlockType}
-     */
-    getBlockType(rule) {
-      if (rule) {
-        if (rule.rule && rule.rule.startsWith('/')) {
-          return 2;
-        }
-        return 1;
-      }
-      return 0;
     }
 
     isInBlacklist(ruleLine) {

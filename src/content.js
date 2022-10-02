@@ -50,7 +50,7 @@ async function recheckCurrentUrl(urlChanged = false) {
 
     // redirect if the current document URL is blocked
     const blockType = await browser.runtime.sendMessage({
-      cmd: 'isUrlBlocked',
+      cmd: 'getBlockType',
       args: {url: docHref},
     });
     if (blockType) {
@@ -338,7 +338,7 @@ async function updateLinkMarker(elem) {
 
     // check whether the URL is blocked
     const blockType = await browser.runtime.sendMessage({
-      cmd: 'isUrlBlocked',
+      cmd: 'getBlockType',
       args: {url: u.href}
     });
     if (blockType) { return true; }
@@ -348,7 +348,7 @@ async function updateLinkMarker(elem) {
     if (!urlOrHostname) { return false; }
 
     return await browser.runtime.sendMessage({
-      cmd: 'isUrlBlocked',
+      cmd: 'getBlockType',
       args: {url: urlOrHostname},
     });
   }).then((willBlock) => {

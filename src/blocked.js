@@ -9,7 +9,7 @@ async function recheckBlock() {
   });
 
   const isBlocked = isTempUnblocked ? false : await browser.runtime.sendMessage({
-    cmd: 'isUrlBlocked',
+    cmd: 'getBlockType',
     args: {url: sourceUrl},
   });
 

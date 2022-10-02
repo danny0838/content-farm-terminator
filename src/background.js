@@ -276,7 +276,7 @@ function onBeforeRequestBlocker(details) {
   // Chromium uses .initiator, Firefox uses .originUrl
   const referrer = details.initiator || details.originUrl;
 
-  const blockType = filter.isBlocked(url);
+  const blockType = filter.getBlocker({url}).type;
   if (!blockType) { return; }
 
   if (details.type === "main_frame") {
@@ -334,16 +334,16 @@ function initMessageListener() {
     // console.warn("omMessage", message);
     const {cmd, args} = message;
     switch (cmd) {
-      case 'isUrlBlocked': {
+      case 'getBlockType': {
         return (async () => {
           await updateFilterPromise;
-          return await filter.isBlocked(args.url);
+          return (await filter.getBlocker(args)).type;
         })();
       }
-      case 'getUrlBlocker': {
+      case 'getBlocker': {
         return (async () => {
           await updateFilterPromise;
-          return await filter.getBlocker(args.url);
+          return await filter.getBlocker(args);
         })();
       }
       case 'isTempUnblocked': {

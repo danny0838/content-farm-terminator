@@ -111,18 +111,19 @@ async function init(event) {
 
         (async () => {
           const blocker = await browser.runtime.sendMessage({
-            cmd: 'getUrlBlocker',
+            cmd: 'getBlocker',
             args: {url},
           });
+          const rule = blocker.rule;
           document.querySelector('#infoUrlBlocker').hidden = false;
           document.querySelector('#infoUrlBlockerSrc').hidden = false;
-          document.querySelector('#infoUrlBlocker dd').textContent = [blocker.rule, blocker.sep, blocker.comment].join('');
-          if (blocker.src) {
+          document.querySelector('#infoUrlBlocker dd').textContent = [rule.rule, rule.sep, rule.comment].join('');
+          if (rule.src) {
             const u = new URL(browser.runtime.getURL('blacklists.html'));
-            u.searchParams.set('url', blocker.src);
+            u.searchParams.set('url', rule.src);
 
             const anchor = document.querySelector('#infoUrlBlockerSrc dd').appendChild(document.createElement('a'));
-            anchor.textContent = blocker.src;
+            anchor.textContent = rule.src;
             anchor.href = u.href;
           }
         })();
