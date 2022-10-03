@@ -226,7 +226,7 @@ build:
           value: /^https?://(?:(?:m\.)?(?:[bv]log|photo)\.xuite\.net|m\.xuite\.net/blog)/(?:{value})(?=[/?#]|$)/
           escape: regex
           grouping: "|"
-          max: 2097152
+          max: 524288
         udn:
           <<: *grouping_regex_scheme
           value: /^https?://(?:blog|album)\.udn\.com/(?:mobile/)?(?:{value})(?=[/?#]|$)/
