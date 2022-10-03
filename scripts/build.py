@@ -32,12 +32,16 @@ def escape_regex_slash(text):
 
 
 def file_strip_eol(file):
-    """Strips ending linefeeds for a file."""
+    """Strips ending linefeeds for a file.
+
+    Returns:
+        bool: True if the file is truncated. False otherwise.
+    """
     with open(file, 'r+b') as fh:
-        pos = fh.seek(0, os.SEEK_END)
-        if pos == 0:
+        size = pos = fh.seek(0, os.SEEK_END)
+        if size == 0:
             # the file is empty and doesn't need truncating
-            return
+            return False
 
         pos = fh.seek(-1, os.SEEK_CUR)
         while True:
@@ -50,7 +54,9 @@ def file_strip_eol(file):
                 break
             pos = fh.seek(-2, os.SEEK_CUR)
 
-        fh.truncate()
+        new_size = fh.truncate()
+
+    return new_size != size
 
 
 def flatten_files(files, match_pattern='**/*.txt'):
@@ -167,13 +173,13 @@ class Rule:
 
 class Linter:
     """Check for issues of the source files."""
-    def __init__(self, root, config=None, files=None, auto_fix=False,
-                 remove_empty=False, sort_rules=False, strip_eol=False):
+    def __init__(self, root, config=None, files=None, remove_empty=False,
+                 auto_fix=False, sort_rules=False, strip_eol=False):
         self.root = root
         self.config = config or {}
         self.files = flatten_files(files or [])
-        self.auto_fix = auto_fix
         self.remove_empty = remove_empty
+        self.auto_fix = auto_fix
         self.sort_rules = sort_rules
         self.strip_eol = strip_eol
 
@@ -200,7 +206,11 @@ class Linter:
 
         new_rules = []
         for rule in rules:
-            if self.check_rule(rule):
+            new_rule = self.check_rule(rule)
+            if self.auto_fix:
+                if new_rule:
+                    new_rules.append(new_rule)
+            else:
                 new_rules.append(rule)
 
         # keep empty rules in-place
@@ -226,31 +236,37 @@ class Linter:
 
             new_rules = sort_rules(new_rules)
 
-        if self.auto_fix:
-            if new_rules != rules:
-                log.info('Saving auto-fixed %s ...', subpath)
-                with open(file, 'w', encoding='UTF-8') as fh:
-                    for rule in new_rules:
-                        print(f'{rule.rule}{rule.sep}{rule.comment}', file=fh)
+        if new_rules != rules:
+            log.info('Saving auto-fixed %s ...', subpath)
+            with open(file, 'w', encoding='UTF-8') as fh:
+                for rule in new_rules:
+                    print(f'{rule.rule}{rule.sep}{rule.comment}', file=fh)
 
-            if self.strip_eol:
-                log.debug('Stripping eol for %s ...', subpath)
-                file_strip_eol(file)
+        if self.strip_eol:
+            if file_strip_eol(file):
+                log.info('Stripped EOL for %s', subpath)
 
     def check_rule(self, rule):
+        """Check the given rule.
+
+        Returns:
+            - The original Rule if valid.
+            - A new Rule if it can be auto-fixed.
+            - None if invalid.
+        """
         if rule.type is None:
             # A rule of None type should be empty; otherwise it has an invalid
             # format that cannot be recognized as another type.
             if rule.rule.strip():
                 log.info('%s:%i: rule "%s" is invalid',
                          rule.path, rule.line_no, rule.rule)
-                return False
+                return None
 
             if self.remove_empty:
                 if not rule.rule and not rule.comment:
                     log.info('%s:%i: rule is empty',
                              rule.path, rule.line_no)
-                    return False
+                    return None
 
         elif rule.type == 'regex':
             try:
@@ -258,9 +274,9 @@ class Linter:
             except re.error as exc:
                 log.info('%s:%i: regex "%s" is invalid: %s',
                          rule.path, rule.line_no, rule.rule, exc)
-                return False
+                return None
 
-        return True
+        return rule
 
 
 class Uniquifier:
@@ -954,14 +970,14 @@ def parse_args(argv=None):
         'files', metavar='file', action='extend', nargs='+',
         help="""file(s) to check""")
     parser_lint.add_argument(
+        '-r', '--remove-empty', action='store_true', default=False,
+        help="""check and remove empty lines""")
+    parser_lint.add_argument(
         '-a', '--auto-fix', action='store_true', default=False,
         help="""automatically fix issues""")
     parser_lint.add_argument(
         '-s', '--sort-rules', action='store_true', default=False,
         help="""sort rules alphabetically""")
-    parser_lint.add_argument(
-        '-r', '--remove-empty', action='store_true', default=False,
-        help="""remove empty lines""")
     parser_lint.add_argument(
         '-t', '--strip-eol', action='store_true', default=False,
         help="""remove ending linefeeds""")
@@ -1022,7 +1038,7 @@ def main():
     if args.action in ('lint', 'l'):
         params = inspect.signature(Linter).parameters
         kwargs = {k: getattr(args, k, params[k].default)
-                  for k in ('files', 'auto_fix', 'sort_rules', 'remove_empty', 'strip_eol')}
+                  for k in ('files', 'remove_empty', 'auto_fix', 'sort_rules', 'strip_eol')}
         Linter(args.root, config, **kwargs).run()
 
     elif args.action in ('uniquify', 'u'):
