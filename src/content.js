@@ -330,7 +330,7 @@ async function updateLinkMarker(elem) {
   return updateLinkMarkerPromise = updateLinkMarkerPromise.then(async () => {
     if (!showLinkMarkers) { return false; }
 
-    if (!elem.parentNode || !elem.href) { return false; }
+    if (!elem.isConnected || !elem.href) { return false; }
 
     const u = new URL(elem.href);
     const c = u.protocol;
@@ -365,7 +365,7 @@ async function updateLinkMarker(elem) {
         marker.setAttribute("data-content-farm-terminator-marker", 1);
         anchorMarkerMap.set(elem, marker);
       }
-      if (!marker.parentNode) {
+      if (!marker.isConnected) {
         // insert before a non-blank text node preceeding all element nodes
         for (const node of elem.childNodes) {
           if (node.nodeType === 3 && node.nodeValue.trim()) {
@@ -399,7 +399,7 @@ async function updateLinkMarker(elem) {
         elem.insertBefore(marker, elem.firstChild);
       }
     } else {
-      if (marker && marker.parentNode) { marker.remove(); }
+      if (marker && marker.isConnected) { marker.remove(); }
     }
   }).catch((ex) => {
     console.error(ex);
