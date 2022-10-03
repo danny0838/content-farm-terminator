@@ -173,11 +173,12 @@ class Rule:
 
 class Linter:
     """Check for issues of the source files."""
-    def __init__(self, root, config=None, files=None, remove_empty=False,
+    def __init__(self, root, config=None, files=None, check_regex=False, remove_empty=False,
                  auto_fix=False, sort_rules=False, strip_eol=False):
         self.root = root
         self.config = config or {}
         self.files = flatten_files(files or [])
+        self.check_regex = check_regex
         self.remove_empty = remove_empty
         self.auto_fix = auto_fix
         self.sort_rules = sort_rules
@@ -269,12 +270,13 @@ class Linter:
                     return None
 
         elif rule.type == 'regex':
-            try:
-                re.compile(rule.rule)
-            except re.error as exc:
-                log.info('%s:%i: regex "%s" is invalid: %s',
-                         rule.path, rule.line_no, rule.rule, exc)
-                return None
+            if self.check_regex:
+                try:
+                    re.compile(rule.rule)
+                except re.error as exc:
+                    log.info('%s:%i: regex "%s" is invalid: %s',
+                             rule.path, rule.line_no, rule.rule, exc)
+                    return None
 
         elif rule.type == 'scheme':
             fixed_scheme = rule.scheme.lower()
@@ -977,6 +979,10 @@ def parse_args(argv=None):
         'files', metavar='file', action='extend', nargs='+',
         help="""file(s) to check""")
     parser_lint.add_argument(
+        '-r', '--check-regex', action='store_true', default=False,
+        help="""check the syntax for regex rules (NOTE: This may be inaccurate
+                as Python may fail to parse a valid JavaScript regex.)""")
+    parser_lint.add_argument(
         '-e', '--remove-empty', action='store_true', default=False,
         help="""check and remove empty lines""")
     parser_lint.add_argument(
@@ -1045,7 +1051,7 @@ def main():
     if args.action in ('lint', 'l'):
         params = inspect.signature(Linter).parameters
         kwargs = {k: getattr(args, k, params[k].default)
-                  for k in ('files', 'remove_empty', 'auto_fix', 'sort_rules', 'strip_eol')}
+                  for k in ('files', 'check_regex', 'remove_empty', 'auto_fix', 'sort_rules', 'strip_eol')}
         Linter(args.root, config, **kwargs).run()
 
     elif args.action in ('uniquify', 'u'):
