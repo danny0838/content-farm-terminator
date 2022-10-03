@@ -21,7 +21,7 @@ log = logging.getLogger(__name__)
 
 RE_SPACE_MATCHER = re.compile(r'^(\S*)(\s*)(.*)$')
 RE_DOMAIN_RULE = re.compile(r'^(?:[0-9a-z*-]+)(?:\.[0-9a-z*-]+)*$')
-RE_SCHEME_RULE = re.compile(r'^([a-z][0-9a-z+.-]+):(.*)$')
+RE_SCHEME_RULE = re.compile(r'^([A-Za-z][0-9A-Za-z+.-]+):(.*)$')
 RE_REGEX_RULE = re.compile(r'^/(.*)/([a-z]*)$')
 RE_REGEX_SLASH_ESCAPER = re.compile(r'(\\.)|/')
 
@@ -275,6 +275,13 @@ class Linter:
                 log.info('%s:%i: regex "%s" is invalid: %s',
                          rule.path, rule.line_no, rule.rule, exc)
                 return None
+
+        elif rule.type == 'scheme':
+            fixed_scheme = rule.scheme.lower()
+            if rule.scheme != fixed_scheme:
+                log.info('%s:%i: scheme of rule "%s" should be all lowercase',
+                         rule.path, rule.line_no, rule.rule)
+                return Rule(f'{fixed_scheme}:{rule.value}{rule.sep}{rule.comment}')
 
         return rule
 
