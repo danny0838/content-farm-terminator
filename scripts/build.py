@@ -977,7 +977,7 @@ def parse_args(argv=None):
         'files', metavar='file', action='extend', nargs='+',
         help="""file(s) to check""")
     parser_lint.add_argument(
-        '-r', '--remove-empty', action='store_true', default=False,
+        '-e', '--remove-empty', action='store_true', default=False,
         help="""check and remove empty lines""")
     parser_lint.add_argument(
         '-a', '--auto-fix', action='store_true', default=False,
