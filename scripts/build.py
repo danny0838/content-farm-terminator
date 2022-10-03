@@ -10,6 +10,7 @@ import os
 import re
 from contextlib import contextmanager, redirect_stdout
 from datetime import datetime, timezone
+from functools import partial
 from urllib.parse import quote
 
 import requests
@@ -29,6 +30,68 @@ RE_REGEX_SLASH_ESCAPER = re.compile(r'(\\.)|/')
 def escape_regex_slash(text):
     """Escape "/"s in a (possibly escaped) regex."""
     return RE_REGEX_SLASH_ESCAPER.sub(lambda m: m.group(1) or r'\/', text)
+
+
+JS_REGEXP_FLAGS_MAP = {
+    'd': 0,
+    'g': 0,
+    'i': re.IGNORECASE,
+    'm': re.MULTILINE,
+    's': re.DOTALL,
+    'u': 0,
+    'y': 0,
+}
+JS_REGEXP_PATTERN_FIXER = re.compile(
+    r"""
+        \(\?<(?P<named_group_def>[^>]+)>  # lazy match (may false positive)
+        |
+        \\k<(?P<named_group_ref>[^>]+)>  # lazy match (may false positive)
+        |
+        \\u{(?P<braced_unicode_hex>[0-9A-Fa-f]+)}
+        |
+        (?P<escape>\\.)
+    """,
+    flags=re.S + re.X,
+)
+
+
+def _compile_regexp_fixer(m, flags=''):
+    if m.group('escape'):
+        return m.group('escape')
+    elif m.group('named_group_def'):
+        return rf"(?P<{m.group('named_group_def')}>"
+    elif m.group('named_group_ref'):
+        return rf"(?P={m.group('named_group_ref')})"
+    elif m.group('braced_unicode_hex'):
+        if 'u' in flags:
+            code = int(m.group('braced_unicode_hex'), 16)
+            return rf'\u{code:04X}' if code <= 0xFFFF else rf'\U{code:08X}'
+        else:
+            return rf"u{{{m.group('braced_unicode_hex')}}}"
+    return m.group(0)
+
+
+def compile_regexp(pattern, flags):
+    """Parse a JavaScript style RegExp (as much as possible)."""
+    flags_set = set()
+    for flag in flags:
+        if flag in flags_set:
+            raise re.error(f'duplicated flag {flag}')
+        flags_set.add(flag)
+
+    flags_py = 0
+    for flag in flags_set:
+        try:
+            flags_py |= JS_REGEXP_FLAGS_MAP[flag]
+        except KeyError:
+            raise re.error(f'invalid flag {flag}')
+
+    pattern = JS_REGEXP_PATTERN_FIXER.sub(
+        partial(_compile_regexp_fixer, flags=flags),
+        pattern,
+    )
+
+    return re.compile(pattern, flags=flags_py)
 
 
 def file_strip_eol(file):
@@ -272,7 +335,7 @@ class Linter:
         elif rule.type == 'regex':
             if self.check_regex:
                 try:
-                    re.compile(rule.rule)
+                    compile_regexp(rule.pattern, rule.flags)
                 except re.error as exc:
                     log.info('%s:%i: regex "%s" is invalid: %s',
                              rule.path, rule.line_no, rule.rule, exc)
