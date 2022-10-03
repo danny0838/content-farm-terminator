@@ -538,7 +538,7 @@ function initUrlChangeListener() {
   async function onPotentialUrlChange() {
     if (checkingUrl) { return; }
     checkingUrl = true;
-    const urlChanged = await recheckCurrentUrl();
+    await recheckCurrentUrl();
     checkingUrl = false;
   }
 
