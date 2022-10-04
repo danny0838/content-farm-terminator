@@ -340,6 +340,13 @@ class Linter:
                              rule.path, rule.line_no)
                     return None
 
+        elif rule.type == 'domain':
+            fixed_rule = rule.rule.lower()
+            if rule.rule != fixed_rule:
+                log.info('%s:%i: rule "%s" should be all lowercase',
+                         rule.path, rule.line_no, rule.rule)
+                return Rule(f'{fixed_rule}{rule.sep}{rule.comment}')
+
         elif rule.type == 'regex':
             if self.check_regex:
                 try:
