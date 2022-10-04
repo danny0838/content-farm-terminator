@@ -386,6 +386,10 @@ class Uniquifier:
         self.strip_eol = strip_eol
 
     def run(self):
+        for _ in self.uniquify():
+            pass
+
+    def uniquify(self):
         rules = []
         for file in self.files:
             log.debug('Adding rules for uniquification: %s ...', file)
@@ -402,7 +406,8 @@ class Uniquifier:
                         rules.append(rule)
 
         if self.cross_files:
-            new_rules = self.deduplicate_rules(rules)
+            new_rules = self.uniquify_rules(rules)
+            yield new_rules
             if self.auto_fix and new_rules != rules:
                 rulegroups = {}
                 for rule in new_rules:
@@ -415,11 +420,12 @@ class Uniquifier:
             for rule in rules:
                 rulegroups.setdefault(rule.path, []).append(rule)
             for subpath, rules in rulegroups.items():
-                new_rules = self.deduplicate_rules(rules)
+                new_rules = self.uniquify_rules(rules)
+                yield new_rules
                 if self.auto_fix and new_rules != rules:
                     self.save_fixed_file(subpath, new_rules)
 
-    def deduplicate_rules(self, rules):
+    def uniquify_rules(self, rules):
         new_rules = []
         rules_dict = {}
         for rule in rules:
@@ -500,33 +506,31 @@ class Builder:
             self.run_task(task)
 
     def run_task(self, task):
+        exclude_files = task.get('exclude', [])
+        exclude_files = [exclude_files] if isinstance(exclude_files, str) else exclude_files
+        exclude_files = flatten_files(os.path.join(self.root, f) for f in exclude_files)
+        exclude_subpaths = {os.path.relpath(f, self.root) for f in exclude_files}
+
         src_files = task['source']
         src_files = [src_files] if isinstance(src_files, str) else src_files
         src_files = flatten_files(os.path.join(self.root, f) for f in src_files)
+        src_files = list(dict.fromkeys(exclude_files + src_files))
 
         dst_file = os.path.normpath(os.path.join(self.root, task['publish']))
 
         log.info('Building "%s" ...', os.path.relpath(dst_file, self.root))
         os.makedirs(os.path.dirname(dst_file), exist_ok=True)
 
+        def gen_rules():
+            for new_rules in Uniquifier(self.root, self.config, src_files, cross_files=True).uniquify():
+                for new_rule in new_rules:
+                    if new_rule.path not in exclude_subpaths:
+                        yield new_rule
+
+        converter = get_converter(task.get('type', 'cft'))
         with open(dst_file, 'w', encoding='UTF-8') as oh:
             with redirect_stdout(oh):
-                converter = get_converter(task.get('type', 'cft'))
-                converter(None, task.get('data', {}), self.date).print_headers()
-
-                for src_file in src_files:
-                    log.info('Adding "%s" ...', os.path.relpath(src_file, self.root))
-                    try:
-                        ih = open(src_file, 'r', encoding='UTF-8-SIG')
-                    except OSError as exc:
-                        log.warning('Unable to add source "%s" when building "%s": %s',
-                                    os.path.relpath(src_file, self.root),
-                                    os.path.relpath(dst_file, self.root),
-                                    exc)
-                    else:
-                        with ih as ih:
-                            converter = get_converter(task.get('type', 'cft'))
-                            converter(ih, task.get('data', {}), self.date).run()
+                converter(gen_rules(), task.get('data', {}), self.date).run()
 
 
 def get_converter(name):
@@ -543,20 +547,19 @@ def get_converter(name):
 
 
 class Converter:
-    """Convert a source file."""
+    """Convert rules to the specified output format."""
     allow_schemes = True
 
-    def __init__(self, fh, info, date):
-        self.fh = fh
+    def __init__(self, rules, info, date):
+        self.rules = rules
         self.info = info
         self.date = date
 
     def run(self):
-        scheme_groups = {}
-        for line in self.fh:
-            line = line.rstrip('\n')
-            rule = Rule(line)
+        self.print_headers()
 
+        scheme_groups = {}
+        for rule in self.rules:
             # skip empty rule
             if rule.type is None:
                 self.print_rule(rule)

@@ -1,7 +1,7 @@
 ! Title: Extra Content Farm Filters
 ! Description: Extra filter for content-farm-like sites, mostly aggregated from other sources.
 ! Expires: 3 days
-! Last modified: 2022-10-01T00:17:20+00:00
+! Last modified: 2022-10-04T12:37:57+00:00
 ! Homepage: https://danny0838.github.io/content-farm-terminator/
 ! Licence: MIT License
 ! Source: https://danny0838.github.io/content-farm-terminator/files/blocklist-ubo/extra-content-farms.txt
@@ -465,8 +465,6 @@
 ||zvtt.cc^  #!aggreg-diveng
 ||zxsou.cc^  #!aggreg-diveng
 ||zymseo.com^  #!aggreg-diveng
-/https?://(?:cloud\.tencent\.com/developer/.*|cn\.aliyun\.com/ss/.*|cn\.aliyun\.com/sswm/.*|developer\.aliyun\.com/ask/.*|juejin\.cn/s/.*|www\.aliyun\.com/sswd/.*|www\.huaweicloud\.com/theme/.*)$/$document
-/https?://(?:[\w-]+\.)*(?:ntdtv\.com//.*)$/$document
 #!aggreg-GHHbD: https://raw.githubusercontent.com/cobaltdisco/Google-Chinese-Results-Blocklist/master/GHHbD_perma_ban_list.txt (https://github.com/cobaltdisco/Google-Chinese-Results-Blocklist)
 ||005i.com^  #!aggreg-GHHbD
 ||01-123.com^  #!aggreg-GHHbD
@@ -15797,6 +15795,7 @@
 ||arpww.info^  #!aggreg-gyli
 ||arqviz.com^  #!aggreg-gyli
 ||arrayinteractive.com^  #!aggreg-gyli
+||arrayshift.com^  #!aggreg-gyli
 ||arredostyl.com^  #!aggreg-gyli
 ||arsenalofhypocrisy.com^  #!aggreg-gyli
 ||arsenalsc.eu^  #!aggreg-gyli
@@ -15895,6 +15894,7 @@
 ||ask3.cn^  #!aggreg-gyli
 ||ask6699.com^  #!aggreg-gyli
 ||askaso.com^  #!aggreg-gyli
+||askbot.com^  #!aggreg-gyli
 ||askdarrel.com^  #!aggreg-gyli
 ||askjbktv.cn^  #!aggreg-gyli
 ||askjk120.com^  #!aggreg-gyli
@@ -48768,6 +48768,7 @@
 ||oskvv.com^  #!aggreg-gyli
 ||osmpxtkg.cn^  #!aggreg-gyli
 ||osmrf.com^  #!aggreg-gyli
+||osqa.com^  #!aggreg-gyli
 ||osqa.net^  #!aggreg-gyli
 ||osrqd.com^  #!aggreg-gyli
 ||osrtg.top^  #!aggreg-gyli
@@ -51482,6 +51483,7 @@
 ||queller.com^  #!aggreg-gyli
 ||queqiaoba.com^  #!aggreg-gyli
 ||quequeque.com.cn^  #!aggreg-gyli
+||question2answer.com^  #!aggreg-gyli
 ||qufeixiang.com^  #!aggreg-gyli
 ||qufu4.com^  #!aggreg-gyli
 ||qufugw.com^  #!aggreg-gyli
@@ -72451,6 +72453,7 @@
 ||218900.com^  #!aggreg-nonpnt
 ||21food.cn^  #!aggreg-nonpnt
 ||21ic.com^  #!aggreg-nonpnt
+||2219cc.com^  #!aggreg-nonpnt
 ||22352.xyz^  #!aggreg-nonpnt
 ||2265.com^  #!aggreg-nonpnt
 ||2616.com.cn^  #!aggreg-nonpnt
@@ -72496,6 +72499,7 @@
 ||5577.com^  #!aggreg-nonpnt
 ||55jf.com^  #!aggreg-nonpnt
 ||565k.com^  #!aggreg-nonpnt
+||5868685.com^  #!aggreg-nonpnt
 ||58hengqi.com^  #!aggreg-nonpnt
 ||5dir.cn^  #!aggreg-nonpnt
 ||61655.app^  #!aggreg-nonpnt
@@ -72520,11 +72524,13 @@
 ||92aliyun.com^  #!aggreg-nonpnt
 ||97hs.com^  #!aggreg-nonpnt
 ||996yx.com^  #!aggreg-nonpnt
+||99jiehun.com^  #!aggreg-nonpnt
 ||99qqa.cn^  #!aggreg-nonpnt
 ||99suliao.com^  #!aggreg-nonpnt
 ||9game.cn^  #!aggreg-nonpnt
 ||9idudu.com^  #!aggreg-nonpnt
 ||a.youhuima.cc^  #!aggreg-nonpnt
+||a7la-home.com^  #!aggreg-nonpnt
 ||aalahty.cn^  #!aggreg-nonpnt
 ||ab2s.com^  #!aggreg-nonpnt
 ||academicsaviour.com^  #!aggreg-nonpnt
@@ -72537,6 +72543,7 @@
 ||agid.cn^  #!aggreg-nonpnt
 ||aicaigoupifa.com^  #!aggreg-nonpnt
 ||aiseesoft.com^  #!aggreg-nonpnt
+||aishuaijiao.com^  #!aggreg-nonpnt
 ||aiskycn.com^  #!aggreg-nonpnt
 ||aizhaoni.com^  #!aggreg-nonpnt
 ||ajhujiao.com^  #!aggreg-nonpnt
@@ -72575,6 +72582,7 @@
 ||asmrqq.com^  #!aggreg-nonpnt
 ||atwidc.com^  #!aggreg-nonpnt
 ||auditioneasterhelm.com^  #!aggreg-nonpnt
+||awshao.com^  #!aggreg-nonpnt
 ||ayxbwy.com^  #!aggreg-nonpnt
 ||b00h.com^  #!aggreg-nonpnt
 ||baby918gardeneffect.live^  #!aggreg-nonpnt
@@ -72611,9 +72619,12 @@
 ||blogsbodasdeisabel.com^  #!aggreg-nonpnt
 ||bloomingtonventures.com^  #!aggreg-nonpnt
 ||bmcsjmj.com^  #!aggreg-nonpnt
+||bmw8830.com^  #!aggreg-nonpnt
 ||boaosheou.com^  #!aggreg-nonpnt
+||bohlsenpr.com^  #!aggreg-nonpnt
 ||bokcms.com^  #!aggreg-nonpnt
 ||bollingercanyon.com^  #!aggreg-nonpnt
+||bollywoods.ru.com^  #!aggreg-nonpnt
 ||bookresource.net^  #!aggreg-nonpnt
 ||brainandspineschool.com^  #!aggreg-nonpnt
 ||brd2a.com^  #!aggreg-nonpnt
@@ -72625,6 +72636,7 @@
 ||bugzj.com^  #!aggreg-nonpnt
 ||c.lanmit.com^  #!aggreg-nonpnt
 ||c2231.com^  #!aggreg-nonpnt
+||cache.one^  #!aggreg-nonpnt
 ||call886.com^  #!aggreg-nonpnt
 ||cambridgeesolchina.org^  #!aggreg-nonpnt
 ||camlya.com^  #!aggreg-nonpnt
@@ -72637,6 +72649,7 @@
 ||cbedai.net^  #!aggreg-nonpnt
 ||ccddzlq.com^  #!aggreg-nonpnt
 ||ccvic.com^  #!aggreg-nonpnt
+||centroricercainsubria.it^  #!aggreg-nonpnt
 ||cetturismo.cl^  #!aggreg-nonpnt
 ||chamberjkt.com^  #!aggreg-nonpnt
 ||chaoju.com^  #!aggreg-nonpnt
@@ -72661,6 +72674,7 @@
 ||cn.com^  #!aggreg-nonpnt
 ||cn.jptele.com^  #!aggreg-nonpnt
 ||cn846.com^  #!aggreg-nonpnt
+||cnfreedomrtveas.ru.com^  #!aggreg-nonpnt
 ||cnpython.com^  #!aggreg-nonpnt
 ||cnqlk.com^  #!aggreg-nonpnt
 ||cnshhbs.com^  #!aggreg-nonpnt
@@ -72688,6 +72702,7 @@
 ||czgeek.com^  #!aggreg-nonpnt
 ||daihema.com^  #!aggreg-nonpnt
 ||daimaqa.com^  #!aggreg-nonpnt
+||daka111.cn^  #!aggreg-nonpnt
 ||dama123.com^  #!aggreg-nonpnt
 ||dav01.com^  #!aggreg-nonpnt
 ||daynote.cc^  #!aggreg-nonpnt
@@ -72720,6 +72735,7 @@
 ||duanxinhongzha.com^  #!aggreg-nonpnt
 ||dute.me^  #!aggreg-nonpnt
 ||dvb56.com^  #!aggreg-nonpnt
+||dyecn.com^  #!aggreg-nonpnt
 ||dzydieo.site^  #!aggreg-nonpnt
 ||e-nikah.com^  #!aggreg-nonpnt
 ||easyatm.com.tw^  #!aggreg-nonpnt
@@ -72727,6 +72743,7 @@
 ||ecig100.com^  #!aggreg-nonpnt
 ||eclyq.co^  #!aggreg-nonpnt
 ||ecshweb.pchome.com.tw^  #!aggreg-nonpnt
+||edition-eltern.com^  #!aggreg-nonpnt
 ||edoghaitao.com^  #!aggreg-nonpnt
 ||edu.51cto.com^  #!aggreg-nonpnt
 ||ee.ofweek.com^  #!aggreg-nonpnt
@@ -72745,6 +72762,7 @@
 ||excellentdue.com^  #!aggreg-nonpnt
 ||exmail-qq.cc^  #!aggreg-nonpnt
 ||exmlo.com^  #!aggreg-nonpnt
+||exotips.com^  #!aggreg-nonpnt
 ||exportitnow.com^  #!aggreg-nonpnt
 ||f5.pm^  #!aggreg-nonpnt
 ||fanqiang.network^  #!aggreg-nonpnt
@@ -72780,18 +72798,24 @@
 ||geren-jianli.org^  #!aggreg-nonpnt
 ||getbackpacking365.com^  #!aggreg-nonpnt
 ||gfgyyq.com^  #!aggreg-nonpnt
+||gg4ss.com^  #!aggreg-nonpnt
 ||ggchewl.com^  #!aggreg-nonpnt
+||gghu.com^  #!aggreg-nonpnt
 ||giskaa.com^  #!aggreg-nonpnt
 ||gizchina.it^  #!aggreg-nonpnt
+||gldq123.com^  #!aggreg-nonpnt
 ||gobabl.com^  #!aggreg-nonpnt
 ||gohku.com^  #!aggreg-nonpnt
 ||gome.com.cn^  #!aggreg-nonpnt
 ||gongkongmro.com^  #!aggreg-nonpnt
 ||gov-civil-leiria.pt^  #!aggreg-nonpnt
 ||gpbctv.com^  #!aggreg-nonpnt
+||greatcappuccino.net^  #!aggreg-nonpnt
 ||gtuanb.com^  #!aggreg-nonpnt
 ||guangbaobei.net^  #!aggreg-nonpnt
 ||guangdiu.com^  #!aggreg-nonpnt
+||guidecycle.net^  #!aggreg-nonpnt
+||guidlings.com^  #!aggreg-nonpnt
 ||guoguofen.com^  #!aggreg-nonpnt
 ||guolianglaoshi.com^  #!aggreg-nonpnt
 ||gygg9.com^  #!aggreg-nonpnt
@@ -72861,6 +72885,8 @@
 ||imaycon.com^  #!aggreg-nonpnt
 ||investfundhjl.web.app^  #!aggreg-nonpnt
 ||ios.im^  #!aggreg-nonpnt
+||iosvm.com^  #!aggreg-nonpnt
+||iqqoz.com^  #!aggreg-nonpnt
 ||isdakar.org^  #!aggreg-nonpnt
 ||ishiker.com^  #!aggreg-nonpnt
 ||it.net.cn^  #!aggreg-nonpnt
@@ -72889,10 +72915,12 @@
 ||js.wszjl.com^  #!aggreg-nonpnt
 ||jsrc588.com^  #!aggreg-nonpnt
 ||jsxbbyq.com^  #!aggreg-nonpnt
+||juhebbs.com^  #!aggreg-nonpnt
 ||jutuilian.com^  #!aggreg-nonpnt
 ||juweibangong.com^  #!aggreg-nonpnt
 ||juxiu.net^  #!aggreg-nonpnt
 ||juzhekooo.com^  #!aggreg-nonpnt
+||jynews.net^  #!aggreg-nonpnt
 ||jzhcgm.com^  #!aggreg-nonpnt
 ||k-creat.com^  #!aggreg-nonpnt
 ||k.sina.cn^  #!aggreg-nonpnt
@@ -72917,6 +72945,7 @@
 ||lansingip.com^  #!aggreg-nonpnt
 ||ld12345.com^  #!aggreg-nonpnt
 ||lehuotuan.com^  #!aggreg-nonpnt
+||leixue.com^  #!aggreg-nonpnt
 ||lhyd.top^  #!aggreg-nonpnt
 ||libhunt.com^  #!aggreg-nonpnt
 ||libriblu.it^  #!aggreg-nonpnt
@@ -73020,6 +73049,7 @@
 ||mo08.biz^  #!aggreg-nonpnt
 ||mobile2day.com^  #!aggreg-nonpnt
 ||modb.pro^  #!aggreg-nonpnt
+||moe.ms^  #!aggreg-nonpnt
 ||moflier.com^  #!aggreg-nonpnt
 ||moneytlk.com^  #!aggreg-nonpnt
 ||mop.com^  #!aggreg-nonpnt
@@ -73059,6 +73089,7 @@
 ||nordvpnblog.com^  #!aggreg-nonpnt
 ||nuomiphp.com^  #!aggreg-nonpnt
 ||nxhh.net^  #!aggreg-nonpnt
+||nyist.net^  #!aggreg-nonpnt
 ||offers.com^  #!aggreg-nonpnt
 ||ofweek.com^  #!aggreg-nonpnt
 ||ojit.com^  #!aggreg-nonpnt
@@ -73081,6 +73112,7 @@
 ||pinlue.com^  #!aggreg-nonpnt
 ||piqiuda.com^  #!aggreg-nonpnt
 ||pixelprivacy.com^  #!aggreg-nonpnt
+||pn3p.com^  #!aggreg-nonpnt
 ||pnstudy.com^  #!aggreg-nonpnt
 ||poldomu.pl^  #!aggreg-nonpnt
 ||poloniabeaulieu.fr^  #!aggreg-nonpnt
@@ -73120,6 +73152,7 @@
 ||quanmaimai.com^  #!aggreg-nonpnt
 ||quanmama.com^  #!aggreg-nonpnt
 ||quitko.com^  #!aggreg-nonpnt
+||qumiaodong.com^  #!aggreg-nonpnt
 ||qunkong.com.cn^  #!aggreg-nonpnt
 ||qwtcpt.com^  #!aggreg-nonpnt
 ||qxqpw.net^  #!aggreg-nonpnt
@@ -73179,6 +73212,7 @@
 ||sjzjgbj.com^  #!aggreg-nonpnt
 ||sjzjyyx.com^  #!aggreg-nonpnt
 ||slickdeals.net^  #!aggreg-nonpnt
+||sm-tc.cn^  #!aggreg-nonpnt
 ||sm1234.net^  #!aggreg-nonpnt
 ||smart-gamma.com^  #!aggreg-nonpnt
 ||smartme.pl^  #!aggreg-nonpnt
@@ -73191,6 +73225,7 @@
 ||soft-vn.net^  #!aggreg-nonpnt
 ||sohoblink.com^  #!aggreg-nonpnt
 ||sportsoho.com^  #!aggreg-nonpnt
+||squadguide.net^  #!aggreg-nonpnt
 ||sqzlsy.cn^  #!aggreg-nonpnt
 ||stackovernet.xyz^  #!aggreg-nonpnt
 ||stackscn.com^  #!aggreg-nonpnt
@@ -73216,6 +73251,7 @@
 ||taocms.org^  #!aggreg-nonpnt
 ||taoshudang.com^  #!aggreg-nonpnt
 ||tastones.com^  #!aggreg-nonpnt
+||tbganhuo.com^  #!aggreg-nonpnt
 ||tcly6.com^  #!aggreg-nonpnt
 ||teachrock.org^  #!aggreg-nonpnt
 ||techbang.com^  #!aggreg-nonpnt
@@ -73288,6 +73324,7 @@
 ||vpn5best.com^  #!aggreg-nonpnt
 ||vpnmentor.com^  #!aggreg-nonpnt
 ||vsbuys.com^  #!aggreg-nonpnt
+||vvfx.cc^  #!aggreg-nonpnt
 ||wailaike.net^  #!aggreg-nonpnt
 ||wallmama.com^  #!aggreg-nonpnt
 ||wallzhihu.com^  #!aggreg-nonpnt
@@ -73312,6 +73349,7 @@
 ||wenxuecity.com^  #!aggreg-nonpnt
 ||westack.live^  #!aggreg-nonpnt
 ||who-called-de.com^  #!aggreg-nonpnt
+||whoisua.com^  #!aggreg-nonpnt
 ||wikicell.org^  #!aggreg-nonpnt
 ||win10xiazai.com^  #!aggreg-nonpnt
 ||windowsbulletin.com^  #!aggreg-nonpnt
@@ -73320,6 +73358,7 @@
 ||witdroid.com^  #!aggreg-nonpnt
 ||wjpy55.com^  #!aggreg-nonpnt
 ||wolonge.com^  #!aggreg-nonpnt
+||woniuwl.com^  #!aggreg-nonpnt
 ||wordlm.com^  #!aggreg-nonpnt
 ||wordpress.com^  #!aggreg-nonpnt
 ||workit.cc^  #!aggreg-nonpnt
@@ -73358,6 +73397,7 @@
 ||xulander.com^  #!aggreg-nonpnt
 ||xunii.com^  #!aggreg-nonpnt
 ||xykjsqg.com^  #!aggreg-nonpnt
+||xyttt.com^  #!aggreg-nonpnt
 ||xyyhs.net^  #!aggreg-nonpnt
 ||xzlbjg.com^  #!aggreg-nonpnt
 ||y5.hk^  #!aggreg-nonpnt
@@ -73422,9 +73462,6 @@
 ||zx75551.com^  #!aggreg-nonpnt
 ||zybashi.com^  #!aggreg-nonpnt
 ||zzchenhui.com^  #!aggreg-nonpnt
-/https?://(?:baike\.baidu\.com/tashuo/.*|blog\.csdn\.net/holybin/.*|blog\.csdn\.net/weixin_35909238/.*|book\.jd\.com/publish/Search\?.*|cloud\.tencent\.com/developer/article/.*|cloud\.tencent\.com/developer/ask/.*|cloud\.tencent\.com/developer/information/.*|developer\.aliyun\.com/articlezt/.*|iknow\.baidu\.com/search\?word=.*|my\.oschina\.net/u/4394125/.*|new\.qq\.com/omn/.*|news\.futunn\.com/post/.*|pic\.sogou\.com/pic/searchList\.jsp\?.*|www\.163\.com/dy/article/.*|www\.baidu\.com/sf/.*|www\.csdn\.net/gather_.*|www\.csdn\.net/tags/.*|www\.huaweicloud\.com/articles/.*|www\.lagou\.com/lgeduarticle/.*|www\.pconline\.com\.cn/3g/.*|www\.pconline\.com\.cn/other_pic.*|www\.right\.com\.cn/FORUM/search\.php\?.*|www\.sohu\.com/a/.*|www\.sojson\.com/blog/.*|www\.west\.cn/docs/.*|www\.xinnet\.com/xinzhi/.*|zhidaocommit\.baidu\.com/search\?.*|zidao\.baidu\.com/search\?.*)$/$document
-/https?://(?:[\w-]+\.)*(?:4hou\.com/posts/.*|baidu\.com/s\?word=.*|csdn\.net/weixin_26722031/article/.*|dongchedi\.com/tag/.*|imooc\.com/wenda/.*|juejin\.cn/s/.*|lete\.com/kdwenda/.*|liangliangmama\.com/blogs/news/.*|ourplay\.net/ask/.*|ourplay\.net/qazt/.*|pc6\.com/infoview/.*|toutiao\.com/search/.*|toutiao\.com/search\?keyword=.*|wuzhuiso\.com/s\?q=.*)$/$document
-/https?://(?:[\w-]+\.)*[\w-]+/(?:\?s=.*|cha\.php\?s=.*|home\.php\?mod=space.*|list\.php\?s=.*|so\.php|so\.php\?s=.*|so/.*)$/$document
 #!aggreg-scyrte: https://raw.githubusercontent.com/scyrte/uBlacklist-Subscription/master/blacklist.txt (https://github.com/scyrte/uBlacklist-Subscription)
 ||000.org.cn^  #!aggreg-scyrte
 ||010bom.com^  #!aggreg-scyrte
@@ -74600,3 +74637,6 @@
 ||zzbhg.com^  #!aggreg-yesil
 ||zzpr0371.com^  #!aggreg-yesil
 ||zzthmu.com^  #!aggreg-yesil
+/https?://(?:cloud\.tencent\.com/developer/.*|cn\.aliyun\.com/ss/.*|cn\.aliyun\.com/sswm/.*|developer\.aliyun\.com/ask/.*|juejin\.cn/s/.*|www\.aliyun\.com/sswd/.*|www\.huaweicloud\.com/theme/.*|baike\.baidu\.com/tashuo/.*|blog\.csdn\.net/holybin/.*|blog\.csdn\.net/weixin_35909238/.*|book\.jd\.com/publish/Search\?.*|cloud\.tencent\.com/developer/article/.*|cloud\.tencent\.com/developer/ask/.*|cloud\.tencent\.com/developer/information/.*|developer\.aliyun\.com/articlezt/.*|iknow\.baidu\.com/search\?word=.*|my\.oschina\.net/u/4394125/.*|new\.qq\.com/omn/.*|news\.futunn\.com/post/.*|pic\.sogou\.com/pic/searchList\.jsp\?.*|www\.163\.com/dy/article/.*|www\.baidu\.com/sf/.*|www\.csdn\.net/gather_.*|www\.csdn\.net/tags/.*|www\.huaweicloud\.com/articles/.*|www\.lagou\.com/lgeduarticle/.*|www\.pconline\.com\.cn/3g/.*|www\.pconline\.com\.cn/other_pic.*|www\.right\.com\.cn/FORUM/search\.php\?.*|www\.sohu\.com/a/.*|www\.sojson\.com/blog/.*|www\.west\.cn/docs/.*|www\.xinnet\.com/xinzhi/.*|zhidaocommit\.baidu\.com/search\?.*|zidao\.baidu\.com/search\?.*)$/$document
+/https?://(?:[\w-]+\.)*(?:ntdtv\.com//.*|4hou\.com/posts/.*|51cto\.com/topic/.*|baidu\.com/s\?word=.*|csdn\.net/weixin_26722031/article/.*|dongchedi\.com/tag/.*|imooc\.com/wenda/.*|juejin\.cn/s/.*|lete\.com/kdwenda/.*|liangliangmama\.com/blogs/news/.*|oschina\.net/informat/.*|ourplay\.net/ask/.*|ourplay\.net/qazt/.*|pc6\.com/infoview/.*|toutiao\.com/search/.*|toutiao\.com/search\?keyword=.*|wuzhuiso\.com/s\?q=.*)$/$document
+/https?://(?:[\w-]+\.)*[\w-]+/(?:\?s=.*|cha\.php\?s=.*|home\.php\?mod=space.*|list\.php\?s=.*|so\.php|so\.php\?s=.*|so/.*)$/$document
