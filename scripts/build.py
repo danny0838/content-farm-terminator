@@ -482,9 +482,10 @@ class Uniquifier:
         with open(file, 'w', encoding='UTF-8') as fh:
             for rule in rules:
                 print(f'{rule.rule}{rule.sep}{rule.comment}', file=fh)
+
         if self.strip_eol:
-            log.debug('Stripping eol for %s ...', subpath)
-            file_strip_eol(file)
+            if file_strip_eol(file):
+                log.debug('Stripped EOL for %s', subpath)
 
 
 class Builder:
