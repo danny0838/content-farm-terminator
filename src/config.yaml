@@ -68,7 +68,8 @@ auto_tasks:
       kwargs:
         files:
           - src/blocklist/not-content-farms.txt
-        advanced: true
+        check_subdomains: true
+        check_wildcards: true
         auto_fix: true
     - action: uniquify
       kwargs:
@@ -81,7 +82,8 @@ auto_tasks:
           - src/blocklist/sns-content-farms.txt
         auto_fix_excludes:
           - src/blocklist/not-content-farms.txt
-        advanced: true
+        check_subdomains: true
+        check_wildcards: true
         cross_files: true
         auto_fix: true
 

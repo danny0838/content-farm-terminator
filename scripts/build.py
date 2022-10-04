@@ -374,12 +374,14 @@ class Linter:
 
 class Uniquifier:
     """Check for duplicated rules of the source files."""
-    def __init__(self, root, config=None, files=None, advanced=False, cross_files=False,
+    def __init__(self, root, config=None, files=None,
+                 check_subdomains=False, check_wildcards=False, cross_files=False,
                  auto_fix=False, auto_fix_excludes=None, strip_eol=False):
         self.root = root
         self.config = config or {}
         self.files = flatten_files(files or [])
-        self.advanced = advanced
+        self.check_subdomains = check_subdomains
+        self.check_wildcards = check_wildcards
         self.cross_files = cross_files
         self.auto_fix = auto_fix
         self.auto_fix_excludes = set(flatten_files(auto_fix_excludes or []))
@@ -440,17 +442,46 @@ class Uniquifier:
                     continue
             new_rules.append(rule)
 
-        if self.advanced:
-            new_rules = self.check_covered_rules(new_rules)
+        if self.check_subdomains:
+            new_rules = self.check_subdomain_coverage(new_rules, rules_dict)
+
+        if self.check_wildcards:
+            new_rules = self.check_wildcard_coverage(new_rules)
 
         return new_rules
 
-    def check_covered_rules(self, rules):
+    def check_subdomain_coverage(self, rules, rules_dict):
+        new_rules = []
+
+        for rule in rules:
+            ok = True
+            if rule.type == 'domain' and '*' not in rule.rule:
+                domain = rule.rule
+                pos = domain.find('.')
+                while pos >= 0:
+                    domain = domain[pos + 1:]
+                    try:
+                        rule2 = rules_dict[domain]
+                    except KeyError:
+                        pass
+                    else:
+                        log.info('%s:%i: rule "%s" is a subdomain of "%s" (%s:%i)',
+                                 rule.path, rule.line_no, rule.rule, rule2.rule, rule2.path, rule2.line_no)
+                        ok = False
+                        break
+                    pos = domain.find('.')
+
+            if ok:
+                new_rules.append(rule)
+
+        return new_rules
+
+    def check_wildcard_coverage(self, rules):
         new_rules = []
 
         regex_dict = {}
         for rule in rules:
-            if rule.type == 'domain':
+            if rule.type == 'domain' and '*' in rule.rule:
                 regex_dict[rule] = re.compile(
                     r'^(?:[\w*-]+\.)*'
                     + re.escape(rule.rule).replace(r'\*', r'[\w*-]*')
@@ -469,10 +500,10 @@ class Uniquifier:
                         continue
 
                     if regex.search(rule.rule):
-                        log.info('%s:%i: domain "%s" is covered by rule "%s" (%s:%i)',
+                        log.info('%s:%i: rule "%s" is covered by rule "%s" (%s:%i)',
                                  rule.path, rule.line_no, rule.rule, rule2.rule, rule2.path, rule2.line_no)
                         ok = False
-                        continue
+                        break
 
             if ok:
                 new_rules.append(rule)
@@ -1092,8 +1123,11 @@ def parse_args(argv=None):
         'files', metavar='file', nargs='+',
         help="""file(s) to check""")
     parser_uniquify.add_argument(
-        '--advanced', action='store_true', default=False,
-        help="""check for advanced rule coverage (may take long time)""")
+        '-s', '--check-subdomains', action='store_true', default=False,
+        help="""check for subdomain coverage for standard rules""")
+    parser_uniquify.add_argument(
+        '-w', '--check-wildcards', action='store_true', default=False,
+        help="""check for wildcard coverage for standard rules (NOTE: This may take a long time.)""")
     parser_uniquify.add_argument(
         '-c', '--cross-files', action='store_true', default=False,
         help="""check for uniquity across files""")
@@ -1147,8 +1181,9 @@ def main():
 
     elif args.action in ('uniquify', 'u'):
         params = inspect.signature(Uniquifier).parameters
-        kwargs = {k: getattr(args, k, params[k].default)
-                  for k in ('files', 'advanced', 'cross_files', 'auto_fix', 'auto_fix_excludes', 'strip_eol')}
+        kwargs = {k: getattr(args, k, params[k].default) for k in (
+                  'files', 'check_subdomains', 'check_wildcards', 'cross_files',
+                  'auto_fix', 'auto_fix_excludes', 'strip_eol')}
         Uniquifier(args.root, config, **kwargs).run()
 
     elif args.action in ('build', 'b'):
