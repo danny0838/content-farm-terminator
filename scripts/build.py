@@ -553,7 +553,9 @@ class Builder:
         os.makedirs(os.path.dirname(dst_file), exist_ok=True)
 
         def gen_rules():
-            for new_rules in Uniquifier(self.root, self.config, src_files, cross_files=True).uniquify():
+            for new_rules in Uniquifier(
+                self.root, self.config, src_files, check_subdomains=True, cross_files=True
+            ).uniquify():
                 for new_rule in new_rules:
                     if new_rule.path not in exclude_subpaths:
                         yield new_rule
