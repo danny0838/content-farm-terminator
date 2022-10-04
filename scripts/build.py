@@ -345,7 +345,13 @@ class Linter:
             if rule.rule != fixed_rule:
                 log.info('%s:%i: rule "%s" should be all lowercase',
                          rule.path, rule.line_no, rule.rule)
-                return Rule(f'{fixed_rule}{rule.sep}{rule.comment}')
+                rule = Rule(f'{fixed_rule}{rule.sep}{rule.comment}')
+
+            if '**' in rule.rule:
+                log.info('%s:%i: rule "%s" has "**"',
+                         rule.path, rule.line_no, rule.rule)
+                fixed_rule = re.sub(r'\*+', r'*', rule.rule)
+                rule = Rule(f'{fixed_rule}{rule.sep}{rule.comment}')
 
         elif rule.type == 'regex':
             if self.check_regex:
