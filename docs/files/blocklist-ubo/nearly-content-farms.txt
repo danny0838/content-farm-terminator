@@ -1,13 +1,14 @@
 ! Title: Nearly Content Farm Filters
 ! Description: Filter for content-farm-like sites, mostly in Chinese.
 ! Expires: 3 days
-! Last modified: 2022-10-03T13:45:15+00:00
+! Last modified: 2022-10-04T14:28:54+00:00
 ! Homepage: https://danny0838.github.io/content-farm-terminator/
 ! Licence: MIT License
 ! Source: https://danny0838.github.io/content-farm-terminator/files/blocklist-ubo/nearly-content-farms.txt
 ||0nion.com^  #網站已明確說明為學術性爬蟲且有附上來源，但似乎未事先取得被爬站方授權
 ||25xt.com^  #內容有主題性且經過篩選，許多轉文有附來源但疑似未經授權
 ||94477.com^  #轉發微信公眾號的平台，似乎未經作者授權
+||aiwubook.com^  #小說盜版
 ||aixdzs.com^  #小說盜版
 ||aoyaxs.com^  #小說盜版
 ||b.bbi.com.tw^  #轉文服務，有註明出處，疑大量未授權轉載
@@ -22,9 +23,12 @@
 ||helplib.com^  #內容多機器翻譯自CC或MIT等專案，但常未載明來源
 ||iwaishin.com^  #www.~, news.~, article.~, ... 大量轉貼全文，疑未經授權
 ||jimpop.core5.org^  #PTT文章轉寄服務，可能有未授權轉載
+||lnshu.net^  #小說盜版
 ||looknews.us^  #毫無篩選大量轉貼其他新聞媒體的網站，有附出處，使用.us網域，留言其各處介面都怪怪的，不似正常企業經營的網站
+||lyrouniu.com^  #小說盜版
 ||manongjc.com^  #有附來源，疑未授權轉載
 ||montagg.io^  #盜YouTube影片，有附來源
+||mzi8.com^  #以姓名網名義製造大量相似網頁
 ||news.gamme.com.tw^  #疑似大量盜譯日文網站
 ||niusnews.com^  #內容多來自網路文章剪貼
 ||playbuzz.com^  #會員自行發文章或小題目的平台，無意義內容稍多
@@ -36,4 +40,8 @@
 ||ubuntuqa.com^  #有附來源，疑未授權盜譯
 ||unsafe.sh^  #有附來源，疑未授權轉載
 ||xiancaog.com^  #小說盜版
+||xingmingzhijia.com^  #以姓名網名義製造大量相似網頁
+||xiupoxs.com^  #小說盜版
+||yewang.net^  #小說盜版
 ||yoduxs.com^  #小說盜版
+||zjyywz.net^  #小說盜版
