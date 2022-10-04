@@ -1039,7 +1039,7 @@ def parse_args(argv=None):
         help="""run the linter""",
         description=Linter.__doc__)
     parser_lint.add_argument(
-        'files', metavar='file', action='extend', nargs='+',
+        'files', metavar='file', nargs='+',
         help="""file(s) to check""")
     parser_lint.add_argument(
         '-r', '--check-regex', action='store_true', default=False,
@@ -1064,7 +1064,7 @@ def parse_args(argv=None):
         help="""run the uniquifier""",
         description=Uniquifier.__doc__)
     parser_uniquify.add_argument(
-        'files', metavar='file', action='extend', nargs='+',
+        'files', metavar='file', nargs='+',
         help="""file(s) to check""")
     parser_uniquify.add_argument(
         '--advanced', action='store_true', default=False,
