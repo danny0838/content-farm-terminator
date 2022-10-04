@@ -21,7 +21,15 @@ log = logging.getLogger(__name__)
 
 
 RE_SPACE_MATCHER = re.compile(r'^(\S*)(\s*)(.*)$')
-RE_DOMAIN_RULE = re.compile(r'^(?:[0-9a-z*-]+)(?:\.[0-9a-z*-]+)*$')
+RE_DOMAIN_RULE = re.compile(  # domain name but also allow '*'
+    r"""
+        ^
+        (?:[0-9A-Za-z*](?:[-0-9A-Za-z*]*[0-9A-Za-z*])?)
+        (?:\.(?:[0-9A-Za-z*](?:[-0-9A-Za-z*]*[0-9A-Za-z*])?))*
+        $
+    """,
+    flags=re.X,
+)
 RE_SCHEME_RULE = re.compile(r'^([A-Za-z][0-9A-Za-z+.-]+):(.*)$')
 RE_REGEX_RULE = re.compile(r'^/(.*)/([a-z]*)$')
 RE_REGEX_SLASH_ESCAPER = re.compile(r'(\\.)|/')
