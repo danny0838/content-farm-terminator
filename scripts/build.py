@@ -1076,6 +1076,9 @@ def parse_args(argv=None):
         '-a', '--auto-fix', action='store_true', default=False,
         help="""automatically fix issues""")
     parser_uniquify.add_argument(
+        '-X', '--auto-fix-excludes', metavar='file', nargs='+',
+        help="""exclude file(s) from modified by --auto-fix""")
+    parser_uniquify.add_argument(
         '-t', '--strip-eol', action='store_true', default=False,
         help="""remove ending linefeeds""")
 
@@ -1120,7 +1123,7 @@ def main():
     elif args.action in ('uniquify', 'u'):
         params = inspect.signature(Uniquifier).parameters
         kwargs = {k: getattr(args, k, params[k].default)
-                  for k in ('files', 'advanced', 'cross_files', 'auto_fix', 'strip_eol')}
+                  for k in ('files', 'advanced', 'cross_files', 'auto_fix', 'auto_fix_excludes', 'strip_eol')}
         Uniquifier(args.root, config, **kwargs).run()
 
     elif args.action in ('build', 'b'):
