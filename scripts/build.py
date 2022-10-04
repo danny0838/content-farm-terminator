@@ -403,8 +403,6 @@ class Uniquifier:
 
         if self.cross_files:
             new_rules = self.deduplicate_rules(rules)
-            if self.advanced:
-                new_rules = self.check_covered_rules(new_rules)
             if self.auto_fix and new_rules != rules:
                 rulegroups = {}
                 for rule in new_rules:
@@ -418,8 +416,6 @@ class Uniquifier:
                 rulegroups.setdefault(rule.path, []).append(rule)
             for subpath, rules in rulegroups.items():
                 new_rules = self.deduplicate_rules(rules)
-                if self.advanced:
-                    new_rules = self.check_covered_rules(new_rules)
                 if self.auto_fix and new_rules != rules:
                     self.save_fixed_file(subpath, new_rules)
 
@@ -437,6 +433,10 @@ class Uniquifier:
                              rule.path, rule.line_no, rule.rule, rule2.path, rule2.line_no)
                     continue
             new_rules.append(rule)
+
+        if self.advanced:
+            new_rules = self.check_covered_rules(new_rules)
+
         return new_rules
 
     def check_covered_rules(self, rules):
