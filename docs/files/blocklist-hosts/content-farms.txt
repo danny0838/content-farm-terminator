@@ -1,6 +1,6 @@
 # Title: Content Farm Filters
 # Description: Filter for general content farms, mostly in Chinese.
-# Last modified: 2022-10-04T15:16:08+00:00
+# Last modified: 2022-10-04T16:25:58+00:00
 # Homepage: https://danny0838.github.io/content-farm-terminator/
 # Licence: MIT License
 # Source: https://danny0838.github.io/content-farm-terminator/files/blocklist-hosts/content-farms.txt
@@ -711,6 +711,7 @@
 127.0.0.1 4009690960.com  #redirects to g.penzai.com
 127.0.0.1 400997.cn  #redirects to g.penzai.com
 127.0.0.1 400hzqx.cn  #redirects to g.penzai.com
+127.0.0.1 400sbc.com  #redirects to irene-eux.com
 127.0.0.1 400songcan.com  #redirects to g.penzai.com
 127.0.0.1 401d1l.com  #R18
 127.0.0.1 4022gg1.vip
@@ -907,6 +908,7 @@
 127.0.0.1 555iw.com  #redirects to g.penzai.com
 127.0.0.1 55611.top  #R18
 127.0.0.1 55667766.com  #redirects to g.penzai.com
+127.0.0.1 5571100.com
 127.0.0.1 5580514.cc
 127.0.0.1 5580547.cc
 127.0.0.1 5580564.cc
@@ -1465,6 +1467,7 @@
 127.0.0.1 adfasff.cn  #redirects to g.penzai.com
 127.0.0.1 adfhdfgrrwe.pixnet.net
 127.0.0.1 adiamondmine.buzz  #redirects to g.penzai.com
+127.0.0.1 adipexdrugstore.com
 127.0.0.1 adlerseeds.buzz  #redirects to g.penzai.com
 127.0.0.1 admin8844.cn  #redirects to g.penzai.com
 127.0.0.1 admirelove.com
@@ -2804,6 +2807,7 @@
 127.0.0.1 chixingkm.com  #redirects to g.penzai.com
 127.0.0.1 chiyidavip.com  #歡享網
 127.0.0.1 chndongda.com  #redirects to g.penzai.com
+127.0.0.1 chnweiyu.com
 127.0.0.1 chnzodiac.com  #歡享網
 127.0.0.1 chongaibao.cn  #redirects to g.penzai.com
 127.0.0.1 chongchongfei.cn  #redirects to g.penzai.com
@@ -6196,6 +6200,7 @@
 127.0.0.1 iread.one
 127.0.0.1 ireaded.com
 127.0.0.1 iredpage.com
+127.0.0.1 irene-eux.com  #malicious ad scripts
 127.0.0.1 iripkbw.cn  #redirects to g.penzai.com
 127.0.0.1 iriri.co  #大榴槤/大時代/GreatDaily/閃文聯盟/琦琦~
 127.0.0.1 irmcenter.cn  #redirects to g.penzai.com
@@ -7558,6 +7563,7 @@
 127.0.0.1 linjiamm.com
 127.0.0.1 link4399.cn  #redirects to g.penzai.com
 127.0.0.1 linkptt.com
+127.0.0.1 linkteelow.live  #malicious ad scripts
 127.0.0.1 linnateras.fi  #redirects to na-madagaskar.sk
 127.0.0.1 linnseed.me  #redirects to soonmiss.top
 127.0.0.1 linyuanfs.com  #redirects to g.penzai.com
@@ -7969,6 +7975,7 @@
 127.0.0.1 manningrrenee.pixnet.net
 127.0.0.1 manningsylq1.pixnet.net
 127.0.0.1 mannmarsj57.pixnet.net
+127.0.0.1 manong5.com
 127.0.0.1 manongdao.com
 127.0.0.1 manorvilletv.blog.fc2.com
 127.0.0.1 manta.com
@@ -9492,6 +9499,7 @@
 127.0.0.1 pl13117194.pixnet.net
 127.0.0.1 pl91.cn  #redirects to g.penzai.com
 127.0.0.1 planet7tech.buzz  #redirects to g.penzai.com
+127.0.0.1 planetgammon.com
 127.0.0.1 planetoffside.buzz  #redirects to g.penzai.com
 127.0.0.1 planetsuddenradio.xyz  #!redirects to find-top-prizes-here.life
 127.0.0.1 plat96.com  #redirects to g.penzai.com
@@ -11070,6 +11078,7 @@
 127.0.0.1 studiocavas.co  #redirects to cacnka.xyz
 127.0.0.1 studiodahu.com
 127.0.0.1 stugov.tv
+127.0.0.1 stx160.com
 127.0.0.1 stylewikitw.com
 127.0.0.1 subaidajs.com  #redirects to g.penzai.com
 127.0.0.1 subvietnam.shop  #redirects to simpledatings.life
@@ -13459,6 +13468,7 @@
 127.0.0.1 yangtao365.com  #redirects to g.penzai.com
 127.0.0.1 yangxiangyang.com
 127.0.0.1 yangxiudl.com  #redirects to g.penzai.com
+127.0.0.1 yangzheng365.com
 127.0.0.1 yangzhi822.com  #redirects to g.penzai.com
 127.0.0.1 yanirsan.buzz  #redirects to g.penzai.com
 127.0.0.1 yanjianggu.com

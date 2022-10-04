@@ -1,9 +1,311 @@
 # Title: Extra Content Farm Filters
 # Description: Extra filter for content-farm-like sites, mostly aggregated from other sources.
-# Last modified: 2022-10-04T15:16:08+00:00
+# Last modified: 2022-10-04T16:25:58+00:00
 # Homepage: https://danny0838.github.io/content-farm-terminator/
 # Licence: MIT License
 # Source: https://danny0838.github.io/content-farm-terminator/files/blocklist-ublacklist/extra-content-farms.txt
+#!aggreg-bbw: Ban Bad Websites (https://greasyfork.org/scripts/389721)
+*://*.0937car.cn/*  #爬虫采集 SEO 机器翻译垃圾网站
+*://*.11px.cn/*  #爬虫采集 SEO 机器翻译垃圾网站
+*://*.1applehealth.com/*  #爬虫采集 SEO 机器翻译垃圾网站
+*://*.1r1g.cn/*  #爬虫采集 SEO 机器翻译垃圾网站
+*://*.1r1g.com/*  #爬虫采集 SEO 机器翻译垃圾网站
+*://*.2266601.com/*  #博彩垃圾网站
+*://*.322cpw.com/*  #博彩垃圾网站
+*://*.36511cp.com/*  #博彩垃圾网站
+*://*.36545622.com/*  #博彩垃圾网站
+*://*.365888432.com/*  #博彩垃圾网站
+*://*.366service.com/*  #爬虫采集 SEO 机器翻译垃圾网站
+*://*.3li.cc/*  #爬虫采集 SEO 机器翻译垃圾网站
+*://*.4008140202.com/*  #爬虫采集 SEO 机器翻译垃圾网站
+*://*.400sbc.com/*  #博彩垃圾网站
+*://*.4659855.com/*  #爬虫采集 SEO 机器翻译垃圾网站
+*://*.4k8k.xyz/*  #爬虫采集 SEO 机器翻译垃圾网站
+*://*.52365o.com/*  #博彩垃圾网站
+*://*.52movs.com/*  #爬虫采集 SEO 机器翻译垃圾网站
+*://*.5571100.com/*  #博彩垃圾网站
+*://*.57mcp.com/*  #博彩垃圾网站
+*://*.585906.com/*  #爬虫采集 SEO 机器翻译垃圾网站
+*://*.58pjy.com/*  #博彩垃圾网站
+*://*.723g.com.cn/*  #爬虫采集 SEO 机器翻译垃圾网站
+*://*.91webs.cn/*  #爬虫采集 SEO 机器翻译垃圾网站
+*://*.9999ktv.com/*  #爬虫采集 SEO 机器翻译垃圾网站
+*://*.adatiya.com/*  #爬虫采集 SEO 机器翻译垃圾网站
+*://*.adipexdrugstore.com/*  #博彩垃圾网站
+*://*.admin5.com/*  #爬虫采集 SEO 机器翻译垃圾网站
+*://*.affde.com/*  #爬虫采集 SEO 机器翻译垃圾网站
+*://*.africamv.com/*  #爬虫采集 SEO 机器翻译垃圾网站
+*://*.allocmem.com/*  #爬虫采集 SEO 机器翻译垃圾网站
+*://*.androidcookie.com/*  #爬虫采集 SEO 机器翻译垃圾网站
+*://*.androidsis.com/*  #爬虫采集 SEO 机器翻译垃圾网站
+*://*.answer-id.com/*  #爬虫采集 SEO 机器翻译垃圾网站
+*://*.artez.org.cn/*  #爬虫采集 SEO 机器翻译垃圾网站
+*://*.aspxhtml.com/*  #爬虫采集 SEO 机器翻译垃圾网站
+*://*.athabasca-foto.com/*  #爬虫采集 SEO 机器翻译垃圾网站
+*://*.babyitellyou.com/*  #爬虫采集 SEO 机器翻译垃圾网站
+*://*.baobaoyuer.com/*  #爬虫采集 SEO 机器翻译垃圾网站
+*://*.baopen.xyz/*  #爬虫采集 SEO 机器翻译垃圾网站
+*://*.bayouseo.com/*  #爬虫采集 SEO 机器翻译垃圾网站
+*://*.bbsah.com/*  #爬虫采集 SEO 机器翻译垃圾网站
+*://*.bbsmax.com/*  #爬虫采集 SEO 机器翻译垃圾网站
+*://*.bdqxgw.com/*  #爬虫采集 SEO 机器翻译垃圾网站
+*://*.bookset.io/*  #爬虫采集 SEO 机器翻译垃圾网站
+*://*.bubuko.com/*  #爬虫采集 SEO 机器翻译垃圾网站
+*://*.bugjia.net/*  #爬虫采集 SEO 机器翻译垃圾网站
+*://*.bugshoot.cn/*  #爬虫采集 SEO 机器翻译垃圾网站
+*://*.bullforyou.com/*  #爬虫采集 SEO 机器翻译垃圾网站
+*://*.bynss.com/*  #爬虫采集 SEO 机器翻译垃圾网站
+*://*.cairoibf.org/*  #博彩垃圾网站
+*://*.canmanuel.com/*  #爬虫采集 SEO 机器翻译垃圾网站
+*://*.cctsuzhou.cn/*  #爬虫采集 SEO 机器翻译垃圾网站
+*://*.cdmana.com/*  #爬虫采集 SEO 机器翻译垃圾网站
+*://*.ceptchina.com/*  #博彩垃圾网站
+*://*.chnweiyu.com/*  #博彩垃圾网站
+*://*.chowdera.com/*  #爬虫采集 SEO 机器翻译垃圾网站
+*://*.chubuntu.com/*  #爬虫采集 SEO 机器翻译垃圾网站
+*://*.cn.computer-clans.com/*  #爬虫采集 SEO 机器翻译垃圾网站
+*://*.cnpython.com/*  #爬虫采集 SEO 机器翻译垃圾网站
+*://*.cocoachina.com/*  #爬虫采集 SEO 机器翻译垃圾网站
+*://*.code-paper.com/*  #爬虫采集 SEO 机器翻译垃圾网站
+*://*.code.i-harness.com/*  #爬虫采集 SEO 机器翻译垃圾网站
+*://*.code5.cn/*  #博彩垃圾网站
+*://*.codeantenna.com/*  #爬虫采集 SEO 机器翻译垃圾网站
+*://*.codebug.vip/*  #爬虫采集 SEO 机器翻译垃圾网站
+*://*.codecocoa.com/*  #爬虫采集 SEO 机器翻译垃圾网站
+*://*.codeday.me/*  #爬虫采集 SEO 机器翻译垃圾网站
+*://*.codenong.com/*  #爬虫采集 SEO 机器翻译垃圾网站
+*://*.codeqq.com/*  #爬虫采集 SEO 机器翻译垃圾网站
+*://*.coder.work/*  #爬虫采集 SEO 机器翻译垃圾网站
+*://*.coderbridge.com/*  #爬虫采集 SEO 机器翻译垃圾网站
+*://*.codercto.com/*  #爬虫采集 SEO 机器翻译垃圾网站
+*://*.codingdict.com/*  #爬虫采集 SEO 机器翻译垃圾网站
+*://*.codingnote.cc/*  #爬虫采集 SEO 机器翻译垃圾网站
+*://*.colabug.com/*  #爬虫采集 SEO 机器翻译垃圾网站
+*://*.copyan.com/*  #爬虫采集 SEO 机器翻译垃圾网站
+*://*.copyfuture.com/*  #爬虫采集 SEO 机器翻译垃圾网站
+*://*.crifan.com/*  #爬虫采集 SEO 机器翻译垃圾网站
+*://*.css8.cn/*  #爬虫采集 SEO 机器翻译垃圾网站
+*://*.cwptz.com/*  #博彩垃圾网站
+*://*.cxymm.net/*  #爬虫采集 SEO 机器翻译垃圾网站
+*://*.cxyzjd.com/*  #爬虫采集 SEO 机器翻译垃圾网站
+*://*.daimajiaoliu.com/*  #爬虫采集 SEO 机器翻译垃圾网站
+*://*.dajiayouxi.com/*  #爬虫采集 SEO 机器翻译垃圾网站
+*://*.danengtzs.com/*  #博彩垃圾网站
+*://*.dazhuanlan.com/*  #爬虫采集 SEO 机器翻译垃圾网站
+*://*.dc120.com.cn/*  #爬虫采集 SEO 机器翻译垃圾网站
+*://*.ddeevv.com/*  #爬虫采集 SEO 机器翻译垃圾网站
+*://*.debug8.com/*  #爬虫采集 SEO 机器翻译垃圾网站
+*://*.debugger.wiki/*  #爬虫采集 SEO 机器翻译垃圾网站
+*://*.desdelinux.net/*  #爬虫采集 SEO 机器翻译垃圾网站
+*://*.diglog.com/*  #爬虫采集 SEO 机器翻译垃圾网站
+*://*.djcxy.com/*  #爬虫采集 SEO 机器翻译垃圾网站
+*://*.dnxxj.com/*  #爬虫采集 SEO 机器翻译垃圾网站
+*://*.dofe.com.cn/*  #爬虫采集 SEO 机器翻译垃圾网站
+*://*.dovov.com/*  #爬虫采集 SEO 机器翻译垃圾网站
+*://*.dtmao.cc/*  #爬虫采集 SEO 机器翻译垃圾网站
+*://*.dzim.net/*  #博彩垃圾网站
+*://*.edwardsrailcar.com/*  #爬虫采集 SEO 机器翻译垃圾网站
+*://*.eskere.club/*  #爬虫采集 SEO 机器翻译垃圾网站
+*://*.etsoutdoors.com/*  #爬虫采集 SEO 机器翻译垃圾网站
+*://*.fajicy.com/*  #爬虫采集 SEO 机器翻译垃圾网站
+*://*.feimao777.com/*  #爬虫采集 SEO 机器翻译垃圾网站
+*://*.fulucaijing.com/*  #爬虫采集 SEO 机器翻译垃圾网站
+*://*.fuyimokuai.com/*  #爬虫采集 SEO 机器翻译垃圾网站
+*://*.gan-ren.com/*  #爬虫采集 SEO 机器翻译垃圾网站
+*://*.gedixinxi.com/*  #爬虫采集 SEO 机器翻译垃圾网站
+*://*.geek-share.com/*  #爬虫采集 SEO 机器翻译垃圾网站
+*://*.geeknb.com/*  #爬虫采集 SEO 机器翻译垃圾网站
+*://*.generacodice.com/*  #爬虫采集 SEO 机器翻译垃圾网站
+*://*.generacodice.it/*  #爬虫采集 SEO 机器翻译垃圾网站
+*://*.glcopy.com/*  #爬虫采集 SEO 机器翻译垃圾网站
+*://*.gouma.org/*  #爬虫采集 SEO 机器翻译垃圾网站
+*://*.gushidazahui.com/*  #爬虫采集 SEO 机器翻译垃圾网站
+*://*.haberindeks.com/*  #爬虫采集 SEO 机器翻译垃圾网站
+*://*.haowuliaoa.com/*  #爬虫采集 SEO 机器翻译垃圾网站
+*://*.hardreset.info/*  #爬虫采集 SEO 机器翻译垃圾网站
+*://*.helplib.com/*  #爬虫采集 SEO 机器翻译垃圾网站
+*://*.hotbak.net/*  #爬虫采集 SEO 机器翻译垃圾网站
+*://*.hotbarebaking.com/*  #爬虫采集 SEO 机器翻译垃圾网站
+*://*.howtoing.com/*  #爬虫采集 SEO 机器翻译垃圾网站
+*://*.howtoip.com/*  #爬虫采集 SEO 机器翻译垃圾网站
+*://*.huangxiaobo.org/*  #爬虫采集 SEO 机器翻译垃圾网站
+*://*.hyhome.com.cn/*  #爬虫采集 SEO 机器翻译垃圾网站
+*://*.icode9.com/*  #爬虫采集 SEO 机器翻译垃圾网站
+*://*.icopy.site/*  #爬虫采集 SEO 机器翻译垃圾网站
+*://*.it-swarm.asia/*  #爬虫采集 SEO 机器翻译垃圾网站
+*://*.it-swarm.cn/*  #爬虫采集 SEO 机器翻译垃圾网站
+*://*.it-swarm.dev/*  #爬虫采集 SEO 机器翻译垃圾网站
+*://*.it-swarm.net/*  #爬虫采集 SEO 机器翻译垃圾网站
+*://*.it1352.com/*  #爬虫采集 SEO 机器翻译垃圾网站
+*://*.itbaoku.cn/*  #爬虫采集 SEO 机器翻译垃圾网站
+*://*.itdaan.com/*  #爬虫采集 SEO 机器翻译垃圾网站
+*://*.iter01.com/*  #爬虫采集 SEO 机器翻译垃圾网站
+*://*.itkeyword.com/*  #爬虫采集 SEO 机器翻译垃圾网站
+*://*.itranslater.com/*  #爬虫采集 SEO 机器翻译垃圾网站
+*://*.itread01.com/*  #爬虫采集 SEO 机器翻译垃圾网站
+*://*.its404.com/*  #爬虫采集 SEO 机器翻译垃圾网站
+*://*.itsharecircle.com/*  #爬虫采集 SEO 机器翻译垃圾网站
+*://*.itxueyuan.com/*  #爬虫采集 SEO 机器翻译垃圾网站
+*://*.javaer101.com/*  #爬虫采集 SEO 机器翻译垃圾网站
+*://*.javahlw.com/*  #爬虫采集 SEO 机器翻译垃圾网站
+*://*.javamana.com/*  #爬虫采集 SEO 机器翻译垃圾网站
+*://*.jb51.net/*  #垃圾中文技术性网站
+*://*.jeepxie.net/*  #爬虫采集 SEO 机器翻译垃圾网站
+*://*.jiankangjiaoliu.com/*  #爬虫采集 SEO 机器翻译垃圾网站
+*://*.jingjiamitan.com/*  #爬虫采集 SEO 机器翻译垃圾网站
+*://*.jishuwen.com/*  #爬虫采集 SEO 机器翻译垃圾网站
+*://*.jiucenglou.cn/*  #爬虫采集 SEO 机器翻译垃圾网站
+*://*.joecomp.com/*  #爬虫采集 SEO 机器翻译垃圾网站
+*://*.joyk.com/*  #爬虫采集 SEO 机器翻译垃圾网站
+*://*.jquery.online/*  #爬虫采集 SEO 机器翻译垃圾网站
+*://*.jrccn.cn/*  #爬虫采集 SEO 机器翻译垃圾网站
+*://*.juhc66.cn/*  #爬虫采集 SEO 机器翻译垃圾网站
+*://*.kaicen.cn/*  #爬虫采集 SEO 机器翻译垃圾网站
+*://*.kbase101.com/*  #爬虫采集 SEO 机器翻译垃圾网站
+*://*.kknews.cc/*  #爬虫采集 SEO 机器翻译垃圾网站
+*://*.ksa-boy.com/*  #爬虫采集 SEO 机器翻译垃圾网站
+*://*.kutu66.com/*  #爬虫采集 SEO 机器翻译垃圾网站
+*://*.lanzhouyangsheng.com/*  #爬虫采集 SEO 机器翻译垃圾网站
+*://*.lidihuo.com/*  #爬虫采集 SEO 机器翻译垃圾网站
+*://*.likecs.com/*  #爬虫采集 SEO 机器翻译垃圾网站
+*://*.linuxadictos.com/*  #爬虫采集 SEO 机器翻译垃圾网站
+*://*.loudoun-valley.com/*  #爬虫采集 SEO 机器翻译垃圾网站
+*://*.lsd365.com/*  #爬虫采集 SEO 机器翻译垃圾网站
+*://*.luxury-condos-miami.com/*  #爬虫采集 SEO 机器翻译垃圾网站
+*://*.lygzywl.com/*  #博彩垃圾网站
+*://*.macaodaily.com/*  #博彩垃圾网站
+*://*.mahwaqib.com/*  #爬虫采集 SEO 机器翻译垃圾网站
+*://*.maiyewang.com/*  #爬虫采集 SEO 机器翻译垃圾网站
+*://*.mamicode.com/*  #爬虫采集 SEO 机器翻译垃圾网站
+*://*.manong5.com/*  #垃圾下载站
+*://*.manongjc.com/*  #爬虫采集 SEO 机器翻译垃圾网站
+*://*.mashen.zone/*  #爬虫采集 SEO 机器翻译垃圾网站
+*://*.mdeditor.tw/*  #爬虫采集 SEO 机器翻译垃圾网站
+*://*.meihuijj.com/*  #博彩垃圾网站
+*://*.meirongjiaoliu.com/*  #爬虫采集 SEO 机器翻译垃圾网站
+*://*.mlog.club/*  #爬虫采集 SEO 机器翻译垃圾网站
+*://*.mos86.com/*  #爬虫采集 SEO 机器翻译垃圾网站
+*://*.movervip.com/*  #爬虫采集 SEO 机器翻译垃圾网站
+*://*.moviebukkake.com/*  #博彩垃圾网站
+*://*.naozhuanwan.com/*  #爬虫采集 SEO 机器翻译垃圾网站
+*://*.nibaihe.cn/*  #博彩垃圾网站
+*://*.noobyard.com/*  #爬虫采集 SEO 机器翻译垃圾网站
+*://*.ntcdoon.org/*  #爬虫采集 SEO 机器翻译垃圾网站
+*://*.ohmyrss.com/*  #爬虫采集 SEO 机器翻译垃圾网站
+*://*.ojit.com/*  #爬虫采集 SEO 机器翻译垃圾网站
+*://*.oomake.com/*  #爬虫采集 SEO 机器翻译垃圾网站
+*://*.oox8.com/*  #爬虫采集 SEO 机器翻译垃圾网站
+*://*.orcode.com/*  #爬虫采集 SEO 机器翻译垃圾网站
+*://*.pai-hang-bang.com/*  #爬虫采集 SEO 机器翻译垃圾网站
+*://*.paradacreativa.es/*  #爬虫采集 SEO 机器翻译垃圾网站
+*://*.pcpc.me/*  #爬虫采集 SEO 机器翻译垃圾网站
+*://*.phpheidong.com/*  #爬虫采集 SEO 机器翻译垃圾网站
+*://*.pianshen.com/*  #爬虫采集 SEO 机器翻译垃圾网站
+*://*.planetgammon.com/*  #博彩垃圾网站
+*://*.poolandspapartsmart.com/*  #爬虫采集 SEO 机器翻译垃圾网站
+*://*.portaldacalheta.pt/*  #爬虫采集 SEO 机器翻译垃圾网站
+*://*.pyerror.com/*  #爬虫采集 SEO 机器翻译垃圾网站
+*://*.pythonf.cn/*  #爬虫采集 SEO 机器翻译垃圾网站
+*://*.pythonheidong.com/*  #爬虫采集 SEO 机器翻译垃圾网站
+*://*.pythonmana.com/*  #爬虫采集 SEO 机器翻译垃圾网站
+*://*.qastack.cn/*  #爬虫采集 SEO 机器翻译垃圾网站
+*://*.qdmana.com/*  #爬虫采集 SEO 机器翻译垃圾网站
+*://*.qishunwang.net/*  #爬虫采集 SEO 机器翻译垃圾网站
+*://*.qqyouyan.com/*  #爬虫采集 SEO 机器翻译垃圾网站
+*://*.qu02.com/*  #爬虫采集 SEO 机器翻译垃圾网站
+*://*.quish.tv/*  #爬虫采集 SEO 机器翻译垃圾网站
+*://*.read01.com/*  #爬虫采集 SEO 机器翻译垃圾网站
+*://*.reallifetucson.com/*  #爬虫采集 SEO 机器翻译垃圾网站
+*://*.rongtaihe1879.com/*  #博彩垃圾网站
+*://*.routinepanic.com/*  #爬虫采集 SEO 机器翻译垃圾网站
+*://*.rsfaf.com/*  #爬虫采集 SEO 机器翻译垃圾网站
+*://*.sbo511.com/*  #博彩垃圾网站
+*://*.sdtasdb.com/*  #博彩垃圾网站
+*://*.seaolife.com/*  #博彩垃圾网站
+*://*.secn.net/*  #爬虫采集 SEO 机器翻译垃圾网站
+*://*.shangdixinxi.com/*  #爬虫采集 SEO 机器翻译垃圾网站
+*://*.shangmayuan.com/*  #爬虫采集 SEO 机器翻译垃圾网站
+*://*.shehuiwenhua.com/*  #爬虫采集 SEO 机器翻译垃圾网站
+*://*.shengqian001.com/*  #爬虫采集 SEO 机器翻译垃圾网站
+*://*.shishangjiaoliu.com/*  #爬虫采集 SEO 机器翻译垃圾网站
+*://*.shuzhiduo.com/*  #爬虫采集 SEO 机器翻译垃圾网站
+*://*.shxy888.com/*  #爬虫采集 SEO 机器翻译垃圾网站
+*://*.slowmotionvideoclips.com/*  #爬虫采集 SEO 机器翻译垃圾网站
+*://*.soblog.cc/*  #爬虫采集 SEO 机器翻译垃圾网站
+*://*.soinside.com/*  #爬虫采集 SEO 机器翻译垃圾网站
+*://*.someabcd.com/*  #爬虫采集 SEO 机器翻译垃圾网站
+*://*.soolco.com/*  #爬虫采集 SEO 机器翻译垃圾网站
+*://*.sosozy.cn/*  #爬虫采集 SEO 机器翻译垃圾网站
+*://*.sov5.cn/*  #爬虫采集 SEO 机器翻译垃圾网站
+*://*.soydemac.com/*  #爬虫采集 SEO 机器翻译垃圾网站
+*://*.srcmini.com/*  #爬虫采集 SEO 机器翻译垃圾网站
+*://*.stackoom.com/*  #爬虫采集 SEO 机器翻译垃圾网站
+*://*.stackovernet.com/*  #爬虫采集 SEO 机器翻译垃圾网站
+*://*.stackoverrun.com/*  #爬虫采集 SEO 机器翻译垃圾网站
+*://*.stx160.com/*  #博彩垃圾网站
+*://*.taodudu.cc/*  #爬虫采集 SEO 机器翻译垃圾网站
+*://*.thehesedlove.com/*  #爬虫采集 SEO 机器翻译垃圾网站
+*://*.thinbug.com/*  #爬虫采集 SEO 机器翻译垃圾网站
+*://*.tiyiba.com/*  #博彩垃圾网站
+*://*.tiyujiaoliu.com/*  #爬虫采集 SEO 机器翻译垃圾网站
+*://*.tl80.cn/*  #爬虫采集 SEO 机器翻译垃圾网站
+*://*.tongfengqu.com/*  #爬虫采集 SEO 机器翻译垃圾网站
+*://*.tujiebar.com/*  #爬虫采集 SEO 机器翻译垃圾网站
+*://*.twblogs.net/*  #爬虫采集 SEO 机器翻译垃圾网站
+*://*.ubunlog.com/*  #爬虫采集 SEO 机器翻译垃圾网站
+*://*.ubuntuqa.com/*  #爬虫采集 SEO 机器翻译垃圾网站
+*://*.ups360.net/*  #爬虫采集 SEO 机器翻译垃圾网站
+*://*.uwenku.com/*  #爬虫采集 SEO 机器翻译垃圾网站
+*://*.v2as.com/*  #爬虫采集 SEO 机器翻译垃圾网站
+*://*.voidcc.com/*  #爬虫采集 SEO 机器翻译垃圾网站
+*://*.voidcn.com/*  #爬虫采集 SEO 机器翻译垃圾网站
+*://*.w3xue.com/*  #爬虫采集 SEO 机器翻译垃圾网站
+*://*.wangt.cc/*  #爬虫采集 SEO 机器翻译垃圾网站
+*://*.wanmeiyule2.com/*  #爬虫采集 SEO 机器翻译垃圾网站
+*://*.websetnet.net/*  #爬虫采集 SEO 机器翻译垃圾网站
+*://*.weikuanxi.cn/*  #博彩垃圾网站
+*://*.wenjiangs.com/*  #爬虫采集 SEO 机器翻译垃圾网站
+*://*.wenliku.com/*  #博彩垃圾网站
+*://*.wenyanet.com/*  #爬虫采集 SEO 机器翻译垃圾网站
+*://*.win10xiazai.com/*  #爬虫采集 SEO 机器翻译垃圾网站
+*://*.winenine.com/*  #博彩垃圾网站
+*://*.wiwiku.com/*  #爬虫采集 SEO 机器翻译垃圾网站
+*://*.wntzx.cn/*  #爬虫采集 SEO 机器翻译垃圾网站
+*://*.wpata.com/*  #爬虫采集 SEO 机器翻译垃圾网站
+*://*.wyxbc.com/*  #爬虫采集 SEO 机器翻译垃圾网站
+*://*.xbuba.com/*  #爬虫采集 SEO 机器翻译垃圾网站
+*://*.xiaoxtea.com/*  #博彩垃圾网站
+*://*.xinhexinli.com/*  #爬虫采集 SEO 机器翻译垃圾网站
+*://*.xknote.com/*  #爬虫采集 SEO 机器翻译垃圾网站
+*://*.xuexidushu.com/*  #爬虫采集 SEO 机器翻译垃圾网站
+*://*.xy2401.com/*  #爬虫采集 SEO 机器翻译垃圾网站
+*://*.yangzheng365.com/*  #博彩垃圾网站
+*://*.yehe.org/*  #爬虫采集 SEO 机器翻译垃圾网站
+*://*.yfkwzpc.cn/*  #博彩垃圾网站
+*://*.yht7.com/*  #爬虫采集 SEO 机器翻译垃圾网站
+*://*.yiaisan.com/*  #爬虫采集 SEO 机器翻译垃圾网站
+*://*.yisoge.com/*  #爬虫采集 SEO 机器翻译垃圾网站
+*://*.yixuebiancheng.com/*  #爬虫采集 SEO 机器翻译垃圾网站
+*://*.yuanmas.com/*  #爬虫采集 SEO 机器翻译垃圾网站
+*://*.yuerxinde.com/*  #爬虫采集 SEO 机器翻译垃圾网站
+*://*.yulejiaoliu.com/*  #爬虫采集 SEO 机器翻译垃圾网站
+*://*.yunjuu.com/*  #爬虫采集 SEO 机器翻译垃圾网站
+*://*.yxwjlrm.cn/*  #博彩垃圾网站
+*://*.z4q7.com/*  #爬虫采集 SEO 机器翻译垃圾网站
+*://*.zditect.com/*  #爬虫采集 SEO 机器翻译垃圾网站
+*://*.zgserver.com/*  #爬虫采集 SEO 机器翻译垃圾网站
+*://*.zhetiaohe.com/*  #爬虫采集 SEO 机器翻译垃圾网站
+*://*.zhezhier.com/*  #爬虫采集 SEO 机器翻译垃圾网站
+*://*.zhihesj.com/*  #爬虫采集 SEO 机器翻译垃圾网站
+*://*.zhipanyou.com/*  #爬虫采集 SEO 机器翻译垃圾网站
+*://*.zhishibo.com/*  #爬虫采集 SEO 机器翻译垃圾网站
+*://*.zhuaniphone.com/*  #爬虫采集 SEO 机器翻译垃圾网站
+*://*.zhz.wiki/*  #爬虫采集 SEO 机器翻译垃圾网站
+*://*.zjwsrcw.com/*  #博彩垃圾网站
+*://*.zkyshop.com/*  #爬虫采集 SEO 机器翻译垃圾网站
+*://*.zl.rs/*  #爬虫采集 SEO 机器翻译垃圾网站
+*://*.zoukankan.com/*  #爬虫采集 SEO 机器翻译垃圾网站
+*://*.zsyawen.com/*  #爬虫采集 SEO 机器翻译垃圾网站
 #!aggreg-diveng: https://raw.githubusercontent.com/DivineEngine/uBlacklist/master/blacklist.txt (https://github.com/DivineEngine/uBlacklist)
 /epochtimes\.+/  #!aggreg-diveng
 /falundafa\.+/  #!aggreg-diveng
@@ -19,7 +321,6 @@
 *://*.3pppys.com/*  #!aggreg-diveng
 *://*.4009997658.com/*  #!aggreg-diveng
 *://*.4563.org/*  #!aggreg-diveng
-*://*.4k8k.xyz/*  #!aggreg-diveng
 *://*.521253.com/*  #!aggreg-diveng
 *://*.52huiyijia.com/*  #!aggreg-diveng
 *://*.5a3q.com/*  #!aggreg-diveng
@@ -48,7 +349,6 @@
 *://*.aiznh.com/*  #!aggreg-diveng
 *://*.alienskins.cn/*  #!aggreg-diveng
 *://*.amww.cc/*  #!aggreg-diveng
-*://*.androidcookie.com/*  #!aggreg-diveng
 *://*.anydeskchina.cn/*  #!aggreg-diveng
 *://*.anysearch.cc/*  #!aggreg-diveng
 *://*.atpp.cc/*  #!aggreg-diveng
@@ -59,7 +359,6 @@
 *://*.bamuyi.com/*  #!aggreg-diveng
 *://*.bannedbook.org/*  #!aggreg-diveng
 *://*.bartender.cc/*  #!aggreg-diveng
-*://*.bbsmax.com/*  #!aggreg-diveng
 *://*.bees.pub/*  #!aggreg-diveng
 *://*.bestsou.cc/*  #!aggreg-diveng
 *://*.betterzip.net/*  #!aggreg-diveng
@@ -71,12 +370,10 @@
 *://*.bjs.org/*  #!aggreg-diveng
 *://*.bmnn.cc/*  #!aggreg-diveng
 *://*.bossnet.com.cn/*  #!aggreg-diveng
-*://*.bubuko.com/*  #!aggreg-diveng
 *://*.bugelun.com/*  #!aggreg-diveng
 *://*.bxtt.cc/*  #!aggreg-diveng
 *://*.carlalucente.com/*  #!aggreg-diveng
 *://*.ccsearch.cc/*  #!aggreg-diveng
-*://*.cdmana.com/*  #!aggreg-diveng
 *://*.ceden.cn/*  #!aggreg-diveng
 *://*.ceospacela.com/*  #!aggreg-diveng
 *://*.chabuduoyang.com/*  #!aggreg-diveng
@@ -91,39 +388,30 @@
 *://*.chongwu.hk/*  #!aggreg-diveng
 *://*.cjmakeding.com/*  #!aggreg-diveng
 *://*.cjmkt.com/*  #!aggreg-diveng
-*://*.codeantenna.com/*  #!aggreg-diveng
 *://*.codeczz.com/*  #!aggreg-diveng
-*://*.codeday.me/*  #!aggreg-diveng
 *://*.codeleading.com/*  #!aggreg-diveng
-*://*.codenong.com/*  #!aggreg-diveng
 *://*.codeprj.com/*  #!aggreg-diveng
-*://*.coder.work/*  #!aggreg-diveng
 *://*.codesoftchina.com/*  #!aggreg-diveng
 *://*.codetd.com/*  #!aggreg-diveng
 *://*.coreldrawchina.com/*  #!aggreg-diveng
 *://*.cpu668.com/*  #!aggreg-diveng
-*://*.crifan.com/*  #!aggreg-diveng
 *://*.crossoverchina.com/*  #!aggreg-diveng
 *://*.csbkg.com/*  #!aggreg-diveng
 *://*.csdn.net/*  #!aggreg-diveng
 *://*.cuoshuo.com/*  #!aggreg-diveng
 *://*.cwzg.cn/*  #!aggreg-diveng
 *://*.cxybb.com/*  #!aggreg-diveng
-*://*.cxymm.net/*  #!aggreg-diveng
-*://*.cxyzjd.com/*  #!aggreg-diveng
 *://*.czgip.com/*  #!aggreg-diveng
 *://*.da-quan.net/*  #!aggreg-diveng
 *://*.dacongyun.com/*  #!aggreg-diveng
 *://*.dafahao.com/*  #!aggreg-diveng
 *://*.dafuhua.com/*  #!aggreg-diveng
 *://*.dafx.cc/*  #!aggreg-diveng
-*://*.daimajiaoliu.com/*  #!aggreg-diveng
 *://*.dalianmeng.org/*  #!aggreg-diveng
 *://*.daoshengshu.com/*  #!aggreg-diveng
 *://*.dapg.cc/*  #!aggreg-diveng
 *://*.dasearch.cc/*  #!aggreg-diveng
 *://*.dayb.cc/*  #!aggreg-diveng
-*://*.dazhuanlan.com/*  #!aggreg-diveng
 *://*.dcep676.com/*  #!aggreg-diveng
 *://*.dditblog.com/*  #!aggreg-diveng
 *://*.ddpei.com/*  #!aggreg-diveng
@@ -192,7 +480,6 @@
 *://*.haosh.cc/*  #!aggreg-diveng
 *://*.hastynews.com/*  #!aggreg-diveng
 *://*.hbguanri.com/*  #!aggreg-diveng
-*://*.helplib.com/*  #!aggreg-diveng
 *://*.hezhisw.com/*  #!aggreg-diveng
 *://*.hezs88.com/*  #!aggreg-diveng
 *://*.homedt.net/*  #!aggreg-diveng
@@ -220,14 +507,11 @@
 *://*.iphonediule.com/*  #!aggreg-diveng
 *://*.issueexplorer.com/*  #!aggreg-diveng
 *://*.itermail.com/*  #!aggreg-diveng
-*://*.itranslater.com/*  #!aggreg-diveng
 *://*.its203.com/*  #!aggreg-diveng
 *://*.its301.com/*  #!aggreg-diveng
 *://*.its304.com/*  #!aggreg-diveng
 *://*.its401.com/*  #!aggreg-diveng
-*://*.its404.com/*  #!aggreg-diveng
 *://*.jb51.cc/*  #!aggreg-diveng
-*://*.jb51.net/*  #!aggreg-diveng
 *://*.jf-tendais.com/*  #!aggreg-diveng
 *://*.jianboge.com/*  #!aggreg-diveng
 *://*.jiasuniao.com/*  #!aggreg-diveng
@@ -235,7 +519,6 @@
 *://*.jihehuaban.com.cn/*  #!aggreg-diveng
 *://*.jingjia.net/*  #!aggreg-diveng
 *://*.jipai.cc/*  #!aggreg-diveng
-*://*.jishuwen.com/*  #!aggreg-diveng
 *://*.jmvw.cn/*  #!aggreg-diveng
 *://*.joanne-kelly.com/*  #!aggreg-diveng
 *://*.jsfengchao.com/*  #!aggreg-diveng
@@ -249,7 +532,6 @@
 *://*.kewenba.com/*  #!aggreg-diveng
 *://*.keyshot.cc/*  #!aggreg-diveng
 *://*.kingdeecn.cn/*  #!aggreg-diveng
-*://*.kknews.cc/*  #!aggreg-diveng
 *://*.knowmore.cc/*  #!aggreg-diveng
 *://*.kpjyz.com/*  #!aggreg-diveng
 *://*.kuaisusou.cc/*  #!aggreg-diveng
@@ -318,7 +600,6 @@
 *://*.overturechina.com/*  #!aggreg-diveng
 *://*.p3yk.com/*  #!aggreg-diveng
 *://*.pachotel.com/*  #!aggreg-diveng
-*://*.pai-hang-bang.com/*  #!aggreg-diveng
 *://*.paperbert.com/*  #!aggreg-diveng
 *://*.passwordrecovery.cn/*  #!aggreg-diveng
 *://*.pc-daily.com/*  #!aggreg-diveng
@@ -327,7 +608,6 @@
 *://*.penzai.com/*  #!aggreg-diveng
 *://*.philwoods.me/*  #!aggreg-diveng
 *://*.photozoomchina.com/*  #!aggreg-diveng
-*://*.pianshen.com/*  #!aggreg-diveng
 *://*.plate.wiki/*  #!aggreg-diveng
 *://*.pn9y.com/*  #!aggreg-diveng
 *://*.ppfocus.com/*  #!aggreg-diveng
@@ -335,15 +615,11 @@
 *://*.programminghunter.com/*  #!aggreg-diveng
 *://*.pwpc.cc/*  #!aggreg-diveng
 *://*.qacc.cc/*  #!aggreg-diveng
-*://*.qastack.cn/*  #!aggreg-diveng
 *://*.qche.org/*  #!aggreg-diveng
-*://*.qdmana.com/*  #!aggreg-diveng
-*://*.qishunwang.net/*  #!aggreg-diveng
 *://*.qkpp.cc/*  #!aggreg-diveng
 *://*.qq-name.cn/*  #!aggreg-diveng
 *://*.qroutinepanic.com/*  #!aggreg-diveng
 *://*.qwbkw.com/*  #!aggreg-diveng
-*://*.read01.com/*  #!aggreg-diveng
 *://*.rechigroup.com/*  #!aggreg-diveng
 *://*.renminbao.com/*  #!aggreg-diveng
 *://*.rfa.org/*  #!aggreg-diveng
@@ -357,9 +633,7 @@
 *://*.secretchina.com/*  #!aggreg-diveng
 *://*.seospt.com/*  #!aggreg-diveng
 *://*.sf024.com/*  #!aggreg-diveng
-*://*.shangmayuan.com/*  #!aggreg-diveng
 *://*.shankejingling.com/*  #!aggreg-diveng
-*://*.shengqian001.com/*  #!aggreg-diveng
 *://*.shenmedaquan.com/*  #!aggreg-diveng
 *://*.shenmedouyou.xyz/*  #!aggreg-diveng
 *://*.shenyun.com/*  #!aggreg-diveng
@@ -367,31 +641,25 @@
 *://*.shenzhoufilm.com/*  #!aggreg-diveng
 *://*.shoeku.com/*  #!aggreg-diveng
 *://*.shtopchamber.com/*  #!aggreg-diveng
-*://*.shuzhiduo.com/*  #!aggreg-diveng
 *://*.sinabz.com/*  #!aggreg-diveng
 *://*.smf10.com/*  #!aggreg-diveng
 *://*.softwarebrother.com/*  #!aggreg-diveng
-*://*.soinside.com/*  #!aggreg-diveng
 *://*.songketop.com/*  #!aggreg-diveng
 *://*.soundofhope.org/*  #!aggreg-diveng
 *://*.sounote.cc/*  #!aggreg-diveng
 *://*.spectrumsci.com/*  #!aggreg-diveng
 *://*.stackask.cn/*  #!aggreg-diveng
-*://*.stackoom.com/*  #!aggreg-diveng
 *://*.starbytecomputers.com/*  #!aggreg-diveng
 *://*.sync-computers.com/*  #!aggreg-diveng
 *://*.systemcity.cn/*  #!aggreg-diveng
 *://*.syy79.com/*  #!aggreg-diveng
 *://*.tee25.com/*  #!aggreg-diveng
 *://*.thcc.cc/*  #!aggreg-diveng
-*://*.thinbug.com/*  #!aggreg-diveng
 *://*.tiantibooks.org/*  #!aggreg-diveng
 *://*.tititi.cc/*  #!aggreg-diveng
-*://*.tl80.cn/*  #!aggreg-diveng
 *://*.tmtkz.com/*  #!aggreg-diveng
 *://*.truthmoviegroup.wixsite.com/*  #!aggreg-diveng
 *://*.tuidang.org/*  #!aggreg-diveng
-*://*.tujiebar.com/*  #!aggreg-diveng
 *://*.tzxzsh.com/*  #!aggreg-diveng
 *://*.uhelp.cc/*  #!aggreg-diveng
 *://*.ujiaoshou.com/*  #!aggreg-diveng
@@ -403,8 +671,6 @@
 *://*.vip-chn.com/*  #!aggreg-diveng
 *://*.vj04.com/*  #!aggreg-diveng
 *://*.vnzx.cc/*  #!aggreg-diveng
-*://*.voidcc.com/*  #!aggreg-diveng
-*://*.voidcn.com/*  #!aggreg-diveng
 *://*.voorp.com/*  #!aggreg-diveng
 *://*.vpsxxs.com/*  #!aggreg-diveng
 *://*.vxyb.cn/*  #!aggreg-diveng
@@ -414,9 +680,7 @@
 *://*.weifx.cc/*  #!aggreg-diveng
 *://*.weisearch.cc/*  #!aggreg-diveng
 *://*.wenda123.org/*  #!aggreg-diveng
-*://*.wenjiangs.com/*  #!aggreg-diveng
 *://*.wenkuming.com/*  #!aggreg-diveng
-*://*.wenyanet.com/*  #!aggreg-diveng
 *://*.whldl.com/*  #!aggreg-diveng
 *://*.win10set.com/*  #!aggreg-diveng
 *://*.wj458.com/*  #!aggreg-diveng
@@ -426,17 +690,14 @@
 *://*.wtsearch.cc/*  #!aggreg-diveng
 *://*.wujieliulan.com/*  #!aggreg-diveng
 *://*.xa8.net/*  #!aggreg-diveng
-*://*.xbuba.com/*  #!aggreg-diveng
 *://*.xerer.com/*  #!aggreg-diveng
 *://*.xiaoshuolist.com/*  #!aggreg-diveng
 *://*.xiaozhishi.net/*  #!aggreg-diveng
-*://*.xinhexinli.com/*  #!aggreg-diveng
 *://*.xinsearch.cc/*  #!aggreg-diveng
 *://*.xinsheng.net/*  #!aggreg-diveng
 *://*.xitongcheng.com/*  #!aggreg-diveng
 *://*.xitongqingli.com/*  #!aggreg-diveng
 *://*.xjqy.org/*  #!aggreg-diveng
-*://*.xknote.com/*  #!aggreg-diveng
 *://*.xmindchina.net/*  #!aggreg-diveng
 *://*.xshellcn.com/*  #!aggreg-diveng
 *://*.yangmao.info/*  #!aggreg-diveng
@@ -536,8 +797,6 @@
 *://*.19kaifu.com/*  #!aggreg-GHHbD
 *://*.1mpi.com/*  #!aggreg-GHHbD
 *://*.1pyy.com/*  #!aggreg-GHHbD
-*://*.1r1g.cn/*  #!aggreg-GHHbD
-*://*.1r1g.com/*  #!aggreg-GHHbD
 *://*.1wfd.com/*  #!aggreg-GHHbD
 *://*.20122011.org/*  #!aggreg-GHHbD
 *://*.209353.com/*  #!aggreg-GHHbD
@@ -588,7 +847,6 @@
 *://*.3b9ab.com/*  #!aggreg-GHHbD
 *://*.3enfv3an.com/*  #!aggreg-GHHbD
 *://*.3jwz.com/*  #!aggreg-GHHbD
-*://*.3li.cc/*  #!aggreg-GHHbD
 *://*.3o32.com/*  #!aggreg-GHHbD
 *://*.3rxing.org/*  #!aggreg-GHHbD
 *://*.3ssq8z.bmspzs.pw/*  #!aggreg-GHHbD
@@ -724,7 +982,6 @@
 *://*.anipi.org/*  #!aggreg-GHHbD
 *://*.anitadreamhotel.com/*  #!aggreg-GHHbD
 *://*.anlon.com.tw/*  #!aggreg-GHHbD
-*://*.answer-id.com/*  #!aggreg-GHHbD
 *://*.answiz.com/*  #!aggreg-GHHbD
 *://*.antarcticshop.com/*  #!aggreg-GHHbD
 *://*.anticaitaliacomano.it/*  #!aggreg-GHHbD
@@ -761,7 +1018,6 @@
 *://*.bbbabc.cc/*  #!aggreg-GHHbD
 *://*.bcajw.com/*  #!aggreg-GHHbD
 *://*.bccrwp.org/*  #!aggreg-GHHbD
-*://*.bdqxgw.com/*  #!aggreg-GHHbD
 *://*.bdw365.com/*  #!aggreg-GHHbD
 *://*.becreativeblog.com/*  #!aggreg-GHHbD
 *://*.bellevuewatourism.com/*  #!aggreg-GHHbD
@@ -810,7 +1066,6 @@
 *://*.bv2ex.com/*  #!aggreg-GHHbD
 *://*.bvjpsb.net/*  #!aggreg-GHHbD
 *://*.bxlac.com/*  #!aggreg-GHHbD
-*://*.bynss.com/*  #!aggreg-GHHbD
 *://*.bypidenver.com/*  #!aggreg-GHHbD
 *://*.bzwyl.com/*  #!aggreg-GHHbD
 *://*.ca88-com.net/*  #!aggreg-GHHbD
@@ -848,7 +1103,6 @@
 *://*.chinadmd.com/*  #!aggreg-GHHbD
 *://*.chinapentapur.com/*  #!aggreg-GHHbD
 *://*.chineseinla.com/*  #!aggreg-GHHbD
-*://*.chowdera.com/*  #!aggreg-GHHbD
 *://*.chromes.cn/*  #!aggreg-GHHbD
 *://*.ciawe.com/*  #!aggreg-GHHbD
 *://*.cihangyuan.com/*  #!aggreg-GHHbD
@@ -860,16 +1114,13 @@
 *://*.cnaijiaren.com/*  #!aggreg-GHHbD
 *://*.cnto411.com/*  #!aggreg-GHHbD
 *://*.cnzzcdn.com/*  #!aggreg-GHHbD
-*://*.codebug.vip/*  #!aggreg-GHHbD
 *://*.codejzy.com/*  #!aggreg-GHHbD
-*://*.codercto.com/*  #!aggreg-GHHbD
 *://*.codertw.com/*  #!aggreg-GHHbD
 *://*.codycn.com/*  #!aggreg-GHHbD
 *://*.com.sinoextruder.net.cn/*  #!aggreg-GHHbD
 *://*.compozi.com/*  #!aggreg-GHHbD
 *://*.conceptcar.ee/*  #!aggreg-GHHbD
 *://*.coolroofcoating.net/*  #!aggreg-GHHbD
-*://*.copyan.com/*  #!aggreg-GHHbD
 *://*.could2.com/*  #!aggreg-GHHbD
 *://*.courhub.com/*  #!aggreg-GHHbD
 *://*.coutinhoadvogados.com/*  #!aggreg-GHHbD
@@ -902,7 +1153,6 @@
 *://*.dauphinislandcondos.com/*  #!aggreg-GHHbD
 *://*.daxuesou.com/*  #!aggreg-GHHbD
 *://*.daydaynews.cc/*  #!aggreg-GHHbD
-*://*.dc120.com.cn/*  #!aggreg-GHHbD
 *://*.dcxhnj.com/*  #!aggreg-GHHbD
 *://*.ddcode.net/*  #!aggreg-GHHbD
 *://*.ddhyl.cn/*  #!aggreg-GHHbD
@@ -939,7 +1189,6 @@
 *://*.dongxzs.com/*  #!aggreg-GHHbD
 *://*.doo.me/*  #!aggreg-GHHbD
 *://*.doreenbabycare.com/*  #!aggreg-GHHbD
-*://*.dovov.com/*  #!aggreg-GHHbD
 *://*.dpwatch8.com/*  #!aggreg-GHHbD
 *://*.dqzdhw.com/*  #!aggreg-GHHbD
 *://*.dtybnh.com/*  #!aggreg-GHHbD
@@ -979,7 +1228,6 @@
 *://*.esame.cn/*  #!aggreg-GHHbD
 *://*.eshidai.com/*  #!aggreg-GHHbD
 *://*.esihui.com/*  #!aggreg-GHHbD
-*://*.eskere.club/*  #!aggreg-GHHbD
 *://*.estherboesche.com/*  #!aggreg-GHHbD
 *://*.exemm.com/*  #!aggreg-GHHbD
 *://*.exoplanetmagazine.com/*  #!aggreg-GHHbD
@@ -1031,7 +1279,6 @@
 *://*.fundaciondaniloperez.com/*  #!aggreg-GHHbD
 *://*.funnywed.com/*  #!aggreg-GHHbD
 *://*.furniturelowe.com/*  #!aggreg-GHHbD
-*://*.fuyimokuai.com/*  #!aggreg-GHHbD
 *://*.fuyingdq.com/*  #!aggreg-GHHbD
 *://*.fuzadu.com/*  #!aggreg-GHHbD
 *://*.fwtd.cn/*  #!aggreg-GHHbD
@@ -1050,10 +1297,8 @@
 *://*.gdbgp.com/*  #!aggreg-GHHbD
 *://*.gdcmendhar.com/*  #!aggreg-GHHbD
 *://*.gdzyt007.com/*  #!aggreg-GHHbD
-*://*.geek-share.com/*  #!aggreg-GHHbD
 *://*.geiso.cn/*  #!aggreg-GHHbD
 *://*.geistlich-key2success.com/*  #!aggreg-GHHbD
-*://*.generacodice.com/*  #!aggreg-GHHbD
 *://*.getool.com/*  #!aggreg-GHHbD
 *://*.gfsoso.zj005.com/*  #!aggreg-GHHbD
 *://*.gfsousou.cn/*  #!aggreg-GHHbD
@@ -1077,7 +1322,6 @@
 *://*.gogonews.cc/*  #!aggreg-GHHbD
 *://*.googleui.com/*  #!aggreg-GHHbD
 *://*.googqi.com/*  #!aggreg-GHHbD
-*://*.gouma.org/*  #!aggreg-GHHbD
 *://*.gouo.cn/*  #!aggreg-GHHbD
 *://*.graphenstone-china.com/*  #!aggreg-GHHbD
 *://*.grcamerada.com/*  #!aggreg-GHHbD
@@ -1170,9 +1414,7 @@
 *://*.hongsheng1998.com/*  #!aggreg-GHHbD
 *://*.hoosoo.cc/*  #!aggreg-GHHbD
 *://*.horecapolis.info/*  #!aggreg-GHHbD
-*://*.hotbak.net/*  #!aggreg-GHHbD
 *://*.howsou.com/*  #!aggreg-GHHbD
-*://*.howtoip.com/*  #!aggreg-GHHbD
 *://*.hq396.com/*  #!aggreg-GHHbD
 *://*.hscrystal.buzz/*  #!aggreg-GHHbD
 *://*.hssjw.cn/*  #!aggreg-GHHbD
@@ -1221,14 +1463,9 @@
 *://*.ironbuffalocomics.com/*  #!aggreg-GHHbD
 *://*.iso22000certification.com/*  #!aggreg-GHHbD
 *://*.istartips.com/*  #!aggreg-GHHbD
-*://*.it-swarm.cn/*  #!aggreg-GHHbD
-*://*.it1352.com/*  #!aggreg-GHHbD
 *://*.it880880.com/*  #!aggreg-GHHbD
-*://*.itdaan.com/*  #!aggreg-GHHbD
 *://*.itectec.com/*  #!aggreg-GHHbD
-*://*.iter01.com/*  #!aggreg-GHHbD
 *://*.itigic.com/*  #!aggreg-GHHbD
-*://*.itread01.com/*  #!aggreg-GHHbD
 *://*.itw01.com/*  #!aggreg-GHHbD
 *://*.iuham.com/*  #!aggreg-GHHbD
 *://*.iy80.com/*  #!aggreg-GHHbD
@@ -1236,7 +1473,6 @@
 *://*.izlax.cn/*  #!aggreg-GHHbD
 *://*.j1o.net/*  #!aggreg-GHHbD
 *://*.jalsys.com/*  #!aggreg-GHHbD
-*://*.javaer101.com/*  #!aggreg-GHHbD
 *://*.javaroad.cn/*  #!aggreg-GHHbD
 *://*.javashuo.com/*  #!aggreg-GHHbD
 *://*.jayunqi.com/*  #!aggreg-GHHbD
@@ -1272,11 +1508,9 @@
 *://*.jnhf888.com/*  #!aggreg-GHHbD
 *://*.jnhxkt.com/*  #!aggreg-GHHbD
 *://*.jnluhongjs.com/*  #!aggreg-GHHbD
-*://*.joecomp.com/*  #!aggreg-GHHbD
 *://*.jollyny.com/*  #!aggreg-GHHbD
 *://*.jonf.info/*  #!aggreg-GHHbD
 *://*.jordanoliveira.com/*  #!aggreg-GHHbD
-*://*.joyk.com/*  #!aggreg-GHHbD
 *://*.jpzdz.com/*  #!aggreg-GHHbD
 *://*.jrjohnny.net/*  #!aggreg-GHHbD
 *://*.jrq.cn/*  #!aggreg-GHHbD
@@ -1300,7 +1534,6 @@
 *://*.k3m8dr.cn/*  #!aggreg-GHHbD
 *://*.k5uc.com/*  #!aggreg-GHHbD
 *://*.kabaresta.com/*  #!aggreg-GHHbD
-*://*.kaicen.cn/*  #!aggreg-GHHbD
 *://*.kaifa99.com/*  #!aggreg-GHHbD
 *://*.kaitianqi.com/*  #!aggreg-GHHbD
 *://*.kanduanxin.com/*  #!aggreg-GHHbD
@@ -1326,7 +1559,6 @@
 *://*.kubh.lkcpz.download/*  #!aggreg-GHHbD
 *://*.kushalinfra.com/*  #!aggreg-GHHbD
 *://*.kushibar.com.tw/*  #!aggreg-GHHbD
-*://*.kutu66.com/*  #!aggreg-GHHbD
 *://*.kvkft.com/*  #!aggreg-GHHbD
 *://*.kxwo.com/*  #!aggreg-GHHbD
 *://*.kxxzz.com/*  #!aggreg-GHHbD
@@ -1338,7 +1570,6 @@
 *://*.lamigoclub.com.tw/*  #!aggreg-GHHbD
 *://*.lanfox.cc/*  #!aggreg-GHHbD
 *://*.langbookpublishing.com/*  #!aggreg-GHHbD
-*://*.lanzhouyangsheng.com/*  #!aggreg-GHHbD
 *://*.lawpert.com/*  #!aggreg-GHHbD
 *://*.lawpingsew.com/*  #!aggreg-GHHbD
 *://*.lbbaptist.com/*  #!aggreg-GHHbD
@@ -1354,7 +1585,6 @@
 *://*.li36b.com/*  #!aggreg-GHHbD
 *://*.lighteningtikes.com/*  #!aggreg-GHHbD
 *://*.lightfly.com.cn/*  #!aggreg-GHHbD
-*://*.likecs.com/*  #!aggreg-GHHbD
 *://*.likeji.net/*  #!aggreg-GHHbD
 *://*.linksure.cn/*  #!aggreg-GHHbD
 *://*.linqq.net/*  #!aggreg-GHHbD
@@ -1384,7 +1614,6 @@
 *://*.lunwenbsw.com/*  #!aggreg-GHHbD
 *://*.lushanwenku.com/*  #!aggreg-GHHbD
 *://*.luton-china.com/*  #!aggreg-GHHbD
-*://*.luxury-condos-miami.com/*  #!aggreg-GHHbD
 *://*.lvse.com/*  #!aggreg-GHHbD
 *://*.lvv2.com/*  #!aggreg-GHHbD
 *://*.lvyou5.net/*  #!aggreg-GHHbD
@@ -1398,9 +1627,7 @@
 *://*.m7v.org/*  #!aggreg-GHHbD
 *://*.machididi.com/*  #!aggreg-GHHbD
 *://*.mai520.cn/*  #!aggreg-GHHbD
-*://*.mamicode.com/*  #!aggreg-GHHbD
 *://*.mammothlakescrib.com/*  #!aggreg-GHHbD
-*://*.manongjc.com/*  #!aggreg-GHHbD
 *://*.manuals.plus/*  #!aggreg-GHHbD
 *://*.manyanu.com/*  #!aggreg-GHHbD
 *://*.manyushijia.com/*  #!aggreg-GHHbD
@@ -1410,7 +1637,6 @@
 *://*.mauriziofontana.ch/*  #!aggreg-GHHbD
 *://*.mch5k.com/*  #!aggreg-GHHbD
 *://*.mcp-one.com/*  #!aggreg-GHHbD
-*://*.mdeditor.tw/*  #!aggreg-GHHbD
 *://*.mdlpg.com/*  #!aggreg-GHHbD
 *://*.mdlps.com/*  #!aggreg-GHHbD
 *://*.mdlpt.com/*  #!aggreg-GHHbD
@@ -1440,7 +1666,6 @@
 *://*.mosuo.com.cn/*  #!aggreg-GHHbD
 *://*.mosuo.net/*  #!aggreg-GHHbD
 *://*.mouldu.com/*  #!aggreg-GHHbD
-*://*.movervip.com/*  #!aggreg-GHHbD
 *://*.movgod.com/*  #!aggreg-GHHbD
 *://*.mp3-land.com/*  #!aggreg-GHHbD
 *://*.mqjnni.co/*  #!aggreg-GHHbD
@@ -1562,7 +1787,6 @@
 *://*.puataiwan.com/*  #!aggreg-GHHbD
 *://*.pukatiyu.com/*  #!aggreg-GHHbD
 *://*.pybyb.com/*  #!aggreg-GHHbD
-*://*.pythonmana.com/*  #!aggreg-GHHbD
 *://*.pzft.xekjn.top/*  #!aggreg-GHHbD
 *://*.q2xaea.aqzlmy.pw/*  #!aggreg-GHHbD
 *://*.q578.com/*  #!aggreg-GHHbD
@@ -1591,7 +1815,6 @@
 *://*.qqzxzq.me/*  #!aggreg-GHHbD
 *://*.qslcg.com/*  #!aggreg-GHHbD
 *://*.qslcz.com/*  #!aggreg-GHHbD
-*://*.qu02.com/*  #!aggreg-GHHbD
 *://*.quanbuso.com/*  #!aggreg-GHHbD
 *://*.quantumafrica4.com/*  #!aggreg-GHHbD
 *://*.qubaidu.cn/*  #!aggreg-GHHbD
@@ -1606,7 +1829,6 @@
 *://*.rcxtw.cn/*  #!aggreg-GHHbD
 *://*.re2n9p.fmtywj.pw/*  #!aggreg-GHHbD
 *://*.read678.com/*  #!aggreg-GHHbD
-*://*.reallifetucson.com/*  #!aggreg-GHHbD
 *://*.refertheme.com/*  #!aggreg-GHHbD
 *://*.relcare.com.cn/*  #!aggreg-GHHbD
 *://*.renniboix.loan/*  #!aggreg-GHHbD
@@ -1663,7 +1885,6 @@
 *://*.sgsou.cc/*  #!aggreg-GHHbD
 *://*.sh-caco3.com/*  #!aggreg-GHHbD
 *://*.sh-jieao.com/*  #!aggreg-GHHbD
-*://*.shangdixinxi.com/*  #!aggreg-GHHbD
 *://*.shantiyogatupelo.com/*  #!aggreg-GHHbD
 *://*.shanyouwang.com/*  #!aggreg-GHHbD
 *://*.shatangju.net/*  #!aggreg-GHHbD
@@ -1684,7 +1905,6 @@
 *://*.shuangsan.cn/*  #!aggreg-GHHbD
 *://*.shuobaico.com/*  #!aggreg-GHHbD
 *://*.shve.org/*  #!aggreg-GHHbD
-*://*.shxy888.com/*  #!aggreg-GHHbD
 *://*.shzewang.com/*  #!aggreg-GHHbD
 *://*.si-jou.com.tw/*  #!aggreg-GHHbD
 *://*.sijintuan.com/*  #!aggreg-GHHbD
@@ -1731,7 +1951,6 @@
 *://*.soudiy.com/*  #!aggreg-GHHbD
 *://*.soumoye.com/*  #!aggreg-GHHbD
 *://*.souzhuang.cn/*  #!aggreg-GHHbD
-*://*.soydemac.com/*  #!aggreg-GHHbD
 *://*.specialty-tire.com/*  #!aggreg-GHHbD
 *://*.spudgreenlake.com/*  #!aggreg-GHHbD
 *://*.sqwudong.com/*  #!aggreg-GHHbD
@@ -1740,7 +1959,6 @@
 *://*.sshkz.com/*  #!aggreg-GHHbD
 *://*.ssjxhy.com/*  #!aggreg-GHHbD
 *://*.stacknoob.com/*  #!aggreg-GHHbD
-*://*.stackoverrun.com/*  #!aggreg-GHHbD
 *://*.standfordiabetes.com/*  #!aggreg-GHHbD
 *://*.steamcuba.com/*  #!aggreg-GHHbD
 *://*.stellavingzeinternational.com/*  #!aggreg-GHHbD
@@ -1809,7 +2027,6 @@
 *://*.tokyominer.com/*  #!aggreg-GHHbD
 *://*.tomatoesweb.com/*  #!aggreg-GHHbD
 *://*.toms2013.com/*  #!aggreg-GHHbD
-*://*.tongfengqu.com/*  #!aggreg-GHHbD
 *://*.tongso.com/*  #!aggreg-GHHbD
 *://*.topbester.com/*  #!aggreg-GHHbD
 *://*.topitinfo.com/*  #!aggreg-GHHbD
@@ -1852,7 +2069,6 @@
 *://*.usechinavpn.com/*  #!aggreg-GHHbD
 *://*.usku.xawqr.accountant/*  #!aggreg-GHHbD
 *://*.uslos.com/*  #!aggreg-GHHbD
-*://*.uwenku.com/*  #!aggreg-GHHbD
 *://*.v1ex.com/*  #!aggreg-GHHbD
 *://*.v6lr.adnfn.link/*  #!aggreg-GHHbD
 *://*.valuesfootprint.com/*  #!aggreg-GHHbD
@@ -1895,7 +2111,6 @@
 *://*.web.mybnb.tw/*  #!aggreg-GHHbD
 *://*.weblogographic.com/*  #!aggreg-GHHbD
 *://*.webplus.org.cn/*  #!aggreg-GHHbD
-*://*.websetnet.net/*  #!aggreg-GHHbD
 *://*.weiaizu.com/*  #!aggreg-GHHbD
 *://*.weibaoju.com/*  #!aggreg-GHHbD
 *://*.weibo5i.com/*  #!aggreg-GHHbD
@@ -1923,7 +2138,6 @@
 *://*.wkee.net/*  #!aggreg-GHHbD
 *://*.wldbs.com/*  #!aggreg-GHHbD
 *://*.wldci.com/*  #!aggreg-GHHbD
-*://*.wntzx.cn/*  #!aggreg-GHHbD
 *://*.wodekuandai.com/*  #!aggreg-GHHbD
 *://*.woniuidc.com/*  #!aggreg-GHHbD
 *://*.workhard.guru/*  #!aggreg-GHHbD
@@ -2084,11 +2298,9 @@
 *://*.zhenhesaun.com/*  #!aggreg-GHHbD
 *://*.zhihu.la/*  #!aggreg-GHHbD
 *://*.zhihujingxuan.com/*  #!aggreg-GHHbD
-*://*.zhipanyou.com/*  #!aggreg-GHHbD
 *://*.zhizhusou.com/*  #!aggreg-GHHbD
 *://*.zhongguogongyi.com/*  #!aggreg-GHHbD
 *://*.zhongrunzx.com/*  #!aggreg-GHHbD
-*://*.zhuaniphone.com/*  #!aggreg-GHHbD
 *://*.zhuantiyi.com/*  #!aggreg-GHHbD
 *://*.zhuoyuelunwenwang.com/*  #!aggreg-GHHbD
 *://*.zibolongmoo.com/*  #!aggreg-GHHbD
@@ -6896,7 +7108,6 @@
 *://*.366bwin.net/*  #!aggreg-gyli
 *://*.366caru.com/*  #!aggreg-gyli
 *://*.366hb.com/*  #!aggreg-gyli
-*://*.366service.com/*  #!aggreg-gyli
 *://*.366shenbo.com/*  #!aggreg-gyli
 *://*.366sunbet.com/*  #!aggreg-gyli
 *://*.366umvl.com/*  #!aggreg-gyli
@@ -13692,7 +13903,6 @@
 *://*.999999msc.com/*  #!aggreg-gyli
 *://*.9999fang.com/*  #!aggreg-gyli
 *://*.9999fs.com/*  #!aggreg-gyli
-*://*.9999ktv.com/*  #!aggreg-gyli
 *://*.9999suncity.com/*  #!aggreg-gyli
 *://*.9999tw.com/*  #!aggreg-gyli
 *://*.999ask.com/*  #!aggreg-gyli
@@ -14281,7 +14491,6 @@
 *://*.afpworld.cn/*  #!aggreg-gyli
 *://*.africadarling.com/*  #!aggreg-gyli
 *://*.africagreenjobs.com/*  #!aggreg-gyli
-*://*.africamv.com/*  #!aggreg-gyli
 *://*.african-ridgebacks.com/*  #!aggreg-gyli
 *://*.afrikaleisure.com/*  #!aggreg-gyli
 *://*.afriquetravaux.com.tn/*  #!aggreg-gyli
@@ -15755,7 +15964,6 @@
 *://*.arteks.ru/*  #!aggreg-gyli
 *://*.artembroidery.net/*  #!aggreg-gyli
 *://*.artestrada.com/*  #!aggreg-gyli
-*://*.artez.org.cn/*  #!aggreg-gyli
 *://*.artfairmia.com/*  #!aggreg-gyli
 *://*.artfuga.com/*  #!aggreg-gyli
 *://*.artgjpaimai.com/*  #!aggreg-gyli
@@ -20189,7 +20397,6 @@
 *://*.cctcl.cn/*  #!aggreg-gyli
 *://*.cctfly.com/*  #!aggreg-gyli
 *://*.cctianlong.com/*  #!aggreg-gyli
-*://*.cctsuzhou.cn/*  #!aggreg-gyli
 *://*.cctua.com/*  #!aggreg-gyli
 *://*.cctv123.xyz/*  #!aggreg-gyli
 *://*.cctvyxch.com/*  #!aggreg-gyli
@@ -24951,7 +25158,6 @@
 *://*.docusys.net/*  #!aggreg-gyli
 *://*.docvox.net/*  #!aggreg-gyli
 *://*.doducity.com/*  #!aggreg-gyli
-*://*.dofe.com.cn/*  #!aggreg-gyli
 *://*.dog-gates-direct.com/*  #!aggreg-gyli
 *://*.dogdogday.com/*  #!aggreg-gyli
 *://*.doggonedeals.com/*  #!aggreg-gyli
@@ -28645,7 +28851,6 @@
 *://*.g.1zso.com/*  #!aggreg-gyli
 *://*.g.asia/*  #!aggreg-gyli
 *://*.g.lianghongbo.com/*  #!aggreg-gyli
-*://*.g.sov5.cn/*  #!aggreg-gyli
 *://*.g10.com/*  #!aggreg-gyli
 *://*.g168.com/*  #!aggreg-gyli
 *://*.g1gtb.cn/*  #!aggreg-gyli
@@ -28752,7 +28957,6 @@
 *://*.gamew66.com/*  #!aggreg-gyli
 *://*.gamingspeaker.com/*  #!aggreg-gyli
 *://*.gamisk.com/*  #!aggreg-gyli
-*://*.gan-ren.com/*  #!aggreg-gyli
 *://*.gan8.cc/*  #!aggreg-gyli
 *://*.ganaiwanqi.net/*  #!aggreg-gyli
 *://*.ganateunsillon.com/*  #!aggreg-gyli
@@ -33994,7 +34198,6 @@
 *://*.hostalnersan.com/*  #!aggreg-gyli
 *://*.hostamo.com/*  #!aggreg-gyli
 *://*.hostinge.cn/*  #!aggreg-gyli
-*://*.hotbarebaking.com/*  #!aggreg-gyli
 *://*.hotbreadsaustin.com/*  #!aggreg-gyli
 *://*.hotcl.com/*  #!aggreg-gyli
 *://*.hotdollsdafa.com/*  #!aggreg-gyli
@@ -34987,7 +35190,6 @@
 *://*.hyhf029.com/*  #!aggreg-gyli
 *://*.hyhfz.link/*  #!aggreg-gyli
 *://*.hyhhzs.net/*  #!aggreg-gyli
-*://*.hyhome.com.cn/*  #!aggreg-gyli
 *://*.hyhrf.com/*  #!aggreg-gyli
 *://*.hyhtw.cn/*  #!aggreg-gyli
 *://*.hyibaike.org/*  #!aggreg-gyli
@@ -35985,7 +36187,6 @@
 *://*.isy23f.com/*  #!aggreg-gyli
 *://*.isyzc.com/*  #!aggreg-gyli
 *://*.it-notebookparts.com/*  #!aggreg-gyli
-*://*.it-swarm.dev/*  #!aggreg-gyli
 *://*.it0.org.cn/*  #!aggreg-gyli
 *://*.it165.net/*  #!aggreg-gyli
 *://*.it255.com/*  #!aggreg-gyli
@@ -36018,7 +36219,6 @@
 *://*.itigital.com/*  #!aggreg-gyli
 *://*.itincn.net/*  #!aggreg-gyli
 *://*.itjop.com/*  #!aggreg-gyli
-*://*.itkeyword.com/*  #!aggreg-gyli
 *://*.itman1024.com/*  #!aggreg-gyli
 *://*.itmop.com/*  #!aggreg-gyli
 *://*.itnba.com/*  #!aggreg-gyli
@@ -40871,7 +41071,6 @@
 *://*.jr8810.com/*  #!aggreg-gyli
 *://*.jraled.com/*  #!aggreg-gyli
 *://*.jrb321.com/*  #!aggreg-gyli
-*://*.jrccn.cn/*  #!aggreg-gyli
 *://*.jrcxs.com/*  #!aggreg-gyli
 *://*.jrdcg.com/*  #!aggreg-gyli
 *://*.jrdmkj.com/*  #!aggreg-gyli
@@ -42934,7 +43133,6 @@
 *://*.ks167.com/*  #!aggreg-gyli
 *://*.ks198.com/*  #!aggreg-gyli
 *://*.ks9962.com/*  #!aggreg-gyli
-*://*.ksa-boy.com/*  #!aggreg-gyli
 *://*.ksaa23.com/*  #!aggreg-gyli
 *://*.ksansari.com/*  #!aggreg-gyli
 *://*.ksb84.cn/*  #!aggreg-gyli
@@ -45881,7 +46079,6 @@
 *://*.ma2.com/*  #!aggreg-gyli
 *://*.maam.cc/*  #!aggreg-gyli
 *://*.maaples.com/*  #!aggreg-gyli
-*://*.macaodaily.com/*  #!aggreg-gyli
 *://*.macaoparis-web.com/*  #!aggreg-gyli
 *://*.macauslot.com/*  #!aggreg-gyli
 *://*.macauticket.com/*  #!aggreg-gyli
@@ -48591,7 +48788,6 @@
 *://*.oovcy.com/*  #!aggreg-gyli
 *://*.oovm.net/*  #!aggreg-gyli
 *://*.oowna.com/*  #!aggreg-gyli
-*://*.oox8.com/*  #!aggreg-gyli
 *://*.ooxdx.cn/*  #!aggreg-gyli
 *://*.opalbuild.com/*  #!aggreg-gyli
 *://*.opang.top/*  #!aggreg-gyli
@@ -55271,7 +55467,6 @@
 *://*.slnxp.com/*  #!aggreg-gyli
 *://*.sloandq.com/*  #!aggreg-gyli
 *://*.slovaci.hu/*  #!aggreg-gyli
-*://*.slowmotionvideoclips.com/*  #!aggreg-gyli
 *://*.slrhw.top/*  #!aggreg-gyli
 *://*.slrjw.com/*  #!aggreg-gyli
 *://*.slsdpt.com/*  #!aggreg-gyli
@@ -58008,7 +58203,6 @@
 *://*.thegifthome.com/*  #!aggreg-gyli
 *://*.thegoodlife247.com/*  #!aggreg-gyli
 *://*.thegreatwesterntrail.com/*  #!aggreg-gyli
-*://*.thehesedlove.com/*  #!aggreg-gyli
 *://*.thejove.net/*  #!aggreg-gyli
 *://*.thekillsometime.com/*  #!aggreg-gyli
 *://*.thektigroup.com/*  #!aggreg-gyli
@@ -61422,7 +61616,6 @@
 *://*.w3dapp.com/*  #!aggreg-gyli
 *://*.w3facility.org/*  #!aggreg-gyli
 *://*.w3mq.com/*  #!aggreg-gyli
-*://*.w3xue.com/*  #!aggreg-gyli
 *://*.w4411b.com/*  #!aggreg-gyli
 *://*.w44pqpq.com/*  #!aggreg-gyli
 *://*.w499.com/*  #!aggreg-gyli
@@ -62013,7 +62206,6 @@
 *://*.wenjun-li.com/*  #!aggreg-gyli
 *://*.wenkongshebei.com/*  #!aggreg-gyli
 *://*.wenku.inet198.cn/*  #!aggreg-gyli
-*://*.wenliku.com/*  #!aggreg-gyli
 *://*.wenmi.net/*  #!aggreg-gyli
 *://*.wenola.com/*  #!aggreg-gyli
 *://*.wenping85.cn/*  #!aggreg-gyli
@@ -69499,7 +69691,6 @@
 *://*.yunfos.com/*  #!aggreg-gyli
 *://*.yungangcard.com/*  #!aggreg-gyli
 *://*.yunge-wine.com/*  #!aggreg-gyli
-*://*.yunjuu.com/*  #!aggreg-gyli
 *://*.yunkong8.com/*  #!aggreg-gyli
 *://*.yunkuaijie.com/*  #!aggreg-gyli
 *://*.yunkucn.com/*  #!aggreg-gyli
@@ -69984,7 +70175,6 @@
 *://*.z4b.org/*  #!aggreg-gyli
 *://*.z4c.org/*  #!aggreg-gyli
 *://*.z4f.org/*  #!aggreg-gyli
-*://*.z4q7.com/*  #!aggreg-gyli
 *://*.z566zz.com/*  #!aggreg-gyli
 *://*.z567.com/*  #!aggreg-gyli
 *://*.z5671.com/*  #!aggreg-gyli
@@ -70705,7 +70895,6 @@
 *://*.zhenzhuz.com/*  #!aggreg-gyli
 *://*.zheo.pw/*  #!aggreg-gyli
 *://*.zherpaint.com/*  #!aggreg-gyli
-*://*.zhetiaohe.com/*  #!aggreg-gyli
 *://*.zhew.net/*  #!aggreg-gyli
 *://*.zhexinhg.com/*  #!aggreg-gyli
 *://*.zhexueba.cn/*  #!aggreg-gyli
@@ -72426,7 +72615,6 @@
 *://*.admin5.org/*  #!aggreg-nonpnt
 *://*.adolescentz.com/*  #!aggreg-nonpnt
 *://*.aesml.com/*  #!aggreg-nonpnt
-*://*.affde.com/*  #!aggreg-nonpnt
 *://*.affloc.com/*  #!aggreg-nonpnt
 *://*.agid.cn/*  #!aggreg-nonpnt
 *://*.aicaigoupifa.com/*  #!aggreg-nonpnt
@@ -72486,7 +72674,6 @@
 *://*.bbs.nga.cn/*  #!aggreg-nonpnt
 *://*.bbs.wper.com/*  #!aggreg-nonpnt
 *://*.bbs.xianjichina.com/*  #!aggreg-nonpnt
-*://*.bbsah.com/*  #!aggreg-nonpnt
 *://*.bebugless.com/*  #!aggreg-nonpnt
 *://*.beckers-willems.nl/*  #!aggreg-nonpnt
 *://*.beeeup.com/*  #!aggreg-nonpnt
@@ -72557,18 +72744,14 @@
 *://*.cn.jptele.com/*  #!aggreg-nonpnt
 *://*.cn846.com/*  #!aggreg-nonpnt
 *://*.cnfreedomrtveas.ru.com/*  #!aggreg-nonpnt
-*://*.cnpython.com/*  #!aggreg-nonpnt
 *://*.cnqlk.com/*  #!aggreg-nonpnt
 *://*.cnshhbs.com/*  #!aggreg-nonpnt
 *://*.cnvhair.com/*  #!aggreg-nonpnt
-*://*.cocoachina.com/*  #!aggreg-nonpnt
 *://*.codegrepper.com/*  #!aggreg-nonpnt
-*://*.codingdict.com/*  #!aggreg-nonpnt
 *://*.come2vc886.com/*  #!aggreg-nonpnt
 *://*.comparitech.com/*  #!aggreg-nonpnt
 *://*.contact-who-called.com/*  #!aggreg-nonpnt
 *://*.contactnumbers.buzz/*  #!aggreg-nonpnt
-*://*.copyfuture.com/*  #!aggreg-nonpnt
 *://*.cosxitong.cn/*  #!aggreg-nonpnt
 *://*.couponbirds.com/*  #!aggreg-nonpnt
 *://*.cppcns.com/*  #!aggreg-nonpnt
@@ -72592,14 +72775,11 @@
 *://*.ddooo.com/*  #!aggreg-nonpnt
 *://*.ddosi.org/*  #!aggreg-nonpnt
 *://*.ddxiangmu.com/*  #!aggreg-nonpnt
-*://*.debug8.com/*  #!aggreg-nonpnt
 *://*.dedeapps.com/*  #!aggreg-nonpnt
 *://*.diannaoxianka.com/*  #!aggreg-nonpnt
 *://*.dianping.com/*  #!aggreg-nonpnt
-*://*.diglog.com/*  #!aggreg-nonpnt
 *://*.digwow.net/*  #!aggreg-nonpnt
 *://*.dingtalk.com/*  #!aggreg-nonpnt
-*://*.djcxy.com/*  #!aggreg-nonpnt
 *://*.djjiuoeb.com/*  #!aggreg-nonpnt
 *://*.dkfp88.cn/*  #!aggreg-nonpnt
 *://*.dnpz.net/*  #!aggreg-nonpnt
@@ -72607,7 +72787,6 @@
 *://*.doukou.com/*  #!aggreg-nonpnt
 *://*.downyi.com/*  #!aggreg-nonpnt
 *://*.dspgo.com/*  #!aggreg-nonpnt
-*://*.dtmao.cc/*  #!aggreg-nonpnt
 *://*.du-mon.com/*  #!aggreg-nonpnt
 *://*.duanxinhongzha.com/*  #!aggreg-nonpnt
 *://*.dute.me/*  #!aggreg-nonpnt
@@ -72745,7 +72924,6 @@
 *://*.i5seo.com/*  #!aggreg-nonpnt
 *://*.iask.sina.com.cn/*  #!aggreg-nonpnt
 *://*.icangshu111.com/*  #!aggreg-nonpnt
-*://*.icode9.com/*  #!aggreg-nonpnt
 *://*.icp-bbs.com/*  #!aggreg-nonpnt
 *://*.idc941.com/*  #!aggreg-nonpnt
 *://*.ids-water.com/*  #!aggreg-nonpnt
@@ -72833,7 +73011,6 @@
 *://*.loc.pp.ua/*  #!aggreg-nonpnt
 *://*.loginy.co.uk/*  #!aggreg-nonpnt
 *://*.lohine.com/*  #!aggreg-nonpnt
-*://*.loudoun-valley.com/*  #!aggreg-nonpnt
 *://*.lovfp.com/*  #!aggreg-nonpnt
 *://*.lowdownsires.com/*  #!aggreg-nonpnt
 *://*.lqkweb.com/*  #!aggreg-nonpnt
@@ -72893,7 +73070,6 @@
 *://*.mintwl.com/*  #!aggreg-nonpnt
 *://*.mississippifaithinaction.org/*  #!aggreg-nonpnt
 *://*.mitosediesel.ro.to/*  #!aggreg-nonpnt
-*://*.mlog.club/*  #!aggreg-nonpnt
 *://*.mlook.mobi/*  #!aggreg-nonpnt
 *://*.mnsf.net/*  #!aggreg-nonpnt
 *://*.mo08.biz/*  #!aggreg-nonpnt
@@ -72903,7 +73079,6 @@
 *://*.moflier.com/*  #!aggreg-nonpnt
 *://*.moneytlk.com/*  #!aggreg-nonpnt
 *://*.mop.com/*  #!aggreg-nonpnt
-*://*.mos86.com/*  #!aggreg-nonpnt
 *://*.mosaby.com/*  #!aggreg-nonpnt
 *://*.mostexpo.com/*  #!aggreg-nonpnt
 *://*.mostud.com/*  #!aggreg-nonpnt
@@ -72982,26 +73157,20 @@
 *://*.njqg.net/*  #!aggreg-nonpnt
 *://*.njsz99.com/*  #!aggreg-nonpnt
 *://*.nmxjp.com/*  #!aggreg-nonpnt
-*://*.noobyard.com/*  #!aggreg-nonpnt
 *://*.nordvpnblog.com/*  #!aggreg-nonpnt
 *://*.nuomiphp.com/*  #!aggreg-nonpnt
 *://*.nxhh.net/*  #!aggreg-nonpnt
 *://*.nyist.net/*  #!aggreg-nonpnt
 *://*.offers.com/*  #!aggreg-nonpnt
 *://*.ofweek.com/*  #!aggreg-nonpnt
-*://*.ojit.com/*  #!aggreg-nonpnt
 *://*.ok168198.com/*  #!aggreg-nonpnt
-*://*.oomake.com/*  #!aggreg-nonpnt
-*://*.orcode.com/*  #!aggreg-nonpnt
 *://*.outofmemory.cn/*  #!aggreg-nonpnt
 *://*.padh.net/*  #!aggreg-nonpnt
 *://*.paloma.cn/*  #!aggreg-nonpnt
 *://*.panjk.com/*  #!aggreg-nonpnt
 *://*.pantianxia.com/*  #!aggreg-nonpnt
-*://*.paradacreativa.es/*  #!aggreg-nonpnt
 *://*.parichyimin.com/*  #!aggreg-nonpnt
 *://*.pclovers.net/*  #!aggreg-nonpnt
-*://*.pcpc.me/*  #!aggreg-nonpnt
 *://*.phoenixups.com/*  #!aggreg-nonpnt
 *://*.picclick.co.uk/*  #!aggreg-nonpnt
 *://*.ping-jia.net/*  #!aggreg-nonpnt
@@ -73181,14 +73350,12 @@
 *://*.tuocheng.cc/*  #!aggreg-nonpnt
 *://*.turnoffthelights.com/*  #!aggreg-nonpnt
 *://*.tw.phonecardsoftware.com/*  #!aggreg-nonpnt
-*://*.twblogs.net/*  #!aggreg-nonpnt
 *://*.twfeq.com/*  #!aggreg-nonpnt
 *://*.twoeggz.com/*  #!aggreg-nonpnt
 *://*.txcsjlb.com/*  #!aggreg-nonpnt
 *://*.tysp.org/*  #!aggreg-nonpnt
 *://*.u9h.com/*  #!aggreg-nonpnt
 *://*.ub4.com/*  #!aggreg-nonpnt
-*://*.ubuntuqa.com/*  #!aggreg-nonpnt
 *://*.ujjainyoga.com/*  #!aggreg-nonpnt
 *://*.uk.com/*  #!aggreg-nonpnt
 *://*.ukassignment.org/*  #!aggreg-nonpnt
@@ -73237,7 +73404,6 @@
 *://*.who-called-de.com/*  #!aggreg-nonpnt
 *://*.whoisua.com/*  #!aggreg-nonpnt
 *://*.wikicell.org/*  #!aggreg-nonpnt
-*://*.win10xiazai.com/*  #!aggreg-nonpnt
 *://*.windowsbulletin.com/*  #!aggreg-nonpnt
 *://*.windowsphoneinfo.com/*  #!aggreg-nonpnt
 *://*.wintoog.com.cn/*  #!aggreg-nonpnt
@@ -73316,9 +73482,7 @@
 *://*.zakcret.xyz/*  #!aggreg-nonpnt
 *://*.zaojiance.net/*  #!aggreg-nonpnt
 *://*.zbaen.com/*  #!aggreg-nonpnt
-*://*.zditect.com/*  #!aggreg-nonpnt
 *://*.zglangying.com/*  #!aggreg-nonpnt
-*://*.zgserver.com/*  #!aggreg-nonpnt
 *://*.zgxnjc.com/*  #!aggreg-nonpnt
 *://*.zh.wizcase.com/*  #!aggreg-nonpnt
 *://*.zhanjuzhizao.com/*  #!aggreg-nonpnt
@@ -73360,7 +73524,6 @@
 *://*.169xi.com/*  #!aggreg-scyrte
 *://*.184.14/*  #!aggreg-scyrte
 *://*.18qvod.com/*  #!aggreg-scyrte
-*://*.1applehealth.com/*  #!aggreg-scyrte
 *://*.1d9z.com/*  #!aggreg-scyrte
 *://*.1juhao.com/*  #!aggreg-scyrte
 *://*.1lyx.com/*  #!aggreg-scyrte
@@ -73929,11 +74092,9 @@
 *://*.4000840088.com/*  #!aggreg-yesil
 *://*.51huandian.com/*  #!aggreg-yesil
 *://*.52dcr.com/*  #!aggreg-yesil
-*://*.52movs.com/*  #!aggreg-yesil
 *://*.52wanshua.com/*  #!aggreg-yesil
 *://*.55wenda.top/*  #!aggreg-yesil
 *://*.58huangye.com/*  #!aggreg-yesil
-*://*.58pjy.com/*  #!aggreg-yesil
 *://*.591h9.com/*  #!aggreg-yesil
 *://*.5shentg.com/*  #!aggreg-yesil
 *://*.600911.cn/*  #!aggreg-yesil
@@ -73976,7 +74137,6 @@
 *://*.ata-academy.com/*  #!aggreg-yesil
 *://*.ayjz.juergen-schmitz-consulting.de/*  #!aggreg-yesil
 *://*.azsalon527.com/*  #!aggreg-yesil
-*://*.babyitellyou.com/*  #!aggreg-yesil
 *://*.baicaisd.com/*  #!aggreg-yesil
 *://*.baipat.com/*  #!aggreg-yesil
 *://*.ballhaus.buzz/*  #!aggreg-yesil
@@ -74024,7 +74184,6 @@
 *://*.cnkth.liugushan.com/*  #!aggreg-yesil
 *://*.cnls8.com/*  #!aggreg-yesil
 *://*.cnwoodnet.buzz/*  #!aggreg-yesil
-*://*.colabug.com/*  #!aggreg-yesil
 *://*.cqchildren.com/*  #!aggreg-yesil
 *://*.cqzcds.com/*  #!aggreg-yesil
 *://*.csdetec.com/*  #!aggreg-yesil
@@ -74148,7 +74307,6 @@
 *://*.jbzj.com/*  #!aggreg-yesil
 *://*.jdd10037.s.qswgyz.com/*  #!aggreg-yesil
 *://*.jdzl.v3ng.de/*  #!aggreg-yesil
-*://*.jeepxie.net/*  #!aggreg-yesil
 *://*.jhua365.com/*  #!aggreg-yesil
 *://*.jiajiaxz.com/*  #!aggreg-yesil
 *://*.jiehunliwu.9tu9.com/*  #!aggreg-yesil
@@ -74432,7 +74590,6 @@
 *://*.yrhtech.com/*  #!aggreg-yesil
 *://*.yt.eiliao.com/*  #!aggreg-yesil
 *://*.ytxjjx.com/*  #!aggreg-yesil
-*://*.yuanmas.com/*  #!aggreg-yesil
 *://*.yuchengsm1.com/*  #!aggreg-yesil
 *://*.yunmeibeijing.com/*  #!aggreg-yesil
 *://*.yunsh.cc/*  #!aggreg-yesil
