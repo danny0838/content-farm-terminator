@@ -2,8 +2,8 @@ name: Aggregate sources and rebuild
 
 on:
   schedule:
-    # 19:42 UTC every 3 month days
-    - cron: "42 19 */3 * *"
+    # 19:42 UTC every Sunday
+    - cron: "42 19 * * 0"
 
   # push:
     # branches:
