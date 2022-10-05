@@ -195,14 +195,14 @@ class Rule:
         if m:
             self.type = 'regex'
             self.pattern = m.group(1)
-            self.flags = m.group(2)
+            self.flags = ''.join(sorted(m.group(2)))
             return
 
         # scheme
         m = RE_SCHEME_RULE.search(self.rule)
         if m:
             self.type = 'scheme'
-            self.scheme = m.group(1)
+            self.scheme = m.group(1).lower()
             self.value = m.group(2)
             return
 
@@ -215,6 +215,7 @@ class Rule:
             else:
                 if ip.version == 6:
                     self.type = 'ipv6'
+                    self.ip = ip.compressed
             return
 
         # ipv4
@@ -225,12 +226,16 @@ class Rule:
         else:
             if ip.version == 4:
                 self.type = 'ipv4'
+                self.ip = ip.compressed
                 return
 
         # domain
         m = RE_DOMAIN_RULE.search(self.rule)
         if m:
             self.type = 'domain'
+            self.domain = self.rule.lower()
+            while '**' in self.domain:
+                self.domain = self.domain.replace('**', '*')
             return
 
     def set_rule_raw(self, text):
@@ -341,17 +346,25 @@ class Linter:
                     return None
 
         elif rule.type == 'domain':
-            fixed_rule = rule.rule.lower()
+            fixed_rule = rule.domain
             if rule.rule != fixed_rule:
-                log.info('%s:%i: rule "%s" should be all lowercase',
+                log.info('%s:%i: rule "%s" should be all lowercase and no consecutive "*"s',
                          rule.path, rule.line_no, rule.rule)
-                rule = Rule(f'{fixed_rule}{rule.sep}{rule.comment}')
+                return Rule(f'{fixed_rule}{rule.sep}{rule.comment}')
 
-            if '**' in rule.rule:
-                log.info('%s:%i: rule "%s" has "**"',
+        elif rule.type == 'ipv4':
+            fixed_rule = rule.ip
+            if rule.rule != fixed_rule:
+                log.info('%s:%i: rule "%s" should be compressed',
                          rule.path, rule.line_no, rule.rule)
-                fixed_rule = re.sub(r'\*+', r'*', rule.rule)
-                rule = Rule(f'{fixed_rule}{rule.sep}{rule.comment}')
+                return Rule(f'{fixed_rule}{rule.sep}{rule.comment}')
+
+        elif rule.type == 'ipv6':
+            fixed_rule = f'[{rule.ip}]'
+            if rule.rule != fixed_rule:
+                log.info('%s:%i: rule "%s" should be all lowercase and compressed',
+                         rule.path, rule.line_no, rule.rule)
+                return Rule(f'{fixed_rule}{rule.sep}{rule.comment}')
 
         elif rule.type == 'regex':
             if self.check_regex:
@@ -362,12 +375,18 @@ class Linter:
                              rule.path, rule.line_no, rule.rule, exc)
                     return None
 
+            fixed_rule = f'/{rule.pattern}/{rule.flags}'
+            if rule.rule != fixed_rule:
+                log.info('%s:%i: flags of rule "%s" should be sorted alphabetically',
+                         rule.path, rule.line_no, rule.rule)
+                return Rule(f'{fixed_rule}{rule.sep}{rule.comment}')
+
         elif rule.type == 'scheme':
-            fixed_scheme = rule.scheme.lower()
-            if rule.scheme != fixed_scheme:
+            fixed_rule = f'{rule.scheme}:{rule.value}'
+            if rule.rule != fixed_rule:
                 log.info('%s:%i: scheme of rule "%s" should be all lowercase',
                          rule.path, rule.line_no, rule.rule)
-                return Rule(f'{fixed_scheme}:{rule.value}{rule.sep}{rule.comment}')
+                return Rule(f'{fixed_rule}{rule.sep}{rule.comment}')
 
         return rule
 
@@ -432,14 +451,26 @@ class Uniquifier:
         rules_dict = {}
         for rule in rules:
             if rule.rule:
-                try:
-                    rule2 = rules_dict[rule.rule]
-                except KeyError:
-                    rules_dict[rule.rule] = rule
+                if rule.type == 'domain':
+                    key = rule.domain
+                elif rule.type in ('ipv4', 'ipv6'):
+                    key = rule.ip
+                elif rule.type == 'regex':
+                    key = (rule.pattern, rule.flags)
+                elif rule.type == 'scheme':
+                    key = (rule.scheme, rule.value)
                 else:
-                    log.info('%s:%i: rule "%s" duplicates %s:%i',
-                             rule.path, rule.line_no, rule.rule, rule2.path, rule2.line_no)
+                    key = rule.rule
+
+                try:
+                    rule2 = rules_dict[key]
+                except KeyError:
+                    rules_dict[key] = rule
+                else:
+                    log.info('%s:%i: rule "%s" duplicates "%s" (%s:%i)',
+                             rule.path, rule.line_no, rule.rule, rule2.rule, rule2.path, rule2.line_no)
                     continue
+
             new_rules.append(rule)
 
         if self.check_subdomains:
@@ -456,7 +487,7 @@ class Uniquifier:
         for rule in rules:
             ok = True
             if rule.type == 'domain' and '*' not in rule.rule:
-                domain = rule.rule
+                domain = rule.domain
                 pos = domain.find('.')
                 while pos >= 0:
                     domain = domain[pos + 1:]
