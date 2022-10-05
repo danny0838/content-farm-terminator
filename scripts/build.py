@@ -486,7 +486,7 @@ class Uniquifier:
 
         for rule in rules:
             ok = True
-            if rule.type == 'domain' and '*' not in rule.rule:
+            if rule.type == 'domain':
                 domain = rule.domain
                 pos = domain.find('.')
                 while pos >= 0:
