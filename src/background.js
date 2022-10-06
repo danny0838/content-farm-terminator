@@ -1,6 +1,6 @@
 let filter = new ContentFarmFilter();
 let updateFilterPromise;
-let autoUpdateFilterTimer;
+let autoUpdateAssetsTimer;
 let tempUnblockTabs = new Set();
 
 const contextMenuController = {
@@ -132,18 +132,37 @@ async function refreshTabs() {
   }));
 }
 
-async function updateFilter() {
+async function updateFilter(changed = false) {
   return updateFilterPromise = (async () => {
     try {
       const options = await utils.getOptions();
+
       const newFilter = new ContentFarmFilter();
       newFilter.addTransformRules(options.transformRules);
       newFilter.addBlackList(options.userBlacklist);
       newFilter.addWhiteList(options.userWhitelist);
-      await newFilter.addWebBlackLists(
-        options.webBlacklists,
-        options.webBlacklistsCacheDuration
-      );
+
+      // run one by one to prevent memory overload if the list is large
+      const urls = newFilter.urlsTextToLines(options.webBlacklists);
+      for (const url of urls) {
+        let {text} = await newFilter.getCachedWebBlackList(
+          url, options.webBlacklistsCacheDuration,
+        );
+
+        if (text === null && changed) {
+          try {
+            text = await newFilter.fetchWebBlackList(url);
+          } catch (ex) {
+            console.error(`Failed to fetch blacklist from "${url}": ${ex.message}`);
+          }
+        }
+
+        const rulesText = utils.getLines(text || '')
+          .map(rule => newFilter.parseRuleLine(rule).validate(true).toString())
+          .join('\n');
+        newFilter.addBlackList(rulesText, url);
+      }
+
       newFilter.makeCachedRules();
       filter = newFilter;
 
@@ -155,6 +174,66 @@ async function updateFilter() {
       console.error(ex);
     }
   })();
+}
+
+async function updateAssets() {
+  const options = await utils.getOptions();
+  const urls = filter.urlsTextToLines(options.webBlacklists);
+  const states = await Promise.all(urls.map(
+    async (url) => {
+      const {time, uptodate} = await filter.getCachedWebBlackList(
+        url, options.webBlacklistsCacheDuration,
+      );
+      return {time, uptodate};
+    }
+  ));
+
+  const outdateIdxs = states.reduce((rv, state, i) => {
+    if (!state.uptodate) { rv.push(i); }
+    return rv;
+  }, []).sort((a, b) => {
+    const ta = states[a].time;
+    const tb = states[b].time;
+    return ta - tb;
+  });
+
+  if (!outdateIdxs.length) {
+    await autoUpdateAssets();
+    return;
+  }
+
+  // Update one list. Try next one if it fails.
+  let updated = false;
+  while (outdateIdxs.length) {
+    const idx = outdateIdxs.shift();
+    const url = urls[idx];
+    try {
+      await filter.fetchWebBlackList(url);
+      updated = true;
+      break;
+    } catch (ex) {
+      console.error(`Failed to cache blacklist from "${url}": ${ex.message}`);
+    }
+  }
+
+  // Update the filter if all updatable lists are updated.
+  if (updated && !outdateIdxs.length) {
+    await updateFilter();
+  }
+
+  await autoUpdateAssets();
+}
+
+async function autoUpdateAssets() {
+  if (autoUpdateAssetsTimer) {
+    clearTimeout(autoUpdateAssetsTimer);
+    autoUpdateAssetsTimer = null;
+  }
+
+  const {webBlacklistsUpdateInterval} = await utils.getOptions([
+    "webBlacklistsUpdateInterval",
+  ]);
+  autoUpdateAssetsTimer = setTimeout(updateAssets, webBlacklistsUpdateInterval);
 }
 
 async function blockSite(rule, tabId, frameId, quickMode) {
@@ -306,18 +385,6 @@ async function onBeforeRequestCallback(details) {
   return onBeforeRequestBlocker(details);
 };
 
-async function autoUpdateFilter() {
-  if (autoUpdateFilterTimer) {
-    clearInterval(autoUpdateFilterTimer);
-    autoUpdateFilterTimer = null;
-  }
-
-  const {webBlacklistsUpdateInterval} = await utils.getOptions([
-    "webBlacklistsUpdateInterval",
-  ]);
-  autoUpdateFilterTimer = setInterval(updateFilter, webBlacklistsUpdateInterval);
-}
-
 function initBeforeRequestListener() {
   browser.webRequest.onBeforeRequest.addListener((details) => {
     return onBeforeRequestCallback(details);
@@ -462,7 +529,7 @@ function initStorageChangeListener() {
     }
 
     if ("webBlacklistsUpdateInterval" in changes) {
-      autoUpdateFilter(); // async
+      autoUpdateAssets(); // async
     }
 
     {
@@ -473,7 +540,7 @@ function initStorageChangeListener() {
         "transformRules",
       ].filter(x => x in changes);
       if (listOptions.length) {
-        await updateFilter();
+        await updateFilter(true);
 
         // @TODO:
         // Say we have a shift from local to sync:
@@ -506,7 +573,7 @@ function initInstallListener() {
       if (options.webBlacklist && (typeof options.webBlacklists === "undefined")) {
         const newWebBlacklists = utils.defaultOptions.webBlacklists + "\n" + options.webBlacklist;
         await utils.setOptions({webBlacklists: newWebBlacklists});
-        await updateFilter();
+        await updateFilter(true);
       }
       console.warn("Migrated successfully.");
     }
@@ -555,7 +622,7 @@ function init() {
   updateFilter() // async
     .then(() => {
       onBeforeRequestCallback = onBeforeRequestBlocker;
-      autoUpdateFilter();
+      autoUpdateAssets();
     });
 }
 

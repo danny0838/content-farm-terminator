@@ -38,7 +38,7 @@ async function showMergedBlacklists() {
 async function showCachedBlocklist(url) {
   document.title = url;
   const handler = new ContentFarmFilter();
-  const blacklist = await handler.getBlackListFromUrl(url, {cacheOnly: true});
+  const {text: blacklist} = await handler.getCachedWebBlackList(url);
   if (blacklist) {
     const pre = document.body.appendChild(document.createElement('pre'));
     pre.textContent = blacklist;

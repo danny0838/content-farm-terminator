@@ -280,66 +280,38 @@
       this.addBlockList(this._whitelist, listText, url);
     }
 
-    async addWebBlackLists(urlsText, cacheDuration) {
-      const urls = this.urlsTextToLines(urlsText);
-      const tasks = urls.map(u => {
-        return this.getBlackListFromUrl(u, {cacheDuration}).catch(ex => {
-          console.error(ex);
-        });
-      });
-      const texts = await Promise.all(tasks);
-      for (let i = 0, I = urls.length; i < I; i++) {
-        const url = urls[i];
-        const text = texts[i];
-        const rulesText = utils.getLines(text)
-          .map(rule => this.parseRuleLine(rule).validate(true).toString())
-          .join('\n');
-        this.addBlackList(rulesText, url);
+    /**
+     * @param {string[]} urls - URLs with hash stripped
+     */
+    async getCachedWebBlackList(url, cacheDuration) {
+      const data = await this.getWebListCache(url);
+      if (!data) {
+        return {
+          text: null,
+          time: null,
+          uptodate: false,
+        };
       }
+      return {
+        text: data.rulesText,
+        time: data.time,
+        uptodate: Date.now() - data.time < cacheDuration,
+      };
     }
 
     /**
      * @param {string} url - a URL with hash stripped
      */
-    async getBlackListFromUrl(url, {cacheDuration = 0, cacheOnly = false, doNotCache = false} = {}) {
-      const data = await this.getWebListCache(url);
+    async fetchWebBlackList(url) {
       const time = Date.now();
-
-      // retrieve rules from cache
-      let cacheRulesText, cacheTime;
-      if (data) {
-        ({time: cacheTime, rulesText: cacheRulesText} = data);
-        // use cached version if not expired or cacheOnly
-        if (time - cacheTime < cacheDuration || cacheOnly) {
-          return cacheRulesText;
-        }
-      }
-
-      // return anyway if cacheOnly
-      if (cacheOnly) {
-        return cacheRulesText;
-      }
-
-      // retrieve rules from web if no cache or cache has expired
       let text;
-      try {
-        const response = await fetch(url, {
-          credentials: 'include',
-          cache: 'no-cache',
-        });
-        if (!response.ok) { throw new Error("response not ok"); }
-        text = await response.text();
-      } catch (ex) {
-        console.error(`Unable to get blocklist from: '${url}'`);
-
-        // fallback to cached version if web version not accessible
-        return cacheRulesText;
-      }
-
-      // store retrieved rules to cache
-      if (!doNotCache) {
-        await this.setWebListCache(url, time, text).catch(() => {});
-      }
+      const response = await fetch(url, {
+        credentials: 'include',
+        cache: 'no-cache',
+      });
+      if (!response.ok) { throw new Error("response not ok"); }
+      text = await response.text();
+      await this.setWebListCache(url, time, text);
       return text;
     }
 
