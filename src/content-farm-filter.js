@@ -560,8 +560,10 @@
   }
 
   const TRIE_TOKEN_EOT = Symbol('EOT');
+  const TRIE_TOKEN_ANYCHAR = Symbol('?');
   const TRIE_TOKEN_ANYCHARS = Symbol('*');
   const TRIE_TOKEN_MAP = new Map([
+    ['?', TRIE_TOKEN_ANYCHAR],
     ['*', TRIE_TOKEN_ANYCHARS],
   ]);
 
@@ -611,6 +613,10 @@
           }
           default: {
             if (next = trie.get(part)) {
+              subqueue.push([next, i + 1]);
+            }
+
+            if (next = trie.get(TRIE_TOKEN_ANYCHAR)) {
               subqueue.push([next, i + 1]);
             }
 
