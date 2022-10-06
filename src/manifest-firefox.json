@@ -37,6 +37,7 @@
   "background": {
     "scripts": [
       "lib/punycode.js",
+      "lib/Regex.js",
       "utils.js",
       "content-farm-filter.js",
       "background.js"

@@ -380,7 +380,13 @@
       };
 
       const urlMatchBlockList = (url, blocklist) => {
-        for (const [regex, rule] of blocklist.regexRulesDict) {
+        const checked = new Set();
+        for (const rule of blocklist.regexRulesDict.match(url)) {
+          const regex = rule.regex;
+          if (checked.has(regex)) {
+            continue;
+          }
+          checked.add(regex);
           regex.lastIndex = 0;
           if (regex.test(url)) {
             return rule;  // return first match
@@ -568,12 +574,19 @@
     }
 
     makeCachedRules(...args) {
+      const cacheRegexRule = (rule, trie) => {
+        rule.regex = new RegExp(rule.pattern, rule.flags);
+        for (const tokens of regex.tokenize(rule.pattern)) {
+          trie.addTokens(tokens, rule);
+        }
+      };
+
       const cacheRules = (blockList) => {
         const standardRulesDict = new Trie();
-        const regexRulesDict = new Map();
+        const regexRulesDict = new Trie();
         for (const [, rule] of blockList.rules) {
           if (rule.type === 'regex') {
-            regexRulesDict.set(new RegExp(rule.pattern, rule.flags), rule);
+            cacheRegexRule(rule, regexRulesDict);
           } else if (rule.type === 'domain') {
             standardRulesDict.add(rule.domain, rule);
           } else if (rule.type === 'ipv4') {
@@ -816,6 +829,172 @@
      */
     static escape(str) {
       return str.replace(TRIE_PATTERN_ESCAPER, '[$&]');
+    }
+  }
+
+  const REGEX_TOKEN_SOT = Symbol('^');
+  const REGEX_TOKEN_EOT = Symbol('$');
+  const REGEX_RE_STR_FIXER = /(\\[\s\S])|-/g;
+  const REGEX_RE_STR_FIXER_FUNC = (m, e) => (e || `\\${m}`);
+
+  class regex {
+    static *tokenize(reStr) {
+      try {
+        // Depends on:
+        // https://github.com/foo123/RegexAnalyzer
+        const regexAnalyzer = Regex.Analyzer;
+
+        // fix error for analyzer for [x-]
+        reStr = reStr.replace(REGEX_RE_STR_FIXER, REGEX_RE_STR_FIXER_FUNC);
+
+        const node = regexAnalyzer(reStr, false).tree();
+        const tokens = this._tokenizeNode(node);
+        yield* this._expandTokenSeq(tokens);
+      } catch(ex) {
+        // Certain regex cannot be parsed by the analyzer,
+        // such as /\u{20000}/. Use wildcard instead.
+        yield [TRIE_TOKEN_ANYCHARS];
+      }
+    }
+
+    /**
+     * @param {RegexNode} node
+     * @returns {string|Symbol|Object}
+     */
+    static _tokenizeNode(node) {
+      switch (node.type) {
+        case 1: /* T_SEQUENCE, 'Sequence' */ {
+          let seq = [];
+          for (let i = 0, I = node.val.length; i < I; i++) {
+            seq = seq.concat(this._tokenizeNode(node.val[i]));
+          }
+          return seq;
+        }
+        case 2: /* T_ALTERNATION, 'Alternation' */ {
+          return [{alt: node.val.map(node => this._tokenizeNode(node))}];
+        }
+        case 4: /* T_GROUP, 'Group' */ {
+          for (const flag of ['LookAhead', 'LookBehind', 'NegativeLookAhead', 'NegativeLookBehind']) {
+            if (node.flags[flag]) { return []; }
+          }
+          return this._tokenizeNode(node.val);
+        }
+        case 8: /* T_CHARGROUP, 'CharacterGroup' */ {
+          return [TRIE_TOKEN_ANYCHAR];
+        }
+        case 16: /* T_QUANTIFIER, 'Quantifier' */ {
+          let seq = [], tokens;
+          for (let i = 0, I = node.flags.min; i < I; i++) {
+            tokens = tokens || this._tokenizeNode(node.val);
+            seq = seq.concat(tokens);
+          }
+          if (node.flags.min !== node.flags.max) {
+            seq = seq.concat([TRIE_TOKEN_ANYCHARS]);
+          }
+          return seq;
+        }
+        case 32: /* T_UNICODECHAR, 'UnicodeChar' */ {
+          return [node.flags.Char];
+        }
+        case 64: /* T_HEXCHAR, 'HexChar' */ {
+          return [node.flags.Char];
+        }
+        case 128: /* T_SPECIAL, 'Special' */ {
+          if (node.flags.MatchStart) {
+            return [REGEX_TOKEN_SOT];
+          }
+          if (node.flags.MatchEnd) {
+            return [REGEX_TOKEN_EOT];
+          }
+          return [];
+        }
+        case 256: /* T_CHARS, 'Characters' */ {
+          return [];
+        }
+        case 512: /* T_CHARRANGE, 'CharacterRange' */ {
+          return [];
+        }
+        case 1024: /* T_STRING, 'String' */ {
+          return Array.from(node.val);
+        }
+        case 2048: /* T_COMMENT, 'Comment' */ {
+          return [];
+        }
+      }
+      return [];
+    }
+
+    /**
+     * @param {Array.<string|Symbol|Object>} seq
+     * @yields {string|Symbol}
+     */
+    static *_expandTokenSeq(seq) {
+      const queue = [[seq, 0]];
+      while (queue.length) {
+        const [seq, i] = queue.pop();
+        const part = seq[i];
+
+        // seq finished, tidy and yield it
+        if (typeof part === 'undefined') {
+          let newseq = seq;
+
+          handleSOT: {
+            const i = newseq.lastIndexOf(REGEX_TOKEN_SOT);
+            if (i !== -1) {
+              newseq = newseq.slice(i + 1);
+            } else {
+              newseq.unshift(TRIE_TOKEN_ANYCHARS);
+            }
+          }
+
+          handleEOT: {
+            const i = newseq.indexOf(REGEX_TOKEN_EOT);
+            if (i !== -1) {
+              newseq = newseq.slice(0, i);
+            } else {
+              newseq.push(TRIE_TOKEN_ANYCHARS);
+            }
+          }
+
+          let fixedseq = [];
+          for (const part of newseq) {
+            // prevent consecutive **, ***, ...
+            if (part === TRIE_TOKEN_ANYCHARS
+                && fixedseq[fixedseq.length - 1] === TRIE_TOKEN_ANYCHARS) {
+              continue;
+            }
+
+            // prevent consecutive *?*, *??*, ...
+            if (part === TRIE_TOKEN_ANYCHARS
+                && fixedseq[fixedseq.length - 1] === TRIE_TOKEN_ANYCHAR) {
+              let i = fixedseq.length - 2;
+              while (fixedseq[i] === TRIE_TOKEN_ANYCHAR) { i--; }
+              if (fixedseq[i] === TRIE_TOKEN_ANYCHARS) {
+                continue;
+              }
+            }
+            fixedseq.push(part);
+          }
+
+          yield fixedseq;
+          continue;
+        }
+
+        const subqueue = [];
+        if (part.alt) {
+          for (const subseq of part.alt) {
+            const newseq = seq.slice(0, i).concat(subseq).concat(seq.slice(i + 1));
+            subqueue.push([newseq, i]);
+          }
+        } else {
+          subqueue.push([seq, i + 1]);
+        }
+
+        // add to queue using reversed order
+        while (subqueue.length) {
+          queue.push(subqueue.pop());
+        }
+      }
     }
   }
 
