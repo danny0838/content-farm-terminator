@@ -587,7 +587,7 @@
         next.token = token;
         trie.set(token, next);
       }
-      next.set(value, key);
+      next.set(value, true);
     }
 
     match(str) {
