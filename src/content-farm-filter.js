@@ -573,11 +573,13 @@
         const regexRulesDict = new Map();
         for (const [, rule] of blockList.rules) {
           if (rule.type === 'regex') {
-            // RegExp rule
             regexRulesDict.set(new RegExp(rule.pattern, rule.flags), rule);
-          } else {
-            // domain, ipv4, ipv6 rule
-            standardRulesDict.add(rule.rule, rule);
+          } else if (rule.type === 'domain') {
+            standardRulesDict.add(rule.domain, rule);
+          } else if (rule.type === 'ipv4') {
+            standardRulesDict.add(Trie.escape(rule.rule), rule);
+          } else if (rule.type === 'ipv6') {
+            standardRulesDict.add(Trie.escape(rule.rule), rule);
           }
         }
         blockList.standardRulesDict = standardRulesDict;
@@ -633,10 +635,15 @@
   const TRIE_TOKEN_EOT = Symbol('EOT');
   const TRIE_TOKEN_ANYCHAR = Symbol('?');
   const TRIE_TOKEN_ANYCHARS = Symbol('*');
+  const TRIE_TOKEN_BRACKET_OPEN = Symbol('[');
+  const TRIE_TOKEN_BRACKET_CLOSE = Symbol(']');
   const TRIE_TOKEN_MAP = new Map([
     ['?', TRIE_TOKEN_ANYCHAR],
     ['*', TRIE_TOKEN_ANYCHARS],
+    ['[', TRIE_TOKEN_BRACKET_OPEN],
+    [']', TRIE_TOKEN_BRACKET_CLOSE],
   ]);
+  const TRIE_PATTERN_ESCAPER = /[*?[]/g;
 
   /**
    * Prefix trie that supports wildcards.
@@ -655,25 +662,97 @@
      * @param {*} [value=pattern] - The value when the pattern is matched.
      */
     add(pattern, value = pattern) {
-      let trie = this._trie;
-      for (const part of Array.from(pattern)) {
-        const token = TRIE_TOKEN_MAP.get(part) || part;
-        let next = trie.get(token);
-        if (!next) {
-          next = new Map();
-          next.token = token;
-          trie.set(token, next);
+      const tokens = this._expandWildcards(Array.from(pattern));
+      this.addTokens(tokens, value);
+    }
+
+    /**
+     * Add a pattern (in the form of an array of tokens) for matching.
+     *
+     * @param {(string|Symbol|Array.<(string|Symbol)>)} tokens - The pattern for matching.
+     * @param {*} [value] - The value when the pattern is matched.
+     */
+    addTokens(tokens, value) {
+      const queue = [[this._trie, 0]];
+      while (queue.length) {
+        const [trie, i] = queue.pop();
+        const subqueue = [];
+        const token = tokens[i];
+
+        if (!token) {
+          const token = TRIE_TOKEN_EOT;
+          let next = trie.get(token);
+          if (!next) {
+            next = new Map();
+            next.token = token;
+            trie.set(token, next);
+          }
+          next.set(value, true);
+          continue;
         }
-        trie = next;
+
+        for (const t of Array.isArray(token) ? token : [token]) {
+          let next = trie.get(t);
+          if (!next) {
+            next = new Map();
+            next.token = t;
+            trie.set(t, next);
+          }
+          subqueue.push([next, i + 1]);
+        }
+
+        // add to queue using reversed order
+        while (subqueue.length) {
+          queue.push(subqueue.pop());
+        }
       }
-      const token = TRIE_TOKEN_EOT;
-      let next = trie.get(token);
-      if (!next) {
-        next = new Map();
-        next.token = token;
-        trie.set(token, next);
+    }
+
+    _expandWildcards(parts) {
+      const tokens = [];
+      const escaped = [];
+      let escaping = false;
+      for (const part of parts) {
+        const token = TRIE_TOKEN_MAP.get(part) || part;
+
+        if (escaping) {
+          if (token === TRIE_TOKEN_BRACKET_CLOSE) {
+            escaping = false;
+            if (escaped.length) {
+              tokens.push(escaped.slice());
+              escaped.length = 0;
+            } else {
+              tokens.push('[');
+              tokens.push(']');
+            }
+            continue;
+          }
+
+          escaped.push(part);
+          continue;
+        }
+
+        if (token === TRIE_TOKEN_BRACKET_OPEN) {
+          escaping = true;
+          continue;
+        }
+
+        if (token === TRIE_TOKEN_BRACKET_CLOSE) {
+          tokens.push(']');
+          continue;
+        }
+
+        tokens.push(token);
       }
-      next.set(value, true);
+
+      if (escaping) {
+        tokens.push('[');
+        for (const part of escaped) {
+          tokens.push(part);
+        }
+      }
+
+      return tokens;
     }
 
     /**
@@ -727,6 +806,16 @@
           queue.push(subqueue.pop());
         }
       }
+    }
+
+    /**
+     * Escape a string to be safe in a pattern.
+     *
+     * @param {string} str - The string to escape.
+     * @returns {string} The escaped string.
+     */
+    static escape(str) {
+      return str.replace(TRIE_PATTERN_ESCAPER, '[$&]');
     }
   }
 
