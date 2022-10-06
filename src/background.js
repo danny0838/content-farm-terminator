@@ -158,18 +158,17 @@ async function updateFilter() {
 }
 
 async function blockSite(rule, tabId, frameId, quickMode) {
-  rule = (rule || "").trim();
-  rule = filter.parseRuleLine(rule, {validate: 'standard', transform: 'standard', asString: true});
+  rule = filter.transform(filter.parseRuleLine(rule)).validate().toString();
 
   if (!quickMode) {
     let newRule = await browser.tabs.sendMessage(tabId, {
       cmd: 'blockSite',
-      args: {rule},
+      args: {rule: rule.toString()},
     }, {frameId});
 
     if (newRule) {
       // validate the user-modified rule
-      newRule =  filter.parseRuleLine(newRule, {validate: 'standard', asString: true});
+      newRule = filter.parseRuleLine(newRule).validate().toString();
     }
 
     rule = newRule;
@@ -212,15 +211,11 @@ async function blockSite(rule, tabId, frameId, quickMode) {
 }
 
 async function blockSelectedLinks(tabId, frameId, quickMode) {
-  const list = await browser.tabs.sendMessage(tabId, {
-    cmd: 'blockSelectedLinks',
-  }, {frameId});
-
-  let rules = list.map((rule) => {
-    rule = (rule || "").trim();
-    rule = filter.parseRuleLine(rule, {validate: 'standard', transform: 'standard', asString: true});
-    return rule;
-  }).filter(rule => !filter.isInBlacklist(rule));
+  let rules = (await browser.tabs.sendMessage(tabId, {
+      cmd: 'blockSelectedLinks',
+    }, {frameId}))
+    .map(rule => filter.transform(filter.parseRuleLine(rule)).validate().toString())
+    .filter(rule => !filter.isInBlacklist(rule));
 
   if (!rules.length) {
     return browser.tabs.sendMessage(tabId, {
@@ -245,13 +240,13 @@ async function blockSelectedLinks(tabId, frameId, quickMode) {
 
   updateOptions: {
     const options = await utils.getOptions({
-      userBlacklist: ""
+      userBlacklist: "",
     });
     let text = options.userBlacklist;
     if (text) { text += "\n"; }
     text = text + rules.join('\n');
     await utils.setOptions({
-      userBlacklist: text
+      userBlacklist: text,
     });
   }
 
@@ -405,10 +400,16 @@ function initMessageListener() {
       case 'updateOptions': {
         return (async () => {
           const validator = new ContentFarmFilter();
-          args.transformRules = validator.validateTransformRulesText(args.transformRules);
+          args.transformRules = utils.getLines(args.transformRules)
+            .map(rule => validator.parseTransformRuleLine(rule).validate().toString())
+            .join('\n');
           validator.addTransformRules(args.transformRules);
-          args.userBlacklist = validator.validateRulesText(args.userBlacklist, {transform: 'url'});
-          args.userWhitelist = validator.validateRulesText(args.userWhitelist, {transform: 'url'});
+          args.userBlacklist = utils.getLines(args.userBlacklist)
+            .map(rule => validator.transform(validator.parseRuleLine(rule), 'url').validate().toString())
+            .join('\n');
+          args.userWhitelist = utils.getLines(args.userWhitelist)
+            .map(rule => validator.transform(validator.parseRuleLine(rule),'url').validate().toString())
+            .join('\n');
           await utils.setOptions(args);
           return true;
         })();

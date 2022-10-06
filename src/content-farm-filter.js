@@ -7,6 +7,238 @@
 
   'use strict';
 
+  const RE_RULE = (() => {
+    const r = String.raw;
+    const pattern = r`([^\\\s]*(?:\\[^\s][^\\\s]*)*)`;  // 3: pattern; exclude spaces
+    const flags = r`([a-z]*)`;  // 4: flags
+    const regex = r`(/${pattern}/${flags})`;  // 2: regex
+    const ipv6 = r`\[([0-9A-Fa-f:]+)\]`;  // 5: ipv6; lazy matching
+    const ipv4 = r`(\d{1,3}(?:\.\d{1,3}){0,3})`;  // 6: ipv4; lazy matching
+    const label = r`(?:[0-9A-Za-z*](?:[-0-9A-Za-z*]*[0-9A-Za-z*])?)`;
+    const domain = r`(${label}(?:\.${label})*)`;  // 7: domain
+    const invalid = r`(\S*)`;  // 8: invalid
+    const rule = r`(${regex}|${ipv6}|${ipv4}|${domain}|${invalid})`;  // 1: rule
+    const comment = r`(\s+)(.*)`;  // 9: sep, 10: comment
+    const re = r`^${rule}(?:${comment})?$`;
+    return new RegExp(re);
+  })();
+  const RE_HOST_ESCAPER = /[xX*]/g;
+  const MAP_HOST_ESCAPER = {"x": "xx", "X": "xX", "*": "xa"};
+  const FN_HOST_ESCAPER = m => MAP_HOST_ESCAPER[m];
+  const RE_HOST_UNESCAPER = /x[xa]/g;
+  const MAP_HOST_UNESCAPER = {xx: "x", xX: "X", xa: "*"};
+  const FN_HOST_UNESCAPER = m => MAP_HOST_UNESCAPER[m];
+  const RE_SCHEME = /^([A-Za-z][0-9A-za-z.+-]*):/;
+  const RE_ASTERISK_FIXER = /\*+(?=\*)/g;
+  const RE_IPV4 = /^\d{1,3}(?:\.\d{1,3}){3}$/;
+
+  const RE_TRANSFORM_RULE = (() => {
+    const r = String.raw;
+    const pattern = r`([^\\\s]*(?:\\[^\s][^\\\s]*)*)`;  // 3: pattern; exclude spaces
+    const flags = r`([a-z]*)`;  // 4: flags
+    const regex = r`(/${pattern}/${flags})`;  // 2: regex
+    const text = r`(\S*)`;  // 5: text
+    const rule = r`(${regex}|${text})`;  // 1: rule
+    const replacement = r`(\s+)(\S*)`;  // 6: sep, 7: replacement
+    const comment = r`(\s+)(.*)`;  // 8: sep2, 9: comment
+    const re = r`^${rule}(?:${replacement})?(?:${comment})?$`;
+    return new RegExp(re);
+  })();
+  const RE_REGEX_RULE = /^\/(.*)\/([a-z]*)$/;
+  const RE_TRANSFORM_PLACEHOLDER = /\$([$&`']|\d+)/g;
+
+  class Rule {
+    constructor(text) {
+      this.raw = '';
+      this.rule = '';
+      this.sep = '';
+      this.comment = '';
+      this.type = null;
+      this.error = null;
+      this.set(text);
+    }
+
+    /**
+     * Don't validate the input here, for performance e.g. when loading from
+     * the cache. Should run validate additionally when loading from a user
+     * input.
+     */
+    set(text, {ruleOnly = false, error = null} = {}) {
+      this.raw = text;
+      this.type = null;
+      this.error = error;
+
+      const m = RE_RULE.exec(text);
+      if (m[2]) {
+        this.type = 'regex';
+        this.pattern = m[3];
+        this.flags = m[4];
+      } else if (m[5]) {
+        this.type = 'ipv6';
+        this.ip = m[5];
+      } else if (m[6]) {
+        this.type = 'ipv4';
+        this.ip = m[6];
+      } else if (m[7]) {
+        this.type = 'domain';
+        this.domain = m[7];
+      }
+      this.rule = m[1];
+      if (!ruleOnly) {
+        this.sep = m[9] || '';
+        this.comment = m[10] || '';
+      }
+      return this;
+    }
+
+    /**
+     * Canonicalize the representation.
+     *
+     * @param {boolean} [strict=false] - True to empty an unknown rule, false
+     *     to attempt to fix it.
+     */
+    validate(strict = false) {
+      const ruleOld = this.rule;
+      switch (this.type) {
+        case 'regex': {
+          try {
+            new RegExp(this.pattern, this.flags);
+          } catch (ex) {
+            this.set('', {ruleOnly: true, error: ex});
+          }
+          break;
+        }
+        case 'ipv4': {
+          try {
+            let hn = new URL(`http://${this.rule}`).hostname;
+            if (!hn.split('.').every(x => (x = parseInt(x, 10), 0 <= x && x <= 255))) {
+              throw new SyntaxError(`All parts must be 0–255 for IPv4.`);
+            }
+            if (hn !== ruleOld) {
+              this.set(hn, {ruleOnly: true});
+            }
+          } catch (ex) {
+            this.set('', {ruleOnly: true, error: new SyntaxError(`Invalid IPv4: ${ruleOld}`)});
+          }
+          break;
+        }
+        case 'ipv6': {
+          try {
+            let hn = new URL(`http://${this.rule}`).hostname;
+            if (hn !== ruleOld) {
+              this.set(hn, {ruleOnly: true});
+            }
+          } catch (ex) {
+            this.set('', {ruleOnly: true, error: new SyntaxError(`Invalid IPv6: ${ruleOld}`)});
+          }
+          break;
+        }
+        case 'domain':
+        default: {
+          let t = this.rule;
+          if (!t) { break; }
+          try {
+            // escape "*" to make a valid URL
+            t = t.replace(RE_HOST_ESCAPER, FN_HOST_ESCAPER);
+            // add a scheme if none to make a valid URL
+            if (!RE_SCHEME.test(t)) { t = "http://" + t; }
+            // get hostname
+            // force using http to make sure hostname work
+            t = new URL(t);
+            t.protocol = 'http:';
+            t = t.hostname;
+            // unescape "*"
+            t = t.replace(RE_HOST_UNESCAPER, FN_HOST_UNESCAPER);
+            // replace "**..." with "*"
+            t = t.replace(RE_ASTERISK_FIXER, '');
+            // remove "www."
+            if (t.startsWith('www.')) {
+              t = t.slice(4);
+            }
+            // convert IDN to punycode
+            t = punycode.toASCII(t);
+          } catch (ex) {
+            this.set('', {ruleOnly: true, error: ex});
+            break;
+          }
+          if (t !== ruleOld) {
+            if (this.type === 'domain' || !strict) {
+              this.set(t, {ruleOnly: true});
+            } else {
+              this.set('', {ruleOnly: true});
+            }
+          }
+          break;
+        }
+      }
+      return this;
+    }
+
+    toString() {
+      return `${this.rule}${this.sep}${this.comment}`;
+    }
+  }
+
+  class TransformRule {
+    constructor(text) {
+      this.raw = '';
+      this.rule = '';
+      this.sep = '';
+      this.replacement = '';
+      this.sep2 = '';
+      this.comment = '';
+      this.type = null;
+      this.error = null;
+      this.set(text, {ruleOnly:false});
+    }
+
+    set(text, {ruleOnly = true, error = null} = {}) {
+      this.raw = text;
+      this.type = null;
+      this.error = error;
+
+      const m = RE_TRANSFORM_RULE.exec(text);
+      if (m[2]) {
+        this.type = 'regex';
+        this.pattern = m[3];
+        this.flags = m[4];
+      } else if (m[5]) {
+        this.type = 'plain';
+      }
+      this.rule = m[1];
+      if (!ruleOnly) {
+        this.sep = m[6] || '';
+        this.replacement = m[7] || '';
+        this.sep2 = m[8] || '';
+        this.comment = m[9] || '';
+      }
+      return this;
+    }
+
+    validate(strict = false) {
+      const ruleOld = this.rule;
+      switch (this.type) {
+        case 'regex': {
+          try {
+            new RegExp(this.pattern, this.flags);
+          } catch (ex) {
+            this.set('', {ruleOnly: true, error: ex});
+          }
+          break;
+        }
+        case 'plain': {
+          // nothing to validate
+          break;
+        }
+      }
+      return this;
+    }
+
+    toString() {
+      return `${this.rule}${this.sep}${this.replacement}${this.sep2}${this.comment}`;
+    }
+  }
+
   class ContentFarmFilter {
     constructor() {
       this._listUpdated = true;
@@ -20,23 +252,23 @@
         rawRules: [],
         rules: new Map(),
       };
-      this._transformRules = [];
+      this._transformRules = new Map();
     }
 
     addBlockList(blockList, listText, url) {
       if (url) {
         blockList.sources.push(url);
       }
-      utils.getLines(listText).forEach((ruleLine) => {
+      for (const ruleLine of utils.getLines(listText)) {
         const rule = this.parseRuleLine(ruleLine);
         if (url) {
           rule.src = url;
         }
         blockList.rawRules.push(rule);
-        if (rule.rule && !blockList.rules.has(rule.rule)) {
+        if (rule.type !== null && !blockList.rules.has(rule.rule)) {
           blockList.rules.set(rule.rule, rule);
         }
-      });
+      }
       this._listUpdated = true;
     }
 
@@ -59,7 +291,10 @@
       for (let i = 0, I = urls.length; i < I; i++) {
         const url = urls[i];
         const text = texts[i];
-        this.addBlackList(this.validateRulesText(text, {validate: 'strict'}), url);
+        const rulesText = utils.getLines(text)
+          .map(rule => this.parseRuleLine(rule).validate(true).toString())
+          .join('\n');
+        this.addBlackList(rulesText, url);
       }
     }
 
@@ -108,27 +343,22 @@
       return text;
     }
 
-    addTransformRules(...args) {
-      const reRegexRule = /^\/(.*)\/([a-z]*)$/;
-      const reAsteriskReplacer = /\\\*/g;
-      const fn = this.addTransformRules = (rulesText) => {
-        utils.getLines(rulesText).forEach((ruleLine) => {
-          let {pattern, replace} = this.parseTransformRuleLine(ruleLine);
+    addTransformRules(rulesText) {
+      for (const ruleLine of utils.getLines(rulesText)) {
+        const rule = this.parseTransformRuleLine(ruleLine);
+        if (!(rule.rule && rule.replacement)) { continue; }
 
-          if (pattern && replace) {
-            if (reRegexRule.test(pattern)) {
-              // RegExp rule
-              pattern = new RegExp(RegExp.$1, RegExp.$2);
-            } else {
-              // standard rule
-              pattern = new RegExp(utils.escapeRegExp(pattern).replace(reAsteriskReplacer, "[^:/?#]*"));
-            }
+        let regex;
+        if (rule.type === 'regex') {
+          regex = new RegExp(rule.pattern, rule.flags);
+        } else {
+          regex = new RegExp(utils.escapeRegExp(rule.rule).replace(RE_ASTERISK_FIXER, "[^:/?#]*"));
+        }
 
-            this._transformRules.push({pattern, replace});
-          }
-        });
-      };
-      return fn(...args);
+        if (!this._transformRules.has(rule.rule)) {
+          this._transformRules.set(rule.rule, {rule, regex});
+        }
+      }
     }
 
     /**
@@ -150,11 +380,8 @@
      * @returns {Blocker}
      */
     getBlocker(...args) {
-      const reSchemeChecker = /^[A-Za-z][0-9A-za-z.+-]*:\/\//;
-      const reIpv4 = /^\d{1,3}(?:\.\d{1,3}){3}$/;
-
       const hostnameMatchBlockList = (hostname, blocklist) => {
-        if ((hostname.startsWith('[') && hostname.endsWith(']')) || reIpv4.test(hostname)) {
+        if ((hostname.startsWith('[') && hostname.endsWith(']')) || RE_IPV4.test(hostname)) {
           // IP hostname
           for (const rule of blocklist.standardRulesDict.match(hostname)) {
             return rule;
@@ -198,7 +425,7 @@
 
         let urlObj;
         try {
-          urlObj = new URL((reSchemeChecker.test(urlOrHostname) ? '' : 'http://') + urlOrHostname);
+          urlObj = new URL((RE_SCHEME.test(urlOrHostname) ? '' : 'http://') + urlOrHostname);
         } catch (ex) {
           // bad URL
           return result;
@@ -283,230 +510,102 @@
       return fn(...args);
     }
 
-    transformRule(...args) {
-      const reRegexRule = /^\/(.*)\/([a-z]*)$/;
-      const rePlaceHolder = /\$([$&`']|\d+)/g;
-      const fn = this.transformRule = (rule) => {
-        this._transformRules.some((tRule) => {
-          const match = tRule.pattern.exec(rule);
-          if (match) {
-            const leftContext = RegExp.leftContext;
-            const rightContext = RegExp.rightContext;
-            const useRegex = reRegexRule.test(tRule.replace);
-            rule = tRule.replace.replace(rePlaceHolder, (_, m) => {
-              let result;
-              if (m === '$') {
-                return '$';
-              } else if (m === '&') {
-                result = match[0];
-              } else if (m === '`') {
-                result = leftContext;
-              } else if (m === "'") {
-                result = rightContext;
-              } else {
-                let matchIdx = m, matchIdxInt, plainNum = '';
-                while (matchIdx.length) {
-                  matchIdxInt = parseInt(matchIdx, 10);
-                  if (matchIdxInt < match.length && matchIdxInt > 0) {
-                    result = match[matchIdxInt] + plainNum;
-                    break;
-                  }
-                  plainNum = matchIdx.slice(-1) + plainNum;
-                  matchIdx = matchIdx.slice(0, -1);
-                }
-                if (typeof result === 'undefined') {
-                  return '$' + plainNum;
-                }
-              }
-              if (useRegex) {
-                result = utils.escapeRegExp(result, true);
-              }
-              return result;
-            });
-            return true;
+    parseRuleLine(ruleLine) {
+      return new Rule(ruleLine);
+    }
+
+    parseTransformRuleLine(ruleLine) {
+      return new TransformRule(ruleLine);
+    }
+
+    /**
+     * Transform the rule.
+     * @param {Rule} rule - the rule to transform
+     * @param {string} mode - the way to transform
+     *     - "standard": transform only if not regex.
+     *     - "url": transform only if source is a URL.
+     *     - *: transform anyway.
+     */
+    transform(rule, mode = 'standard') {
+      switch (mode) {
+        case 'standard': {
+          if (rule.type !== 'regex') {
+            this._transform(rule);
           }
-          return false;
+          break;
+        }
+        case 'url': {
+          if (rule.type === null && RE_SCHEME.test(rule.rule)) {
+            this._transform(rule);
+          }
+          break;
+        }
+        default: {
+          this._transform(rule);
+          break;
+        }
+      }
+      return rule;
+    }
+
+    _transform(rule) {
+      if (!rule.rule) {
+        return;
+      }
+      for (const [, tRule] of this._transformRules) {
+        tRule.regex.lastIndex = 0;
+        const match = tRule.regex.exec(rule.rule);
+        if (!match) { continue; }
+        const leftContext = RegExp.leftContext;
+        const rightContext = RegExp.rightContext;
+        const useRegex = RE_REGEX_RULE.test(tRule.rule.replacement);
+        const ruleText = tRule.rule.replacement.replace(RE_TRANSFORM_PLACEHOLDER, (_, m) => {
+          let result;
+          if (m === '$') {
+            return '$';
+          } else if (m === '&') {
+            result = match[0];
+          } else if (m === '`') {
+            result = leftContext;
+          } else if (m === "'") {
+            result = rightContext;
+          } else {
+            let matchIdx = m, matchIdxInt, plainNum = '';
+            while (matchIdx.length) {
+              matchIdxInt = parseInt(matchIdx, 10);
+              if (matchIdxInt < match.length && matchIdxInt > 0) {
+                result = match[matchIdxInt] + plainNum;
+                break;
+              }
+              plainNum = matchIdx.slice(-1) + plainNum;
+              matchIdx = matchIdx.slice(0, -1);
+            }
+            if (typeof result === 'undefined') {
+              return '$' + plainNum;
+            }
+          }
+          if (useRegex) {
+            result = utils.escapeRegExp(result, true);
+          }
+          return result;
         });
-        return rule;
-      };
-      return fn(...args);
-    }
-
-    validateRule(...args) {
-      const reRegexRule = /^\/(.*)\/([a-z]*)$/;
-      const reHostEscaper = /[xX*]/g;
-      const reHostUnescaper = /x[xa]/g;
-      const mapHostEscaper = {"x": "xx", "X": "xX", "*": "xa"};
-      const mapHostUnescaper = {xx: "x", xX: "X", xa: "*"};
-      const fnHostEscaper = m => mapHostEscaper[m];
-      const fnHostUnescaper = m => mapHostUnescaper[m];
-      const reSchemeChecker = /^[A-Za-z][0-9A-za-z.+-]*:/;
-      const reWwwRemover = /^www\./;
-      const reAsteriskFixer = /\*+(?=\*)/g;
-      const fn = this.validateRule = (rule) => {
-        if (!rule) { return ""; }
-
-        if (reRegexRule.test(rule)) {
-          // RegExp rule
-          try {
-            // test if the RegExp is valid
-            new RegExp(RegExp.$1, RegExp.$2);
-            return rule;
-          } catch (ex) {
-            // invalid RegExp syntax
-            console.error(ex);
-          }
-        } else {
-          // standard rule
-          try {
-            // escape "*" to make a valid URL
-            let t = rule.replace(reHostEscaper, fnHostEscaper);
-            // add a scheme if none to make a valid URL
-            if (!reSchemeChecker.test(t)) { t = "http://" + t; }
-            // get hostname
-            // force using http to make sure hostname work
-            t = new URL(t);
-            t.protocol = 'https:';
-            t = t.hostname;
-            // unescape "*"
-            t = t.replace(reHostUnescaper, fnHostUnescaper);
-            // replace "**..." with "*"
-            t = t.replace(reAsteriskFixer, '');
-            // remove "www."
-            t = t.replace(reWwwRemover, "");
-            // convert IDN to punycode
-            t = punycode.toASCII(t);
-            return t;
-          } catch (ex) {
-            // invalid URL hostname
-            console.error(ex);
-          }
-        }
-        return "";
-      };
-      return fn(...args);
-    }
-
-    validateRulesText(rulesText, {validate = 'standard', transform, asString = true} = {}) {
-      const parseOptions = {validate, transform, asString};
-      return utils
-        .getLines(rulesText)
-        .map(ruleLine => this.parseRuleLine(ruleLine, parseOptions))
-        .join("\n");
-    }
-
-    validateTransformRulesText(rulesText, {validate = 'standard', asString = true} = {}) {
-      const parseOptions = {validate, asString};
-      return utils
-        .getLines(rulesText)
-        .map(ruleLine => this.parseTransformRuleLine(ruleLine, parseOptions))
-        .join("\n");
-    }
-
-    /**
-     * @typedef {Object} Rule
-     * @property {string} rule
-     * @property {string} sep
-     * @property {string} comment
-     * @property {string} [src] - Source URL of the rule.
-     */
-
-    /**
-     * @param {Object} options
-     * @param {string} options.validate
-     * @param {string} options.transform
-     * @param {boolean} options.asString
-     * @returns {(Rule|string)}
-     */
-    parseRuleLine(...args) {
-      const reSpaceMatcher = /^(\S*)(\s*)(.*)$/;
-      const reSchemeChecker = /^[A-Za-z][0-9A-za-z.+-]*:/;
-      const reRegexRule = /^\/(.*)\/([a-z]*)$/;
-      const fn = this.parseRuleLine = (ruleLine, options = {}) => {
-        let [, rule, sep, comment] = (ruleLine || "").match(reSpaceMatcher);
-
-        switch (options.transform) {
-          case 'standard':
-            if (!reRegexRule.test(rule)) {
-              rule = this.transformRule(rule);
-            }
-            break;
-          case 'url':
-            if (!reRegexRule.test(rule)) {
-              if (reSchemeChecker.test(rule)) {
-                rule = this.transformRule(rule);
-              }
-            }
-            break;
-          default:
-            rule = this.transformRule(rule);
-            break;
-        }
-
-        switch (options.validate) {
-          case 'standard':
-            rule = this.validateRule(rule);
-            break;
-          case 'strict':
-            const rule0 = rule;
-            rule = this.validateRule(rule);
-            if (rule !== rule0) { rule = ''; }
-            break;
-        }
-
-        if (options.asString) {
-          return [rule, sep, comment].join("");
-        }
-
-        return {rule, sep, comment};
-      };
-      return fn(...args);
-    }
-
-    /**
-     * @param {Object} options
-     * @param {string} options.validate
-     * @param {boolean} options.asString
-     */
-    parseTransformRuleLine(...args) {
-      const reSpaceMatcher = /^(\S*)(\s*)(\S*)(\s*)(.*)$/;
-      const fn = this.parseTransformRuleLine = (ruleLine, options = {}) => {
-        let [, pattern, sep, replace, sep2, comment] = (ruleLine || "").match(reSpaceMatcher);
-
-        switch (options.validate) {
-          case 'standard':
-            pattern = this.validateRule(pattern);
-            break;
-          case 'strict':
-            const pattern0 = pattern;
-            pattern = this.validateRule(pattern);
-            if (pattern !== pattern0) { pattern = ''; }
-            break;
-        }
-
-        if (options.asString) {
-          return [pattern, sep, replace, sep2, comment].join("");
-        }
-
-        return {pattern, sep, replace, sep2, comment};
-      };
-      return fn(...args);
+        rule.set(ruleText);
+        return true;
+      }
+      return false;
     }
 
     makeCachedRules(...args) {
-      const reRegexRule = /^\/(.*)\/([a-z]*)$/;
-
       const cacheRules = (blockList) => {
         const standardRulesDict = new Trie();
         const regexRulesDict = new Map();
         for (const [, rule] of blockList.rules) {
-          if (reRegexRule.test(rule.rule)) {
+          if (rule.type === 'regex') {
             // RegExp rule
-            regexRulesDict.set(new RegExp(RegExp.$1, RegExp.$2), rule);
+            regexRulesDict.set(new RegExp(rule.pattern, rule.flags), rule);
           } else {
-            // standard rule
-            let rewrittenRule = rule.rule;
-            standardRulesDict.add(rewrittenRule, rule);
+            // domain, ipv4, ipv6 rule
+            standardRulesDict.add(rule.rule, rule);
           }
         }
         blockList.standardRulesDict = standardRulesDict;
