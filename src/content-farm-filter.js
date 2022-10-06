@@ -156,7 +156,10 @@
       const hostnameMatchBlockList = (hostname, blocklist) => {
         if ((hostname.startsWith('[') && hostname.endsWith(']')) || reIpv4.test(hostname)) {
           // IP hostname
-          return blocklist.standardRulesDict.match(hostname);
+          for (const rule of blocklist.standardRulesDict.match(hostname)) {
+            return rule;
+          }
+          return null;
         }
 
         // domain name hostname
@@ -167,8 +170,7 @@
         let domain = hostname;
         let pos;
         while (true) {
-          const rule = blocklist.standardRulesDict.match(domain);
-          if (rule) {
+          for (const rule of blocklist.standardRulesDict.match(domain)) {
             return rule;
           }
           pos = domain.indexOf('.');
@@ -590,7 +592,7 @@
       next.set(value, true);
     }
 
-    match(str) {
+    *match(str) {
       const parts = Array.from(str);
       parts.push(TRIE_TOKEN_EOT);
       const queue = [[this._trie, 0]];
@@ -603,7 +605,7 @@
         switch (trie.token) {
           case TRIE_TOKEN_EOT: {
             for (const [rule, _] of trie) {
-              return rule; // return first match
+              yield rule;
             }
             break;
           }
@@ -630,8 +632,6 @@
           queue.push(subqueue.pop());
         }
       }
-
-      return null;
     }
   }
 
