@@ -593,11 +593,7 @@
     match(str) {
       const parts = Array.from(str);
       parts.push(TRIE_TOKEN_EOT);
-      return this._match(parts, this._trie, 0);
-    }
-
-    _match(parts, trie, i) {
-      const queue = [[trie, i]];
+      const queue = [[this._trie, 0]];
       while (queue.length) {
         const [trie, i] = queue.pop();
         const part = parts[i];
@@ -611,30 +607,18 @@
             }
             break;
           }
-          case TRIE_TOKEN_ANYCHARS: {
-            next = trie.get(part);
-            if (typeof next !== 'undefined') {
-              subqueue.push([next, i + 1]);
-            }
-
-            if (part !== TRIE_TOKEN_EOT) {
-              subqueue.push([trie, i + 1]);
-            }
-
-            next = trie.get(TRIE_TOKEN_ANYCHARS);
-            if (typeof next !== 'undefined') {
-              subqueue.push([next, i]);
-            }
-            break;
-          }
           default: {
-            next = trie.get(part);
-            if (typeof next !== 'undefined') {
+            if (next = trie.get(part)) {
               subqueue.push([next, i + 1]);
             }
 
-            next = trie.get(TRIE_TOKEN_ANYCHARS);
-            if (typeof next !== 'undefined') {
+            if (trie.token === TRIE_TOKEN_ANYCHARS) {
+              if (part !== TRIE_TOKEN_EOT) {
+                subqueue.push([trie, i + 1]);
+              }
+            }
+
+            if (next = trie.get(TRIE_TOKEN_ANYCHARS)) {
               subqueue.push([next, i]);
             }
             break;
