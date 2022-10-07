@@ -2,7 +2,7 @@
   # Description: Filter for cloner sites that are mostly free of copyright issue since the source site
   #     is copyleft or copyfree, but provide only trivial layout change or poor-quality bot translation
   #     and are thus spam-like.
-  # Last modified: 2022-10-04T15:16:08+00:00
+  # Last modified: 2022-10-07T19:46:57+00:00
   # Homepage: https://danny0838.github.io/content-farm-terminator/
   # Licence: MIT License
   # Source: https://danny0838.github.io/content-farm-terminator/files/blocklist/bad-cloners.txt
@@ -56,8 +56,6 @@ wenyanet.com #!aggreg-ublGhT
 711web.com #!aggreg-ublSoT
 9ishenzhen.com #!aggreg-ublSoT
 ajaxhispano.com #!aggreg-ublSoT
-amuddycup.com #!aggreg-ublSoT
-answacode.com #!aggreg-ublSoT
 answer-id.com #!aggreg-ublSoT
 answerlib.com #!aggreg-ublSoT
 anycodings.com #!aggreg-ublSoT
@@ -69,14 +67,9 @@ askcodez.com #!aggreg-ublSoT
 athabasca-foto.com #!aggreg-ublSoT
 binarydevelop.com #!aggreg-ublSoT
 cainiaojiaocheng.com #!aggreg-ublSoT
-catwolf.org #!aggreg-ublSoT
-cfadnc.org #!aggreg-ublSoT
 cndgn.com #!aggreg-ublSoT
 code-examples.net #!aggreg-ublSoT
-code.i-harness.com #!aggreg-ublSoT
 codebaoku.com #!aggreg-ublSoT
-codefaq.info #!aggreg-ublSoT
-codefaq.ru #!aggreg-ublSoT
 codeflow.site #!aggreg-ublSoT
 codegrepr.com #!aggreg-ublSoT
 codeguides.site #!aggreg-ublSoT
@@ -84,36 +77,25 @@ codenong.com #!aggreg-ublSoT
 coder-solution-es.com #!aggreg-ublSoT
 coder.gay #!aggreg-ublSoT
 coder.work #!aggreg-ublSoT
-coderedirect.com #!aggreg-ublSoT
 coderoad.ru #!aggreg-ublSoT
 codeutility.org #!aggreg-ublSoT
-culinarydegree.info #!aggreg-ublSoT
-dailydevsblog.com #!aggreg-ublSoT
 daplus.net #!aggreg-ublSoT
 de-vraag.com #!aggreg-ublSoT
 debugcn.com #!aggreg-ublSoT
 debugko.com #!aggreg-ublSoT
 desenv-web-rp.com #!aggreg-ublSoT
-devdreamz.com #!aggreg-ublSoT
 developreference.com #!aggreg-ublSoT
 devfixes.com #!aggreg-ublSoT
 digitrain.ru #!aggreg-ublSoT
-domainelespailles.net #!aggreg-ublSoT
 doraprojects.net #!aggreg-ublSoT
 dovov.com #!aggreg-ublSoT
 dtuto.com #!aggreg-ublSoT
-ec-europe.org #!aggreg-ublSoT
-ecnf2016.org #!aggreg-ublSoT
-edupro.id #!aggreg-ublSoT
 edureka.co #!aggreg-ublSoT
-elfishgene.com #!aggreg-ublSoT
 errorsfixing.com #!aggreg-ublSoT
 etsoutdoors.com #!aggreg-ublSoT
 exchangetuts.com #!aggreg-ublSoT
-faithcov.org #!aggreg-ublSoT
 faqcode4u.com #!aggreg-ublSoT
 faqcodes.com #!aggreg-ublSoT
-fitforlearning.org #!aggreg-ublSoT
 fixes.pub #!aggreg-ublSoT
 fluffyfables.com #!aggreg-ublSoT
 flutterhq.com #!aggreg-ublSoT
@@ -121,7 +103,6 @@ fmihm.org #!aggreg-ublSoT
 fullstackuser.com #!aggreg-ublSoT
 generacodice.com #!aggreg-ublSoT
 ghcc.net #!aggreg-ublSoT
-gupgallery.com #!aggreg-ublSoT
 intellipaat.com #!aggreg-ublSoT
 iquestion.pro #!aggreg-ublSoT
 isolution.pro #!aggreg-ublSoT
@@ -134,12 +115,10 @@ it-swarm.jp.net #!aggreg-ublSoT
 itecnote.com #!aggreg-ublSoT
 itectec.com #!aggreg-ublSoT
 iteramos.com #!aggreg-ublSoT
-jablogs.com #!aggreg-ublSoT
 javaer101.com #!aggreg-ublSoT
 javafixing.com #!aggreg-ublSoT
 jike.in #!aggreg-ublSoT
 jonic.cn #!aggreg-ublSoT
-jscodetips.com #!aggreg-ublSoT
 knews.vip #!aggreg-ublSoT
 kotaeta.com #!aggreg-ublSoT
 linuxfixes.com #!aggreg-ublSoT
@@ -150,26 +129,18 @@ microeducate.tech #!aggreg-ublSoT
 mlink.in #!aggreg-ublSoT
 narkive.jp #!aggreg-ublSoT
 newbedev.com #!aggreg-ublSoT
-noblenaz.org #!aggreg-ublSoT
 ntcdoon.org #!aggreg-ublSoT
 nuomiphp.com #!aggreg-ublSoT
-ogeek.cn #!aggreg-ublSoT
 oomake.com #!aggreg-ublSoT
-ostack.cn #!aggreg-ublSoT
-ourladylakes.org #!aggreg-ublSoT
 overcoder.net #!aggreg-ublSoT
 overstack.in #!aggreg-ublSoT
 pakostnici.com #!aggreg-ublSoT
-panaindustrial.com #!aggreg-ublSoT
-pcbconline.org #!aggreg-ublSoT
 peaku.co #!aggreg-ublSoT
 progi.pro #!aggreg-ublSoT
 prograide.com #!aggreg-ublSoT
 programmierfrage.com #!aggreg-ublSoT
-projectbackpack.org #!aggreg-ublSoT
 qa-stack.pl #!aggreg-ublSoT
 qa.icopy.site #!aggreg-ublSoT
-qapicks.com #!aggreg-ublSoT
 qastack.co.in #!aggreg-ublSoT
 qastack.com.br #!aggreg-ublSoT
 qastack.com.de #!aggreg-ublSoT
@@ -187,32 +158,26 @@ qastack.ru #!aggreg-ublSoT
 qastack.vn #!aggreg-ublSoT
 qatop.pythonwood.com #!aggreg-ublSoT
 qi-u.com #!aggreg-ublSoT
-quabr.com #!aggreg-ublSoT
 querythreads.com #!aggreg-ublSoT
 question-it.com #!aggreg-ublSoT
 questu.ru #!aggreg-ublSoT
 routinepanic.com #!aggreg-ublSoT
-sch22.org #!aggreg-ublSoT
 semicolonworld.com #!aggreg-ublSoT
 serveanswer.com #!aggreg-ublSoT
 shenghuobao.net #!aggreg-ublSoT
 shenzhenjia.cn #!aggreg-ublSoT
 shenzhenjia.net #!aggreg-ublSoT
-sierrasummit2005.org #!aggreg-ublSoT
-siwib.org #!aggreg-ublSoT
 so.muouseo.com #!aggreg-ublSoT
 softwareuser.asklobster.com #!aggreg-ublSoT
 solveforum.com #!aggreg-ublSoT
 splunktool.com #!aggreg-ublSoT
 sqlite.in #!aggreg-ublSoT
-stackfinder.jp.net #!aggreg-ublSoT
 stackfinder.ru #!aggreg-ublSoT
 stackguides.com #!aggreg-ublSoT
 stackoom.com #!aggreg-ublSoT
 stackovergo.com #!aggreg-ublSoT
 stackubuntu.com #!aggreg-ublSoT
 string.quest #!aggreg-ublSoT
-sunflowercreations.org #!aggreg-ublSoT
 super-unix.com #!aggreg-ublSoT
 syntaxfix.com #!aggreg-ublSoT
 sysadminde.com #!aggreg-ublSoT
@@ -220,16 +185,12 @@ tagsqa.com #!aggreg-ublSoT
 techhelpnotes.com #!aggreg-ublSoT
 techinplanet.com #!aggreg-ublSoT
 thecodeteacher.com #!aggreg-ublSoT
-theshuggahpies.com #!aggreg-ublSoT
-tipsfordev.com #!aggreg-ublSoT
-titanwolf.org #!aggreg-ublSoT
 tousu.in #!aggreg-ublSoT
 try2explore.com #!aggreg-ublSoT
 tutorialmore.com #!aggreg-ublSoT
 ubuntu.buildwebhost.com #!aggreg-ublSoT
 ubuntuaa.com #!aggreg-ublSoT
 ubuntubin.com #!aggreg-ublSoT
-uebu-kaihatsu.jp.net #!aggreg-ublSoT
 vigge.cn #!aggreg-ublSoT
 vigge.net #!aggreg-ublSoT
 vigges.net #!aggreg-ublSoT
@@ -243,17 +204,14 @@ web-dev-qa-db-pt.com #!aggreg-ublSoT
 web-dev-qa.com #!aggreg-ublSoT
 webdevask.com #!aggreg-ublSoT
 webdevdesigner.com #!aggreg-ublSoT
-webdevqa.jp.net #!aggreg-ublSoT
 wp-qa.com #!aggreg-ublSoT
 wujigu.com #!aggreg-ublSoT
 xsprogram.com #!aggreg-ublSoT
 xstack.ru #!aggreg-ublSoT
 xstack.us #!aggreg-ublSoT
 yaoply.com #!aggreg-ublSoT
-younggeeks.in #!aggreg-ublSoT
 zaizhele.cn #!aggreg-ublSoT
 zaizhele.net #!aggreg-ublSoT
-zsharp.org #!aggreg-ublSoT
   #!aggreg-wdmpaMtSo: https://raw.githubusercontent.com/wdmpa/content-farm-list/main/domains/machine-translated/stackoverflow.txt (https://github.com/wdmpa/content-farm-list)
 366service.com #!aggreg-wdmpaMtSo
 androidcookie.com #!aggreg-wdmpaMtSo
