@@ -350,16 +350,16 @@ async function updateLinkMarker(elem) {
       if (!marker) {
         marker = elem.ownerDocument.createElement('img');
         marker.src = browser.runtime.getURL('img/content-farm-marker.svg');
-        marker.style = 'display: inline-block !important;' + 
-          'visibility: visible !important;' + 
-          'position: relative !important;' + 
-          'float: none !important;' + 
-          'margin: 0 !important;' + 
-          'outline: 0 !important;' + 
-          'border: 0 !important;' + 
-          'padding: 0 !important;' + 
-          'width: 1em !important; min-width: 12px !important; max-width: none !important;' + 
-          'height: 1em !important; min-height: 12px !important; max-height: none !important;' + 
+        marker.style = 'display: inline-block !important;' +
+          'visibility: visible !important;' +
+          'position: relative !important;' +
+          'float: none !important;' +
+          'margin: 0 !important;' +
+          'outline: 0 !important;' +
+          'border: 0 !important;' +
+          'padding: 0 !important;' +
+          'width: 1em !important; min-width: 12px !important; max-width: none !important;' +
+          'height: 1em !important; min-height: 12px !important; max-height: none !important;' +
           'vertical-align: text-top !important;';
         marker.title = marker.alt = utils.lang('markTitle');
         marker.setAttribute("data-content-farm-terminator-marker", 1);
@@ -395,7 +395,7 @@ async function updateLinkMarker(elem) {
           }
         }
 
-        // insert as the first anchor child 
+        // insert as the first anchor child
         elem.insertBefore(marker, elem.firstChild);
       }
     } else {

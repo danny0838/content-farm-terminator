@@ -201,7 +201,7 @@
           // bad URL
           return result;
         }
-   
+
         // URL.hostname is not punycoded in some old browsers (e.g. Firefox 52)
         const h = punycode.toASCII(urlObj.hostname);
 

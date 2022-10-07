@@ -235,13 +235,13 @@
       const u = urlObj.username;
       const p = urlObj.password;
       const t = urlObj.port;
-      return urlObj.protocol + '//' + 
-          (u ? u + (p ? ':' + p : '') + '@' : '') + 
+      return urlObj.protocol + '//' +
+          (u ? u + (p ? ':' + p : '') + '@' : '') +
 
           // URL.hostname is not punycoded in some old browsers (e.g. Firefox 52)
-          punycode.toASCII(urlObj.hostname) + 
+          punycode.toASCII(urlObj.hostname) +
 
-          (t ? ':' + t : '') + 
+          (t ? ':' + t : '') +
           urlObj.pathname + urlObj.search + urlObj.hash;
     },
 
