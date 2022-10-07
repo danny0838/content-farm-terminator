@@ -567,15 +567,26 @@
     ['*', TRIE_TOKEN_ANYCHARS],
   ]);
 
+  /**
+   * Prefix trie that supports wildcards.
+   */
   class Trie {
     constructor() {
       this._trie = new Map();
     }
 
-    add(key, value = key) {
+    /**
+     * Add a pattern for matching.
+     *
+     * @param {string} pattern - The pattern for matching which works like a
+     *      dictionary key. Replace any "**" with "*" as it may cause
+     *      duplicated matches a performance issue.
+     * @param {*} [value=pattern] - The value when the pattern is matched.
+     */
+    add(pattern, value = pattern) {
       let trie = this._trie;
-      for (const s of Array.from(key)) {
-        const token = TRIE_TOKEN_MAP.get(s) || s;
+      for (const part of Array.from(pattern)) {
+        const token = TRIE_TOKEN_MAP.get(part) || part;
         let next = trie.get(token);
         if (!next) {
           next = new Map();
@@ -594,9 +605,14 @@
       next.set(value, true);
     }
 
+    /**
+     * Match a string against the provided patterns.
+     *
+     * @param {string} str - The string for matching.
+     * @yields {*} The value of each matched pattern.
+     */
     *match(str) {
       const parts = Array.from(str);
-      parts.push(TRIE_TOKEN_EOT);
       const queue = [[this._trie, 0]];
       while (queue.length) {
         const [trie, i] = queue.pop();
@@ -604,32 +620,34 @@
         const subqueue = [];
         let next;
 
-        switch (trie.token) {
-          case TRIE_TOKEN_EOT: {
-            for (const [rule, _] of trie) {
-              yield rule;
-            }
-            break;
+        if (i < parts.length) {
+          if (next = trie.get(part)) {
+            subqueue.push([next, i + 1]);
           }
-          default: {
-            if (next = trie.get(part)) {
-              subqueue.push([next, i + 1]);
-            }
 
-            if (next = trie.get(TRIE_TOKEN_ANYCHAR)) {
-              subqueue.push([next, i + 1]);
-            }
+          if (next = trie.get(TRIE_TOKEN_ANYCHAR)) {
+            subqueue.push([next, i + 1]);
+          }
 
-            if (trie.token === TRIE_TOKEN_ANYCHARS) {
-              if (part !== TRIE_TOKEN_EOT) {
-                subqueue.push([trie, i + 1]);
-              }
-            }
+          if (trie.token === TRIE_TOKEN_ANYCHARS) {
+            subqueue.push([trie, i + 1]);
+          }
 
-            if (next = trie.get(TRIE_TOKEN_ANYCHARS)) {
-              subqueue.push([next, i]);
+          if (next = trie.get(TRIE_TOKEN_ANYCHARS)) {
+            // this should not happen when trie.token === TRIE_TOKEN_ANYCHARS
+            subqueue.push([next, i]);
+          }
+        } else {
+          // yield values if ending trie matches
+          if (next = trie.get(TRIE_TOKEN_EOT)) {
+            for (const [value, _] of next) {
+              yield value;
             }
-            break;
+          }
+
+          // check "*" as it could take no length
+          if (next = trie.get(TRIE_TOKEN_ANYCHARS)) {
+            subqueue.push([next, i]);
           }
         }
 
