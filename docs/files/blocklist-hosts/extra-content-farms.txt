@@ -1,6 +1,6 @@
 # Title: Extra Content Farm Filters
 # Description: Extra filter for content-farm-like sites, mostly aggregated from other sources.
-# Last modified: 2022-10-07T19:46:57+00:00
+# Last modified: 2022-10-07T21:48:00+00:00
 # Homepage: https://danny0838.github.io/content-farm-terminator/
 # Licence: MIT License
 # Source: https://danny0838.github.io/content-farm-terminator/files/blocklist-hosts/extra-content-farms.txt
@@ -549,6 +549,7 @@
 127.0.0.1 luping.net.cn  #!aggreg-diveng
 127.0.0.1 luriestudio.com  #!aggreg-diveng
 127.0.0.1 m.hljbwjf.com  #!aggreg-diveng
+127.0.0.1 m.toutiao.com  #!aggreg-diveng
 127.0.0.1 machbbs.com  #!aggreg-diveng
 127.0.0.1 maggie-siff.com  #!aggreg-diveng
 127.0.0.1 mairuan.cn  #!aggreg-diveng
@@ -73134,6 +73135,7 @@
 127.0.0.1 simpletense.com  #!aggreg-nonpnt
 127.0.0.1 simpletense.org  #!aggreg-nonpnt
 127.0.0.1 sincereschool.com  #!aggreg-nonpnt
+127.0.0.1 sites.google.com  #!aggreg-nonpnt
 127.0.0.1 sjzjgbj.com  #!aggreg-nonpnt
 127.0.0.1 sjzjyyx.com  #!aggreg-nonpnt
 127.0.0.1 slickdeals.net  #!aggreg-nonpnt
@@ -73278,7 +73280,6 @@
 127.0.0.1 wolonge.com  #!aggreg-nonpnt
 127.0.0.1 woniuwl.com  #!aggreg-nonpnt
 127.0.0.1 wordlm.com  #!aggreg-nonpnt
-127.0.0.1 wordpress.com  #!aggreg-nonpnt
 127.0.0.1 workit.cc  #!aggreg-nonpnt
 127.0.0.1 wpsousuo.cn  #!aggreg-nonpnt
 127.0.0.1 wujigu.com  #!aggreg-nonpnt
@@ -73566,7 +73567,6 @@
 127.0.0.1 geyinban.net  #!aggreg-scyrte
 127.0.0.1 ggyy8.com  #!aggreg-scyrte
 127.0.0.1 glnav.com  #!aggreg-scyrte
-127.0.0.1 google.com  #!aggreg-scyrte
 127.0.0.1 goojie.eu  #!aggreg-scyrte
 127.0.0.1 guansheng.cc  #!aggreg-scyrte
 127.0.0.1 guchw.com  #!aggreg-scyrte

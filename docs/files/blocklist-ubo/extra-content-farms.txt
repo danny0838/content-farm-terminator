@@ -1,7 +1,7 @@
 ! Title: Extra Content Farm Filters
 ! Description: Extra filter for content-farm-like sites, mostly aggregated from other sources.
 ! Expires: 3 days
-! Last modified: 2022-10-07T19:46:57+00:00
+! Last modified: 2022-10-07T21:48:00+00:00
 ! Homepage: https://danny0838.github.io/content-farm-terminator/
 ! Licence: MIT License
 ! Source: https://danny0838.github.io/content-farm-terminator/files/blocklist-ubo/extra-content-farms.txt
@@ -552,6 +552,7 @@
 ||luping.net.cn^  #!aggreg-diveng
 ||luriestudio.com^  #!aggreg-diveng
 ||m.hljbwjf.com^  #!aggreg-diveng
+||m.toutiao.com^  #!aggreg-diveng
 ||machbbs.com^  #!aggreg-diveng
 ||maggie-siff.com^  #!aggreg-diveng
 ||mairuan.cn^  #!aggreg-diveng
@@ -73210,6 +73211,7 @@
 ||simpletense.com^  #!aggreg-nonpnt
 ||simpletense.org^  #!aggreg-nonpnt
 ||sincereschool.com^  #!aggreg-nonpnt
+||sites.google.com^  #!aggreg-nonpnt
 ||sjzjgbj.com^  #!aggreg-nonpnt
 ||sjzjyyx.com^  #!aggreg-nonpnt
 ||slickdeals.net^  #!aggreg-nonpnt
@@ -73354,7 +73356,6 @@
 ||wolonge.com^  #!aggreg-nonpnt
 ||woniuwl.com^  #!aggreg-nonpnt
 ||wordlm.com^  #!aggreg-nonpnt
-||wordpress.com^  #!aggreg-nonpnt
 ||workit.cc^  #!aggreg-nonpnt
 ||wpsousuo.cn^  #!aggreg-nonpnt
 ||wujigu.com^  #!aggreg-nonpnt
@@ -73643,7 +73644,6 @@
 ||geyinban.net^  #!aggreg-scyrte
 ||ggyy8.com^  #!aggreg-scyrte
 ||glnav.com^  #!aggreg-scyrte
-||google.com^  #!aggreg-scyrte
 ||goojie.eu^  #!aggreg-scyrte
 ||guansheng.cc^  #!aggreg-scyrte
 ||guchw.com^  #!aggreg-scyrte

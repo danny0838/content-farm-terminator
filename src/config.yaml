@@ -14,7 +14,7 @@ auto_tasks:
           - src/blocklist/not-content-farms.txt
         auto_fix: true
     - action: uniquify
-      kwargs:
+      kwargs: &exclude_non_content_farms
         files:
           - src/blocklist/not-content-farms.txt
           - src/blocklist/content-farms.txt
@@ -24,6 +24,7 @@ auto_tasks:
         auto_fix: true
     - action: uniquify
       kwargs:
+        <<: *exclude_non_content_farms
         files:
           - src/blocklist/not-content-farms.txt
           - src/blocklist/content-farms.txt
@@ -31,26 +32,18 @@ auto_tasks:
         auto_fix_excludes:
           - src/blocklist/not-content-farms.txt
           - src/blocklist/content-farms.txt
-        cross_files: true
-        auto_fix: true
     - action: uniquify
       kwargs:
+        <<: *exclude_non_content_farms
         files:
           - src/blocklist/not-content-farms.txt
           - src/blocklist/extra-content-farms.txt
-        auto_fix_excludes:
-          - src/blocklist/not-content-farms.txt
-        cross_files: true
-        auto_fix: true
     - action: uniquify
       kwargs:
+        <<: *exclude_non_content_farms
         files:
           - src/blocklist/not-content-farms.txt
           - src/blocklist/bad-cloners.txt
-        auto_fix_excludes:
-          - src/blocklist/not-content-farms.txt
-        cross_files: true
-        auto_fix: true
     - action: build
 
   # lint all general blacklists
@@ -87,7 +80,7 @@ auto_tasks:
         cross_files: true
         auto_fix: true
 
-  # aggregate sources and tidy and sort them
+  # aggregate sources, tidy, and exclude certain exact entries
   aggregate: &tasks_aggregate
     - action: aggregate
     - action: lint
@@ -96,6 +89,24 @@ auto_tasks:
           - src/aggregations/
         auto_fix: true
         sort_rules: true
+    - action: uniquify
+      kwargs:
+        <<: *exclude_non_content_farms
+        files:
+          - src/blocklist/not-content-farms.txt
+          - src/aggregations/content-farms/
+    - action: uniquify
+      kwargs:
+        <<: *exclude_non_content_farms
+        files:
+          - src/blocklist/not-content-farms.txt
+          - src/aggregations/extra-content-farms/
+    - action: uniquify
+      kwargs:
+        <<: *exclude_non_content_farms
+        files:
+          - src/blocklist/not-content-farms.txt
+          - src/aggregations/bad-cloners/
 
   # shortcut
   a: *tasks_aggregate
@@ -181,7 +192,6 @@ build:
   - source:
       - src/blocklist/content-farms.txt
       - src/aggregations/content-farms/
-    exclude: src/blocklist/not-content-farms.txt
     publish: docs/files/blocklist/content-farms.txt
     data:
       headers: |
@@ -223,7 +233,6 @@ build:
           value: /https?://(?:{value})$/
 
   - source: src/blocklist/nearly-content-farms.txt
-    exclude: src/blocklist/not-content-farms.txt
     publish: docs/files/blocklist/nearly-content-farms.txt
     data:
       headers: |
@@ -238,7 +247,6 @@ build:
   - source:
       - src/blocklist/extra-content-farms.txt
       - src/aggregations/extra-content-farms/
-    exclude: src/blocklist/not-content-farms.txt
     publish: docs/files/blocklist/extra-content-farms.txt
     data:
       headers: |
@@ -303,7 +311,6 @@ build:
   - source:
       - src/blocklist/bad-cloners.txt
       - src/aggregations/bad-cloners/
-    exclude: src/blocklist/not-content-farms.txt
     publish: docs/files/blocklist/bad-cloners.txt
     data:
       headers: |
@@ -347,7 +354,6 @@ build:
   - source:
       - src/blocklist/content-farms.txt
       - src/aggregations/content-farms/
-    exclude: src/blocklist/not-content-farms.txt
     publish: docs/files/blocklist-hosts/content-farms.txt
     type: hosts
     data:
@@ -364,7 +370,6 @@ build:
           replacement: blogspot.com
 
   - source: src/blocklist/nearly-content-farms.txt
-    exclude: src/blocklist/not-content-farms.txt
     publish: docs/files/blocklist-hosts/nearly-content-farms.txt
     type: hosts
     data:
@@ -379,7 +384,6 @@ build:
   - source:
       - src/blocklist/extra-content-farms.txt
       - src/aggregations/extra-content-farms/
-    exclude: src/blocklist/not-content-farms.txt
     publish: docs/files/blocklist-hosts/extra-content-farms.txt
     type: hosts
     data:
@@ -394,7 +398,6 @@ build:
   - source:
       - src/blocklist/bad-cloners.txt
       - src/aggregations/bad-cloners/
-    exclude: src/blocklist/not-content-farms.txt
     publish: docs/files/blocklist-hosts/bad-cloners.txt
     type: hosts
     data:
@@ -438,7 +441,6 @@ build:
   - source:
       - src/blocklist/content-farms.txt
       - src/aggregations/content-farms/
-    exclude: src/blocklist/not-content-farms.txt
     publish: docs/files/blocklist-ubo/content-farms.txt
     type: ubo
     data:
@@ -467,7 +469,6 @@ build:
           value: /https?://(?:www\.|(?!www\.))[\w.-]+\.(?:{value})(?=[:/?#]|$)/
 
   - source: src/blocklist/nearly-content-farms.txt
-    exclude: src/blocklist/not-content-farms.txt
     publish: docs/files/blocklist-ubo/nearly-content-farms.txt
     type: ubo
     data:
@@ -485,7 +486,6 @@ build:
   - source:
       - src/blocklist/extra-content-farms.txt
       - src/aggregations/extra-content-farms/
-    exclude: src/blocklist/not-content-farms.txt
     publish: docs/files/blocklist-ubo/extra-content-farms.txt
     type: ubo
     data:
@@ -520,7 +520,6 @@ build:
   - source:
       - src/blocklist/bad-cloners.txt
       - src/aggregations/bad-cloners/
-    exclude: src/blocklist/not-content-farms.txt
     publish: docs/files/blocklist-ubo/bad-cloners.txt
     type: ubo
     data:
@@ -573,7 +572,6 @@ build:
   - source:
       - src/blocklist/content-farms.txt
       - src/aggregations/content-farms/
-    exclude: src/blocklist/not-content-farms.txt
     publish: docs/files/blocklist-ublacklist/content-farms.txt
     type: ublacklist
     data:
@@ -616,7 +614,6 @@ build:
           value: /https?://(?:[\w-]+\.)*(?:{value})\.blogspot\.(?:[\w.-]+)(?=[:\/?#]|$)/
 
   - source: src/blocklist/nearly-content-farms.txt
-    exclude: src/blocklist/not-content-farms.txt
     publish: docs/files/blocklist-ublacklist/nearly-content-farms.txt
     type: ublacklist
     data:
@@ -633,7 +630,6 @@ build:
   - source:
       - src/blocklist/extra-content-farms.txt
       - src/aggregations/extra-content-farms/
-    exclude: src/blocklist/not-content-farms.txt
     publish: docs/files/blocklist-ublacklist/extra-content-farms.txt
     type: ublacklist
     data:
@@ -650,7 +646,6 @@ build:
   - source:
       - src/blocklist/bad-cloners.txt
       - src/aggregations/bad-cloners/
-    exclude: src/blocklist/not-content-farms.txt
     publish: docs/files/blocklist-ublacklist/bad-cloners.txt
     type: ublacklist
     data:
