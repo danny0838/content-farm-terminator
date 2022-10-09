@@ -512,12 +512,6 @@ function initStorageChangeListener() {
         if (!("newValue" in changes[key])) { return; }
         break;
       }
-
-      // skip if no config key is changed
-      try {
-        for (let key in changes) { JSON.parse(key); }
-        return;
-      } catch(ex) {}
     }
 
     {

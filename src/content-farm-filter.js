@@ -285,7 +285,7 @@
         };
       }
       return {
-        text: data.rulesText,
+        text: data.text,
         time: data.time,
         uptodate: Date.now() - data.time < cacheDuration,
       };
@@ -303,7 +303,7 @@
       });
       if (!response.ok) { throw new Error("response not ok"); }
       text = await response.text();
-      await this.setWebListCache(url, time, text);
+      await this.setWebListCache(url, {time, text});
       return text;
     }
 
@@ -603,7 +603,7 @@
     }
 
     webListCacheKey(url) {
-      return JSON.stringify({webBlocklistCache: url});
+      return `cache/blocklist/text/${url}`;
     }
 
     async getWebListCache(url) {
@@ -611,9 +611,15 @@
       return (await browser.storage.local.get(key))[key];
     }
 
-    async setWebListCache(url, time, rulesText) {
+    /**
+     * @param {string} url
+     * @param {Object} data
+     * @param {number} data.time
+     * @param {string} data.text
+     */
+    async setWebListCache(url, data) {
       const key = this.webListCacheKey(url);
-      await browser.storage.local.set({[key]: {time, rulesText}});
+      await browser.storage.local.set({[key]: data});
     }
 
     async clearStaleWebListCache(webListChange) {
