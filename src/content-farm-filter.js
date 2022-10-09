@@ -47,13 +47,29 @@
   const RE_REGEX_RULE = /^\/(.*)\/([a-z]*)$/;
   const RE_TRANSFORM_PLACEHOLDER = /\$([$&`']|\d+)/g;
 
+  const RULE_TYPE_NONE        = 0;
+  const RULE_TYPE_DOMAIN      = 1;
+  const RULE_TYPE_IPV4        = 2;
+  const RULE_TYPE_IPV6        = 3;
+  const RULE_TYPE_PATTERN     = 4;
+  const RULE_TYPE_REGEX       = 5;
+
+  const TRULE_TYPE_NONE       = 0;
+  const TRULE_TYPE_PLAIN      = 1;
+  const TRULE_TYPE_REGEX      = 2;
+
+  const RULE_ACTION_BLOCK     = 0 << 4;
+  const RULE_ACTION_UNBLOCK   = 1 << 4;
+
   class Rule {
-    constructor(text) {
+    constructor(text, {action = RULE_ACTION_BLOCK, src = null} = {}) {
       this.raw = '';
       this.rule = '';
       this.sep = '';
       this.comment = '';
       this.type = null;
+      this.action = action;
+      this.src = src;
       this.error = null;
       this.set(text);
     }
@@ -65,23 +81,28 @@
      */
     set(text, {ruleOnly = false, error = null} = {}) {
       this.raw = text;
-      this.type = null;
+      this.type = RULE_TYPE_NONE;
       this.error = error;
 
       const m = RE_RULE.exec(text);
       if (m[2]) {
-        this.type = 'regex';
+        this.type = RULE_TYPE_REGEX;
         this.pattern = m[3];
         this.flags = m[4];
       } else if (m[5]) {
-        this.type = 'ipv6';
+        this.type = RULE_TYPE_IPV6;
         this.ip = m[5];
       } else if (m[6]) {
-        this.type = 'ipv4';
+        this.type = RULE_TYPE_IPV4;
         this.ip = m[6];
       } else if (m[7]) {
-        this.type = 'domain';
-        this.domain = m[7];
+        if (m[7].includes('*')) {
+          this.type = RULE_TYPE_PATTERN;
+          this.pattern = m[7];
+        } else {
+          this.type = RULE_TYPE_DOMAIN;
+          this.domain = m[7];
+        }
       }
       this.rule = m[1];
       if (!ruleOnly) {
@@ -100,7 +121,7 @@
     validate(strict = false) {
       const ruleOld = this.rule;
       switch (this.type) {
-        case 'regex': {
+        case RULE_TYPE_REGEX: {
           try {
             new RegExp(this.pattern, this.flags);
           } catch (ex) {
@@ -108,7 +129,7 @@
           }
           break;
         }
-        case 'ipv4': {
+        case RULE_TYPE_IPV4: {
           try {
             let hn = new URL(`http://${this.rule}`).hostname;
             if (!hn.split('.').every(x => (x = parseInt(x, 10), 0 <= x && x <= 255))) {
@@ -122,7 +143,7 @@
           }
           break;
         }
-        case 'ipv6': {
+        case RULE_TYPE_IPV6: {
           try {
             let hn = new URL(`http://${this.rule}`).hostname;
             if (hn !== ruleOld) {
@@ -133,7 +154,8 @@
           }
           break;
         }
-        case 'domain':
+        case RULE_TYPE_DOMAIN:
+        case RULE_TYPE_PATTERN:
         default: {
           let t = this.rule;
           if (!t) { break; }
@@ -162,7 +184,7 @@
             break;
           }
           if (t !== ruleOld) {
-            if (this.type === 'domain' || !strict) {
+            if ([RULE_TYPE_DOMAIN, RULE_TYPE_PATTERN].includes(this.type) || !strict) {
               this.set(t, {ruleOnly: true});
             } else {
               this.set('', {ruleOnly: true});
@@ -176,6 +198,11 @@
 
     toString() {
       return `${this.rule}${this.sep}${this.comment}`;
+    }
+
+    get token() {
+      const prefix = this.action === RULE_ACTION_UNBLOCK ? '@@' : '';
+      return `${prefix}${this.rule}`;
     }
   }
 
@@ -194,16 +221,16 @@
 
     set(text, {ruleOnly = true, error = null} = {}) {
       this.raw = text;
-      this.type = null;
+      this.type = TRULE_TYPE_NONE;
       this.error = error;
 
       const m = RE_TRANSFORM_RULE.exec(text);
       if (m[2]) {
-        this.type = 'regex';
+        this.type = TRULE_TYPE_REGEX;
         this.pattern = m[3];
         this.flags = m[4];
       } else if (m[5]) {
-        this.type = 'plain';
+        this.type = TRULE_TYPE_PLAIN;
       }
       this.rule = m[1];
       if (!ruleOnly) {
@@ -218,7 +245,7 @@
     validate(strict = false) {
       const ruleOld = this.rule;
       switch (this.type) {
-        case 'regex': {
+        case TRULE_TYPE_REGEX: {
           try {
             new RegExp(this.pattern, this.flags);
           } catch (ex) {
@@ -226,7 +253,7 @@
           }
           break;
         }
-        case 'plain': {
+        case TRULE_TYPE_PLAIN: {
           // nothing to validate
           break;
         }
@@ -237,39 +264,418 @@
     toString() {
       return `${this.rule}${this.sep}${this.replacement}${this.sep2}${this.comment}`;
     }
+
+    get token() {
+      return this.rule;
+    }
   }
+
+  // Borrowed from uBlock Orign.
+  const MAX_TOKEN_LENGTH = 7;
+
+  const       DOT_TOKEN_HASH = 0x10000000;
+  const       ANY_TOKEN_HASH = 0x20000000;
+  const ANY_HTTPS_TOKEN_HASH = 0x30000000;
+  const  ANY_HTTP_TOKEN_HASH = 0x40000000;
+  const        NO_TOKEN_HASH = 0x50000000;
+  const     EMPTY_TOKEN_HASH = 0xF0000000;
+  const   INVALID_TOKEN_HASH = 0xFFFFFFFF;
+
+  const TOKEN_REGEX = /[%0-9A-Za-z]+/g;
+  const TOKEN_VALID_CHARS = (() => {
+    const chars = '0123456789%abcdefghijklmnopqrstuvwxyz';
+    const vtc = new Uint8Array(128);
+    for (let i = 0, n = chars.length; i < n; i++) {
+      vtc[chars.charCodeAt(i)] = i + 1;
+    }
+    return vtc;
+  })();
+
+  // Top 100 bad tokens according to occurrence and likelihood of false hit.
+  // Check source code of uBlock Origin.
+  const BAD_TOKENS = [
+    ['https', 123617],
+    ['com', 76987],
+    ['js', 43620],
+    ['www', 33129],
+    ['jpg', 32221],
+    ['images', 31812],
+    ['css', 19715],
+    ['png', 19140],
+    ['static', 15724],
+    ['net', 15239],
+    ['de', 13155],
+    ['img', 11109],
+    ['assets', 10746],
+    ['min', 7807],
+    ['cdn', 7568],
+    ['content', 6900],
+    ['wp', 6444],
+    ['fonts', 6095],
+    ['svg', 5976],
+    ['http', 5813],
+    ['ssl', 5735],
+    ['amazon', 5440],
+    ['ru', 5427],
+    ['fr', 5199],
+    ['facebook', 5178],
+    ['en', 5146],
+    ['image', 5028],
+    ['html', 4837],
+    ['media', 4833],
+    ['co', 4783],
+    ['php', 3972],
+    ['2019', 3943],
+    ['org', 3924],
+    ['jquery', 3531],
+    ['02', 3438],
+    ['api', 3382],
+    ['gif', 3350],
+    ['eu', 3322],
+    ['prod', 3289],
+    ['woff2', 3200],
+    ['logo', 3194],
+    ['themes', 3107],
+    ['icon', 3048],
+    ['google', 3026],
+    ['v1', 3019],
+    ['uploads', 2963],
+    ['googleapis', 2860],
+    ['v3', 2816],
+    ['tv', 2762],
+    ['icons', 2748],
+    ['core', 2601],
+    ['gstatic', 2581],
+    ['ac', 2509],
+    ['utag', 2466],
+    ['id', 2459],
+    ['ver', 2448],
+    ['rsrc', 2387],
+    ['files', 2361],
+    ['uk', 2357],
+    ['us', 2271],
+    ['pl', 2262],
+    ['common', 2205],
+    ['public', 2076],
+    ['01', 2016],
+    ['na', 1957],
+    ['v2', 1954],
+    ['12', 1914],
+    ['thumb', 1895],
+    ['web', 1853],
+    ['ui', 1841],
+    ['default', 1825],
+    ['main', 1737],
+    ['false', 1715],
+    ['2018', 1697],
+    ['embed', 1639],
+    ['player', 1634],
+    ['dist', 1599],
+    ['woff', 1593],
+    ['global', 1593],
+    ['json', 1572],
+    ['11', 1566],
+    ['600', 1559],
+    ['app', 1556],
+    ['styles', 1533],
+    ['plugins', 1526],
+    ['274', 1512],
+    ['random', 1505],
+    ['sites', 1505],
+    ['imasdk', 1501],
+    ['bridge3', 1501],
+    ['news', 1496],
+    ['width', 1494],
+    ['thumbs', 1485],
+    ['ttf', 1470],
+    ['ajax', 1463],
+    ['user', 1454],
+    ['scripts', 1446],
+    ['twitter', 1440],
+    ['crop', 1431],
+    ['new', 1412],
+  ];
+
+  class UrlTokenizer {
+    constructor() {
+      this.knownTokens = new Set();
+      this.badTokens = new Map(BAD_TOKENS);
+    }
+
+    recordTokenUsage(token, tokenHash) {
+      const cnt = this.badTokens.get(token) || 0;
+      this.badTokens.set(token, cnt + 1);
+      this.knownTokens.add(tokenHash);
+    }
+
+    tokenHashFromString(s) {
+      const l = s.length;
+      if (l === 0) { return EMPTY_TOKEN_HASH; }
+      const vtc = TOKEN_VALID_CHARS;
+      let th = vtc[s.charCodeAt(0)];
+      for (let i = 1; i !== MAX_TOKEN_LENGTH && i !== l; i++) {
+        th = th << 4 ^ vtc[s.charCodeAt(i)];
+      }
+      return th;
+    }
+
+    stringFromTokenHash(th) {
+      if (th === 0) { return ''; }
+      return th.toString(16);
+    }
+
+    *iterTokensFromUrl(url) {
+      TOKEN_REGEX.lastIndex = 0;
+      if (url.length > 2048) {
+        url = url.slice(0, 2048);
+      }
+      for (;;) {
+        const m = TOKEN_REGEX.exec(url);
+        if (!m) { break; }
+        const token = m[0].toLowerCase();
+        const tokenHash = this.tokenHashFromString(token);
+        if (this.knownTokens.has(tokenHash)) {
+          yield tokenHash;
+        }
+      }
+      yield ANY_TOKEN_HASH;
+      yield NO_TOKEN_HASH;
+    }
+
+    extractTokenFromPattern(pattern) {
+      let tokenHash = NO_TOKEN_HASH;
+      TOKEN_REGEX.lastIndex = 0;
+      let bestToken = null;
+      let bestBadness = Infinity;
+      for (;;) {
+        const match = TOKEN_REGEX.exec(pattern);
+        if (match === null) { break; }
+        const {0: token, index} = match;
+        const badness = token.length > 1 ? this.badTokens.get(token) || 0 : 1;
+        if (badness >= bestBadness) { continue; }
+        if (index > 0) {
+          const c = pattern.charCodeAt(index - 1);
+          if (c === 0x2A /* '*' */) { continue; }
+        }
+        const lastIndex = TOKEN_REGEX.lastIndex;
+        if (lastIndex < pattern.length) {
+          const c = pattern.charCodeAt(lastIndex);
+          if (c === 0x2A /* '*' */) { continue; }
+        }
+        bestToken = token;
+        if (badness === 0) { break; }
+        bestBadness = badness;
+      }
+      if (bestToken !== null) {
+        const token = bestToken;
+        tokenHash = this.tokenHashFromString(token);
+        this.recordTokenUsage(token, tokenHash);
+      }
+      return tokenHash;
+    }
+
+    extractTokenFromRegex(pattern) {
+      let tokenHash = NO_TOKEN_HASH;
+      pattern = regex.toTokenizableStr(pattern);
+      TOKEN_REGEX.lastIndex = 0;
+      let bestToken = null;
+      let bestBadness = Infinity;
+      for (;;) {
+        const match = TOKEN_REGEX.exec(pattern);
+        if (match === null) { break; }
+        const {0: token, index} = match;
+        if (index === 0 || pattern.charAt(index - 1) === '\x01') {
+          continue;
+        }
+        const {lastIndex} = TOKEN_REGEX;
+        if (lastIndex === pattern.length || pattern.charAt(lastIndex) === '\x01') {
+          continue;
+        }
+        const badness = token.length > 1 ? this.badTokens.get(token) || 0 : 1;
+        if (badness >= bestBadness) { continue; }
+        bestToken = token;
+        if (badness === 0) { break; }
+        bestBadness = badness;
+      }
+      if (bestToken !== null) {
+        const token = bestToken.toLowerCase();
+        tokenHash = this.tokenHashFromString(token);
+        this.recordTokenUsage(token, tokenHash);
+      }
+      return tokenHash;
+    }
+  }
+
+  const REGEX_RE_STR_FIXER = /(\\[\s\S])|-/g;
+  const REGEX_RE_STR_FIXER_FUNC = (m, e) => (e || `\\${m}`);
+
+  class regex {
+    static firstCharCodeClass(s) {
+      return /^[\x01%0-9A-Za-z]/.test(s) ? 1 : 0;
+    }
+
+    static lastCharCodeClass(s) {
+      return /[\x01%0-9A-Za-z]$/.test(s) ? 1 : 0;
+    }
+
+    static tokenizableStrFromNode(node) {
+      switch (node.type) {
+        case 1: /* T_SEQUENCE, 'Sequence' */ {
+          let s = '';
+          for (let i = 0; i < node.val.length; i++) {
+            s += this.tokenizableStrFromNode(node.val[i]);
+          }
+          return s;
+        }
+        case 2: /* T_ALTERNATION, 'Alternation' */
+        case 8: /* T_CHARGROUP, 'CharacterGroup' */ {
+          let firstChar = 0;
+          let lastChar = 0;
+          for (let i = 0; i < node.val.length; i++) {
+            const s = this.tokenizableStrFromNode(node.val[i]);
+            if (firstChar === 0 && this.firstCharCodeClass(s) === 1) {
+              firstChar = 1;
+            }
+            if (lastChar === 0 && this.lastCharCodeClass(s) === 1) {
+              lastChar = 1;
+            }
+            if (firstChar === 1 && lastChar === 1) { break; }
+          }
+          return String.fromCharCode(firstChar, lastChar);
+        }
+        case 4: /* T_GROUP, 'Group' */ {
+          if (node.flags.NegativeLookAhead === 1) { return '\x01'; }
+          if (node.flags.NegativeLookBehind === 1) { return '\x01'; }
+          return this.tokenizableStrFromNode(node.val);
+        }
+        case 16: /* T_QUANTIFIER, 'Quantifier' */ {
+          const s = this.tokenizableStrFromNode(node.val);
+          const first = this.firstCharCodeClass(s);
+          const last = this.lastCharCodeClass(s);
+          if (node.flags.min === 0 && first === 0 && last === 0) {
+            return '';
+          }
+          return String.fromCharCode(first, last);
+        }
+        case 64: /* T_HEXCHAR, 'HexChar' */ {
+          return String.fromCharCode(parseInt(node.val.slice(1), 16));
+        }
+        case 128: /* T_SPECIAL, 'Special' */ {
+          const flags = node.flags;
+          if (
+            flags.EndCharGroup === 1 || // dangling `]`
+            flags.EndGroup === 1 ||   // dangling `)`
+            flags.EndRepeats === 1    // dangling `}`
+          ) {
+            throw new Error('Unmatched bracket');
+          }
+          return flags.MatchEnd === 1 ||
+               flags.MatchStart === 1 ||
+               flags.MatchWordBoundary === 1
+            ? '\x00'
+            : '\x01';
+        }
+        case 256: /* T_CHARS, 'Characters' */ {
+          for (let i = 0; i < node.val.length; i++) {
+            if (this.firstCharCodeClass(node.val[i]) === 1) {
+              return '\x01';
+            }
+          }
+          return '\x00';
+        }
+        // Ranges are assumed to always involve token-related characters.
+        case 512: /* T_CHARRANGE, 'CharacterRange' */ {
+          return '\x01';
+        }
+        case 1024: /* T_STRING, 'String' */ {
+          return node.val;
+        }
+        case 2048: /* T_COMMENT, 'Comment' */ {
+          return '';
+        }
+      }
+      return '\x01';
+    }
+
+    static toTokenizableStr(reStr) {
+      try {
+        // Depends on:
+        // https://github.com/foo123/RegexAnalyzer
+        const regexAnalyzer = Regex.Analyzer;
+
+        // fix error for analyzer for [x-]
+        reStr = reStr.replace(REGEX_RE_STR_FIXER, REGEX_RE_STR_FIXER_FUNC);
+
+        const node = regexAnalyzer(reStr, false).tree();
+        return this.tokenizableStrFromNode(node);
+      } catch(ex) {
+        // Certain regex cannot be parsed by the analyzer,
+        // such as /\u{20000}/.
+      }
+      return '';
+    }
+  }
+
+  const BLOCK_TYPE_NONE     = 0;
+  const BLOCK_TYPE_HOSTNAME = 1;
+  const BLOCK_TYPE_URL      = 2;
 
   class ContentFarmFilter {
     constructor() {
-      this._listUpdated = true;
-      this._blacklist = {
-        rules: new Map(),
-      };
-      this._whitelist = {
-        rules: new Map(),
-      };
+      this._rules = new Map();
+      this._buckets = new Map();
       this._transformRules = new Map();
+      this._listUpdated = true;
+      this.urlTokenizer = new UrlTokenizer();
     }
 
-    addBlockList(blockList, listText, url) {
-      for (const ruleLine of utils.getLines(listText)) {
-        const rule = this.parseRuleLine(ruleLine);
-        if (url) {
-          rule.src = url;
+    async init(options, refetch = false) {
+      this.addTransformRulesFromText(options.transformRules);
+      this.addRulesFromText(options.userBlacklist, {action: RULE_ACTION_BLOCK});
+      this.addRulesFromText(options.userWhitelist, {action: RULE_ACTION_UNBLOCK});
+
+      // run one by one to prevent memory overload if the list is large
+      const urls = this.urlsTextToLines(options.webBlacklists);
+      for (const url of urls) {
+        let {text} = await this.getCachedWebBlackList(
+          url, options.webBlacklistsCacheDuration,
+        );
+
+        if (text === null && refetch) {
+          try {
+            text = await this.fetchWebBlackList(url);
+          } catch (ex) {
+            console.error(`Failed to fetch blacklist from "${url}": ${ex.message}`);
+          }
         }
-        if (rule.type !== null && !blockList.rules.has(rule.rule)) {
-          blockList.rules.set(rule.rule, rule);
+
+        const rulesText = utils.getLines(text || '')
+          .map(rule => this.parseRuleLine(rule).validate(true).toString())
+          .join('\n');
+        this.addRulesFromText(rulesText, {action: RULE_ACTION_BLOCK});
+      }
+
+      this.makeCompiledRules();
+    }
+
+    addRulesFromText(listText, options) {
+      for (const ruleLine of utils.getLines(listText)) {
+        const rule = this.parseRuleLine(ruleLine, options);
+        if (rule.type !== RULE_TYPE_NONE && !this._rules.has(rule.token)) {
+          this._rules.set(rule.token, rule);
         }
       }
       this._listUpdated = true;
     }
 
-    addBlackList(listText, url) {
-      this.addBlockList(this._blacklist, listText, url);
-    }
-
-    addWhiteList(listText, url) {
-      this.addBlockList(this._whitelist, listText, url);
+    addTransformRulesFromText(rulesText) {
+      for (const ruleLine of utils.getLines(rulesText)) {
+        const rule = this.parseTransformRuleLine(ruleLine);
+        if (rule.type === TRULE_TYPE_NONE || !rule.replacement) { continue; }
+        if (!this._transformRules.has(rule.token)) {
+          this._transformRules.set(rule.token, rule);
+        }
+      }
     }
 
     /**
@@ -307,24 +713,6 @@
       return text;
     }
 
-    addTransformRules(rulesText) {
-      for (const ruleLine of utils.getLines(rulesText)) {
-        const rule = this.parseTransformRuleLine(ruleLine);
-        if (!(rule.rule && rule.replacement)) { continue; }
-
-        let regex;
-        if (rule.type === 'regex') {
-          regex = new RegExp(rule.pattern, rule.flags);
-        } else {
-          regex = new RegExp(utils.escapeRegExp(rule.rule).replace(RE_ASTERISK_FIXER, "[^:/?#]*"));
-        }
-
-        if (!this._transformRules.has(rule.rule)) {
-          this._transformRules.set(rule.rule, {rule, regex});
-        }
-      }
-    }
-
     /**
      * @typedef {Object} Source
      * @property {string} url - source URL
@@ -344,26 +732,26 @@
      * @returns {Blocker}
      */
     getBlocker(...args) {
-      const hostnameMatchBlockList = (hostname, blocklist) => {
-        if ((hostname.startsWith('[') && hostname.endsWith(']')) || RE_IPV4.test(hostname)) {
-          // IP hostname
-          for (const rule of blocklist.standardRulesDict.match(hostname)) {
-            return rule;
-          }
-          return null;
-        }
+      const matchIPv6 = (hostname, action) => {
+        const bucket = this.getBucket(action | RULE_TYPE_IPV6);
+        if (!bucket) { return null; }
+        return bucket.dict.get(hostname.slice(1, -1));
+      };
 
-        // domain name hostname
-        if (hostname.startsWith('www.')) {
-          hostname = hostname.slice(4);
-        }
+      const matchIPv4 = (hostname, action) => {
+        const bucket = this.getBucket(action | RULE_TYPE_IPV4);
+        if (!bucket) { return null; }
+        return bucket.dict.get(hostname);
+      };
 
+      const matchDomain = (hostname, action) => {
+        const bucket = this.getBucket(action | RULE_TYPE_DOMAIN);
+        if (!bucket) { return null; }
         let domain = hostname;
         let pos;
         while (true) {
-          for (const rule of blocklist.standardRulesDict.match(domain)) {
-            return rule;
-          }
+          const rule = bucket.dict.get(domain);
+          if (rule) { return rule; }
           pos = domain.indexOf('.');
           if (pos === -1) { break; }
           domain = domain.slice(pos + 1);
@@ -371,18 +759,65 @@
         return null;
       };
 
-      const urlMatchBlockList = (url, blocklist) => {
-        const checked = new Set();
-        for (const rule of blocklist.regexRulesDict.match(url)) {
-          const regex = rule.regex;
-          if (checked.has(regex)) {
-            continue;
+      const matchPattern = (hostname, action) => {
+        const bucket = this.getBucket(action | RULE_TYPE_PATTERN);
+        if (!bucket) { return null; }
+        for (const tokenHash of this.urlTokenizer.iterTokensFromUrl(hostname)) {
+          const rules = bucket.units.get(tokenHash);
+          if (!rules) { continue; }
+          for (const rule of rules) {
+            if (!rule.regex) {
+              let regexStr = rule.pattern
+                .replace(/[.+^?${}()|[\]\\]/g, '\\$&')
+                .replace(/\*+/g, '\\S*?');
+              regexStr = '^(?:[^/?#]+\\.)?' + regexStr + '$';
+              rule.regex = new RegExp(regexStr, 'i');
+            }
+            rule.regex.lastIndex = 0;
+            if (rule.regex.test(hostname)) {
+              return rule;
+            }
           }
-          checked.add(regex);
-          regex.lastIndex = 0;
-          if (regex.test(url)) {
-            return rule;  // return first match
+        }
+        return null;
+      };
+
+      const matchRegex = (url, action) => {
+        const bucket = this.getBucket(action | RULE_TYPE_REGEX);
+        if (!bucket) { return null; }
+        for (const tokenHash of this.urlTokenizer.iterTokensFromUrl(url)) {
+          const rules = bucket.units.get(tokenHash);
+          if (!rules) { continue; }
+          for (const rule of rules) {
+            if (!rule.regex) {
+              rule.regex = new RegExp(rule.pattern, rule.flags);
+            }
+            rule.regex.lastIndex = 0;
+            if (rule.regex.test(url)) {
+              return rule;
+            }
           }
+        }
+        return null;
+      };
+
+      const match = ({url, hostname, action}) => {
+        if (hostname.startsWith('[') && hostname.endsWith(']')) {
+          return matchIPv6(hostname, action);
+        }
+        if (RE_IPV4.test(hostname)) {
+          return matchIPv4(hostname, action);
+        }
+
+        let rule;
+        if (rule = matchDomain(hostname, action)) {
+          return rule;
+        }
+        if (rule = matchPattern(hostname, action)) {
+          return rule;
+        }
+        if (rule = matchRegex(url, action)) {
+          return rule;
         }
         return null;
       };
@@ -390,7 +825,7 @@
       const checkUrlOrHostname = (urlOrHostname) => {
         const result = {
           rule: null,
-          type: 0,
+          type: BLOCK_TYPE_NONE,
         };
 
         let urlObj;
@@ -402,37 +837,21 @@
         }
 
         // URL.hostname is not punycoded in some old browsers (e.g. Firefox 52)
-        const h = punycode.toASCII(urlObj.hostname);
-
-        let rule;
-
-        // check whitelist
-        rule = hostnameMatchBlockList(h, this._whitelist);
-        if (rule) {
-          result.rule = rule;
-          return result;
-        }
+        const hostname = punycode.toASCII(urlObj.hostname);
 
         const url = utils.getNormalizedUrl(urlObj);
 
-        rule = urlMatchBlockList(url, this._whitelist);
+        // check blacklist and then whitelist according to the likelihood of match
+        let rule = match({url, hostname, action: RULE_ACTION_BLOCK});
         if (rule) {
-          result.rule = rule;
-          return result;
-        }
+          const ruleW = match({url, hostname, action: RULE_ACTION_UNBLOCK});
+          if (ruleW) {
+            result.rule = ruleW;
+            return result;
+          }
 
-        // check blacklist
-        rule = hostnameMatchBlockList(h, this._blacklist);
-        if (rule) {
           result.rule = rule;
-          result.type = 1;
-          return result;
-        }
-
-        rule = urlMatchBlockList(url, this._blacklist);
-        if (rule) {
-          result.rule = rule;
-          result.type = 2;
+          result.type = rule.type === RULE_TYPE_REGEX ? BLOCK_TYPE_URL : BLOCK_TYPE_HOSTNAME;
           return result;
         }
 
@@ -443,10 +862,10 @@
         const blocker = {
           source,
           rule: null,
-          type: 0,
+          type: BLOCK_TYPE_NONE,
         };
 
-        this.makeCachedRules();
+        this.makeCompiledRules();
 
         const {url: urlOrHostname, urlRedirected} = source;
         if (urlOrHostname) {
@@ -465,8 +884,8 @@
     }
 
     isInBlacklist(ruleLine) {
-      const {rule} = this.parseRuleLine(ruleLine);
-      return this._blacklist.rules.has(rule);
+      const {token} = this.parseRuleLine(ruleLine);
+      return this._rules.has(token);
     }
 
     urlsTextToLines(...args) {
@@ -480,8 +899,8 @@
       return fn(...args);
     }
 
-    parseRuleLine(ruleLine) {
-      return new Rule(ruleLine);
+    parseRuleLine(ruleLine, options) {
+      return new Rule(ruleLine, options);
     }
 
     parseTransformRuleLine(ruleLine) {
@@ -523,13 +942,28 @@
         return;
       }
       for (const [, tRule] of this._transformRules) {
+        if (!tRule.regex) {
+          switch (tRule.type) {
+            case TRULE_TYPE_REGEX: {
+              tRule.regex = new RegExp(tRule.pattern, tRule.flags);
+              break;
+            }
+            case TRULE_TYPE_PLAIN: {
+              tRule.regex = new RegExp(utils.escapeRegExp(tRule.rule).replace(RE_ASTERISK_FIXER, "[^:/?#]*"));
+              break;
+            }
+            default: {
+              continue;
+            }
+          }
+        }
         tRule.regex.lastIndex = 0;
         const match = tRule.regex.exec(rule.rule);
         if (!match) { continue; }
         const leftContext = RegExp.leftContext;
         const rightContext = RegExp.rightContext;
-        const useRegex = RE_REGEX_RULE.test(tRule.rule.replacement);
-        const ruleText = tRule.rule.replacement.replace(RE_TRANSFORM_PLACEHOLDER, (_, m) => {
+        const useRegex = RE_REGEX_RULE.test(tRule.replacement);
+        const ruleText = tRule.replacement.replace(RE_TRANSFORM_PLACEHOLDER, (_, m) => {
           let result;
           if (m === '$') {
             return '$';
@@ -565,41 +999,96 @@
       return false;
     }
 
-    makeCachedRules(...args) {
-      const cacheRegexRule = (rule, trie) => {
-        rule.regex = new RegExp(rule.pattern, rule.flags);
-        for (const tokens of regex.tokenize(rule.pattern)) {
-          trie.addTokens(tokens, rule);
+    makeCompiledRules(...args) {
+      const compileRegexRule = (rule) => {
+        try {
+          new RegExp(rule.pattern, rule.flags);
+        } catch (ex) {
+          console.error(`Invalid regex rule "${rule.rule}": ${ex.message}`);
+          return;
         }
+        const tokenHash = this.urlTokenizer.extractTokenFromRegex(rule.pattern);
+        const bucket = this.setBucket(rule);
+        bucket.units = bucket.units || new Map();
+        let rules = bucket.units.get(tokenHash);
+        if (!rules) {
+          rules = new Set();
+          bucket.units.set(tokenHash, rules);
+        }
+        rules.add(rule);
       };
 
-      const cacheRules = (blockList) => {
-        const standardRulesDict = new Trie();
-        const regexRulesDict = new Trie();
-        for (const [, rule] of blockList.rules) {
-          if (rule.type === 'regex') {
-            cacheRegexRule(rule, regexRulesDict);
-          } else if (rule.type === 'domain') {
-            standardRulesDict.add(rule.domain, rule);
-          } else if (rule.type === 'ipv4') {
-            standardRulesDict.add(Trie.escape(rule.rule), rule);
-          } else if (rule.type === 'ipv6') {
-            standardRulesDict.add(Trie.escape(rule.rule), rule);
+      const compilePatternRule = (rule) => {
+        const tokenHash = this.urlTokenizer.extractTokenFromPattern(rule.rule);
+        const bucket = this.setBucket(rule);
+        bucket.units = bucket.units || new Map();
+        let rules = bucket.units.get(tokenHash);
+        if (!rules) {
+          rules = new Set();
+          bucket.units.set(tokenHash, rules);
+        }
+        rules.add(rule);
+      };
+
+      const compileDomainRule = (rule) => {
+        const bucket = this.setBucket(rule);
+        bucket.dict = bucket.dict || new Map();
+        bucket.dict.set(rule.domain, rule);
+      };
+
+      const compileIpRule = (rule) => {
+        const bucket = this.setBucket(rule);
+        bucket.dict = bucket.dict || new Map();
+        bucket.dict.set(rule.ip, rule);
+      };
+
+      const fn = this.makeCompiledRules = () => {
+        if (!this._listUpdated) { return; }
+        this._listUpdated = false;
+        for (const [, rule] of this._rules) {
+          let compiler;
+          switch (rule.type) {
+            case RULE_TYPE_REGEX: {
+              compiler = compileRegexRule;
+              break;
+            }
+            case RULE_TYPE_PATTERN: {
+              compiler = compilePatternRule;
+              break;
+            }
+            case RULE_TYPE_DOMAIN: {
+              compiler = compileDomainRule;
+              break;
+            }
+            case RULE_TYPE_IPV4: {
+              compiler = compileIpRule;
+              break;
+            }
+            case RULE_TYPE_IPV6: {
+              compiler = compileIpRule;
+              break;
+            }
           }
-        }
-        blockList.standardRulesDict = standardRulesDict;
-        blockList.regexRulesDict = regexRulesDict;
-      };
-
-      const fn = this.makeCachedRules = () => {
-        if (this._listUpdated) {
-          this._listUpdated = false;
-          cacheRules(this._blacklist);
-          cacheRules(this._whitelist);
+          if (compiler) {
+            compiler(rule);
+          }
         }
       };
 
       return fn(...args);
+    }
+
+    getBucket(key) {
+      return this._buckets.get(key);
+    }
+
+    setBucket(rule) {
+      const key = rule.action | rule.type;
+      let bucket = this._buckets.get(key);
+      if (bucket) { return bucket; }
+      bucket = {};
+      this._buckets.set(key, bucket);
+      return bucket;
     }
 
     webListCacheKey(url) {
@@ -627,359 +1116,6 @@
       const urlSet = new Set(this.urlsTextToLines(newValue));
       const deletedUrls = this.urlsTextToLines(oldValue).filter(u => !urlSet.has(u));
       await browser.storage.local.remove(deletedUrls.map(this.webListCacheKey));
-    }
-  }
-
-  const TRIE_TOKEN_EOT = Symbol('EOT');
-  const TRIE_TOKEN_ANYCHAR = Symbol('?');
-  const TRIE_TOKEN_ANYCHARS = Symbol('*');
-  const TRIE_TOKEN_BRACKET_OPEN = Symbol('[');
-  const TRIE_TOKEN_BRACKET_CLOSE = Symbol(']');
-  const TRIE_TOKEN_MAP = new Map([
-    ['?', TRIE_TOKEN_ANYCHAR],
-    ['*', TRIE_TOKEN_ANYCHARS],
-    ['[', TRIE_TOKEN_BRACKET_OPEN],
-    [']', TRIE_TOKEN_BRACKET_CLOSE],
-  ]);
-  const TRIE_PATTERN_ESCAPER = /[*?[]/g;
-
-  /**
-   * Prefix trie that supports wildcards.
-   */
-  class Trie {
-    constructor() {
-      this._trie = new Map();
-    }
-
-    /**
-     * Add a pattern for matching.
-     *
-     * @param {string} pattern - The pattern for matching which works like a
-     *      dictionary key. Replace any "**" with "*" as it may cause
-     *      duplicated matches a performance issue.
-     * @param {*} [value=pattern] - The value when the pattern is matched.
-     */
-    add(pattern, value = pattern) {
-      const tokens = this._expandWildcards(Array.from(pattern));
-      this.addTokens(tokens, value);
-    }
-
-    /**
-     * Add a pattern (in the form of an array of tokens) for matching.
-     *
-     * @param {(string|Symbol|Array.<(string|Symbol)>)} tokens - The pattern for matching.
-     * @param {*} [value] - The value when the pattern is matched.
-     */
-    addTokens(tokens, value) {
-      const queue = [[this._trie, 0]];
-      while (queue.length) {
-        const [trie, i] = queue.pop();
-        const subqueue = [];
-        const token = tokens[i];
-
-        if (!token) {
-          const token = TRIE_TOKEN_EOT;
-          let next = trie.get(token);
-          if (!next) {
-            next = new Map();
-            next.token = token;
-            trie.set(token, next);
-          }
-          next.set(value, true);
-          continue;
-        }
-
-        for (const t of Array.isArray(token) ? token : [token]) {
-          let next = trie.get(t);
-          if (!next) {
-            next = new Map();
-            next.token = t;
-            trie.set(t, next);
-          }
-          subqueue.push([next, i + 1]);
-        }
-
-        // add to queue using reversed order
-        while (subqueue.length) {
-          queue.push(subqueue.pop());
-        }
-      }
-    }
-
-    _expandWildcards(parts) {
-      const tokens = [];
-      const escaped = [];
-      let escaping = false;
-      for (const part of parts) {
-        const token = TRIE_TOKEN_MAP.get(part) || part;
-
-        if (escaping) {
-          if (token === TRIE_TOKEN_BRACKET_CLOSE) {
-            escaping = false;
-            if (escaped.length) {
-              tokens.push(escaped.slice());
-              escaped.length = 0;
-            } else {
-              tokens.push('[');
-              tokens.push(']');
-            }
-            continue;
-          }
-
-          escaped.push(part);
-          continue;
-        }
-
-        if (token === TRIE_TOKEN_BRACKET_OPEN) {
-          escaping = true;
-          continue;
-        }
-
-        if (token === TRIE_TOKEN_BRACKET_CLOSE) {
-          tokens.push(']');
-          continue;
-        }
-
-        tokens.push(token);
-      }
-
-      if (escaping) {
-        tokens.push('[');
-        for (const part of escaped) {
-          tokens.push(part);
-        }
-      }
-
-      return tokens;
-    }
-
-    /**
-     * Match a string against the provided patterns.
-     *
-     * @param {string} str - The string for matching.
-     * @yields {*} The value of each matched pattern.
-     */
-    *match(str) {
-      const parts = Array.from(str);
-      const queue = [[this._trie, 0]];
-      while (queue.length) {
-        const [trie, i] = queue.pop();
-        const part = parts[i];
-        const subqueue = [];
-        let next;
-
-        if (i < parts.length) {
-          if (next = trie.get(part)) {
-            subqueue.push([next, i + 1]);
-          }
-
-          if (next = trie.get(TRIE_TOKEN_ANYCHAR)) {
-            subqueue.push([next, i + 1]);
-          }
-
-          if (trie.token === TRIE_TOKEN_ANYCHARS) {
-            subqueue.push([trie, i + 1]);
-          }
-
-          if (next = trie.get(TRIE_TOKEN_ANYCHARS)) {
-            // this should not happen when trie.token === TRIE_TOKEN_ANYCHARS
-            subqueue.push([next, i]);
-          }
-        } else {
-          // yield values if ending trie matches
-          if (next = trie.get(TRIE_TOKEN_EOT)) {
-            for (const [value, _] of next) {
-              yield value;
-            }
-          }
-
-          // check "*" as it could take no length
-          if (next = trie.get(TRIE_TOKEN_ANYCHARS)) {
-            subqueue.push([next, i]);
-          }
-        }
-
-        // add to queue using reversed order
-        while (subqueue.length) {
-          queue.push(subqueue.pop());
-        }
-      }
-    }
-
-    /**
-     * Escape a string to be safe in a pattern.
-     *
-     * @param {string} str - The string to escape.
-     * @returns {string} The escaped string.
-     */
-    static escape(str) {
-      return str.replace(TRIE_PATTERN_ESCAPER, '[$&]');
-    }
-  }
-
-  const REGEX_TOKEN_SOT = Symbol('^');
-  const REGEX_TOKEN_EOT = Symbol('$');
-  const REGEX_RE_STR_FIXER = /(\\[\s\S])|-/g;
-  const REGEX_RE_STR_FIXER_FUNC = (m, e) => (e || `\\${m}`);
-
-  class regex {
-    static *tokenize(reStr) {
-      try {
-        // Depends on:
-        // https://github.com/foo123/RegexAnalyzer
-        const regexAnalyzer = Regex.Analyzer;
-
-        // fix error for analyzer for [x-]
-        reStr = reStr.replace(REGEX_RE_STR_FIXER, REGEX_RE_STR_FIXER_FUNC);
-
-        const node = regexAnalyzer(reStr, false).tree();
-        const tokens = this._tokenizeNode(node);
-        yield* this._expandTokenSeq(tokens);
-      } catch(ex) {
-        // Certain regex cannot be parsed by the analyzer,
-        // such as /\u{20000}/. Use wildcard instead.
-        yield [TRIE_TOKEN_ANYCHARS];
-      }
-    }
-
-    /**
-     * @param {RegexNode} node
-     * @returns {string|Symbol|Object}
-     */
-    static _tokenizeNode(node) {
-      switch (node.type) {
-        case 1: /* T_SEQUENCE, 'Sequence' */ {
-          let seq = [];
-          for (let i = 0, I = node.val.length; i < I; i++) {
-            seq = seq.concat(this._tokenizeNode(node.val[i]));
-          }
-          return seq;
-        }
-        case 2: /* T_ALTERNATION, 'Alternation' */ {
-          return [{alt: node.val.map(node => this._tokenizeNode(node))}];
-        }
-        case 4: /* T_GROUP, 'Group' */ {
-          for (const flag of ['LookAhead', 'LookBehind', 'NegativeLookAhead', 'NegativeLookBehind']) {
-            if (node.flags[flag]) { return []; }
-          }
-          return this._tokenizeNode(node.val);
-        }
-        case 8: /* T_CHARGROUP, 'CharacterGroup' */ {
-          return [TRIE_TOKEN_ANYCHAR];
-        }
-        case 16: /* T_QUANTIFIER, 'Quantifier' */ {
-          let seq = [], tokens;
-          for (let i = 0, I = node.flags.min; i < I; i++) {
-            tokens = tokens || this._tokenizeNode(node.val);
-            seq = seq.concat(tokens);
-          }
-          if (node.flags.min !== node.flags.max) {
-            seq = seq.concat([TRIE_TOKEN_ANYCHARS]);
-          }
-          return seq;
-        }
-        case 32: /* T_UNICODECHAR, 'UnicodeChar' */ {
-          return [node.flags.Char];
-        }
-        case 64: /* T_HEXCHAR, 'HexChar' */ {
-          return [node.flags.Char];
-        }
-        case 128: /* T_SPECIAL, 'Special' */ {
-          if (node.flags.MatchStart) {
-            return [REGEX_TOKEN_SOT];
-          }
-          if (node.flags.MatchEnd) {
-            return [REGEX_TOKEN_EOT];
-          }
-          return [];
-        }
-        case 256: /* T_CHARS, 'Characters' */ {
-          return [];
-        }
-        case 512: /* T_CHARRANGE, 'CharacterRange' */ {
-          return [];
-        }
-        case 1024: /* T_STRING, 'String' */ {
-          return Array.from(node.val);
-        }
-        case 2048: /* T_COMMENT, 'Comment' */ {
-          return [];
-        }
-      }
-      return [];
-    }
-
-    /**
-     * @param {Array.<string|Symbol|Object>} seq
-     * @yields {string|Symbol}
-     */
-    static *_expandTokenSeq(seq) {
-      const queue = [[seq, 0]];
-      while (queue.length) {
-        const [seq, i] = queue.pop();
-        const part = seq[i];
-
-        // seq finished, tidy and yield it
-        if (typeof part === 'undefined') {
-          let newseq = seq;
-
-          handleSOT: {
-            const i = newseq.lastIndexOf(REGEX_TOKEN_SOT);
-            if (i !== -1) {
-              newseq = newseq.slice(i + 1);
-            } else {
-              newseq.unshift(TRIE_TOKEN_ANYCHARS);
-            }
-          }
-
-          handleEOT: {
-            const i = newseq.indexOf(REGEX_TOKEN_EOT);
-            if (i !== -1) {
-              newseq = newseq.slice(0, i);
-            } else {
-              newseq.push(TRIE_TOKEN_ANYCHARS);
-            }
-          }
-
-          let fixedseq = [];
-          for (const part of newseq) {
-            // prevent consecutive **, ***, ...
-            if (part === TRIE_TOKEN_ANYCHARS
-                && fixedseq[fixedseq.length - 1] === TRIE_TOKEN_ANYCHARS) {
-              continue;
-            }
-
-            // prevent consecutive *?*, *??*, ...
-            if (part === TRIE_TOKEN_ANYCHARS
-                && fixedseq[fixedseq.length - 1] === TRIE_TOKEN_ANYCHAR) {
-              let i = fixedseq.length - 2;
-              while (fixedseq[i] === TRIE_TOKEN_ANYCHAR) { i--; }
-              if (fixedseq[i] === TRIE_TOKEN_ANYCHARS) {
-                continue;
-              }
-            }
-            fixedseq.push(part);
-          }
-
-          yield fixedseq;
-          continue;
-        }
-
-        const subqueue = [];
-        if (part.alt) {
-          for (const subseq of part.alt) {
-            const newseq = seq.slice(0, i).concat(subseq).concat(seq.slice(i + 1));
-            subqueue.push([newseq, i]);
-          }
-        } else {
-          subqueue.push([seq, i + 1]);
-        }
-
-        // add to queue using reversed order
-        while (subqueue.length) {
-          queue.push(subqueue.pop());
-        }
-      }
     }
   }
 

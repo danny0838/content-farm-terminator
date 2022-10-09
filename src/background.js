@@ -136,34 +136,8 @@ async function updateFilter(changed = false) {
   return updateFilterPromise = (async () => {
     try {
       const options = await utils.getOptions();
-
       const newFilter = new ContentFarmFilter();
-      newFilter.addTransformRules(options.transformRules);
-      newFilter.addBlackList(options.userBlacklist);
-      newFilter.addWhiteList(options.userWhitelist);
-
-      // run one by one to prevent memory overload if the list is large
-      const urls = newFilter.urlsTextToLines(options.webBlacklists);
-      for (const url of urls) {
-        let {text} = await newFilter.getCachedWebBlackList(
-          url, options.webBlacklistsCacheDuration,
-        );
-
-        if (text === null && changed) {
-          try {
-            text = await newFilter.fetchWebBlackList(url);
-          } catch (ex) {
-            console.error(`Failed to fetch blacklist from "${url}": ${ex.message}`);
-          }
-        }
-
-        const rulesText = utils.getLines(text || '')
-          .map(rule => newFilter.parseRuleLine(rule).validate(true).toString())
-          .join('\n');
-        newFilter.addBlackList(rulesText, url);
-      }
-
-      newFilter.makeCachedRules();
+      await newFilter.init(options, changed);
       filter = newFilter;
 
       // async refresh tabs to prevent block
@@ -458,7 +432,7 @@ function initMessageListener() {
           args.transformRules = utils.getLines(args.transformRules)
             .map(rule => validator.parseTransformRuleLine(rule).validate().toString())
             .join('\n');
-          validator.addTransformRules(args.transformRules);
+          validator.addTransformRulesFromText(args.transformRules);
           args.userBlacklist = utils.getLines(args.userBlacklist)
             .map(rule => validator.transform(validator.parseRuleLine(rule), 'url').validate().toString())
             .join('\n');
