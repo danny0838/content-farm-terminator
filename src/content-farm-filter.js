@@ -551,8 +551,8 @@
 
     async clearStaleWebListCache(webListChange) {
       const {newValue, oldValue} = webListChange;
-      const urlSet = new Set(filter.urlsTextToLines(newValue));
-      const deletedUrls = filter.urlsTextToLines(oldValue).filter(u => !urlSet.has(u));
+      const urlSet = new Set(this.urlsTextToLines(newValue));
+      const deletedUrls = this.urlsTextToLines(oldValue).filter(u => !urlSet.has(u));
       await browser.storage.local.remove(deletedUrls.map(this.webListCacheKey));
     }
   }
