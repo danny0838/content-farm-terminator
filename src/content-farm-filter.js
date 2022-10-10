@@ -616,6 +616,9 @@
     }
   }
 
+  // Increase this whenever the compile format is changed.
+  const COMPILE_VERSION = 1;
+
   const BLOCK_TYPE_NONE     = 0;
   const BLOCK_TYPE_HOSTNAME = 1;
   const BLOCK_TYPE_URL      = 2;
@@ -625,47 +628,154 @@
       this._rules = new Map();
       this._buckets = new Map();
       this._transformRules = new Map();
-      this._listUpdated = true;
       this.urlTokenizer = new UrlTokenizer();
     }
 
-    async init(options, refetch = false) {
+    async init(options, optChanges) {
       this.addTransformRulesFromText(options.transformRules);
-      this.addRulesFromText(options.userBlacklist, {action: RULE_ACTION_BLOCK});
-      this.addRulesFromText(options.userWhitelist, {action: RULE_ACTION_UNBLOCK});
+
+      this.addBlocklist('userBlacklist', {
+        sourceText: options.userBlacklist,
+        ruleOptions: {action: RULE_ACTION_BLOCK},
+        cacheDuration: options.webBlacklistsCacheDuration,
+        renew: optChanges && optChanges.userBlacklist,
+      });
+      this.addBlocklist('userWhitelist', {
+        sourceText: options.userWhitelist,
+        ruleOptions: {action: RULE_ACTION_UNBLOCK},
+        cacheDuration: options.webBlacklistsCacheDuration,
+        renew: optChanges && optChanges.userWhitelist,
+      });
+
+      // calculate added urls
+      const addedUrls = new Set();
+      if (optChanges && optChanges.webBlacklists) {
+        const {newValue, oldValue} = optChanges.webBlacklists;
+        const urlSet = new Set(this.urlsTextToLines(oldValue));
+        for (const url of this.urlsTextToLines(newValue)) {
+          if (!urlSet.has(url)) {
+            addedUrls.add(url);
+          }
+        }
+      }
 
       // run one by one to prevent memory overload if the list is large
       const urls = this.urlsTextToLines(options.webBlacklists);
       for (const url of urls) {
-        let {text} = await this.getCachedWebBlackList(
-          url, options.webBlacklistsCacheDuration,
-        );
-
-        if (text === null && refetch) {
-          try {
-            text = await this.fetchWebBlackList(url);
-          } catch (ex) {
-            console.error(`Failed to fetch blacklist from "${url}": ${ex.message}`);
-          }
-        }
-
-        const rulesText = utils.getLines(text || '')
-          .map(rule => this.parseRuleLine(rule).validate(true).toString())
-          .join('\n');
-        this.addRulesFromText(rulesText, {action: RULE_ACTION_BLOCK});
+        this.addBlocklist(url, {
+          ruleOptions: {action: RULE_ACTION_BLOCK, src: url},
+          cacheDuration: options.webBlacklistsCacheDuration,
+          renew: addedUrls.has(url),
+        });
       }
-
-      this.makeCompiledRules();
     }
 
-    addRulesFromText(listText, options) {
-      for (const ruleLine of utils.getLines(listText)) {
-        const rule = this.parseRuleLine(ruleLine, options);
-        if (rule.type !== RULE_TYPE_NONE && !this._rules.has(rule.token)) {
-          this._rules.set(rule.token, rule);
+    async addBlocklist(urlOrName, {sourceText = null, ruleOptions, cacheDuration, renew}) {
+      let compiled;
+      try {
+        if (renew) {
+          throw new Error('force renew');
+        }
+        compiled = await this.getCompiledCache(urlOrName);
+      } catch (ex) {
+        let text = sourceText;
+        if (text === null) {
+          if (renew) {
+            try {
+              text = await this.fetchWebBlackList(urlOrName);
+            } catch (ex) {
+              console.error(`Failed to fetch blacklist from "${urlOrName}": ${ex.message}`);
+            }
+          } else {
+            ({text} = await this.getCachedWebBlackList(urlOrName, cacheDuration));
+          }
+        }
+        compiled = await this.compileBlocklist(urlOrName, text || '', ruleOptions);
+      }
+      if (!compiled) { return; }
+
+      this.addCompiledRules(compiled, ruleOptions);
+    }
+
+    async compileBlocklist(urlOrName, rulesText, options) {
+      const rv = {
+        version: COMPILE_VERSION,
+        time: Date.now(),
+        rules: [],
+      };
+
+      for (const ruleLine of utils.getLines(rulesText)) {
+        const rule = this.parseRuleLine(ruleLine, options).validate(true);
+        const compiled = {
+          rule: rule.rule,
+        };
+        switch (rule.type) {
+          case RULE_TYPE_PATTERN: {
+            compiled.tokenHash = this.urlTokenizer.extractTokenFromPattern(rule.pattern);
+            break;
+          }
+          case RULE_TYPE_REGEX: {
+            compiled.tokenHash = this.urlTokenizer.extractTokenFromRegex(rule.pattern);
+            break;
+          }
+          case RULE_TYPE_NONE: {
+            // remove invalid rules
+            continue;
+          }
+        }
+        rv.rules.push(compiled);
+      }
+
+      await this.setCompiledCache(urlOrName, rv);
+
+      return rv;
+    }
+
+    addCompiledRules(compiled, options) {
+      for (const {rule: ruleText, tokenHash} of compiled.rules) {
+        const rule = this.parseRuleLine(ruleText, options);
+        if (this._rules.has(rule.token)) { continue; }
+        this._rules.set(rule.token, rule);
+        switch (rule.type) {
+          case RULE_TYPE_REGEX: {
+            const bucket = this.setBucket(rule);
+            bucket.units = bucket.units || new Map();
+            let rules = bucket.units.get(tokenHash);
+            if (!rules) {
+              rules = new Set();
+              bucket.units.set(tokenHash, rules);
+            }
+            rules.add(rule);
+            this.urlTokenizer.knownTokens.add(tokenHash);
+            break;
+          }
+          case RULE_TYPE_PATTERN: {
+            const bucket = this.setBucket(rule);
+            bucket.units = bucket.units || new Map();
+            let rules = bucket.units.get(tokenHash);
+            if (!rules) {
+              rules = new Set();
+              bucket.units.set(tokenHash, rules);
+            }
+            rules.add(rule);
+            this.urlTokenizer.knownTokens.add(tokenHash);
+            break;
+          }
+          case RULE_TYPE_DOMAIN: {
+            const bucket = this.setBucket(rule);
+            bucket.dict = bucket.dict || new Map();
+            bucket.dict.set(rule.domain, rule);
+            break;
+          }
+          case RULE_TYPE_IPV4:
+          case RULE_TYPE_IPV6: {
+            const bucket = this.setBucket(rule);
+            bucket.dict = bucket.dict || new Map();
+            bucket.dict.set(rule.ip, rule);
+            break;
+          }
         }
       }
-      this._listUpdated = true;
     }
 
     addTransformRulesFromText(rulesText) {
@@ -865,8 +975,6 @@
           type: BLOCK_TYPE_NONE,
         };
 
-        this.makeCompiledRules();
-
         const {url: urlOrHostname, urlRedirected} = source;
         if (urlOrHostname) {
           let check = checkUrlOrHostname(urlOrHostname);
@@ -999,85 +1107,6 @@
       return false;
     }
 
-    makeCompiledRules(...args) {
-      const compileRegexRule = (rule) => {
-        try {
-          new RegExp(rule.pattern, rule.flags);
-        } catch (ex) {
-          console.error(`Invalid regex rule "${rule.rule}": ${ex.message}`);
-          return;
-        }
-        const tokenHash = this.urlTokenizer.extractTokenFromRegex(rule.pattern);
-        const bucket = this.setBucket(rule);
-        bucket.units = bucket.units || new Map();
-        let rules = bucket.units.get(tokenHash);
-        if (!rules) {
-          rules = new Set();
-          bucket.units.set(tokenHash, rules);
-        }
-        rules.add(rule);
-      };
-
-      const compilePatternRule = (rule) => {
-        const tokenHash = this.urlTokenizer.extractTokenFromPattern(rule.rule);
-        const bucket = this.setBucket(rule);
-        bucket.units = bucket.units || new Map();
-        let rules = bucket.units.get(tokenHash);
-        if (!rules) {
-          rules = new Set();
-          bucket.units.set(tokenHash, rules);
-        }
-        rules.add(rule);
-      };
-
-      const compileDomainRule = (rule) => {
-        const bucket = this.setBucket(rule);
-        bucket.dict = bucket.dict || new Map();
-        bucket.dict.set(rule.domain, rule);
-      };
-
-      const compileIpRule = (rule) => {
-        const bucket = this.setBucket(rule);
-        bucket.dict = bucket.dict || new Map();
-        bucket.dict.set(rule.ip, rule);
-      };
-
-      const fn = this.makeCompiledRules = () => {
-        if (!this._listUpdated) { return; }
-        this._listUpdated = false;
-        for (const [, rule] of this._rules) {
-          let compiler;
-          switch (rule.type) {
-            case RULE_TYPE_REGEX: {
-              compiler = compileRegexRule;
-              break;
-            }
-            case RULE_TYPE_PATTERN: {
-              compiler = compilePatternRule;
-              break;
-            }
-            case RULE_TYPE_DOMAIN: {
-              compiler = compileDomainRule;
-              break;
-            }
-            case RULE_TYPE_IPV4: {
-              compiler = compileIpRule;
-              break;
-            }
-            case RULE_TYPE_IPV6: {
-              compiler = compileIpRule;
-              break;
-            }
-          }
-          if (compiler) {
-            compiler(rule);
-          }
-        }
-      };
-
-      return fn(...args);
-    }
-
     getBucket(key) {
       return this._buckets.get(key);
     }
@@ -1109,13 +1138,39 @@
     async setWebListCache(url, data) {
       const key = this.webListCacheKey(url);
       await browser.storage.local.set({[key]: data});
+
+      // remove the compiled version as it's no longer uptodate
+      await browser.storage.local.remove(this.compiledCacheKey(url));
     }
 
     async clearStaleWebListCache(webListChange) {
       const {newValue, oldValue} = webListChange;
       const urlSet = new Set(this.urlsTextToLines(newValue));
       const deletedUrls = this.urlsTextToLines(oldValue).filter(u => !urlSet.has(u));
-      await browser.storage.local.remove(deletedUrls.map(this.webListCacheKey));
+      const keys = [];
+      for (const url of deletedUrls) {
+        keys.push(this.webListCacheKey(url));
+        keys.push(this.compiledCacheKey(url));
+      }
+      await browser.storage.local.remove(keys);
+    }
+
+    compiledCacheKey(urlOrName) {
+      return `cache/blocklist/compiled/${urlOrName}`;
+    }
+
+    async getCompiledCache(urlOrName) {
+      const key = this.compiledCacheKey(urlOrName);
+      const data = (await browser.storage.local.get(key))[key];
+      if (data.version !== COMPILE_VERSION) {
+        throw new Error(`Unsupported version for ${urlOrName}: ${data.version}`);
+      }
+      return data;
+    }
+
+    async setCompiledCache(urlOrName, data) {
+      const key = this.compiledCacheKey(urlOrName);
+      await browser.storage.local.set({[key]: data});
     }
   }
 

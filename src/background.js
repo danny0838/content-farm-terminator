@@ -132,12 +132,12 @@ async function refreshTabs() {
   }));
 }
 
-async function updateFilter(changed = false) {
+async function updateFilter(optChanges) {
   return updateFilterPromise = (async () => {
     try {
       const options = await utils.getOptions();
       const newFilter = new ContentFarmFilter();
-      await newFilter.init(options, changed);
+      await newFilter.init(options, optChanges);
       filter = newFilter;
 
       // async refresh tabs to prevent block
@@ -514,7 +514,7 @@ function initStorageChangeListener() {
         "transformRules",
       ].filter(x => x in changes);
       if (listOptions.length) {
-        await updateFilter(true);
+        await updateFilter(changes);
 
         // @TODO:
         // Say we have a shift from local to sync:
