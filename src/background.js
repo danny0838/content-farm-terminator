@@ -452,12 +452,6 @@ function initMessageListener() {
           return true;
         })();
       }
-      case 'getWebBlacklists': {
-        return (async () => {
-          await updateFilterPromise;
-          return filter.getWebBlacklists();
-        })();
-      }
       case 'updateOptions': {
         return (async () => {
           const validator = new ContentFarmFilter();

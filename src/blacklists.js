@@ -1,14 +1,11 @@
 async function showAllBlacklists() {
-  const blacklists = await browser.runtime.sendMessage({
-    cmd: 'getWebBlacklists',
-  });
-
+  const {webBlacklists} = await utils.getOptions(["webBlacklists"]);
+  const handler = new ContentFarmFilter();
+  const urls = handler.urlsTextToLines(webBlacklists);
   const wrapper = document.body.appendChild(document.createElement('ul'));
-
-  for (const url of blacklists) {
-    const u = new URL(browser.runtime.getURL('blacklists.html'));
+  const u = new URL(browser.runtime.getURL('blacklists.html'));
+  for (const url of urls) {
     u.searchParams.set('url', url);
-
     const li = wrapper.appendChild(document.createElement('li'));
     const anchor = li.appendChild(document.createElement('a'));
     anchor.textContent = url;

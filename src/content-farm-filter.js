@@ -243,20 +243,15 @@
     constructor() {
       this._listUpdated = true;
       this._blacklist = {
-        sources: [],
         rules: new Map(),
       };
       this._whitelist = {
-        sources: [],
         rules: new Map(),
       };
       this._transformRules = new Map();
     }
 
     addBlockList(blockList, listText, url) {
-      if (url) {
-        blockList.sources.push(url);
-      }
       for (const ruleLine of utils.getLines(listText)) {
         const rule = this.parseRuleLine(ruleLine);
         if (url) {
@@ -605,10 +600,6 @@
       };
 
       return fn(...args);
-    }
-
-    getWebBlacklists() {
-      return this._blacklist.sources;
     }
 
     webListCacheKey(url) {
