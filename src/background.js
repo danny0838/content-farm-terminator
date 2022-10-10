@@ -458,12 +458,6 @@ function initMessageListener() {
           return filter.getWebBlacklists();
         })();
       }
-      case 'getMergedBlacklist': {
-        return (async () => {
-          await updateFilterPromise;
-          return filter.getMergedBlacklist();
-        })();
-      }
       case 'updateOptions': {
         return (async () => {
           const validator = new ContentFarmFilter();

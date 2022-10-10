@@ -244,12 +244,10 @@
       this._listUpdated = true;
       this._blacklist = {
         sources: [],
-        rawRules: [],
         rules: new Map(),
       };
       this._whitelist = {
         sources: [],
-        rawRules: [],
         rules: new Map(),
       };
       this._transformRules = new Map();
@@ -264,7 +262,6 @@
         if (url) {
           rule.src = url;
         }
-        blockList.rawRules.push(rule);
         if (rule.type !== null && !blockList.rules.has(rule.rule)) {
           blockList.rules.set(rule.rule, rule);
         }
@@ -612,15 +609,6 @@
 
     getWebBlacklists() {
       return this._blacklist.sources;
-    }
-
-    getMergedBlacklist() {
-      return this._blacklist.rawRules.reduce((rv, rule) => {
-        if (rule.rule) {
-          rv.push([rule.rule, rule.sep, rule.comment].join(''));
-        }
-        return rv;
-      }, []).join('\n');
     }
 
     webListCacheKey(url) {

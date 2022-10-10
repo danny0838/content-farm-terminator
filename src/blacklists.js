@@ -5,16 +5,6 @@ async function showAllBlacklists() {
 
   const wrapper = document.body.appendChild(document.createElement('ul'));
 
-  addAllListsLink: {
-    const u = new URL(browser.runtime.getURL('blacklists.html'));
-    u.searchParams.set('url', '*');
-
-    const li = wrapper.appendChild(document.createElement('li'));
-    const anchor = li.appendChild(document.createElement('a'));
-    anchor.textContent = utils.lang('blacklistsAllLabel');
-    anchor.href = u.href;
-  }
-
   for (const url of blacklists) {
     const u = new URL(browser.runtime.getURL('blacklists.html'));
     u.searchParams.set('url', url);
@@ -24,15 +14,6 @@ async function showAllBlacklists() {
     anchor.textContent = url;
     anchor.href = u.href;
   }
-}
-
-async function showMergedBlacklists() {
-  document.title = utils.lang('blacklistsAllTitle');
-  const blacklist = await browser.runtime.sendMessage({
-    cmd: 'getMergedBlacklist',
-  });
-  const pre = document.body.appendChild(document.createElement('pre'));
-  pre.textContent = blacklist;
 }
 
 async function showCachedBlocklist(url) {
@@ -53,8 +34,6 @@ async function init(event) {
 
   if (!sourceUrl) {
     await showAllBlacklists();
-  } else if (sourceUrl === '*') {
-    await showMergedBlacklists();
   } else {
     await showCachedBlocklist(sourceUrl);
   }

@@ -207,16 +207,6 @@
     "description": "Label of the rule source for the recently blocked URL in options page"
   },
 
-  "allBlacklist": {
-    "message": "作用中的黑名單",
-    "description": "Label of allBlacklist field in options page"
-  },
-
-  "allBlacklistLink": {
-    "message": "檢視已載入的黑名單",
-    "description": "Label of the link of allBlacklist field in options page"
-  },
-
   "webBlacklists": {
     "message": "網路黑名單",
     "description": "Label of webBlacklists field in options page"
@@ -232,9 +222,14 @@
     "description": "Placeholder of webBlacklists field in options page"
   },
 
-  "webBlacklistsLink": {
+  "webBlacklistsLinkView": {
+    "message": "檢視已載入的黑名單",
+    "description": "Label of the link to all blacklists in options page"
+  },
+
+  "webBlacklistsLinkSubscribe": {
     "message": "我們的網路黑名單",
-    "description": "Label of the link to web blacklists page"
+    "description": "Label of the link to subscribable web blacklists in options page"
   },
 
   "userBlacklist": {
@@ -365,15 +360,5 @@
   "blacklistsTitle": {
     "message": "已載入的黑名單",
     "description": "Title of allBlacklists page"
-  },
-
-  "blacklistsAllTitle": {
-    "message": "作用中的規則",
-    "description": "Title of allBlacklists page when viewing merged blacklists"
-  },
-
-  "blacklistsAllLabel": {
-    "message": "檢視作用中的規則",
-    "description": "Label for the link of viewing merged blacklists of allBlacklists page"
   }
 }
