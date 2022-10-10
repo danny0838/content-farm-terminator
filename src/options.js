@@ -69,6 +69,60 @@ async function onSubmit(event) {
   await utils.back();
 }
 
+async function showInfo() {
+  const searchParams = new URL(location.href).searchParams;
+  const url = searchParams.get('url');
+  const referrer = searchParams.get('ref');
+  const blockType = parseInt(searchParams.get('type'), 10);
+
+  if (!url) { return; }
+
+  if (url.startsWith('https:') || url.startsWith('http:')) {
+    const urlRegex = `/^${utils.escapeRegExp(url, true)}$/`;
+    document.querySelector('#infoUrl dd').textContent = url;
+    document.querySelector('#infoUrlRegex dd').textContent = urlRegex;
+    document.querySelector('#infoUrl').hidden = false;
+    document.querySelector('#infoUrlRegex').hidden = false;
+  }
+
+  if (referrer && (referrer.startsWith('https:') || referrer.startsWith('http:'))) {
+    const referrerRegex = `/^${utils.escapeRegExp(referrer, true)}$/`;
+    document.querySelector('#infoUrlReferrer dd').textContent = referrer;
+    document.querySelector('#infoUrlReferrerRegex dd').textContent = referrerRegex;
+    document.querySelector('#infoUrlReferrer').hidden = false;
+    document.querySelector('#infoUrlReferrerRegex').hidden = false;
+  }
+
+  if (blockType > 0) {
+    document.querySelector('#infoUrl dt').textContent = utils.lang('infoUrlBlocked');
+    document.querySelector('#infoUrlRegex dt').textContent = utils.lang('infoUrlBlockedRegex');
+
+    const blocker = await browser.runtime.sendMessage({
+      cmd: 'getBlocker',
+      args: {url},
+    });
+
+    const rule = blocker.rule;
+    if (!rule) {
+      // this shouldn't happen
+      return;
+    }
+
+    document.querySelector('#infoUrlBlocker').hidden = false;
+    document.querySelector('#infoUrlBlockerSrc').hidden = false;
+    document.querySelector('#infoUrlBlocker dd').textContent = [rule.rule, rule.sep, rule.comment].join('');
+
+    if (rule.src) {
+      const u = new URL(browser.runtime.getURL('blacklists.html'));
+      u.searchParams.set('url', rule.src);
+
+      const anchor = document.querySelector('#infoUrlBlockerSrc dd').appendChild(document.createElement('a'));
+      anchor.textContent = rule.src;
+      anchor.href = u.href;
+    }
+  }
+}
+
 async function init(event) {
   document.querySelector('#resetButton').addEventListener('click', onReset);
   document.querySelector('#submitButton').addEventListener('click', onSubmit);
@@ -93,61 +147,7 @@ async function init(event) {
   }
 
   loadOptions(); // async
-
-  const searchParams = new URL(location.href).searchParams;
-
-  {
-    const url = searchParams.get('url');
-    if (url) {
-      const urlRegex = `/^${utils.escapeRegExp(url, true)}$/`;
-      document.querySelector('#infoUrl dd').textContent = url;
-      document.querySelector('#infoUrlRegex dd').textContent = urlRegex;
-      document.querySelector('#infoUrl').hidden = false;
-      document.querySelector('#infoUrlRegex').hidden = false;
-
-      const blockType = parseInt(searchParams.get('type'), 10);
-      if (blockType > 0) {
-        document.querySelector('#infoUrl dt').textContent = utils.lang('infoUrlBlocked');
-        document.querySelector('#infoUrlRegex dt').textContent = utils.lang('infoUrlBlockedRegex');
-
-        (async () => {
-          const blocker = await browser.runtime.sendMessage({
-            cmd: 'getBlocker',
-            args: {url},
-          });
-
-          const rule = blocker.rule;
-          if (!rule) {
-            // this shouldn't happen
-            return;
-          }
-
-          document.querySelector('#infoUrlBlocker').hidden = false;
-          document.querySelector('#infoUrlBlockerSrc').hidden = false;
-          document.querySelector('#infoUrlBlocker dd').textContent = [rule.rule, rule.sep, rule.comment].join('');
-          if (rule.src) {
-            const u = new URL(browser.runtime.getURL('blacklists.html'));
-            u.searchParams.set('url', rule.src);
-
-            const anchor = document.querySelector('#infoUrlBlockerSrc dd').appendChild(document.createElement('a'));
-            anchor.textContent = rule.src;
-            anchor.href = u.href;
-          }
-        })();
-      }
-    }
-  }
-
-  {
-    const url = searchParams.get('ref');
-    if (url) {
-      const urlRegex = `/^${utils.escapeRegExp(url, true)}$/`;
-      document.querySelector('#infoUrlReferrer dd').textContent = url;
-      document.querySelector('#infoUrlReferrerRegex dd').textContent = urlRegex;
-      document.querySelector('#infoUrlReferrer').hidden = false;
-      document.querySelector('#infoUrlReferrerRegex').hidden = false;
-    }
-  }
+  showInfo(); // async
 }
 
 document.addEventListener('DOMContentLoaded', init);
