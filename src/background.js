@@ -469,6 +469,24 @@ function initMessageListener() {
           return true;
         })();
       }
+      case 'getTabInfo': {
+        return (async () => {
+          const tab = await browser.tabs.get(args.tabId);
+
+          let referrer;
+          try {
+            referrer = await browser.tabs.sendMessage(tab.id, {
+              cmd: 'getReferrer',
+            });
+          } catch (ex) {}
+
+          return {
+            title: tab.title,
+            url: tab.url,
+            referrer,
+          };
+        })();
+      }
       case 'closeTab': {
         return (async () => {
           const tabIds = args.tabId ? [args.tabId] : await browser.tabs.query({
@@ -582,18 +600,9 @@ function initBrowserAction() {
   }
 
   browser.browserAction.onClicked.addListener((tab) => {
-    let url;
-    try {
-      const refUrlObj = new URL(tab.url);
-      if (!(refUrlObj.protocol === 'http:' || refUrlObj.protocol === 'https:')) {
-        throw new Error('URL not under http(s) protocol.');
-      }
-      const refUrl = utils.getNormalizedUrl(refUrlObj);
-      url = browser.runtime.getURL("options.html") + `?url=${encodeURIComponent(refUrl)}`;
-    } catch (ex) {
-      url = browser.runtime.getURL("options.html");
-    }
-    browser.tabs.create({url: url, active: true});
+    const u = new URL(browser.runtime.getURL("options.html"));
+    u.searchParams.set('t', tab.id);
+    browser.tabs.create({url: u.href, active: true});
   });
 }
 

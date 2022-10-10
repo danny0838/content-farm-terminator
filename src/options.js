@@ -71,9 +71,20 @@ async function onSubmit(event) {
 
 async function showInfo() {
   const searchParams = new URL(location.href).searchParams;
-  const url = searchParams.get('url');
-  const referrer = searchParams.get('ref');
+
+  const tabId = parseInt(searchParams.get('t'), 10);
+  let url = searchParams.get('url');
+  let referrer = searchParams.get('ref');
   const blockType = parseInt(searchParams.get('type'), 10);
+
+  if (Number.isInteger(tabId)) {
+    const tab = await browser.runtime.sendMessage({
+      cmd: 'getTabInfo',
+      args: {tabId},
+    });
+    url = tab.url;
+    referrer = tab.referrer;
+  }
 
   if (!url) { return; }
 

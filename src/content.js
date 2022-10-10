@@ -523,6 +523,9 @@ function initMessageListener() {
         const anchor = lastRightClickedElem.closest('a[href], area[href]');
         return getRedirectedUrlOrHostname(anchor);
       }
+      case 'getReferrer': {
+        return Promise.resolve(document.referrer);
+      }
       case 'alert': {
         alert(args.msg);
         return Promise.resolve(true);
