@@ -533,7 +533,7 @@ function initBrowserAction() {
         throw new Error('URL not under http(s) protocol.');
       }
       const refUrl = utils.getNormalizedUrl(refUrlObj);
-      url = browser.runtime.getURL("options.html") + `?from=${encodeURIComponent(refUrl)}`;
+      url = browser.runtime.getURL("options.html") + `?url=${encodeURIComponent(refUrl)}`;
     } catch (ex) {
       url = browser.runtime.getURL("options.html");
     }
