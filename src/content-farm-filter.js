@@ -60,6 +60,7 @@
 
   const RULE_ACTION_BLOCK     = 0 << 4;
   const RULE_ACTION_UNBLOCK   = 1 << 4;
+  const RULE_ACTION_NOOP      = 2 << 4;
 
   class Rule {
     constructor(text, {action = RULE_ACTION_BLOCK, src = null} = {}) {
@@ -634,6 +635,12 @@
     async init(options, optChanges) {
       this.addTransformRulesFromText(options.transformRules);
 
+      this.addBlocklist('userGraylist', {
+        sourceText: options.userGraylist,
+        ruleOptions: {action: RULE_ACTION_NOOP},
+        cacheDuration: options.webBlacklistsCacheDuration,
+        renew: optChanges && optChanges.userGraylist,
+      });
       this.addBlocklist('userBlacklist', {
         sourceText: options.userBlacklist,
         ruleOptions: {action: RULE_ACTION_BLOCK},

@@ -152,7 +152,7 @@
   },
 
   "unblockBtnPrompt": {
-    "message": "内容农场的资讯大多缺乏查证、质量参差不齐、且可能含有不良广告或恶意程序，进入前请三思。\n* 如果想调查页面内容，可使用 [查看] 功能，以免受到恶意程序攻击，且能避免农场主得到广告收益。解锁只建议用于 [查看] 功能无法正常运作的网站。\n* 如果认为此站台不是内容农场，或基于其他理由不想继续封锁，可将网址加入白名单或从黑名单移除。\n\n若确定要暂时解锁此页面，请输入验证码：$key$",
+    "message": "内容农场的资讯大多缺乏查证、质量参差不齐、且可能含有不良广告或恶意程序，进入前请三思。\n* 如果想调查页面内容，可使用 [查看] 功能，以免受到恶意程序攻击，且能避免农场主得到广告收益。解锁只建议用于 [查看] 功能无法正常运作的网站。\n* 如果认为此站台不是内容农场，或基于其他理由不想继续封锁，可将网址从黑名单移除或加入灰、白名单。\n\n若确定要暂时解锁此页面，请输入验证码：$key$",
     "description": "Prompt message of unblock button in blocked page",
     "placeholders": {
       "key": {
@@ -253,13 +253,28 @@
   },
 
   "userWhitelistDesc": {
-    "message": "想解除屏蔽的网站名单。每行一个。输入网址会自动修正。",
+    "message": "想解除屏蔽的网站名单。这些网站即使被列入黑名单也不会被屏蔽。每行一个。输入网址会自动修正。",
     "description": "Description of userWhitelist field in options page"
   },
 
   "userWhitelistPlaceholder": {
     "message": "example.com (示例)",
     "description": "Placeholder of userWhitelist field in options page"
+  },
+
+  "userGraylist": {
+    "message": "自订灰名单",
+    "description": "Label of userGraylist field in options page"
+  },
+
+  "userGraylistDesc": {
+    "message": "想消除的规则。可使网络黑名单中的相同规则失效。每行一个。输入网址会自动修正。",
+    "description": "Description of userGraylist field in options page"
+  },
+
+  "userGraylistPlaceholder": {
+    "message": "example.com (示例)",
+    "description": "Placeholder of userGraylist field in options page"
   },
 
   "transformRules": {

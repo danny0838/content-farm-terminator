@@ -152,7 +152,7 @@
   },
 
   "unblockBtnPrompt": {
-    "message": "Information from a content farm is usually unverified and questionable, and malicious ads and/or scripts could reside. Please think carefully before entering.\n* Try View if you intend to investigate the page content, and Unlock only for cases that View cannot work as expected.\n* Add the URL to the whitelist (or remove from the blacklist) if you don't think this site is a content farm or you intend not to keep blocking it for any reason.\n\nTo still unblock this page, input the following passcode: $key$",
+    "message": "Information from a content farm is usually unverified and questionable, and malicious ads and/or scripts could reside. Please think carefully before entering.\n* Try View if you intend to investigate the page content, and Unlock only for cases that View cannot work as expected.\n* Add the URL to the graylist/whitelist (or remove from the blacklist) if you don't think this site is a content farm or you intend not to keep blocking it for any reason.\n\nTo still unblock this page, input the following passcode: $key$",
     "description": "Prompt message of unblock button in blocked page",
     "placeholders": {
       "key": {
@@ -253,13 +253,28 @@
   },
 
   "userWhitelistDesc": {
-    "message": "List of sites to unblock. One entry per line. URLs will be auto-corrected.",
+    "message": "List of sites to unblock. Such sites won't be blocked even if blacklisted. One entry per line. URLs will be auto-corrected.",
     "description": "Description of userWhitelist field in options page"
   },
 
   "userWhitelistPlaceholder": {
     "message": "example.com (demo)",
     "description": "Placeholder of userWhitelist field in options page"
+  },
+
+  "userGraylist": {
+    "message": "User Graylist",
+    "description": "Label of userGraylist field in options page"
+  },
+
+  "userGraylistDesc": {
+    "message": "List of rules to nullify. Such rule disables identical web blacklist rules. One entry per line. URLs will be auto-corrected.",
+    "description": "Description of userGraylist field in options page"
+  },
+
+  "userGraylistPlaceholder": {
+    "message": "example.com (demo)",
+    "description": "Placeholder of userGraylist field in options page"
   },
 
   "transformRules": {

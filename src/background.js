@@ -439,6 +439,9 @@ function initMessageListener() {
           args.userWhitelist = utils.getLines(args.userWhitelist)
             .map(rule => validator.transform(validator.parseRuleLine(rule),'url').validate().toString())
             .join('\n');
+          args.userGraylist = utils.getLines(args.userGraylist)
+            .map(rule => validator.transform(validator.parseRuleLine(rule),'url').validate().toString())
+            .join('\n');
           await utils.setOptions(args);
           return true;
         })();
@@ -511,6 +514,7 @@ function initStorageChangeListener() {
         "webBlacklists",
         "userBlacklist",
         "userWhitelist",
+        "userGraylist",
         "transformRules",
       ].filter(x => x in changes);
       if (listOptions.length) {

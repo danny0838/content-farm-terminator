@@ -2,6 +2,7 @@ async function loadOptions() {
   const options = await utils.getOptions();
   document.querySelector('#userBlacklist textarea').value = options.userBlacklist;
   document.querySelector('#userWhitelist textarea').value = options.userWhitelist;
+  document.querySelector('#userGraylist textarea').value = options.userGraylist;
   document.querySelector('#webBlacklists textarea').value = options.webBlacklists;
   document.querySelector('#transformRules textarea').value = options.transformRules;
   document.querySelector('#suppressHistory input').checked = options.suppressHistory;
@@ -14,6 +15,7 @@ async function loadOptions() {
 async function saveOptions() {
   const userBlacklist = document.querySelector('#userBlacklist textarea').value;
   const userWhitelist = document.querySelector('#userWhitelist textarea').value;
+  const userGraylist = document.querySelector('#userGraylist textarea').value;
   const webBlacklists = document.querySelector('#webBlacklists textarea').value;
   const transformRules = document.querySelector('#transformRules textarea').value;
   let suppressHistory = document.querySelector('#suppressHistory input').checked;
@@ -43,6 +45,7 @@ async function saveOptions() {
     args: {
       userBlacklist,
       userWhitelist,
+      userGraylist,
       webBlacklists,
       transformRules,
       suppressHistory,
