@@ -547,9 +547,44 @@ function initInstallListener() {
       if (options.webBlacklist && (typeof options.webBlacklists === "undefined")) {
         const newWebBlacklists = utils.defaultOptions.webBlacklists + "\n" + options.webBlacklist;
         await utils.setOptions({webBlacklists: newWebBlacklists});
-        await updateFilter(true);
       }
       console.warn("Migrated successfully.");
+    }
+
+    if (reason === "update" && utils.versionCompare(previousVersion, "5.7.0") === -1) {
+      console.warn("Migrating options from < 5.7.0");
+      const {webBlacklists} = await utils.getOptions('webBlacklists');
+      if (webBlacklists) {
+        // force re-fetch web blacklists
+        const changes = {
+          webBlacklists: {
+            oldValue: '',
+            newValue: webBlacklists,
+          },
+        };
+        await updateFilter(changes);
+
+        // delete old cache
+        const oldKeys = filter.urlsTextToLines(webBlacklists).map(url => JSON.stringify({webBlocklistCache: url}));
+        await browser.storage.local.remove(oldKeys);
+      }
+      console.warn("Migrated successfully.");
+    }
+
+    if (reason === "install") {
+      console.warn("Fetching web blacklists on installation...");
+      const {webBlacklists} = await utils.getOptions('webBlacklists');
+      if (webBlacklists) {
+        // force fetch web blacklists
+        const changes = {
+          webBlacklists: {
+            oldValue: '',
+            newValue: webBlacklists,
+          },
+        };
+        await updateFilter(changes);
+      }
+      console.warn("Fetched successfully.");
     }
   });
 }
