@@ -618,7 +618,7 @@
   }
 
   // Increase this whenever the compile format is changed.
-  const COMPILE_VERSION = 1;
+  const COMPILE_VERSION = 2;
 
   const BLOCK_TYPE_NONE     = 0;
   const BLOCK_TYPE_HOSTNAME = 1;
@@ -714,7 +714,7 @@
       for (const ruleLine of utils.getLines(rulesText)) {
         const rule = this.parseRuleLine(ruleLine, options).validate(true);
         const compiled = {
-          rule: rule.rule,
+          rule: `${rule.rule}${rule.comment ? ' ' + rule.comment : ''}`,
         };
         switch (rule.type) {
           case RULE_TYPE_PATTERN: {
