@@ -452,10 +452,6 @@ build:
         Homepage: https://danny0838.github.io/content-farm-terminator/
         Licence: MIT License
         Source: https://danny0838.github.io/content-farm-terminator/files/blocklist-ubo/content-farms.txt
-      processors: &content_farms_processors_ubo
-        - type: domain
-          pattern: ^\*\.([\w.-]+)$
-          replacement: domain-suffix:\1
       schemes: &content_farms_schemes_ubo
         <<: *content_farms_schemes
         domain-part:
@@ -464,9 +460,6 @@ build:
         domain-path:
           value: "||{value}^$document"
           mode: raw
-        domain-suffix:
-          <<: *grouping_regex_scheme
-          value: /https?://(?:www\.|(?!www\.))[\w.-]+\.(?:{value})(?=[:/?#]|$)/
 
   - source: src/blocklist/nearly-content-farms.txt
     publish: docs/files/blocklist-ubo/nearly-content-farms.txt
@@ -480,7 +473,6 @@ build:
         Homepage: https://danny0838.github.io/content-farm-terminator/
         Licence: MIT License
         Source: https://danny0838.github.io/content-farm-terminator/files/blocklist-ubo/nearly-content-farms.txt
-      processors: *content_farms_processors_ubo
       schemes: *content_farms_schemes_ubo
 
   - source:
@@ -497,7 +489,6 @@ build:
         Homepage: https://danny0838.github.io/content-farm-terminator/
         Licence: MIT License
         Source: https://danny0838.github.io/content-farm-terminator/files/blocklist-ubo/extra-content-farms.txt
-      processors: *content_farms_processors_ubo
       schemes: *content_farms_schemes_ubo
 
   - source: src/blocklist/sns-content-farms.txt
@@ -533,7 +524,6 @@ build:
         Homepage: https://danny0838.github.io/content-farm-terminator/
         Licence: MIT License
         Source: https://danny0838.github.io/content-farm-terminator/files/blocklist-ubo/bad-cloners.txt
-      processors: *content_farms_processors_ubo
       schemes: *content_farms_schemes_ubo
 
   - source: src/blocklist/fake-news.txt
@@ -549,7 +539,6 @@ build:
         Homepage: https://danny0838.github.io/content-farm-terminator/
         Licence: MIT License
         Source: https://danny0838.github.io/content-farm-terminator/files/blocklist-ubo/fake-news.txt
-      processors: *content_farms_processors_ubo
       schemes: *content_farms_schemes_ubo
 
   - source: src/blocklist/scam-sites.txt
@@ -566,7 +555,6 @@ build:
         Homepage: https://danny0838.github.io/content-farm-terminator/
         Licence: MIT License
         Source: https://danny0838.github.io/content-farm-terminator/files/blocklist-ubo/scam-sites.txt
-      processors: *content_farms_processors_ubo
       schemes: *content_farms_schemes_ubo
 
   - source:
@@ -584,9 +572,6 @@ build:
         Source: https://danny0838.github.io/content-farm-terminator/files/blocklist-ublacklist/content-farms.txt
       processors: &content_farms_processors_ublacklist
         - type: domain
-          pattern: ^\*\.([\w.-]+)$
-          replacement: domain-suffix:\1
-        - type: domain
           pattern: ^([\w-]+)\.blogspot\.\*$
           replacement: blogspot:\1
       schemes: &content_farms_schemes_ublacklist
@@ -597,9 +582,6 @@ build:
         domain-path:
           value: "*://*.{value}\n*://*.{value}/*"
           mode: raw
-        domain-suffix:
-          <<: *grouping_regex_scheme
-          value: /https?://(?:www\.|(?!www\.))[\w.-]+\.(?:{value})(?=[:/?#]|$)/
         mp-path:
           value: '*://*/{value}'
           mode: raw

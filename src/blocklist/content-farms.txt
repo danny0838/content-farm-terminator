@@ -1,4 +1,4 @@
-*.y2mate.com
+/^https?://(?!www\.)(?:[\w.-]+\.)+y2mate\.com//
 /^https?://www\.ettoday\.net/dalemon/
 00000258.com
 001553.cn  #redirects to g.penzai.com
