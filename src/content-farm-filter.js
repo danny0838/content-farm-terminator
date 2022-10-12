@@ -618,7 +618,7 @@
   }
 
   // Increase this whenever the compile format is changed.
-  const COMPILE_VERSION = 2;
+  const COMPILE_VERSION = 3;
 
   const BLOCK_TYPE_NONE     = 0;
   const BLOCK_TYPE_HOSTNAME = 1;
@@ -713,16 +713,18 @@
 
       for (const ruleLine of utils.getLines(rulesText)) {
         const rule = this.parseRuleLine(ruleLine, options).validate(true);
-        const compiled = {
-          rule: `${rule.rule}${rule.comment ? ' ' + rule.comment : ''}`,
-        };
+        const compiled = [
+          `${rule.rule}${rule.comment ? ' ' + rule.comment : ''}`, // 0: rule
+          DOT_TOKEN_HASH, // 1: tokenHash
+        ];
+
         switch (rule.type) {
           case RULE_TYPE_PATTERN: {
-            compiled.tokenHash = this.urlTokenizer.extractTokenFromPattern(rule.pattern);
+            compiled[1] = this.urlTokenizer.extractTokenFromPattern(rule.pattern);
             break;
           }
           case RULE_TYPE_REGEX: {
-            compiled.tokenHash = this.urlTokenizer.extractTokenFromRegex(rule.pattern);
+            compiled[1] = this.urlTokenizer.extractTokenFromRegex(rule.pattern);
             break;
           }
           case RULE_TYPE_NONE: {
@@ -739,7 +741,7 @@
     }
 
     addCompiledRules(compiled, options) {
-      for (const {rule: ruleText, tokenHash} of compiled.rules) {
+      for (const [ruleText, tokenHash] of compiled.rules) {
         const rule = this.parseRuleLine(ruleText, options);
         if (this._rules.has(rule.token)) { continue; }
         this._rules.set(rule.token, rule);
