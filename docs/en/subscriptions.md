@@ -10,7 +10,7 @@ Usage: Copy the link of a blacklist and paste into the web blacklists field in t
 
 * [Content farm list](../files/blocklist/content-farms.txt): The blacklist subscribed by default. This includes most general content farms characterized mainly by massive plagiarism and keyword stuffing. The criteria may also be updated with regard to [Google's description of spam sites](https://support.google.com/webmasters/answer/35769?hl=en).
 
-* [Nearly content farm list](../files/blocklist/nearly-content-farms.txt): Sites that look like a content farm. This includes suspected and borderline content farms and may be subjective. Check the comments in the list and add unwanted sites to the whitelist. Not recommended for a user without debugging capability.
+* [Nearly content farm list](../files/blocklist/nearly-content-farms.txt): Sites that look like a content farm. This includes suspected and borderline content farms and may be rather subjective. Check the comments in the list and exclude unwanted rules/sites using the graylist/whitelist on demand. Not recommended for a user without debugging capability.
 
 * [Extra content farm list](../files/blocklist/extra-content-farms.txt): Extra sites that look like a content farm. This list is mainly aggregated from third-party sources and may be subjective, and some rules may duplicate other lists. Not recommended for a user without debugging capability.
 
