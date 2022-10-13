@@ -455,10 +455,10 @@ build:
       schemes: &content_farms_schemes_ubo
         <<: *content_farms_schemes
         domain-part:
-          value: "||{value}^\n||{value}.*^$document"
+          value: "||{value}^\n||{value}.*^$doc"
           mode: raw
         domain-path:
-          value: "||{value}^$document"
+          value: "||{value}^$doc"
           mode: raw
 
   - source: src/blocklist/nearly-content-farms.txt

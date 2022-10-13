@@ -887,14 +887,14 @@ class ConverterUbo(Converter):
 
         if rule.type == 'regex':
             regex = rule.rule
-            print(f'{regex}$document{comment}')
+            print(f'{regex}$doc{comment}')
 
         elif rule.type in ('domain', 'ipv4', 'ipv6'):
             domain = rule.rule
             if '*' in domain:
-                print(f'||{domain}^$document{comment}')
+                print(f'||{domain}^$doc{comment}')
             else:
-                print(f'||{domain}^{comment}')
+                print(f'{domain}{comment}')
 
         elif rule.type == 'raw':
             print(f'{rule.rule}{comment}')
