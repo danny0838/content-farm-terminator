@@ -889,7 +889,7 @@ class ConverterUbo(Converter):
             regex = rule.rule
             print(f'{regex}$doc{comment}')
 
-        elif rule.type in ('domain', 'ipv4', 'ipv6'):
+        elif rule.type in ('domain', 'ipv4'):
             domain = rule.rule
             if '*' in domain:
                 print(f'||{domain}^$doc{comment}')
