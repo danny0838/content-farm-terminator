@@ -1,6 +1,6 @@
 # Title: Nearly Content Farm Filters
 # Description: Filter for content-farm-like sites, mostly in Chinese.
-# Last modified: 2022-10-11T17:40:14+00:00
+# Last modified: 2022-10-13T03:44:29+00:00
 # Homepage: https://danny0838.github.io/content-farm-terminator/
 # Licence: MIT License
 # Source: https://danny0838.github.io/content-farm-terminator/files/blocklist-hosts/nearly-content-farms.txt
@@ -17,6 +17,7 @@
 127.0.0.1 52shuku.vip  #小說盜版
 127.0.0.1 5xingxs.com  #小說盜版
 127.0.0.1 69shu.com  #小說盜版
+127.0.0.1 69shu.io  #小說盜版
 127.0.0.1 75zw.com  #小說盜版
 127.0.0.1 7qiaos.com  #小說盜版
 127.0.0.1 84sk.com  #小說盜版
@@ -32,6 +33,7 @@
 127.0.0.1 aiqiyd.com  #小說盜版
 127.0.0.1 aiwubook.com  #小說盜版
 127.0.0.1 aixdzs.com  #小說盜版
+127.0.0.1 aiyabook.com  #小說盜版
 127.0.0.1 aizew.com  #小說盜版
 127.0.0.1 alzheimersjournal.com  #小說盜版
 127.0.0.1 anbiwx.com  #小說盜版
@@ -46,6 +48,7 @@
 127.0.0.1 bc3ts.com  #爆料公社。由臉書網友提供之資訊篩選發布，可能有假資訊或假截圖
 127.0.0.1 beibeixs.com  #小說盜版
 127.0.0.1 beqege.cc  #小說盜版
+127.0.0.1 bhxs8.com  #小說盜版
 127.0.0.1 big5.huwens.com  #小說盜版
 127.0.0.1 bikuwx.com  #小說盜版
 127.0.0.1 bishusw.com  #小說盜版
@@ -54,6 +57,7 @@
 127.0.0.1 bokewk.com  #小說盜版
 127.0.0.1 boyisw.com  #小說盜版
 127.0.0.1 buaq.net  #有附來源，疑未授權轉載
+127.0.0.1 buffalo-fx.com  #小說盜版
 127.0.0.1 bugxs.com  #小說盜版
 127.0.0.1 bunxs.com  #小說盜版
 127.0.0.1 buziyd.com  #小說盜版
@@ -75,6 +79,7 @@
 127.0.0.1 dubaba.cc  #小說盜版
 127.0.0.1 dupengtang.com  #小說盜版
 127.0.0.1 entertainment14.net  #疑大量未經授權轉載
+127.0.0.1 epzw.com  #小說盜版
 127.0.0.1 erersk.com  #小說盜版
 127.0.0.1 feikashu.com  #小說盜版
 127.0.0.1 fenhuxs.com  #小說盜版
@@ -132,6 +137,7 @@
 127.0.0.1 mangeyd.com  #小說盜版
 127.0.0.1 manongjc.com  #有附來源，疑未授權轉載
 127.0.0.1 menshuge.com  #小說盜版
+127.0.0.1 menyisw.com  #小說盜版
 127.0.0.1 mifusw.com  #小說盜版
 127.0.0.1 miwens.com  #小說盜版
 127.0.0.1 montagg.io  #盜YouTube影片，有附來源
@@ -140,6 +146,7 @@
 127.0.0.1 news.gamme.com.tw  #疑似大量盜譯日文網站
 127.0.0.1 nishuku.com  #小說盜版
 127.0.0.1 niusnews.com  #內容多來自網路文章剪貼
+127.0.0.1 njdlkssjx.com  #小說盜版
 127.0.0.1 novel101.com  #小說盜版
 127.0.0.1 nueyisw.com  #小說盜版
 127.0.0.1 ouqisw.com  #小說盜版
@@ -172,20 +179,24 @@
 127.0.0.1 tqmbest.com  #小說盜版
 127.0.0.1 trxs.me  #小說盜版
 127.0.0.1 ts136.com  #小說盜版
+127.0.0.1 tsxsw.net  #小說盜版
 127.0.0.1 ttkan.co  #小說盜版
 127.0.0.1 ttshus.com  #小說盜版
 127.0.0.1 twfanti.com  #小說盜版
 127.0.0.1 twfanti.net  #小說盜版
 127.0.0.1 twpiaotians.com  #小說盜版
+127.0.0.1 tyksjq.com  #小說盜版
 127.0.0.1 ubuntuqa.com  #有附來源，疑未授權盜譯
 127.0.0.1 ulwen.com  #小說盜版
 127.0.0.1 unsafe.sh  #有附來源，疑未授權轉載
 127.0.0.1 uukanshu.com  #小說盜版
+127.0.0.1 uuks.org  #小說盜版
 127.0.0.1 uvalawblog.com  #小說盜版
 127.0.0.1 vipxsh.com  #小說盜版
 127.0.0.1 wanbar.net  #小說盜版
 127.0.0.1 watusi.net  #小說盜版
 127.0.0.1 wfxs.tw  #小說盜版
+127.0.0.1 wubixs.com  #小說盜版
 127.0.0.1 wudixs.com  #小說盜版
 127.0.0.1 wufuxs.com  #小說盜版
 127.0.0.1 wuhucity.cn  #小說盜版
@@ -193,12 +204,14 @@
 127.0.0.1 wuxinxs.com  #小說盜版
 127.0.0.1 xiancaog.com  #小說盜版
 127.0.0.1 xiangjoo.com  #小說盜版
+127.0.0.1 xiaoshuting.cc  #小說盜版
 127.0.0.1 xiaoxiangxs.com  #小說盜版
 127.0.0.1 xieyixs.net  #小說盜版
 127.0.0.1 xingmingzhijia.com  #以姓名網名義製造大量相似網頁
 127.0.0.1 xinnxs.com  #小說盜版
 127.0.0.1 xiujuxs.com  #小說盜版
 127.0.0.1 xiupoxs.com  #小說盜版
+127.0.0.1 xklxsw.com  #小說盜版
 127.0.0.1 xs74.net  #小說盜版
 127.0.0.1 xs8.cn  #小說盜版
 127.0.0.1 xsw.tw  #小說盜版
