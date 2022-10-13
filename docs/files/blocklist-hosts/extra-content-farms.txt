@@ -1,6 +1,6 @@
 # Title: Extra Content Farm Filters
 # Description: Extra filter for content-farm-like sites, mostly aggregated from other sources.
-# Last modified: 2022-10-09T19:49:46+00:00
+# Last modified: 2022-10-13T03:45:53+00:00
 # Homepage: https://danny0838.github.io/content-farm-terminator/
 # Licence: MIT License
 # Source: https://danny0838.github.io/content-farm-terminator/files/blocklist-hosts/extra-content-farms.txt
@@ -72451,6 +72451,7 @@
 127.0.0.1 21ic.com  #!aggreg-nonpnt
 127.0.0.1 2219cc.com  #!aggreg-nonpnt
 127.0.0.1 22352.xyz  #!aggreg-nonpnt
+127.0.0.1 226.195  #!aggreg-nonpnt
 127.0.0.1 2265.com  #!aggreg-nonpnt
 127.0.0.1 2616.com.cn  #!aggreg-nonpnt
 127.0.0.1 26ch.com  #!aggreg-nonpnt
@@ -72532,6 +72533,7 @@
 127.0.0.1 actualidadiphone.com  #!aggreg-nonpnt
 127.0.0.1 admin5.org  #!aggreg-nonpnt
 127.0.0.1 adolescentz.com  #!aggreg-nonpnt
+127.0.0.1 aes-chile.cl  #!aggreg-nonpnt
 127.0.0.1 aesml.com  #!aggreg-nonpnt
 127.0.0.1 affloc.com  #!aggreg-nonpnt
 127.0.0.1 agid.cn  #!aggreg-nonpnt
@@ -72553,6 +72555,7 @@
 127.0.0.1 amhnn.com  #!aggreg-nonpnt
 127.0.0.1 amyspastasauce.com  #!aggreg-nonpnt
 127.0.0.1 amzkd.cn  #!aggreg-nonpnt
+127.0.0.1 anche.cn  #!aggreg-nonpnt
 127.0.0.1 ancii.com  #!aggreg-nonpnt
 127.0.0.1 andrew-reynolds-bootcamp.com  #!aggreg-nonpnt
 127.0.0.1 anfensi.com  #!aggreg-nonpnt
@@ -72565,6 +72568,7 @@
 127.0.0.1 app.youfa.coms.hk  #!aggreg-nonpnt
 127.0.0.1 appike.com  #!aggreg-nonpnt
 127.0.0.1 appspot.com  #!aggreg-nonpnt
+127.0.0.1 appuals.com  #!aggreg-nonpnt
 127.0.0.1 aprendotodo.com  #!aggreg-nonpnt
 127.0.0.1 aptengli.com  #!aggreg-nonpnt
 127.0.0.1 aqmdjx.com  #!aggreg-nonpnt
@@ -72676,6 +72680,7 @@
 127.0.0.1 crackorg.com  #!aggreg-nonpnt
 127.0.0.1 csmayi.cn  #!aggreg-nonpnt
 127.0.0.1 csolmy.com  #!aggreg-nonpnt
+127.0.0.1 cspfocus.cn  #!aggreg-nonpnt
 127.0.0.1 ctolib.com  #!aggreg-nonpnt
 127.0.0.1 cundang.cc  #!aggreg-nonpnt
 127.0.0.1 cuplayer.com  #!aggreg-nonpnt
@@ -72769,10 +72774,12 @@
 127.0.0.1 gdsdws.com  #!aggreg-nonpnt
 127.0.0.1 geren-jianli.org  #!aggreg-nonpnt
 127.0.0.1 getbackpacking365.com  #!aggreg-nonpnt
+127.0.0.1 getdroidtips.com  #!aggreg-nonpnt
 127.0.0.1 gfgyyq.com  #!aggreg-nonpnt
 127.0.0.1 gg4ss.com  #!aggreg-nonpnt
 127.0.0.1 ggchewl.com  #!aggreg-nonpnt
 127.0.0.1 gghu.com  #!aggreg-nonpnt
+127.0.0.1 ghacks.net  #!aggreg-nonpnt
 127.0.0.1 giskaa.com  #!aggreg-nonpnt
 127.0.0.1 gizchina.it  #!aggreg-nonpnt
 127.0.0.1 gldq123.com  #!aggreg-nonpnt
@@ -72793,6 +72800,7 @@
 127.0.0.1 gygg9.com  #!aggreg-nonpnt
 127.0.0.1 habeiwaiyuxuexiao.com  #!aggreg-nonpnt
 127.0.0.1 hairunwatertr.com  #!aggreg-nonpnt
+127.0.0.1 hanjifoods.com  #!aggreg-nonpnt
 127.0.0.1 hantenglaw.com  #!aggreg-nonpnt
 127.0.0.1 haoecn.com  #!aggreg-nonpnt
 127.0.0.1 haoshangbang.net  #!aggreg-nonpnt
@@ -72855,6 +72863,7 @@
 127.0.0.1 imaycon.com  #!aggreg-nonpnt
 127.0.0.1 ios.im  #!aggreg-nonpnt
 127.0.0.1 iosvm.com  #!aggreg-nonpnt
+127.0.0.1 iqingyan.cn  #!aggreg-nonpnt
 127.0.0.1 iqqoz.com  #!aggreg-nonpnt
 127.0.0.1 isdakar.org  #!aggreg-nonpnt
 127.0.0.1 ishiker.com  #!aggreg-nonpnt
@@ -73043,6 +73052,7 @@
 127.0.0.1 ping-jia.net  #!aggreg-nonpnt
 127.0.0.1 pinkypink.org  #!aggreg-nonpnt
 127.0.0.1 pinlue.com  #!aggreg-nonpnt
+127.0.0.1 pintformation.com  #!aggreg-nonpnt
 127.0.0.1 piqiuda.com  #!aggreg-nonpnt
 127.0.0.1 pixelprivacy.com  #!aggreg-nonpnt
 127.0.0.1 pn3p.com  #!aggreg-nonpnt
@@ -73108,6 +73118,7 @@
 127.0.0.1 sa.sogou.com  #!aggreg-nonpnt
 127.0.0.1 sa123.cc  #!aggreg-nonpnt
 127.0.0.1 sagecctv.com  #!aggreg-nonpnt
+127.0.0.1 saintlad.com  #!aggreg-nonpnt
 127.0.0.1 sayweee.com  #!aggreg-nonpnt
 127.0.0.1 sblunwen.com  #!aggreg-nonpnt
 127.0.0.1 scpaean.com  #!aggreg-nonpnt
@@ -73182,6 +73193,7 @@
 127.0.0.1 teachrock.org  #!aggreg-nonpnt
 127.0.0.1 techbang.com  #!aggreg-nonpnt
 127.0.0.1 techdevian.com  #!aggreg-nonpnt
+127.0.0.1 techonegame.com  #!aggreg-nonpnt
 127.0.0.1 tedabg.com  #!aggreg-nonpnt
 127.0.0.1 teddit.ggc-project.de  #!aggreg-nonpnt
 127.0.0.1 teipy.com  #!aggreg-nonpnt
@@ -73273,6 +73285,7 @@
 127.0.0.1 whoisua.com  #!aggreg-nonpnt
 127.0.0.1 wikicell.org  #!aggreg-nonpnt
 127.0.0.1 windowsbulletin.com  #!aggreg-nonpnt
+127.0.0.1 windowsdispatch.com  #!aggreg-nonpnt
 127.0.0.1 windowsphoneinfo.com  #!aggreg-nonpnt
 127.0.0.1 wintoog.com.cn  #!aggreg-nonpnt
 127.0.0.1 witdroid.com  #!aggreg-nonpnt
@@ -73332,6 +73345,7 @@
 127.0.0.1 you-android.com  #!aggreg-nonpnt
 127.0.0.1 youchuang365.com  #!aggreg-nonpnt
 127.0.0.1 youduoxi.com  #!aggreg-nonpnt
+127.0.0.1 youeryu.com  #!aggreg-nonpnt
 127.0.0.1 youwuqiong.top  #!aggreg-nonpnt
 127.0.0.1 youzhanlu.com  #!aggreg-nonpnt
 127.0.0.1 youzibook.cc  #!aggreg-nonpnt
@@ -73344,6 +73358,7 @@
 127.0.0.1 yunpanjingling.com  #!aggreg-nonpnt
 127.0.0.1 yunsijia.com  #!aggreg-nonpnt
 127.0.0.1 yunweipai.com  #!aggreg-nonpnt
+127.0.0.1 yunyiinvestment.com  #!aggreg-nonpnt
 127.0.0.1 yyfensi.com  #!aggreg-nonpnt
 127.0.0.1 za.com  #!aggreg-nonpnt
 127.0.0.1 zakcret.xyz  #!aggreg-nonpnt
@@ -73382,6 +73397,7 @@
 127.0.0.1 0518123.com  #!aggreg-scyrte
 127.0.0.1 0570zs.com  #!aggreg-scyrte
 127.0.0.1 0691888.net  #!aggreg-scyrte
+127.0.0.1 0757kyw168.com  #!aggreg-scyrte
 127.0.0.1 0769qbw.com  #!aggreg-scyrte
 127.0.0.1 10ew.com  #!aggreg-scyrte
 127.0.0.1 123zaoan.com  #!aggreg-scyrte
@@ -73439,6 +73455,7 @@
 127.0.0.1 9qcaw.axy7h8.cn  #!aggreg-scyrte
 127.0.0.1 9qkx.03s70r.cn  #!aggreg-scyrte
 127.0.0.1 a2b9d.buzz  #!aggreg-scyrte
+127.0.0.1 aacps.org  #!aggreg-scyrte
 127.0.0.1 abclift.pl  #!aggreg-scyrte
 127.0.0.1 abcsearch.cc  #!aggreg-scyrte
 127.0.0.1 abusn.com  #!aggreg-scyrte
@@ -73453,6 +73470,7 @@
 127.0.0.1 aijfa0.me  #!aggreg-scyrte
 127.0.0.1 aijka2.me  #!aggreg-scyrte
 127.0.0.1 akill.cc  #!aggreg-scyrte
+127.0.0.1 alkalisci.com  #!aggreg-scyrte
 127.0.0.1 all-connet.com  #!aggreg-scyrte
 127.0.0.1 almacensolidario.cl  #!aggreg-scyrte
 127.0.0.1 anqu998.com  #!aggreg-scyrte
@@ -73470,6 +73488,7 @@
 127.0.0.1 baidu.mobi  #!aggreg-scyrte
 127.0.0.1 baike.chinaso.com  #!aggreg-scyrte
 127.0.0.1 bailigou.com  #!aggreg-scyrte
+127.0.0.1 bama.com.vn  #!aggreg-scyrte
 127.0.0.1 baobeiwu.net  #!aggreg-scyrte
 127.0.0.1 beiwo123.com  #!aggreg-scyrte
 127.0.0.1 benicassimflights.com  #!aggreg-scyrte
@@ -73497,6 +73516,7 @@
 127.0.0.1 celtrans-przewozy.eu  #!aggreg-scyrte
 127.0.0.1 cglzzws.com  #!aggreg-scyrte
 127.0.0.1 chaxun.la  #!aggreg-scyrte
+127.0.0.1 chemspider.com  #!aggreg-scyrte
 127.0.0.1 chengdei.cn  #!aggreg-scyrte
 127.0.0.1 china-hxzs.com  #!aggreg-scyrte
 127.0.0.1 chinatyy.com  #!aggreg-scyrte
@@ -73516,6 +73536,7 @@
 127.0.0.1 creationwh.com  #!aggreg-scyrte
 127.0.0.1 crzmjf.com  #!aggreg-scyrte
 127.0.0.1 csc-expo.com  #!aggreg-scyrte
+127.0.0.1 currenciesdirect.com  #!aggreg-scyrte
 127.0.0.1 cuu.cc  #!aggreg-scyrte
 127.0.0.1 cvtvcn.com  #!aggreg-scyrte
 127.0.0.1 cxyxd.com  #!aggreg-scyrte
@@ -73548,6 +73569,7 @@
 127.0.0.1 eknyapi.com  #!aggreg-scyrte
 127.0.0.1 enpn.cc  #!aggreg-scyrte
 127.0.0.1 ericacarrclasses.com  #!aggreg-scyrte
+127.0.0.1 etherwanstore.com  #!aggreg-scyrte
 127.0.0.1 extrabux.com  #!aggreg-scyrte
 127.0.0.1 fabaoonline.com  #!aggreg-scyrte
 127.0.0.1 fablabs.io  #!aggreg-scyrte
@@ -73564,10 +73586,12 @@
 127.0.0.1 ftxiacdn.com  #!aggreg-scyrte
 127.0.0.1 fx361.com  #!aggreg-scyrte
 127.0.0.1 fzjdkj.com  #!aggreg-scyrte
+127.0.0.1 gamergen.com  #!aggreg-scyrte
 127.0.0.1 geyinban.net  #!aggreg-scyrte
 127.0.0.1 ggyy8.com  #!aggreg-scyrte
 127.0.0.1 glnav.com  #!aggreg-scyrte
 127.0.0.1 goojie.eu  #!aggreg-scyrte
+127.0.0.1 gtbicycles.com  #!aggreg-scyrte
 127.0.0.1 guansheng.cc  #!aggreg-scyrte
 127.0.0.1 guchw.com  #!aggreg-scyrte
 127.0.0.1 gumroad.com  #!aggreg-scyrte
@@ -73575,6 +73599,7 @@
 127.0.0.1 gxzf.gov.cn  #!aggreg-scyrte
 127.0.0.1 gzjpls.com  #!aggreg-scyrte
 127.0.0.1 haige120.cn  #!aggreg-scyrte
+127.0.0.1 haisco.com  #!aggreg-scyrte
 127.0.0.1 haodquan.com  #!aggreg-scyrte
 127.0.0.1 hap1.ucweb.com.cn  #!aggreg-scyrte
 127.0.0.1 hbgreen.com  #!aggreg-scyrte
@@ -73600,6 +73625,7 @@
 127.0.0.1 huayue56.com  #!aggreg-scyrte
 127.0.0.1 huazhuangpin8.com  #!aggreg-scyrte
 127.0.0.1 hubei.me  #!aggreg-scyrte
+127.0.0.1 hudsonshoes.com  #!aggreg-scyrte
 127.0.0.1 huishouzuan.com  #!aggreg-scyrte
 127.0.0.1 hyzc.net  #!aggreg-scyrte
 127.0.0.1 ichacha.net  #!aggreg-scyrte
@@ -73607,6 +73633,7 @@
 127.0.0.1 ijshu.cn  #!aggreg-scyrte
 127.0.0.1 image.so.com  #!aggreg-scyrte
 127.0.0.1 imxuesheng.com  #!aggreg-scyrte
+127.0.0.1 indifferentlanguages.com  #!aggreg-scyrte
 127.0.0.1 inshir.com  #!aggreg-scyrte
 127.0.0.1 itzdiz.com  #!aggreg-scyrte
 127.0.0.1 iwanaga41.com  #!aggreg-scyrte
@@ -73645,6 +73672,7 @@
 127.0.0.1 lizhidy.com  #!aggreg-scyrte
 127.0.0.1 lnd4ever.com  #!aggreg-scyrte
 127.0.0.1 loomlobe.com  #!aggreg-scyrte
+127.0.0.1 lorientlejour.com  #!aggreg-scyrte
 127.0.0.1 ltncg.com  #!aggreg-scyrte
 127.0.0.1 lulang.net  #!aggreg-scyrte
 127.0.0.1 lunlidianying.info  #!aggreg-scyrte
@@ -73657,6 +73685,7 @@
 127.0.0.1 m1977.com  #!aggreg-scyrte
 127.0.0.1 maigoo.com  #!aggreg-scyrte
 127.0.0.1 mall.yzhbw.net  #!aggreg-scyrte
+127.0.0.1 maomaomom.com  #!aggreg-scyrte
 127.0.0.1 marshluca.com  #!aggreg-scyrte
 127.0.0.1 masaic168.com  #!aggreg-scyrte
 127.0.0.1 mcbbc.net  #!aggreg-scyrte
@@ -73683,6 +73712,7 @@
 127.0.0.1 netlify.app  #!aggreg-scyrte
 127.0.0.1 news.chinaso.com  #!aggreg-scyrte
 127.0.0.1 news.so.com  #!aggreg-scyrte
+127.0.0.1 news24.com  #!aggreg-scyrte
 127.0.0.1 ngp.70c6nb.cn  #!aggreg-scyrte
 127.0.0.1 nhhhn.com  #!aggreg-scyrte
 127.0.0.1 nicaikj.com  #!aggreg-scyrte
@@ -73692,9 +73722,12 @@
 127.0.0.1 nyell.icu  #!aggreg-scyrte
 127.0.0.1 odszkodowania-kontakt.pl  #!aggreg-scyrte
 127.0.0.1 officexr.com  #!aggreg-scyrte
+127.0.0.1 onisep.fr  #!aggreg-scyrte
 127.0.0.1 oqlgb.com  #!aggreg-scyrte
+127.0.0.1 pacificcoastlighting.com  #!aggreg-scyrte
 127.0.0.1 paseoparkview.com  #!aggreg-scyrte
 127.0.0.1 pharmasky.net  #!aggreg-scyrte
+127.0.0.1 pilgrim.net  #!aggreg-scyrte
 127.0.0.1 plastic-hf.com  #!aggreg-scyrte
 127.0.0.1 po-li-tricks.com  #!aggreg-scyrte
 127.0.0.1 portfolium.com  #!aggreg-scyrte
@@ -73730,6 +73763,8 @@
 127.0.0.1 qvzfw.icu  #!aggreg-scyrte
 127.0.0.1 r3j.com  #!aggreg-scyrte
 127.0.0.1 raggedyan.com  #!aggreg-scyrte
+127.0.0.1 raseef22.net  #!aggreg-scyrte
+127.0.0.1 rekhta.org  #!aggreg-scyrte
 127.0.0.1 renaopai.com  #!aggreg-scyrte
 127.0.0.1 rmqxx.icu  #!aggreg-scyrte
 127.0.0.1 roitxd.com  #!aggreg-scyrte
@@ -73748,6 +73783,7 @@
 127.0.0.1 sereno-tokyo.com  #!aggreg-scyrte
 127.0.0.1 sgjarts.com  #!aggreg-scyrte
 127.0.0.1 sgushi.com  #!aggreg-scyrte
+127.0.0.1 shabdkosh.com  #!aggreg-scyrte
 127.0.0.1 shanggao.org.cn  #!aggreg-scyrte
 127.0.0.1 shangjinlieren.top  #!aggreg-scyrte
 127.0.0.1 shangshuitc.com  #!aggreg-scyrte
@@ -73775,6 +73811,7 @@
 127.0.0.1 starbell.com.cn  #!aggreg-scyrte
 127.0.0.1 stmarysmatricarambakkam.com  #!aggreg-scyrte
 127.0.0.1 suinishua.com  #!aggreg-scyrte
+127.0.0.1 swastikfabs.in  #!aggreg-scyrte
 127.0.0.1 sxlscm.com  #!aggreg-scyrte
 127.0.0.1 sxsiec.com  #!aggreg-scyrte
 127.0.0.1 sxwj1991.com  #!aggreg-scyrte
@@ -73791,6 +73828,7 @@
 127.0.0.1 teamramgold.com  #!aggreg-scyrte
 127.0.0.1 teapm.com  #!aggreg-scyrte
 127.0.0.1 tehaodian.com  #!aggreg-scyrte
+127.0.0.1 tellychakkar.com  #!aggreg-scyrte
 127.0.0.1 tempatcurhat.com  #!aggreg-scyrte
 127.0.0.1 tenglangvpn.com  #!aggreg-scyrte
 127.0.0.1 test.jwxlschool.com  #!aggreg-scyrte
@@ -73835,6 +73873,7 @@
 127.0.0.1 wapiknow.baidu.cn  #!aggreg-scyrte
 127.0.0.1 wbfx.cc  #!aggreg-scyrte
 127.0.0.1 wbnn.cc  #!aggreg-scyrte
+127.0.0.1 wcs.edu  #!aggreg-scyrte
 127.0.0.1 web.app  #!aggreg-scyrte
 127.0.0.1 weixintuwen.com  #!aggreg-scyrte
 127.0.0.1 wekghi.com  #!aggreg-scyrte
@@ -73845,6 +73884,7 @@
 127.0.0.1 wgxjl.cn  #!aggreg-scyrte
 127.0.0.1 whshenhai.cn  #!aggreg-scyrte
 127.0.0.1 whwsgjg.com  #!aggreg-scyrte
+127.0.0.1 wijld.com  #!aggreg-scyrte
 127.0.0.1 wkkkw.com  #!aggreg-scyrte
 127.0.0.1 wlhuf.icu  #!aggreg-scyrte
 127.0.0.1 wnyu.cn  #!aggreg-scyrte
@@ -73874,6 +73914,7 @@
 127.0.0.1 xyycgs.com  #!aggreg-scyrte
 127.0.0.1 xzl-zx.com  #!aggreg-scyrte
 127.0.0.1 y.qichejiashi.com  #!aggreg-scyrte
+127.0.0.1 yabla.com  #!aggreg-scyrte
 127.0.0.1 yadncn.com  #!aggreg-scyrte
 127.0.0.1 yam.com  #!aggreg-scyrte
 127.0.0.1 yayataobao.com  #!aggreg-scyrte
@@ -73922,6 +73963,7 @@
 127.0.0.1 zsy-mall.com  #!aggreg-scyrte
 127.0.0.1 ztaid.icu  #!aggreg-scyrte
 127.0.0.1 ztaohui.com  #!aggreg-scyrte
+127.0.0.1 zwoasi.com  #!aggreg-scyrte
 127.0.0.1 zztfjxzz.cn  #!aggreg-scyrte
 127.0.0.1 zztongyun.com  #!aggreg-scyrte
 127.0.0.1 zzzzyz.com  #!aggreg-scyrte
