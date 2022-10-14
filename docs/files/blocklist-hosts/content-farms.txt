@@ -1,6 +1,6 @@
 # Title: Content Farm Filters
 # Description: Filter for general content farms, mostly in Chinese.
-# Last modified: 2022-10-14T16:51:25+00:00
+# Last modified: 2022-10-14T17:30:43+00:00
 # Homepage: https://danny0838.github.io/content-farm-terminator/
 # Licence: MIT License
 # Source: https://danny0838.github.io/content-farm-terminator/files/blocklist-hosts/content-farms.txt
@@ -632,6 +632,7 @@
 127.0.0.1 andrewolsoher.pixnet.net
 127.0.0.1 androidcookie.com
 127.0.0.1 andybarphy.me  #redirects to meetwill.xyz
+127.0.0.1 andyou.wiki
 127.0.0.1 andysutt22644.pixnet.net
 127.0.0.1 andywarholwatch.com  #redirects to tspweb.com
 127.0.0.1 angelande6490.pixnet.net
@@ -1732,6 +1733,7 @@
 127.0.0.1 dailytify.com
 127.0.0.1 daimajiaoliu.com
 127.0.0.1 daipeini.com
+127.0.0.1 daisy.pub
 127.0.0.1 daleba.net
 127.0.0.1 dalinome.co  #redirects to ppcnzi.xyz
 127.0.0.1 daliulian.com
@@ -4325,6 +4327,7 @@
 127.0.0.1 ladabohacova.cz  #redirects to quing.im
 127.0.0.1 ladybig.com
 127.0.0.1 ladyhappyday.com
+127.0.0.1 lagou.pub
 127.0.0.1 lahm2018.com  #redirects to elabor.vip
 127.0.0.1 laifuba88.com
 127.0.0.1 laiptt.online
@@ -6451,6 +6454,7 @@
 127.0.0.1 semicolonworld.com  #spider of stackoverflow.com
 127.0.0.1 sengzao.com
 127.0.0.1 sensortex.web.fc2.com
+127.0.0.1 serenity.pub
 127.0.0.1 sergiofoto.lv  #redirects to ginseemore.live
 127.0.0.1 sergiogwqx.pixnet.net
 127.0.0.1 sexptt.tk  #168ptt.com
@@ -8541,6 +8545,7 @@
 127.0.0.1 zuichufa.com
 127.0.0.1 zungxvehuan.pixnet.net
 127.0.0.1 zuopy.com
+127.0.0.1 zuotianwenti.com
 127.0.0.1 zuowen8.com
 127.0.0.1 zuowenzhinan.com
 127.0.0.1 zuowenzhou.com
