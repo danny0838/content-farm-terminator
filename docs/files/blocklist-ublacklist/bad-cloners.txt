@@ -2,7 +2,7 @@
 # Description: Filter for cloner sites that are mostly free of copyright issue since the source site
 #     is copyleft or copyfree, but provide only trivial layout change or poor-quality bot translation
 #     and are thus spam-like.
-# Last modified: 2022-10-13T03:45:53+00:00
+# Last modified: 2022-10-14T16:04:55+00:00
 # Homepage: https://danny0838.github.io/content-farm-terminator/
 # Licence: MIT License
 # Source: https://danny0838.github.io/content-farm-terminator/files/blocklist-ublacklist/bad-cloners.txt
@@ -34,6 +34,7 @@
 *://*.githubmate.com/*  #!aggreg-ublGhT
 *://*.githubmemory.com/*  #!aggreg-ublGhT
 *://*.githubplus.com/*  #!aggreg-ublGhT
+*://*.githubrecord.com/*  #!aggreg-ublGhT
 *://*.gitmemory.cn/*  #!aggreg-ublGhT
 *://*.gitmemory.com/*  #!aggreg-ublGhT
 *://*.golangrepo.com/*  #!aggreg-ublGhT
@@ -41,6 +42,7 @@
 *://*.issueantenna.com/*  #!aggreg-ublGhT
 *://*.issuehint.com/*  #!aggreg-ublGhT
 *://*.kandi.openweaver.com/*  #!aggreg-ublGhT
+*://*.lightrun.com/*  #!aggreg-ublGhT
 *://*.openprojectrepo.com/*  #!aggreg-ublGhT
 *://*.opensourcelibs.com/*  #!aggreg-ublGhT
 *://*.pythonissues.com/*  #!aggreg-ublGhT
