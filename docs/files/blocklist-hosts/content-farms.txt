@@ -1,6 +1,6 @@
 # Title: Content Farm Filters
 # Description: Filter for general content farms, mostly in Chinese.
-# Last modified: 2022-10-14T16:09:06+00:00
+# Last modified: 2022-10-14T16:51:25+00:00
 # Homepage: https://danny0838.github.io/content-farm-terminator/
 # Licence: MIT License
 # Source: https://danny0838.github.io/content-farm-terminator/files/blocklist-hosts/content-farms.txt
@@ -8,56 +8,34 @@
 127.0.0.1 0099033.com
 127.0.0.1 0099175.com
 127.0.0.1 0101.tw
-127.0.0.1 0127i.com  #R18
-127.0.0.1 014c6.xyz  #R18
-127.0.0.1 0205333.com  #R18
 127.0.0.1 021senxi.com
 127.0.0.1 03157.com
 127.0.0.1 03tity.me  #redirects to fatbean.xyz
-127.0.0.1 0438app.top  #R18
-127.0.0.1 0531jxsl.com  #R18
-127.0.0.1 057276.com  #R18
-127.0.0.1 063179.com  #R18
-127.0.0.1 0768game.co  #R18
 127.0.0.1 081172.com
-127.0.0.1 0mwdxb.cyou  #R18
 127.0.0.1 0u87ky.cn
 127.0.0.1 0xpet.com
 127.0.0.1 0xzx.com
-127.0.0.1 0ygl24lyu.xyz  #R18
-127.0.0.1 0yh56.xyz  #R18
 127.0.0.1 10000.tw
-127.0.0.1 100hg.co  #R18
 127.0.0.1 100ke.info
 127.0.0.1 100lucky.net
 127.0.0.1 100pagame.com
 127.0.0.1 100ve.com
-127.0.0.1 100wehs.com  #R18
 127.0.0.1 101dot.com
-127.0.0.1 102472.com  #R18
 127.0.0.1 1024sou.com
-127.0.0.1 102728.com  #R18
 127.0.0.1 102like.com
 127.0.0.1 104.news
-127.0.0.1 111scg.co  #R18
 127.0.0.1 11708.cn
 127.0.0.1 11i.info
 127.0.0.1 11zyggljfa.com
 127.0.0.1 121-254-64-91.veetime.com  #指動傳播科技有限公司
 127.0.0.1 1220220.cc
 127.0.0.1 1220243.cc
-127.0.0.1 1220320.cc  #R18
-127.0.0.1 12580a.co  #R18
 127.0.0.1 128meto.co  #redirects to procnw.xyz
-127.0.0.1 12bet88.co  #R18
 127.0.0.1 12starparty.com
-127.0.0.1 13590.cc  #R18
 127.0.0.1 1377003.com
 127.0.0.1 13800138002.com
 127.0.0.1 13n.com
-127.0.0.1 1532777.co  #R18
 127.0.0.1 1565758.com
-127.0.0.1 156611.co  #R18
 127.0.0.1 15jb.net
 127.0.0.1 1637.com
 127.0.0.1 163nvren.com
@@ -66,7 +44,6 @@
 127.0.0.1 168ptt.tk
 127.0.0.1 168ptt.xyz
 127.0.0.1 16fighting.com
-127.0.0.1 16woq5.cyou  #R18
 127.0.0.1 17cloud.cc
 127.0.0.1 17fafun.com
 127.0.0.1 17goforward.com  #BuzzHand
@@ -76,13 +53,11 @@
 127.0.0.1 17readthis.com
 127.0.0.1 17sex.vip
 127.0.0.1 17travel.net
-127.0.0.1 18comic.vip  #R18
 127.0.0.1 1951955.cc
 127.0.0.1 19globalnews.com
 127.0.0.1 19long.com
 127.0.0.1 1applefit.com
 127.0.0.1 1applehealth.com
-127.0.0.1 1e2rfq.cyou  #R18
 127.0.0.1 1minute4health.com
 127.0.0.1 1oadsf.tokyo  #redirects to simpledatings.life
 127.0.0.1 1r1g.com
@@ -141,7 +116,6 @@
 127.0.0.1 22068.cn
 127.0.0.1 22661x.com
 127.0.0.1 2291x.com
-127.0.0.1 22au.co  #R18
 127.0.0.1 231127.com
 127.0.0.1 231157.com
 127.0.0.1 231167.com
@@ -152,14 +126,10 @@
 127.0.0.1 231685.com
 127.0.0.1 231728.com
 127.0.0.1 2361.fun
-127.0.0.1 23yyuu.xyz  #R18
 127.0.0.1 241614.com
 127.0.0.1 2441107.cc
 127.0.0.1 2462x.com
 127.0.0.1 24cnews.com
-127.0.0.1 2559722.com  #R18
-127.0.0.1 256930.com  #R18
-127.0.0.1 258porn.com  #R18
 127.0.0.1 268137.com
 127.0.0.1 268213.com
 127.0.0.1 268231.com
@@ -176,27 +146,14 @@
 127.0.0.1 268751.com
 127.0.0.1 268791.com
 127.0.0.1 268915.com
-127.0.0.1 28.sc.cn  #R18
-127.0.0.1 2828sj.co  #R18
-127.0.0.1 2886715.com  #R18
 127.0.0.1 289a.com
 127.0.0.1 2936366.com
-127.0.0.1 2goasp.com  #R18
-127.0.0.1 2jmos.com  #R18
 127.0.0.1 300.tw
-127.0.0.1 3288bet.co  #R18
-127.0.0.1 3324y.com  #R18
-127.0.0.1 334422.co  #R18
-127.0.0.1 3344333.co  #R18
-127.0.0.1 3344555.co  #R18
 127.0.0.1 33pp.com
 127.0.0.1 34006.cn
-127.0.0.1 34133c.com  #R18
 127.0.0.1 3561188.cc
-127.0.0.1 3588669.com  #R18
 127.0.0.1 359722.com
 127.0.0.1 359826.com
-127.0.0.1 35vf1ddz.online  #R18
 127.0.0.1 360doc.cn
 127.0.0.1 360doc.com
 127.0.0.1 361shipin.com
@@ -302,39 +259,28 @@
 127.0.0.1 373947.com
 127.0.0.1 373978.com
 127.0.0.1 373984.com
-127.0.0.1 38388hk.co  #R18
 127.0.0.1 386h.com
 127.0.0.1 3911115.cc
 127.0.0.1 3990755.com
 127.0.0.1 3997025.com
 127.0.0.1 3cjohnhardware.wordpress.com
-127.0.0.1 3dgamessite.com  #R18
 127.0.0.1 3du.tw
 127.0.0.1 3h3.com
 127.0.0.1 3loumao.org
 127.0.0.1 3rxing.org
-127.0.0.1 3t4.fit  #R18
 127.0.0.1 4000000958.com
 127.0.0.1 4000246177.com
 127.0.0.1 400sbc.com  #redirects to irene-eux.com
-127.0.0.1 401d1l.com  #R18
 127.0.0.1 4022gg1.vip
 127.0.0.1 412lala.com
 127.0.0.1 41954.shop
-127.0.0.1 488ck9ima.xyz  #R18
-127.0.0.1 490ii.com  #R18
 127.0.0.1 4910.com
-127.0.0.1 499uu.co  #R18
-127.0.0.1 4b4zu4.cyou  #R18
-127.0.0.1 4d38vibo2iir2.com  #R18
-127.0.0.1 4dog.info  #R18
 127.0.0.1 4k8k.xyz
 127.0.0.1 5068.com
 127.0.0.1 5179n.com
 127.0.0.1 519640.com
 127.0.0.1 51acfans.com
 127.0.0.1 51flash.com
-127.0.0.1 51haowd.com  #R18
 127.0.0.1 51kannews.com
 127.0.0.1 51manager.net
 127.0.0.1 51yangsheng.com
@@ -362,18 +308,11 @@
 127.0.0.1 524061.com
 127.0.0.1 524071.com
 127.0.0.1 524072.com
-127.0.0.1 528883.co  #R18
-127.0.0.1 52binzhou.com  #R18
 127.0.0.1 52eo.com
 127.0.0.1 52food.co
 127.0.0.1 52ptt.com
-127.0.0.1 52pzqk.com  #R18
 127.0.0.1 52yuer.cn
-127.0.0.1 538zj.com  #R18
-127.0.0.1 5397x.com  #R18
-127.0.0.1 5532888.co  #R18
 127.0.0.1 555.gd
-127.0.0.1 55611.top  #R18
 127.0.0.1 5571100.com
 127.0.0.1 5580514.cc
 127.0.0.1 5580547.cc
@@ -381,25 +320,16 @@
 127.0.0.1 5588tha.com
 127.0.0.1 5610930.cc
 127.0.0.1 5611061.cc
-127.0.0.1 5611161.cc  #R18
-127.0.0.1 562578.com  #R18
-127.0.0.1 562ax.com  #R18
 127.0.0.1 568159.com
 127.0.0.1 568523.com
 127.0.0.1 568631.com
 127.0.0.1 568781.com
 127.0.0.1 568972.com
-127.0.0.1 572k3.com  #R18
-127.0.0.1 5777bet.co  #R18
-127.0.0.1 57yimin.com  #R18
 127.0.0.1 584552.cc
 127.0.0.1 5866n.com
 127.0.0.1 592xz.com
-127.0.0.1 5960026.cc  #R18
 127.0.0.1 59708.cn
-127.0.0.1 5g780g.co  #R18
 127.0.0.1 5ichong.com
-127.0.0.1 5kkkc.com  #R18
 127.0.0.1 60xw.com
 127.0.0.1 618012.com
 127.0.0.1 618040.com
@@ -431,54 +361,34 @@
 127.0.0.1 626927.com
 127.0.0.1 6431233.cc
 127.0.0.1 6431245.cc
-127.0.0.1 666814.co  #R18
-127.0.0.1 666bbb.com.cn  #R18
-127.0.0.1 6688bet.co  #R18
 127.0.0.1 6739oehdpjg.blog.fc2.com
-127.0.0.1 67842.app  #R18
 127.0.0.1 686115.com
 127.0.0.1 686511.com
 127.0.0.1 686513.com
 127.0.0.1 686763.com
-127.0.0.1 686842.com  #R18
 127.0.0.1 686983.com
 127.0.0.1 689xpj.com
 127.0.0.1 68shu.cn
 127.0.0.1 69vj.xyz
 127.0.0.1 6aiok.me  #redirects to fatbean.xyz
-127.0.0.1 6kjfs.com  #R18
 127.0.0.1 6uodaily.com  #愛縮兔 (農場轉址)
 127.0.0.1 6uodailynews.com  #愛縮兔 (農場轉址)
 127.0.0.1 6uonewsdaily.com  #愛縮兔 (農場轉址)
-127.0.0.1 6uy.fit  #R18
 127.0.0.1 6wunk205gk.blog.fc2.com
-127.0.0.1 6ymb2x.cyou  #R18
-127.0.0.1 706kp.vip  #R18
 127.0.0.1 70thvictory.com.tw
 127.0.0.1 7117125.com
-127.0.0.1 718kp.vip  #redirects to 22au.co
 127.0.0.1 7200500.com
 127.0.0.1 7376.fun  #redirects to ksou.cc
 127.0.0.1 7511156.com
 127.0.0.1 76098.cn
 127.0.0.1 7624.net
 127.0.0.1 76292.site
-127.0.0.1 763injured.com  #R18
-127.0.0.1 767suncity.co  #R18
-127.0.0.1 773kp.vip  #R18
 127.0.0.1 77qi.xyz  #大榴槤/大時代/GreatDaily/閃文聯盟/琦琦~
 127.0.0.1 77s.today  #大榴槤/大時代/GreatDaily/閃文聯盟/琦琦~
-127.0.0.1 77suncity.co  #R18
 127.0.0.1 7889k2.com
-127.0.0.1 78912j.com  #R18
-127.0.0.1 789399.co  #R18
-127.0.0.1 789799.co  #R18
 127.0.0.1 78likecartoon.com
 127.0.0.1 796t.com
 127.0.0.1 79ohxn.com
-127.0.0.1 7a7a7a.co  #R18
-127.0.0.1 7bet888.co  #R18
-127.0.0.1 7c39ui.cyou  #R18
 127.0.0.1 7jiu.com.hk
 127.0.0.1 7net.co
 127.0.0.1 7qiqi7.com  #大榴槤/大時代/GreatDaily/閃文聯盟/琦琦~
@@ -487,37 +397,26 @@
 127.0.0.1 8031035.cc
 127.0.0.1 8031135.cc
 127.0.0.1 80932.cn
-127.0.0.1 80owashd.com  #R18
 127.0.0.1 8127y.com
 127.0.0.1 818322.com
 127.0.0.1 818353.com
 127.0.0.1 818523.com
 127.0.0.1 818537.com
 127.0.0.1 818739.com
-127.0.0.1 818sun.co  #R18
 127.0.0.1 82099.cn
-127.0.0.1 8216x.com  #R18
 127.0.0.1 82301.cn
 127.0.0.1 837213.com
 127.0.0.1 83870.cn
-127.0.0.1 840ka9vc.online  #R18
 127.0.0.1 84wk.com
-127.0.0.1 86798.vip  #R18
 127.0.0.1 868yy.com
 127.0.0.1 86lsw.com
 127.0.0.1 86playgame.com
-127.0.0.1 86zcbd.cyou  #R18
 127.0.0.1 886bl.com
-127.0.0.1 888spotr.in  #R18
 127.0.0.1 889x4.xyz
 127.0.0.1 88gag.com
 127.0.0.1 88lovelypet.com
-127.0.0.1 88msc.co  #R18
-127.0.0.1 88wanju.com  #R18
 127.0.0.1 895733-com.com
 127.0.0.1 89602.cn
-127.0.0.1 89sg4eas96f9w.com  #R18
-127.0.0.1 8c4nie.cyou  #R18
 127.0.0.1 8degree.cc
 127.0.0.1 8im.co
 127.0.0.1 8im.info
@@ -529,8 +428,6 @@
 127.0.0.1 905222com.com
 127.0.0.1 918zhuan.com
 127.0.0.1 91917.com
-127.0.0.1 91kc004.com  #R18
-127.0.0.1 938yy.com  #R18
 127.0.0.1 9393xx38.com
 127.0.0.1 93p.com  #redirects to *.hhsp113.com
 127.0.0.1 94ptt.com
@@ -538,17 +435,11 @@
 127.0.0.1 9596.org
 127.0.0.1 95lady.com
 127.0.0.1 9616x.com
-127.0.0.1 963fz.com  #R18
-127.0.0.1 9766a1.com  #R18
 127.0.0.1 985ds.me  #redirects to fatbean.xyz
 127.0.0.1 985ys.com
 127.0.0.1 98watch.com
-127.0.0.1 99644.xyz  #R18
 127.0.0.1 9966516.xyz
 127.0.0.1 99bookgame.com
-127.0.0.1 99pp83.com  #R18
-127.0.0.1 99zhenren.co  #R18
-127.0.0.1 9a7b83.com  #R18
 127.0.0.1 9game.cn
 127.0.0.1 9kd.com
 127.0.0.1 a-gui.com
@@ -603,7 +494,7 @@
 127.0.0.1 aagov.shop
 127.0.0.1 aalsw.com
 127.0.0.1 aap5.com
-127.0.0.1 aastar.co  #R18
+127.0.0.1 ab6931.nbsd0923.com
 127.0.0.1 abcnews.asia
 127.0.0.1 abcsearch.cc  #redirects to ksou.cc
 127.0.0.1 ablaxy.me  #redirects to soonmiss.top
@@ -614,7 +505,6 @@
 127.0.0.1 aboutlove.cc
 127.0.0.1 ac-ay.com  #redirects to simpledatings.life
 127.0.0.1 acceptanctgage.co  #redirects to procnw.xyz
-127.0.0.1 accreditedinstitutions.in  #R18
 127.0.0.1 acedqmrm7pt9x.pixnet.net
 127.0.0.1 acefinance.asia
 127.0.0.1 acg.ms  #LIFE生活網
@@ -622,7 +512,6 @@
 127.0.0.1 acgfun.wang
 127.0.0.1 acibu.me  #redirects to fatbean.xyz
 127.0.0.1 acika801cu.blog.fc2.com
-127.0.0.1 ackwyt.com  #R18
 127.0.0.1 acworld666.com  #樂享網
 127.0.0.1 ad.setn.com
 127.0.0.1 ad22hnpearlyu.pixnet.net
@@ -645,16 +534,12 @@
 127.0.0.1 af036b7xzg.blog.fc2.com
 127.0.0.1 af088.co  #redirects to procnw.xyz
 127.0.0.1 afept.ch  #redirects to quing.im
-127.0.0.1 aff006.app  #R18
-127.0.0.1 aff006.live  #R18
 127.0.0.1 affectionpet.com
 127.0.0.1 afusamcurico.cl  #redirects to quing.im
 127.0.0.1 against24.blogspot.com
 127.0.0.1 agame01.com
-127.0.0.1 age-redesign.com  #R18
 127.0.0.1 agencyfordogs.eu  #redirects to videoplay-on.com
 127.0.0.1 agentura-atlas.cz  #redirects to quing.im
-127.0.0.1 aglukon.co  #R18
 127.0.0.1 agnbik1853.pixnet.net
 127.0.0.1 agreebetteriron.top  #malicious ads scripts
 127.0.0.1 agri35.com
@@ -675,8 +560,6 @@
 127.0.0.1 aiheaven.com
 127.0.0.1 aijan4.me
 127.0.0.1 aijianggu.com
-127.0.0.1 ailue.me  #R18
-127.0.0.1 ainipa.co  #R18
 127.0.0.1 aipaba.com
 127.0.0.1 aipetweb.com
 127.0.0.1 aiqing.com
@@ -687,10 +570,8 @@
 127.0.0.1 aiweinews.com
 127.0.0.1 aiyangedu.com
 127.0.0.1 aiznh.com
-127.0.0.1 aizyfu.com  #R18
 127.0.0.1 aj315293.pixnet.net
 127.0.0.1 ajbdfs.blogspot.com
-127.0.0.1 ajdh99.com  #R18
 127.0.0.1 ajq6.com
 127.0.0.1 ajsl6ovpf.pixnet.net
 127.0.0.1 ajy13as00v.blog.fc2.com
@@ -706,9 +587,7 @@
 127.0.0.1 alfredfof01p.pixnet.net
 127.0.0.1 alfredriyuh8.pixnet.net
 127.0.0.1 alfredvicdkim.pixnet.net
-127.0.0.1 alibbvod.com  #R18
 127.0.0.1 aliciameseguer.es
-127.0.0.1 alivod1.com  #R18
 127.0.0.1 alkf043.pixnet.net
 127.0.0.1 allanhodgeshx.pixnet.net
 127.0.0.1 allansamuelv0.pixnet.net
@@ -719,7 +598,6 @@
 127.0.0.1 allisonorejqn.pixnet.net
 127.0.0.1 allisovgowa72.pixnet.net
 127.0.0.1 almost.pub
-127.0.0.1 almsh8fi.shop  #R18
 127.0.0.1 alojenme.com  #redirects to bestbonus-zone.life
 127.0.0.1 alonelanguagevery.buzz  #malicious ads scripts
 127.0.0.1 alraaoman.me  #redirects to cznono.xyz
@@ -733,8 +611,6 @@
 127.0.0.1 ambery20h7a.pixnet.net
 127.0.0.1 ambkct.com
 127.0.0.1 ambroisemoreux-osteopathe.fr
-127.0.0.1 americaexample.xyz  #R18
-127.0.0.1 americansnowmobile.com  #R18
 127.0.0.1 americantowns.com
 127.0.0.1 ameridrvice.co  #redirects to procnw.xyz
 127.0.0.1 amerrole892.com  #redirects to directcpmfwr.com
@@ -788,16 +664,11 @@
 127.0.0.1 anzaland.me  #redirects to cznono.xyz
 127.0.0.1 aoaj.net
 127.0.0.1 aoaowatch.com  #樂享網
-127.0.0.1 aobo3.co  #R18
-127.0.0.1 aobo5.co  #R18
-127.0.0.1 aobo55.co  #R18
-127.0.0.1 aobo88888.co  #R18
 127.0.0.1 aobwfwglechri.pixnet.net
 127.0.0.1 aof96qo87r.pixnet.net
 127.0.0.1 aogov.xyz
 127.0.0.1 aol.my
 127.0.0.1 aom09rs65r.pixnet.net
-127.0.0.1 aomendubo.co  #R18
 127.0.0.1 aoqk.cn
 127.0.0.1 aorfei524.pixnet.net
 127.0.0.1 aorp.cn
@@ -809,11 +680,9 @@
 127.0.0.1 apartca.fr  #redirects to cubicongardens.sk
 127.0.0.1 apasass.co  #redirects to procnw.xyz
 127.0.0.1 apehs.cn
-127.0.0.1 apktool.co  #R18
 127.0.0.1 apolmont.eu  #redirects to di02.biz
 127.0.0.1 apost.com
 127.0.0.1 app.mobileai.net
-127.0.0.1 app001.org  #R18
 127.0.0.1 apple01.cc
 127.0.0.1 apple01.co
 127.0.0.1 apple01.net
@@ -823,7 +692,6 @@
 127.0.0.1 appliances123.pixnet.net
 127.0.0.1 appliedsystem.com.cn
 127.0.0.1 appobs.com
-127.0.0.1 appwwq.co  #R18
 127.0.0.1 aprilkristobr.pixnet.net
 127.0.0.1 apu9228tch.pixnet.net
 127.0.0.1 apyk506.pixnet.net
@@ -831,7 +699,6 @@
 127.0.0.1 aqo4314aij.blog.fc2.com
 127.0.0.1 aqpcjv857.pixnet.net
 127.0.0.1 aqtt.cc  #redirects to ksou.cc
-127.0.0.1 ar-gos.in  #R18
 127.0.0.1 arcieri4castella.it  #redirects to topawardhere.life
 127.0.0.1 ardpn25903.pixnet.net
 127.0.0.1 argentsecuritycnslt.co  #redirects to cacnka.xyz
@@ -890,14 +757,10 @@
 127.0.0.1 autohandel-xenia.de
 127.0.0.1 auzhu.com
 127.0.0.1 av01.online
-127.0.0.1 avbo.shop  #R18
-127.0.0.1 avle.xyz  #R18
-127.0.0.1 avninga.co  #R18
 127.0.0.1 avogov.com
 127.0.0.1 avvocatoluigifalcone.it  #redirects to videoplay-on.com
 127.0.0.1 avwife.xyz
 127.0.0.1 aw35062812.blog.fc2.com
-127.0.0.1 awesomewalls.info  #R18
 127.0.0.1 awesomz.me  #redirects to fatbean.xyz
 127.0.0.1 awf81yl36p.blog.fc2.com
 127.0.0.1 awilwave.co  #redirects to soonmiss.top
@@ -919,14 +782,12 @@
 127.0.0.1 b1bnv9zpb1.blog.fc2.com
 127.0.0.1 b1d3l7zfzb.pixnet.net
 127.0.0.1 b1dbv5blnd.blog.fc2.com
-127.0.0.1 b1lzr6.cyou  #R18
 127.0.0.1 b1n7x157ljp.blog.fc2.com
 127.0.0.1 b1nzr71zxh.pixnet.net
 127.0.0.1 b1rbx35hxr.pixnet.net
 127.0.0.1 b1t1v7rhln.pixnet.net
 127.0.0.1 b1x9p9djxh.pixnet.net
 127.0.0.1 b20s2p3.pixnet.net
-127.0.0.1 b2626.co  #R18
 127.0.0.1 b2b0w98zyq.pixnet.net
 127.0.0.1 b2bso.com
 127.0.0.1 b2r9n1.wordpress.com
@@ -950,7 +811,6 @@
 127.0.0.1 b4mccoy15429.pixnet.net
 127.0.0.1 b4wpf5ahvf.pixnet.net
 127.0.0.1 b4zyh6dlfs.pixnet.net
-127.0.0.1 b5656.co  #R18
 127.0.0.1 b5b5p7d9rzj.pixnet.net
 127.0.0.1 b5bbh91zfn.pixnet.net
 127.0.0.1 b5dtl99nh5.pixnet.net
@@ -969,10 +829,7 @@
 127.0.0.1 b6oua8f5bo.pixnet.net
 127.0.0.1 b6trz1icj4.pixnet.net
 127.0.0.1 b6vjs9a05j.blog.fc2.com
-127.0.0.1 b6wkyo.com  #R18
 127.0.0.1 b6y4t77vo2.blog.fc2.com
-127.0.0.1 b747.cc  #R18
-127.0.0.1 b7676.co  #R18
 127.0.0.1 b7b1v9ldv9.pixnet.net
 127.0.0.1 b7b3z1lxhb.pixnet.net
 127.0.0.1 b7d9f55vb9.pixnet.net
@@ -1011,15 +868,11 @@
 127.0.0.1 b9vrt9hrz9.pixnet.net  #大榴槤/大時代/GreatDaily/閃文聯盟/琦琦~
 127.0.0.1 b9xpt1d3tp3.pixnet.net
 127.0.0.1 b9zll1dznf.pixnet.net
-127.0.0.1 ba0088.co  #R18
-127.0.0.1 ba1111.co  #R18
-127.0.0.1 ba1122.co  #R18
 127.0.0.1 babiesjh.com
 127.0.0.1 baby01.tv
 127.0.0.1 babygoretro.com
 127.0.0.1 babykelai.com
 127.0.0.1 babymaycry.com
-127.0.0.1 babymv.co  #R18
 127.0.0.1 babyonea.com
 127.0.0.1 babyou.com
 127.0.0.1 babywindvane.com
@@ -1030,13 +883,8 @@
 127.0.0.1 bagua5.net
 127.0.0.1 baidow.com
 127.0.0.1 baijiabo365.com
-127.0.0.1 baijiaie.co  #R18
 127.0.0.1 baike.com
-127.0.0.1 bailang.co  #R18
 127.0.0.1 bailong.pub
-127.0.0.1 baisex.co  #R18
-127.0.0.1 baixardownload.in  #R18
-127.0.0.1 baiyidaijia.com  #R18
 127.0.0.1 baiyongqin.cc
 127.0.0.1 baiyuns.me  #redirects to cznono.xyz
 127.0.0.1 bajiao003.com
@@ -1058,7 +906,6 @@
 127.0.0.1 baoshijiels.com  #歡享網
 127.0.0.1 baoxiaovideo.com
 127.0.0.1 baoxiaovideo.tv
-127.0.0.1 baozhishu.com  #R18
 127.0.0.1 barbarla.net  #樂享網
 127.0.0.1 barbarq.co  #redirects to aetop.top
 127.0.0.1 barnettcha748.pixnet.net
@@ -1068,7 +915,6 @@
 127.0.0.1 basboeit.nl  #redirects to quing.im
 127.0.0.1 batadfg.blogspot.com
 127.0.0.1 batesr1r38ml3.pixnet.net
-127.0.0.1 batgirl.co  #redirects to mjsq7.in
 127.0.0.1 battery9999.com
 127.0.0.1 bazhongpeace.org.cn
 127.0.0.1 bazzfly.com
@@ -1088,22 +934,16 @@
 127.0.0.1 bbstoplist.blogspot.com
 127.0.0.1 bbsw0209.pixnet.net
 127.0.0.1 bbsz46.pixnet.net
-127.0.0.1 bbwerd.xyz  #R18
 127.0.0.1 bbxbj.com  #redirects to tspweb.com
 127.0.0.1 bbxvb93199.pixnet.net
 127.0.0.1 bc30083697.pixnet.net
-127.0.0.1 bc648.in  #R18
-127.0.0.1 bccpackermover.com  #R18
 127.0.0.1 bcgdst.com
 127.0.0.1 bcu5045izk.pixnet.net
 127.0.0.1 bcwebworks.com
-127.0.0.1 bcy8bjy7.com  #R18
 127.0.0.1 bcyrrty08.com
 127.0.0.1 bd7359om49.blog.fc2.com
 127.0.0.1 bd74w.pixnet.net
 127.0.0.1 bdfqy.com
-127.0.0.1 bdlongkang.com  #R18
-127.0.0.1 bdshusongdai9.com  #R18
 127.0.0.1 bdt71rt99d.pixnet.net
 127.0.0.1 bearask.com
 127.0.0.1 beauties.life
@@ -1144,13 +984,10 @@
 127.0.0.1 bestsou.cc
 127.0.0.1 bestwoodcrvng.co  #redirects to cacnka.xyz
 127.0.0.1 bestzhnews.com  #歡享網
-127.0.0.1 bet9go.co  #R18
 127.0.0.1 beterdik.com
 127.0.0.1 betermondo.com
-127.0.0.1 betiche.com  #R18
 127.0.0.1 bettymanod.pixnet.net
 127.0.0.1 betweengos.com
-127.0.0.1 betwin999.in  #R18
 127.0.0.1 beulahvz481.blog.fc2.com
 127.0.0.1 beyondnewsnet.com
 127.0.0.1 bfdvjtd37b.pixnet.net
@@ -1164,6 +1001,7 @@
 127.0.0.1 bge45vr38f.blog.fc2.com
 127.0.0.1 bglqts.com
 127.0.0.1 bgnepal.com
+127.0.0.1 bgrte.almsh8fi.shop
 127.0.0.1 bgtero.co  #redirects to soonmiss.top
 127.0.0.1 bgyjr.com  #redirects to tspweb.com
 127.0.0.1 bh18530260.pixnet.net
@@ -1205,17 +1043,14 @@
 127.0.0.1 bjaftj.com
 127.0.0.1 bjartga.blogspot.com
 127.0.0.1 bjb53vb37t.pixnet.net
-127.0.0.1 bjb999.co  #R18
 127.0.0.1 bjfdf59371.pixnet.net
 127.0.0.1 bjkwin148.pixnet.net
-127.0.0.1 bjqgkm.com  #R18
 127.0.0.1 bjstgc.com
 127.0.0.1 bjtdf55957.pixnet.net
 127.0.0.1 bjtriz.com  #樂享網
 127.0.0.1 bka37117.blog.fc2.com
 127.0.0.1 bkfenxiang.com
 127.0.0.1 bknm069.pixnet.net
-127.0.0.1 bkujvc.xyz  #R18
 127.0.0.1 bl5fharryr5oq.pixnet.net
 127.0.0.1 blairnewtjri.pixnet.net
 127.0.0.1 blairwarnec3u.pixnet.net
@@ -1251,9 +1086,7 @@
 127.0.0.1 bobofun.com
 127.0.0.1 bobtify.cc  #歡享網
 127.0.0.1 bobtify.wiki
-127.0.0.1 bodybuildingfitness.in  #R18
 127.0.0.1 bogkbn.top
-127.0.0.1 bojonegoro.in  #R18
 127.0.0.1 bomb01.asia  #boMb01
 127.0.0.1 bomb01.cc  #boMb01
 127.0.0.1 bomb01.club  #boMb01
@@ -1271,13 +1104,10 @@
 127.0.0.1 bomb01.xyz  #boMb01
 127.0.0.1 bomb99.com
 127.0.0.1 bombins.me  #redirects to fatbean.xyz
-127.0.0.1 bondisands.co  #R18
 127.0.0.1 bonnielindh4y.pixnet.net
 127.0.0.1 booksee261.pixnet.net
 127.0.0.1 boosuccess.com
 127.0.0.1 boosuccess.org
-127.0.0.1 borsa-pazardjik.in  #R18
-127.0.0.1 borsa-pazardjik.info  #R18
 127.0.0.1 bossmurmur.com
 127.0.0.1 bosu.pixnet.net
 127.0.0.1 bottle01.com
@@ -1318,7 +1148,6 @@
 127.0.0.1 brq21qo97z.pixnet.net
 127.0.0.1 brunchvirals.com
 127.0.0.1 bs263f7xws.blog.fc2.com
-127.0.0.1 bsagiagsausd.com  #R18
 127.0.0.1 bsfodco.co  #redirects to aetop.top
 127.0.0.1 bstcooker.com
 127.0.0.1 btcharts.com  #redirects to shangmeiyiliao.com
@@ -1326,7 +1155,6 @@
 127.0.0.1 btjtz75357.pixnet.net
 127.0.0.1 btnf6vx31f.blog.fc2.com
 127.0.0.1 btt33vt33j.blog.fc2.com
-127.0.0.1 bttzyw53.com  #R18
 127.0.0.1 bty571.com
 127.0.0.1 bu3veroniciru.pixnet.net
 127.0.0.1 bu86sjimenpup.pixnet.net
@@ -1335,7 +1163,6 @@
 127.0.0.1 budanghuishi.com
 127.0.0.1 buddhafate.com  #歡享網
 127.0.0.1 buddhanet01.com
-127.0.0.1 bulkybaba.com  #R18
 127.0.0.1 bullticle.com
 127.0.0.1 bultrier.me  #redirects to meetwill.xyz
 127.0.0.1 bumbbbls.co  #redirects to meetwill.xyz
@@ -1386,7 +1213,6 @@
 127.0.0.1 byronburto725.pixnet.net
 127.0.0.1 byronjoy53343.pixnet.net
 127.0.0.1 bytes.com
-127.0.0.1 byzx92.cyou  #R18
 127.0.0.1 bzcj7572311y.wordpress.com
 127.0.0.1 bzcj7572312y.wordpress.com
 127.0.0.1 bzfrj13957.pixnet.net
@@ -1397,7 +1223,6 @@
 127.0.0.1 c0ntk049nty.blog.fc2.com
 127.0.0.1 c0o64awi02.xyz
 127.0.0.1 c0wyi0se4u.blog.fc2.com
-127.0.0.1 c1001.net  #R18
 127.0.0.1 c1g4e30ba4.pixnet.net
 127.0.0.1 c1muw9btht.pixnet.net
 127.0.0.1 c1pii8tqye.pixnet.net
@@ -1428,12 +1253,10 @@
 127.0.0.1 c8iip07seo.pixnet.net
 127.0.0.1 c8rsv0gr67.pixnet.net
 127.0.0.1 c8ukw9oaaz.blog.fc2.com
-127.0.0.1 c947.cc  #R18
 127.0.0.1 c9hfg2tmj4.blog.fc2.com
 127.0.0.1 c9i3o6.wordpress.com
 127.0.0.1 c9s7w6.wordpress.com
 127.0.0.1 c9ugg1lvhs.blog.fc2.com
-127.0.0.1 cableav.tv  #R18
 127.0.0.1 caca.press  #大榴槤/大時代/GreatDaily/閃文聯盟/琦琦~
 127.0.0.1 cacanews.com  #大榴槤/大時代/GreatDaily/閃文聯盟/琦琦~
 127.0.0.1 cache.one
@@ -1441,12 +1264,10 @@
 127.0.0.1 cafedetempelier.com
 127.0.0.1 caigeci.com
 127.0.0.1 caihongta.com
-127.0.0.1 caihua005.com  #R18
 127.0.0.1 caikuainet.com
 127.0.0.1 caipu56.com
 127.0.0.1 cajuncodies.me  #redirects to fatbean.xyz
 127.0.0.1 cakealitore.me
-127.0.0.1 calcubuilder.com  #R18
 127.0.0.1 california-german-shepherds.com  #redirects to simpledatings.life
 127.0.0.1 cam4.pixnet.net
 127.0.0.1 camillesw94.pixnet.net
@@ -1485,7 +1306,6 @@
 127.0.0.1 cassandfuxevq.pixnet.net
 127.0.0.1 cassandjohngr.pixnet.net
 127.0.0.1 cassanjeasod.pixnet.net
-127.0.0.1 castlel.com  #R18
 127.0.0.1 castroan64876.pixnet.net
 127.0.0.1 castsg.com
 127.0.0.1 cat3uwkarcmuf.pixnet.net
@@ -1506,7 +1326,6 @@
 127.0.0.1 cdmana.com
 127.0.0.1 cecilhm5t360.pixnet.net
 127.0.0.1 ceeshare.com
-127.0.0.1 cegui.co  #R18
 127.0.0.1 ceibul508.pixnet.net
 127.0.0.1 ceiqq248.blog.fc2.com
 127.0.0.1 celgov.com
@@ -1519,7 +1338,6 @@
 127.0.0.1 ces.net.pl  #redirects to isabel-lopez-kubben.at
 127.0.0.1 cew38gr52z.blog.fc2.com
 127.0.0.1 cf21k11.pixnet.net
-127.0.0.1 cfkeai.co  #R18
 127.0.0.1 cfo1299yrp.blog.fc2.com
 127.0.0.1 cfsksupport.co  #redirects to cacnka.xyz
 127.0.0.1 cfulo517fx.pixnet.net
@@ -1533,8 +1351,6 @@
 127.0.0.1 changlong552.blog.fc2.com
 127.0.0.1 changyenew.com  #歡享網
 127.0.0.1 changyongchangshi.com
-127.0.0.1 chaochengduanya.com  #R18
-127.0.0.1 chaochui010.com  #R18
 127.0.0.1 chaonvgu.com
 127.0.0.1 chapmanj35075.pixnet.net
 127.0.0.1 charlehele844.pixnet.net
@@ -1546,12 +1362,10 @@
 127.0.0.1 chavezcarropx.pixnet.net
 127.0.0.1 chavezw15462.pixnet.net
 127.0.0.1 chaxf.com
-127.0.0.1 chc11y2.com  #R18
 127.0.0.1 checked.news  #redirects to ifunblog.com
 127.0.0.1 checkiton.club  #愛縮兔 (農場轉址)
 127.0.0.1 cheer01.me
 127.0.0.1 chen-ton.com
-127.0.0.1 chenxiuwangluo.club  #R18
 127.0.0.1 chenxiuyong.com
 127.0.0.1 cherryknow.com
 127.0.0.1 cherylalg482.pixnet.net
@@ -1562,7 +1376,6 @@
 127.0.0.1 chiefstock.com
 127.0.0.1 childrenplayfun.com
 127.0.0.1 china-life.buzz
-127.0.0.1 china-stemmata.com  #R18
 127.0.0.1 chinaaepl.com
 127.0.0.1 chinadaily.tw  #指動傳播科技有限公司
 127.0.0.1 chinahot.org
@@ -1597,11 +1410,9 @@
 127.0.0.1 circle01.life  #大榴槤/大時代/GreatDaily/閃文聯盟/琦琦~
 127.0.0.1 circularmatchmakers.eu  #redirects to di02.biz
 127.0.0.1 cititown.tw  #指動傳播科技有限公司
-127.0.0.1 ciu4.com  #R18
 127.0.0.1 ciyun.life  #大榴槤/大時代/GreatDaily/閃文聯盟/琦琦~
 127.0.0.1 cj3f8.pixnet.net
 127.0.0.1 cjkfd.top
-127.0.0.1 cjwsyl.top  #R18
 127.0.0.1 cjzvie230.pixnet.net
 127.0.0.1 ck101.com
 127.0.0.1 ck8.me  #Media8傳媒
@@ -1626,7 +1437,6 @@
 127.0.0.1 clydebrittkq.pixnet.net
 127.0.0.1 cm72517269.blog.fc2.com
 127.0.0.1 cmoney.tw
-127.0.0.1 cmtx.cc  #R18
 127.0.0.1 cnba.live  #大榴槤/大時代/GreatDaily/閃文聯盟/琦琦~
 127.0.0.1 cnbook.top
 127.0.0.1 cnews.world  #大榴槤/大時代/GreatDaily/閃文聯盟/琦琦~
@@ -1716,7 +1526,6 @@
 127.0.0.1 contw.co
 127.0.0.1 contw.com
 127.0.0.1 cooco.pixnet.net
-127.0.0.1 cooctour.shop  #R18
 127.0.0.1 cookcntral.co  #redirects to procnw.xyz
 127.0.0.1 cooker01.com
 127.0.0.1 cooksamunv.pixnet.net
@@ -1743,8 +1552,6 @@
 127.0.0.1 cpumicromart.com  #redirects to tspweb.com
 127.0.0.1 cq9f7.pixnet.net
 127.0.0.1 cqj79lf99e.pixnet.net
-127.0.0.1 cqlora.com  #R18
-127.0.0.1 cqrxw.online  #R18
 127.0.0.1 cqsdys.com
 127.0.0.1 cqtt.cc  #redirects to ksou.cc
 127.0.0.1 cqw4im48.blog.fc2.com
@@ -1759,13 +1566,11 @@
 127.0.0.1 crozel.me  #redirects to fatbean.xyz
 127.0.0.1 crx4619ohe.pixnet.net
 127.0.0.1 crysmk0524.pixnet.net
-127.0.0.1 cs608.co  #R18
 127.0.0.1 csdndocs.com
 127.0.0.1 csdub203sw.pixnet.net
 127.0.0.1 csj-depu.com
 127.0.0.1 cso846q2s6.wordpress.com
 127.0.0.1 csseoxm.com
-127.0.0.1 cswiipiu03.com  #R18
 127.0.0.1 ct10000.com
 127.0.0.1 ctocio.com.cn
 127.0.0.1 ctx2236jgj.blog.fc2.com
@@ -1784,7 +1589,6 @@
 127.0.0.1 cv10570945.pixnet.net
 127.0.0.1 cv71314834.pixnet.net
 127.0.0.1 cvaughnx256.pixnet.net
-127.0.0.1 cvksoi.com  #R18
 127.0.0.1 cwcrazypet.com  #歡享網
 127.0.0.1 cwptz.com
 127.0.0.1 cx1uba2ynt.pixnet.net
@@ -1805,7 +1609,6 @@
 127.0.0.1 czgdpr.eu
 127.0.0.1 cznono.xyz  #redirects to meetwill.xyz
 127.0.0.1 czsfj.cn
-127.0.0.1 czzuanjing.com  #R18
 127.0.0.1 d0bge1f5xwk.pixnet.net
 127.0.0.1 d0gnz3e1zt3.blog.fc2.com
 127.0.0.1 d0mhr408wkg.pixnet.net
@@ -1944,12 +1747,10 @@
 127.0.0.1 danengtzs.com
 127.0.0.1 danielconneo5.pixnet.net
 127.0.0.1 danieljun7788.pixnet.net
-127.0.0.1 danmec.xyz  #R18
 127.0.0.1 dannyj8qu2sp.pixnet.net
 127.0.0.1 dannyw408f6cb.blog.fc2.com
 127.0.0.1 danvsheng.com
 127.0.0.1 dapaizixun.com
-127.0.0.1 daping.club  #R18
 127.0.0.1 daquandaquan.com
 127.0.0.1 dariesias.me  #redirects to fatbean.xyz
 127.0.0.1 darlenecart8c.pixnet.net
@@ -1976,7 +1777,6 @@
 127.0.0.1 dazhuanlan.com
 127.0.0.1 db55vz1j.blog.fc2.com
 127.0.0.1 dbaia.co  #redirects to goake.top
-127.0.0.1 dbghelp.online  #R18
 127.0.0.1 dbgt57sot.pixnet.net
 127.0.0.1 dbigr.com
 127.0.0.1 dbl52qz74u.blog.fc2.com
@@ -1985,7 +1785,6 @@
 127.0.0.1 dccneed.com
 127.0.0.1 dcep676.com
 127.0.0.1 dcr7slhorioss.pixnet.net
-127.0.0.1 dcwnkz.com  #R18
 127.0.0.1 dd57315139.pixnet.net
 127.0.0.1 dd62453366.pixnet.net
 127.0.0.1 dd65249577.pixnet.net
@@ -2015,7 +1814,6 @@
 127.0.0.1 deerask.com
 127.0.0.1 defense.rocks  #大榴槤/大時代/GreatDaily/閃文聯盟/琦琦~
 127.0.0.1 deiniang.com
-127.0.0.1 deja.info  #R18
 127.0.0.1 delicioushare.com
 127.0.0.1 demh429.pixnet.net
 127.0.0.1 demon.irish  #大榴槤/大時代/GreatDaily/閃文聯盟/琦琦~
@@ -2029,12 +1827,10 @@
 127.0.0.1 desotalk.com  #密訊
 127.0.0.1 desperately.site
 127.0.0.1 deteco.pl  #malicious ads scripts
-127.0.0.1 detroitediblecbd.com  #R18
 127.0.0.1 developpaper.com
 127.0.0.1 developreference.com
 127.0.0.1 device-variety.xyz  #malicious scripts
 127.0.0.1 deyi.com
-127.0.0.1 deyitea.cc  #R18
 127.0.0.1 dezwuv942.pixnet.net
 127.0.0.1 df56163128.pixnet.net
 127.0.0.1 df79997937.blog.fc2.com
@@ -2046,9 +1842,7 @@
 127.0.0.1 dg24790414.pixnet.net
 127.0.0.1 dgaera.blogspot.com
 127.0.0.1 dgboligang.com
-127.0.0.1 dggyjs.com  #R18
 127.0.0.1 dghfhjf15jik.blogspot.com
-127.0.0.1 dgsjds.xyz  #R18
 127.0.0.1 dgv43fy23l.blog.fc2.com
 127.0.0.1 dh319p4s14.blog.fc2.com
 127.0.0.1 dhfysa.co
@@ -2060,7 +1854,6 @@
 127.0.0.1 dhl79lr39r.blog.fc2.com
 127.0.0.1 dhn13zv55b.blog.fc2.com
 127.0.0.1 dhrgm.com  #redirects to tspweb.com
-127.0.0.1 dhruwg.co  #R18
 127.0.0.1 di02.biz
 127.0.0.1 di06.biz
 127.0.0.1 di13.biz
@@ -2098,7 +1891,6 @@
 127.0.0.1 dj442or.pixnet.net
 127.0.0.1 djb44gq82g.pixnet.net
 127.0.0.1 djcxy.com
-127.0.0.1 djlbom.com  #R18
 127.0.0.1 djlin10550.pixnet.net
 127.0.0.1 djnecn.com
 127.0.0.1 djnegroup.com
@@ -2106,7 +1898,6 @@
 127.0.0.1 dk7d3s.pixnet.net
 127.0.0.1 dkck.uk.com
 127.0.0.1 dlg53he44v.blog.fc2.com
-127.0.0.1 dlkic.com  #R18
 127.0.0.1 dll53tl95z.pixnet.net
 127.0.0.1 dlr11zh97p.blog.fc2.com
 127.0.0.1 dlv63kh57g.pixnet.net
@@ -2126,10 +1917,8 @@
 127.0.0.1 dnp82gi25k.blog.fc2.com
 127.0.0.1 dnxvjvtfbp.pixnet.net
 127.0.0.1 doaner.me  #redirects to soonmiss.top
-127.0.0.1 doapk.co  #R18
 127.0.0.1 dobs-tds.com
 127.0.0.1 doc01.cc
-127.0.0.1 docloud3.me  #R18
 127.0.0.1 docs01.com
 127.0.0.1 dodomin.com  #樂享網
 127.0.0.1 dofe.com.cn
@@ -2147,9 +1936,7 @@
 127.0.0.1 dongqiuxiang.net
 127.0.0.1 dorh73.pixnet.net
 127.0.0.1 dounaite.com
-127.0.0.1 douyin8.info  #R18
 127.0.0.1 dovov.com
-127.0.0.1 down-2in1.xhd25.com  #R18
 127.0.0.1 downol.com
 127.0.0.1 downtownlloyd.com
 127.0.0.1 doyouknow.wiki
@@ -2168,7 +1955,6 @@
 127.0.0.1 dragontechs2.live  #大榴槤/大時代/GreatDaily/閃文聯盟/琦琦~
 127.0.0.1 drama01.com
 127.0.0.1 drbl99tfn.pixnet.net
-127.0.0.1 drcps.info  #R18
 127.0.0.1 dreamerwin.com  #歡享網
 127.0.0.1 dreamwe1.com
 127.0.0.1 drfdlnznnzbd.blog.fc2.com
@@ -2178,13 +1964,10 @@
 127.0.0.1 drpneu.com  #redirects to tspweb.com
 127.0.0.1 drsgov.com
 127.0.0.1 ds2464th27.blog.fc2.com
-127.0.0.1 dsdownload.co  #R18
 127.0.0.1 dsfgfhg12.blogspot.com
-127.0.0.1 dsj003.co  #R18
 127.0.0.1 dsn66668888.com
 127.0.0.1 dsrfo411vl.pixnet.net
 127.0.0.1 dsy39.com
-127.0.0.1 dsz31.com  #R18
 127.0.0.1 dtdsnx.com  #歡享網
 127.0.0.1 dtime.com
 127.0.0.1 dtj63br86a.pixnet.net
@@ -2198,7 +1981,6 @@
 127.0.0.1 dugushici.com
 127.0.0.1 duncanjan3984.pixnet.net
 127.0.0.1 dungwa.com
-127.0.0.1 duomeiyu.com  #R18
 127.0.0.1 dushiliangpin.com
 127.0.0.1 dustinwandcon.pixnet.net
 127.0.0.1 dutyio130.pixnet.net
@@ -2207,7 +1989,6 @@
 127.0.0.1 dv4398cn45.blog.fc2.com
 127.0.0.1 dvdtjbzjd7.pixnet.net
 127.0.0.1 dvfpj155.blog.fc2.com
-127.0.0.1 dvkftnd.cn  #R18
 127.0.0.1 dvtpxj3vhzbd.blog.fc2.com
 127.0.0.1 dwaynetravkof.pixnet.net
 127.0.0.1 dwightste9117.pixnet.net
@@ -2223,10 +2004,8 @@
 127.0.0.1 dxmys897ek.pixnet.net
 127.0.0.1 dxx75bn79r.blog.fc2.com
 127.0.0.1 dy7wywi.blogspot.com
-127.0.0.1 dy8801.xyz  #R18
 127.0.0.1 dya93vk22v.blog.fc2.com
 127.0.0.1 dyfocus.com
-127.0.0.1 dyt6z.com  #R18
 127.0.0.1 dz1dpxrd7bx.pixnet.net
 127.0.0.1 dz59493753.blog.fc2.com
 127.0.0.1 dzen47543959p.wordpress.com
@@ -2333,7 +2112,6 @@
 127.0.0.1 eeq8.com
 127.0.0.1 eet6292mhl.blog.fc2.com
 127.0.0.1 ef37193479.pixnet.net
-127.0.0.1 effison.com  #R18
 127.0.0.1 efr9058jaj.blog.fc2.com
 127.0.0.1 efreedom.com
 127.0.0.1 eft93pf21e.blog.fc2.com
@@ -2354,7 +2132,6 @@
 127.0.0.1 elads.kocpc.com.tw
 127.0.0.1 elainejamesng.pixnet.net
 127.0.0.1 eleanoy14e60a.pixnet.net
-127.0.0.1 electricscooters.info  #R18
 127.0.0.1 element-ui.cn
 127.0.0.1 elephoto.me  #redirects to ppcnzi.xyz
 127.0.0.1 elg61xy18b.blog.fc2.com
@@ -2365,7 +2142,6 @@
 127.0.0.1 ellell.cc
 127.0.0.1 ellenoov73b6.pixnet.net
 127.0.0.1 elliottrachnm.pixnet.net
-127.0.0.1 ellkii.co  #R18
 127.0.0.1 elmerdianehc.pixnet.net
 127.0.0.1 ema633rogejg.pixnet.net
 127.0.0.1 emckoeoq0w.blog.fc2.com
@@ -2409,19 +2185,15 @@
 127.0.0.1 eqps.cn
 127.0.0.1 er64087180.pixnet.net
 127.0.0.1 er81396574.pixnet.net
-127.0.0.1 erheiyan.club  #R18
 127.0.0.1 ericleonbkm.pixnet.net
 127.0.0.1 erikbarker390.pixnet.net
 127.0.0.1 erikedwaaqdx.pixnet.net
 127.0.0.1 erinlopezdani.pixnet.net
-127.0.0.1 eritk.com  #R18
 127.0.0.1 ernestcbwyi57.pixnet.net
-127.0.0.1 errom5.cyou  #R18
 127.0.0.1 ertegrt.com
 127.0.0.1 eryunews.com
 127.0.0.1 erzhizhu.cn
 127.0.0.1 es57784162.pixnet.net
-127.0.0.1 eshhhnu.xyz  #R18
 127.0.0.1 esmolxdorifty.pixnet.net
 127.0.0.1 esports17.com
 127.0.0.1 esql974.pixnet.net
@@ -2429,7 +2201,6 @@
 127.0.0.1 et47615272.pixnet.net
 127.0.0.1 et52106494.pixnet.net
 127.0.0.1 et66424950.pixnet.net
-127.0.0.1 etalon-lis.com  #R18
 127.0.0.1 ete5803xke.blog.fc2.com
 127.0.0.1 etop.com.cn
 127.0.0.1 etravelist.com
@@ -2457,7 +2228,6 @@
 127.0.0.1 expensive88.online  #愛縮兔 (農場轉址)
 127.0.0.1 experts-exchange.com
 127.0.0.1 expertvillage.com
-127.0.0.1 expiredtld.com  #R18
 127.0.0.1 expressfun.net
 127.0.0.1 ext7429zoq.blog.fc2.com
 127.0.0.1 exzt93615356muan.wordpress.com
@@ -2479,7 +2249,6 @@
 127.0.0.1 ezp8.com.tw
 127.0.0.1 ezp9.com
 127.0.0.1 ezp93.com
-127.0.0.1 ezpnsq.xyz  #R18
 127.0.0.1 ezsmth.com
 127.0.0.1 ezvivi.com
 127.0.0.1 ezvivi2.com
@@ -2515,7 +2284,6 @@
 127.0.0.1 f2r3x4a5qnd.pixnet.net
 127.0.0.1 f2t9h98vbv.pixnet.net
 127.0.0.1 f2yxd1txzd.blog.fc2.com
-127.0.0.1 f3997b3jxz.xyz  #R18
 127.0.0.1 f3alu5thbh.pixnet.net
 127.0.0.1 f3annsxpw.pixnet.net
 127.0.0.1 f3bz3773oa.pixnet.net
@@ -2596,7 +2364,6 @@
 127.0.0.1 f9z9n9rjxx.pixnet.net
 127.0.0.1 f9z9t9rdvf.pixnet.net
 127.0.0.1 f9zxt31xh5.pixnet.net
-127.0.0.1 fa768.com  #R18
 127.0.0.1 faberca.me  #redirects to cznono.xyz
 127.0.0.1 fachservice.eu  #redirects to videoplay-on.com
 127.0.0.1 fafa01.com
@@ -2610,7 +2377,6 @@
 127.0.0.1 familytagtw.com
 127.0.0.1 faminereports.blogspot.com
 127.0.0.1 fanaystart.com  #樂享網
-127.0.0.1 fanghuwang999.com  #R18
 127.0.0.1 fangyan100.com
 127.0.0.1 fanli7.net
 127.0.0.1 fanpiece.com
@@ -2621,7 +2387,6 @@
 127.0.0.1 fanyizhinan.com
 127.0.0.1 faqs.tw
 127.0.0.1 farmerb7760.pixnet.net
-127.0.0.1 farrisevents.com  #R18
 127.0.0.1 fas68s6sf12.com
 127.0.0.1 fashionmanbuy.blogspot.com
 127.0.0.1 fashionwaltz.com
@@ -2640,11 +2405,9 @@
 127.0.0.1 fbu89ip47y.blog.fc2.com
 127.0.0.1 fby74sl69b.blog.fc2.com
 127.0.0.1 fc10245558.pixnet.net
-127.0.0.1 fclrc.in  #R18
 127.0.0.1 fcx06ue40g.pixnet.net
 127.0.0.1 fcykzn802.pixnet.net
 127.0.0.1 fcz0369khe.blog.fc2.com
-127.0.0.1 fd84.com  #R18
 127.0.0.1 fdbpj51131.pixnet.net
 127.0.0.1 fdbtf97779.pixnet.net
 127.0.0.1 fddnv57991.pixnet.net
@@ -2686,24 +2449,18 @@
 127.0.0.1 fernandodearguello.cl
 127.0.0.1 fernandstewte.pixnet.net
 127.0.0.1 festivalmagickal.co  #redirects to keecnya.xyz
-127.0.0.1 feuerwehr-naumburg.in  #R18
-127.0.0.1 feygws.com  #R18
-127.0.0.1 ff006.live  #R18
 127.0.0.1 ff166.top
 127.0.0.1 ff26320157.pixnet.net
 127.0.0.1 ff57553917.pixnet.net
-127.0.0.1 ffdshow.co  #R18
 127.0.0.1 ffl45sw52q.pixnet.net
 127.0.0.1 fflsw.com
 127.0.0.1 ffpth31357.pixnet.net
-127.0.0.1 ffshine.club  #R18
 127.0.0.1 ffv11dz11r.blog.fc2.com
 127.0.0.1 ffvab.com  #redirects to tspweb.com
 127.0.0.1 fgfxr.com
 127.0.0.1 fgj47451s1os.blogspot.com
 127.0.0.1 fgov.shop
 127.0.0.1 fgw65ta00m.blog.fc2.com
-127.0.0.1 fh9988.us  #R18
 127.0.0.1 fhb30vt00a.pixnet.net
 127.0.0.1 fhg78ir96c.pixnet.net
 127.0.0.1 fhjgh45fgj188.blogspot.com
@@ -2718,12 +2475,10 @@
 127.0.0.1 fidapcodcom.fr  #redirects to odbxoq.prodlgiousdates.com
 127.0.0.1 fightertify.com  #歡享網
 127.0.0.1 fijvlydialoui.pixnet.net
-127.0.0.1 fiktionsbescheinigung.us  #R18
 127.0.0.1 file-sharing2022.xyz  #redirects to negrall.com
 127.0.0.1 file007.com
 127.0.0.1 filemoku.com
 127.0.0.1 filesmac.com
-127.0.0.1 filmdatabase.in  #R18
 127.0.0.1 finance.nx04.com
 127.0.0.1 financetagtw.com
 127.0.0.1 find-top-prizes-here.life  #malicious ads scripts
@@ -2743,19 +2498,15 @@
 127.0.0.1 fixes.pub  #machine translation from StackOverflow
 127.0.0.1 fixya.com
 127.0.0.1 fj01983313.pixnet.net
-127.0.0.1 fj38ln.cyou  #R18
 127.0.0.1 fj888l4f.pixnet.net
 127.0.0.1 fj99397135.pixnet.net
 127.0.0.1 fjb74fo40u.pixnet.net
 127.0.0.1 fjhbg.cn
-127.0.0.1 fjklasjdoiwpewr.top  #R18
 127.0.0.1 fjrhs.com
 127.0.0.1 fk10926990.blog.fc2.com
 127.0.0.1 fkpi581.pixnet.net
 127.0.0.1 fl19767199.pixnet.net
 127.0.0.1 fl99v97hdvv.pixnet.net
-127.0.0.1 flimzone.com  #R18
-127.0.0.1 flmd.in  #R18
 127.0.0.1 flnxxzfxhfjd.blog.fc2.com
 127.0.0.1 floranth.co  #redirects to procnw.xyz
 127.0.0.1 florenleonabw.pixnet.net
@@ -2768,7 +2519,6 @@
 127.0.0.1 fm72694059.blog.fc2.com
 127.0.0.1 fnd59dl11r.blog.fc2.com
 127.0.0.1 fnephu273.pixnet.net
-127.0.0.1 fngabs.xyz  #R18
 127.0.0.1 fni81zz02v.blog.fc2.com
 127.0.0.1 fnkjw.com
 127.0.0.1 fno1w7julifkv.pixnet.net
@@ -2782,7 +2532,6 @@
 127.0.0.1 foodytw.com
 127.0.0.1 forgreatdaily.cc  #大榴槤/大時代/GreatDaily/閃文聯盟/琦琦~
 127.0.0.1 formomo.com
-127.0.0.1 fortdata.info  #R18
 127.0.0.1 fortuneinsight.com
 127.0.0.1 fortunetelling.cc
 127.0.0.1 forumctsko.me  #redirects to meetwill.xyz
@@ -2840,7 +2589,6 @@
 127.0.0.1 ftsunflower.top  #樂享網
 127.0.0.1 ftz13np15t.pixnet.net
 127.0.0.1 fucgov.tv
-127.0.0.1 fujp1.site  #R18
 127.0.0.1 fullerlenakqb.pixnet.net
 127.0.0.1 fullstack.im
 127.0.0.1 fullyu.com
@@ -2910,7 +2658,6 @@
 127.0.0.1 fzp35lv79b.blog.fc2.com
 127.0.0.1 fzpa18.cn
 127.0.0.1 fzrui637tq.pixnet.net
-127.0.0.1 fzvril.xyz  #R18
 127.0.0.1 g.odam.us  #愛縮兔 (農場轉址)
 127.0.0.1 g0g8x55qt8.blog.fc2.com
 127.0.0.1 g0kzr5nxf5.pixnet.net
@@ -2931,7 +2678,6 @@
 127.0.0.1 g2r7i2axxz.blog.fc2.com
 127.0.0.1 g2ukg0ya24.pixnet.net
 127.0.0.1 g2wiq0so04.blog.fc2.com
-127.0.0.1 g3088.us  #R18
 127.0.0.1 g3a3m5.wordpress.com
 127.0.0.1 g3ame1worg.pixnet.net
 127.0.0.1 g3omy1c9skw.pixnet.net
@@ -2951,7 +2697,6 @@
 127.0.0.1 g7sqn64gbx.blog.fc2.com
 127.0.0.1 g7utt9jwch.pixnet.net
 127.0.0.1 g7wzbwvt4.pixnet.net
-127.0.0.1 g864.cc  #R18
 127.0.0.1 g8dci9bmbl.pixnet.net
 127.0.0.1 g8g1o1.wordpress.com
 127.0.0.1 g8kek6kekc.pixnet.net
@@ -2989,7 +2734,6 @@
 127.0.0.1 gbfdfsdf33.blogspot.com
 127.0.0.1 gbjzot451.pixnet.net
 127.0.0.1 gbk92ew05p.blog.fc2.com
-127.0.0.1 gboss.club  #R18
 127.0.0.1 gca5735zxf.pixnet.net
 127.0.0.1 gcuyosmmyo.pixnet.net
 127.0.0.1 geek-share.com
@@ -3017,23 +2761,17 @@
 127.0.0.1 gf83919904.blog.fc2.com
 127.0.0.1 gfxen2fmc.pixnet.net
 127.0.0.1 gfzyecq.com
-127.0.0.1 gg3399.us  #R18
-127.0.0.1 gg9955.us  #R18
-127.0.0.1 ggggggggggg.one  #redirects to mjsq6.net
 127.0.0.1 gglzw.com
 127.0.0.1 ggr4.pixnet.net
 127.0.0.1 ggw305jennicn.pixnet.net
 127.0.0.1 ghostislandmadnews.com  #大榴槤/大時代/GreatDaily/閃文聯盟/琦琦~
-127.0.0.1 ghrjzg.com  #R18
 127.0.0.1 ghy60ql47m.pixnet.net
 127.0.0.1 gi453jreelej.pixnet.net
 127.0.0.1 gi62.com
-127.0.0.1 gift-lys.com  #R18
 127.0.0.1 giftflower.com
 127.0.0.1 gigacircle.com
 127.0.0.1 gigcasa.com
 127.0.0.1 gik48tq35k.blog.fc2.com
-127.0.0.1 gilakoo.com  #R18
 127.0.0.1 ginseemore.live
 127.0.0.1 giters.com
 127.0.0.1 givemeawish.net
@@ -3056,7 +2794,6 @@
 127.0.0.1 gloriala68780.pixnet.net
 127.0.0.1 gm06214909.pixnet.net
 127.0.0.1 gm5howelihfc.pixnet.net
-127.0.0.1 gm88888.top  #R18
 127.0.0.1 gmilr941.pixnet.net
 127.0.0.1 gmkxnh452.pixnet.net
 127.0.0.1 gmm8wg62aqa.pixnet.net
@@ -3065,7 +2802,6 @@
 127.0.0.1 gmsqgqky42.pixnet.net
 127.0.0.1 gmter.com
 127.0.0.1 gny7725lvz.blog.fc2.com
-127.0.0.1 go-lpg.com  #R18
 127.0.0.1 go1p.com
 127.0.0.1 goake.top  #redirects to debtways.xyz
 127.0.0.1 godayup.com
@@ -3086,7 +2822,6 @@
 127.0.0.1 gohealth01.com
 127.0.0.1 gohealther.com  #歡享網
 127.0.0.1 gohong01.com
-127.0.0.1 gold781.in  #R18
 127.0.0.1 golddtn.me  #redirects to soonmiss.top
 127.0.0.1 golflink.cn
 127.0.0.1 golflink.com
@@ -3128,9 +2863,7 @@
 127.0.0.1 gpseiok.com
 127.0.0.1 gpsvo.com
 127.0.0.1 gpt1j84p53239.pixnet.net
-127.0.0.1 gq0m2geuww.xyz  #R18
 127.0.0.1 gqd90bq72e.blog.fc2.com
-127.0.0.1 gqtod.com  #R18
 127.0.0.1 gqx7978732re.wordpress.com
 127.0.0.1 gr80611263.pixnet.net
 127.0.0.1 gra55ajessisv.pixnet.net
@@ -3161,7 +2894,6 @@
 127.0.0.1 grovears.me  #redirects to cznono.xyz
 127.0.0.1 gscfyi370.pixnet.net
 127.0.0.1 gsdtgfrhg18.blogspot.com
-127.0.0.1 gsnish.xyz  #R18
 127.0.0.1 gspentertainment.com
 127.0.0.1 gsusa4mg8.pixnet.net
 127.0.0.1 gsx3scbowmafo.pixnet.net
@@ -3183,7 +2915,6 @@
 127.0.0.1 gutierrhar688.pixnet.net
 127.0.0.1 guudo.cn
 127.0.0.1 guymichellaj.pixnet.net
-127.0.0.1 gv4u7p.cc  #R18
 127.0.0.1 gvxih891tv.blog.fc2.com
 127.0.0.1 gw50727724.pixnet.net
 127.0.0.1 gwendoe74l34.pixnet.net
@@ -3191,19 +2922,14 @@
 127.0.0.1 gx389r0b.blog.fc2.com
 127.0.0.1 gxdongxingdpf.org.cn
 127.0.0.1 gxfunnyworld.com  #歡享網
-127.0.0.1 gxlzxx.com  #R18
 127.0.0.1 gxnmw.cn
-127.0.0.1 gyamfz.com  #R18
 127.0.0.1 gyfunnews.com  #密訊
 127.0.0.1 gyhzx846rl.blog.fc2.com
 127.0.0.1 gyman49.pixnet.net
 127.0.0.1 gyp4600lnr.pixnet.net
 127.0.0.1 gyqyyy.com
-127.0.0.1 gz7888.us  #R18
 127.0.0.1 gz85.com
 127.0.0.1 gzchaxun.com
-127.0.0.1 gzeqa088.cc  #R18
-127.0.0.1 gzeqw084.cc  #R18
 127.0.0.1 gzhttp.com
 127.0.0.1 gzmjhzs.com
 127.0.0.1 gzx80925715shibi.wordpress.com
@@ -3234,7 +2960,6 @@
 127.0.0.1 h1x1h13xv3.pixnet.net
 127.0.0.1 h1zfd3b1jvd.blog.fc2.com
 127.0.0.1 h1zfd3nrbt.blog.fc2.com
-127.0.0.1 h2333.us  #R18
 127.0.0.1 h2oov070.pixnet.net
 127.0.0.1 h2oplus.com.tw
 127.0.0.1 h2t5v5ddt7.pixnet.net
@@ -3302,8 +3027,6 @@
 127.0.0.1 h7y8t6t4yzb.pixnet.net
 127.0.0.1 h7zrr1p9xn5.blog.fc2.com
 127.0.0.1 h7zxr5dzhx.pixnet.net
-127.0.0.1 h84888.us  #R18
-127.0.0.1 h8h88.us  #R18
 127.0.0.1 h9b5v3p3lh1h.pixnet.net
 127.0.0.1 h9frf5bddj.pixnet.net
 127.0.0.1 h9fzf3vf9h.pixnet.net
@@ -3317,15 +3040,12 @@
 127.0.0.1 hack56.com
 127.0.0.1 hacker66.me
 127.0.0.1 haejare.blogspot.com
-127.0.0.1 haemangioma.us  #R18
 127.0.0.1 haetgad.blogspot.com
 127.0.0.1 haharead.com  #樂享網
 127.0.0.1 hahaya01.website
 127.0.0.1 haibaba8.com
-127.0.0.1 haiquvv.com  #redirects to eshhhnu.xyz
 127.0.0.1 hamisu88.com  #歡享網
 127.0.0.1 hammonlillws.pixnet.net
-127.0.0.1 hanbao2456.com  #R18
 127.0.0.1 hancel.org
 127.0.0.1 handread.cc
 127.0.0.1 handyradar.org
@@ -3411,17 +3131,12 @@
 127.0.0.1 hbbzd33131.pixnet.net
 127.0.0.1 hbfbt77199.pixnet.net
 127.0.0.1 hbg4714qqr.pixnet.net
-127.0.0.1 hbrk1s.cyou  #R18
-127.0.0.1 hbs5555.co  #R18
-127.0.0.1 hbs5555.us  #R18
 127.0.0.1 hbxfm267pw.pixnet.net
 127.0.0.1 hbzrhf.com
 127.0.0.1 hc0b7pr6gk.pixnet.net
-127.0.0.1 hcmowei.xyz  #R18
 127.0.0.1 hcoakb6.xyz
 127.0.0.1 hcu30ng27g.blog.fc2.com
 127.0.0.1 hcvxtr827.pixnet.net
-127.0.0.1 hcyqvtax.xyz  #R18
 127.0.0.1 hda81pm42a.blog.fc2.com
 127.0.0.1 hdapei.com
 127.0.0.1 hdctrf.com  #歡享網
@@ -3457,8 +3172,6 @@
 127.0.0.1 hecwk13833.pixnet.net
 127.0.0.1 hehuancui.com
 127.0.0.1 heidirelooking.ch
-127.0.0.1 heixiu007.com  #R18
-127.0.0.1 hejibet.info  #R18
 127.0.0.1 heliscience.co  #redirects to keecnya.xyz
 127.0.0.1 hellol.com
 127.0.0.1 helongmuseum.com
@@ -3475,17 +3188,14 @@
 127.0.0.1 hewin.fit
 127.0.0.1 heyvpnop.pages.dev  #redirects to thebestvpn.sa.com
 127.0.0.1 hezhisw.com
-127.0.0.1 hezhonglz.com  #R18
 127.0.0.1 hf13579735.blog.fc2.com
 127.0.0.1 hf14940774.pixnet.net
 127.0.0.1 hfdewgov.site
 127.0.0.1 hfrhdalfrh8r.pixnet.net
-127.0.0.1 hg-ent.co  #R18
 127.0.0.1 hgsz008.xyz
 127.0.0.1 hhd35cz16z.blog.fc2.com
 127.0.0.1 hhfocus.com
 127.0.0.1 hhigov.com
-127.0.0.1 hhsoft.club  #R18
 127.0.0.1 hhsp113.com
 127.0.0.1 hhx9xh93.blog.fc2.com
 127.0.0.1 hi56oo.pixnet.net
@@ -3500,11 +3210,8 @@
 127.0.0.1 hirobocup.com
 127.0.0.1 historymore.com
 127.0.0.1 historyslice.com
-127.0.0.1 hitma.shop  #R18
 127.0.0.1 hittt-fun.blogspot.com
 127.0.0.1 hittt.blogspot.com
-127.0.0.1 hj3355.co  #R18
-127.0.0.1 hj3388.us  #R18
 127.0.0.1 hj72511708.blog.fc2.com
 127.0.0.1 hj98921132.pixnet.net
 127.0.0.1 hjc11qe42z.blog.fc2.com
@@ -3543,14 +3250,12 @@
 127.0.0.1 hksilicon.com
 127.0.0.1 hkskylove.com
 127.0.0.1 hktimes.org
-127.0.0.1 hktoday.xyz  #R18
 127.0.0.1 hku86xx55u.pixnet.net
 127.0.0.1 hkwall.com
 127.0.0.1 hkxbdg095.pixnet.net
 127.0.0.1 hl61963305.pixnet.net
 127.0.0.1 hl91fv1p.blog.fc2.com
 127.0.0.1 hlcydb.com
-127.0.0.1 hleitt.xyz  #R18
 127.0.0.1 hlkiwd7486.pixnet.net
 127.0.0.1 hm37752088.blog.fc2.com
 127.0.0.1 hmavzc934.pixnet.net
@@ -3565,7 +3270,6 @@
 127.0.0.1 hndqxh.com
 127.0.0.1 hnv97pz11b.blog.fc2.com
 127.0.0.1 hnxv77dv.wordpress.com
-127.0.0.1 ho168.co  #R18
 127.0.0.1 ho58507527.pixnet.net
 127.0.0.1 ho96007414.pixnet.net
 127.0.0.1 hobbylavoricreativi.it  #redirects to sergiofoto.lv
@@ -3580,12 +3284,10 @@
 127.0.0.1 homedishesso.com  #歡享網
 127.0.0.1 hon6578elr.blog.fc2.com
 127.0.0.1 honey99.net
-127.0.0.1 hongball.us  #R18
 127.0.0.1 hongkongha.com
 127.0.0.1 hongyibag.com
 127.0.0.1 honsnews.com
 127.0.0.1 hoo41j8.pixnet.net
-127.0.0.1 hooball.us  #R18
 127.0.0.1 horo88.cc
 127.0.0.1 horofriend88.com
 127.0.0.1 horonote.com
@@ -3613,7 +3315,6 @@
 127.0.0.1 hottimes.org
 127.0.0.1 hotvdo.info
 127.0.0.1 hotxww.com
-127.0.0.1 hotyoga888.com  #R18
 127.0.0.1 housekook.com
 127.0.0.1 houyapi.com
 127.0.0.1 how01.com
@@ -3626,9 +3327,7 @@
 127.0.0.1 howtodothings.com
 127.0.0.1 howtoip.com
 127.0.0.1 hp404j7a05.pixnet.net
-127.0.0.1 hp54z4.top  #R18
 127.0.0.1 hpb1fx79.blog.fc2.com
-127.0.0.1 hpfsas.com  #R18
 127.0.0.1 hphbr33539.pixnet.net
 127.0.0.1 hpto.cc  #redirects to ksou.cc
 127.0.0.1 hqb44.pixnet.net
@@ -3651,8 +3350,6 @@
 127.0.0.1 htsgov.com
 127.0.0.1 htz13vl53h.blog.fc2.com
 127.0.0.1 huahanzw.com
-127.0.0.1 huangguanzoudi.co  #R18
-127.0.0.1 huanghua003.com  #R18
 127.0.0.1 huashu-inc.com
 127.0.0.1 huaweiempresas.com
 127.0.0.1 huaxuezhinan.com
@@ -3665,9 +3362,6 @@
 127.0.0.1 huntalmar8.pixnet.net
 127.0.0.1 hupc.cc  #redirects to ksou.cc
 127.0.0.1 huubegin.com
-127.0.0.1 huya1.xyz  #R18
-127.0.0.1 huya11.xyz  #R18
-127.0.0.1 huyadh.com  #redirects to huya1.xyz
 127.0.0.1 huyi9653775kebeng.wordpress.com
 127.0.0.1 hv3ol8.pixnet.net
 127.0.0.1 hv55879759.blog.fc2.com
@@ -3675,7 +3369,6 @@
 127.0.0.1 hvsoper.com
 127.0.0.1 hvt75zn57v.blog.fc2.com
 127.0.0.1 hvw22ip08q.blog.fc2.com
-127.0.0.1 hw88.cc  #R18
 127.0.0.1 hwapa27250.pixnet.net
 127.0.0.1 hwf57ca55m.blog.fc2.com
 127.0.0.1 hwg9027qmk.pixnet.net
@@ -3683,7 +3376,6 @@
 127.0.0.1 hwredian.com
 127.0.0.1 hwzryp028.pixnet.net
 127.0.0.1 hx55828303.pixnet.net
-127.0.0.1 hxcmcm.xyz  #R18
 127.0.0.1 hxf9hx31.blog.fc2.com
 127.0.0.1 hxgamesky.com  #歡享網
 127.0.0.1 hxl31sq24j.pixnet.net
@@ -3692,9 +3384,7 @@
 127.0.0.1 hxxkw.org
 127.0.0.1 hyesfe31.blogspot.com
 127.0.0.1 hyfgfrg55.blogspot.com
-127.0.0.1 hynewsorg.shop  #R18
 127.0.0.1 hyq20yf33o.pixnet.net
-127.0.0.1 hyspp.com  #R18
 127.0.0.1 hyvsre609.pixnet.net
 127.0.0.1 hz73240722yip.wordpress.com
 127.0.0.1 hz93rr9l.blog.fc2.com
@@ -3777,18 +3467,15 @@
 127.0.0.1 ibestchoice.com
 127.0.0.1 ibj.tw  #~, 3c.~, fun.~, knowing.~
 127.0.0.1 ibrahimzs708.wordpress.com
-127.0.0.1 icarusqaq.club  #R18
 127.0.0.1 iccie.tw
 127.0.0.1 icemaker17880326.wordpress.com
 127.0.0.1 ichiryuhk.com
-127.0.0.1 ichrak.net  #R18
 127.0.0.1 icode.best
 127.0.0.1 icode9.com
 127.0.0.1 icofunny.com.hk
 127.0.0.1 iconabc.com  #歡享網
 127.0.0.1 icopy.site
 127.0.0.1 icovideos.com
-127.0.0.1 icxoun5n.site  #R18
 127.0.0.1 idatatw.com
 127.0.0.1 idczone.net
 127.0.0.1 idea543.net
@@ -3803,15 +3490,12 @@
 127.0.0.1 iemiu.com
 127.0.0.1 ieo72vt43t.blog.fc2.com
 127.0.0.1 ifc16o5deniln.pixnet.net
-127.0.0.1 ifstto.xyz  #R18
 127.0.0.1 ifun01.com
 127.0.0.1 ifunblog.com  #redirects to circle01.life
 127.0.0.1 ifunmy.cc
 127.0.0.1 ifunny.tw
 127.0.0.1 ifuun.com
-127.0.0.1 igamingsoftware.us  #R18
 127.0.0.1 igfvt.ch  #redirects to isabel-lopez-kubben.at
-127.0.0.1 igkbet.us  #R18
 127.0.0.1 igotojapan.com
 127.0.0.1 igtsek478.pixnet.net
 127.0.0.1 igygy80026.pixnet.net
@@ -3829,15 +3513,12 @@
 127.0.0.1 iitrendwadai.com
 127.0.0.1 ij76.com
 127.0.0.1 ik64.com
-127.0.0.1 ikb66.com  #R18
-127.0.0.1 ikonnectplus.in  #R18
 127.0.0.1 ikoreahotel.com
 127.0.0.1 ikwytz563.pixnet.net
 127.0.0.1 il60bb92.pixnet.net
 127.0.0.1 ilife97.com
 127.0.0.1 ilife99.com
 127.0.0.1 ilt8484lis.pixnet.net
-127.0.0.1 iluluweb.club  #R18
 127.0.0.1 im-coder.com
 127.0.0.1 im2240vw56.blog.fc2.com
 127.0.0.1 image-wallpaper.com
@@ -3861,9 +3542,6 @@
 127.0.0.1 ini0969rua.pixnet.net
 127.0.0.1 inj13qv28b.blog.fc2.com
 127.0.0.1 injurylawyernewportnews.com
-127.0.0.1 inletexemc.shop  #R18
-127.0.0.1 inletexemc.us  #R18
-127.0.0.1 inn-train.com  #R18
 127.0.0.1 inpmv672cf.pixnet.net
 127.0.0.1 inr7213eet.pixnet.net
 127.0.0.1 insci.cn
@@ -3871,7 +3549,6 @@
 127.0.0.1 inspirationaltouching.blogspot.com
 127.0.0.1 instalatorkrosno.pl
 127.0.0.1 instant.lvv2.com
-127.0.0.1 instdrv.co  #R18
 127.0.0.1 insurancewikitw.com
 127.0.0.1 interestingpo.com
 127.0.0.1 internettagtw.com
@@ -3910,13 +3587,11 @@
 127.0.0.1 isanxia.com
 127.0.0.1 ise81nl38i.blog.fc2.com
 127.0.0.1 isforum.net
-127.0.0.1 isgapk.com  #R18
 127.0.0.1 ishare777.blogspot.com
 127.0.0.1 isheart.co
 127.0.0.1 ishmeitian.com
 127.0.0.1 iso2.cc  #愛縮兔 (農場轉址)
 127.0.0.1 ispot.news
-127.0.0.1 isqvod.co  #R18
 127.0.0.1 isth2020.it  #redirects to isabel-lopez-kubben.at
 127.0.0.1 isuduw.blogspot.com
 127.0.0.1 it-kids-ffm.de  #redirects to quing.im
@@ -4030,7 +3705,6 @@
 127.0.0.1 j4piercewendy.pixnet.net
 127.0.0.1 j4swr9l4nq3.pixnet.net
 127.0.0.1 j4x60h29b.pixnet.net
-127.0.0.1 j5811.com  #R18
 127.0.0.1 j5bfv3n5rl9.pixnet.net
 127.0.0.1 j5btb5pt7l.pixnet.net
 127.0.0.1 j5d1n3xvx1.pixnet.net
@@ -4091,8 +3765,6 @@
 127.0.0.1 j9yye6.pixnet.net
 127.0.0.1 j9zhj7pfrz.pixnet.net
 127.0.0.1 jabir4721.pixnet.net
-127.0.0.1 jable.tv  #R18
-127.0.0.1 jablehk.co  #R18
 127.0.0.1 jacobsholn5.pixnet.net
 127.0.0.1 jacobsrileydv.pixnet.net
 127.0.0.1 jacquem8f6s6u.pixnet.net
@@ -4103,7 +3775,6 @@
 127.0.0.1 jankanban.com
 127.0.0.1 jankanban.tw
 127.0.0.1 januszpozycza.pl  #malicious ads scripts
-127.0.0.1 japanse.co  #redirects to mjsq8.in
 127.0.0.1 japare.com
 127.0.0.1 jasve.com
 127.0.0.1 javajgs.com
@@ -4123,11 +3794,8 @@
 127.0.0.1 jd-tv.com
 127.0.0.1 jd21871873.pixnet.net
 127.0.0.1 jd3n50.pixnet.net
-127.0.0.1 jd995.co  #R18
-127.0.0.1 jd999.us  #R18
 127.0.0.1 jdcgov.com
 127.0.0.1 jdkxcq134.pixnet.net
-127.0.0.1 jdlco.co  #R18
 127.0.0.1 jdpl57ld.wordpress.com
 127.0.0.1 jdr55dr55z.blog.fc2.com
 127.0.0.1 jdt97tp55r.blog.fc2.com
@@ -4147,7 +3815,6 @@
 127.0.0.1 jeremymanniy6.pixnet.net
 127.0.0.1 jerryxqc0ec5.pixnet.net
 127.0.0.1 jessiereyno10.pixnet.net
-127.0.0.1 jessymoreira.com  #R18
 127.0.0.1 jf-tendais.com
 127.0.0.1 jf79577518.pixnet.net
 127.0.0.1 jfarmerk1.pixnet.net
@@ -4156,9 +3823,7 @@
 127.0.0.1 jfr65nc84l.pixnet.net
 127.0.0.1 jfv35vd31t.blog.fc2.com
 127.0.0.1 jg37258219.pixnet.net
-127.0.0.1 jg6655.us  #R18
 127.0.0.1 jg70953156.pixnet.net
-127.0.0.1 jg8855.us  #R18
 127.0.0.1 jg98951135.pixnet.net
 127.0.0.1 jgerwya.blogspot.com
 127.0.0.1 jh33357513.pixnet.net
@@ -4174,11 +3839,8 @@
 127.0.0.1 jiangkang.host
 127.0.0.1 jiangximeishi.cn
 127.0.0.1 jiankanghou.com
-127.0.0.1 jiaxiaweilai.com  #R18
-127.0.0.1 jie96.xyz  #R18
 127.0.0.1 jiegouzhinan.com
 127.0.0.1 jieyouw.com
-127.0.0.1 jili012.com  #R18
 127.0.0.1 jimete.com
 127.0.0.1 jimmieethejqa.pixnet.net
 127.0.0.1 jimmyfans.com
@@ -4186,7 +3848,6 @@
 127.0.0.1 jinbikan.com
 127.0.0.1 jinchengzhilv.com  #歡享網
 127.0.0.1 jinfantongyici.com
-127.0.0.1 jingtonggy.com  #R18
 127.0.0.1 jingyanbus.com
 127.0.0.1 jinianlai.com
 127.0.0.1 jinlisting.com
@@ -4199,11 +3860,6 @@
 127.0.0.1 jitashouce.com
 127.0.0.1 jj-romance.com
 127.0.0.1 jj41409976.pixnet.net
-127.0.0.1 jj910.co  #R18
-127.0.0.1 jj930.co  #R18
-127.0.0.1 jj930.us  #R18
-127.0.0.1 jj950.co  #R18
-127.0.0.1 jj950.us  #R18
 127.0.0.1 jjbkw.com
 127.0.0.1 jjhrt.net
 127.0.0.1 jjmanstudio.com  #密訊
@@ -4221,15 +3877,12 @@
 127.0.0.1 jktip.net
 127.0.0.1 jkvanguard.com  #歡享網
 127.0.0.1 jlhft99931.pixnet.net
-127.0.0.1 jlluzhuang.com  #R18
 127.0.0.1 jm0928w.pixnet.net
-127.0.0.1 jm6vz.me  #R18
 127.0.0.1 jmaqn007vd.pixnet.net
 127.0.0.1 jmophinc.co  #redirects to cacnka.xyz
 127.0.0.1 jmp3800.pixnet.net
 127.0.0.1 jmxb6brownbng.pixnet.net
 127.0.0.1 jmzhongda.cn
-127.0.0.1 jn0511.us  #R18
 127.0.0.1 jnd38.pixnet.net
 127.0.0.1 jnvjz57573.pixnet.net
 127.0.0.1 joan65.club  #愛縮兔 (農場轉址)
@@ -4268,15 +3921,12 @@
 127.0.0.1 jpd1rx51.blog.fc2.com
 127.0.0.1 jpgooverseas.com
 127.0.0.1 jpnest.com
-127.0.0.1 jpwlk.com  #R18
 127.0.0.1 jpworkingholiday.com
 127.0.0.1 jpz04me29a.blog.fc2.com
-127.0.0.1 jqb7.co  #R18
 127.0.0.1 jr57048582.blog.fc2.com
 127.0.0.1 jradgf.blogspot.com
 127.0.0.1 jrb15rn77j.pixnet.net
 127.0.0.1 jri94.xyz
-127.0.0.1 jri95.xyz  #R18
 127.0.0.1 jrmj22780302zhuo.wordpress.com
 127.0.0.1 jrq91ig79w.pixnet.net
 127.0.0.1 jscgov.com
@@ -4324,6 +3974,7 @@
 127.0.0.1 jw33572043.blog.fc2.com
 127.0.0.1 jw8oo020.pixnet.net
 127.0.0.1 jwi2850lqw.pixnet.net
+127.0.0.1 jwich.chaochui010.com
 127.0.0.1 jwk73uh58k.blog.fc2.com
 127.0.0.1 jwztys.com  #歡享網
 127.0.0.1 jx21413798.pixnet.net
@@ -4331,18 +3982,14 @@
 127.0.0.1 jxdzn13753.pixnet.net
 127.0.0.1 jxf97rk45o.pixnet.net
 127.0.0.1 jxtjv59577.pixnet.net
-127.0.0.1 jxwcp0.com  #R18
 127.0.0.1 jybi314.pixnet.net
 127.0.0.1 jyg70qt30s.blog.fc2.com
 127.0.0.1 jzita.com  #redirects to tspweb.com
 127.0.0.1 jzj99nx35f.blog.fc2.com
-127.0.0.1 jzplay518.co  #R18
-127.0.0.1 jzplay518.com  #R18
 127.0.0.1 jzsuc620ay.blog.fc2.com
 127.0.0.1 k0wzq5xwrp.pixnet.net
 127.0.0.1 k158ooz.pixnet.net
 127.0.0.1 k18lm10.pixnet.net
-127.0.0.1 k1ct9d.cyou  #R18
 127.0.0.1 k1e1m6.wordpress.com
 127.0.0.1 k1s4b9g7ei7.blog.fc2.com
 127.0.0.1 k1vde917ph.pixnet.net
@@ -4427,24 +4074,17 @@
 127.0.0.1 katherw620m5f.pixnet.net
 127.0.0.1 katieherapy.me  #redirects to fatbean.xyz
 127.0.0.1 katiex13e6u2n.pixnet.net
-127.0.0.1 katkutshop.com  #R18
 127.0.0.1 katrinarobhq.pixnet.net
 127.0.0.1 katrinka77476.pixnet.net
 127.0.0.1 kayap4c16m4y2.pixnet.net
-127.0.0.1 kbexapp.co  #R18
 127.0.0.1 kbo.tw
 127.0.0.1 kbv22vq17b.blog.fc2.com
-127.0.0.1 kbzmobile.co  #R18
 127.0.0.1 kcq05ko31v.blog.fc2.com
-127.0.0.1 kdl2222.co  #R18
 127.0.0.1 ke2t7bwebbab6.pixnet.net
-127.0.0.1 ke55555.in  #R18
 127.0.0.1 ke72298639.pixnet.net
-127.0.0.1 ke88888.co  #R18
 127.0.0.1 ke97374781.blog.fc2.com
 127.0.0.1 keecnya.xyz  #redirects to viewty.xyz
 127.0.0.1 keeping-health.com
-127.0.0.1 keikey.com  #R18
 127.0.0.1 keithbevehymf.pixnet.net
 127.0.0.1 keke01.net
 127.0.0.1 kekeplays.cc
@@ -4475,7 +4115,6 @@
 127.0.0.1 khg3566byz.blog.fc2.com
 127.0.0.1 khgfgf42.blogspot.com
 127.0.0.1 khostia.com  #redirects to bestbonus-zone.life
-127.0.0.1 khuidaf.com  #redirects to 100wehs.com
 127.0.0.1 khyhgy09.blogspot.com
 127.0.0.1 ki7p643662.pixnet.net
 127.0.0.1 kib49bb52g.blog.fc2.com
@@ -4495,14 +4134,10 @@
 127.0.0.1 kiwsy.cc
 127.0.0.1 kj04587736.pixnet.net
 127.0.0.1 kj4rafaela1.pixnet.net
-127.0.0.1 kjmsmni.cn  #R18
 127.0.0.1 kjoo3160.pixnet.net
 127.0.0.1 kk74831874.pixnet.net
 127.0.0.1 kkeywqim0.pixnet.net
-127.0.0.1 kki88.in  #R18
-127.0.0.1 kki99.in  #R18
 127.0.0.1 kkj2102ccj.pixnet.net
-127.0.0.1 kkkrr.co  #R18
 127.0.0.1 kknews-hk.net
 127.0.0.1 kknews.cc
 127.0.0.1 kknews.ml
@@ -4512,14 +4147,11 @@
 127.0.0.1 kknsays.com
 127.0.0.1 kkptt.com
 127.0.0.1 kkz9443yfp.blog.fc2.com
-127.0.0.1 kljws.xyz  #R18
 127.0.0.1 klm0911.pixnet.net
 127.0.0.1 klmtz02.com
-127.0.0.1 kmbqzw.co  #R18
 127.0.0.1 kmbymh.co
 127.0.0.1 kmcha.com
 127.0.0.1 kmg360.com
-127.0.0.1 kmplaye.co  #R18
 127.0.0.1 kmrsbo436.pixnet.net
 127.0.0.1 kn053r.pixnet.net
 127.0.0.1 knightjsqd7.pixnet.net
@@ -4535,11 +4167,9 @@
 127.0.0.1 koe8us82.blog.fc2.com
 127.0.0.1 kokoinfo.com
 127.0.0.1 kokoready.com
-127.0.0.1 kokufu.shop  #R18
 127.0.0.1 kokyzone.com
 127.0.0.1 kolauthor.com
 127.0.0.1 kolotwtu.co  #redirects to procnw.xyz
-127.0.0.1 konggetongxue.club  #R18
 127.0.0.1 koolcardls.co  #redirects to meetwill.xyz
 127.0.0.1 kora-mesr.com
 127.0.0.1 koug310.pixnet.net
@@ -4548,7 +4178,6 @@
 127.0.0.1 kpf970w1q6.blog.fc2.com
 127.0.0.1 kpo14ho42p.blog.fc2.com
 127.0.0.1 kpoppunch.com
-127.0.0.1 kpwovem.cn  #R18
 127.0.0.1 kpzs.com
 127.0.0.1 kpzsg.com
 127.0.0.1 kq3hxcw3.pixnet.net
@@ -4561,7 +4190,6 @@
 127.0.0.1 kragov.com
 127.0.0.1 kristinkeviot.pixnet.net
 127.0.0.1 kristir3674.pixnet.net
-127.0.0.1 ks8625.com  #R18
 127.0.0.1 ks903m1.pixnet.net
 127.0.0.1 ksou.cc
 127.0.0.1 ktp040ddgntp.blog.fc2.com
@@ -4692,7 +4320,6 @@
 127.0.0.1 l9rhd39lv9.blog.fc2.com
 127.0.0.1 l9xjz1jlj9.blog.fc2.com
 127.0.0.1 l9xrt99lbb.blog.fc2.com
-127.0.0.1 la4444.co  #R18
 127.0.0.1 lacivettanelcamino.it  #redirects to quing.im
 127.0.0.1 lacocinaderosa.es
 127.0.0.1 ladabohacova.cz  #redirects to quing.im
@@ -4708,7 +4335,6 @@
 127.0.0.1 lala01.com  #boMb01
 127.0.0.1 lam777.com
 127.0.0.1 lamberdu84571.pixnet.net
-127.0.0.1 lanabel.co  #redirects to mjsq9.in
 127.0.0.1 lanaranja.cl  #redirects to topawardhere.life
 127.0.0.1 lancekatdwn2.pixnet.net
 127.0.0.1 langningpiano.com
@@ -4731,31 +4357,25 @@
 127.0.0.1 lb1323.club  #愛縮兔 (農場轉址)
 127.0.0.1 lb41k6.pixnet.net
 127.0.0.1 lb77759478.blog.fc2.com
-127.0.0.1 lb78.in  #R18
 127.0.0.1 lbjsuhamptoho.pixnet.net
 127.0.0.1 lbn33dx15b.pixnet.net
 127.0.0.1 lbnzl11151.pixnet.net
 127.0.0.1 lbpbf999.blog.fc2.com
-127.0.0.1 lbquuz.com  #R18
 127.0.0.1 lc28542515tangsh.wordpress.com
 127.0.0.1 lc33000186.pixnet.net
 127.0.0.1 lc46121156.pixnet.net
 127.0.0.1 lca66zw11a.blog.fc2.com
 127.0.0.1 ld13449563.pixnet.net
-127.0.0.1 ld3388.co  #R18
 127.0.0.1 ld6494ep16.blog.fc2.com
 127.0.0.1 ldd91ld31z.blog.fc2.com
-127.0.0.1 ldlconsultinginc.com  #R18
 127.0.0.1 ldlgzs.com
 127.0.0.1 ldmeyjimmyjed.pixnet.net
 127.0.0.1 ldrz31.tokyo  #redirects to simpledatings.life
 127.0.0.1 ldvl3jz95j.pixnet.net
-127.0.0.1 ldyssw921.xyz  #R18
 127.0.0.1 lebrainstrm.co  #redirects to keecnya.xyz
 127.0.0.1 lecigou.net
 127.0.0.1 leesharing.com
 127.0.0.1 leestevenudg.pixnet.net
-127.0.0.1 lehewi.xyz  #R18
 127.0.0.1 lehuotuan.com
 127.0.0.1 lek05wh61o.blog.fc2.com
 127.0.0.1 lemissestetica.it  #redirects to cubicongardens.sk
@@ -4764,7 +4384,6 @@
 127.0.0.1 lengyuexuan213.blogspot.com
 127.0.0.1 leonayatesset.pixnet.net
 127.0.0.1 leonn87gv72.pixnet.net
-127.0.0.1 lerutle.com  #R18
 127.0.0.1 lesartisansdubio.fr
 127.0.0.1 lesliehigg00m.pixnet.net
 127.0.0.1 lesliejp278.pixnet.net
@@ -4773,7 +4392,6 @@
 127.0.0.1 letptt.com
 127.0.0.1 letu.life
 127.0.0.1 lewisdontrfj.pixnet.net
-127.0.0.1 lezzet-lokantasi.com  #R18
 127.0.0.1 lfhowshare.com
 127.0.0.1 lfjo.loanswhite.xyz
 127.0.0.1 lfnews.xyz
@@ -4782,7 +4400,6 @@
 127.0.0.1 lhhfgf35.blogspot.com
 127.0.0.1 lhysg.com
 127.0.0.1 li284or.pixnet.net
-127.0.0.1 li7666.club  #R18
 127.0.0.1 lianamsl817.wordpress.com
 127.0.0.1 liangdian.cc
 127.0.0.1 liaocheng.cc
@@ -4821,21 +4438,17 @@
 127.0.0.1 lindabatesht8.pixnet.net
 127.0.0.1 lindaclij5g.pixnet.net
 127.0.0.1 line-share.tw
-127.0.0.1 lingqiao.cc  #R18
 127.0.0.1 linjiamm.com
 127.0.0.1 linkptt.com
 127.0.0.1 linkteelow.live  #malicious ad scripts
 127.0.0.1 linnateras.fi  #redirects to na-madagaskar.sk
 127.0.0.1 linnseed.me  #redirects to soonmiss.top
-127.0.0.1 lipcvk.me  #R18
-127.0.0.1 liqun6.com  #R18
 127.0.0.1 liquorloveyou.com
 127.0.0.1 lir29sm97g.pixnet.net
 127.0.0.1 lisa513889.pixnet.net
 127.0.0.1 listensomebodysafe.top  #malicious ads scripts
 127.0.0.1 littled6fl3.pixnet.net
 127.0.0.1 littlepet.cc
-127.0.0.1 liuhecaiziliao.co  #R18
 127.0.0.1 liuxue86.com
 127.0.0.1 live-localhk.com  #愛縮兔 (農場轉址)
 127.0.0.1 livekl.top
@@ -4859,18 +4472,8 @@
 127.0.0.1 lno96jb06i.pixnet.net
 127.0.0.1 lnr71xl17v.blog.fc2.com
 127.0.0.1 lnx55zb91p.blog.fc2.com
-127.0.0.1 loansbutton.xyz  #R18
-127.0.0.1 loanslooking.xyz  #R18
-127.0.0.1 loansnothing.xyz  #R18
-127.0.0.1 loansresponse.xyz  #R18
-127.0.0.1 loanssales.xyz  #R18
-127.0.0.1 loanswarning.xyz  #R18
-127.0.0.1 loansyoung.xyz  #R18
 127.0.0.1 locks.wiki
 127.0.0.1 logiqx.me  #redirects to soonmiss.top
-127.0.0.1 loituma.co  #R18
-127.0.0.1 loivcs.xyz  #R18
-127.0.0.1 lolacg.shop  #R18
 127.0.0.1 loltftpro.com
 127.0.0.1 lon73ft31d.blog.fc2.com
 127.0.0.1 longheathber.pixnet.net
@@ -4901,8 +4504,6 @@
 127.0.0.1 louisedww3.pixnet.net
 127.0.0.1 louisholmramo.pixnet.net
 127.0.0.1 loutkovyfestivalpisek.cz  #redirects to cubicongardens.sk
-127.0.0.1 lovebetapp.shop  #R18
-127.0.0.1 lovebetapp.us  #R18
 127.0.0.1 lovedaily.life  #大榴槤/大時代/GreatDaily/閃文聯盟/琦琦~
 127.0.0.1 lovedayfy.com  #樂享網
 127.0.0.1 lovefisher.net
@@ -4920,7 +4521,6 @@
 127.0.0.1 lovestory88.com
 127.0.0.1 lovetoknow.com
 127.0.0.1 lovetweast.com
-127.0.0.1 loveysapk.com  #R18
 127.0.0.1 lp51771997.pixnet.net
 127.0.0.1 lpko5wdaniest.pixnet.net
 127.0.0.1 lpls.net
@@ -4937,9 +4537,7 @@
 127.0.0.1 lttgov.tv
 127.0.0.1 ltvbi078cy.pixnet.net
 127.0.0.1 ltz55rp57l.blog.fc2.com
-127.0.0.1 lu0bcg.cyou  #R18
 127.0.0.1 lu56i.pixnet.net
-127.0.0.1 lualuworld.com  #R18
 127.0.0.1 lucasbenxy.pixnet.net
 127.0.0.1 lucascaroledn.pixnet.net
 127.0.0.1 lucasstee6906.pixnet.net
@@ -4949,12 +4547,9 @@
 127.0.0.1 luggagetrunk.blog.fc2.com
 127.0.0.1 lujuba.cc
 127.0.0.1 lukoince.co  #redirects to procnw.xyz
-127.0.0.1 lululu.one  #R18
-127.0.0.1 lunbet.co  #R18
 127.0.0.1 lunsui.com
 127.0.0.1 luobojianzhan.com
 127.0.0.1 luoow.com
-127.0.0.1 lustai.me  #R18
 127.0.0.1 lv93151115.blog.fc2.com
 127.0.0.1 lvj99sj57z.blog.fc2.com
 127.0.0.1 lvjy659.pixnet.net
@@ -4969,13 +4564,10 @@
 127.0.0.1 ly44201348.pixnet.net
 127.0.0.1 lycblog.com
 127.0.0.1 lydialong4921.pixnet.net
-127.0.0.1 lyglive.club  #R18
 127.0.0.1 lygzywl.com
 127.0.0.1 lyishu.com
-127.0.0.1 lyjizd.xyz  #R18
 127.0.0.1 lynchkellbill.pixnet.net
 127.0.0.1 lyonsprijrt.pixnet.net
-127.0.0.1 lystore.club  #R18
 127.0.0.1 lz13.cn
 127.0.0.1 lz51593779.pixnet.net
 127.0.0.1 lzbxgmjj.com
@@ -5024,7 +4616,6 @@
 127.0.0.1 m4gsq42cwy.blog.fc2.com
 127.0.0.1 m4hpj1tkc6.pixnet.net
 127.0.0.1 m4iob5cu91.pixnet.net
-127.0.0.1 m4jum.xyz  #R18
 127.0.0.1 m4w2i2a6rbr.pixnet.net
 127.0.0.1 m500jf1.pixnet.net
 127.0.0.1 m502qw.pixnet.net
@@ -5040,7 +4631,6 @@
 127.0.0.1 m7u1z6qbp3.blog.fc2.com
 127.0.0.1 m7zmp1n2ig5.pixnet.net
 127.0.0.1 m80d90q.pixnet.net
-127.0.0.1 m8e35o.com  #R18
 127.0.0.1 m8fkd91emp.blog.fc2.com
 127.0.0.1 m8iek4mi28.pixnet.net
 127.0.0.1 m8l2w2e8dlh.blog.fc2.com
@@ -5059,9 +4649,7 @@
 127.0.0.1 mababy168.blogspot.com
 127.0.0.1 mabelfartucke.pixnet.net
 127.0.0.1 machbbs.com
-127.0.0.1 macrorify.us  #R18
 127.0.0.1 mactv.com.tw
-127.0.0.1 magarzo.shop  #R18
 127.0.0.1 maggie-siff.com  #redirects to ksou.cc
 127.0.0.1 magic82.wordpress.com
 127.0.0.1 magic8809.wordpress.com
@@ -5073,7 +4661,6 @@
 127.0.0.1 malaysian.love
 127.0.0.1 malaysiatimes.org  #大榴槤/大時代/GreatDaily/閃文聯盟/琦琦~
 127.0.0.1 malaysiatimes.site  #大榴槤/大時代/GreatDaily/閃文聯盟/琦琦~
-127.0.0.1 malayu.co  #R18
 127.0.0.1 maldonaconalf.pixnet.net
 127.0.0.1 malirstvi-nedorostek.cz  #redirects to topawardhere.life
 127.0.0.1 mama.tw
@@ -5084,7 +4671,6 @@
 127.0.0.1 mamatify.com
 127.0.0.1 mamicode.com
 127.0.0.1 mamready.com
-127.0.0.1 manbetxonline.shop  #R18
 127.0.0.1 mango01.com
 127.0.0.1 mania.com
 127.0.0.1 manningrrenee.pixnet.net
@@ -5094,12 +4680,10 @@
 127.0.0.1 manongdao.com
 127.0.0.1 manorvilletv.blog.fc2.com
 127.0.0.1 manta.com
-127.0.0.1 mantalks.xyz  #R18
 127.0.0.1 maoanbo.net
 127.0.0.1 maomiboy.com
 127.0.0.1 maopets.com
 127.0.0.1 maoxiansen.com  #大榴槤/大時代/GreatDaily/閃文聯盟/琦琦~
-127.0.0.1 mapai77.us  #R18
 127.0.0.1 mar6rosedwigh.pixnet.net
 127.0.0.1 marcoscamha.pixnet.net
 127.0.0.1 marcusq5rhjb.pixnet.net
@@ -5120,14 +4704,11 @@
 127.0.0.1 marthamaflore.pixnet.net
 127.0.0.1 martinwacodyj.pixnet.net
 127.0.0.1 maryks01.pixnet.net
-127.0.0.1 matchdl.in  #R18
 127.0.0.1 mathewo7258.pixnet.net
-127.0.0.1 matpool.shop  #R18
 127.0.0.1 matthewsu0.pixnet.net
 127.0.0.1 maxinemiv3j5.pixnet.net
 127.0.0.1 mayibanchang.com.cn
 127.0.0.1 mb69575090.pixnet.net
-127.0.0.1 mbe5dp.cyou  #R18
 127.0.0.1 mbl60becpk.pixnet.net
 127.0.0.1 mc26.com
 127.0.0.1 mc26.net
@@ -5149,9 +4730,7 @@
 127.0.0.1 mdk85be66f.blog.fc2.com
 127.0.0.1 mdkp617.pixnet.net
 127.0.0.1 mdkpw.com
-127.0.0.1 mdlftl.xyz  #R18
 127.0.0.1 mdndy.com
-127.0.0.1 mdny.vip  #R18
 127.0.0.1 mdscubasw.co  #redirects to ppcnzi.xyz
 127.0.0.1 mdspgg.com
 127.0.0.1 meaeya.blogspot.com
@@ -5163,14 +4742,12 @@
 127.0.0.1 medialnk.co
 127.0.0.1 medialnk.com
 127.0.0.1 mediatagtw.com
-127.0.0.1 medical-textbook-deals.in  #R18
 127.0.0.1 meetptt.com
 127.0.0.1 meetwill.xyz  #malicious ads scripts
 127.0.0.1 meifagu.com
 127.0.0.1 meihuijj.com
 127.0.0.1 meishuile.com  #BuzzHand
 127.0.0.1 meishujixun.com
-127.0.0.1 meisitaike.com  #R18
 127.0.0.1 meiwenfeng.com
 127.0.0.1 meixingnan.com
 127.0.0.1 melanishi2567.pixnet.net
@@ -5187,7 +4764,6 @@
 127.0.0.1 mf98etyt411.blogspot.com
 127.0.0.1 mfbsek825.pixnet.net
 127.0.0.1 mg77194984.blog.fc2.com
-127.0.0.1 mgffxza.fit  #R18
 127.0.0.1 mgnbc1trant.pixnet.net
 127.0.0.1 mh17556690.pixnet.net
 127.0.0.1 mh28h21.pixnet.net
@@ -5219,7 +4795,6 @@
 127.0.0.1 mingchengxuanze.com
 127.0.0.1 mingtianfangjia.com
 127.0.0.1 mingyanjiaju.org
-127.0.0.1 mingyi888.com  #R18
 127.0.0.1 minniefa92589.pixnet.net
 127.0.0.1 minnielylfly.pixnet.net
 127.0.0.1 minutepatternbook.xyz  #!malicious ads scripts
@@ -5242,39 +4817,13 @@
 127.0.0.1 mj03s6nebqr.pixnet.net
 127.0.0.1 mjdq013.pixnet.net
 127.0.0.1 mjib2016secrecy.com.tw
-127.0.0.1 mjsq.me  #R18 with massive redirecting domains
-127.0.0.1 mjsq.men  #R18 with massive redirecting domains
-127.0.0.1 mjsq.one  #R18 with massive redirecting domains
-127.0.0.1 mjsq.xyz  #R18
-127.0.0.1 mjsq1.in  #R18 with massive redirecting domains
-127.0.0.1 mjsq1.net  #R18 with massive redirecting domains
-127.0.0.1 mjsq10.net  #R18 with massive redirecting domains
-127.0.0.1 mjsq2.in  #R18 with massive redirecting domains
-127.0.0.1 mjsq2.net  #R18 with massive redirecting domains
-127.0.0.1 mjsq3.in  #R18 with massive redirecting domains
-127.0.0.1 mjsq3.net  #R18 with massive redirecting domains
-127.0.0.1 mjsq4.in  #R18 with massive redirecting domains
-127.0.0.1 mjsq4.net  #R18 with massive redirecting domains
-127.0.0.1 mjsq5.in  #R18 with massive redirecting domains
-127.0.0.1 mjsq5.net  #R18 with massive redirecting domains
-127.0.0.1 mjsq6.in  #R18 with massive redirecting domains
-127.0.0.1 mjsq6.net  #R18 with massive redirecting domains
-127.0.0.1 mjsq7.in  #R18 with massive redirecting domains
-127.0.0.1 mjsq7.net  #R18 with massive redirecting domains
-127.0.0.1 mjsq8.in  #R18 with massive redirecting domains
-127.0.0.1 mjsq8.net  #R18 with massive redirecting domains
-127.0.0.1 mjsq9.in  #R18 with massive redirecting domains
-127.0.0.1 mjsq9.net  #R18 with massive redirecting domains
 127.0.0.1 mk691h.pixnet.net
 127.0.0.1 mkk25nt21x.blog.fc2.com
 127.0.0.1 mkoemuoyuw.pixnet.net
 127.0.0.1 ml128t.com
-127.0.0.1 mlmq2b.cyou  #R18
 127.0.0.1 mlog.club
 127.0.0.1 mm110.net  #redirects to 1redirc.com
 127.0.0.1 mm32414045.pixnet.net
-127.0.0.1 mm4tx9.xyz  #R18
-127.0.0.1 mmchannel.vip  #R18
 127.0.0.1 mmin12.club  #愛縮兔 (農場轉址)
 127.0.0.1 mmrj1.xyz
 127.0.0.1 mmrj2.xyz
@@ -5336,12 +4885,10 @@
 127.0.0.1 mscstones.com
 127.0.0.1 msfoodvip.com  #歡享網
 127.0.0.1 msg0253zks.blog.fc2.com
-127.0.0.1 mszb02.xyz  #R18
 127.0.0.1 mt28196322.pixnet.net
 127.0.0.1 mt47esfgj.blogspot.com
 127.0.0.1 mtp-pechstein.de  #redirects to cubicongardens.sk
 127.0.0.1 mttmp.com
-127.0.0.1 mtwie.com  #R18
 127.0.0.1 muchunkang.com
 127.0.0.1 mudanxs.live
 127.0.0.1 muhai.net
@@ -5357,7 +4904,6 @@
 127.0.0.1 musou.cc
 127.0.0.1 muu60kp73f.blog.fc2.com
 127.0.0.1 muzijie.com
-127.0.0.1 mvom.deshunfang.com.cn  #R18
 127.0.0.1 mvpode.co  #redirects to aetop.top
 127.0.0.1 mvs77.com
 127.0.0.1 mvvvg796zn.blog.fc2.com
@@ -5366,7 +4912,6 @@
 127.0.0.1 mx30699544.pixnet.net
 127.0.0.1 mx52579356.pixnet.net
 127.0.0.1 mxfunny.com
-127.0.0.1 mxqxlm.net  #R18
 127.0.0.1 my-styledesign.com
 127.0.0.1 my74158876.pixnet.net
 127.0.0.1 my7475.com
@@ -5393,13 +4938,13 @@
 127.0.0.1 mytieins.me  #redirects to meetwill.xyz
 127.0.0.1 mytimes.org
 127.0.0.1 mytouchstory.com
+127.0.0.1 mytz.gyamfz.com
 127.0.0.1 mywordsndwder.co  #redirects to cacnka.xyz
 127.0.0.1 myx0121gio.pixnet.net
 127.0.0.1 myytaoli.blogspot.com
 127.0.0.1 mzcloud.info  #redirects to bestbonus-zone.life
 127.0.0.1 mzfhf873yx.blog.fc2.com
 127.0.0.1 n01wk42.pixnet.net
-127.0.0.1 n02x.net  #R18
 127.0.0.1 n0pib456iy1.blog.fc2.com
 127.0.0.1 n11sd70.pixnet.net
 127.0.0.1 n18lxftyo.pixnet.net
@@ -5509,7 +5054,6 @@
 127.0.0.1 nahwcr705.pixnet.net
 127.0.0.1 naimei.com.tw
 127.0.0.1 najvagame.com
-127.0.0.1 nakku.shop  #R18
 127.0.0.1 nancyricadnv.pixnet.net
 127.0.0.1 nanjuefeng.com
 127.0.0.1 nanmuxuan.com
@@ -5525,11 +5069,7 @@
 127.0.0.1 nb9jnf8zxn.pixnet.net
 127.0.0.1 nbarga.blogspot.com
 127.0.0.1 nblfl71391.pixnet.net
-127.0.0.1 nbneiyi.co  #R18
 127.0.0.1 nbp33xj31d.pixnet.net
-127.0.0.1 nbsd0923.com  #R18
-127.0.0.1 nbssmy.cn  #R18
-127.0.0.1 nbtscan.co  #R18
 127.0.0.1 nbtv.tw
 127.0.0.1 nbyoho.com
 127.0.0.1 ncbvhk537.pixnet.net
@@ -5538,7 +5078,6 @@
 127.0.0.1 ndfxvd.blogspot.com
 127.0.0.1 ne42967165.pixnet.net
 127.0.0.1 nearfingerpresent.buzz
-127.0.0.1 nedved.co  #R18
 127.0.0.1 needmorefood.com
 127.0.0.1 negrall.com  #malicious ads scripts
 127.0.0.1 neihantu.co  #歡享網
@@ -5552,7 +5091,6 @@
 127.0.0.1 new2mh.com
 127.0.0.1 newbedev.com  #spider of stackoverflow.com
 127.0.0.1 newbolunesport.com
-127.0.0.1 newipad.co  #R18
 127.0.0.1 newlife.sale  #大榴槤/大時代/GreatDaily/閃文聯盟/琦琦~
 127.0.0.1 newmalaylife.com  #歡享網
 127.0.0.1 newmobilelife.com
@@ -5583,7 +5121,6 @@
 127.0.0.1 nfiwve782.pixnet.net
 127.0.0.1 nfrzix195.pixnet.net
 127.0.0.1 nfsfashin.co  #redirects to keecnya.xyz
-127.0.0.1 nftget.co  #R18
 127.0.0.1 ngelw652mw.blog.fc2.com
 127.0.0.1 ngnnn.com
 127.0.0.1 nh11351573.blog.fc2.com
@@ -5596,10 +5133,8 @@
 127.0.0.1 nideliyou.com
 127.0.0.1 nigov.tw
 127.0.0.1 nijigenfun.com
-127.0.0.1 nikebet.shop  #R18
 127.0.0.1 nina.az
 127.0.0.1 ninafranc8493.pixnet.net
-127.0.0.1 nisema.co  #R18
 127.0.0.1 niuzhan.com
 127.0.0.1 nj56980857.blog.fc2.com
 127.0.0.1 njarts.cn
@@ -5627,12 +5162,10 @@
 127.0.0.1 nnjl15lxb.pixnet.net
 127.0.0.1 no87293903.pixnet.net
 127.0.0.1 nocancers.net
-127.0.0.1 nodevideo.shop  #R18
 127.0.0.1 nongjia888.com
 127.0.0.1 nonglinyumu.com
 127.0.0.1 nonseisolo.eu
 127.0.0.1 nonsnews.com
-127.0.0.1 nonstopapp.xyz  #R18
 127.0.0.1 nooho.net
 127.0.0.1 norajuliangco.pixnet.net
 127.0.0.1 normanmills10.pixnet.net
@@ -5667,12 +5200,10 @@
 127.0.0.1 nsche.me  #redirects to meetwill.xyz
 127.0.0.1 nsctdxw.com  #歡享網
 127.0.0.1 nsn57gl82k.blog.fc2.com
-127.0.0.1 nsphere.co  #R18
 127.0.0.1 nsq6143807kaoxi.wordpress.com
 127.0.0.1 nsq94hi76g.pixnet.net
 127.0.0.1 nsrgov.com
 127.0.0.1 nt73573339.blog.fc2.com
-127.0.0.1 ntcsh2.cyou  #R18
 127.0.0.1 ntdxn99977.pixnet.net
 127.0.0.1 ntk69.pixnet.net
 127.0.0.1 ntvhn35519.pixnet.net
@@ -5686,8 +5217,6 @@
 127.0.0.1 nv6l22.pixnet.net
 127.0.0.1 nv87.com
 127.0.0.1 nv93715793.blog.fc2.com
-127.0.0.1 nvad031.cc  #R18
-127.0.0.1 nvad034.cc  #R18
 127.0.0.1 nvad037.cc
 127.0.0.1 nvfxl71759.pixnet.net
 127.0.0.1 nvh1155qif.blog.fc2.com
@@ -5712,14 +5241,12 @@
 127.0.0.1 nyp995.com
 127.0.0.1 nytmag.com  #redirects to tspweb.com
 127.0.0.1 nyx73av73y.blog.fc2.com
-127.0.0.1 nyxphc.cyou  #R18
 127.0.0.1 nz11715775.blog.fc2.com
 127.0.0.1 nzb35ox32m.blog.fc2.com
 127.0.0.1 nzn40ve90a.blog.fc2.com
 127.0.0.1 nzvjv95979.pixnet.net
 127.0.0.1 nzworktravel.com
 127.0.0.1 nzx91wu67d.blog.fc2.com
-127.0.0.1 nzyhacd.in  #R18
 127.0.0.1 o0fw73861g.pixnet.net
 127.0.0.1 o0i4a2scuq.pixnet.net
 127.0.0.1 o0iym0wk4u.pixnet.net
@@ -5798,16 +5325,12 @@
 127.0.0.1 oh30244061.pixnet.net
 127.0.0.1 oh74.com
 127.0.0.1 ohmencontain.buzz  #malicious ads scripts
-127.0.0.1 ohua777.shop  #R18
-127.0.0.1 ohua777.us  #R18
 127.0.0.1 ohwonews.com
 127.0.0.1 oi04.com
 127.0.0.1 oiigov.com
-127.0.0.1 oiihqgp7.site  #R18
 127.0.0.1 oj03.com
 127.0.0.1 oj47.com
 127.0.0.1 ok25543043.blog.fc2.com
-127.0.0.1 okdwe.com  #redirects to 80owashd.com
 127.0.0.1 oklahios.me  #redirects to cznono.xyz
 127.0.0.1 okozen.co  #redirects to goake.top
 127.0.0.1 oktoberfest-bj.com
@@ -5833,7 +5356,6 @@
 127.0.0.1 om05846367.blog.fc2.com
 127.0.0.1 om1pazq7lo.pixnet.net
 127.0.0.1 om81978416.pixnet.net
-127.0.0.1 omalliancepackers.com  #R18
 127.0.0.1 omej439.pixnet.net
 127.0.0.1 omg4fun.com  #BuzzHand
 127.0.0.1 omg543.com
@@ -5846,17 +5368,14 @@
 127.0.0.1 onb41kv10r.blog.fc2.com
 127.0.0.1 oncc.site
 127.0.0.1 onday.cc
-127.0.0.1 oneal360.com  #R18
 127.0.0.1 onefunnyjoke.com
 127.0.0.1 oneinfo.tw
 127.0.0.1 onepiece520.com
-127.0.0.1 oneprofile.info  #R18
 127.0.0.1 onepron.com  #歡享網
 127.0.0.1 oneworldoo.com  #歡享網
 127.0.0.1 onlinettt.com  #video.~
 127.0.0.1 onlinrad.co  #redirects to keecnya.xyz
 127.0.0.1 onlyeasylife.com
-127.0.0.1 onlyqq.co  #R18
 127.0.0.1 onnewlife.com
 127.0.0.1 onthatopne.club  #愛縮兔 (農場轉址)
 127.0.0.1 oo2008lw.pixnet.net
@@ -5869,7 +5388,6 @@
 127.0.0.1 oo9ed7.pixnet.net
 127.0.0.1 ood2w76.pixnet.net
 127.0.0.1 oodt2900.pixnet.net
-127.0.0.1 oodyz.shop  #R18
 127.0.0.1 oohw814.pixnet.net
 127.0.0.1 ool76h2.pixnet.net
 127.0.0.1 ooli71371030.wordpress.com
@@ -5916,7 +5434,6 @@
 127.0.0.1 orzhd.com
 127.0.0.1 orzptt.tk  #168ptt.com
 127.0.0.1 osgeo.cn
-127.0.0.1 oshss.com  #R18
 127.0.0.1 osometalk.com  #密訊
 127.0.0.1 ostack.cn
 127.0.0.1 oszps059ze.pixnet.net
@@ -5927,7 +5444,6 @@
 127.0.0.1 otransformation.com
 127.0.0.1 oubafeng.com
 127.0.0.1 oudebaosw.com
-127.0.0.1 ourail.co  #R18
 127.0.0.1 ourfitnest.co  #redirects to procnw.xyz
 127.0.0.1 ourplay.net
 127.0.0.1 ourptt.com
@@ -5936,7 +5452,6 @@
 127.0.0.1 ovw775tosqjw.pixnet.net
 127.0.0.1 owensbonnie10.pixnet.net
 127.0.0.1 owh69894045guayue.wordpress.com
-127.0.0.1 owijs.in  #R18
 127.0.0.1 owu88pn78e.blog.fc2.com
 127.0.0.1 ox71841396.blog.fc2.com
 127.0.0.1 oxavep963.pixnet.net
@@ -5989,7 +5504,6 @@
 127.0.0.1 p4h6q9chr6.pixnet.net
 127.0.0.1 p4see5zrhm.blog.fc2.com
 127.0.0.1 p4y0n58wl2.pixnet.net
-127.0.0.1 p555555.co  #R18
 127.0.0.1 p5d1b8keu6.blog.fc2.com
 127.0.0.1 p5d1z7z7lf5.pixnet.net
 127.0.0.1 p5dln3fbvh.blog.fc2.com
@@ -6034,8 +5548,6 @@
 127.0.0.1 p7u0e55zo2.pixnet.net
 127.0.0.1 p7z5d1rhrd.pixnet.net
 127.0.0.1 p7zrn3dxv3.pixnet.net
-127.0.0.1 p888888.co  #R18
-127.0.0.1 p888888.us  #R18
 127.0.0.1 p8c7y0jstp.pixnet.net
 127.0.0.1 p8v0r78cs4.pixnet.net
 127.0.0.1 p8vlr9m73g.pixnet.net
@@ -6087,7 +5599,6 @@
 127.0.0.1 pastapizza.es
 127.0.0.1 patricbrreeve.pixnet.net
 127.0.0.1 patricsheil25.pixnet.net
-127.0.0.1 patsom.co  #R18
 127.0.0.1 patsyg400886.pixnet.net
 127.0.0.1 paulpalmer941.pixnet.net
 127.0.0.1 pawlws.co  #redirects to aetop.top
@@ -6106,8 +5617,6 @@
 127.0.0.1 pctantao.com
 127.0.0.1 pcx41cx10p.blog.fc2.com
 127.0.0.1 pcying.com
-127.0.0.1 pdddke.vip  #R18
-127.0.0.1 pdfsoeasy.com  #R18
 127.0.0.1 pdk36qj56e.pixnet.net
 127.0.0.1 peanutimes.com
 127.0.0.1 pearllanbarry.pixnet.net
@@ -6135,7 +5644,6 @@
 127.0.0.1 petonea.com
 127.0.0.1 petpetbase.com
 127.0.0.1 pets-surprise.com
-127.0.0.1 petscommunity.club  #R18
 127.0.0.1 petsonelove.com
 127.0.0.1 petstube35.com
 127.0.0.1 pew28mo04l.blog.fc2.com
@@ -6143,9 +5651,6 @@
 127.0.0.1 pfv71bn53h.blog.fc2.com
 127.0.0.1 pghdhd.co  #redirects to procnw.xyz
 127.0.0.1 pgj9648.pixnet.net
-127.0.0.1 ph1688.co  #R18
-127.0.0.1 ph1688.us  #R18
-127.0.0.1 ph2699.co  #R18
 127.0.0.1 ph4steven2470.pixnet.net
 127.0.0.1 pharmacistplus.com
 127.0.0.1 pharmknow.com
@@ -6158,7 +5663,6 @@
 127.0.0.1 phjvj95919.pixnet.net
 127.0.0.1 pho-rotkreuz.ch  #redirects to isabel-lopez-kubben.at
 127.0.0.1 phonesnotebooks.fc2.net
-127.0.0.1 photocutout24.com  #R18
 127.0.0.1 phr55bx73j.blog.fc2.com
 127.0.0.1 phtwcg0j48db.pixnet.net
 127.0.0.1 phu65.pixnet.net
@@ -6175,8 +5679,6 @@
 127.0.0.1 pikicast.tw  #redirects to www.wishnote.tw
 127.0.0.1 pineapple99.com
 127.0.0.1 pingyan643681.pixnet.net
-127.0.0.1 pinksands.in  #R18
-127.0.0.1 pinksands.shop  #R18
 127.0.0.1 pinkupost.com
 127.0.0.1 pinlue.com
 127.0.0.1 pinneng.me  #redirects to ppcnzi.xyz
@@ -6185,22 +5687,15 @@
 127.0.0.1 piq8821mmws.pixnet.net
 127.0.0.1 pirateking.xyz  #歡享網
 127.0.0.1 pitopalvelumatilda.fi  #redirects to na-madagaskar.sk
-127.0.0.1 piudbs.xyz  #R18
 127.0.0.1 piw757coxdcn.blog.fc2.com
 127.0.0.1 pixiu88.net
-127.0.0.1 pixiver.shop  #R18
 127.0.0.1 pixpo.info
 127.0.0.1 pixpo.net
-127.0.0.1 pj5588.co  #R18
-127.0.0.1 pj5588.us  #R18
 127.0.0.1 pjdc2blkmkx.pixnet.net
 127.0.0.1 pjk0179dwe.pixnet.net
-127.0.0.1 pjm5jqa6.com  #R18
 127.0.0.1 pjpnx51151.pixnet.net
 127.0.0.1 pjv77ht59x.pixnet.net
-127.0.0.1 pk0008.xyz  #R18
 127.0.0.1 pk5danny14108.pixnet.net
-127.0.0.1 pkmcyo.cyou  #R18
 127.0.0.1 pkq532atbg28.blog.fc2.com
 127.0.0.1 pks51cj32o.pixnet.net
 127.0.0.1 pl13117194.pixnet.net
@@ -6241,10 +5736,6 @@
 127.0.0.1 popeac.co  #redirects to aetop.top
 127.0.0.1 poporead.com
 127.0.0.1 poqna.top
-127.0.0.1 pornb.shop  #R18
-127.0.0.1 pornbest.org  #R18
-127.0.0.1 pornl.co  #R18
-127.0.0.1 pornlulu.com  #R18
 127.0.0.1 portatura.co  #redirects to ppcnzi.xyz
 127.0.0.1 posre495.pixnet.net
 127.0.0.1 possitv.com
@@ -6284,7 +5775,6 @@
 127.0.0.1 prew283.pixnet.net
 127.0.0.1 prfjt55937.blog.fc2.com
 127.0.0.1 printfog.co  #redirects to aetop.top
-127.0.0.1 printingservices.info  #R18
 127.0.0.1 prisci61.pixnet.net
 127.0.0.1 privacyesgbt.ru.com  #redirects to qabayz.site
 127.0.0.1 prm17xs73g.blog.fc2.com
@@ -6366,11 +5856,8 @@
 127.0.0.1 pttweb.tw
 127.0.0.1 pttworld.com
 127.0.0.1 pttyes.com
-127.0.0.1 pu1166.us  #R18
-127.0.0.1 pu1515.in  #R18
 127.0.0.1 pu91939867.blog.fc2.com
 127.0.0.1 puadchi.co  #redirects to waderge.me
-127.0.0.1 puhdgsv.xyz  #R18
 127.0.0.1 puindia.me  #redirects to meetwill.xyz
 127.0.0.1 pup17.com
 127.0.0.1 purebred-puppy.com
@@ -6396,7 +5883,6 @@
 127.0.0.1 pylllw.com
 127.0.0.1 pyn5.com
 127.0.0.1 python.iitter.com
-127.0.0.1 python25.club  #R18
 127.0.0.1 python88.com
 127.0.0.1 pythonheidong.com
 127.0.0.1 pzv91fx19z.blog.fc2.com
@@ -6433,7 +5919,6 @@
 127.0.0.1 q6ese8sem0.blog.fc2.com
 127.0.0.1 q6gwu0ueku.pixnet.net
 127.0.0.1 q6i2g2kuqo.pixnet.net
-127.0.0.1 q742.cc  #R18
 127.0.0.1 q8jvt6wwx1.pixnet.net
 127.0.0.1 q8myk8yu2o.pixnet.net
 127.0.0.1 q8suw6gy84.pixnet.net
@@ -6457,7 +5942,6 @@
 127.0.0.1 qe035n.pixnet.net
 127.0.0.1 qel03sn15n.pixnet.net
 127.0.0.1 qeyjm887og.pixnet.net
-127.0.0.1 qf1bpx.cyou  #R18
 127.0.0.1 qfo55ux77p.pixnet.net
 127.0.0.1 qfz28za21i.blog.fc2.com
 127.0.0.1 qgh93pb39f.blog.fc2.com
@@ -6472,7 +5956,6 @@
 127.0.0.1 qianlaiye.com
 127.0.0.1 qianqu.cc
 127.0.0.1 qianxilaibanjia.com
-127.0.0.1 qianxiwh.club  #R18
 127.0.0.1 qiaofiao.com
 127.0.0.1 qicaisi.com
 127.0.0.1 qichejiashi.com
@@ -6482,11 +5965,8 @@
 127.0.0.1 qilook.com
 127.0.0.1 qimowly.top
 127.0.0.1 qindaosou.com
-127.0.0.1 qingdaolaili.com  #R18
 127.0.0.1 qinggua.net
 127.0.0.1 qingpingshan.com
-127.0.0.1 qingse.one  #R18
-127.0.0.1 qingseav.xyz  #R18
 127.0.0.1 qiqi.life  #大榴槤/大時代/GreatDaily/閃文聯盟/琦琦~
 127.0.0.1 qiqi.news  #大榴槤/大時代/GreatDaily/閃文聯盟/琦琦~
 127.0.0.1 qiqi.today  #大榴槤/大時代/GreatDaily/閃文聯盟/琦琦~
@@ -6523,12 +6003,10 @@
 127.0.0.1 qpq14yh80g.blog.fc2.com
 127.0.0.1 qq-name.cn
 127.0.0.1 qq8u.com
-127.0.0.1 qqkav.co  #R18
 127.0.0.1 qql0587szb.pixnet.net
 127.0.0.1 qqnews2u.com
 127.0.0.1 qqoo.pw
 127.0.0.1 qqs68ma02s.blog.fc2.com
-127.0.0.1 qqvlea.xyz  #R18
 127.0.0.1 qqzf.cn
 127.0.0.1 qrw90by08d.pixnet.net
 127.0.0.1 qs29389222.pixnet.net
@@ -6540,7 +6018,6 @@
 127.0.0.1 qt34743490.pixnet.net
 127.0.0.1 qt7393lx26.blog.fc2.com
 127.0.0.1 qt92649328.pixnet.net
-127.0.0.1 qtge0u.cyou  #R18
 127.0.0.1 qtvcd.com
 127.0.0.1 qu02.com
 127.0.0.1 quaiwang123.com
@@ -6561,7 +6038,6 @@
 127.0.0.1 qvz78sj25u.blog.fc2.com
 127.0.0.1 qw03593617.pixnet.net
 127.0.0.1 qwcv4426857baya.wordpress.com
-127.0.0.1 qwdy222.cn  #R18
 127.0.0.1 qwm864i6e8.wordpress.com
 127.0.0.1 qwvbkristinca.pixnet.net
 127.0.0.1 qwyh346.pixnet.net
@@ -6576,8 +6052,6 @@
 127.0.0.1 qzefd85194.pixnet.net
 127.0.0.1 qzh99ml82c.blog.fc2.com
 127.0.0.1 qzmcd358ks.blog.fc2.com
-127.0.0.1 qzrhdb.com  #R18
-127.0.0.1 r0957.com  #R18
 127.0.0.1 r0sdy0jvrq.blog.fc2.com
 127.0.0.1 r0xkm4r5eu6.pixnet.net
 127.0.0.1 r12b5s0.pixnet.net
@@ -6701,7 +6175,6 @@
 127.0.0.1 r9z3z3b3nrd.blog.fc2.com
 127.0.0.1 ra25197707.pixnet.net
 127.0.0.1 radio.am  #redirects to tiktokfinder.shop
-127.0.0.1 rajaraj.com  #R18
 127.0.0.1 ralphbettyron.pixnet.net
 127.0.0.1 ramiref840f.pixnet.net
 127.0.0.1 ramirezha6537.pixnet.net
@@ -6714,13 +6187,11 @@
 127.0.0.1 raolve.com
 127.0.0.1 rapelling.eu  #redirects to di13.biz
 127.0.0.1 rapperd1g.com
-127.0.0.1 rauokr.com  #R18
 127.0.0.1 rawfitc.co  #redirects to meetwill.xyz
 127.0.0.1 rbcty.com
 127.0.0.1 rbcw6971328li.wordpress.com
 127.0.0.1 rbhtz75977.pixnet.net
 127.0.0.1 rcem468.pixnet.net
-127.0.0.1 rdc-1.jan90.top  #R18
 127.0.0.1 rddjlxxtfd.blog.fc2.com
 127.0.0.1 re68pw9q.pixnet.net
 127.0.0.1 re80811845.pixnet.net
@@ -6737,8 +6208,6 @@
 127.0.0.1 readmop.com
 127.0.0.1 readthis.one
 127.0.0.1 readyposite.me  #redirects to cznono.xyz
-127.0.0.1 realestatean.xyz  #R18
-127.0.0.1 reasdsk.adc-cabdata.com  #R18
 127.0.0.1 rebecaherederofotografia.es  #redirects to sergiofoto.lv
 127.0.0.1 rebeccamcgeid.pixnet.net
 127.0.0.1 recipe01.com  #歡享網
@@ -6747,8 +6216,6 @@
 127.0.0.1 redchili21.com
 127.0.0.1 redorblue.us
 127.0.0.1 reedterrikas.pixnet.net
-127.0.0.1 refuel298.com  #R18
-127.0.0.1 refuel917.com  #R18
 127.0.0.1 reginaa8s508o.pixnet.net
 127.0.0.1 reginawashis3.pixnet.net
 127.0.0.1 reidq10q0w0q.pixnet.net
@@ -6791,21 +6258,17 @@
 127.0.0.1 rileyjonatq1.pixnet.net
 127.0.0.1 rio6180lst.blog.fc2.com
 127.0.0.1 rioslydia3085.pixnet.net
-127.0.0.1 ririka.co  #R18
 127.0.0.1 risashi.pixnet.net
 127.0.0.1 ritamedillx.pixnet.net
 127.0.0.1 rixy809.pixnet.net
 127.0.0.1 rjb55fl55r.blog.fc2.com
 127.0.0.1 rjf79nj99r.pixnet.net
-127.0.0.1 rk1188.us  #R18
-127.0.0.1 rk1199.co  #R18
 127.0.0.1 rkkdg.com
 127.0.0.1 rkwsw.cc
 127.0.0.1 rl57195135.pixnet.net
 127.0.0.1 rla1035pwx.blog.fc2.com
 127.0.0.1 rljfh99771.pixnet.net
 127.0.0.1 rlmd78s5oeb.pixnet.net
-127.0.0.1 rlrsjn.xyz  #R18
 127.0.0.1 rlxyw043fv.pixnet.net
 127.0.0.1 rlz31pr17j.pixnet.net
 127.0.0.1 rm48933876.blog.fc2.com
@@ -6839,13 +6302,11 @@
 127.0.0.1 rpu0104kka.pixnet.net
 127.0.0.1 rqi8139zga.pixnet.net
 127.0.0.1 rqjlkbwn.pixnet.net
-127.0.0.1 rqwdvgfjgcw.vip  #R18
 127.0.0.1 rqy25uzp9i.pixnet.net
 127.0.0.1 rr31133571.pixnet.net
 127.0.0.1 rrrjfnp3n1.pixnet.net
 127.0.0.1 rrt97vn77d.pixnet.net
 127.0.0.1 rs4dawn90856.pixnet.net
-127.0.0.1 rsiydc.xyz  #R18
 127.0.0.1 rsk26.com  #redirects to tspweb.com
 127.0.0.1 rssing.com
 127.0.0.1 rsw59lk83d.blog.fc2.com
@@ -6868,13 +6329,11 @@
 127.0.0.1 ruh32wl90y.pixnet.net
 127.0.0.1 ruiwen.com
 127.0.0.1 ruizsamuels4.pixnet.net
-127.0.0.1 rujci.com  #R18
 127.0.0.1 rule873.wordpress.com
 127.0.0.1 runxinzhi.com
 127.0.0.1 rustlenews.com
 127.0.0.1 rv6oo5.pixnet.net
 127.0.0.1 rvegov.com
-127.0.0.1 rvhqmh.xyz  #R18
 127.0.0.1 rvi95ez81q.blog.fc2.com
 127.0.0.1 rvpzd93119.pixnet.net
 127.0.0.1 rvv4389.com
@@ -6891,7 +6350,6 @@
 127.0.0.1 ryny7io54r.pixnet.net
 127.0.0.1 rzh53jb51b.blog.fc2.com
 127.0.0.1 rzhpv13537.pixnet.net
-127.0.0.1 rzldn.com  #R18
 127.0.0.1 rzso047.pixnet.net
 127.0.0.1 rzurl.com
 127.0.0.1 rzv16ki80w.blog.fc2.com
@@ -6911,7 +6369,6 @@
 127.0.0.1 s2uwe6gugc.blog.fc2.com
 127.0.0.1 s2wbq98clp.blog.fc2.com
 127.0.0.1 s30t5n.pixnet.net
-127.0.0.1 s373.xyz  #R18
 127.0.0.1 s3s6c4j1eb8.blog.fc2.com
 127.0.0.1 s3vpd20xbj.blog.fc2.com
 127.0.0.1 s3xol7.pixnet.net
@@ -6935,7 +6392,6 @@
 127.0.0.1 s6lqk937gom.pixnet.net
 127.0.0.1 s6usy6ay6i.pixnet.net
 127.0.0.1 s6wiq4ui0e.pixnet.net
-127.0.0.1 s755.cc  #R18
 127.0.0.1 s7bbt10.pixnet.net
 127.0.0.1 s7h3k01de9.pixnet.net
 127.0.0.1 s7mbd1c77b.pixnet.net
@@ -6963,7 +6419,6 @@
 127.0.0.1 sanderburtchd.pixnet.net
 127.0.0.1 sanderjennixi.pixnet.net
 127.0.0.1 sanderssant27.pixnet.net
-127.0.0.1 sandsskypark.co  #R18
 127.0.0.1 santiagjacu31.pixnet.net
 127.0.0.1 saowen.com
 127.0.0.1 saqmib760.pixnet.net
@@ -6975,17 +6430,12 @@
 127.0.0.1 sbz75tv35x.blog.fc2.com
 127.0.0.1 sc8i3.pixnet.net
 127.0.0.1 sci101.news
-127.0.0.1 sclingdong.com  #R18
-127.0.0.1 scmffp.xyz  #R18
-127.0.0.1 scmshare.com  #R18
 127.0.0.1 scottct5775yw.pixnet.net
 127.0.0.1 scottpatanapl.pixnet.net
 127.0.0.1 scqowywwoa.xyz
-127.0.0.1 screenty.com  #R18
 127.0.0.1 scryale.me  #redirects to aetop.top
 127.0.0.1 scsagr.com
 127.0.0.1 scyjdm.com.tw
-127.0.0.1 sd88a1a2wwad.com  #R18
 127.0.0.1 sdfsdfsdfsdfb.blogspot.com
 127.0.0.1 sdm83yq95a.blog.fc2.com
 127.0.0.1 sdpqat319.pixnet.net
@@ -6995,30 +6445,19 @@
 127.0.0.1 searchapp.soft4fun.net
 127.0.0.1 seed.com
 127.0.0.1 seeyouni.club  #愛縮兔 (農場轉址)
-127.0.0.1 sefygrhfrdfgrrg.vip  #R18
-127.0.0.1 segdfas.xyz  #R18
 127.0.0.1 segsb2.com
 127.0.0.1 selal25863.pixnet.net
 127.0.0.1 selfelementcow.top  #malicious ads scripts
-127.0.0.1 semao003.com  #R18
 127.0.0.1 semicolonworld.com  #spider of stackoverflow.com
 127.0.0.1 sengzao.com
 127.0.0.1 sensortex.web.fc2.com
-127.0.0.1 seraphicclinic.com  #R18
-127.0.0.1 serenbedding.com  #R18
 127.0.0.1 sergiofoto.lv  #redirects to ginseemore.live
 127.0.0.1 sergiogwqx.pixnet.net
-127.0.0.1 seselu.co  #R18
-127.0.0.1 sevgikurtulmaz.com  #R18
-127.0.0.1 sexcc.co  #R18
 127.0.0.1 sexptt.tk  #168ptt.com
-127.0.0.1 sexstories.com  #R18
 127.0.0.1 sfkhxt709.pixnet.net
 127.0.0.1 sfrq150.pixnet.net
 127.0.0.1 sg-charpente.fr  #redirects to quing.im
 127.0.0.1 sg53mq2y3x.blog.fc2.com
-127.0.0.1 sg557.in  #R18
-127.0.0.1 sg558.shop  #R18
 127.0.0.1 sgaas3ialicej.pixnet.net
 127.0.0.1 sglda82750.pixnet.net
 127.0.0.1 sgliulian.com
@@ -7026,7 +6465,6 @@
 127.0.0.1 sgss8.com
 127.0.0.1 sh181e2h.blog.fc2.com
 127.0.0.1 sha59nc06r.blog.fc2.com
-127.0.0.1 shabbychiccrafts.in  #R18
 127.0.0.1 shabtop.me  #redirects to cznono.xyz
 127.0.0.1 shangmeiyiliao.com
 127.0.0.1 shannondeloyo.pixnet.net
@@ -7052,10 +6490,8 @@
 127.0.0.1 shareu.com.tw
 127.0.0.1 sharing88.life
 127.0.0.1 sharingkings.com
-127.0.0.1 shashen.co  #R18
 127.0.0.1 shdfny.com
 127.0.0.1 sheisui.com
-127.0.0.1 shemal.co  #R18
 127.0.0.1 shengqian001.com
 127.0.0.1 shenmedaquan.com
 127.0.0.1 shenmedouyou.xyz
@@ -7082,7 +6518,6 @@
 127.0.0.1 si02wi4i.blog.fc2.com
 127.0.0.1 siankl.me  #redirects to soonmiss.top
 127.0.0.1 siberlbiz.me  #redirects to fatbean.xyz
-127.0.0.1 sichuan1.online  #R18
 127.0.0.1 sidneykellyma.pixnet.net
 127.0.0.1 sigmund-fliesen.de
 127.0.0.1 sigov.top
@@ -7093,14 +6528,10 @@
 127.0.0.1 sinabz.com
 127.0.0.1 sinatimes.tw  #指動傳播科技有限公司
 127.0.0.1 singaporeable.cc
-127.0.0.1 singificant.shop  #R18
-127.0.0.1 singificant.us  #R18
 127.0.0.1 singlelettercry.top  #redirects to rockcloudarea.com
 127.0.0.1 sinoexam.com.cn
 127.0.0.1 sis8.com
-127.0.0.1 siyeqing.com  #R18
 127.0.0.1 sj41784819.pixnet.net
-127.0.0.1 sj4o.cc  #R18
 127.0.0.1 sj582j5x.pixnet.net
 127.0.0.1 sjqps.com
 127.0.0.1 sjzjcjy.net
@@ -7108,8 +6539,6 @@
 127.0.0.1 sk35250355.pixnet.net
 127.0.0.1 sk66483882.pixnet.net
 127.0.0.1 skbkd.top
-127.0.0.1 ske0g.xyz  #R18
-127.0.0.1 skgcd.com  #R18
 127.0.0.1 skocoims0.pixnet.net
 127.0.0.1 sktread.com
 127.0.0.1 skye6299637.pixnet.net
@@ -7117,7 +6546,6 @@
 127.0.0.1 skyyyy.club  #愛縮兔 (農場轉址)
 127.0.0.1 sl41134764.pixnet.net
 127.0.0.1 sl61151567.pixnet.net
-127.0.0.1 sleepingtabletz.com  #R18
 127.0.0.1 slwqp.com  #BuzzHand
 127.0.0.1 sm45577204.pixnet.net
 127.0.0.1 sm62470210.pixnet.net
@@ -7132,7 +6560,6 @@
 127.0.0.1 smittenevents.me  #redirects to ppcnzi.xyz
 127.0.0.1 smneons.com
 127.0.0.1 smqz241.pixnet.net
-127.0.0.1 smxh.visualpixel.com.cn  #R18
 127.0.0.1 smxs.com
 127.0.0.1 smz44qo59s.pixnet.net
 127.0.0.1 snyderalictr.pixnet.net
@@ -7146,12 +6573,10 @@
 127.0.0.1 sogrbber.me  #redirects to soonmiss.top
 127.0.0.1 soikids.co  #redirects to aetop.top
 127.0.0.1 soinside.com
-127.0.0.1 solare-kuehlung.info  #R18
 127.0.0.1 soltysdrukuje.pl  #redirects to di02.biz
 127.0.0.1 soniawellpedr.pixnet.net
 127.0.0.1 soo2j76.pixnet.net
 127.0.0.1 soonmiss.top  #redirects to debtways.xyz
-127.0.0.1 soopat.co  #R18
 127.0.0.1 soothsaying.cc
 127.0.0.1 sop06803978muta.wordpress.com
 127.0.0.1 sophieskechers.blog.fc2.com
@@ -7179,10 +6604,8 @@
 127.0.0.1 springf.top
 127.0.0.1 springtb.top
 127.0.0.1 springunion.com
-127.0.0.1 sqbkqp.xyz  #R18
 127.0.0.1 sqfglramu0s.pixnet.net
 127.0.0.1 squidoo.com
-127.0.0.1 sqwyt.co  #R18
 127.0.0.1 sr2p8f2m1y.pixnet.net
 127.0.0.1 sr4hcurtisnmq.pixnet.net
 127.0.0.1 sre13vb53l.pixnet.net
@@ -7195,8 +6618,6 @@
 127.0.0.1 sse886gu08.blog.fc2.com
 127.0.0.1 ssf15uv35r.pixnet.net
 127.0.0.1 sso.com.tw
-127.0.0.1 sspapertech.com  #R18
-127.0.0.1 ssseee.co  #R18
 127.0.0.1 stackask.cn
 127.0.0.1 stackoom.com
 127.0.0.1 stamp3.com
@@ -7206,10 +6627,8 @@
 127.0.0.1 stargogo.com
 127.0.0.1 starlucky.cc  #樂享網
 127.0.0.1 starpark.tw
-127.0.0.1 starrymaple.club  #R18
 127.0.0.1 starsign.club
 127.0.0.1 starsign.news
-127.0.0.1 startips.in  #R18
 127.0.0.1 startnewstoday.com
 127.0.0.1 stayhealthtw.com
 127.0.0.1 stb54xe74u.pixnet.net
@@ -7222,12 +6641,9 @@
 127.0.0.1 steemit.com
 127.0.0.1 steffieshundesalon.ch  #redirects to topawardhere.life
 127.0.0.1 steinlingaerten.ch
-127.0.0.1 step9999.shop  #R18
-127.0.0.1 step9999.us  #R18
 127.0.0.1 stephedq541h.pixnet.net
 127.0.0.1 stepheph1xu46.pixnet.net
 127.0.0.1 steroidologia.com  #redirects to bestbonus-zone.life
-127.0.0.1 stethalgia.shop  #R18
 127.0.0.1 stevenmichsan.pixnet.net
 127.0.0.1 steventi5nm0p.pixnet.net
 127.0.0.1 stewarjfk43.pixnet.net
@@ -7236,16 +6652,11 @@
 127.0.0.1 stoneneilke.pixnet.net
 127.0.0.1 storfamily.com
 127.0.0.1 storm-mg.com
-127.0.0.1 stormforerunner.club  #R18
-127.0.0.1 stormnut.com  #R18
 127.0.0.1 story543.com
 127.0.0.1 storywall.me
 127.0.0.1 strickcmpp01.pixnet.net
 127.0.0.1 string.quest
 127.0.0.1 stroawp.co  #redirects to aetop.top
-127.0.0.1 sts6666.co  #R18
-127.0.0.1 sts6666.shop  #R18
-127.0.0.1 studentloansnow.info  #R18
 127.0.0.1 studiocavas.co  #redirects to cacnka.xyz
 127.0.0.1 studiodahu.com
 127.0.0.1 stugov.tv
@@ -7262,7 +6673,6 @@
 127.0.0.1 sundxs.com
 127.0.0.1 sunffix.com
 127.0.0.1 sunflyday.com
-127.0.0.1 sunjx888.club  #R18
 127.0.0.1 sunmon.news
 127.0.0.1 sunnews.cc
 127.0.0.1 sunnews.site
@@ -7273,8 +6683,6 @@
 127.0.0.1 super01.cc  #redirects to www.cocomy.net
 127.0.0.1 superbigapple.com
 127.0.0.1 superfun-e.com
-127.0.0.1 superncah.fit  #R18
-127.0.0.1 superncar.fit  #R18
 127.0.0.1 support-hk.com  #redirects to possitv.com
 127.0.0.1 supportdap.online
 127.0.0.1 supportph.com
@@ -7290,20 +6698,15 @@
 127.0.0.1 sweetnautical.com
 127.0.0.1 sweeuh.co  #redirects to goake.top
 127.0.0.1 swghn.blogspot.com
-127.0.0.1 swhsit.xyz  #R18
 127.0.0.1 swingmusast.co  #redirects to meetwill.xyz
 127.0.0.1 swissdasta.co  #redirects to keecnya.xyz
 127.0.0.1 swwgvszv.blogspot.com
-127.0.0.1 sxfzgb.xyz  #R18
 127.0.0.1 sxqhmy.com
 127.0.0.1 sy4olsonsvv.pixnet.net
-127.0.0.1 syball.us  #R18
 127.0.0.1 sybw63phyflor.pixnet.net
 127.0.0.1 sycmd.com
 127.0.0.1 sydneytoday.com
-127.0.0.1 syhth.co  #R18
 127.0.0.1 sylviajoramon.pixnet.net
-127.0.0.1 symsn1.top  #R18
 127.0.0.1 sync-computers.com
 127.0.0.1 sysagri.fr  #redirects to odbxoq.prodlgiousdates.com
 127.0.0.1 system-flow.xyz
@@ -7326,10 +6729,7 @@
 127.0.0.1 syy54.com
 127.0.0.1 syy73.com
 127.0.0.1 syy75.com
-127.0.0.1 syzxc1.top  #R18
 127.0.0.1 sz22382283jiug.wordpress.com
-127.0.0.1 szbjs88.com  #R18
-127.0.0.1 szdiaoyi.com  #R18
 127.0.0.1 szdutre.com
 127.0.0.1 szfusen.com
 127.0.0.1 szzl999.com
@@ -7406,7 +6806,6 @@
 127.0.0.1 t5zff333ljf.blog.fc2.com
 127.0.0.1 t5zox9iat8.pixnet.net
 127.0.0.1 t5zt35l73h.pixnet.net
-127.0.0.1 t63kb6.cyou  #R18
 127.0.0.1 t6bx22.pixnet.net
 127.0.0.1 t6tt.com
 127.0.0.1 t6v3b5c3rip.blog.fc2.com
@@ -7509,14 +6908,12 @@
 127.0.0.1 teepr.net  #TEEPR
 127.0.0.1 teepr.tv  #TEEPR
 127.0.0.1 teepr.tw  #TEEPR
-127.0.0.1 teg9bz.cyou  #R18
 127.0.0.1 terabitweb.com
 127.0.0.1 terraze96l.pixnet.net
 127.0.0.1 terricha70363.pixnet.net
 127.0.0.1 tf19919351.pixnet.net
 127.0.0.1 tfb7fff.co  #redirects to ppcnzi.xyz
 127.0.0.1 tfc71vw37l.pixnet.net
-127.0.0.1 tfesports.us  #R18
 127.0.0.1 tff97xj15n.blog.fc2.com
 127.0.0.1 tfl39dn59l.pixnet.net
 127.0.0.1 tfzz591895.blog.fc2.com
@@ -7541,14 +6938,11 @@
 127.0.0.1 thegreendaily.net
 127.0.0.1 thehealthdaily.org
 127.0.0.1 thehealther.com
-127.0.0.1 theheightsmi.com  #R18
 127.0.0.1 theironnews.site  #malicious ads scripts
 127.0.0.1 thejee.co  #redirects to aetop.top
 127.0.0.1 thejumproom.org
 127.0.0.1 thenews.cc
-127.0.0.1 thenoninfluencer.com  #R18
 127.0.0.1 theodoagurodr.pixnet.net
-127.0.0.1 theporndude.com  #R18
 127.0.0.1 thepunnel.me  #redirects to cznono.xyz
 127.0.0.1 therestdkw7.pixnet.net
 127.0.0.1 therichfighter.com
@@ -7561,14 +6955,10 @@
 127.0.0.1 thompsoarrkf.pixnet.net
 127.0.0.1 thorntpaghoj.pixnet.net
 127.0.0.1 thp35nb73v.pixnet.net
-127.0.0.1 throwhat.club  #R18
 127.0.0.1 thtzh15597.pixnet.net
 127.0.0.1 tianhotel.com
-127.0.0.1 tianrunzhongtai.com  #R18
 127.0.0.1 tiantojia16.com
 127.0.0.1 tianxiayoujing.com
-127.0.0.1 tiaozhuankkk367.cc  #R18
-127.0.0.1 tieen.shop  #R18
 127.0.0.1 tiengtrung.cn
 127.0.0.1 tiezhushuo.com
 127.0.0.1 tiezhushuo.zhaopindi.cn
@@ -7582,15 +6972,11 @@
 127.0.0.1 timetw.com
 127.0.0.1 timlucky88.blogspot.com
 127.0.0.1 timoristorante.it  #redirects to cubicongardens.sk
-127.0.0.1 timothy-heather.in  #R18
-127.0.0.1 tinyos.co  #R18
 127.0.0.1 tio93ob80m.blog.fc2.com
 127.0.0.1 tioc167.pixnet.net
 127.0.0.1 tipelse.com
-127.0.0.1 tirkhabar.com  #R18
 127.0.0.1 titbits.pro
 127.0.0.1 titisyz.com
-127.0.0.1 tiwimm.xyz  #R18
 127.0.0.1 tiwyyyse.co  #redirects to procnw.xyz
 127.0.0.1 tiyiba.com
 127.0.0.1 tjd99jb15p.pixnet.net
@@ -7605,7 +6991,6 @@
 127.0.0.1 tk71450633.pixnet.net
 127.0.0.1 tkb1013.pixnet.net
 127.0.0.1 tkfwee.co  #redirects to goake.top
-127.0.0.1 tktube.com  #R18
 127.0.0.1 tl1485141yihu.wordpress.com
 127.0.0.1 tl3m8.pixnet.net
 127.0.0.1 tl77475712lian.wordpress.com
@@ -7614,7 +6999,6 @@
 127.0.0.1 tli27ra24y.pixnet.net
 127.0.0.1 tluwmd297.pixnet.net
 127.0.0.1 tlx95lh19x.blog.fc2.com
-127.0.0.1 tm12ji.com  #R18
 127.0.0.1 tmd85lh30v.blog.fc2.com
 127.0.0.1 tmmlove.com
 127.0.0.1 tmmrketngcenter.co  #redirects to meetwill.xyz
@@ -7703,7 +7087,6 @@
 127.0.0.1 trrgov.com
 127.0.0.1 trsl.me  #redirects to ppcnzi.xyz
 127.0.0.1 truenews.tw
-127.0.0.1 truthsocial.com  #R18
 127.0.0.1 trvztx15r.pixnet.net
 127.0.0.1 trw10ty85b.pixnet.net
 127.0.0.1 trytohear.com
@@ -7714,8 +7097,6 @@
 127.0.0.1 tspweb.com
 127.0.0.1 tsw94ie76i.pixnet.net
 127.0.0.1 tsyhgp612.pixnet.net
-127.0.0.1 tt1177.in  #R18
-127.0.0.1 tt1177.us  #R18
 127.0.0.1 ttfnews.org
 127.0.0.1 ttl7jv71.blog.fc2.com
 127.0.0.1 ttodaynew.com
@@ -7729,10 +7110,8 @@
 127.0.0.1 ttyshi.com
 127.0.0.1 tualau.co  #redirects to soonmiss.top
 127.0.0.1 tuasiann.com  #boMb01
-127.0.0.1 tubx.shop  #R18
 127.0.0.1 tues221394583.wordpress.com
 127.0.0.1 tuhanhan.com
-127.0.0.1 tuita.co  #R18
 127.0.0.1 tum01nu20p.pixnet.net
 127.0.0.1 tushudq.com
 127.0.0.1 tutorialfor.com
@@ -7768,10 +7147,7 @@
 127.0.0.1 twmqn.me
 127.0.0.1 twnjkgov.com
 127.0.0.1 twoeggz.com
-127.0.0.1 twohost.shop  #R18
-127.0.0.1 twoinfo.shop  #R18
 127.0.0.1 tworks.xyz  #malicious ads scripts
-127.0.0.1 twosuit.shop  #R18
 127.0.0.1 twsgov.me
 127.0.0.1 twspk.me
 127.0.0.1 twtimes.org
@@ -7785,13 +7161,11 @@
 127.0.0.1 twword.com
 127.0.0.1 twxgov.com
 127.0.0.1 twysgov.com
-127.0.0.1 txinbs.com  #R18
 127.0.0.1 txjtp95375.pixnet.net
 127.0.0.1 txl5695195xich.wordpress.com
 127.0.0.1 txm28dz56t.pixnet.net
 127.0.0.1 txomuq.com  #redirects to *.vxfmaz.cn
 127.0.0.1 txt88up43k.blog.fc2.com
-127.0.0.1 tyc8719.in  #R18
 127.0.0.1 tyfegov.site
 127.0.0.1 tyldl.com
 127.0.0.1 tylersimsnpvg.pixnet.net
@@ -7799,11 +7173,8 @@
 127.0.0.1 tyo9793ybb.pixnet.net
 127.0.0.1 tysonwyq29.blog.fc2.com
 127.0.0.1 tyzcat.co  #redirects to aetop.top
-127.0.0.1 tz2777.co  #R18
-127.0.0.1 tz2777.shop  #R18
 127.0.0.1 tzbbd93779.pixnet.net
 127.0.0.1 tzg68owqd.pixnet.net
-127.0.0.1 tzhvc.cn  #R18
 127.0.0.1 tzhvj79733.pixnet.net
 127.0.0.1 tzrseo.com
 127.0.0.1 tzv19nj13z.blog.fc2.com
@@ -7834,7 +7205,6 @@
 127.0.0.1 u5bmp264lgy.pixnet.net
 127.0.0.1 u5l1y76qn8.pixnet.net
 127.0.0.1 u5u8t8oliv.blog.fc2.com
-127.0.0.1 u5uq2.xyz  #R18
 127.0.0.1 u6a4j1gdnb.pixnet.net
 127.0.0.1 u6bbc5npw8.pixnet.net
 127.0.0.1 u6e8u8.wordpress.com
@@ -7842,7 +7212,6 @@
 127.0.0.1 u6sik6adt0.pixnet.net
 127.0.0.1 u6wic8yk06.pixnet.net
 127.0.0.1 u6wow2igo4.pixnet.net
-127.0.0.1 u7559.com  #R18
 127.0.0.1 u7m3f6eisi.pixnet.net
 127.0.0.1 u8aiu2iiew.pixnet.net
 127.0.0.1 u8vkw3d9yr1.pixnet.net
@@ -7859,8 +7228,6 @@
 127.0.0.1 uaqwaocauc.pixnet.net
 127.0.0.1 uawq725.pixnet.net
 127.0.0.1 ubesxshw.co  #redirects to procnw.xyz
-127.0.0.1 ubpop.shop  #R18
-127.0.0.1 ubpop.us  #R18
 127.0.0.1 ubxodl901.pixnet.net
 127.0.0.1 uceyny.com
 127.0.0.1 ucgisio4c.pixnet.net
@@ -7876,8 +7243,6 @@
 127.0.0.1 ue40.com
 127.0.0.1 ueca00cm.wordpress.com
 127.0.0.1 uefprb290.pixnet.net
-127.0.0.1 uegqre.com  #R18
-127.0.0.1 uesugitakayuki.com  #R18
 127.0.0.1 ueswq68446.pixnet.net
 127.0.0.1 uetie.com
 127.0.0.1 uf4pagevirgil.pixnet.net
@@ -7894,28 +7259,17 @@
 127.0.0.1 uj5u.com
 127.0.0.1 ujayaalonepal.com
 127.0.0.1 ujoy.net
-127.0.0.1 ujxvxa.co  #R18
-127.0.0.1 ujy4.com  #R18
 127.0.0.1 ukb33aw67h.blog.fc2.com
 127.0.0.1 ukb7685nke.pixnet.net
 127.0.0.1 ukbid201hu.pixnet.net
 127.0.0.1 ukuw0gi46c.pixnet.net
 127.0.0.1 ukz14jc83f.blog.fc2.com
-127.0.0.1 ul0d0p.cyou  #R18
 127.0.0.1 ulcqin091.pixnet.net
 127.0.0.1 ulen8denis803.pixnet.net
-127.0.0.1 ulquiorra.shop  #R18
 127.0.0.1 ulzx.top
 127.0.0.1 umagdaily.com  #愛縮兔 (農場轉址)
 127.0.0.1 umtalk.net
-127.0.0.1 umuxpp.cyou  #R18
 127.0.0.1 umy6580401ganzhi3.wordpress.com
-127.0.0.1 un1155.in  #R18
-127.0.0.1 un1155.shop  #R18
-127.0.0.1 un2288.shop  #R18
-127.0.0.1 un3388.us  #R18
-127.0.0.1 un6688.shop  #R18
-127.0.0.1 un6688.us  #R18
 127.0.0.1 underwears99.blogspot.com
 127.0.0.1 ung2aruizalma.pixnet.net
 127.0.0.1 uni-hankyu.com.tw
@@ -7955,7 +7309,6 @@
 127.0.0.1 uwv74jz42f.blog.fc2.com
 127.0.0.1 uxp93tv61n.blog.fc2.com
 127.0.0.1 uxqpr54n27146.pixnet.net
-127.0.0.1 uxu.info  #R18
 127.0.0.1 uzcca.com
 127.0.0.1 uzkt493.pixnet.net
 127.0.0.1 uzm95ot51f.blog.fc2.com
@@ -7970,7 +7323,6 @@
 127.0.0.1 v0upe765yg.pixnet.net
 127.0.0.1 v0wm13.pixnet.net
 127.0.0.1 v1050fm.pixnet.net
-127.0.0.1 v1bet.shop  #R18
 127.0.0.1 v1l1j5l3nvz.pixnet.net
 127.0.0.1 v1l5x5ff5f.pixnet.net
 127.0.0.1 v1nz75157f.pixnet.net
@@ -7990,7 +7342,6 @@
 127.0.0.1 v2s5y3epyf.pixnet.net
 127.0.0.1 v2zpx67xgg.pixnet.net
 127.0.0.1 v36bbi1.pixnet.net
-127.0.0.1 v3bet.us  #R18
 127.0.0.1 v3bln1zjj9.pixnet.net
 127.0.0.1 v3d5h9xpdv.pixnet.net
 127.0.0.1 v3d9v5npnt.pixnet.net
@@ -8099,7 +7450,6 @@
 127.0.0.1 vf53971531.blog.fc2.com
 127.0.0.1 vg33940414.blog.fc2.com
 127.0.0.1 vgs5lncgooasf.pixnet.net
-127.0.0.1 vgyvkq.xyz  #R18
 127.0.0.1 vh077c0m24.blog.fc2.com
 127.0.0.1 vh79737399.blog.fc2.com
 127.0.0.1 vi9bb081.pixnet.net
@@ -8117,7 +7467,6 @@
 127.0.0.1 viracore.work
 127.0.0.1 viralane.com
 127.0.0.1 viralcham.com
-127.0.0.1 virous.us  #R18
 127.0.0.1 visageple.co  #redirects to keecnya.xyz
 127.0.0.1 vistahuts.co  #redirects to cacnka.xyz
 127.0.0.1 vitomag.com
@@ -8138,16 +7487,11 @@
 127.0.0.1 vmc6691wbx.blog.fc2.com
 127.0.0.1 vmohwebbcrawf.pixnet.net
 127.0.0.1 vmr75ju39b.blog.fc2.com
-127.0.0.1 vn004.co  #R18
-127.0.0.1 vn005.us  #R18
 127.0.0.1 vn11fz9b.blog.fc2.com
 127.0.0.1 vn428samantag.pixnet.net
 127.0.0.1 vnf71bv75p.pixnet.net
 127.0.0.1 vnfmpw.co
-127.0.0.1 vnhousing.xyz  #R18
-127.0.0.1 vnsrbyc.us  #R18
 127.0.0.1 vntx7saltm.pixnet.net
-127.0.0.1 vnvmg.com  #R18
 127.0.0.1 vodsl268xi.pixnet.net
 127.0.0.1 voe4burke5400.pixnet.net
 127.0.0.1 voidcc.com
@@ -8266,7 +7610,6 @@
 127.0.0.1 waderamosbf.pixnet.net
 127.0.0.1 waderge.me  #redirects to soonmiss.top
 127.0.0.1 wagnerkelly33.pixnet.net
-127.0.0.1 waihui800.com  #R18
 127.0.0.1 waimaoyuandi.com
 127.0.0.1 waitwhy.buzz
 127.0.0.1 wajdke639.pixnet.net
@@ -8298,7 +7641,6 @@
 127.0.0.1 water203.wordpress.com
 127.0.0.1 watkinshqj.pixnet.net
 127.0.0.1 watsonvincema.pixnet.net
-127.0.0.1 wattspace.co  #R18
 127.0.0.1 waxgourdw350.blog.fc2.com
 127.0.0.1 wb00809146.pixnet.net
 127.0.0.1 wbb22sx40j.blog.fc2.com
@@ -8320,19 +7662,12 @@
 127.0.0.1 webstershab7.pixnet.net
 127.0.0.1 wedianli.com
 127.0.0.1 weekdayshknews.com  #愛縮兔 (農場轉址)
-127.0.0.1 wegw.net  #R18
 127.0.0.1 wei890.com
 127.0.0.1 weibokaoxiang.com
-127.0.0.1 weijiachen.club  #R18
 127.0.0.1 weijy.com
-127.0.0.1 weimingli.club  #R18
 127.0.0.1 weiwenku.net
 127.0.0.1 wekghi.com
 127.0.0.1 weknow.wiki
-127.0.0.1 welcomecrown.co  #R18
-127.0.0.1 welcomecrown.in  #R18
-127.0.0.1 welcomecrown.us  #R18
-127.0.0.1 welcomehg.us  #R18
 127.0.0.1 welfareml.com
 127.0.0.1 wellbay.cc
 127.0.0.1 wen01.com.tw
@@ -8360,7 +7695,6 @@
 127.0.0.1 whbsdfju.blogspot.com
 127.0.0.1 wherechargefresh.top  #malicious ads scripts
 127.0.0.1 whgsb.blogspot.com
-127.0.0.1 whiterabbitchase.com  #R18
 127.0.0.1 whiteyolanimy.pixnet.net
 127.0.0.1 whofood.net
 127.0.0.1 wholehk.com
@@ -8376,7 +7710,6 @@
 127.0.0.1 willishec6u.pixnet.net
 127.0.0.1 wilsonjoanjen.pixnet.net
 127.0.0.1 winenine.com
-127.0.0.1 winthu.com  #R18
 127.0.0.1 wioau.com
 127.0.0.1 wisegeek.com
 127.0.0.1 wishnote.tw
@@ -8385,12 +7718,9 @@
 127.0.0.1 wjbk.site  #redirects to m.hk.llhlf.com, tw.studiodahu.com, etc.
 127.0.0.1 wjbkb.com
 127.0.0.1 wjimgji744.pixnet.net
-127.0.0.1 wjtno.com  #R18
 127.0.0.1 wjz18wo21m.pixnet.net
 127.0.0.1 wkgoto.com
-127.0.0.1 wkjkn.com  #R18
 127.0.0.1 wkm88uc48y.blog.fc2.com
-127.0.0.1 wl2227.com  #R18
 127.0.0.1 wlku.com
 127.0.0.1 wlo7blaima.pixnet.net
 127.0.0.1 wloor.com
@@ -8420,18 +7750,14 @@
 127.0.0.1 woowa.fun
 127.0.0.1 wor73df89m.pixnet.net
 127.0.0.1 wordailyhk.com  #愛縮兔 (農場轉址)
-127.0.0.1 workforhome.club  #R18
 127.0.0.1 worldwellbeingbio.com
 127.0.0.1 wosnews.com  #愛縮兔 (農場轉址)
 127.0.0.1 wow.kus0.tw
-127.0.0.1 wowba.co  #R18
 127.0.0.1 wowkorea.live
 127.0.0.1 wowo391.com  #歡享網
 127.0.0.1 woyaokantoutiao.com
 127.0.0.1 woymg288.blog.fc2.com
-127.0.0.1 woypzx.com  #R18
 127.0.0.1 wp.news365.my
-127.0.0.1 wpbjs.com  #R18
 127.0.0.1 wphll.com  #redirects to tspweb.com
 127.0.0.1 wple8donj4t.pixnet.net
 127.0.0.1 wpsabc.com
@@ -8453,12 +7779,10 @@
 127.0.0.1 wsflojgov.xyz
 127.0.0.1 wsfltlwgov.xyz
 127.0.0.1 wsflzogov.xyz
-127.0.0.1 wsomfn.xyz  #R18
 127.0.0.1 wsvsw.com
 127.0.0.1 wsy26ie02i.pixnet.net
 127.0.0.1 wtbfsthy.pixnet.net
 127.0.0.1 wtfyou7788.net
-127.0.0.1 wtoapr.com  #R18
 127.0.0.1 wtsfamen.com
 127.0.0.1 wu33671187.pixnet.net
 127.0.0.1 wu637fcaruchw.pixnet.net
@@ -8477,7 +7801,6 @@
 127.0.0.1 wwlzw.com
 127.0.0.1 wwn83px11z.blog.fc2.com
 127.0.0.1 wws23.com  #redirects to tspweb.com
-127.0.0.1 www-guangzhourenrenbanjia-cn.jackpot-vipclub3.com  #R18
 127.0.0.1 www9.gocar2.com
 127.0.0.1 wwwwtrolly88.com
 127.0.0.1 wwyo84ky.wordpress.com
@@ -8485,13 +7808,9 @@
 127.0.0.1 wx92473040.pixnet.net
 127.0.0.1 wxojf000ik.pixnet.net
 127.0.0.1 wya55wi62k.pixnet.net
-127.0.0.1 wycz06.live  #R18
 127.0.0.1 wyw3steebritt.pixnet.net
-127.0.0.1 wyyz72.co  #R18
-127.0.0.1 wyyz72.in  #R18
 127.0.0.1 wz-cz.com
 127.0.0.1 wzum534.pixnet.net
-127.0.0.1 wzyhfw.com  #R18
 127.0.0.1 x0327.com
 127.0.0.1 x0rqhzru6g.pixnet.net
 127.0.0.1 x0t7n4p4wpr.pixnet.net
@@ -8527,7 +7846,6 @@
 127.0.0.1 x2x09bb3.pixnet.net
 127.0.0.1 x3b1t5zhr5.pixnet.net
 127.0.0.1 x3d7b19lbx.pixnet.net
-127.0.0.1 x3f.fit  #R18
 127.0.0.1 x3fpd17dtt.blog.fc2.com
 127.0.0.1 x3hzx3trx9.blog.fc2.com
 127.0.0.1 x3jbj91pn9.pixnet.net
@@ -8625,7 +7943,6 @@
 127.0.0.1 xbd95ht93t.blog.fc2.com
 127.0.0.1 xbin2sswapp.pixnet.net
 127.0.0.1 xbjdn37735.pixnet.net
-127.0.0.1 xblwq.com  #R18
 127.0.0.1 xbntvh5z7.pixnet.net
 127.0.0.1 xbto.cc  #redirects to ksou.cc
 127.0.0.1 xbuba.com
@@ -8634,7 +7951,6 @@
 127.0.0.1 xdbiancheng.com
 127.0.0.1 xdd77xb31p.blog.fc2.com
 127.0.0.1 xde6.net
-127.0.0.1 xdgj99.co  #R18
 127.0.0.1 xdki2stanburt.pixnet.net
 127.0.0.1 xdl31pn59n.blog.fc2.com
 127.0.0.1 xdzb9dz15x.pixnet.net
@@ -8648,9 +7964,6 @@
 127.0.0.1 xguha.blogspot.com
 127.0.0.1 xh34860999.pixnet.net
 127.0.0.1 xhbxgg.com
-127.0.0.1 xhc888.co  #R18
-127.0.0.1 xhc888.in  #R18
-127.0.0.1 xhf37.com  #R18
 127.0.0.1 xhkdse.blogspot.com
 127.0.0.1 xhl19vb91d.blog.fc2.com
 127.0.0.1 xhm5451217mida.wordpress.com
@@ -8660,10 +7973,7 @@
 127.0.0.1 xhrq3tm84c.pixnet.net
 127.0.0.1 xi20327823.blog.fc2.com
 127.0.0.1 xi53970039.blog.fc2.com
-127.0.0.1 xianei.co  #R18
 127.0.0.1 xiang-zheng.com
-127.0.0.1 xiangnan93.club  #R18
-127.0.0.1 xiangyundiaocha.club  #R18
 127.0.0.1 xianso.com
 127.0.0.1 xiaobenzi.com
 127.0.0.1 xiaoshuolist.com
@@ -8672,10 +7982,6 @@
 127.0.0.1 xibao.tw
 127.0.0.1 xieenjie.com
 127.0.0.1 xigouhu.com
-127.0.0.1 xin33333.co  #R18
-127.0.0.1 xin66666.co  #R18
-127.0.0.1 xin66666.in  #R18
-127.0.0.1 xinbada.info  #R18
 127.0.0.1 xingnvquan.com
 127.0.0.1 xingrongyixia.com
 127.0.0.1 xingzuonew.com  #歡享網
@@ -8698,14 +8004,11 @@
 127.0.0.1 xjrnbx3xd.pixnet.net
 127.0.0.1 xjrqw964jw.blog.fc2.com
 127.0.0.1 xjv04oy85s.blog.fc2.com
-127.0.0.1 xjylj.top  #R18
 127.0.0.1 xjzdu.cn
 127.0.0.1 xk96893546.pixnet.net
 127.0.0.1 xknote.com
 127.0.0.1 xkyn.com
 127.0.0.1 xl59wz8g7l.blog.fc2.com
-127.0.0.1 xld6688.co  #R18
-127.0.0.1 xld9999.co  #R18
 127.0.0.1 xldph91319.pixnet.net
 127.0.0.1 xleag653ml.pixnet.net
 127.0.0.1 xlnwkldonlw.blogspot.com
@@ -8715,7 +8018,6 @@
 127.0.0.1 xm680.com
 127.0.0.1 xm96t.pixnet.net
 127.0.0.1 xmh20hd73j.blog.fc2.com
-127.0.0.1 xmstcy.com  #R18
 127.0.0.1 xmxt5p5xu3r.pixnet.net
 127.0.0.1 xn--6oqy57b20i.com
 127.0.0.1 xn--siq569biez9qvmk.com
@@ -8726,8 +8028,6 @@
 127.0.0.1 xnn01gf49q.pixnet.net
 127.0.0.1 xnpxv55391.pixnet.net
 127.0.0.1 xnvpx33779.pixnet.net
-127.0.0.1 xnxx.com  #R18
-127.0.0.1 xnxx.tv  #redirects to xnxx.com
 127.0.0.1 xo98212418.blog.fc2.com
 127.0.0.1 xoer.cc
 127.0.0.1 xomba.com
@@ -8736,12 +8036,10 @@
 127.0.0.1 xp373g9acd.blog.fc2.com
 127.0.0.1 xp88925678.pixnet.net
 127.0.0.1 xp89525158.pixnet.net
-127.0.0.1 xpapvn.xyz  #R18
 127.0.0.1 xpf17nx31b.blog.fc2.com
 127.0.0.1 xph13hf51p.pixnet.net
 127.0.0.1 xpj0411.cc
 127.0.0.1 xpj0477.cc
-127.0.0.1 xpj0524.cc  #R18
 127.0.0.1 xppul.com
 127.0.0.1 xpswrld.me  #redirects to meetwill.xyz
 127.0.0.1 xqiqi.online  #大榴槤/大時代/GreatDaily/閃文聯盟/琦琦~
@@ -8749,9 +8047,7 @@
 127.0.0.1 xr56265789.blog.fc2.com
 127.0.0.1 xs76176406.blog.fc2.com
 127.0.0.1 xs84cc.com  #redirects to ady384.fhrl2018.com
-127.0.0.1 xsmao.club  #R18
 127.0.0.1 xsp97ov25a.pixnet.net
-127.0.0.1 xstone.club  #R18
 127.0.0.1 xsy02.cc
 127.0.0.1 xtd95br53n.pixnet.net
 127.0.0.1 xtf10hl34g.blog.fc2.com
@@ -8759,13 +8055,11 @@
 127.0.0.1 xthqdsf.blogspot.com
 127.0.0.1 xthyfn209.pixnet.net
 127.0.0.1 xtl79pz17h.blog.fc2.com
-127.0.0.1 xuanfenglighting.com  #R18
 127.0.0.1 xuawft413.pixnet.net
 127.0.0.1 xueduilian.com
 127.0.0.1 xueerbao.com
 127.0.0.1 xuehua.tw
 127.0.0.1 xuehua.us
-127.0.0.1 xukai.online  #R18
 127.0.0.1 xumengbin.com
 127.0.0.1 xunii.com
 127.0.0.1 xuu9049vct.pixnet.net
@@ -8797,7 +8091,6 @@
 127.0.0.1 xzhreee.blogspot.com
 127.0.0.1 xznsvd516.pixnet.net
 127.0.0.1 xzr51dd53r.pixnet.net
-127.0.0.1 xzvva.com  #R18
 127.0.0.1 xzz99lh17f.blog.fc2.com
 127.0.0.1 y0c3o9.wordpress.com
 127.0.0.1 y0e0a4ocmq.pixnet.net
@@ -8814,7 +8107,6 @@
 127.0.0.1 y0z4w99bc2.pixnet.net
 127.0.0.1 y1f4f94jx3.pixnet.net
 127.0.0.1 y1j6g5upiw.blog.fc2.com
-127.0.0.1 y1tekc.cyou  #R18
 127.0.0.1 y28ly06ags.blog.fc2.com
 127.0.0.1 y2aem2wyyc.blog.fc2.com
 127.0.0.1 y2n4e5l4ywh.pixnet.net
@@ -8857,7 +8149,6 @@
 127.0.0.1 y9rpe2t5rzs.blog.fc2.com
 127.0.0.1 ya01z94wlb.pixnet.net
 127.0.0.1 yabohash.store
-127.0.0.1 yabovipcom.co  #R18
 127.0.0.1 yadtrga.blogspot.com
 127.0.0.1 yahooshop.pixnet.net
 127.0.0.1 yaka.fun
@@ -8871,25 +8162,12 @@
 127.0.0.1 yanjianggu.com
 127.0.0.1 yanjiaoluntan.com
 127.0.0.1 yanjiuzhinan.com
-127.0.0.1 yanwuzhilv.club  #R18
 127.0.0.1 yao51.com
-127.0.0.1 yaoji6.co  #R18
-127.0.0.1 yaoji7.co  #R18
-127.0.0.1 yaoji9.co  #R18
 127.0.0.1 yardwarmine.xyz  #!malicious ads scripts
 127.0.0.1 yau28kq42c.pixnet.net
 127.0.0.1 yaugs844xl.pixnet.net
 127.0.0.1 yauie4eyew.pixnet.net
-127.0.0.1 yazhouse8.com  #R18
-127.0.0.1 yb1133.co  #R18
-127.0.0.1 yb1166.co  #R18
-127.0.0.1 yb1199.co  #R18
-127.0.0.1 yb1199.in  #R18
-127.0.0.1 yb6677.co  #R18
 127.0.0.1 ybbhouse.com
-127.0.0.1 ybh6666.in  #R18
-127.0.0.1 ybh7777.co  #R18
-127.0.0.1 ybh8888.co  #R18
 127.0.0.1 ybhfx69694.pixnet.net
 127.0.0.1 yblog01.blog.fc2.com
 127.0.0.1 ybn97gz87l.pixnet.net
@@ -8906,20 +8184,15 @@
 127.0.0.1 yes-news.com
 127.0.0.1 yesfun.cc
 127.0.0.1 yeslib.com
-127.0.0.1 yeyese.co  #R18
 127.0.0.1 yf1109pe39.blog.fc2.com
-127.0.0.1 yf2811.in  #R18
 127.0.0.1 yf67065976.blog.fc2.com
 127.0.0.1 yf9968.com
 127.0.0.1 yfivnz257.pixnet.net
 127.0.0.1 yfqeap142.pixnet.net
 127.0.0.1 yfxbhpalmg17.pixnet.net
-127.0.0.1 ygaa1.com  #R18
 127.0.0.1 ygc89zp18t.blog.fc2.com
 127.0.0.1 ygj19nv20r.pixnet.net
 127.0.0.1 ygpmdo729.pixnet.net
-127.0.0.1 yh0555.in  #R18
-127.0.0.1 yh1119.top  #R18
 127.0.0.1 yhj7ejoynkrb.pixnet.net
 127.0.0.1 yhjaysd.blogspot.com
 127.0.0.1 yhtwww.cn
@@ -8934,8 +8207,6 @@
 127.0.0.1 yiebst3064.pixnet.net
 127.0.0.1 yingyuxuexiba.com
 127.0.0.1 yingzhei.com
-127.0.0.1 yinhe6866.com  #R18
-127.0.0.1 yinsetu.co  #R18
 127.0.0.1 yipee.cc  #3c.~, app.~, gapp.~, ...
 127.0.0.1 yj17154944.pixnet.net
 127.0.0.1 yj56782680.pixnet.net
@@ -8943,9 +8214,7 @@
 127.0.0.1 yjs21.com
 127.0.0.1 ykn956.com
 127.0.0.1 ykp655.com
-127.0.0.1 yl7788.co  #R18
 127.0.0.1 ylallstar.com  #歡享網
-127.0.0.1 ylc678.co  #R18
 127.0.0.1 ylde289.pixnet.net
 127.0.0.1 ylfug31619.pixnet.net
 127.0.0.1 ylmfx.com
@@ -8954,7 +8223,6 @@
 127.0.0.1 ymgnut942.pixnet.net
 127.0.0.1 ymiit.com
 127.0.0.1 ymlove99.com
-127.0.0.1 ymm2.app  #R18
 127.0.0.1 ymoxy244gx.pixnet.net
 127.0.0.1 ymrc160.pixnet.net
 127.0.0.1 ymsgov.com
@@ -8980,7 +8248,6 @@
 127.0.0.1 youthwant.xnnow.com
 127.0.0.1 youtube300.com
 127.0.0.1 youxizhinancn.com
-127.0.0.1 youxu.org  #R18
 127.0.0.1 yp69751179.blog.fc2.com
 127.0.0.1 ypk665.com
 127.0.0.1 ypnl497.pixnet.net
@@ -8989,19 +8256,14 @@
 127.0.0.1 yq47934392.pixnet.net
 127.0.0.1 yqa07kx58j.blog.fc2.com
 127.0.0.1 yqbz2.xyz
-127.0.0.1 yqdmf.club  #R18
 127.0.0.1 yqepow091.pixnet.net
 127.0.0.1 yqptzx.com
 127.0.0.1 yrltc80684.pixnet.net
 127.0.0.1 yrs1ye5ba.pixnet.net
-127.0.0.1 ys321.in  #R18
-127.0.0.1 ys3333.co  #R18
-127.0.0.1 ys5555.in  #R18
 127.0.0.1 ys630.com
 127.0.0.1 ysado.com
 127.0.0.1 ysbkg.com
 127.0.0.1 yshxkj.com
-127.0.0.1 ysjig.com  #R18
 127.0.0.1 yskpw.com
 127.0.0.1 ysy26wy60a.pixnet.net
 127.0.0.1 yszow.com
@@ -9016,19 +8278,12 @@
 127.0.0.1 yue44oa48c.blog.fc2.com
 127.0.0.1 yuebaike.com
 127.0.0.1 yueqibaike.com
-127.0.0.1 yueqiuba.club  #R18
 127.0.0.1 yuerguard.com  #歡享網
 127.0.0.1 yuernew.com  #歡享網
 127.0.0.1 yueyangbang.com
 127.0.0.1 yug1ggrace353.pixnet.net
 127.0.0.1 yugxhwq3.pixnet.net
 127.0.0.1 yumaitie.com
-127.0.0.1 yun2012.co  #R18
-127.0.0.1 yun2111.in  #R18
-127.0.0.1 yun2155.in  #R18
-127.0.0.1 yun2255.co  #R18
-127.0.0.1 yun2288.co  #R18
-127.0.0.1 yungouos.co  #R18
 127.0.0.1 yuutoday.com
 127.0.0.1 yuwenmi.com
 127.0.0.1 yuyibaike.com
@@ -9036,20 +8291,15 @@
 127.0.0.1 yvap174.pixnet.net
 127.0.0.1 yvonnejaj7.pixnet.net
 127.0.0.1 yw91018005.pixnet.net
-127.0.0.1 ywnggympa.co  #R18
 127.0.0.1 ywy19kw58a.pixnet.net
 127.0.0.1 ywzbhr710.pixnet.net
 127.0.0.1 yxfashao.com
 127.0.0.1 yxj77us70p.blog.fc2.com
 127.0.0.1 yxjdcc.com
 127.0.0.1 yy4sw16.pixnet.net
-127.0.0.1 yyhuacai.online  #R18
 127.0.0.1 yyi1364cnh.blog.fc2.com
 127.0.0.1 yyjhxx.com
-127.0.0.1 yytxfdt.com  #R18
 127.0.0.1 yz59315471.pixnet.net
-127.0.0.1 yz82.co  #R18
-127.0.0.1 yzmssc.com  #R18
 127.0.0.1 yzy82yx20k.blog.fc2.com
 127.0.0.1 z0e0f434beq.blog.fc2.com
 127.0.0.1 z1br031.pixnet.net
@@ -9069,7 +8319,6 @@
 127.0.0.1 z1t3v3hloz.pixnet.net
 127.0.0.1 z1vvj5rfb1.blog.fc2.com
 127.0.0.1 z29d.com  #www3.~, ...
-127.0.0.1 z2k.cc  #R18
 127.0.0.1 z2myu5f6qvm.pixnet.net
 127.0.0.1 z2trv1chzq.pixnet.net
 127.0.0.1 z2w48oo.pixnet.net
@@ -9209,7 +8458,6 @@
 127.0.0.1 zgxue.com
 127.0.0.1 zhachuo.com
 127.0.0.1 zhangshengrong.com
-127.0.0.1 zhaowangke.cn  #R18
 127.0.0.1 zhdate.com
 127.0.0.1 zhenbo.org  #copy from zhidao.baidu.com
 127.0.0.1 zhentoo.com
@@ -9229,26 +8477,21 @@
 127.0.0.1 zhizhiguan.com
 127.0.0.1 zhizhuccc.cn
 127.0.0.1 zhji599ooj.blog.fc2.com
-127.0.0.1 zhodtb.xyz  #R18
 127.0.0.1 zhonghongmy.com
 127.0.0.1 zhonguojujiao.wordpress.com
 127.0.0.1 zhongzhizhuanja.com
 127.0.0.1 zhoucuimei.cc
 127.0.0.1 zhr7143.com
 127.0.0.1 zhsunflower.com  #歡享網
-127.0.0.1 zhsys.top  #R18
 127.0.0.1 zhu.lu
 127.0.0.1 zhuangxiujiajuba.com
 127.0.0.1 zhufu-yu.com
-127.0.0.1 zhulang.club  #R18
 127.0.0.1 zhulinlin.net
 127.0.0.1 zhwj528.pixnet.net
-127.0.0.1 zhyjly.club  #R18
 127.0.0.1 zi73071938.blog.fc2.com
 127.0.0.1 zibosky.com
 127.0.0.1 zicqb981en.pixnet.net
 127.0.0.1 ziweigame.com
-127.0.0.1 zixinxl.fit  #R18
 127.0.0.1 zixundingzhi.com
 127.0.0.1 zizhukekong.org
 127.0.0.1 zizhuzhishi.com
@@ -9260,7 +8503,6 @@
 127.0.0.1 zlbiuk792.pixnet.net
 127.0.0.1 zld57fx51h.blog.fc2.com
 127.0.0.1 zlh75pd33h.pixnet.net
-127.0.0.1 zliangzdlpknet.co  #R18
 127.0.0.1 zlv39bt55f.blog.fc2.com
 127.0.0.1 zm2100h.pixnet.net
 127.0.0.1 zm55134031.pixnet.net
@@ -9269,7 +8511,6 @@
 127.0.0.1 zmsmwsm.cn
 127.0.0.1 zn08256143.pixnet.net
 127.0.0.1 zn101q5.pixnet.net
-127.0.0.1 zncaijing.club  #R18
 127.0.0.1 znh53hj59z.pixnet.net
 127.0.0.1 znj.com
 127.0.0.1 znljiayou.com
@@ -9285,11 +8526,9 @@
 127.0.0.1 zoukankan.com
 127.0.0.1 zp51jp9x.blog.fc2.com
 127.0.0.1 zpuojr957.pixnet.net
-127.0.0.1 zqefpj.xyz  #R18
 127.0.0.1 zqqaa0359g.wordpress.com
 127.0.0.1 zr120.com
 127.0.0.1 zr8720dw72.blog.fc2.com
-127.0.0.1 zs5599.co  #R18
 127.0.0.1 zsi2316ers.blog.fc2.com
 127.0.0.1 zsrlkb28a.pixnet.net
 127.0.0.1 zswy13125788ya.wordpress.com
@@ -9300,7 +8539,6 @@
 127.0.0.1 ztxjh13517.pixnet.net
 127.0.0.1 ztzqc.com
 127.0.0.1 zuichufa.com
-127.0.0.1 zuncwcom.in  #R18
 127.0.0.1 zungxvehuan.pixnet.net
 127.0.0.1 zuopy.com
 127.0.0.1 zuowen8.com
@@ -9327,7 +8565,6 @@
 127.0.0.1 zxhrh.blogspot.com
 127.0.0.1 zxmftjnuy.pixnet.net
 127.0.0.1 zxrxv37719.pixnet.net
-127.0.0.1 zy1177.co  #R18
 127.0.0.1 zybbangw.com
 127.0.0.1 zyd3879psx.pixnet.net
 127.0.0.1 zz41617214.pixnet.net
@@ -9338,10 +8575,6 @@
 127.0.0.1 zzmi.top
 127.0.0.1 zzrowieir444.com
 127.0.0.1 zztongyun.com
-127.0.0.1 zztt11.com  #R18
-127.0.0.1 zztt26.com  #R18
-127.0.0.1 zzun66.co  #R18
-127.0.0.1 zzun88.co  #R18
 #!aggreg-cxyzjd: https://raw.githubusercontent.com/wdmpa/content-farm-list/main/domains/spam/cxyzjd.txt (https://github.com/wdmpa/content-farm-list)
 127.0.0.1 cxybb.com  #!aggreg-cxyzjd
 127.0.0.1 cxydev.cc  #!aggreg-cxyzjd
