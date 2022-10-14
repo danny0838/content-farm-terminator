@@ -198,13 +198,13 @@
   },
 
   "infoUrlBlocker": {
-    "message": "Blocking rule:",
-    "description": "Label of the rule for the recently blocked URL in options page"
+    "message": "Matched rule:",
+    "description": "Label of the rule for the recently visited/blocked URL in options page"
   },
 
   "infoUrlBlockerSrc": {
-    "message": "Blocking rule source:",
-    "description": "Label of the rule source for the recently blocked URL in options page"
+    "message": "Rule source:",
+    "description": "Label of the rule source for the recently visited/blocked URL in options page"
   },
 
   "webBlacklists": {

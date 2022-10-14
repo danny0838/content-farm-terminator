@@ -110,30 +110,36 @@ async function showInfo() {
   if (isBlock) {
     document.querySelector('#infoUrl dt').textContent = utils.lang('infoUrlBlocked');
     document.querySelector('#infoUrlRegex dt').textContent = utils.lang('infoUrlBlockedRegex');
+  }
 
-    const blocker = await browser.runtime.sendMessage({
-      cmd: 'getBlocker',
-      args: {url},
-    });
+  const blocker = await browser.runtime.sendMessage({
+    cmd: 'getBlocker',
+    args: {url, details: true},
+  });
 
-    const rule = blocker.rule;
-    if (!rule) {
-      // this shouldn't happen
-      return;
-    }
+  const rule = blocker.rule;
+  if (!rule) {
+    return;
+  }
 
-    document.querySelector('#infoUrlBlocker').hidden = false;
-    document.querySelector('#infoUrlBlockerSrc').hidden = false;
-    document.querySelector('#infoUrlBlocker dd').textContent = [rule.rule, rule.sep, rule.comment].join('');
+  document.querySelector('#infoUrlBlocker').hidden = false;
+  document.querySelector('#infoUrlBlockerSrc').hidden = false;
+  document.querySelector('#infoUrlBlocker dd').textContent = [rule.rule, rule.sep, rule.comment].join('');
+  document.querySelector('#infoUrlBlockerSrc dd').textContent = 
+    rule.action === 0 << 4 /* RULE_ACTION_BLOCK */ ? utils.lang('userBlacklist') :
+    rule.action === 1 << 4 /* RULE_ACTION_UNBLOCK */ ? utils.lang('userWhitelist') :
+    rule.action === 2 << 4 /* RULE_ACTION_NOOP */ ? utils.lang('userGraylist') :
+    '' /* this shouldn't happen */;
 
-    if (rule.src) {
-      const u = new URL(browser.runtime.getURL('blacklists.html'));
-      u.searchParams.set('url', rule.src);
+  if (rule.src) {
+    const u = new URL(browser.runtime.getURL('blacklists.html'));
+    u.searchParams.set('url', rule.src);
 
-      const anchor = document.querySelector('#infoUrlBlockerSrc dd').appendChild(document.createElement('a'));
-      anchor.textContent = rule.src;
-      anchor.href = u.href;
-    }
+    const wrapper = document.querySelector('#infoUrlBlockerSrc dd');
+    wrapper.textContent = '';
+    const anchor = wrapper.appendChild(document.createElement('a'));
+    anchor.textContent = rule.src;
+    anchor.href = u.href;
   }
 }
 

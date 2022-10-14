@@ -960,7 +960,7 @@
         }
       };
 
-      const checkUrlOrHostname = (urlOrHostname) => {
+      const checkUrlOrHostname = (urlOrHostname, details) => {
         const result = {
           rule: null,
           type: BLOCK_TYPE_NONE,
@@ -979,30 +979,47 @@
 
         const url = utils.getNormalizedUrl(urlObj);
 
-        // check blacklist and then whitelist according to the likelihood of match
-        match(url, hostname, RULE_ACTION_BLOCK, result);
-        if (result.rule) {
+        if (!details) {
+          // check blacklist and then whitelist according to the likelihood of match
+          match(url, hostname, RULE_ACTION_BLOCK, result);
+          if (result.rule) {
+            match(url, hostname, RULE_ACTION_UNBLOCK, result);
+          }
+        } else {
+          // whitelist
           match(url, hostname, RULE_ACTION_UNBLOCK, result);
-        }
+          if (result.rule) { return result; }
 
+          // blacklist
+          // a blacklist rule masked by graylist won't match here
+          match(url, hostname, RULE_ACTION_BLOCK, result);
+          if (result.rule) { return result; }
+
+          // graylist
+          match(url, hostname, RULE_ACTION_NOOP, result);
+        }
         return result;
       };
 
-      const fn = this.getBlocker = ({url: urlOrHostname, urlRedirected}) => {
+      const fn = this.getBlocker = ({url: urlOrHostname, urlRedirected, details = false}) => {
         const blocker = {
           rule: null,
           type: BLOCK_TYPE_NONE,
         };
 
         if (urlOrHostname) {
-          let check = checkUrlOrHostname(urlOrHostname);
+          let check = checkUrlOrHostname(urlOrHostname, details);
 
           // check redirected URL if source URL is not blocked
           if (!(check.rule && check.rule.action === RULE_ACTION_BLOCK) && urlRedirected) {
-            check = checkUrlOrHostname(urlRedirected);
+            check = checkUrlOrHostname(urlRedirected, details);
           }
 
-          if (check.rule && check.rule.action === RULE_ACTION_BLOCK) {
+          if (!details) {
+            if (check.rule && check.rule.action === RULE_ACTION_BLOCK) {
+              Object.assign(blocker, check);
+            }
+          } else {
             Object.assign(blocker, check);
           }
         }

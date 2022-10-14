@@ -198,13 +198,13 @@
   },
 
   "infoUrlBlocker": {
-    "message": "封锁规则:",
-    "description": "Label of the rule for the recently blocked URL in options page"
+    "message": "匹配规则:",
+    "description": "Label of the rule for the recently visited/blocked URL in options page"
   },
 
   "infoUrlBlockerSrc": {
-    "message": "封锁规则来源:",
-    "description": "Label of the rule source for the recently blocked URL in options page"
+    "message": "规则来源:",
+    "description": "Label of the rule source for the recently visited/blocked URL in options page"
   },
 
   "webBlacklists": {
