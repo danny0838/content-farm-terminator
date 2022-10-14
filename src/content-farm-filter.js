@@ -932,27 +932,27 @@
           if (rule = matchIPv6(hostname, action)) {
             result.rule = rule;
             result.type = BLOCK_TYPE_HOSTNAME;
+            return;
           }
-          return;
-        }
-        if (RE_IPV4.test(hostname)) {
+        } else if (RE_IPV4.test(hostname)) {
           if (rule = matchIPv4(hostname, action)) {
             result.rule = rule;
             result.type = BLOCK_TYPE_HOSTNAME;
+            return;
           }
-          return;
+        } else {
+          if (rule = matchDomain(hostname, action)) {
+            result.rule = rule;
+            result.type = BLOCK_TYPE_HOSTNAME;
+            return;
+          }
+          if (rule = matchPattern(hostname, action)) {
+            result.rule = rule;
+            result.type = BLOCK_TYPE_HOSTNAME;
+            return;
+          }
         }
 
-        if (rule = matchDomain(hostname, action)) {
-          result.rule = rule;
-          result.type = BLOCK_TYPE_HOSTNAME;
-          return;
-        }
-        if (rule = matchPattern(hostname, action)) {
-          result.rule = rule;
-          result.type = BLOCK_TYPE_HOSTNAME;
-          return;
-        }
         if (rule = matchRegex(url, action)) {
           result.rule = rule;
           result.type = BLOCK_TYPE_URL;
