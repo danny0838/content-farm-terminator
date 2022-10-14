@@ -60,8 +60,8 @@
   },
 
   "blockSites": {
-    "message": "Add following rules to blacklist?\n\n$rules$",
-    "description": "Confirm message of blocking multiple links",
+    "message": "Adding following rules to blacklist:\n\n$rules$\n\nPlease enter a comment to append:",
+    "description": "Prompt message of blocking multiple links",
     "placeholders": {
       "rules": {
         "content": "$1",

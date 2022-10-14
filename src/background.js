@@ -281,15 +281,20 @@ async function blockSelectedLinks(tabId, frameId, quickMode) {
   rules = Array.from(new Set(rules));
 
   if (!quickMode) {
-    const confirmed = await browser.tabs.sendMessage(tabId, {
+    const comment = await browser.tabs.sendMessage(tabId, {
       cmd: 'blockSites',
       args: {rules},
     }, {frameId});
-    rules = confirmed ? rules : undefined;
-  }
 
-  // canceled
-  if (!rules) { return; }
+    // canceled
+    if (comment === null) {
+      return;
+    }
+
+    if (comment) {
+      rules = rules.map(rule => `${rule} ${comment}`);
+    }
+  }
 
   updateOptions: {
     const options = await utils.getOptions({

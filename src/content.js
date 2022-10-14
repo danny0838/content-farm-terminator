@@ -484,8 +484,8 @@ function initMessageListener() {
         return Promise.resolve(rule);
       }
       case 'blockSites': {
-        const confirmed = confirm(utils.lang("blockSites", args.rules.join('\n')));
-        return Promise.resolve(confirmed);
+        const comment = prompt(utils.lang("blockSites", args.rules.join('\n')));
+        return Promise.resolve(comment);
       }
       case 'blockSelectedLinks': {
         const rv = [];
