@@ -300,7 +300,7 @@
       });
     },
 
-    getBlockedPageUrl(url, {blockType = 1, inFrame = false, referrer = null} = {}) {
+    getBlockedPageUrl(url, {blockType = 1 /* BLOCK_TYPE_HOSTNAME */, inFrame = false, referrer = null} = {}) {
       url = utils.getNormalizedUrl(new URL(url));
       referrer = referrer ? utils.getNormalizedUrl(new URL(referrer)) : null;
 

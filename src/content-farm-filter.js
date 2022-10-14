@@ -630,6 +630,14 @@
       this._buckets = new Map();
       this._transformRules = new Map();
       this.urlTokenizer = new UrlTokenizer();
+
+      this.RULE_ACTION_BLOCK = RULE_ACTION_BLOCK;
+      this.RULE_ACTION_UNBLOCK = RULE_ACTION_UNBLOCK;
+      this.RULE_ACTION_NOOP = RULE_ACTION_NOOP;
+
+      this.BLOCK_TYPE_NONE = BLOCK_TYPE_NONE;
+      this.BLOCK_TYPE_HOSTNAME = BLOCK_TYPE_HOSTNAME;
+      this.BLOCK_TYPE_URL = BLOCK_TYPE_URL;
     }
 
     async init(options, optChanges) {
@@ -840,10 +848,8 @@
 
     /**
      * @typedef {Object} Blocker
-     * @property {Source} source
      * @property {?Rule} rule
-     * @property {number} type - type of the block
-     *      0: not blocked; 1: blocked by standard rule; 2: blocked by regex rule
+     * @property {number} type - type of the block, see BLOCK_TYPE_*
      */
 
     /**
@@ -920,25 +926,38 @@
         return null;
       };
 
-      const match = ({url, hostname, action}) => {
+      const match = (url, hostname, action, result) => {
+        let rule;
         if (hostname.startsWith('[') && hostname.endsWith(']')) {
-          return matchIPv6(hostname, action);
+          if (rule = matchIPv6(hostname, action)) {
+            result.rule = rule;
+            result.type = BLOCK_TYPE_HOSTNAME;
+          }
+          return;
         }
         if (RE_IPV4.test(hostname)) {
-          return matchIPv4(hostname, action);
+          if (rule = matchIPv4(hostname, action)) {
+            result.rule = rule;
+            result.type = BLOCK_TYPE_HOSTNAME;
+          }
+          return;
         }
 
-        let rule;
         if (rule = matchDomain(hostname, action)) {
-          return rule;
+          result.rule = rule;
+          result.type = BLOCK_TYPE_HOSTNAME;
+          return;
         }
         if (rule = matchPattern(hostname, action)) {
-          return rule;
+          result.rule = rule;
+          result.type = BLOCK_TYPE_HOSTNAME;
+          return;
         }
         if (rule = matchRegex(url, action)) {
-          return rule;
+          result.rule = rule;
+          result.type = BLOCK_TYPE_URL;
+          return;
         }
-        return null;
       };
 
       const checkUrlOrHostname = (urlOrHostname) => {
@@ -961,39 +980,31 @@
         const url = utils.getNormalizedUrl(urlObj);
 
         // check blacklist and then whitelist according to the likelihood of match
-        let rule = match({url, hostname, action: RULE_ACTION_BLOCK});
-        if (rule) {
-          const ruleW = match({url, hostname, action: RULE_ACTION_UNBLOCK});
-          if (ruleW) {
-            result.rule = ruleW;
-            return result;
-          }
-
-          result.rule = rule;
-          result.type = rule.type === RULE_TYPE_REGEX ? BLOCK_TYPE_URL : BLOCK_TYPE_HOSTNAME;
-          return result;
+        match(url, hostname, RULE_ACTION_BLOCK, result);
+        if (result.rule) {
+          match(url, hostname, RULE_ACTION_UNBLOCK, result);
         }
 
         return result;
       };
 
-      const fn = this.getBlocker = (source) => {
+      const fn = this.getBlocker = ({url: urlOrHostname, urlRedirected}) => {
         const blocker = {
-          source,
           rule: null,
           type: BLOCK_TYPE_NONE,
         };
 
-        const {url: urlOrHostname, urlRedirected} = source;
         if (urlOrHostname) {
           let check = checkUrlOrHostname(urlOrHostname);
 
           // check redirected URL if source URL is not blocked
-          if (!check.type && urlRedirected) {
+          if (!(check.rule && check.rule.action === RULE_ACTION_BLOCK) && urlRedirected) {
             check = checkUrlOrHostname(urlRedirected);
           }
 
-          Object.assign(blocker, check);
+          if (check.rule && check.rule.action === RULE_ACTION_BLOCK) {
+            Object.assign(blocker, check);
+          }
         }
         return blocker;
       };

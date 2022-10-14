@@ -346,7 +346,7 @@ async function updateLinkMarker(elem) {
     });
   }).then((blockType) => {
     let marker = anchorMarkerMap.get(elem);
-    if (blockType > 0) {
+    if (blockType > 0 /* BLOCK_TYPE_NONE */) {
       if (!marker) {
         marker = elem.ownerDocument.createElement('img');
         marker.src = browser.runtime.getURL('img/content-farm-marker.svg');

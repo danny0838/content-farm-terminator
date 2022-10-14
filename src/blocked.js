@@ -9,10 +9,12 @@ async function recheckBlock() {
     args: {},
   });
 
-  const blockType = isTempUnblocked ? 0 : await browser.runtime.sendMessage({
-    cmd: 'getBlockType',
-    args: {url: sourceUrl},
-  });
+  const blockType = isTempUnblocked ?
+    0 /* BLOCK_TYPE_NONE */ :
+    await browser.runtime.sendMessage({
+      cmd: 'getBlockType',
+      args: {url: sourceUrl},
+    });
 
   updateBlockingUi(blockType);
   if (!blockType) {
@@ -131,7 +133,7 @@ function updateBlockingUi(blockType) {
 
   document.body.setAttribute('data-block-type', blockType);
   switch (blockType) {
-    case 2:
+    case 2 /* BLOCK_TYPE_URL */:
       urlElem.textContent = utils.getNormalizedUrl(sourceUrlObj);
       urlElem.classList.add('regex');
       break;
@@ -143,7 +145,7 @@ function updateBlockingUi(blockType) {
   const detailsUrl = new URL(browser.runtime.getURL('options.html'));
   detailsUrl.searchParams.set('url', sourceUrl);
   if (referrerUrl) { detailsUrl.searchParams.set('ref', referrerUrl); }
-  detailsUrl.searchParams.set('type', blockType);
+  detailsUrl.searchParams.set('block', 1);
   document.querySelector('#detailsLink').href = detailsUrl.href;
 }
 

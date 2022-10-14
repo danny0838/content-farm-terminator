@@ -78,7 +78,7 @@ async function showInfo() {
   const tabId = parseInt(searchParams.get('t'), 10);
   let url = searchParams.get('url');
   let referrer = searchParams.get('ref');
-  const blockType = parseInt(searchParams.get('type'), 10);
+  const isBlock = !!searchParams.get('block');
 
   if (Number.isInteger(tabId)) {
     const tab = await browser.runtime.sendMessage({
@@ -107,7 +107,7 @@ async function showInfo() {
     document.querySelector('#infoUrlReferrerRegex').hidden = false;
   }
 
-  if (blockType > 0) {
+  if (isBlock) {
     document.querySelector('#infoUrl dt').textContent = utils.lang('infoUrlBlocked');
     document.querySelector('#infoUrlRegex dt').textContent = utils.lang('infoUrlBlockedRegex');
 

@@ -329,9 +329,12 @@ function onBeforeRequestBlocker(details) {
   // Chromium uses .initiator, Firefox uses .originUrl
   const referrer = details.initiator || details.originUrl;
 
-  const blockType = filter.getBlocker({url}).type;
-  if (!blockType) { return; }
+  const blocker = filter.getBlocker({url});
+  if (!(blocker.rule && blocker.rule.action === filter.RULE_ACTION_BLOCK)) {
+    return;
+  }
 
+  const blockType = blocker.type;
   if (details.type === "main_frame") {
     const redirectUrl = utils.getBlockedPageUrl(url, {blockType, inFrame: false, referrer});
 
