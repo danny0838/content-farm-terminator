@@ -44,6 +44,19 @@ auto_tasks:
         files:
           - src/blocklist/not-content-farms.txt
           - src/blocklist/bad-cloners.txt
+
+    # probe for entries listed in the dead list
+    - action: uniquify
+      kwargs:
+        files:
+          - src/blocklist/content-farms.txt
+          - src/blocklist/content-farms-inactive.txt
+        auto_fix_excludes:
+          - src/blocklist/content-farms.txt
+        check_subdomains: true
+        cross_files: true
+        auto_fix: true
+
     - action: build
 
   # lint all general blacklists
@@ -117,11 +130,11 @@ aggregate:
     source: https://raw.githubusercontent.com/mxt305/smashXxcnxx/main/filters/xxcnxx-list.json
     dest: src/aggregations/content-farms/xxcnxx-list.txt
     type: domains_json
-  - name: penzai
-    homepage: https://github.com/wdmpa/content-farm-list
-    source: https://raw.githubusercontent.com/wdmpa/content-farm-list/main/domains/spam/g.penzai.com.txt
-    dest: src/aggregations/content-farms/g.penzai.com.txt
-    type: ublacklist
+  # - name: penzai
+    # homepage: https://github.com/wdmpa/content-farm-list
+    # source: https://raw.githubusercontent.com/wdmpa/content-farm-list/main/domains/spam/g.penzai.com.txt
+    # dest: src/aggregations/content-farms/g.penzai.com.txt
+    # type: ublacklist
   - name: cxyzjd
     homepage: https://github.com/wdmpa/content-farm-list
     source: https://raw.githubusercontent.com/wdmpa/content-farm-list/main/domains/spam/cxyzjd.txt
