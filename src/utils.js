@@ -232,7 +232,14 @@
       return fn(...args);
     },
 
-    getNormalizedUrl(urlObj) {
+    getNormalizedUrl(url) {
+      let urlObj;
+      try {
+        urlObj = (url instanceof URL) ? url : new URL(url);
+      } catch (ex) {
+        return null;
+      }
+
       const u = urlObj.username;
       const p = urlObj.password;
       const t = urlObj.port;
@@ -301,8 +308,8 @@
     },
 
     getBlockedPageUrl(url, {blockType = 1 /* BLOCK_TYPE_HOSTNAME */, inFrame = false, referrer = null} = {}) {
-      url = utils.getNormalizedUrl(new URL(url));
-      referrer = referrer ? utils.getNormalizedUrl(new URL(referrer)) : null;
+      url = utils.getNormalizedUrl(url);
+      referrer = utils.getNormalizedUrl(referrer);
 
       const redirectUrlObj = new URL(browser.runtime.getURL('blocked.html'));
       redirectUrlObj.searchParams.set('url', url);
