@@ -18,13 +18,13 @@ set "dist=%dir%\..\dist"
 :: Chrome extension package (for submit)
 set "fn=%filename%.zip"
 del "%dist%\%fn%"
-"%compressor%" a -tzip -mx9 "%dist%\%fn%" "%src%\"*.* -r -x!.git*
+"%compressor%" a -tzip -mx9 "%dist%\%fn%" "%src%\"*.* -r -x!.git* -x!aggregations
 "%compressor%" d "%dist%\%fn%" manifest-firefox.json
 
 :: Firefox addon
 set "fn=%filename%.xpi"
 del "%dist%\%fn%"
-"%compressor%" a -tzip -mx9 "%dist%\%fn%" "%src%\"*.* -r -x!.git*
+"%compressor%" a -tzip -mx9 "%dist%\%fn%" "%src%\"*.* -r -x!.git* -x!aggregations
 "%compressor%" d "%dist%\%fn%" manifest.json
 "%compressor%" rn "%dist%\%fn%" manifest-firefox.json manifest.json
 
