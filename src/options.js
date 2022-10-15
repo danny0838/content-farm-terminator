@@ -90,8 +90,9 @@ async function showInfo() {
   }
 
   if (!url) { return; }
+  if (!(url.startsWith('https:') || url.startsWith('http:'))) { return; }
 
-  if (url.startsWith('https:') || url.startsWith('http:')) {
+  {
     const urlRegex = `/^${utils.escapeRegExp(url, true)}$/`;
     document.querySelector('#infoUrl dd').textContent = url;
     document.querySelector('#infoUrlRegex dd').textContent = urlRegex;
