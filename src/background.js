@@ -1,6 +1,9 @@
+const REQUEST_RECORDS_LIMIT = 20;
+
 let filter = new ContentFarmFilter();
 let updateFilterPromise;
 let autoUpdateAssetsTimer;
+let requestRecorder = new Map();
 let tempUnblockTabs = new Set();
 
 const contextMenuController = {
@@ -318,16 +321,61 @@ async function blockSelectedLinks(tabId, frameId, quickMode) {
   }, {frameId});
 }
 
+function onRequestRecorder(details) {
+  // record the main frame only
+  if (details.frameId > 0) { return; }
+
+  const tabId = details.tabId;
+  if (tabId < 0) { return; }
+
+  let tabRecorder = requestRecorder.get(tabId);
+  if (!tabRecorder) {
+    tabRecorder = new Map();
+    requestRecorder.set(tabId, tabRecorder);
+  }
+
+  // truncate first N records if it grows too much
+  while (tabRecorder.size >= REQUEST_RECORDS_LIMIT) {
+    tabRecorder.delete(tabRecorder.keys().next().value);
+  }
+
+  const requestId = details.requestId; // as string
+  let requestRecord = tabRecorder.get(requestId);
+  if (!requestRecord) {
+    requestRecord = {};
+    tabRecorder.set(requestId, requestRecord);
+  }
+
+  requestRecord.initialUrl = requestRecord.initialUrl || details.url;
+  requestRecord.url = details.url;
+  requestRecord.timestamp = requestRecord.timestamp || details.timeStamp;
+
+  // Chromium uses .initiator, Firefox uses .originUrl
+  const referrer = details.initiator || details.originUrl;
+  requestRecord.referrer = requestRecord.referrer || referrer;
+
+  const redirectUrl = details.redirectUrl;
+  if (redirectUrl) {
+    let redirects = requestRecord.redirects;
+    if (!redirects) {
+      redirects = requestRecord.redirects = [];
+    }
+    if (details.redirectUrl.startsWith('http:') || details.redirectUrl.startsWith('https:')) {
+      redirects.push([details.url, details.redirectUrl]);
+    }
+  }
+}
+
 function onBeforeRequestBlocker(details) {
+  const tabId = details.tabId;
+  const requestId = details.requestId;
+
   // check if this tab is temporarily unblocked
-  if (tempUnblockTabs.has(details.tabId)) {
+  if (tempUnblockTabs.has(tabId)) {
     return;
   }
 
   const url = details.url;
-
-  // Chromium uses .initiator, Firefox uses .originUrl
-  const referrer = details.initiator || details.originUrl;
 
   const blocker = filter.getBlocker({url});
   if (!(blocker.rule && blocker.rule.action === filter.RULE_ACTION_BLOCK)) {
@@ -336,23 +384,23 @@ function onBeforeRequestBlocker(details) {
 
   const blockType = blocker.type;
   if (details.type === "main_frame") {
-    const redirectUrl = utils.getBlockedPageUrl(url, {blockType, inFrame: false, referrer});
+    const redirectUrl = utils.getBlockedPageUrl(url, {blockType, inFrame: false, tabId, requestId});
 
     // Firefox < 56 does not allow redirecting to an extension page
     // even if it is listed in web_accessible_resources.
     // Using data URI with meta or script refresh works but generates
     // an extra history entry.
     if (utils.userAgent.soup.has('firefox') && utils.userAgent.major < 56) {
-      browser.tabs.update(details.tabId, {url: redirectUrl}); // async
+      browser.tabs.update(tabId, {url: redirectUrl}); // async
       return {cancel: true};
     }
 
-    return {redirectUrl: redirectUrl};
+    return {redirectUrl};
   } else {
-    const redirectUrl = utils.getBlockedPageUrl(url, {blockType, inFrame: true, referrer});
-    return {redirectUrl: redirectUrl};
+    const redirectUrl = utils.getBlockedPageUrl(url, {blockType, inFrame: true, tabId, requestId});
+    return {redirectUrl};
   }
-};
+}
 
 /**
  * Return a Promise to defer web requests until updateFilter is done so that
@@ -365,12 +413,21 @@ function onBeforeRequestBlocker(details) {
 async function onBeforeRequestCallback(details) {
   await updateFilterPromise;
   return onBeforeRequestBlocker(details);
-};
+}
 
-function initBeforeRequestListener() {
+function onTabRemovedCallback(tabId, removeInfo) {
+  requestRecorder.delete(tabId);
+}
+
+function initRequestListener() {
   browser.webRequest.onBeforeRequest.addListener((details) => {
+    onRequestRecorder(details);
     return onBeforeRequestCallback(details);
   }, {urls: ["*://*/*"], types: ["main_frame", "sub_frame"]}, ["blocking"]);
+  browser.webRequest.onBeforeRedirect.addListener(
+    onRequestRecorder,
+    {urls: ["*://*/*"], types: ["main_frame", "sub_frame"]});
+  browser.tabs.onRemoved.addListener(onTabRemovedCallback);
 }
 
 function initMessageListener() {
@@ -454,22 +511,36 @@ function initMessageListener() {
           return true;
         })();
       }
-      case 'getTabInfo': {
+      case 'getRequestSummary': {
         return (async () => {
-          const tab = await browser.tabs.get(args.tabId);
+          // {tabId, requestId} for options.html redirected from blocked.html
+          // {tabId} for options.html opened from a tab
+          const {tabId, requestId} = args;
+          const rv = {};
 
-          let referrer;
-          try {
-            referrer = await browser.tabs.sendMessage(tab.id, {
-              cmd: 'getReferrer',
-            });
-          } catch (ex) {}
+          const record = requestRecorder.get(tabId);
+          if (!record) { return rv; }
 
-          return {
-            title: tab.title,
-            url: tab.url,
-            referrer,
-          };
+          let requestRecord;
+          if (requestId) {
+            requestRecord = record.get(requestId);
+          } else {
+            // take the last matched record
+            for (const value of record.values()) {
+              requestRecord = value;
+            }
+          }
+          if (!requestRecord) { return rv; }
+
+          Object.assign(rv, requestRecord);
+          return rv;
+        })();
+      }
+      case 'getRequestRecords': {
+        return (async () => {
+          const {tabId} = args;
+          const records = requestRecorder.get(tabId);
+          return records ? [...records.entries()] : [];
         })();
       }
       case 'closeTab': {
@@ -617,12 +688,13 @@ function initBrowserAction() {
   browser.browserAction.onClicked.addListener((tab) => {
     const u = new URL(browser.runtime.getURL("options.html"));
     u.searchParams.set('t', tab.id);
+    u.searchParams.set('url', tab.url);
     browser.tabs.create({url: u.href, active: true});
   });
 }
 
 function init() {
-  initBeforeRequestListener();
+  initRequestListener();
   initMessageListener();
   initStorageChangeListener();
   initInstallListener();

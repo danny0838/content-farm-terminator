@@ -1,6 +1,7 @@
 const urlObj = new URL(location.href);
 const sourceUrl = urlObj.searchParams.get('url');
-const referrerUrl = urlObj.searchParams.get('ref');
+const tabId = urlObj.searchParams.get('t');
+const requestId = urlObj.searchParams.get('r');
 const blockType = parseInt(urlObj.searchParams.get('type'), 10);
 
 async function recheckBlock() {
@@ -144,7 +145,8 @@ function updateBlockingUi(blockType) {
 
   const detailsUrl = new URL(browser.runtime.getURL('options.html'));
   detailsUrl.searchParams.set('url', sourceUrl);
-  if (referrerUrl) { detailsUrl.searchParams.set('ref', referrerUrl); }
+  if (tabId) { detailsUrl.searchParams.set('t', tabId); }
+  if (requestId) { detailsUrl.searchParams.set('r', requestId); }
   detailsUrl.searchParams.set('block', 1);
   document.querySelector('#detailsLink').href = detailsUrl.href;
 }

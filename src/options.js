@@ -76,21 +76,28 @@ async function showInfo() {
   const searchParams = new URL(location.href).searchParams;
 
   const tabId = parseInt(searchParams.get('t'), 10);
+  const requestId = searchParams.get('r');
   let url = searchParams.get('url');
-  let referrer = searchParams.get('ref');
+  let redirect;
   const isBlock = !!searchParams.get('block');
-
-  if (Number.isInteger(tabId)) {
-    const tab = await browser.runtime.sendMessage({
-      cmd: 'getTabInfo',
-      args: {tabId},
-    });
-    url = tab.url;
-    referrer = tab.referrer;
-  }
 
   if (!url) { return; }
   if (!(url.startsWith('https:') || url.startsWith('http:'))) { return; }
+
+  if (Number.isInteger(tabId)) {
+    const request = await browser.runtime.sendMessage({
+      cmd: 'getRequestSummary',
+      args: {tabId, requestId},
+    });
+
+    if (request.url !== url) {
+      redirect = request.url;
+    } else if (request.redirects && request.redirects.length) {
+      redirect = request.redirects[request.redirects.length - 1][0];
+    } else if (request.referrer) {
+      redirect = request.referrer;
+    }
+  }
 
   {
     const urlRegex = `/^${utils.escapeRegExp(url, true)}$/`;
@@ -100,12 +107,17 @@ async function showInfo() {
     document.querySelector('#infoUrlRegex').hidden = false;
   }
 
-  if (referrer && (referrer.startsWith('https:') || referrer.startsWith('http:'))) {
-    const referrerRegex = `/^${utils.escapeRegExp(referrer, true)}$/`;
-    document.querySelector('#infoUrlReferrer dd').textContent = referrer;
-    document.querySelector('#infoUrlReferrerRegex dd').textContent = referrerRegex;
+  if (redirect) {
+    const u = new URL(browser.runtime.getURL('requests.html'));
+    if (tabId) { u.searchParams.set('t', tabId); }
+    if (url) { u.searchParams.set('url', url); }
+
+    const anchor = document.createElement('a');
+    anchor.href = u.href;
+    anchor.textContent = redirect;
+
+    document.querySelector('#infoUrlReferrer dd').appendChild(anchor);
     document.querySelector('#infoUrlReferrer').hidden = false;
-    document.querySelector('#infoUrlReferrerRegex').hidden = false;
   }
 
   if (isBlock) {

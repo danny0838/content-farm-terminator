@@ -375,5 +375,10 @@
   "blacklistsTitle": {
     "message": "Loaded blacklists",
     "description": "Title of allBlacklists page"
+  },
+
+  "requestsTitle": {
+    "message": "Records of recent web requests",
+    "description": "Title of requests page"
   }
 }

@@ -375,5 +375,10 @@
   "blacklistsTitle": {
     "message": "已载入的黑名单",
     "description": "Title of allBlacklists page"
+  },
+
+  "requestsTitle": {
+    "message": "最近网络请求记录",
+    "description": "Title of requests page"
   }
 }

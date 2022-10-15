@@ -307,13 +307,13 @@
       });
     },
 
-    getBlockedPageUrl(url, {blockType = 1 /* BLOCK_TYPE_HOSTNAME */, inFrame = false, referrer = null} = {}) {
+    getBlockedPageUrl(url, {blockType = 1 /* BLOCK_TYPE_HOSTNAME */, inFrame = false, tabId = null, requestId = null} = {}) {
       url = utils.getNormalizedUrl(url);
-      referrer = utils.getNormalizedUrl(referrer);
 
       const redirectUrlObj = new URL(browser.runtime.getURL('blocked.html'));
       redirectUrlObj.searchParams.set('url', url);
-      if (referrer) { redirectUrlObj.searchParams.set('ref', referrer); }
+      if (tabId) { redirectUrlObj.searchParams.set('t', tabId); }
+      if (requestId) { redirectUrlObj.searchParams.set('r', requestId); }
       redirectUrlObj.searchParams.set('type', blockType);
       const redirectUrl = redirectUrlObj.href;
 
