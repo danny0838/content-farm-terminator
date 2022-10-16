@@ -322,9 +322,6 @@ async function blockSelectedLinks(tabId, frameId, quickMode) {
 }
 
 function onRequestRecorder(details) {
-  // record the main frame only
-  if (details.frameId > 0) { return; }
-
   const tabId = details.tabId;
   if (tabId < 0) { return; }
 
@@ -420,14 +417,17 @@ function onTabRemovedCallback(tabId, removeInfo) {
 }
 
 function initRequestListener() {
-  browser.webRequest.onBeforeRequest.addListener((details) => {
-    onRequestRecorder(details);
-    return onBeforeRequestCallback(details);
-  }, {urls: ["*://*/*"], types: ["main_frame", "sub_frame"]}, ["blocking"]);
+  browser.webRequest.onBeforeRequest.addListener(
+    onRequestRecorder,
+    {urls: ["*://*/*"], types: ["main_frame"]});
   browser.webRequest.onBeforeRedirect.addListener(
     onRequestRecorder,
-    {urls: ["*://*/*"], types: ["main_frame", "sub_frame"]});
+    {urls: ["*://*/*"], types: ["main_frame"]});
   browser.tabs.onRemoved.addListener(onTabRemovedCallback);
+
+  browser.webRequest.onBeforeRequest.addListener((details) => {
+    return onBeforeRequestCallback(details);
+  }, {urls: ["*://*/*"], types: ["main_frame", "sub_frame"]}, ["blocking"]);
 }
 
 function initMessageListener() {
