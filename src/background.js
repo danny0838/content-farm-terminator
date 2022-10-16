@@ -432,7 +432,7 @@ function initRequestListener() {
 
 function initMessageListener() {
   browser.runtime.onMessage.addListener((message, sender) => {
-    // console.warn("omMessage", message);
+    // console.warn("omMessage", message, sender);
     const {cmd, args} = message;
     switch (cmd) {
       case 'getBlockType': {
@@ -449,7 +449,11 @@ function initMessageListener() {
       }
       case 'isTempUnblocked': {
         return (async () => {
-          return tempUnblockTabs.has(sender.tab.id);
+          const tabId = sender.tab.id;
+          return {
+            tabId,
+            tempUnblocked: tempUnblockTabs.has(tabId),
+          };
         })();
       }
       case 'tempUnblock': {
@@ -488,7 +492,10 @@ function initMessageListener() {
             tempUnblockLastAccess: options.tempUnblockLastAccess,
           });
 
-          return true;
+          return {
+            tabId,
+            tempUnblocked: true,
+          };
         })();
       }
       case 'updateOptions': {

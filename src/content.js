@@ -40,13 +40,13 @@ async function recheckCurrentUrl(urlChanged = false) {
     // skip further check if document URL doesn't change
     if (!urlChanged) { return urlChanged; }
 
-    const isTempUnblocked = await browser.runtime.sendMessage({
+    const {tabId, tempUnblocked} = await browser.runtime.sendMessage({
       cmd: 'isTempUnblocked',
       args: {},
     });
 
     // skip further check if this tab is temporarily unblocked
-    if (isTempUnblocked) { return urlChanged; }
+    if (tempUnblocked) { return urlChanged; }
 
     // redirect if the current document URL is blocked
     const blockType = await browser.runtime.sendMessage({

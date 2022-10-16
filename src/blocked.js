@@ -5,12 +5,12 @@ const requestId = urlObj.searchParams.get('r');
 const blockType = parseInt(urlObj.searchParams.get('type'), 10);
 
 async function recheckBlock() {
-  const isTempUnblocked = await browser.runtime.sendMessage({
+  const {tempUnblocked} = await browser.runtime.sendMessage({
     cmd: 'isTempUnblocked',
     args: {},
   });
 
-  const blockType = isTempUnblocked ?
+  const blockType = tempUnblocked ?
     0 /* BLOCK_TYPE_NONE */ :
     await browser.runtime.sendMessage({
       cmd: 'getBlockType',
@@ -88,12 +88,12 @@ async function onUnblockClick(event) {
     return;
   }
 
-  const isTempUnblocked = await browser.runtime.sendMessage({
+  const {tempUnblocked} = await browser.runtime.sendMessage({
     cmd: 'tempUnblock',
     args: {},
   });
 
-  if (isTempUnblocked) {
+  if (tempUnblocked) {
     location.replace(sourceUrl);
   }
 }
