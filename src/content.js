@@ -65,265 +65,282 @@ async function recheckCurrentUrl(urlChanged = false) {
   }
 }
 
-async function getRedirectedUrlOrHostname(elem) {
-  const me = getRedirectedUrlOrHostname;
-  if (!me.cached) {
-    me.cached = true;
+const getRedirectedUrlOrHostname = (() => {
+  // Short-lived registers, valid during evaluation.
+  // Requires extra care for async tasks.
+  let elem;
+  let u;
+  let h;
+  let p;
+  let s;
 
+  const handlers = {
+    match: {},
+    regexes: new Map(),
+  };
+
+  function addHandler(hostnames, handler) {
+    for (const hostname of (Array.isArray(hostnames) ? hostnames : [hostnames])) {
+      if (typeof hostname === 'string') {
+        handlers.match[hostname] = handler;
+      } else {
+        switch (hostname.type) {
+          case 'match': {
+            handlers.match[hostname] = handler;
+            break;
+          }
+          case 'regex': {
+            handlers.regexes.set(hostname.value, handler);
+            break;
+          }
+        }
+      }
+    }
+  }
+
+  async function getRedirectedUrlOrHostname(anchorElem) {
+    try {
+      elem = anchorElem;
+      u = new URL(elem.href);
+      h = u.hostname;
+      p = u.pathname;
+      s = u.searchParams;
+
+      // dispath handler according to hostname
+      {
+        const handler = handlers.match[h];
+        if (handler) { return handler(); }
+      }
+
+      for (const [regex, handler] of handlers.regexes) {
+        if (regex.test(h)) {
+          return handler();
+        }
+      }
+    } catch (ex) {
+      console.error(ex);
+    }
+  }
+
+  // Google
+  addHandler({
+    type: 'regex',
     // adopted from WOT: http://static-cdn.mywot.com/settings/extensions/serps.json
-    me.reGoogleTester = /^(www\.|encrypted\.)?(google)\.([a-z]{2,3})(\.[a-z]{2,3})?$/;
+    value: /^(www\.|encrypted\.)?(google)\.([a-z]{2,3})(\.[a-z]{2,3})?$/,
+  }, () => {
+    if (p === "/url" || p === "/interstitial") {
+      return s.get("url") || s.get("q");
+    }
+  });
 
-    me.reQwantAdsTester = /^\d+\.r\.bat\.bing\.com$/;
-  }
+  // Facebook / Facebook mobile
+  addHandler(["l.facebook.com", "lm.facebook.com"], () => {
+    if (p === "/l.php") {
+      return s.get("u");
+    }
+  });
 
-  try {
-    const u = new URL(elem.href);
-    const h = u.hostname;
-    const p = u.pathname;
-    const s = u.searchParams;
+  // Bing (used rarely, e.g. in Egerin)
+  addHandler("www.bing.com", () => {
+    if (p === "/cr") {
+      return s.get("r");
+    }
+  });
 
-    // Google
-    if (me.reGoogleTester.test(h)) {
-      if (p === "/url" || p === "/interstitial") {
-        return s.get("url") || s.get("q");
+  // Yahoo search (no javascript)
+  addHandler("r.search.yahoo.com", () => {
+    return decodeURIComponent(p.match(/\/RU=(.*?)\//)[1]);
+  });
+
+  // Sina search
+  addHandler({
+    type: 'regex',
+    value: /^find\.sina\.com\./,
+  }, () => {
+    if (p === "/sina_redirector.php") {
+      return s.get("url");
+    }
+  });
+
+  // Yandex search
+  addHandler("www.yandex.com", () => {
+    if (p === "/clck/jsredir") {
+      if (elem.matches('li.serp-item > div > h2 > a')) {
+        const refNode = elem.closest('li.serp-item').querySelector('div > h2+div a > b');
+        return refNode.textContent;
       }
     }
+  });
 
-    // Facebook / Facebook mobile
-    else if (docHostname.substring(docHostname.indexOf(".") + 1) === "facebook.com" ||
-        h === "l.facebook.com" || h === "lm.facebook.com") {
-      // domain name detected by Facebook for shared link
-      let domainName;
-      if (docHostname.substring(docHostname.indexOf(".") + 1) === "facebook.com") {
-        if (docHostname === "m.facebook.com") {
-          try {
-            domainName = elem.previousSibling.querySelector('header h4').textContent.trim().toLowerCase();
-          } catch (ex) {}
-        } else {
-          try {
-            domainName = elem.previousSibling.querySelector('div.ellipsis').textContent.trim();
-          } catch (ex) {}
-        }
-      }
-
-      // general reverse parse of Facebook redirect
-      let url;
-      if (h === "l.facebook.com" || h === "lm.facebook.com") {
-        if (p === "/l.php") {
-          url = s.get("u");
-        }
-      }
-
-      if (domainName && url) {
-        const d = utils.escapeRegExp(domainName);
-        if (new RegExp('^https?://(?:www\.)?' + d + '(?=[:/?#]|$)').test(url)) {
-          return url;
-        } else {
-          return domainName;
-        }
-      } else if (domainName) {
-        return domainName;
-      } else if (url) {
-        return url;
-      }
+  // WebCrawler mobile
+  addHandler("cs.webcrawler.com", () => {
+    if (p === "/ClickHandler.ashx") {
+      u.search = s.get("encp");
+      return s.get("ru");
     }
+  });
 
-    // Bing (used rarely, e.g. in Egerin)
-    else if (h === "www.bing.com") {
-      if (p === "/cr") {
-        return s.get("r");
-      }
+  // Dogpile
+  addHandler("ccs.dogpile.com", () => {
+    if (p === "/ClickHandler.ashx") {
+      u.search = s.get("encp");
+      return s.get("ru");
     }
+  });
 
-    // Yahoo search (no javascript)
-    else if (h === "r.search.yahoo.com") {
-      return decodeURIComponent(p.match(/\/RU=(.*?)\//)[1]);
+  // info.com / msxml.excite.com
+  addHandler("ccs.infospace.com", () => {
+    if (p === "/ClickHandler.ashx") {
+      u.search = s.get("encp");
+      return s.get("ru");
     }
+  });
 
-    // Sina search
-    else if (h.startsWith("find.sina.com.")) {
-      if (p === "/sina_redirector.php") {
-        return s.get("url");
-      }
+  // Search
+  addHandler("www.search.com", () => {
+    if (p === "/wr_clk") {
+      return s.get("surl");
     }
+  });
 
-    // Yandex search
-    else if (h === "www.yandex.com") {
-      if (p === "/clck/jsredir") {
-        if (elem.matches('li.serp-item > div > h2 > a')) {
-          const refNode = elem.closest('li.serp-item').querySelector('div > h2+div a > b');
-          return refNode.textContent;
-        }
-      }
+  // Lycos
+  addHandler("search.lycos.com", () => {
+    if (p === "/b.php") {
+      return u.protocol + "//" + s.get("as");
+    } else if (p === "/bnjs.php") {
+      return s.get("as");
     }
+  });
 
-    // WebCrawler mobile
-    else if (h === "cs.webcrawler.com") {
-      if (p === "/ClickHandler.ashx") {
-        u.search = s.get("encp");
-        return s.get("ru");
-      }
+  // Qwant
+  addHandler("lite.qwant.com", () => {
+    if (p.startsWith("/redirect/")) {
+      return decodeURIComponent(p.match(/\/redirect\/[^\/]+\/(.*)$/)[1]);
     }
+  });
 
-    // Dogpile
-    else if (h === "ccs.dogpile.com") {
-      if (p === "/ClickHandler.ashx") {
-        u.search = s.get("encp");
-        return s.get("ru");
-      }
-    }
-
-    // info.com / msxml.excite.com
-    else if (h === "ccs.infospace.com") {
-      if (p === "/ClickHandler.ashx") {
-        u.search = s.get("encp");
-        return s.get("ru");
-      }
-    }
-
-    // Search
-    else if (h === "www.search.com") {
-      if (p === "/wr_clk") {
-        return s.get("surl");
-      }
-    }
-
-    // Lycos
-    else if (h === "search.lycos.com") {
-      if (p === "/b.php") {
-        return u.protocol + "//" + s.get("as");
-      } else if (p === "/bnjs.php") {
-        return s.get("as");
-      }
-    }
-
-    // Qwant
-    else if (h === "lite.qwant.com") {
-      if (p.startsWith("/redirect/")) {
-        return decodeURIComponent(p.match(/\/redirect\/[^\/]+\/(.*)$/)[1]);
-      }
-    }
-
-    // Qwant Ads
-    else if (me.reQwantAdsTester.test(h)) {
-      if (p === "/") {
-        if (docHostname === "lite.qwant.com" && docPathname === "/") {
-          if (elem.matches('div.result a')) {
-            const refNode = elem.closest('div.result').querySelector('p.url').cloneNode(true);
-            refNode.querySelector('span').remove();
-            return u.protocol + "//" + refNode.textContent.trim();
-          }
+  // Qwant Ads
+  addHandler({
+    type: 'regex',
+    value: /^\d+\.r\.bat\.bing\.com$/,
+  }, () => {
+    if (p === "/") {
+      if (docHostname === "lite.qwant.com" && docPathname === "/") {
+        if (elem.matches('div.result a')) {
+          const refNode = elem.closest('div.result').querySelector('p.url').cloneNode(true);
+          refNode.querySelector('span').remove();
+          return u.protocol + "//" + refNode.textContent.trim();
         }
       }
     }
+  });
 
-    // 百度
-    else if (h === "www.baidu.com") {
-      if (p === "/link") {
-        if (docHostname === "www.baidu.com" && docPathname === "/s") {
-          if (elem.matches('div.result > h3 > a, div.result div.general_image_pic a, div.result a.c-showurl')) {
-            const refNode = elem.closest('div.result').querySelector('a.c-showurl');
-            return refNode.textContent.replace(/^\w+:\/+/, "").replace(/\/.*$/, "");
-          }
+  // 百度
+  addHandler("www.baidu.com", () => {
+    if (p === "/link") {
+      if (docHostname === "www.baidu.com" && docPathname === "/s") {
+        if (elem.matches('div.result > h3 > a, div.result div.general_image_pic a, div.result a.c-showurl')) {
+          const refNode = elem.closest('div.result').querySelector('a.c-showurl');
+          return refNode.textContent.replace(/^\w+:\/+/, "").replace(/\/.*$/, "");
         }
       }
     }
+  });
 
-    // 百度 mobile
-    else if (h === "m.baidu.com") {
-      if (p.startsWith("/from=0/")) {
-        if (docHostname === "m.baidu.com" && docPathname === "/s") {
-          if (elem.matches(':not(.koubei-a)')) {
-            const refNode = elem.closest('div.c-container').querySelector('div.c-showurl span.c-showurl');
-            return refNode.textContent.replace(/^\w+:\/+/, "").replace(/\/.*$/, "");
-          }
+  // 百度 mobile
+  addHandler("m.baidu.com", () => {
+    if (p.startsWith("/from=0/")) {
+      if (docHostname === "m.baidu.com" && docPathname === "/s") {
+        if (elem.matches(':not(.koubei-a)')) {
+          const refNode = elem.closest('div.c-container').querySelector('div.c-showurl span.c-showurl');
+          return refNode.textContent.replace(/^\w+:\/+/, "").replace(/\/.*$/, "");
         }
       }
     }
+  });
 
-    // 搜狗
-    else if (h === "www.sogou.com") {
-      if (p.startsWith("/link")) {
-        if (docHostname === "www.sogou.com") {
-          if (docPathname === "/web" || docPathname === "/sogou" ) {
-            const refNode = elem.closest('div.vrwrap, div.rb').querySelector('cite');
-            return refNode.textContent.replace(/^.*? - /, "").replace(/[\/ \xA0][\s\S]*$/, "");
-          }
+  // 搜狗
+  addHandler("www.sogou.com", () => {
+    if (p.startsWith("/link")) {
+      if (docHostname === "www.sogou.com") {
+        if (docPathname === "/web" || docPathname === "/sogou" ) {
+          const refNode = elem.closest('div.vrwrap, div.rb').querySelector('cite');
+          return refNode.textContent.replace(/^.*? - /, "").replace(/[\/ \xA0][\s\S]*$/, "");
         }
       }
     }
+  });
 
-    // 搜狗 mobile
-    else if (h === "m.sogou.com") {
-      if (p.startsWith("/web/")) {
-        return s.get("url");
+  // 搜狗 mobile
+  addHandler("m.sogou.com", () => {
+    if (p.startsWith("/web/")) {
+      return s.get("url");
+    }
+  });
+
+  // 360搜索
+  addHandler("www.so.com", () => {
+    if (p === "/link") {
+      if (docHostname === "www.so.com" && docPathname === "/s") {
+        return elem.getAttribute('data-url');
       }
     }
+  });
 
-    // 360搜索
-    else if (h === "www.so.com") {
-      if (p === "/link") {
-        if (docHostname === "www.so.com" && docPathname === "/s") {
-          return elem.getAttribute('data-url');
-        }
-      }
+  // 360搜索 mobile
+  addHandler("m.so.com", () => {
+    if (p === "/jump") {
+      return s.get("u");
     }
+  });
 
-    // 360搜索 mobile
-    else if (h === "m.so.com") {
-      if (p === "/jump") {
-        return s.get("u");
-      }
+  // Twitter / Twitter mobile
+  addHandler("t.co", () => {
+    if (docHostname === "twitter.com") {
+      return elem.getAttribute("data-expanded-url");
+    } else if (docHostname === "mobile.twitter.com") {
+      const refNode = elem.querySelector('span');
+      return refNode.textContent.match(/\(link: (.*?)\)/)[1];
     }
+  });
 
-    // Twitter / Twitter mobile
-    else if (h === "t.co") {
-      if (docHostname === "twitter.com") {
-        return elem.getAttribute("data-expanded-url");
-      } else if (docHostname === "mobile.twitter.com") {
-        const refNode = elem.querySelector('span');
-        return refNode.textContent.match(/\(link: (.*?)\)/)[1];
-      }
+  // Disqus
+  addHandler("disq.us", () => {
+    if (p === "/") {
+      return s.get("url");
     }
+  });
 
-    // Disqus
-    else if (h === "disq.us") {
-      if (p === "/") {
-        return s.get("url");
-      }
+  // Instagram
+  addHandler("l.instagram.com", () => {
+    if (p === "/") {
+      return s.get("u");
     }
+  });
 
-    // Instagram
-    else if (h === "l.instagram.com") {
-      if (p === "/") {
-        return s.get("u");
-      }
+  // Tumblr
+  addHandler("t.umblr.com", () => {
+    if (p === "/redirect") {
+      return s.get("z");
     }
+  });
 
-    // Tumblr
-    else if (h === "t.umblr.com") {
-      if (p === "/redirect") {
-        return s.get("z");
-      }
+  // Pocket
+  addHandler("getpocket.com", () => {
+    if (p === "/redirect") {
+      return s.get("url");
     }
+  });
 
-    // Pocket
-    else if (h === "getpocket.com") {
-      if (p === "/redirect") {
-        return s.get("url");
-      }
+  // 巴哈姆特
+  addHandler("ref.gamer.com.tw", () => {
+    if (p === "/redir.php") {
+      return s.get("url");
     }
+  });
 
-    // 巴哈姆特
-    else if (h === "ref.gamer.com.tw") {
-      if (p === "/redir.php") {
-        return s.get("url");
-      }
-    }
-  } catch (ex) {
-    console.error(ex);
-  }
-}
+  return getRedirectedUrlOrHostname;
+})();
 
 async function updateLinkMarker(elem) {
   // console.warn("updateLinkMarker", elem);
