@@ -122,20 +122,226 @@ const getRedirectedUrlOrHostname = (() => {
     }
   }
 
-  // Google
-  addHandler({
-    type: 'regex',
-    // adopted from WOT: http://static-cdn.mywot.com/settings/extensions/serps.json
-    value: /^(www\.|encrypted\.)?(google)\.([a-z]{2,3})(\.[a-z]{2,3})?$/,
-  }, () => {
+  // Google Search (no JavaScript)
+  addHandler([
+    // add known common cases for faster lookup and regex for potential leaks
+    // https://www.google.com/supported_domains
+    "www.google.com",
+    "www.google.ad",
+    "www.google.ae",
+    "www.google.com.af",
+    "www.google.com.ag",
+    "www.google.com.ai",
+    "www.google.al",
+    "www.google.am",
+    "www.google.co.ao",
+    "www.google.com.ar",
+    "www.google.as",
+    "www.google.at",
+    "www.google.com.au",
+    "www.google.az",
+    "www.google.ba",
+    "www.google.com.bd",
+    "www.google.be",
+    "www.google.bf",
+    "www.google.bg",
+    "www.google.com.bh",
+    "www.google.bi",
+    "www.google.bj",
+    "www.google.com.bn",
+    "www.google.com.bo",
+    "www.google.com.br",
+    "www.google.bs",
+    "www.google.bt",
+    "www.google.co.bw",
+    "www.google.by",
+    "www.google.com.bz",
+    "www.google.ca",
+    "www.google.cd",
+    "www.google.cf",
+    "www.google.cg",
+    "www.google.ch",
+    "www.google.ci",
+    "www.google.co.ck",
+    "www.google.cl",
+    "www.google.cm",
+    "www.google.cn",
+    "www.google.com.co",
+    "www.google.co.cr",
+    "www.google.com.cu",
+    "www.google.cv",
+    "www.google.com.cy",
+    "www.google.cz",
+    "www.google.de",
+    "www.google.dj",
+    "www.google.dk",
+    "www.google.dm",
+    "www.google.com.do",
+    "www.google.dz",
+    "www.google.com.ec",
+    "www.google.ee",
+    "www.google.com.eg",
+    "www.google.es",
+    "www.google.com.et",
+    "www.google.fi",
+    "www.google.com.fj",
+    "www.google.fm",
+    "www.google.fr",
+    "www.google.ga",
+    "www.google.ge",
+    "www.google.gg",
+    "www.google.com.gh",
+    "www.google.com.gi",
+    "www.google.gl",
+    "www.google.gm",
+    "www.google.gr",
+    "www.google.com.gt",
+    "www.google.gy",
+    "www.google.com.hk",
+    "www.google.hn",
+    "www.google.hr",
+    "www.google.ht",
+    "www.google.hu",
+    "www.google.co.id",
+    "www.google.ie",
+    "www.google.co.il",
+    "www.google.im",
+    "www.google.co.in",
+    "www.google.iq",
+    "www.google.is",
+    "www.google.it",
+    "www.google.je",
+    "www.google.com.jm",
+    "www.google.jo",
+    "www.google.co.jp",
+    "www.google.co.ke",
+    "www.google.com.kh",
+    "www.google.ki",
+    "www.google.kg",
+    "www.google.co.kr",
+    "www.google.com.kw",
+    "www.google.kz",
+    "www.google.la",
+    "www.google.com.lb",
+    "www.google.li",
+    "www.google.lk",
+    "www.google.co.ls",
+    "www.google.lt",
+    "www.google.lu",
+    "www.google.lv",
+    "www.google.com.ly",
+    "www.google.co.ma",
+    "www.google.md",
+    "www.google.me",
+    "www.google.mg",
+    "www.google.mk",
+    "www.google.ml",
+    "www.google.com.mm",
+    "www.google.mn",
+    "www.google.ms",
+    "www.google.com.mt",
+    "www.google.mu",
+    "www.google.mv",
+    "www.google.mw",
+    "www.google.com.mx",
+    "www.google.com.my",
+    "www.google.co.mz",
+    "www.google.com.na",
+    "www.google.com.ng",
+    "www.google.com.ni",
+    "www.google.ne",
+    "www.google.nl",
+    "www.google.no",
+    "www.google.com.np",
+    "www.google.nr",
+    "www.google.nu",
+    "www.google.co.nz",
+    "www.google.com.om",
+    "www.google.com.pa",
+    "www.google.com.pe",
+    "www.google.com.pg",
+    "www.google.com.ph",
+    "www.google.com.pk",
+    "www.google.pl",
+    "www.google.pn",
+    "www.google.com.pr",
+    "www.google.ps",
+    "www.google.pt",
+    "www.google.com.py",
+    "www.google.com.qa",
+    "www.google.ro",
+    "www.google.ru",
+    "www.google.rw",
+    "www.google.com.sa",
+    "www.google.com.sb",
+    "www.google.sc",
+    "www.google.se",
+    "www.google.com.sg",
+    "www.google.sh",
+    "www.google.si",
+    "www.google.sk",
+    "www.google.com.sl",
+    "www.google.sn",
+    "www.google.so",
+    "www.google.sm",
+    "www.google.sr",
+    "www.google.st",
+    "www.google.com.sv",
+    "www.google.td",
+    "www.google.tg",
+    "www.google.co.th",
+    "www.google.com.tj",
+    "www.google.tl",
+    "www.google.tm",
+    "www.google.tn",
+    "www.google.to",
+    "www.google.com.tr",
+    "www.google.tt",
+    "www.google.com.tw",
+    "www.google.co.tz",
+    "www.google.com.ua",
+    "www.google.co.ug",
+    "www.google.co.uk",
+    "www.google.com.uy",
+    "www.google.co.uz",
+    "www.google.com.vc",
+    "www.google.co.ve",
+    "www.google.vg",
+    "www.google.co.vi",
+    "www.google.com.vn",
+    "www.google.vu",
+    "www.google.ws",
+    "www.google.rs",
+    "www.google.co.za",
+    "www.google.co.zm",
+    "www.google.co.zw",
+    "www.google.cat",
+    {
+      type: 'regex',
+      value: /^(www\.|encrypted\.)?(google)\.([a-z]{2,3})(\.[a-z]{2,3})?$/,
+    },
+  ], () => {
     if (p === "/url" || p === "/interstitial") {
       return s.get("url") || s.get("q");
+    }
+  });
+
+  // YouTube
+  addHandler("www.youtube.com", () => {
+    if (p === "/redirect") {
+      return s.get("q");
     }
   });
 
   // Facebook / Facebook mobile
   addHandler(["l.facebook.com", "lm.facebook.com"], () => {
     if (p === "/l.php") {
+      return s.get("u");
+    }
+  });
+
+  addHandler(["www.facebook.com", "m.facebook.com"], () => {
+    if (p === "/flx/warn/") {
       return s.get("u");
     }
   });
@@ -147,51 +353,30 @@ const getRedirectedUrlOrHostname = (() => {
     }
   });
 
-  // Yahoo search (no javascript)
+  // Yahoo search (JavaScript disabled)
   addHandler("r.search.yahoo.com", () => {
-    return decodeURIComponent(p.match(/\/RU=(.*?)\//)[1]);
-  });
-
-  // Sina search
-  addHandler({
-    type: 'regex',
-    value: /^find\.sina\.com\./,
-  }, () => {
-    if (p === "/sina_redirector.php") {
-      return s.get("url");
+    const m = p.match(/\/RU=([^\/]*)\//);
+    if (m) {
+      return decodeURIComponent(m[1]);
     }
   });
 
-  // Yandex search
-  addHandler("www.yandex.com", () => {
-    if (p === "/clck/jsredir") {
-      if (elem.matches('li.serp-item > div > h2 > a')) {
-        const refNode = elem.closest('li.serp-item').querySelector('div > h2+div a > b');
-        return refNode.textContent;
-      }
-    }
-  });
+  // Yandex (www.yandex.com)
+  // 2022-10-16 - No more provide redirected URL.
 
-  // WebCrawler mobile
-  addHandler("cs.webcrawler.com", () => {
-    if (p === "/ClickHandler.ashx") {
-      u.search = s.get("encp");
-      return s.get("ru");
-    }
-  });
+  // WebCrawler (www.webcrawler.com)
+  // 2022-10-16 - No more provide redirected URL.
 
   // Dogpile
   addHandler("ccs.dogpile.com", () => {
     if (p === "/ClickHandler.ashx") {
-      u.search = s.get("encp");
-      return s.get("ru");
+      return new URLSearchParams(s.get("encp")).get("ru");
     }
   });
 
   // info.com / msxml.excite.com
   addHandler("ccs.infospace.com", () => {
     if (p === "/ClickHandler.ashx") {
-      u.search = s.get("encp");
       return s.get("ru");
     }
   });
@@ -205,67 +390,66 @@ const getRedirectedUrlOrHostname = (() => {
 
   // Lycos
   addHandler("search.lycos.com", () => {
-    if (p === "/b.php") {
-      return u.protocol + "//" + s.get("as");
-    } else if (p === "/bnjs.php") {
+    if (p === "/b.php" || p === "/bnjs.php") {
       return s.get("as");
-    }
-  });
-
-  // Qwant
-  addHandler("lite.qwant.com", () => {
-    if (p.startsWith("/redirect/")) {
-      return decodeURIComponent(p.match(/\/redirect\/[^\/]+\/(.*)$/)[1]);
-    }
-  });
-
-  // Qwant Ads
-  addHandler({
-    type: 'regex',
-    value: /^\d+\.r\.bat\.bing\.com$/,
-  }, () => {
-    if (p === "/") {
-      if (docHostname === "lite.qwant.com" && docPathname === "/") {
-        if (elem.matches('div.result a')) {
-          const refNode = elem.closest('div.result').querySelector('p.url').cloneNode(true);
-          refNode.querySelector('span').remove();
-          return u.protocol + "//" + refNode.textContent.trim();
-        }
-      }
     }
   });
 
   // 百度
   addHandler("www.baidu.com", () => {
-    if (p === "/link") {
-      if (docHostname === "www.baidu.com" && docPathname === "/s") {
-        if (elem.matches('div.result > h3 > a, div.result div.general_image_pic a, div.result a.c-showurl')) {
-          const refNode = elem.closest('div.result').querySelector('a.c-showurl');
-          return refNode.textContent.replace(/^\w+:\/+/, "").replace(/\/.*$/, "");
+    if (docHostname === "www.baidu.com" && docPathname === "/s") {
+      if (p === "/link") {
+        if (elem.matches('.result[mu] h3 a, .result-op[mu] h3 a')) {
+          const refNode = elem.closest('.result[mu], .result-op[mu]');
+          if (refNode) {
+            return refNode.getAttribute('mu');
+          }
         }
+      } else if (p === "/baidu.php") {
+        return elem.getAttribute('data-landurl');
       }
     }
   });
 
   // 百度 mobile
   addHandler("m.baidu.com", () => {
-    if (p.startsWith("/from=0/")) {
-      if (docHostname === "m.baidu.com" && docPathname === "/s") {
-        if (elem.matches(':not(.koubei-a)')) {
-          const refNode = elem.closest('div.c-container').querySelector('div.c-showurl span.c-showurl');
-          return refNode.textContent.replace(/^\w+:\/+/, "").replace(/\/.*$/, "");
+    if (docHostname === "m.baidu.com" && (docPathname === "/s" || docPathname.startsWith('/pu=sz'))) {
+      if (p.startsWith("/from=0/")) {
+        // normal
+        if (elem.matches('#results .result[data-log] a.c-blocka')) {
+          const refNode = elem.closest('.result[data-log]');
+          if (refNode) {
+            return JSON.parse(refNode.getAttribute('data-log')).mu;
+          }
+        }
+
+        // JavaScript disabled
+        if (elem.matches('#page-res .resitem a.result_title')) {
+          const refNode = elem.closest('.resitem').querySelector('.site');
+          if (refNode) {
+            return refNode.textContent;
+          }
         }
       }
     }
   });
 
+  // 知乎
+  addHandler("link.zhihu.com", () => {
+    if (p === "/") {
+      return s.get("target");
+    }
+  });
+
   // 搜狗
   addHandler("www.sogou.com", () => {
-    if (p.startsWith("/link")) {
-      if (docHostname === "www.sogou.com") {
-        if (docPathname === "/web" || docPathname === "/sogou" ) {
-          const refNode = elem.closest('div.vrwrap, div.rb').querySelector('cite');
-          return refNode.textContent.replace(/^.*? - /, "").replace(/[\/ \xA0][\s\S]*$/, "");
+    if (docHostname === "www.sogou.com" && (docPathname === "/web" || docPathname === "/sogou" )) {
+      if (p.startsWith("/link")) {
+        if (elem.matches('div.vrwrap h3 a')) {
+          const refNode = elem.closest('div.vrwrap').querySelector('div.r-sech[data-url]');
+          if (refNode) {
+            return refNode.getAttribute('data-url');
+          }
         }
       }
     }
@@ -280,9 +464,11 @@ const getRedirectedUrlOrHostname = (() => {
 
   // 360搜索
   addHandler("www.so.com", () => {
-    if (p === "/link") {
-      if (docHostname === "www.so.com" && docPathname === "/s") {
-        return elem.getAttribute('data-url');
+    if (docHostname === "www.so.com" && docPathname === "/s") {
+      if (p === "/link") {
+        if (elem.matches('a[data-mdurl]')) {
+          return elem.getAttribute('data-mdurl');
+        }
       }
     }
   });
@@ -296,17 +482,19 @@ const getRedirectedUrlOrHostname = (() => {
 
   // Twitter / Twitter mobile
   addHandler("t.co", () => {
-    if (docHostname === "twitter.com") {
-      return elem.getAttribute("data-expanded-url");
-    } else if (docHostname === "mobile.twitter.com") {
-      const refNode = elem.querySelector('span');
-      return refNode.textContent.match(/\(link: (.*?)\)/)[1];
+    if (docHostname === "twitter.com" || docHostname === "mobile.twitter.com") {
+      let url = elem.textContent;
+      const lastSpan = elem.querySelector('span[aria-hidden="true"]:last-child');
+      if (lastSpan && lastSpan.textContent === "…") {
+        url = url.slice(0, -1);
+      }
+      return url;
     }
   });
 
   // Disqus
   addHandler("disq.us", () => {
-    if (p === "/") {
+    if (p === "/url") {
       return s.get("url");
     }
   });
@@ -336,6 +524,34 @@ const getRedirectedUrlOrHostname = (() => {
   addHandler("ref.gamer.com.tw", () => {
     if (p === "/redir.php") {
       return s.get("url");
+    }
+  });
+
+  // Slack
+  addHandler("slack-redir.net", () => {
+    if (p === "/link") {
+      return s.get("url");
+    }
+  });
+
+  // Steam Community
+  addHandler("steamcommunity.com", () => {
+    if (p === "/linkfilter/") {
+      return s.get("url");
+    }
+  });
+
+  // VK
+  addHandler("vk.com", () => {
+    if (p === "/away.php") {
+      return s.get("to");
+    }
+  });
+
+  // 2022-01-02 - https://c212.net/c/link/?t=0&l=en&o=2997076-1&h=288952320&u=http%3A%2F%2Fcreatorkit.com%2Ftop-nine-best-of-2020&a=CreatorKit.com%2FTopNine
+  addHandler("c212.net", () => {
+    if (p === "/c/link/") {
+      return s.get("u");
     }
   });
 
