@@ -1,6 +1,6 @@
 # Title: Content Farm Filters
 # Description: Filter for general content farms, mostly in Chinese.
-# Last modified: 2022-10-14T17:30:43+00:00
+# Last modified: 2022-10-15T22:15:54+00:00
 # Homepage: https://danny0838.github.io/content-farm-terminator/
 # Licence: MIT License
 # Source: https://danny0838.github.io/content-farm-terminator/files/blocklist-hosts/content-farms.txt
@@ -1968,6 +1968,7 @@
 127.0.0.1 ds2464th27.blog.fc2.com
 127.0.0.1 dsfgfhg12.blogspot.com
 127.0.0.1 dsn66668888.com
+127.0.0.1 dspsuper.com  #redirects to similianxi.com
 127.0.0.1 dsrfo411vl.pixnet.net
 127.0.0.1 dsy39.com
 127.0.0.1 dtdsnx.com  #歡享網
@@ -2486,6 +2487,7 @@
 127.0.0.1 find-top-prizes-here.life  #malicious ads scripts
 127.0.0.1 findarticles.com
 127.0.0.1 findmylife.cc
+127.0.0.1 findservice.xyz  #redirects to oxbnr.prodlgiousdates.com
 127.0.0.1 finefinesh.club  #愛縮兔 (農場轉址)
 127.0.0.1 fingerdaily.com
 127.0.0.1 fingermedia.tw  #指動傳播科技有限公司
@@ -2509,6 +2511,7 @@
 127.0.0.1 fkpi581.pixnet.net
 127.0.0.1 fl19767199.pixnet.net
 127.0.0.1 fl99v97hdvv.pixnet.net
+127.0.0.1 flacourtiaceous-flakage-oddlegs.xyz  #redirects to eu.dspsuper.com, niceanimegames.com, p1045.nonotro.name, ...
 127.0.0.1 flnxxzfxhfjd.blog.fc2.com
 127.0.0.1 floranth.co  #redirects to procnw.xyz
 127.0.0.1 florenleonabw.pixnet.net
@@ -4078,6 +4081,7 @@
 127.0.0.1 katiex13e6u2n.pixnet.net
 127.0.0.1 katrinarobhq.pixnet.net
 127.0.0.1 katrinka77476.pixnet.net
+127.0.0.1 kawunimy.com  #redirects to go.xlivrdr.com
 127.0.0.1 kayap4c16m4y2.pixnet.net
 127.0.0.1 kbo.tw
 127.0.0.1 kbv22vq17b.blog.fc2.com
@@ -5132,6 +5136,7 @@
 127.0.0.1 nha3032dmq.blog.fc2.com
 127.0.0.1 ni5h18.pixnet.net
 127.0.0.1 nib8198244tushaop.wordpress.com
+127.0.0.1 niceanimegames.com  #malicious scripts
 127.0.0.1 nicholswaf4.pixnet.net
 127.0.0.1 nideliyou.com
 127.0.0.1 nigov.tw
@@ -5167,6 +5172,7 @@
 127.0.0.1 nocancers.net
 127.0.0.1 nongjia888.com
 127.0.0.1 nonglinyumu.com
+127.0.0.1 nonotro.name  #redirects to kawunimy.com
 127.0.0.1 nonseisolo.eu
 127.0.0.1 nonsnews.com
 127.0.0.1 nooho.net
@@ -5868,6 +5874,7 @@
 127.0.0.1 push01.net
 127.0.0.1 pushme.news
 127.0.0.1 pushnews.net  #TEEPR
+127.0.0.1 puskc.xyz  #redirects to ytu567.monster
 127.0.0.1 pv53jf1z.blog.fc2.com
 127.0.0.1 pvf55td91x.pixnet.net
 127.0.0.1 pvhp3cohenton.pixnet.net
@@ -6526,6 +6533,7 @@
 127.0.0.1 sigmund-fliesen.de
 127.0.0.1 sigov.top
 127.0.0.1 silkasigame.com
+127.0.0.1 similianxi.com  #malicious scripts
 127.0.0.1 simpledatings.life  #malicious ads scripts
 127.0.0.1 sin1011.pixnet.net
 127.0.0.1 sina-news.blogspot.com
@@ -6643,6 +6651,7 @@
 127.0.0.1 steelebrettmu.pixnet.net
 127.0.0.1 steelefra1066.pixnet.net
 127.0.0.1 steemit.com
+127.0.0.1 steffanrock.com  #redirects to flacourtiaceous-flakage-oddlegs.xyz
 127.0.0.1 steffieshundesalon.ch  #redirects to topawardhere.life
 127.0.0.1 steinlingaerten.ch
 127.0.0.1 stephedq541h.pixnet.net
@@ -6660,6 +6669,7 @@
 127.0.0.1 storywall.me
 127.0.0.1 strickcmpp01.pixnet.net
 127.0.0.1 string.quest
+127.0.0.1 stripchat.com
 127.0.0.1 stroawp.co  #redirects to aetop.top
 127.0.0.1 studiocavas.co  #redirects to cacnka.xyz
 127.0.0.1 studiodahu.com
@@ -8015,6 +8025,7 @@
 127.0.0.1 xl59wz8g7l.blog.fc2.com
 127.0.0.1 xldph91319.pixnet.net
 127.0.0.1 xleag653ml.pixnet.net
+127.0.0.1 xlivrdr.com  #redirects to stripchat.com
 127.0.0.1 xlnwkldonlw.blogspot.com
 127.0.0.1 xm.jok97.xyz
 127.0.0.1 xm018v3.pixnet.net
