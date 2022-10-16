@@ -8,7 +8,6 @@ async function showRequests(tabId, url) {
     cmd: 'getRequestRecords',
     args: {tabId},
   });
-  console.warn(records);
 
   document.body.textContent = '';
   for (const [requestId, record] of records) {
