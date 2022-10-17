@@ -397,6 +397,7 @@ const getRedirectedUrlOrHostname = (() => {
 
   // 百度
   addHandler("www.baidu.com", () => {
+    // desktop or iPad, search from baidu.com
     if (docHostname === "www.baidu.com" && docPathname === "/s") {
       if (p === "/link") {
         if (elem.matches('.result[mu] h3 a, .result-op[mu] h3 a')) {
@@ -413,22 +414,29 @@ const getRedirectedUrlOrHostname = (() => {
 
   // 百度 mobile
   addHandler("m.baidu.com", () => {
-    if (docHostname === "m.baidu.com" && (docPathname === "/s" || docPathname.startsWith('/pu=sz'))) {
-      if (p.startsWith("/from=0/")) {
-        // normal
-        if (elem.matches('#results .result[data-log] a.c-blocka')) {
-          const refNode = elem.closest('.result[data-log]');
-          if (refNode) {
-            return JSON.parse(refNode.getAttribute('data-log')).mu;
-          }
+    if (
+      // iPhone or Android, JavaScript enabled, search from baidu.com
+      (docHostname === "www.baidu.com" && docPathname === "/from=844b/s" && p.startsWith("/from=844b/")) ||
+      // JavaScript enabled, search from m.baidu.com
+      // (docHostname === "m.baidu.com" && docPathname === "/s" && p.startsWith("/from=0/")) ||
+      // desktop or iPad, JavaScript disabled, search from m.baidu.com
+      (docHostname === "m.baidu.com" && (docPathname === "/s" || docPathname.startsWith('/pu=sz')) && p.startsWith("/from=0/")) ||
+      // iPhone or Android, JavaScript disabled, search from m.baidu.com (baidu.com auto-redirects to m.baidu.com)
+      (docHostname === "m.baidu.com" && (docPathname === "/s" || docPathname.startsWith('/from=844b/pu=sz')) && p.startsWith("/from=844b/"))
+    ) {
+      // JavaScript enabled
+      if (elem.matches('#results .result[data-log] a.c-blocka')) {
+        const refNode = elem.closest('.result[data-log]');
+        if (refNode) {
+          return JSON.parse(refNode.getAttribute('data-log')).mu;
         }
+      }
 
-        // JavaScript disabled
-        if (elem.matches('#page-res .resitem a.result_title')) {
-          const refNode = elem.closest('.resitem').querySelector('.site');
-          if (refNode) {
-            return refNode.textContent;
-          }
+      // JavaScript disabled
+      if (elem.matches('#page-res .resitem a.result_title')) {
+        const refNode = elem.closest('.resitem').querySelector('.site');
+        if (refNode) {
+          return refNode.textContent;
         }
       }
     }
