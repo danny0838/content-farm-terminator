@@ -73,28 +73,33 @@ const contextMenuController = {
     }
   },
 
-  async onClicked(info, tab) {
-    switch (info.menuItemId) {
-      case "blockTab": {
-        return await blockSite(info.pageUrl, tab.id, 0, this.quickMode);
+  get onClicked() {
+    // bind this to the object
+    const value = async (info, tab) => {
+      switch (info.menuItemId) {
+        case "blockTab": {
+          return await blockSite(info.pageUrl, tab.id, 0, this.quickMode);
+        }
+        case "blockPage": {
+          return await blockSite(info.pageUrl, tab.id, info.frameId, this.quickMode);
+        }
+        case "blockLink": {
+          const redirectedUrl = await browser.tabs.sendMessage(tab.id, {
+            cmd: 'getRedirectedLinkUrl',
+          }, {frameId: info.frameId});
+          const rule = redirectedUrl || info.linkUrl;
+          return await blockSite(rule, tab.id, info.frameId, this.quickMode);
+        }
+        case "blockSelection": {
+          return await blockSite(info.selectionText, tab.id, info.frameId, this.quickMode);
+        }
+        case "blockSelectedLinks": {
+          return await blockSelectedLinks(tab.id, info.frameId, this.quickMode);
+        }
       }
-      case "blockPage": {
-        return await blockSite(info.pageUrl, tab.id, info.frameId, this.quickMode);
-      }
-      case "blockLink": {
-        const redirectedUrl = await browser.tabs.sendMessage(tab.id, {
-          cmd: 'getRedirectedLinkUrl',
-        }, {frameId: info.frameId});
-        const rule = redirectedUrl || info.linkUrl;
-        return await blockSite(rule, tab.id, info.frameId, this.quickMode);
-      }
-      case "blockSelection": {
-        return await blockSite(info.selectionText, tab.id, info.frameId, this.quickMode);
-      }
-      case "blockSelectedLinks": {
-        return await blockSelectedLinks(tab.id, info.frameId, this.quickMode);
-      }
-    }
+    };
+    Object.defineProperty(this, 'onClicked', {value});
+    return value;
   },
 };
 
