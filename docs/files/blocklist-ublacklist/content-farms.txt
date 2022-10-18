@@ -1,6 +1,6 @@
 # Title: Content Farm Filters
 # Description: Filter for general content farms, mostly in Chinese.
-# Last modified: 2022-10-18T12:03:13+00:00
+# Last modified: 2022-10-18T12:47:36+00:00
 # Homepage: https://danny0838.github.io/content-farm-terminator/
 # Licence: MIT License
 # Source: https://danny0838.github.io/content-farm-terminator/files/blocklist-ublacklist/content-farms.txt
@@ -451,6 +451,7 @@
 *://*.99bookgame.com/*
 *://*.9game.cn/*
 *://*.9kd.com/*
+*://*.9to5answer.com/*
 *://*.a-gui.com/*
 *://*.a0cuy6cmk2.pixnet.net/*
 *://*.a0iis34cye.pixnet.net/*
@@ -693,6 +694,7 @@
 *://*.apple01.cc/*
 *://*.apple01.co/*
 *://*.apple01.net/*
+*://*.appleasks.com/*
 *://*.applenews.ws/*  #愛縮兔 (農場轉址)
 *://*.appleofmyeye.com.tw/*
 *://*.appleship.club/*  #愛縮兔 (農場轉址)
@@ -894,6 +896,7 @@
 *://*.baiyuns.me/*  #redirects to cznono.xyz
 *://*.bajiao003.com/*
 *://*.bajiaoyingshi.com/*
+*://*.baktomoon.co/*  #redirects to aetop.top
 *://*.ballcarrimm.pixnet.net/*
 *://*.ballgametime.com/*
 *://*.ballnewmanxmr.pixnet.net/*
@@ -966,6 +969,7 @@
 *://*.beforeout.com/*
 *://*.begreek.me/*  #redirects to fatbean.xyz
 *://*.beijingtoday.com.cn/*
+*://*.beiku.com/*
 *://*.beiyuedu.com/*
 *://*.beizigen.com/*
 *://*.belgiusic.me/*  #redirects to meetwill.xyz
@@ -1054,6 +1058,7 @@
 *://*.bkfenxiang.com/*
 *://*.bknm069.pixnet.net/*
 *://*.bl5fharryr5oq.pixnet.net/*
+*://*.blacksunheating.ch/*  #redirects to na-madagaskar.sk
 *://*.blairnewtjri.pixnet.net/*
 *://*.blairwarnec3u.pixnet.net/*
 *://*.blanchegf920.wordpress.com/*
@@ -1366,6 +1371,7 @@
 *://*.checkiton.club/*  #愛縮兔 (農場轉址)
 *://*.cheer01.me/*
 *://*.chen-ton.com/*
+*://*.chengyucidian.net/*
 *://*.chenxiuyong.com/*
 *://*.cherryknow.com/*
 *://*.cherylalg482.pixnet.net/*
@@ -1397,6 +1403,7 @@
 *://*.christx48nh7.pixnet.net/*
 *://*.chsjtl.com/*
 *://*.chtime.com.tw/*  #指動傳播科技有限公司
+*://*.chuaijuzi.com/*
 *://*.chunew.com/*
 *://*.chunew.net/*
 *://*.cib67bm27z.blog.fc2.com/*
@@ -1438,6 +1445,7 @@
 *://*.cnba.live/*  #大榴槤/大時代/GreatDaily/閃文聯盟/琦琦~
 *://*.cnbook.top/*
 *://*.cnews.world/*  #大榴槤/大時代/GreatDaily/閃文聯盟/琦琦~
+*://*.cnfla.com/*
 *://*.cnporcelain.net/*
 *://*.cnpython.com/*
 *://*.cnread.news/*
@@ -1823,6 +1831,7 @@
 *://*.derrichagt0.pixnet.net/*
 *://*.desatascosintegralescordoba.es/*  #redirects to quing.im
 *://*.desenoboschhcg.blog.fc2.com/*
+*://*.deshuoshuo.com/*
 *://*.design-fabrica.com/*
 *://*.desiredconstlltions.co/*  #redirects to keecnya.xyz
 *://*.desotalk.com/*  #密訊
@@ -1862,6 +1871,7 @@
 *://*.diangongwugwugwu.com/*
 *://*.diannepedroby.pixnet.net/*
 *://*.dianshijizhinan.com/*
+*://*.diaoshuoshuo.com/*
 *://*.diawjj.club/*  #愛縮兔 (農場轉址)
 *://*.dida321.com/*
 *://*.didiadidia.com/*  #歡享網
@@ -1977,6 +1987,7 @@
 *://*.duckhk.com/*
 *://*.dugreat.com/*
 *://*.dugushici.com/*
+*://*.duhougan.net/*
 *://*.duncanjan3984.pixnet.net/*
 *://*.dungwa.com/*
 *://*.dushiliangpin.com/*
@@ -2633,6 +2644,7 @@
 *://*.fvt59vn11h.blog.fc2.com/*
 *://*.fw72210114.blog.fc2.com/*
 *://*.fwfdg72989.pixnet.net/*
+*://*.fwsir.com/*
 *://*.fwtd.cn/*
 *://*.fxm8641lex.blog.fc2.com/*
 *://*.fxv32sl62d.blog.fc2.com/*
@@ -2894,6 +2906,7 @@
 *://*.gukqkgaug6.pixnet.net/*
 *://*.gungor162.pixnet.net/*
 *://*.guohuzhinan.com/*
+*://*.guowenban.com/*
 *://*.guowenme.cc/*
 *://*.gupiao.sg/*
 *://*.gushiciku.cn/*
@@ -3533,6 +3546,7 @@
 *://*.investing-reads.com/*
 *://*.investwikitw.com/*
 *://*.io02527879.pixnet.net/*
+*://*.io0bb.com/*
 *://*.ipcbia.me/*  #redirects to fatbean.xyz
 *://*.ipetgroup.com/*
 *://*.iphone5315357041.wordpress.com/*
@@ -3935,6 +3949,8 @@
 *://*.justhotnews.site/*
 *://*.justindaniefr.pixnet.net/*
 *://*.juzhappy.com/*
+*://*.juzideng.com/*
+*://*.juzigui.com/*
 *://*.jv11717335.blog.fc2.com/*
 *://*.jvfxj55531.blog.fc2.com/*
 *://*.jvh57jv53r.blog.fc2.com/*
@@ -4038,6 +4054,7 @@
 *://*.kanwatch.pro/*
 *://*.kanwatch.site/*
 *://*.kanwatch.today/*
+*://*.kaoke.com/*
 *://*.karlkenl7sb.pixnet.net/*
 *://*.karlmarionv.pixnet.net/*
 *://*.kat07ek84s.blog.fc2.com/*
@@ -5091,6 +5108,7 @@
 *://*.nijigenfun.com/*
 *://*.nina.az/*
 *://*.ninafranc8493.pixnet.net/*
+*://*.niubb.net/*
 *://*.niuzhan.com/*
 *://*.nj56980857.blog.fc2.com/*
 *://*.njarts.cn/*
@@ -5163,9 +5181,11 @@
 *://*.ntdxn99977.pixnet.net/*
 *://*.ntk69.pixnet.net/*
 *://*.ntvhn35519.pixnet.net/*
+*://*.nuanshuoshuo.com/*
 *://*.nub40xi91k.pixnet.net/*
 *://*.nukfunboxlego.blog.fc2.com/*
 *://*.nunque.com/*
+*://*.nuoshuoshuo.com/*
 *://*.nuti063.pixnet.net/*
 *://*.nuy33ql20i.pixnet.net/*
 *://*.nv15531131.pixnet.net/*
@@ -5278,6 +5298,7 @@
 *://*.ofmg163.pixnet.net/*
 *://*.oggck424.blog.fc2.com/*
 *://*.ogv59bu55j.blog.fc2.com/*
+*://*.oh100.com/*
 *://*.oh30244061.pixnet.net/*
 *://*.oh74.com/*
 *://*.ohmencontain.buzz/*  #malicious ads scripts
@@ -5630,6 +5651,7 @@
 *://*.pie243.cn/*
 *://*.piemontecontributi.it/*  #redirects to gordo.lv
 *://*.piercemedn.pixnet.net/*
+*://*.pieshuoshuo.com/*
 *://*.pifyu8wfhi.pixnet.net/*
 *://*.pikicast.tw/*  #redirects to www.wishnote.tw
 *://*.pineapple99.com/*
@@ -5906,6 +5928,7 @@
 *://*.qiananch.com/*
 *://*.qiangkuo.com/*
 *://*.qiangyao.cn/*
+*://*.qianjuzi.com/*
 *://*.qianlaiye.com/*
 *://*.qianqu.cc/*
 *://*.qianxilaibanjia.com/*
@@ -6280,6 +6303,7 @@
 *://*.ruiwen.com/*
 *://*.ruizsamuels4.pixnet.net/*
 *://*.rule873.wordpress.com/*
+*://*.runshuoshuo.com/*
 *://*.runxinzhi.com/*
 *://*.rustlenews.com/*
 *://*.rv6oo5.pixnet.net/*
@@ -6459,6 +6483,14 @@
 *://*.shoujiwan.com/*
 *://*.shouye-wang.com/*
 *://*.shukunjin.com/*
+*://*.shuoshuocun.com/*
+*://*.shuoshuodie.com/*
+*://*.shuoshuogan.com/*
+*://*.shuoshuojiong.com/*
+*://*.shuoshuokeng.com/*
+*://*.shuoshuonang.com/*
+*://*.shuoshuowai.com/*
+*://*.shuoshuozhuai.com/*
 *://*.shuyangyang.com.cn/*
 *://*.shuzhiduo.com/*
 *://*.shxy888.com/*
@@ -6819,6 +6851,7 @@
 *://*.tanyasarahjq.pixnet.net/*
 *://*.taogelist.com/*
 *://*.tapipak.com/*  #redirects to bestbonus-zone.life
+*://*.tashuoshuo.com/*
 *://*.tastones.com/*
 *://*.tatepaulbenja.pixnet.net/*
 *://*.tattoostar.fr/*  #redirects to isabel-lopez-kubben.at
@@ -7559,6 +7592,9 @@
 *://*.wandarogerss.pixnet.net/*
 *://*.wanderpping.com/*  #redirects to meetwill.xyz
 *://*.wangluoliuxing.com/*
+*://*.wangmingchun.com/*
+*://*.wangmingdiu.com/*
+*://*.wangmingshou.com/*
 *://*.waorder.co/*  #redirects to goake.top
 *://*.warchina.com/*
 *://*.wardglenlarso.pixnet.net/*
@@ -7607,6 +7643,7 @@
 *://*.wenjutv.com/*
 *://*.wenku.51job.com/*
 *://*.wenku1.com/*
+*://*.wenshubang.com/*
 *://*.werkstatt-galerie.ch/*  #redirects to sergiofoto.lv
 *://*.werkthewb.co/*  #redirects to cacnka.xyz
 *://*.wetalk.tw/*
@@ -7716,6 +7753,7 @@
 *://*.wubzj616kv.pixnet.net/*
 *://*.wui55cu20q.pixnet.net/*
 *://*.wujinjixie.net/*
+*://*.wukur.com/*
 *://*.wusc0sack.pixnet.net/*
 *://*.wustelbalad.com/*
 *://*.wutl590002.blog.fc2.com/*
@@ -7915,6 +7953,7 @@
 *://*.xinnengyuanhuanbao.com/*
 *://*.xinsearch.cc/*  #redirects to ksou.cc
 *://*.xinwennews.com/*
+*://*.xiongshuoshuo.com/*
 *://*.xiqiangnm.com/*
 *://*.xiu2.net/*
 *://*.xiumeipai.com/*
@@ -8081,6 +8120,7 @@
 *://*.yanjiaoluntan.com/*
 *://*.yanjiuzhinan.com/*
 *://*.yao51.com/*
+*://*.yaoshuoshuo.com/*
 *://*.yardwarmine.xyz/*  #!malicious ads scripts
 *://*.yau28kq42c.pixnet.net/*
 *://*.yaugs844xl.pixnet.net/*
@@ -8210,6 +8250,7 @@
 *://*.yw91018005.pixnet.net/*
 *://*.ywy19kw58a.pixnet.net/*
 *://*.ywzbhr710.pixnet.net/*
+*://*.yxfanwen.com/*
 *://*.yxfashao.com/*
 *://*.yxj77us70p.blog.fc2.com/*
 *://*.yxjdcc.com/*
@@ -8376,7 +8417,9 @@
 *://*.zhachuo.com/*
 *://*.zhangshengrong.com/*
 *://*.zhdate.com/*
+*://*.zheijuzi.com/*
 *://*.zhenbo.org/*  #copy from zhidao.baidu.com
+*://*.zhengjuzi.com/*
 *://*.zhentoo.com/*
 *://*.zhentoo.net/*
 *://*.zhentoo.site/*
@@ -8428,6 +8471,7 @@
 *://*.zmsmwsm.cn/*
 *://*.zn08256143.pixnet.net/*
 *://*.zn101q5.pixnet.net/*
+*://*.zn66.cn/*
 *://*.znh53hj59z.pixnet.net/*
 *://*.znj.com/*
 *://*.znljiayou.com/*
@@ -8458,7 +8502,9 @@
 *://*.zungxvehuan.pixnet.net/*
 *://*.zuopy.com/*
 *://*.zuotianwenti.com/*
+*://*.zuowen.net/*
 *://*.zuowen8.com/*
+*://*.zuowenba.net/*
 *://*.zuowenzhinan.com/*
 *://*.zuowenzhou.com/*
 *://*.zuqiuyi.com/*

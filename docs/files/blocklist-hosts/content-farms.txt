@@ -1,6 +1,6 @@
 # Title: Content Farm Filters
 # Description: Filter for general content farms, mostly in Chinese.
-# Last modified: 2022-10-18T12:03:13+00:00
+# Last modified: 2022-10-18T12:47:36+00:00
 # Homepage: https://danny0838.github.io/content-farm-terminator/
 # Licence: MIT License
 # Source: https://danny0838.github.io/content-farm-terminator/files/blocklist-hosts/content-farms.txt
@@ -442,6 +442,7 @@
 127.0.0.1 99bookgame.com
 127.0.0.1 9game.cn
 127.0.0.1 9kd.com
+127.0.0.1 9to5answer.com
 127.0.0.1 a-gui.com
 127.0.0.1 a0cuy6cmk2.pixnet.net
 127.0.0.1 a0iis34cye.pixnet.net
@@ -687,6 +688,7 @@
 127.0.0.1 apple01.cc
 127.0.0.1 apple01.co
 127.0.0.1 apple01.net
+127.0.0.1 appleasks.com
 127.0.0.1 applenews.ws  #愛縮兔 (農場轉址)
 127.0.0.1 appleofmyeye.com.tw
 127.0.0.1 appleship.club  #愛縮兔 (農場轉址)
@@ -890,6 +892,7 @@
 127.0.0.1 baiyuns.me  #redirects to cznono.xyz
 127.0.0.1 bajiao003.com
 127.0.0.1 bajiaoyingshi.com
+127.0.0.1 baktomoon.co  #redirects to aetop.top
 127.0.0.1 ballcarrimm.pixnet.net
 127.0.0.1 ballgametime.com
 127.0.0.1 ballnewmanxmr.pixnet.net
@@ -964,6 +967,7 @@
 127.0.0.1 beforeout.com
 127.0.0.1 begreek.me  #redirects to fatbean.xyz
 127.0.0.1 beijingtoday.com.cn
+127.0.0.1 beiku.com
 127.0.0.1 beiyuedu.com
 127.0.0.1 beizigen.com
 127.0.0.1 belgiusic.me  #redirects to meetwill.xyz
@@ -1053,6 +1057,7 @@
 127.0.0.1 bkfenxiang.com
 127.0.0.1 bknm069.pixnet.net
 127.0.0.1 bl5fharryr5oq.pixnet.net
+127.0.0.1 blacksunheating.ch  #redirects to na-madagaskar.sk
 127.0.0.1 blairnewtjri.pixnet.net
 127.0.0.1 blairwarnec3u.pixnet.net
 127.0.0.1 blanchegf920.wordpress.com
@@ -1367,6 +1372,7 @@
 127.0.0.1 checkiton.club  #愛縮兔 (農場轉址)
 127.0.0.1 cheer01.me
 127.0.0.1 chen-ton.com
+127.0.0.1 chengyucidian.net
 127.0.0.1 chenxiuyong.com
 127.0.0.1 cherryknow.com
 127.0.0.1 cherylalg482.pixnet.net
@@ -1400,6 +1406,7 @@
 127.0.0.1 christx48nh7.pixnet.net
 127.0.0.1 chsjtl.com
 127.0.0.1 chtime.com.tw  #指動傳播科技有限公司
+127.0.0.1 chuaijuzi.com
 127.0.0.1 chunew.com
 127.0.0.1 chunew.net
 127.0.0.1 cib67bm27z.blog.fc2.com
@@ -1441,6 +1448,7 @@
 127.0.0.1 cnba.live  #大榴槤/大時代/GreatDaily/閃文聯盟/琦琦~
 127.0.0.1 cnbook.top
 127.0.0.1 cnews.world  #大榴槤/大時代/GreatDaily/閃文聯盟/琦琦~
+127.0.0.1 cnfla.com
 127.0.0.1 cnporcelain.net
 127.0.0.1 cnpython.com
 127.0.0.1 cnread.news
@@ -1824,6 +1832,7 @@
 127.0.0.1 derrichagt0.pixnet.net
 127.0.0.1 desatascosintegralescordoba.es  #redirects to quing.im
 127.0.0.1 desenoboschhcg.blog.fc2.com
+127.0.0.1 deshuoshuo.com
 127.0.0.1 design-fabrica.com
 127.0.0.1 desiredconstlltions.co  #redirects to keecnya.xyz
 127.0.0.1 desotalk.com  #密訊
@@ -1865,6 +1874,7 @@
 127.0.0.1 diangongwugwugwu.com
 127.0.0.1 diannepedroby.pixnet.net
 127.0.0.1 dianshijizhinan.com
+127.0.0.1 diaoshuoshuo.com
 127.0.0.1 diawjj.club  #愛縮兔 (農場轉址)
 127.0.0.1 dida321.com
 127.0.0.1 didiadidia.com  #歡享網
@@ -1982,6 +1992,7 @@
 127.0.0.1 duckhk.com
 127.0.0.1 dugreat.com
 127.0.0.1 dugushici.com
+127.0.0.1 duhougan.net
 127.0.0.1 duncanjan3984.pixnet.net
 127.0.0.1 dungwa.com
 127.0.0.1 dushiliangpin.com
@@ -2646,6 +2657,7 @@
 127.0.0.1 fvt59vn11h.blog.fc2.com
 127.0.0.1 fw72210114.blog.fc2.com
 127.0.0.1 fwfdg72989.pixnet.net
+127.0.0.1 fwsir.com
 127.0.0.1 fwtd.cn
 127.0.0.1 fxghghj105.blogspot.com
 127.0.0.1 fxm8641lex.blog.fc2.com
@@ -2912,6 +2924,7 @@
 127.0.0.1 gukqkgaug6.pixnet.net
 127.0.0.1 gungor162.pixnet.net
 127.0.0.1 guohuzhinan.com
+127.0.0.1 guowenban.com
 127.0.0.1 guowenme.cc
 127.0.0.1 gupiao.sg
 127.0.0.1 gushiciku.cn
@@ -3560,6 +3573,7 @@
 127.0.0.1 investing-reads.com
 127.0.0.1 investwikitw.com
 127.0.0.1 io02527879.pixnet.net
+127.0.0.1 io0bb.com
 127.0.0.1 ipcbia.me  #redirects to fatbean.xyz
 127.0.0.1 ipetgroup.com
 127.0.0.1 iphone5315357041.wordpress.com
@@ -3968,6 +3982,8 @@
 127.0.0.1 justhotnews.site
 127.0.0.1 justindaniefr.pixnet.net
 127.0.0.1 juzhappy.com
+127.0.0.1 juzideng.com
+127.0.0.1 juzigui.com
 127.0.0.1 jv11717335.blog.fc2.com
 127.0.0.1 jvfxj55531.blog.fc2.com
 127.0.0.1 jvh57jv53r.blog.fc2.com
@@ -4071,6 +4087,7 @@
 127.0.0.1 kanwatch.pro
 127.0.0.1 kanwatch.site
 127.0.0.1 kanwatch.today
+127.0.0.1 kaoke.com
 127.0.0.1 karlkenl7sb.pixnet.net
 127.0.0.1 karlmarionv.pixnet.net
 127.0.0.1 kat07ek84s.blog.fc2.com
@@ -5141,6 +5158,7 @@
 127.0.0.1 nijigenfun.com
 127.0.0.1 nina.az
 127.0.0.1 ninafranc8493.pixnet.net
+127.0.0.1 niubb.net
 127.0.0.1 niuzhan.com
 127.0.0.1 nj56980857.blog.fc2.com
 127.0.0.1 njarts.cn
@@ -5214,9 +5232,11 @@
 127.0.0.1 ntdxn99977.pixnet.net
 127.0.0.1 ntk69.pixnet.net
 127.0.0.1 ntvhn35519.pixnet.net
+127.0.0.1 nuanshuoshuo.com
 127.0.0.1 nub40xi91k.pixnet.net
 127.0.0.1 nukfunboxlego.blog.fc2.com
 127.0.0.1 nunque.com
+127.0.0.1 nuoshuoshuo.com
 127.0.0.1 nuti063.pixnet.net
 127.0.0.1 nuy33ql20i.pixnet.net
 127.0.0.1 nv15531131.pixnet.net
@@ -5329,6 +5349,7 @@
 127.0.0.1 ofmg163.pixnet.net
 127.0.0.1 oggck424.blog.fc2.com
 127.0.0.1 ogv59bu55j.blog.fc2.com
+127.0.0.1 oh100.com
 127.0.0.1 oh30244061.pixnet.net
 127.0.0.1 oh74.com
 127.0.0.1 ohmencontain.buzz  #malicious ads scripts
@@ -5682,6 +5703,7 @@
 127.0.0.1 pie243.cn
 127.0.0.1 piemontecontributi.it  #redirects to gordo.lv
 127.0.0.1 piercemedn.pixnet.net
+127.0.0.1 pieshuoshuo.com
 127.0.0.1 pifyu8wfhi.pixnet.net
 127.0.0.1 pikicast.tw  #redirects to www.wishnote.tw
 127.0.0.1 pineapple99.com
@@ -5961,6 +5983,7 @@
 127.0.0.1 qiananch.com
 127.0.0.1 qiangkuo.com
 127.0.0.1 qiangyao.cn
+127.0.0.1 qianjuzi.com
 127.0.0.1 qianlaiye.com
 127.0.0.1 qianqu.cc
 127.0.0.1 qianxilaibanjia.com
@@ -6338,6 +6361,7 @@
 127.0.0.1 ruiwen.com
 127.0.0.1 ruizsamuels4.pixnet.net
 127.0.0.1 rule873.wordpress.com
+127.0.0.1 runshuoshuo.com
 127.0.0.1 runxinzhi.com
 127.0.0.1 rustlenews.com
 127.0.0.1 rv6oo5.pixnet.net
@@ -6520,6 +6544,14 @@
 127.0.0.1 shoujiwan.com
 127.0.0.1 shouye-wang.com
 127.0.0.1 shukunjin.com
+127.0.0.1 shuoshuocun.com
+127.0.0.1 shuoshuodie.com
+127.0.0.1 shuoshuogan.com
+127.0.0.1 shuoshuojiong.com
+127.0.0.1 shuoshuokeng.com
+127.0.0.1 shuoshuonang.com
+127.0.0.1 shuoshuowai.com
+127.0.0.1 shuoshuozhuai.com
 127.0.0.1 shuyangyang.com.cn
 127.0.0.1 shuzhiduo.com
 127.0.0.1 shxy888.com
@@ -6887,6 +6919,7 @@
 127.0.0.1 tanyasarahjq.pixnet.net
 127.0.0.1 taogelist.com
 127.0.0.1 tapipak.com  #redirects to bestbonus-zone.life
+127.0.0.1 tashuoshuo.com
 127.0.0.1 tastones.com
 127.0.0.1 tatepaulbenja.pixnet.net
 127.0.0.1 tattoostar.fr  #redirects to isabel-lopez-kubben.at
@@ -7640,6 +7673,9 @@
 127.0.0.1 wandarogerss.pixnet.net
 127.0.0.1 wanderpping.com  #redirects to meetwill.xyz
 127.0.0.1 wangluoliuxing.com
+127.0.0.1 wangmingchun.com
+127.0.0.1 wangmingdiu.com
+127.0.0.1 wangmingshou.com
 127.0.0.1 waorder.co  #redirects to goake.top
 127.0.0.1 warchina.com
 127.0.0.1 wardglenlarso.pixnet.net
@@ -7688,6 +7724,7 @@
 127.0.0.1 wenjutv.com
 127.0.0.1 wenku.51job.com
 127.0.0.1 wenku1.com
+127.0.0.1 wenshubang.com
 127.0.0.1 werkstatt-galerie.ch  #redirects to sergiofoto.lv
 127.0.0.1 werkthewb.co  #redirects to cacnka.xyz
 127.0.0.1 wetalk.tw
@@ -7801,6 +7838,7 @@
 127.0.0.1 wubzj616kv.pixnet.net
 127.0.0.1 wui55cu20q.pixnet.net
 127.0.0.1 wujinjixie.net
+127.0.0.1 wukur.com
 127.0.0.1 wusc0sack.pixnet.net
 127.0.0.1 wustelbalad.com
 127.0.0.1 wutl590002.blog.fc2.com
@@ -8005,6 +8043,7 @@
 127.0.0.1 xinnengyuanhuanbao.com
 127.0.0.1 xinsearch.cc  #redirects to ksou.cc
 127.0.0.1 xinwennews.com
+127.0.0.1 xiongshuoshuo.com
 127.0.0.1 xiqiangnm.com
 127.0.0.1 xiu2.net
 127.0.0.1 xiumeipai.com
@@ -8176,6 +8215,7 @@
 127.0.0.1 yanjiaoluntan.com
 127.0.0.1 yanjiuzhinan.com
 127.0.0.1 yao51.com
+127.0.0.1 yaoshuoshuo.com
 127.0.0.1 yardwarmine.xyz  #!malicious ads scripts
 127.0.0.1 yau28kq42c.pixnet.net
 127.0.0.1 yaugs844xl.pixnet.net
@@ -8306,6 +8346,7 @@
 127.0.0.1 yw91018005.pixnet.net
 127.0.0.1 ywy19kw58a.pixnet.net
 127.0.0.1 ywzbhr710.pixnet.net
+127.0.0.1 yxfanwen.com
 127.0.0.1 yxfashao.com
 127.0.0.1 yxj77us70p.blog.fc2.com
 127.0.0.1 yxjdcc.com
@@ -8472,7 +8513,9 @@
 127.0.0.1 zhachuo.com
 127.0.0.1 zhangshengrong.com
 127.0.0.1 zhdate.com
+127.0.0.1 zheijuzi.com
 127.0.0.1 zhenbo.org  #copy from zhidao.baidu.com
+127.0.0.1 zhengjuzi.com
 127.0.0.1 zhentoo.com
 127.0.0.1 zhentoo.net
 127.0.0.1 zhentoo.site
@@ -8524,6 +8567,7 @@
 127.0.0.1 zmsmwsm.cn
 127.0.0.1 zn08256143.pixnet.net
 127.0.0.1 zn101q5.pixnet.net
+127.0.0.1 zn66.cn
 127.0.0.1 znh53hj59z.pixnet.net
 127.0.0.1 znj.com
 127.0.0.1 znljiayou.com
@@ -8555,7 +8599,9 @@
 127.0.0.1 zungxvehuan.pixnet.net
 127.0.0.1 zuopy.com
 127.0.0.1 zuotianwenti.com
+127.0.0.1 zuowen.net
 127.0.0.1 zuowen8.com
+127.0.0.1 zuowenba.net
 127.0.0.1 zuowenzhinan.com
 127.0.0.1 zuowenzhou.com
 127.0.0.1 zuqiuyi.com
