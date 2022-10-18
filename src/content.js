@@ -399,44 +399,59 @@ const getRedirectedUrlOrHostname = (() => {
   addHandler("www.baidu.com", () => {
     // desktop or iPad, search from baidu.com
     if (docHostname === "www.baidu.com" && docPathname === "/s") {
+      // general result link
       if (p === "/link") {
-        if (elem.matches('.result[mu] h3 a, .result-op[mu] h3 a')) {
-          const refNode = elem.closest('.result[mu], .result-op[mu]');
-          if (refNode) {
-            return refNode.getAttribute('mu');
+        if (s.has('url')) {
+          // 网页
+          if (elem.matches('.result[mu] h3 a, .result-op[mu] h3 a')) {
+            const refNode = elem.closest('.result[mu], .result-op[mu]');
+            if (refNode) {
+              return refNode.getAttribute('mu');
+            }
+          }
+          // 资讯, 贴吧, 知道, etc.: source URL is exposed
+        }
+      }
+      // 广告
+      else if (p === "/baidu.php") {
+        if (s.has('url')) {
+          if (elem.matches('a[data-landurl]')) {
+            return elem.getAttribute('data-landurl');
           }
         }
-      } else if (p === "/baidu.php") {
-        return elem.getAttribute('data-landurl');
       }
     }
   });
 
   // 百度 mobile
   addHandler("m.baidu.com", () => {
-    if (
-      // iPhone or Android, JavaScript enabled, search from baidu.com
-      (docHostname === "www.baidu.com" && docPathname === "/from=844b/s" && p.startsWith("/from=844b/")) ||
-      // JavaScript enabled, search from m.baidu.com
-      // (docHostname === "m.baidu.com" && docPathname === "/s" && p.startsWith("/from=0/")) ||
-      // desktop or iPad, JavaScript disabled, search from m.baidu.com
-      (docHostname === "m.baidu.com" && (docPathname === "/s" || docPathname.startsWith('/pu=sz')) && p.startsWith("/from=0/")) ||
-      // iPhone or Android, JavaScript disabled, search from m.baidu.com (baidu.com auto-redirects to m.baidu.com)
-      (docHostname === "m.baidu.com" && (docPathname === "/s" || docPathname.startsWith('/from=844b/pu=sz')) && p.startsWith("/from=844b/"))
-    ) {
-      // JavaScript enabled
-      if (elem.matches('#results .result[data-log] a.c-blocka')) {
-        const refNode = elem.closest('.result[data-log]');
-        if (refNode) {
-          return JSON.parse(refNode.getAttribute('data-log')).mu;
+    // iPhone or Android, JavaScript enabled, search from baidu.com
+    // (docHostname === "www.baidu.com" && docPathname === "/from=844b/s" && p.startsWith("/from=844b/"))
+    // JavaScript enabled, search from m.baidu.com
+    // (docHostname === "m.baidu.com" && docPathname === "/s" && p.startsWith("/from=0/"))
+    // desktop or iPad, JavaScript disabled, search from m.baidu.com
+    // (docHostname === "m.baidu.com" && (docPathname === "/s" || docPathname.startsWith('/pu=sz')) && p.startsWith("/from=0/"))
+    // iPhone or Android, JavaScript disabled, search from m.baidu.com (baidu.com auto-redirects to m.baidu.com)
+    // (docHostname === "m.baidu.com" && (docPathname === "/s" || docPathname.startsWith('/from=844b/pu=sz')) && p.startsWith("/from=844b/"))
+    if (docHostname === "www.baidu.com" || docHostname === "m.baidu.com") {
+      if (s.has('nsrc')) {
+        // 资讯, 贴吧, etc. (JavaScript enabled)
+        if (elem.matches('a[data-url]')) {
+          return elem.getAttribute('data-url');
         }
-      }
-
-      // JavaScript disabled
-      if (elem.matches('#page-res .resitem a.result_title')) {
-        const refNode = elem.closest('.resitem').querySelector('.site');
-        if (refNode) {
-          return refNode.textContent;
+        // 全部 (JavaScript enabled)
+        else if (elem.matches('#results .result[data-log] a.c-blocka')) {
+          const refNode = elem.closest('.result[data-log]');
+          if (refNode) {
+            return JSON.parse(refNode.getAttribute('data-log')).mu;
+          }
+        }
+        // 网页, 小说, etc. (JavaScript disabled)
+        else if (elem.matches('#page-res .resitem a.result_title')) {
+          const refNode = elem.closest('.resitem').querySelector('.abs .site');
+          if (refNode) {
+            return refNode.textContent;
+          }
         }
       }
     }
