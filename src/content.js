@@ -569,13 +569,13 @@ const getRedirectedUrlOrHostname = (() => {
 async function updateLinkMarker(elem) {
   // console.warn("updateLinkMarker", elem);
   return updateLinkMarkerPromise = updateLinkMarkerPromise.then(async () => {
-    if (!showLinkMarkers) { return false; }
+    if (!showLinkMarkers) { return 0; }
 
-    if (!elem.isConnected || !elem.href) { return false; }
+    if (!elem.isConnected || !elem.href) { return 0; }
 
     const u = new URL(elem.href);
     const c = u.protocol;
-    if (!(c === "http:" || c === "https:")) { return false; }
+    if (!(c === "http:" || c === "https:")) { return 0; }
 
     // check whether the URL is blocked
     return await browser.runtime.sendMessage({
