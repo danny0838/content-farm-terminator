@@ -2,7 +2,7 @@
 # Description: Filter for cloner sites that are mostly free of copyright issue since the source site
 #     is copyleft or copyfree, but provide only trivial layout change or poor-quality bot translation
 #     and are thus spam-like.
-# Last modified: 2022-10-19T11:28:37+00:00
+# Last modified: 2022-10-19T12:17:31+00:00
 # Homepage: https://danny0838.github.io/content-farm-terminator/
 # Licence: MIT License
 # Source: https://danny0838.github.io/content-farm-terminator/files/blocklist-hosts/bad-cloners.txt
@@ -15,6 +15,7 @@
 127.0.0.1 wake-up-neo.net
 127.0.0.1 wanweibaike.net
 127.0.0.1 wikiwand.com
+127.0.0.1 chromexy.com
 #!aggreg-ublGhT: https://raw.githubusercontent.com/arosh/ublacklist-github-translation/master/uBlacklist.txt (https://github.com/arosh/ublacklist-github-translation)
 127.0.0.1 lightrun.com  #!aggreg-ublGhT
 127.0.0.1 bleepcoder.com  #!aggreg-ublGhT

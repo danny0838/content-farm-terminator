@@ -1,6 +1,6 @@
 # Title: Content Farm Filters
 # Description: Filter for general content farms, mostly in Chinese.
-# Last modified: 2022-10-19T11:28:37+00:00
+# Last modified: 2022-10-19T12:21:32+00:00
 # Homepage: https://danny0838.github.io/content-farm-terminator/
 # Licence: MIT License
 # Source: https://danny0838.github.io/content-farm-terminator/files/blocklist-hosts/content-farms.txt
@@ -8635,6 +8635,53 @@
 127.0.0.1 zzmi.top
 127.0.0.1 zzrowieir444.com
 127.0.0.1 zztongyun.com
+127.0.0.1 vkihco.me  #redirects to aetop.top
+127.0.0.1 wenda123.org  #copier of StackOverflow
+127.0.0.1 laboratoriovirologiacs.it  #redirects to topawardhere.life
+127.0.0.1 lounasravintolaeverest.fi  #redirects to cubicongardens.sk
+127.0.0.1 meinsaarlouis360.de  #redirects to topawardhere.life
+127.0.0.1 stream-core.xyz  #malicious ad scripts
+127.0.0.1 nxtpsh.top  #redirects to stream-core.xyz
+127.0.0.1 siracusa.it  #redirects to nxtpsh.top
+127.0.0.1 messina.it  #redirects to nxtpsh.top
+127.0.0.1 logisfrance-architecture.fr  #redirects to isabel-lopez-kubben.at
+127.0.0.1 impresadipuliziemilano.mi.it  #redirects to nxtpsh.top
+127.0.0.1 torino.it  #redirects to nxtpsh.top
+127.0.0.1 predire.vs.it  #redirects to nxtpsh.top
+127.0.0.1 meinkraft.ch  #redirects to quing.im
+127.0.0.1 f93ir.com.es  #redirects to na-madagaskar.sk
+127.0.0.1 dlaflorysty.pl  #redirects to sergiofoto.lv
+127.0.0.1 peritiagrari.fr.it  #redirects to nxtpsh.top
+127.0.0.1 jaavnacsdw.com  #malicious ad scripts
+127.0.0.1 charng-lung.com.tw  #redirects to jaavnacsdw.com
+127.0.0.1 abriduski.vda.it  #redirects to nxtpsh.top
+127.0.0.1 usenetfilesjlbomdo.za.com  #redirects to mo08.biz
+127.0.0.1 trzebieszewo.pl  #redirects to tiktokfinder.shop
+127.0.0.1 almasumare.ro  #redirects to di06.biz
+127.0.0.1 sogeinfo.com
+127.0.0.1 healthylane.life
+127.0.0.1 asiritown.com
+127.0.0.1 jutsekw.me  #redirects to soonmiss.top
+127.0.0.1 toptanzarfdunyasi.com
+127.0.0.1 omniummackenzie.com
+127.0.0.1 freeunblockauyqckn.ru.com  #redirects to tiktokfinder.shop
+127.0.0.1 newsoftsomusw.sa.com  #redirects to tiktokfinder.shop
+127.0.0.1 twvscnwggzpt.za.com  #redirects to tiktokfinder.shop
+127.0.0.1 twvpnmpuu.ru.com  #redirects to tiktokfinder.shop
+127.0.0.1 vpncncjmkb.za.com  #redirects to tiktokfinder.shop
+127.0.0.1 cnfreedomgicwq.ru.com  #redirects to tiktokfinder.shop
+127.0.0.1 twfreedomumrms.ru.com  #redirects to tiktokfinder.shop
+127.0.0.1 bpnhklcgf.sa.com  #redirects to tiktokfinder.shop
+127.0.0.1 howtovpnuquh.ru.com  #redirects to tiktokfinder.shop
+127.0.0.1 tetedail.fr  #redirects to tiktokfinder.shop
+127.0.0.1 moreloadsdprmns.za.com  #redirects to tiktokfinder.shop
+127.0.0.1 cnfreedomldlra.ru.com  #redirects to tiktokfinder.shop
+127.0.0.1 cnfreedomrtveas.ru.com  #redirects to tiktokfinder.shop
+127.0.0.1 graphicvp.ru
+127.0.0.1 freedomxmfnh.sa.com  #redirects to tiktokfinder.shop
+127.0.0.1 notas-flauta.es  #redirects to tiktokfinder.shop
+127.0.0.1 bpnhkndunskh.sa.com  #redirects to tiktokfinder.shop
+127.0.0.1 ngulikan.com
 #!aggreg-cxyzjd: https://raw.githubusercontent.com/wdmpa/content-farm-list/main/domains/spam/cxyzjd.txt (https://github.com/wdmpa/content-farm-list)
 127.0.0.1 cxybb.com  #!aggreg-cxyzjd
 127.0.0.1 cxymm.net  #!aggreg-cxyzjd
