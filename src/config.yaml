@@ -295,7 +295,7 @@ build:
           value: /^https?://(?:\w+\.)?twitter\.com/(?:{value})(?=[/?#]|$)/
         youtube-channel:
           <<: *grouping_regex_scheme
-          value: /^https?://(?:\w+\.)?youtube\.com/channel/(?:{value})(?=[/?#]|$)/
+          value: /^https?://(?:\w+\.)?youtube\.com/c(?:hannel)?/(?:{value})(?=[/?#]|$)/
         youtube-user:
           <<: *grouping_regex_scheme
           value: /^https?://(?:\w+\.)?youtube\.com/user/(?:{value})(?=[/?#]|$)/

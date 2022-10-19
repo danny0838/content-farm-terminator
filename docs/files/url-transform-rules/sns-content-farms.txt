@@ -20,7 +20,7 @@
 /^https?://(?:www\.)?pinterest(?:\.[a-z]+)+/([\w-]+)(?=[/?#]|$)/ /^https?://(?:www\.)?pinterest(?:\.[a-z]+)+/$1(?=[/?#]|$)/
 
   -- Youtube
-/^https?://(?:\w+\.)?youtube\.com/channel/([\w-]+)(?=[/?#]|$)/ /^https?://(?:\w+\.)?youtube\.com/channel/$1(?=[/?#]|$)/
+/^https?://(?:\w+\.)?youtube\.com/c(?:hannel)?/([\w%-]+)(?=[/?#]|$)/ /^https?://(?:\w+\.)?youtube\.com/c(?:hannel)?/$1(?=[/?#]|$)/
 /^https?://(?:\w+\.)?youtube\.com/user/([\w-]+)(?=[/?#]|$)/ /^https?://(?:\w+\.)?youtube\.com/user/$1(?=[/?#]|$)/
 
   -- Vimeo
