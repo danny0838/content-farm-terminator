@@ -7,7 +7,6 @@ auto_tasks:
         files:
           - src/blocklist/
         auto_fix: true
-        sort_rules: true
     - action: uniquify
       kwargs:
         files:
@@ -66,7 +65,6 @@ auto_tasks:
         files:
           - src/blocklist/
         auto_fix: true
-        sort_rules: true
 
   # uniquify all general blacklists
   uniquify:
@@ -101,7 +99,6 @@ auto_tasks:
         files:
           - src/aggregations/
         auto_fix: true
-        sort_rules: true
     - action: uniquify
       kwargs:
         <<: *exclude_non_content_farms
