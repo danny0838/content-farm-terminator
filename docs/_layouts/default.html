@@ -19,10 +19,10 @@
 <head>
 <meta charset="utf-8">
 <title>
-{%- if page.title == project_title -%}
-  {{ project_title }}
-{%- else -%}
+{%- if page.title -%}
   {{ page.title }} | {{ project_title }}
+{%- else -%}
+  {{ project_title }}
 {%- endif -%}
 </title>
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
