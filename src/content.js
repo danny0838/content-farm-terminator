@@ -664,7 +664,7 @@ async function updateLinkMarker(elem) {
           }
         }
 
-        // insert in the first header descendant
+        // insert in the first non-blank header descendant
         for (const node of elem.querySelectorAll('h1, h2, h3, h4, h5, h6')) {
           if (node.offsetParent && node.textContent.trim()) {
             node.insertBefore(marker, node.firstChild);
@@ -672,14 +672,11 @@ async function updateLinkMarker(elem) {
           }
         }
 
-        // insert in the first span-like descendant
-        for (const node of elem.querySelectorAll('span, div, b')) {
-          if (node.offsetParent) {
-            const firstChild = node.firstChild;
-            if (firstChild && firstChild.nodeType === 3 && firstChild.nodeValue.trim()) {
-              node.insertBefore(marker, firstChild);
-              return;
-            }
+        // insert in the first non-blank span-like descendant
+        for (const node of elem.querySelectorAll('span, div, strong, em, b, i, u, abbr')) {
+          if (node.offsetParent && node.textContent.trim()) {
+            node.insertBefore(marker, node.firstChild);
+            return;
           }
         }
 
