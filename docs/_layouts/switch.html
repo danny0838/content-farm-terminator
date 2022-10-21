@@ -5,6 +5,7 @@
 </head>
 <body>
 <div id="locales">Language: {% include locales.html %}</div>
+<link rel="stylesheet" type="text/css" href="{{ '/assets/css/locales.css?v=' | append: site.github.build_revision | relative_url }}">
 <script>
 (function () {
   var langParts = (((navigator.userLanguage || navigator.language).replace('-', '_')).toLowerCase()).split('_');

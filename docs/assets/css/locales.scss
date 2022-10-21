@@ -1,0 +1,11 @@
+---
+---
+
+span.locales a::after {
+  content: "|";
+  padding: .2em;
+}
+
+span.locales a:last-of-type::after {
+  content: none;
+}

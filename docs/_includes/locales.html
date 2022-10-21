@@ -1,12 +1,13 @@
+<span class="locales">
 {%- for lang in site.languages -%}
-  {%- if page.lang %}
-    {%- capture url %}/{{ lang[0] }}/{{ page.url | split: "/" | shift | shift | join: "/" }}{% endcapture %}
-  {%- else %}
-    {%- capture url %}/{{ lang[0] }}{{ page.url }}{% endcapture %}
-  {%- endif %}
-  {%- assign files = site.pages | where: "url", url %}
-  {%- if files.size > 0 %}
-    {%- if forloop.first != true %} | {% endif -%}
+  {%- if page.lang -%}
+    {%- capture url %}/{{ lang[0] }}/{{ page.url | split: "/" | shift | shift | join: "/" }}{% endcapture -%}
+  {%- else -%}
+    {%- capture url %}/{{ lang[0] }}{{ page.url }}{% endcapture -%}
+  {%- endif -%}
+  {%- assign files = site.pages | where: "url", url -%}
+  {%- if files.size > 0 -%}
     <a href="{{ url | relative_url }}" lang="{{ lang[0] }}">{{ lang[1] }}</a>
-  {%- endif %}
+  {%- endif -%}
 {%- endfor -%}
+</span>
