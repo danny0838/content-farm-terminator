@@ -367,6 +367,14 @@ const getRedirectedUrlOrHostname = (() => {
   // WebCrawler (www.webcrawler.com)
   // 2022-10-16 - No more provide redirected URL.
 
+  // DuckDuckGo (for old browsers e.g. IE9)
+  // https://help.duckduckgo.com/duckduckgo-help-pages/results/rduckduckgocom/
+  addHandler("duckduckgo.com", () => {
+    if (p === "/l/") {
+      return s.get("uddg");
+    }
+  });
+
   // Dogpile
   addHandler("ccs.dogpile.com", () => {
     if (p === "/ClickHandler.ashx") {
