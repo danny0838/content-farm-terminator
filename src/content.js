@@ -377,6 +377,13 @@ const getRedirectedUrlOrHostname = (() => {
     }
   });
 
+  // Ekoru
+  addHandler("hunuj.com", () => {
+    if (p === "/gt") {
+      return s.get("rdto");
+    }
+  });
+
   // Dogpile
   addHandler("ccs.dogpile.com", () => {
     if (p === "/ClickHandler.ashx") {
