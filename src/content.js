@@ -354,7 +354,9 @@ const getRedirectedUrlOrHostname = (() => {
   });
 
   // Yahoo search (JavaScript disabled)
-  addHandler("r.search.yahoo.com", () => {
+  // AOL
+  // OneSearch
+  addHandler(["r.search.yahoo.com", "search.aol.com", "r-notracking.onesearch.com", "ri-notracking.onesearch.com"], () => {
     const m = p.match(/\/RU=([^\/]*)\//);
     if (m) {
       return decodeURIComponent(m[1]);
