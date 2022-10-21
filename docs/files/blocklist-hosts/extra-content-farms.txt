@@ -1,6 +1,6 @@
 # Title: Extra Content Farm Filters
 # Description: Extra filter for content-farm-like sites, mostly aggregated from other sources.
-# Last modified: 2022-10-21T16:54:53+00:00
+# Last modified: 2022-10-21T16:56:07+00:00
 # Homepage: https://danny0838.github.io/content-farm-terminator/
 # Licence: MIT License
 # Source: https://danny0838.github.io/content-farm-terminator/files/blocklist-hosts/extra-content-farms.txt
@@ -72993,7 +72993,6 @@
 127.0.0.1 shop.99114.com  #!aggreg-nonpnt
 127.0.0.1 shop.pcpop.com  #!aggreg-nonpnt
 127.0.0.1 shopee.tw  #!aggreg-nonpnt
-127.0.0.1 sites.google.com  #!aggreg-nonpnt
 127.0.0.1 slickdeals.net  #!aggreg-nonpnt
 127.0.0.1 smartme.pl  #!aggreg-nonpnt
 127.0.0.1 sodocumentation.net  #!aggreg-nonpnt
