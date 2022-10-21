@@ -395,6 +395,21 @@ const getRedirectedUrlOrHostname = (() => {
     }
   });
 
+  // Qwant Lite
+  // Accessing from some contries is not supported and may show gibberish and requires a proxy.
+  addHandler("lite.qwant.com", () => {
+    if (docHostname === "lite.qwant.com" && docPathname === "/") {
+      if (p.startsWith("/redirect/")) {
+        if (elem.matches('article.result h2 a')) {
+          const refNode = elem.closest('article.result').querySelector('.url.partner');
+          if (refNode) {
+            return refNode.textContent;
+          }
+        }
+      }
+    }
+  });
+
   // 百度
   addHandler("www.baidu.com", () => {
     // desktop or iPad, search from baidu.com
