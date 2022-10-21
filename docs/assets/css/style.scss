@@ -7,6 +7,12 @@ b { font-weight: bold; }
 
 #project_title a { color: unset; }
 
+figure.box {
+  margin: 0.8em auto;
+  text-align: center;
+  font-size: small;
+}
+
 figure.gallery {
   white-space: nowrap;
   overflow-x: auto;

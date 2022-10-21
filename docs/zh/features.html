@@ -1,0 +1,116 @@
+---
+layout: default
+lang: zh
+title: 功能介紹
+---
+<h1>功能介紹</h1>
+<p>「終結內容農場」針對內容農場有三段阻擋功能：自動標示農場連結、阻止進入內容農場、封鎖廣告與惡意程式 ，且能自由訂閱網路黑名單或設定黑白灰名單。</p>
+
+<h2>三段阻擋內容農場</h2>
+<h3>1. 自動標示農場連結</h3>
+<p>「終結內容農場」會自動把連往內容農場的網址加上標記，一眼就能看穿哪些超連結會連往內容農場。</p>
+
+<figure class="box">
+<img src="../assets/images/screenshots/firefox-001.png" alt="">
+<figcaption>在 Google 搜尋結果標示內容農場</figcaption>
+</figure>
+
+<figure class="box">
+<img src="../assets/images/screenshots/firefox-006.png" alt="">
+<figcaption>在百度搜尋結果標示內容農場</figcaption>
+</figure>
+
+<figure class="box">
+<img src="../assets/images/screenshots/firefox-002.png" alt="">
+<figcaption>在 Facebook 標示內容農場</figcaption>
+</figure>
+
+<figure class="box">
+<img src="../assets/images/screenshots/firefox-007.png" alt="">
+<figcaption>在 YouTube 標示農場頻道</figcaption>
+</figure>
+
+<p>有些網站的超連結會經過轉址處理，例如臉書會把連往 <code>http://example.com</code> 的網址轉寫為 <code>https://l.facebook.com/l.php?u=https%3A%2F%2Fexample.com...</code>。「終結內容農場」支援許多知名搜尋引擎、社群網站的轉址解析，此例若有內容農場位於 <code>example.com</code>，經前述轉寫的超連結也會被加上標記。目前支援的網站有 Google、Bing、DuckDuckGo、百度、搜狗、Facebook、Twitter、Instagram、YouTube 等等。</p>
+
+<h3>2. 阻止進入內容農場</h3>
+<p>「終結內容農場」會在使用者嘗試進入內容農場前自動攔截封鎖，以便及時回頭。</p>
+
+<figure class="box">
+<img src="../assets/images/screenshots/firefox-003.png" alt="">
+<figcaption>進入內容農場前及時封鎖</figcaption>
+</figure>
+
+<p>即使連往內容農場的超連結會被標記，仍可能有漏網之魚，使用者也可能因伺服端轉址、網頁腳本等非超連結方式重導向到內容農場，主動攔截功能可有效防止意外進入。</p>
+
+<h3>3. 封鎖廣告與惡意程式</h3>
+<p>少數情況可能需要查看被封鎖的頁面，此時可在封鎖頁面按下 [檢視]，「終結內容農場」會顯示去除廣告及程式碼的頁面，如此既能安全調查網頁內容，又不致讓農場主取得廣告流量及收益。</p>
+
+<figure class="box">
+<img src="../assets/images/screenshots/firefox-004.png" alt="">
+<figcaption>檢視去除廣告及程式碼的頁面內容</figcaption>
+</figure>
+
+<p>有些內容農場刻意設計成必須透過腳本載入頁面（可能是為了強迫使用者啟用網頁腳本，以利執行廣告或惡意程式），去除程式碼的 [檢視] 頁面無法正常運作。終結內容農場也提供了 [解鎖] 功能，可暫時解除對該網頁的封鎖，使用時須輸入驗證碼，且設有冷卻計時，以免頻繁解鎖導致失去封鎖意義。</p>
+
+<figure class="box">
+<img src="../assets/images/screenshots/firefox-005.png" alt="">
+<figcaption>暫時解鎖網頁</figcaption>
+</figure>
+
+<p>如果調查後認為該網站不是需要抵制的內容農場，或有其他特殊需求，可點擊 [調整封鎖名單] 進入選項頁面把該網站從黑名單移除或加入灰、白名單。</p>
+
+<h2>自訂封鎖名單</h2>
+<p>「終結內容農場」可訂閱網路黑名單，訂閱後會定期取得最新版本的內容農場名單，以免遺漏層出不窮的新農場。</p>
+
+<p>「終結內容農場」安裝後會自動訂閱一個預設的網路黑名單。如有額外需求，可在選項頁面的 [網路黑名單] 欄位加入網址訂閱更多黑名單；若預設黑名單不符需求，刪除其網址即可取消訂閱。</p>
+
+<figure class="box">
+<img src="../assets/images/screenshots/webblacklist-zh.png" alt="">
+<figcaption>除預設黑名單以外，額外訂閱一個網路黑名單</figcaption>
+</figure>
+
+<p>訂閱後可在選項頁面點擊 [檢視已載入的黑名單]，檢視目前已載入的黑名單及其最後更新時間。</p>
+
+<p>除了預設的網路黑名單，「終結內容農場」也另外提供了幾份網路黑名單，可點擊 [我們的網路黑名單] 進入<a href="./subscriptions">後台資料庫</a>查看，並視需求加入訂閱。</p>
+
+<p>「終結內容農場」的黑名單採開放舉報機制，可從選項頁面最後的 [舉報內容農場] 連結進入<a href="./report">舉報表單</a>舉報新發現的農場。舉報記錄、審核標準、審核結果都公開在網路上可供檢查及討論。</p>
+
+<p>除了訂閱網路黑名單，也可以在選項頁面自訂額外的封鎖名單，包括用「黑名單」封鎖網站，用「白名單」排除網站，或用「灰名單」排除封鎖規則（可排除網路黑名單中不想要的規則）。</p>
+
+<figure class="box">
+<img src="../assets/images/screenshots/blacklist-zh.png" alt="">
+<figcaption>自訂黑名單</figcaption>
+</figure>
+
+<figure class="box">
+<img src="../assets/images/screenshots/whitelist-zh.png" alt="">
+<figcaption>自訂白名單</figcaption>
+</figure>
+
+<figure class="box">
+<img src="../assets/images/screenshots/graylist-zh.png" alt="">
+<figcaption>自訂灰名單</figcaption>
+</figure>
+
+<p>「終結內容農場」的封鎖名單格式相當簡單，只要輸入網域即可封鎖該網域及其所有子網域，例如 <code>example.com</code> 會封鎖 <code>example.com</code>、<code>www.example.com</code>、<code>sub.example.com</code> 等網站。「終結內容農場」有自動修正功能，一般只要把網址貼上，儲存後即會自動轉換成對應的網域。</p>
+
+<p>指定網域時可使用萬用字元，例如用 <code>example.blogspot.*</code> 封鎖 <code>example.blogspot.com</code>、<code>example.blogspot.tw</code>、<code>example.blogspot.com.tw</code> 等網站。
+
+<p>如果需要封鎖網域下的特定頁面，可用正規表示式指定網址型態，例如 <code>/^https?://(?:[\w-]+\.)*\.example\.com/malicious(?=[/?#]|$)/i</code>。</p>
+
+<p>每個規則後可加上空白，並在空白後輸入說明文字，以提供相關背景資訊，例如 <code>example.com 範例網站</code>。一個小技巧是在規則前面加上空白，可使該規則被視為說明文字而失效，日後只要移除空白即可使之重新生效。</p>
+
+<p>在任意網頁點擊「終結內容農場」工具列按鈕時，會在頁首顯示網址、重導向、相關封鎖規則等資訊。進入內容農場被封鎖時，則可點擊 [調整封鎖名單] 進入。</p>
+
+<figure class="box">
+<img src="../assets/images/screenshots/options-zh.png" alt="">
+<figcaption>從封鎖頁面進入選項頁面時，會顯示相關資訊。</figcaption>
+</figure>
+
+<h2>用右鍵選單快速封鎖網站</h2>
+<p>除了手動輸入網址或規則，也可以透過右鍵選單快速將網站加入黑名單。在網頁空白處按右鍵可將該網站加入黑名單（有些瀏覽器如 Firefox 也支援在分頁上按右鍵），在超連結上按右鍵可將超連結指向的網站加入黑名單，也可以選取多個超連結按右鍵把它們指向的網站一次加入黑名單。</p>
+
+<figure class="box">
+<img src="../assets/images/screenshots/contextmenu-zh.png" alt="">
+<figcaption>用右鍵選單把內容農場快速加入黑名單</figcaption>
+</figure>
