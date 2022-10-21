@@ -1,6 +1,6 @@
 # Title: Extra Content Farm Filters
 # Description: Extra filter for content-farm-like sites, mostly aggregated from other sources.
-# Last modified: 2022-10-19T11:28:37+00:00
+# Last modified: 2022-10-21T16:54:53+00:00
 # Homepage: https://danny0838.github.io/content-farm-terminator/
 # Licence: MIT License
 # Source: https://danny0838.github.io/content-farm-terminator/files/blocklist-hosts/extra-content-farms.txt
@@ -72521,6 +72521,7 @@
 127.0.0.1 cnvhair.com  #!aggreg-nonpnt
 127.0.0.1 comparitech.com  #!aggreg-nonpnt
 127.0.0.1 crackorg.com  #!aggreg-nonpnt
+127.0.0.1 craffts.com  #!aggreg-nonpnt
 127.0.0.1 csolmy.com  #!aggreg-nonpnt
 127.0.0.1 cspfocus.cn  #!aggreg-nonpnt
 127.0.0.1 cundang.cc  #!aggreg-nonpnt
@@ -72530,6 +72531,7 @@
 127.0.0.1 dav01.com  #!aggreg-nonpnt
 127.0.0.1 ddosi.org  #!aggreg-nonpnt
 127.0.0.1 dedeapps.com  #!aggreg-nonpnt
+127.0.0.1 digidash.in  #!aggreg-nonpnt
 127.0.0.1 dkfp88.cn  #!aggreg-nonpnt
 127.0.0.1 du-mon.com  #!aggreg-nonpnt
 127.0.0.1 dyecn.com  #!aggreg-nonpnt
@@ -72582,6 +72584,7 @@
 127.0.0.1 hongniuxinxi.com  #!aggreg-nonpnt
 127.0.0.1 hooos.com  #!aggreg-nonpnt
 127.0.0.1 hostphb.com  #!aggreg-nonpnt
+127.0.0.1 howtopapa.com  #!aggreg-nonpnt
 127.0.0.1 hpnews.online  #!aggreg-nonpnt
 127.0.0.1 html.cn  #!aggreg-nonpnt
 127.0.0.1 huahui08.com  #!aggreg-nonpnt
@@ -72627,6 +72630,7 @@
 127.0.0.1 licenseapps.com  #!aggreg-nonpnt
 127.0.0.1 liliang.info  #!aggreg-nonpnt
 127.0.0.1 linuxprobe.com  #!aggreg-nonpnt
+127.0.0.1 liupan.org  #!aggreg-nonpnt
 127.0.0.1 liwu.bi  #!aggreg-nonpnt
 127.0.0.1 liyi1688.com  #!aggreg-nonpnt
 127.0.0.1 lovfp.com  #!aggreg-nonpnt
@@ -72637,6 +72641,7 @@
 127.0.0.1 megavolt67.ru  #!aggreg-nonpnt
 127.0.0.1 meirikeji.com  #!aggreg-nonpnt
 127.0.0.1 metropaintballgames.com  #!aggreg-nonpnt
+127.0.0.1 mhaohuo.com  #!aggreg-nonpnt
 127.0.0.1 mississippifaithinaction.org  #!aggreg-nonpnt
 127.0.0.1 mo08.biz  #!aggreg-nonpnt
 127.0.0.1 mobile2day.com  #!aggreg-nonpnt
@@ -72653,10 +72658,12 @@
 127.0.0.1 njfpled.com  #!aggreg-nonpnt
 127.0.0.1 njloft.com  #!aggreg-nonpnt
 127.0.0.1 nmxjp.com  #!aggreg-nonpnt
+127.0.0.1 nokibar.com  #!aggreg-nonpnt
 127.0.0.1 nordvpnblog.com  #!aggreg-nonpnt
 127.0.0.1 nuomiphp.com  #!aggreg-nonpnt
 127.0.0.1 nyist.net  #!aggreg-nonpnt
 127.0.0.1 ofweek.com  #!aggreg-nonpnt
+127.0.0.1 onitroad.com  #!aggreg-nonpnt
 127.0.0.1 outofmemory.cn  #!aggreg-nonpnt
 127.0.0.1 panjk.com  #!aggreg-nonpnt
 127.0.0.1 picclick.co.uk  #!aggreg-nonpnt
@@ -72672,6 +72679,7 @@
 127.0.0.1 psjgs.com.cn  #!aggreg-nonpnt
 127.0.0.1 py.cn  #!aggreg-nonpnt
 127.0.0.1 pyn9.com  #!aggreg-nonpnt
+127.0.0.1 pythontechworld.com  #!aggreg-nonpnt
 127.0.0.1 qciss.net  #!aggreg-nonpnt
 127.0.0.1 qiangwaikan.com  #!aggreg-nonpnt
 127.0.0.1 qingdaosailing.com  #!aggreg-nonpnt
@@ -72699,6 +72707,7 @@
 127.0.0.1 shumashidai.com  #!aggreg-nonpnt
 127.0.0.1 shyaki.com  #!aggreg-nonpnt
 127.0.0.1 sincereschool.com  #!aggreg-nonpnt
+127.0.0.1 sirhow.com  #!aggreg-nonpnt
 127.0.0.1 sjzjgbj.com  #!aggreg-nonpnt
 127.0.0.1 sjzjyyx.com  #!aggreg-nonpnt
 127.0.0.1 sm-tc.cn  #!aggreg-nonpnt
@@ -72747,6 +72756,7 @@
 127.0.0.1 tysp.org  #!aggreg-nonpnt
 127.0.0.1 ujjainyoga.com  #!aggreg-nonpnt
 127.0.0.1 uk.com  #!aggreg-nonpnt
+127.0.0.1 ultimate-communications.com  #!aggreg-nonpnt
 127.0.0.1 unansea.com  #!aggreg-nonpnt
 127.0.0.1 uosohyc.site  #!aggreg-nonpnt
 127.0.0.1 ux6.com  #!aggreg-nonpnt
@@ -72762,6 +72772,7 @@
 127.0.0.1 waymanamechurch.org  #!aggreg-nonpnt
 127.0.0.1 wbolt.com  #!aggreg-nonpnt
 127.0.0.1 wdfxw.net  #!aggreg-nonpnt
+127.0.0.1 weblihost.com  #!aggreg-nonpnt
 127.0.0.1 website-problem.info  #!aggreg-nonpnt
 127.0.0.1 websiterating.com  #!aggreg-nonpnt
 127.0.0.1 wenbf.com  #!aggreg-nonpnt
@@ -72791,6 +72802,7 @@
 127.0.0.1 xzlbjg.com  #!aggreg-nonpnt
 127.0.0.1 y8freegame.com  #!aggreg-nonpnt
 127.0.0.1 yijiayi88.com  #!aggreg-nonpnt
+127.0.0.1 yinzdian.com  #!aggreg-nonpnt
 127.0.0.1 yisu.com  #!aggreg-nonpnt
 127.0.0.1 ymgjedu.com  #!aggreg-nonpnt
 127.0.0.1 you-android.com  #!aggreg-nonpnt

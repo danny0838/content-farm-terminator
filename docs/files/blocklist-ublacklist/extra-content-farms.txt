@@ -1,6 +1,6 @@
 # Title: Extra Content Farm Filters
 # Description: Extra filter for content-farm-like sites, mostly aggregated from other sources.
-# Last modified: 2022-10-19T11:28:37+00:00
+# Last modified: 2022-10-21T16:54:53+00:00
 # Homepage: https://danny0838.github.io/content-farm-terminator/
 # Licence: MIT License
 # Source: https://danny0838.github.io/content-farm-terminator/files/blocklist-ublacklist/extra-content-farms.txt
@@ -72598,6 +72598,7 @@
 *://*.cnvhair.com/*  #!aggreg-nonpnt
 *://*.comparitech.com/*  #!aggreg-nonpnt
 *://*.crackorg.com/*  #!aggreg-nonpnt
+*://*.craffts.com/*  #!aggreg-nonpnt
 *://*.csdn.net/weixin_26722031/article/*  #!aggreg-nonpnt
 *://*.csolmy.com/*  #!aggreg-nonpnt
 *://*.cspfocus.cn/*  #!aggreg-nonpnt
@@ -72608,6 +72609,7 @@
 *://*.dav01.com/*  #!aggreg-nonpnt
 *://*.ddosi.org/*  #!aggreg-nonpnt
 *://*.dedeapps.com/*  #!aggreg-nonpnt
+*://*.digidash.in/*  #!aggreg-nonpnt
 *://*.dkfp88.cn/*  #!aggreg-nonpnt
 *://*.dongchedi.com/tag/*  #!aggreg-nonpnt
 *://*.du-mon.com/*  #!aggreg-nonpnt
@@ -72661,6 +72663,7 @@
 *://*.hongniuxinxi.com/*  #!aggreg-nonpnt
 *://*.hooos.com/*  #!aggreg-nonpnt
 *://*.hostphb.com/*  #!aggreg-nonpnt
+*://*.howtopapa.com/*  #!aggreg-nonpnt
 *://*.hpnews.online/*  #!aggreg-nonpnt
 *://*.html.cn/*  #!aggreg-nonpnt
 *://*.huahui08.com/*  #!aggreg-nonpnt
@@ -72710,6 +72713,7 @@
 *://*.licenseapps.com/*  #!aggreg-nonpnt
 *://*.liliang.info/*  #!aggreg-nonpnt
 *://*.linuxprobe.com/*  #!aggreg-nonpnt
+*://*.liupan.org/*  #!aggreg-nonpnt
 *://*.liwu.bi/*  #!aggreg-nonpnt
 *://*.liyi1688.com/*  #!aggreg-nonpnt
 *://*.lovfp.com/*  #!aggreg-nonpnt
@@ -72720,6 +72724,7 @@
 *://*.megavolt67.ru/*  #!aggreg-nonpnt
 *://*.meirikeji.com/*  #!aggreg-nonpnt
 *://*.metropaintballgames.com/*  #!aggreg-nonpnt
+*://*.mhaohuo.com/*  #!aggreg-nonpnt
 *://*.mississippifaithinaction.org/*  #!aggreg-nonpnt
 *://*.mo08.biz/*  #!aggreg-nonpnt
 *://*.mobile2day.com/*  #!aggreg-nonpnt
@@ -72736,10 +72741,12 @@
 *://*.njfpled.com/*  #!aggreg-nonpnt
 *://*.njloft.com/*  #!aggreg-nonpnt
 *://*.nmxjp.com/*  #!aggreg-nonpnt
+*://*.nokibar.com/*  #!aggreg-nonpnt
 *://*.nordvpnblog.com/*  #!aggreg-nonpnt
 *://*.nuomiphp.com/*  #!aggreg-nonpnt
 *://*.nyist.net/*  #!aggreg-nonpnt
 *://*.ofweek.com/*  #!aggreg-nonpnt
+*://*.onitroad.com/*  #!aggreg-nonpnt
 *://*.oschina.net/informat/*  #!aggreg-nonpnt
 *://*.ourplay.net/ask/*  #!aggreg-nonpnt
 *://*.ourplay.net/qazt/*  #!aggreg-nonpnt
@@ -72759,6 +72766,7 @@
 *://*.psjgs.com.cn/*  #!aggreg-nonpnt
 *://*.py.cn/*  #!aggreg-nonpnt
 *://*.pyn9.com/*  #!aggreg-nonpnt
+*://*.pythontechworld.com/*  #!aggreg-nonpnt
 *://*.qciss.net/*  #!aggreg-nonpnt
 *://*.qiangwaikan.com/*  #!aggreg-nonpnt
 *://*.qingdaosailing.com/*  #!aggreg-nonpnt
@@ -72786,6 +72794,7 @@
 *://*.shumashidai.com/*  #!aggreg-nonpnt
 *://*.shyaki.com/*  #!aggreg-nonpnt
 *://*.sincereschool.com/*  #!aggreg-nonpnt
+*://*.sirhow.com/*  #!aggreg-nonpnt
 *://*.sjzjgbj.com/*  #!aggreg-nonpnt
 *://*.sjzjyyx.com/*  #!aggreg-nonpnt
 *://*.sm-tc.cn/*  #!aggreg-nonpnt
@@ -72836,6 +72845,7 @@
 *://*.tysp.org/*  #!aggreg-nonpnt
 *://*.ujjainyoga.com/*  #!aggreg-nonpnt
 *://*.uk.com/*  #!aggreg-nonpnt
+*://*.ultimate-communications.com/*  #!aggreg-nonpnt
 *://*.unansea.com/*  #!aggreg-nonpnt
 *://*.uosohyc.site/*  #!aggreg-nonpnt
 *://*.ux6.com/*  #!aggreg-nonpnt
@@ -72851,8 +72861,10 @@
 *://*.waymanamechurch.org/*  #!aggreg-nonpnt
 *://*.wbolt.com/*  #!aggreg-nonpnt
 *://*.wdfxw.net/*  #!aggreg-nonpnt
+*://*.weblihost.com/*  #!aggreg-nonpnt
 *://*.website-problem.info/*  #!aggreg-nonpnt
 *://*.websiterating.com/*  #!aggreg-nonpnt
+*://*.weibo.com/a/hot/*  #!aggreg-nonpnt
 *://*.wenbf.com/*  #!aggreg-nonpnt
 *://*.westack.live/*  #!aggreg-nonpnt
 *://*.whoisua.com/*  #!aggreg-nonpnt
@@ -72881,6 +72893,7 @@
 *://*.xzlbjg.com/*  #!aggreg-nonpnt
 *://*.y8freegame.com/*  #!aggreg-nonpnt
 *://*.yijiayi88.com/*  #!aggreg-nonpnt
+*://*.yinzdian.com/*  #!aggreg-nonpnt
 *://*.yisu.com/*  #!aggreg-nonpnt
 *://*.ymgjedu.com/*  #!aggreg-nonpnt
 *://*.you-android.com/*  #!aggreg-nonpnt

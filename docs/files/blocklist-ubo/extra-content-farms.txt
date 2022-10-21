@@ -1,7 +1,7 @@
 ! Title: Extra Content Farm Filters
 ! Description: Extra filter for content-farm-like sites, mostly aggregated from other sources.
 ! Expires: 3 days
-! Last modified: 2022-10-19T11:28:37+00:00
+! Last modified: 2022-10-21T16:54:53+00:00
 ! Homepage: https://danny0838.github.io/content-farm-terminator/
 ! Licence: MIT License
 ! Source: https://danny0838.github.io/content-farm-terminator/files/blocklist-ubo/extra-content-farms.txt
@@ -72588,6 +72588,7 @@ cnfreedomrtveas.ru.com  #!aggreg-nonpnt
 cnvhair.com  #!aggreg-nonpnt
 comparitech.com  #!aggreg-nonpnt
 crackorg.com  #!aggreg-nonpnt
+craffts.com  #!aggreg-nonpnt
 csolmy.com  #!aggreg-nonpnt
 cspfocus.cn  #!aggreg-nonpnt
 cundang.cc  #!aggreg-nonpnt
@@ -72597,6 +72598,7 @@ daka111.cn  #!aggreg-nonpnt
 dav01.com  #!aggreg-nonpnt
 ddosi.org  #!aggreg-nonpnt
 dedeapps.com  #!aggreg-nonpnt
+digidash.in  #!aggreg-nonpnt
 dkfp88.cn  #!aggreg-nonpnt
 du-mon.com  #!aggreg-nonpnt
 dyecn.com  #!aggreg-nonpnt
@@ -72649,6 +72651,7 @@ homedo.com  #!aggreg-nonpnt
 hongniuxinxi.com  #!aggreg-nonpnt
 hooos.com  #!aggreg-nonpnt
 hostphb.com  #!aggreg-nonpnt
+howtopapa.com  #!aggreg-nonpnt
 hpnews.online  #!aggreg-nonpnt
 html.cn  #!aggreg-nonpnt
 huahui08.com  #!aggreg-nonpnt
@@ -72694,6 +72697,7 @@ libhunt.com  #!aggreg-nonpnt
 licenseapps.com  #!aggreg-nonpnt
 liliang.info  #!aggreg-nonpnt
 linuxprobe.com  #!aggreg-nonpnt
+liupan.org  #!aggreg-nonpnt
 liwu.bi  #!aggreg-nonpnt
 liyi1688.com  #!aggreg-nonpnt
 lovfp.com  #!aggreg-nonpnt
@@ -72704,6 +72708,7 @@ meetthebookworld.com  #!aggreg-nonpnt
 megavolt67.ru  #!aggreg-nonpnt
 meirikeji.com  #!aggreg-nonpnt
 metropaintballgames.com  #!aggreg-nonpnt
+mhaohuo.com  #!aggreg-nonpnt
 mississippifaithinaction.org  #!aggreg-nonpnt
 mo08.biz  #!aggreg-nonpnt
 mobile2day.com  #!aggreg-nonpnt
@@ -72720,10 +72725,12 @@ nhm.org  #!aggreg-nonpnt
 njfpled.com  #!aggreg-nonpnt
 njloft.com  #!aggreg-nonpnt
 nmxjp.com  #!aggreg-nonpnt
+nokibar.com  #!aggreg-nonpnt
 nordvpnblog.com  #!aggreg-nonpnt
 nuomiphp.com  #!aggreg-nonpnt
 nyist.net  #!aggreg-nonpnt
 ofweek.com  #!aggreg-nonpnt
+onitroad.com  #!aggreg-nonpnt
 outofmemory.cn  #!aggreg-nonpnt
 panjk.com  #!aggreg-nonpnt
 picclick.co.uk  #!aggreg-nonpnt
@@ -72739,6 +72746,7 @@ prestigelublin.eu  #!aggreg-nonpnt
 psjgs.com.cn  #!aggreg-nonpnt
 py.cn  #!aggreg-nonpnt
 pyn9.com  #!aggreg-nonpnt
+pythontechworld.com  #!aggreg-nonpnt
 qciss.net  #!aggreg-nonpnt
 qiangwaikan.com  #!aggreg-nonpnt
 qingdaosailing.com  #!aggreg-nonpnt
@@ -72766,6 +72774,7 @@ shtaxi.com  #!aggreg-nonpnt
 shumashidai.com  #!aggreg-nonpnt
 shyaki.com  #!aggreg-nonpnt
 sincereschool.com  #!aggreg-nonpnt
+sirhow.com  #!aggreg-nonpnt
 sjzjgbj.com  #!aggreg-nonpnt
 sjzjyyx.com  #!aggreg-nonpnt
 sm-tc.cn  #!aggreg-nonpnt
@@ -72814,6 +72823,7 @@ txcsjlb.com  #!aggreg-nonpnt
 tysp.org  #!aggreg-nonpnt
 ujjainyoga.com  #!aggreg-nonpnt
 uk.com  #!aggreg-nonpnt
+ultimate-communications.com  #!aggreg-nonpnt
 unansea.com  #!aggreg-nonpnt
 uosohyc.site  #!aggreg-nonpnt
 ux6.com  #!aggreg-nonpnt
@@ -72829,6 +72839,7 @@ wallzhihu.com  #!aggreg-nonpnt
 waymanamechurch.org  #!aggreg-nonpnt
 wbolt.com  #!aggreg-nonpnt
 wdfxw.net  #!aggreg-nonpnt
+weblihost.com  #!aggreg-nonpnt
 website-problem.info  #!aggreg-nonpnt
 websiterating.com  #!aggreg-nonpnt
 wenbf.com  #!aggreg-nonpnt
@@ -72858,6 +72869,7 @@ xyttt.com  #!aggreg-nonpnt
 xzlbjg.com  #!aggreg-nonpnt
 y8freegame.com  #!aggreg-nonpnt
 yijiayi88.com  #!aggreg-nonpnt
+yinzdian.com  #!aggreg-nonpnt
 yisu.com  #!aggreg-nonpnt
 ymgjedu.com  #!aggreg-nonpnt
 you-android.com  #!aggreg-nonpnt
@@ -74611,5 +74623,5 @@ zlvj.signalhund.de  #!aggreg-yesil
 zrsd.schorfheidecarport.de  #!aggreg-yesil
 zzpr0371.com  #!aggreg-yesil
 /https?://(?:cloud\.tencent\.com/developer/.*|cn\.aliyun\.com/ss/.*|cn\.aliyun\.com/sswm/.*|developer\.aliyun\.com/ask/.*|juejin\.cn/s/.*|www\.aliyun\.com/sswd/.*|www\.huaweicloud\.com/theme/.*|baike\.baidu\.com/tashuo/.*|blog\.csdn\.net/holybin/.*|blog\.csdn\.net/weixin_35909238/.*|book\.jd\.com/publish/Search\?.*|cloud\.tencent\.com/developer/article/.*|cloud\.tencent\.com/developer/ask/.*|cloud\.tencent\.com/developer/information/.*|developer\.aliyun\.com/articlezt/.*|iknow\.baidu\.com/search\?word=.*|my\.oschina\.net/u/4394125/.*|new\.qq\.com/omn/.*|news\.futunn\.com/post/.*|pic\.sogou\.com/pic/searchList\.jsp\?.*|www\.163\.com/dy/article/.*|www\.baidu\.com/sf/.*|www\.csdn\.net/gather_.*|www\.csdn\.net/tags/.*|www\.huaweicloud\.com/articles/.*|www\.lagou\.com/lgeduarticle/.*|www\.pconline\.com\.cn/3g/.*|www\.pconline\.com\.cn/other_pic.*|www\.right\.com\.cn/FORUM/search\.php\?.*|www\.sohu\.com/a/.*|www\.sojson\.com/blog/.*|www\.west\.cn/docs/.*|www\.xinnet\.com/xinzhi/.*|zhidaocommit\.baidu\.com/search\?.*|zidao\.baidu\.com/search\?.*)$/$doc
-/https?://(?:[\w-]+\.)*(?:ntdtv\.com//.*|4hou\.com/posts/.*|51cto\.com/topic/.*|baidu\.com/s\?word=.*|csdn\.net/weixin_26722031/article/.*|dongchedi\.com/tag/.*|imooc\.com/wenda/.*|juejin\.cn/s/.*|lete\.com/kdwenda/.*|liangliangmama\.com/blogs/news/.*|oschina\.net/informat/.*|ourplay\.net/ask/.*|ourplay\.net/qazt/.*|pc6\.com/infoview/.*|toutiao\.com/search/.*|toutiao\.com/search\?keyword=.*|wuzhuiso\.com/s\?q=.*)$/$doc
+/https?://(?:[\w-]+\.)*(?:ntdtv\.com//.*|4hou\.com/posts/.*|51cto\.com/topic/.*|baidu\.com/s\?word=.*|csdn\.net/weixin_26722031/article/.*|dongchedi\.com/tag/.*|imooc\.com/wenda/.*|juejin\.cn/s/.*|lete\.com/kdwenda/.*|liangliangmama\.com/blogs/news/.*|oschina\.net/informat/.*|ourplay\.net/ask/.*|ourplay\.net/qazt/.*|pc6\.com/infoview/.*|toutiao\.com/search/.*|toutiao\.com/search\?keyword=.*|weibo\.com/a/hot/.*|wuzhuiso\.com/s\?q=.*)$/$doc
 /https?://(?:[\w-]+\.)*[\w-]+/(?:\?s=.*|cha\.php\?s=.*|home\.php\?mod=space.*|list\.php\?s=.*|so\.php|so\.php\?s=.*|so/.*)$/$doc
