@@ -218,13 +218,13 @@ async function autoUpdateAssets() {
   autoUpdateAssetsTimer = setTimeout(updateAssets, webBlacklistsUpdateInterval);
 }
 
-async function blockSite(rule, tabId, frameId, quickMode) {
-  rule = filter.transform(filter.parseRuleLine(rule)).validate().toString();
+async function blockSite(urlOrHostname, tabId, frameId, quickMode) {
+  let rule = filter.transform(filter.parseRuleLine(urlOrHostname)).validate().toString();
 
   if (!quickMode) {
     let newRule = await browser.tabs.sendMessage(tabId, {
       cmd: 'blockSite',
-      args: {rule: rule.toString()},
+      args: {rule},
     }, {frameId});
 
     if (newRule) {
@@ -275,7 +275,7 @@ async function blockSelectedLinks(tabId, frameId, quickMode) {
   let rules = (await browser.tabs.sendMessage(tabId, {
       cmd: 'blockSelectedLinks',
     }, {frameId}))
-    .map(rule => filter.transform(filter.parseRuleLine(rule)).validate().toString())
+    .map(urlOrHostname => filter.transform(filter.parseRuleLine(urlOrHostname)).validate().toString())
     .filter(rule => !filter.isInBlacklist(rule));
 
   if (!rules.length) {
@@ -507,17 +507,17 @@ function initMessageListener() {
         return (async () => {
           const validator = new ContentFarmFilter();
           args.transformRules = utils.getLines(args.transformRules)
-            .map(rule => validator.parseTransformRuleLine(rule).validate().toString())
+            .map(line => validator.parseTransformRuleLine(line).validate().toString())
             .join('\n');
           validator.addTransformRulesFromText(args.transformRules);
           args.userBlacklist = utils.getLines(args.userBlacklist)
-            .map(rule => validator.transform(validator.parseRuleLine(rule), 'url').validate().toString())
+            .map(line => validator.transform(validator.parseRuleLine(line), 'url').validate().toString())
             .join('\n');
           args.userWhitelist = utils.getLines(args.userWhitelist)
-            .map(rule => validator.transform(validator.parseRuleLine(rule),'url').validate().toString())
+            .map(line => validator.transform(validator.parseRuleLine(line), 'url').validate().toString())
             .join('\n');
           args.userGraylist = utils.getLines(args.userGraylist)
-            .map(rule => validator.transform(validator.parseRuleLine(rule),'url').validate().toString())
+            .map(line => validator.transform(validator.parseRuleLine(line), 'url').validate().toString())
             .join('\n');
           await utils.setOptions(args);
           return true;
