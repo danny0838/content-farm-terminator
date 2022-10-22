@@ -1,3 +1,5 @@
+  ---- Facebook-like ----
+
   -- Facebook
 /^https?://(?:(?:[\w-]+\.)?facebook\.com(?:/|\b[^#]+#!/)|(?:fb|m)\.(?:com|me)/)groups/(\w+)(?=[/?#]|$)/ /^https?://(?:(?:[\w-]+\.)?facebook\.com(?:/|\b[^#]+#!/)|(?:fb|m)\.(?:com|me)/)groups/$1(?=[/?#]|$)/
 /^https?://(?:(?:[\w-]+\.)?facebook\.com(?:/(?:pg/)?|\b[^#]+#!/)|(?:fb|m)\.(?:com|me)/)(?:[^?#]+/)?(?:[^/?#]+-)?(\d+)(?=[/?#]|$)/ /^https?://(?:(?:[\w-]+\.)?facebook\.com(?:/(?:pg/)?|\b[^#]+#!/)|(?:fb|m)\.(?:com|me)/)(?:[^?#]+/)?(?:[^/?#]+-)?$1(?=[/?#]|$)/
@@ -13,11 +15,30 @@
   -- Plurk
 /^https?://(?:www\.)?plurk\.com/(?:m/p/)?([\w-]+)(?=[/?#]|$)/ /^https?://(?:www\.)?plurk\.com/(?:m/p/)?$1(?=[/?#]|$)/
 
+  -- 微博
+/^https?://weibo\.com/u/(\d+)(?=[/?#]|$)/ /^https?://weibo\.com/u/$1(?=[/?#]|$)/
+
+  -- 腾讯云
+/^https?://cloud\.tencent\.com/developer/user/(\d+)(?=[/?#]|$)/ /^https?://cloud\.tencent\.com/developer/user/$1(?=[/?#]|$)/
+
+  -- 简书
+/^https?://www\.jianshu\.com/u/(\w+)(?=[/?#]|$)/ /^https?://www\.jianshu\.com/u/$1(?=[/?#]|$)/
+
+  -- 掘金
+/^https?://juejin\.cn/user/(\d+)(?=[/?#]|$)/ /^https?://juejin\.cn/user/$1(?=[/?#]|$)/
+
+  ---- Image sharing ----
+
   -- Instagram
 /^https?://(?:www\.)?instagram\.com/([\w-]+)(?=[/?#]|$)/ /^https?://(?:www\.)?instagram\.com/$1(?=[/?#]|$)/
 
   -- Pinterest
 /^https?://(?:www\.)?pinterest(?:\.[a-z]+)+/([\w-]+)(?=[/?#]|$)/ /^https?://(?:www\.)?pinterest(?:\.[a-z]+)+/$1(?=[/?#]|$)/
+
+  -- Imgur
+/^https?://imgur\.com/user/(\w+)(?=[/?#]|$)/ /^https?://imgur\.com/user/$1(?=[/?#]|$)/
+
+  ---- Videos ----
 
   -- Youtube
 /^https?://(?:\w+\.)?youtube\.com/c(?:hannel)?/([\w%-]+)(?=[/?#]|$)/ /^https?://(?:\w+\.)?youtube\.com/c(?:hannel)?/$1(?=[/?#]|$)/
@@ -25,6 +46,9 @@
 
   -- Vimeo
 /^https?://vimeo\.com/(user\d+)(?=[/?#]|$)/ /^https?://vimeo\.com/$1(?=[/?#]|$)/
+
+  -- bilibili
+/^https?://space\.bilibili\.com/(\d+)(?=[/?#]|$)/ /^https?://space\.bilibili\.com/$1(?=[/?#]|$)/
 
   -- 好看视频
 /https?://(?:haokan|sv)\.baidu\.com/author/(\w+)(?=[/?#]|$)/ /https?://(?:haokan|sv)\.baidu\.com/author/$1(?=[/?#]|$)/

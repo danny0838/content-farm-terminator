@@ -1,3 +1,5 @@
+  ---- BSP ----
+
   -- Blogspot
 /^https?://(\w+)\.blogspot\.(?:\w+)(?=[/?#]|$)/ $1.blogspot.*
 
@@ -9,3 +11,9 @@
 
   -- PChome
 /^https?://mypaper\.(?:m\.)?pchome\.com\.tw/([\w-.]+)(?=[/?#]|$)/ /^https?://mypaper\.(?:m\.)?pchome\.com\.tw/$1(?=[/?#]|$)/
+
+  -- CSDN
+/^https?://blog\.csdn\.net/(\w+)(?=[/?#]|$)/ /^https?://blog\.csdn\.net/$1(?=[/?#]|$)/
+
+  -- 博客园
+/^https?://www\.cnblogs\.com/(\w+)(?=[/?#]|$)/ /^https?://www\.cnblogs\.com/$1(?=[/?#]|$)/
