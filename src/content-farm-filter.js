@@ -1063,13 +1063,13 @@
     transform(rule, mode = 'standard') {
       switch (mode) {
         case 'standard': {
-          if (rule.type !== 'regex') {
+          if (rule.type !== RULE_TYPE_REGEX) {
             this._transform(rule);
           }
           break;
         }
         case 'url': {
-          if (rule.type === null && RE_SCHEME.test(rule.rule)) {
+          if (rule.type === RULE_TYPE_NONE && RE_SCHEME.test(rule.rule)) {
             this._transform(rule);
           }
           break;
