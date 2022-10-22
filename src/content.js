@@ -371,7 +371,7 @@ const getRedirectedUrlOrHostname = (() => {
     }
   });
 
-  // Yahoo search (JavaScript disabled)
+  // Yahoo search (JavaScript disabled / old browsers e.g. IE9)
   // AOL
   // OneSearch
   addHandler(["r.search.yahoo.com", "search.aol.com", "r-notracking.onesearch.com", "ri-notracking.onesearch.com"], () => {
