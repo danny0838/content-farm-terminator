@@ -346,10 +346,28 @@ const getRedirectedUrlOrHostname = (() => {
     }
   });
 
-  // Bing (used rarely, e.g. in Egerin)
+  // Bing
   addHandler("www.bing.com", () => {
+    // used rarely, e.g. in Egerin
     if (p === "/cr") {
       return s.get("r");
+    }
+
+    if (docHostname === "www.bing.com" && docPathname === "/search") {
+      if (p === "/ck/a") {
+        if (s.has("u")) {
+          if (elem.matches('#b_results .b_algo h2 a')) {
+            const refNode = elem.closest('#b_results .b_algo').querySelector('.b_caption .b_attribution cite');
+            if (refNode) {
+              let url = refNode.textContent;
+              if (url.endsWith("...")) {
+                url = new URL(url).hostname;
+              }
+              return url;
+            }
+          }
+        }
+      }
     }
   });
 
