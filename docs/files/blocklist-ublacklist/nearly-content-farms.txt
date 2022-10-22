@@ -1,6 +1,6 @@
 # Title: Nearly Content Farm Filters
 # Description: Filter for content-farm-like sites, mostly in Chinese.
-# Last modified: 2022-10-22T07:08:00+00:00
+# Last modified: 2022-10-22T07:29:48+00:00
 # Homepage: https://danny0838.github.io/content-farm-terminator/
 # Licence: MIT License
 # Source: https://danny0838.github.io/content-farm-terminator/files/blocklist-ublacklist/nearly-content-farms.txt
@@ -32,6 +32,7 @@
 *://*.ubuntuqa.com/*  #有附來源，疑未授權盜譯
 *://*.unsafe.sh/*  #有附來源，疑未授權轉載
 *://*.xingmingzhijia.com/*  #以姓名網名義製造大量相似網頁
+*://*.blog.css8.cn/*  #大量轉載，有附來源，疑未授權
 # tag: #bkplg
 # Plagiarism sites for books. As books tend to contain lots of text, such
 # sites are more likely hit when searching for normal keywords.
