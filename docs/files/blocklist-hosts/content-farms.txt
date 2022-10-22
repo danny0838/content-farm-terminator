@@ -1,6 +1,6 @@
 # Title: Content Farm Filters
 # Description: Filter for general content farms, mostly in Chinese.
-# Last modified: 2022-10-22T12:32:22+00:00
+# Last modified: 2022-10-22T13:40:44+00:00
 # Homepage: https://danny0838.github.io/content-farm-terminator/
 # Licence: MIT License
 # Source: https://danny0838.github.io/content-farm-terminator/files/blocklist-hosts/content-farms.txt
@@ -8781,6 +8781,10 @@
 127.0.0.1 welcomed.pt  #redirects to tepyoff.cfd
 127.0.0.1 active-auto-33.fr  #redirects to tepyoff.cfd
 127.0.0.1 gaia-spirit.fr  #redirects to mix.zdes.online
+127.0.0.1 salonbauxmonde.nl  #redirects to mix.zdes.online
+127.0.0.1 misstarbone.live  #malicious scripts
+127.0.0.1 kam-fuer-kmu.ch  #redirects to tepyoff.cfd
+127.0.0.1 rs-immob.ch  #redirects to tepyoff.cfd
 #!aggreg-cxyzjd: https://raw.githubusercontent.com/wdmpa/content-farm-list/main/domains/spam/cxyzjd.txt (https://github.com/wdmpa/content-farm-list)
 127.0.0.1 cxybb.com  #!aggreg-cxyzjd
 127.0.0.1 cxymm.net  #!aggreg-cxyzjd
