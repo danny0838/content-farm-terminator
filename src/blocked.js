@@ -3,6 +3,7 @@ const sourceUrl = urlObj.searchParams.get('url');
 const tabId = urlObj.searchParams.get('t');
 const requestId = urlObj.searchParams.get('r');
 const blockType = parseInt(urlObj.searchParams.get('type'), 10);
+let unblockTimer;
 
 async function recheckBlock() {
   const {tempUnblocked} = await browser.runtime.sendMessage({
@@ -24,6 +25,8 @@ async function recheckBlock() {
 }
 
 async function autoUpdateUnblockButton() {
+  const now = Date.now();
+
   let {
     showUnblockButton,
     tempUnblockCountdownBase,
@@ -38,32 +41,33 @@ async function autoUpdateUnblockButton() {
     "tempUnblockLastAccess",
   ]);
 
+  const elem = document.querySelector('#unblock');
+
   if (!showUnblockButton) {
+    elem.hidden = true;
     return;
   }
 
-  if (tempUnblockLastAccess < 0 ||
-      Date.now() - tempUnblockLastAccess > tempUnblockCountdownReset) {
-    tempUnblockCountdown = -1;
+  let countdown;
+  if (tempUnblockLastAccess > 0 &&
+      tempUnblockLastAccess + tempUnblockCountdownReset > now) {
+    countdown = Math.max(tempUnblockLastAccess + tempUnblockCountdown - now, 0);
+  } else {
+    countdown = 0;
   }
 
-  if (tempUnblockCountdown === -1) {
-    tempUnblockCountdown = tempUnblockCountdownBase;
-  }
-
-  let countdown = tempUnblockCountdown;
-  const elem = document.querySelector('#unblock');
   elem.hidden = false;
   elem.disabled = true; // Firefox might record status causing non-disabled
-  elem.textContent = utils.lang("unblockBtnCountdown", [countdown / 1000]);
+  elem.textContent = utils.lang("unblockBtnCountdown", [Math.ceil(countdown / 1000)]);
 
   if (countdown > 0) {
-    let t = setInterval(() => {
+    clearInterval(unblockTimer);
+    unblockTimer = setInterval(() => {
       countdown -= 1000;
       if (countdown > 0) {
-        elem.textContent = utils.lang("unblockBtnCountdown", [countdown / 1000]);
+        elem.textContent = utils.lang("unblockBtnCountdown", [Math.ceil(countdown / 1000)]);
       } else {
-        clearInterval(t);
+        clearInterval(unblockTimer);
         unblock();
       }
     }, 1000);
@@ -95,6 +99,8 @@ async function onUnblockClick(event) {
 
   if (tempUnblocked) {
     location.replace(sourceUrl);
+  } else {
+    await autoUpdateUnblockButton();
   }
 }
 

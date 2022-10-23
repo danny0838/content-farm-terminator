@@ -473,24 +473,34 @@ function initMessageListener() {
             "tempUnblockLastAccess",
           ]);
 
+          const now = Date.now();
+
+          // validate that countdown has expired,
+          // to prevent requesting from multiple tabs simulteneously
+          if (options.tempUnblockLastAccess > 0 &&
+              options.tempUnblockLastAccess + options.tempUnblockCountdownReset > now &&
+              options.tempUnblockLastAccess + options.tempUnblockCountdown > now
+              ) {
+            return {
+              tabId,
+              tempUnblocked: false,
+            };
+          }
+
           // temporarily unblock the tab
           tempUnblockTabs.add(tabId);
           setTimeout(() => {
             tempUnblockTabs.delete(tabId);
           }, options.tempUnblockDuration);
 
-          // update countdown
+          // update countdown and last access
           if (options.tempUnblockLastAccess < 0 ||
-              Date.now() - options.tempUnblockLastAccess > options.tempUnblockCountdownReset) {
-            options.tempUnblockCountdown = -1;
-          }
-
-          if (options.tempUnblockCountdown === -1) {
+              options.tempUnblockLastAccess + options.tempUnblockCountdownReset <= now) {
             options.tempUnblockCountdown = options.tempUnblockCountdownBase;
+          } else {
+            options.tempUnblockCountdown += options.tempUnblockCountdownIncrement;
           }
-
-          options.tempUnblockCountdown += options.tempUnblockCountdownIncrement;
-          options.tempUnblockLastAccess = Date.now();
+          options.tempUnblockLastAccess = now;
 
           await utils.setOptions({
             tempUnblockCountdown: options.tempUnblockCountdown,
