@@ -4,16 +4,18 @@ async function rewriteDocumentBlob(blob, u) {
 
   const headElem = doc.querySelector('head');
 
-  // respect original base but redirect links to parent frame
-  for (const elem of doc.querySelectorAll('base')) {
-    elem.target = '_parent';
+  // according to spec, only the first base element takes effect
+  let baseElem = doc.querySelector('base');
+  if (baseElem) {
+    // respect the original base but redirect links to the parent frame
+    baseElem.target = '_parent';
+  } else {
+    // generate a base element
+    baseElem = doc.createElement('base');
+    baseElem.href = u.href;
+    baseElem.target = '_parent';
+    headElem.insertBefore(baseElem, headElem.firstChild);
   }
-
-  // add base
-  const baseElem = doc.createElement('base');
-  baseElem.href = u.href;
-  baseElem.target = '_parent';
-  headElem.insertBefore(baseElem, headElem.firstChild);
 
   // remove original meta charset and content security policy
   for (const elem of doc.querySelectorAll('meta[charset], meta[http-equiv="content-type"], meta[http-equiv="content-security-policy"]')) {
