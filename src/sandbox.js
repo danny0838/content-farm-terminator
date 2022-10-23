@@ -37,6 +37,12 @@ async function rewriteDocumentBlob(blob, u) {
   metaCharsetElem.setAttribute("charset", "UTF-8");
   headElem.insertBefore(metaCharsetElem, headElem.firstChild);
 
+  // remove "target" attribute for all anchors to honor base
+  // anchor opened in a new tab may cause a confusion for the extension
+  for (const elem of doc.querySelectorAll('a[target], area[target]')) {
+    elem.removeAttribute('target');
+  }
+
   // pass document title to top frame
   if (doc.title) { document.title = doc.title; }
 
