@@ -152,7 +152,7 @@
   },
 
   "unblockBtnPrompt": {
-    "message": "Information from a content farm is usually unverified and questionable, and malicious ads and/or scripts could reside. Please think carefully before entering.\n* Try View if you intend to investigate the page content, and Unlock only for cases that View cannot work as expected.\n* Add the URL to the graylist/whitelist (or remove from the blacklist) if you don't think this site is a content farm or you intend not to keep blocking it for any reason.\n\nTo still unblock this page, input the following passcode: $key$",
+    "message": "Information from a content farm is usually unverified and questionable, and malicious ads and/or scripts could reside. Please think carefully before entering.\n• Try View if you intend to investigate the page content, and Unlock only for cases that View cannot work as expected. Such sites mostly requires scripts to load and are more likely to contain malicious scripts. Consider browsing with an independent browser, profile, container, or incognito window to reduce the risk.\n• Add the URL to the graylist/whitelist (or remove from the blacklist) if you don't think this site is a content farm or you intend not to keep blocking it for any reason.\n\nTo still unblock this page temporarily, input the following passcode: $key$",
     "description": "Prompt message of unblock button in blocked page",
     "placeholders": {
       "key": {
