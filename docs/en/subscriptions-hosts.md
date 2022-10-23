@@ -8,6 +8,8 @@ Usage: Copy the content of a blacklist into the [hosts file](https://en.wikipedi
 - Path in Windows: `%SystemRoot%\System32\drivers\etc\hosts`.
 - Path in a Unix-like OS: `/etc/hosts`.
 
+A [hosts tool](https://github.com/StevenBlack/hosts) can also be used to help build a robust hosts file from a variety of frequently updated sources.
+
 As a hosts file can only block a domain (and subdomain), these blacklists do not include other type of rules.
 
 See [main subscription page](./subscriptions) for details of the blacklists.
