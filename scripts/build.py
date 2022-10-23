@@ -857,7 +857,7 @@ class ConverterHosts(Converter):
             rule.type == 'domain' and '*' not in rule.rule
             or rule.type == 'raw'
         ):
-            print(f'127.0.0.1 {rule.rule}{comment}')
+            print(f'0.0.0.0 {rule.rule}{comment}')
 
         elif rule.type is None:
             if rule.comment and not rule.rule:
