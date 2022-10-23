@@ -2,7 +2,7 @@
 # Description: Filter for cloner sites that are mostly free of copyright issue since the source site
 #     is copyleft or copyfree, but provide only trivial layout change or poor-quality bot translation
 #     and are thus spam-like.
-# Last modified: 2022-10-23T14:26:19+00:00
+# Last modified: 2022-10-23T19:50:21+00:00
 # Homepage: https://danny0838.github.io/content-farm-terminator/
 # Licence: MIT License
 # Source: https://danny0838.github.io/content-farm-terminator/files/blocklist-ublacklist/bad-cloners.txt
@@ -87,7 +87,6 @@
 *://*.javaer101.com/*  #!aggreg-ublSoT
 *://*.voidcc.com/*  #!aggreg-ublSoT
 *://*.fixes.pub/*  #!aggreg-ublSoT
-*://*.knews.vip/*  #!aggreg-ublSoT
 *://*.isolution.pro/*  #!aggreg-ublSoT
 *://*.nuomiphp.com/*  #!aggreg-ublSoT
 *://*.ubuntu.buildwebhost.com/*  #!aggreg-ublSoT
@@ -98,7 +97,6 @@
 *://*.pakostnici.com/*  #!aggreg-ublSoT
 *://*.athabasca-foto.com/*  #!aggreg-ublSoT
 *://*.fmihm.org/*  #!aggreg-ublSoT
-*://*.try2explore.com/*  #!aggreg-ublSoT
 *://*.itectec.com/*  #!aggreg-ublSoT
 *://*.super-unix.com/*  #!aggreg-ublSoT
 *://*.stackovergo.com/*  #!aggreg-ublSoT
@@ -115,7 +113,6 @@
 *://*.developreference.com/*  #!aggreg-ublSoT
 *://*.semicolonworld.com/*  #!aggreg-ublSoT
 *://*.qi-u.com/*  #!aggreg-ublSoT
-*://*.xsprogram.com/*  #!aggreg-ublSoT
 *://*.stackoom.com/*  #!aggreg-ublSoT
 *://*.cndgn.com/*  #!aggreg-ublSoT
 *://*.generacodice.com/*  #!aggreg-ublSoT
@@ -124,11 +121,10 @@
 *://*.stackfinder.ru/*  #!aggreg-ublSoT
 *://*.desenv-web-rp.com/*  #!aggreg-ublSoT
 *://*.web-dev-qa-db-pt.com/*  #!aggreg-ublSoT
-*://*.5axxw.com/*  #!aggreg-ublSoT
+*://*.kutombawewe.net/*  #!aggreg-ublSoT
 *://*.question-it.com/*  #!aggreg-ublSoT
 *://*.mediatagtw.com/*  #!aggreg-ublSoT
 *://*.progi.pro/*  #!aggreg-ublSoT
-*://*.sysadminde.com/*  #!aggreg-ublSoT
 *://*.ask-dev.ru/*  #!aggreg-ublSoT
 *://*.askcodez.com/*  #!aggreg-ublSoT
 *://*.iquestion.pro/*  #!aggreg-ublSoT
@@ -141,17 +137,14 @@
 *://*.errorsfixing.com/*  #!aggreg-ublSoT
 *://*.syntaxfix.com/*  #!aggreg-ublSoT
 *://*.codegrepr.com/*  #!aggreg-ublSoT
-*://*.serveanswer.com/*  #!aggreg-ublSoT
 *://*.devfixes.com/*  #!aggreg-ublSoT
 *://*.cainiaojiaocheng.com/*  #!aggreg-ublSoT
 *://*.linuxfixes.com/*  #!aggreg-ublSoT
-*://*.it-roy-ru.com/*  #!aggreg-ublSoT
 *://*.web-dev-qa.com/*  #!aggreg-ublSoT
 *://*.flutterhq.com/*  #!aggreg-ublSoT
 *://*.711web.com/*  #!aggreg-ublSoT
 *://*.binarydevelop.com/*  #!aggreg-ublSoT
 *://*.so.muouseo.com/*  #!aggreg-ublSoT
-*://*.coder-solution-es.com/*  #!aggreg-ublSoT
 *://*.peaku.co/*  #!aggreg-ublSoT
 *://*.solveforum.com/*  #!aggreg-ublSoT
 *://*.edureka.co/*  #!aggreg-ublSoT
@@ -165,7 +158,6 @@
 *://*.ajaxhispano.com/*  #!aggreg-ublSoT
 *://*.codebaoku.com/*  #!aggreg-ublSoT
 *://*.daplus.net/*  #!aggreg-ublSoT
-*://*.questu.ru/*  #!aggreg-ublSoT
 *://*.doraprojects.net/*  #!aggreg-ublSoT
 *://*.iteramos.com/*  #!aggreg-ublSoT
 *://*.faqcodes.com/*  #!aggreg-ublSoT
@@ -189,7 +181,6 @@
 *://*.vigge.net/*  #!aggreg-ublSoT
 *://*.vigge.cn/*  #!aggreg-ublSoT
 *://*.web-dev-qa-db-fra.com/*  #!aggreg-ublSoT
-*://*.ape-ask.com/*  #!aggreg-ublSoT
 *://*.yaoply.com/*  #!aggreg-ublSoT
 *://*.techhelpnotes.com/*  #!aggreg-ublSoT
 *://*.wp-qa.com/*  #!aggreg-ublSoT
@@ -197,26 +188,36 @@
 *://*.appsloveworld.com/*  #!aggreg-ublSoT
 *://*.dtuto.com/*  #!aggreg-ublSoT
 *://*.webdevask.com/*  #!aggreg-ublSoT
-*://*.thecodeteacher.com/*  #!aggreg-ublSoT
 *://*.issuecloser.com/*  #!aggreg-ublSoT
 *://*.etsoutdoors.com/*  #!aggreg-ublSoT
 *://*.waldorf-am-see.org/*  #!aggreg-ublSoT
-*://*.mejorcodigo.com/*  #!aggreg-ublSoT
 *://*.arip-photo.org/*  #!aggreg-ublSoT
 *://*.answerlib.com/*  #!aggreg-ublSoT
-*://*.waymanamechurch.org/*  #!aggreg-ublSoT
 *://*.fluffyfables.com/*  #!aggreg-ublSoT
 *://*.qatop.pythonwood.com/*  #!aggreg-ublSoT
 *://*.fullstackuser.com/*  #!aggreg-ublSoT
-*://*.ntcdoon.org/*  #!aggreg-ublSoT
-*://*.techinplanet.com/*  #!aggreg-ublSoT
 *://*.codeutility.org/*  #!aggreg-ublSoT
 *://*.exchangetuts.com/*  #!aggreg-ublSoT
 *://*.splunktool.com/*  #!aggreg-ublSoT
 *://*.coder.gay/*  #!aggreg-ublSoT
-*://*.stackubuntu.com/*  #!aggreg-ublSoT
 *://*.jtuto.com/*  #!aggreg-ublSoT
 *://*.9to5answer.com/*  #!aggreg-ublSoT
+*://*.knews.vip/*  #!aggreg-ublSoT
+*://*.try2explore.com/*  #!aggreg-ublSoT
+*://*.xsprogram.com/*  #!aggreg-ublSoT
+*://*.5axxw.com/*  #!aggreg-ublSoT
+*://*.sysadminde.com/*  #!aggreg-ublSoT
+*://*.serveanswer.com/*  #!aggreg-ublSoT
+*://*.it-roy-ru.com/*  #!aggreg-ublSoT
+*://*.coder-solution-es.com/*  #!aggreg-ublSoT
+*://*.questu.ru/*  #!aggreg-ublSoT
+*://*.ape-ask.com/*  #!aggreg-ublSoT
+*://*.thecodeteacher.com/*  #!aggreg-ublSoT
+*://*.mejorcodigo.com/*  #!aggreg-ublSoT
+*://*.waymanamechurch.org/*  #!aggreg-ublSoT
+*://*.ntcdoon.org/*  #!aggreg-ublSoT
+*://*.techinplanet.com/*  #!aggreg-ublSoT
+*://*.stackubuntu.com/*  #!aggreg-ublSoT
 #!aggreg-wdmpaMtSo: https://raw.githubusercontent.com/wdmpa/content-farm-list/main/domains/machine-translated/stackoverflow.txt (https://github.com/wdmpa/content-farm-list)
 *://www.coder.work/article/*  #!aggreg-wdmpaMtSo
 *://xbuba.com/questions/*  #!aggreg-wdmpaMtSo

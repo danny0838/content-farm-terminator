@@ -2,7 +2,7 @@
 # Description: Filter for cloner sites that are mostly free of copyright issue since the source site
 #     is copyleft or copyfree, but provide only trivial layout change or poor-quality bot translation
 #     and are thus spam-like.
-# Last modified: 2022-10-23T14:26:19+00:00
+# Last modified: 2022-10-23T19:50:21+00:00
 # Homepage: https://danny0838.github.io/content-farm-terminator/
 # Licence: MIT License
 # Source: https://danny0838.github.io/content-farm-terminator/files/blocklist-hosts/bad-cloners.txt
@@ -87,7 +87,6 @@
 0.0.0.0 javaer101.com  #!aggreg-ublSoT
 0.0.0.0 voidcc.com  #!aggreg-ublSoT
 0.0.0.0 fixes.pub  #!aggreg-ublSoT
-0.0.0.0 knews.vip  #!aggreg-ublSoT
 0.0.0.0 isolution.pro  #!aggreg-ublSoT
 0.0.0.0 nuomiphp.com  #!aggreg-ublSoT
 0.0.0.0 ubuntu.buildwebhost.com  #!aggreg-ublSoT
@@ -98,7 +97,6 @@
 0.0.0.0 pakostnici.com  #!aggreg-ublSoT
 0.0.0.0 athabasca-foto.com  #!aggreg-ublSoT
 0.0.0.0 fmihm.org  #!aggreg-ublSoT
-0.0.0.0 try2explore.com  #!aggreg-ublSoT
 0.0.0.0 itectec.com  #!aggreg-ublSoT
 0.0.0.0 super-unix.com  #!aggreg-ublSoT
 0.0.0.0 stackovergo.com  #!aggreg-ublSoT
@@ -115,7 +113,6 @@
 0.0.0.0 developreference.com  #!aggreg-ublSoT
 0.0.0.0 semicolonworld.com  #!aggreg-ublSoT
 0.0.0.0 qi-u.com  #!aggreg-ublSoT
-0.0.0.0 xsprogram.com  #!aggreg-ublSoT
 0.0.0.0 stackoom.com  #!aggreg-ublSoT
 0.0.0.0 cndgn.com  #!aggreg-ublSoT
 0.0.0.0 generacodice.com  #!aggreg-ublSoT
@@ -124,11 +121,10 @@
 0.0.0.0 stackfinder.ru  #!aggreg-ublSoT
 0.0.0.0 desenv-web-rp.com  #!aggreg-ublSoT
 0.0.0.0 web-dev-qa-db-pt.com  #!aggreg-ublSoT
-0.0.0.0 5axxw.com  #!aggreg-ublSoT
+0.0.0.0 kutombawewe.net  #!aggreg-ublSoT
 0.0.0.0 question-it.com  #!aggreg-ublSoT
 0.0.0.0 mediatagtw.com  #!aggreg-ublSoT
 0.0.0.0 progi.pro  #!aggreg-ublSoT
-0.0.0.0 sysadminde.com  #!aggreg-ublSoT
 0.0.0.0 ask-dev.ru  #!aggreg-ublSoT
 0.0.0.0 askcodez.com  #!aggreg-ublSoT
 0.0.0.0 iquestion.pro  #!aggreg-ublSoT
@@ -141,17 +137,14 @@
 0.0.0.0 errorsfixing.com  #!aggreg-ublSoT
 0.0.0.0 syntaxfix.com  #!aggreg-ublSoT
 0.0.0.0 codegrepr.com  #!aggreg-ublSoT
-0.0.0.0 serveanswer.com  #!aggreg-ublSoT
 0.0.0.0 devfixes.com  #!aggreg-ublSoT
 0.0.0.0 cainiaojiaocheng.com  #!aggreg-ublSoT
 0.0.0.0 linuxfixes.com  #!aggreg-ublSoT
-0.0.0.0 it-roy-ru.com  #!aggreg-ublSoT
 0.0.0.0 web-dev-qa.com  #!aggreg-ublSoT
 0.0.0.0 flutterhq.com  #!aggreg-ublSoT
 0.0.0.0 711web.com  #!aggreg-ublSoT
 0.0.0.0 binarydevelop.com  #!aggreg-ublSoT
 0.0.0.0 so.muouseo.com  #!aggreg-ublSoT
-0.0.0.0 coder-solution-es.com  #!aggreg-ublSoT
 0.0.0.0 peaku.co  #!aggreg-ublSoT
 0.0.0.0 solveforum.com  #!aggreg-ublSoT
 0.0.0.0 edureka.co  #!aggreg-ublSoT
@@ -165,7 +158,6 @@
 0.0.0.0 ajaxhispano.com  #!aggreg-ublSoT
 0.0.0.0 codebaoku.com  #!aggreg-ublSoT
 0.0.0.0 daplus.net  #!aggreg-ublSoT
-0.0.0.0 questu.ru  #!aggreg-ublSoT
 0.0.0.0 doraprojects.net  #!aggreg-ublSoT
 0.0.0.0 iteramos.com  #!aggreg-ublSoT
 0.0.0.0 faqcodes.com  #!aggreg-ublSoT
@@ -189,7 +181,6 @@
 0.0.0.0 vigge.net  #!aggreg-ublSoT
 0.0.0.0 vigge.cn  #!aggreg-ublSoT
 0.0.0.0 web-dev-qa-db-fra.com  #!aggreg-ublSoT
-0.0.0.0 ape-ask.com  #!aggreg-ublSoT
 0.0.0.0 yaoply.com  #!aggreg-ublSoT
 0.0.0.0 techhelpnotes.com  #!aggreg-ublSoT
 0.0.0.0 wp-qa.com  #!aggreg-ublSoT
@@ -197,26 +188,36 @@
 0.0.0.0 appsloveworld.com  #!aggreg-ublSoT
 0.0.0.0 dtuto.com  #!aggreg-ublSoT
 0.0.0.0 webdevask.com  #!aggreg-ublSoT
-0.0.0.0 thecodeteacher.com  #!aggreg-ublSoT
 0.0.0.0 issuecloser.com  #!aggreg-ublSoT
 0.0.0.0 etsoutdoors.com  #!aggreg-ublSoT
 0.0.0.0 waldorf-am-see.org  #!aggreg-ublSoT
-0.0.0.0 mejorcodigo.com  #!aggreg-ublSoT
 0.0.0.0 arip-photo.org  #!aggreg-ublSoT
 0.0.0.0 answerlib.com  #!aggreg-ublSoT
-0.0.0.0 waymanamechurch.org  #!aggreg-ublSoT
 0.0.0.0 fluffyfables.com  #!aggreg-ublSoT
 0.0.0.0 qatop.pythonwood.com  #!aggreg-ublSoT
 0.0.0.0 fullstackuser.com  #!aggreg-ublSoT
-0.0.0.0 ntcdoon.org  #!aggreg-ublSoT
-0.0.0.0 techinplanet.com  #!aggreg-ublSoT
 0.0.0.0 codeutility.org  #!aggreg-ublSoT
 0.0.0.0 exchangetuts.com  #!aggreg-ublSoT
 0.0.0.0 splunktool.com  #!aggreg-ublSoT
 0.0.0.0 coder.gay  #!aggreg-ublSoT
-0.0.0.0 stackubuntu.com  #!aggreg-ublSoT
 0.0.0.0 jtuto.com  #!aggreg-ublSoT
 0.0.0.0 9to5answer.com  #!aggreg-ublSoT
+0.0.0.0 knews.vip  #!aggreg-ublSoT
+0.0.0.0 try2explore.com  #!aggreg-ublSoT
+0.0.0.0 xsprogram.com  #!aggreg-ublSoT
+0.0.0.0 5axxw.com  #!aggreg-ublSoT
+0.0.0.0 sysadminde.com  #!aggreg-ublSoT
+0.0.0.0 serveanswer.com  #!aggreg-ublSoT
+0.0.0.0 it-roy-ru.com  #!aggreg-ublSoT
+0.0.0.0 coder-solution-es.com  #!aggreg-ublSoT
+0.0.0.0 questu.ru  #!aggreg-ublSoT
+0.0.0.0 ape-ask.com  #!aggreg-ublSoT
+0.0.0.0 thecodeteacher.com  #!aggreg-ublSoT
+0.0.0.0 mejorcodigo.com  #!aggreg-ublSoT
+0.0.0.0 waymanamechurch.org  #!aggreg-ublSoT
+0.0.0.0 ntcdoon.org  #!aggreg-ublSoT
+0.0.0.0 techinplanet.com  #!aggreg-ublSoT
+0.0.0.0 stackubuntu.com  #!aggreg-ublSoT
 #!aggreg-wdmpaMtSo: https://raw.githubusercontent.com/wdmpa/content-farm-list/main/domains/machine-translated/stackoverflow.txt (https://github.com/wdmpa/content-farm-list)
 0.0.0.0 stackoverrun.com  #!aggreg-wdmpaMtSo
 0.0.0.0 thinbug.com  #!aggreg-wdmpaMtSo
