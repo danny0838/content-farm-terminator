@@ -1,6 +1,6 @@
 # Title: Nearly Content Farm Filters
 # Description: Filter for content-farm-like sites, mostly in Chinese.
-# Last modified: 2022-10-23T04:54:46+00:00
+# Last modified: 2022-10-23T15:18:08+00:00
 # Homepage: https://danny0838.github.io/content-farm-terminator/
 # Licence: MIT License
 # Source: https://danny0838.github.io/content-farm-terminator/files/blocklist-hosts/nearly-content-farms.txt
@@ -239,6 +239,9 @@
 0.0.0.0 zizaidu.com  #bkplg
 0.0.0.0 zjyywz.net  #bkplg
 0.0.0.0 zuiyq.com  #bkplg
+0.0.0.0 jinjishuwu.net  #bkplg
+0.0.0.0 smkan.top  #bkplg
+0.0.0.0 feiwenw.cc  #bkplg
 # tag: #kwsr18
 # R18 site series with massive keyword stuffing, auto-redirects, and/or
 # clones. Clients may be redirected to an R18 site unexpectedly when

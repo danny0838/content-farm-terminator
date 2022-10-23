@@ -1,6 +1,6 @@
 # Title: Content Farm Filters
 # Description: Filter for general content farms, mostly in Chinese.
-# Last modified: 2022-10-23T04:54:46+00:00
+# Last modified: 2022-10-23T15:18:08+00:00
 # Homepage: https://danny0838.github.io/content-farm-terminator/
 # Licence: MIT License
 # Source: https://danny0838.github.io/content-farm-terminator/files/blocklist-hosts/content-farms.txt
@@ -8785,6 +8785,36 @@
 0.0.0.0 misstarbone.live  #malicious scripts
 0.0.0.0 kam-fuer-kmu.ch  #redirects to tepyoff.cfd
 0.0.0.0 rs-immob.ch  #redirects to tepyoff.cfd
+0.0.0.0 niul.net
+0.0.0.0 xsear.ch
+0.0.0.0 xa8.net
+0.0.0.0 klubickasnu.cz  #redirects to di06.biz
+0.0.0.0 dercomotos.cl  #redirects to di06.biz
+0.0.0.0 ateliercatering.es  #redirects to di06.biz
+0.0.0.0 casadeldeporte.cl  #redirects to di06.biz
+0.0.0.0 menapodologo.es  #redirects to di06.biz
+0.0.0.0 superm.cl  #redirects to di06.biz
+0.0.0.0 lotteryno.one
+0.0.0.0 pc-mediapoint.ro  #redirects to di06.biz
+0.0.0.0 ecomsolutions.net  #malicious
+0.0.0.0 ochill.ru  #redirects to mix.zdes.online
+0.0.0.0 minkia.me  #redirects to soonmiss.top
+0.0.0.0 xydnc.co  #redirects to aetop.top
+0.0.0.0 howtovpnsqpl.ru.com  #redirects to tiktokfinder.shop
+0.0.0.0 8kpp.net
+0.0.0.0 pineapple-bun.com
+0.0.0.0 231327.com
+0.0.0.0 news.jxcn.cn
+0.0.0.0 umbau-gmbh.ch  #redirects to mix.zdes.online
+0.0.0.0 nfrpress.com
+0.0.0.0 cvbnm01.pixnet.net
+0.0.0.0 boxhoidap.com
+0.0.0.0 bollywoods.ru.com  #redirects to di06.biz
+0.0.0.0 boldtsafety.com  #bkplg #redirects to ady892.fhrl2018.com
+0.0.0.0 crashlyticsapi.com  #redirects to smkan.top
+0.0.0.0 sadhub.org  #redirects to firebase.crashlyticsapi.com
+0.0.0.0 catchyourlife.com.tw  #redirects to jaavnacsdw.com
+0.0.0.0 hrlaborlaw.com.tw  #redirects to jaavnacsdw.com
 #!aggreg-cxyzjd: https://raw.githubusercontent.com/wdmpa/content-farm-list/main/domains/spam/cxyzjd.txt (https://github.com/wdmpa/content-farm-list)
 0.0.0.0 cxybb.com  #!aggreg-cxyzjd
 0.0.0.0 cxymm.net  #!aggreg-cxyzjd
