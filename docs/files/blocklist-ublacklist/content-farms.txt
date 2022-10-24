@@ -1,6 +1,6 @@
 # Title: Content Farm Filters
 # Description: Filter for general content farms, mostly in Chinese.
-# Last modified: 2022-10-23T19:50:21+00:00
+# Last modified: 2022-10-24T16:10:17+00:00
 # Homepage: https://danny0838.github.io/content-farm-terminator/
 # Licence: MIT License
 # Source: https://danny0838.github.io/content-farm-terminator/files/blocklist-ublacklist/content-farms.txt
@@ -8716,6 +8716,48 @@
 *://*.sadhub.org/*  #redirects to firebase.crashlyticsapi.com
 *://*.catchyourlife.com.tw/*  #redirects to jaavnacsdw.com
 *://*.hrlaborlaw.com.tw/*  #redirects to jaavnacsdw.com
+*://*.aa386500.pixnet.net/*
+*://*.salegoode.pixnet.net/*
+*://*.mymoneypp.pixnet.net/*
+*://*.f0971100018.pixnet.net/*
+*://*.salegoodn.pixnet.net/*
+*://*.nongyawang.com/*
+*://*.wlkankan.com/*
+*://*.junlaibao.cn/*
+*://*.geflow.com/*
+*://*.jianjuke.cn/*
+*://*.ailaojia.com/*
+*://*.cfacat.cn/*
+*://*.jingzhoucn.cn/*
+*://*.qqi9.cn/*
+*://*.zgysxh.cn/*
+*://*.coolpen.org/*
+*://*.jiayunzudao.com/*
+*://*.zjwangying.com/*
+*://*.jakefornewton.com/*
+*://*.tenri.cn/*
+*://*.lasermyskin.com/*
+*://*.capemayjobbing.com/*
+*://*.hongda-steeltube.cn/*
+*://*.profyi.com/*
+*://*.ndmsmj.com/*
+*://*.gongyibaocp.com/*
+*://*.dragohomes.es/*
+*://*.apartmaji-kokalj.si/*  #redirects to tepyoff.cfd
+*://*.massoterapia.tn.it/*  #redirects to nxtpsh.top
+*://*.innypunkt.pl/*  #redirects to mo08.biz
+*://*.zhfreevnoc.za.com/*  #redirects to tiktokfinder.shop
+*://*.bpnhkpejsvf.za.com/*  #redirects to tiktokfinder.shop
+*://*.twfreedomosouh.ru.com/*  #redirects to tiktokfinder.shop
+*://*.vpncnscasuha.ru.com/*  #redirects to tiktokfinder.shop
+*://*.megafilesqhxty.sa.com/*  #redirects to tiktokfinder.shop
+*://*.atwilling.top/*  #malicious scripts
+*://*.goetrack.top/*  #redirects to atwilling.top
+*://*.voidsa.co/*  #redirects to goetrack.top
+*://*.peteradv.co/*  #redirects to goetrack.top
+*://*.bezpecnazasilka.cz/*  #redirects to nxtpsh.top
+*://*.pharmacie-jolivet.fr/*  #redirects to di06.biz
+*://*.kosmetikacalendula.cz/*  #redirects to di06.biz
 #!aggreg-cxyzjd: https://raw.githubusercontent.com/wdmpa/content-farm-list/main/domains/spam/cxyzjd.txt (https://github.com/wdmpa/content-farm-list)
 *://*.cxybb.com/*  #!aggreg-cxyzjd
 *://*.cxymm.net/*  #!aggreg-cxyzjd

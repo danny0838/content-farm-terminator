@@ -1,6 +1,6 @@
 # Title: Content Farm Filters
 # Description: Filter for general content farms, mostly in Chinese.
-# Last modified: 2022-10-23T19:50:21+00:00
+# Last modified: 2022-10-24T16:10:17+00:00
 # Homepage: https://danny0838.github.io/content-farm-terminator/
 # Licence: MIT License
 # Source: https://danny0838.github.io/content-farm-terminator/files/blocklist-hosts/content-farms.txt
@@ -8815,6 +8815,48 @@
 0.0.0.0 sadhub.org  #redirects to firebase.crashlyticsapi.com
 0.0.0.0 catchyourlife.com.tw  #redirects to jaavnacsdw.com
 0.0.0.0 hrlaborlaw.com.tw  #redirects to jaavnacsdw.com
+0.0.0.0 aa386500.pixnet.net
+0.0.0.0 salegoode.pixnet.net
+0.0.0.0 mymoneypp.pixnet.net
+0.0.0.0 f0971100018.pixnet.net
+0.0.0.0 salegoodn.pixnet.net
+0.0.0.0 nongyawang.com
+0.0.0.0 wlkankan.com
+0.0.0.0 junlaibao.cn
+0.0.0.0 geflow.com
+0.0.0.0 jianjuke.cn
+0.0.0.0 ailaojia.com
+0.0.0.0 cfacat.cn
+0.0.0.0 jingzhoucn.cn
+0.0.0.0 qqi9.cn
+0.0.0.0 zgysxh.cn
+0.0.0.0 coolpen.org
+0.0.0.0 jiayunzudao.com
+0.0.0.0 zjwangying.com
+0.0.0.0 jakefornewton.com
+0.0.0.0 tenri.cn
+0.0.0.0 lasermyskin.com
+0.0.0.0 capemayjobbing.com
+0.0.0.0 hongda-steeltube.cn
+0.0.0.0 profyi.com
+0.0.0.0 ndmsmj.com
+0.0.0.0 gongyibaocp.com
+0.0.0.0 dragohomes.es
+0.0.0.0 apartmaji-kokalj.si  #redirects to tepyoff.cfd
+0.0.0.0 massoterapia.tn.it  #redirects to nxtpsh.top
+0.0.0.0 innypunkt.pl  #redirects to mo08.biz
+0.0.0.0 zhfreevnoc.za.com  #redirects to tiktokfinder.shop
+0.0.0.0 bpnhkpejsvf.za.com  #redirects to tiktokfinder.shop
+0.0.0.0 twfreedomosouh.ru.com  #redirects to tiktokfinder.shop
+0.0.0.0 vpncnscasuha.ru.com  #redirects to tiktokfinder.shop
+0.0.0.0 megafilesqhxty.sa.com  #redirects to tiktokfinder.shop
+0.0.0.0 atwilling.top  #malicious scripts
+0.0.0.0 goetrack.top  #redirects to atwilling.top
+0.0.0.0 voidsa.co  #redirects to goetrack.top
+0.0.0.0 peteradv.co  #redirects to goetrack.top
+0.0.0.0 bezpecnazasilka.cz  #redirects to nxtpsh.top
+0.0.0.0 pharmacie-jolivet.fr  #redirects to di06.biz
+0.0.0.0 kosmetikacalendula.cz  #redirects to di06.biz
 #!aggreg-cxyzjd: https://raw.githubusercontent.com/wdmpa/content-farm-list/main/domains/spam/cxyzjd.txt (https://github.com/wdmpa/content-farm-list)
 0.0.0.0 cxybb.com  #!aggreg-cxyzjd
 0.0.0.0 cxymm.net  #!aggreg-cxyzjd
