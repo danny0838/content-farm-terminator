@@ -843,7 +843,7 @@
     /**
      * @typedef {Object} Source
      * @property {string} url - source URL
-     * @property {string} [urlRedirected] - redirected URL (or hostname only)
+     * @property {string} [redirected] - redirected URL (or hostname only)
      */
 
     /**
@@ -960,7 +960,7 @@
         }
       };
 
-      const checkUrlOrHostname = (urlOrHostname, details) => {
+      const checkUrl = (urlToCheck, details) => {
         const result = {
           rule: null,
           type: BLOCK_TYPE_NONE,
@@ -968,7 +968,7 @@
 
         let urlObj;
         try {
-          urlObj = new URL((RE_SCHEME.test(urlOrHostname) ? '' : 'http://') + urlOrHostname);
+          urlObj = new URL(urlToCheck);
         } catch (ex) {
           // bad URL
           return result;
@@ -1001,18 +1001,20 @@
         return result;
       };
 
-      const fn = this.getBlocker = ({url: urlOrHostname, urlRedirected, details = false}) => {
+      const fn = this.getBlocker = ({url, redirected, details = false}) => {
         const blocker = {
           rule: null,
           type: BLOCK_TYPE_NONE,
         };
 
-        if (urlOrHostname) {
-          let check = checkUrlOrHostname(urlOrHostname, details);
+        if (url) {
+          let check = checkUrl(url, details);
 
-          // check redirected URL if source URL is not blocked
-          if (!(check.rule && check.rule.action === RULE_ACTION_BLOCK) && urlRedirected) {
-            check = checkUrlOrHostname(urlRedirected, details);
+          // check redirected if source URL is not blocked
+          if (!(check.rule && check.rule.action === RULE_ACTION_BLOCK) && redirected) {
+            // treat as http://* if hostname only
+            const url = (RE_SCHEME.test(redirected) ? '' : 'http://') + redirected;
+            check = checkUrl(url, details);
           }
 
           if (!details) {

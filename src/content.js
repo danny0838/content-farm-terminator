@@ -647,7 +647,7 @@ async function updateLinkMarker(elem) {
       cmd: 'getBlockType',
       args: {
         url: u.href,
-        urlRedirected: await getRedirectedUrlOrHostname(elem),
+        redirected: await getRedirectedUrlOrHostname(elem),
       },
     });
   }).then((blockType) => {
