@@ -142,7 +142,7 @@ function updateBlockingUi(blockType) {
       urlElem.classList.add('regex');
       break;
     default:
-      urlElem.textContent = punycode.toASCII(sourceUrlObj.hostname);
+      urlElem.textContent = utils.getNormalizedHostname(sourceUrlObj.hostname);
       break;
   }
 

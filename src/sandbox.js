@@ -24,7 +24,7 @@ async function rewriteDocumentBlob(blob, u) {
 
   // add content security policy to block offensive contents
   // the iframe cannot be loaded without "frame-src blob:"
-  const host = punycode.toASCII(u.host);
+  const host = utils.getNormalizedHostname(u.host);
   const hostSubdomains = "*." + host.replace(/^www[.]/, '');
   const hostSources = `http://${host} https://${host} http://${hostSubdomains} https://${hostSubdomains}`;
   const metaCspElem = doc.createElement("meta");

@@ -232,6 +232,21 @@
       return fn(...args);
     },
 
+    /**
+     * A helper to normalize URL.hostname for compatibility and performance.
+     *
+     * @param {string} hostname - a URL.hostname (or URL.host)
+     */
+    getNormalizedHostname(hostname) {
+      // URL.hostname is not punycoded in some old browsers (e.g. Firefox 52)
+      const hostnameIsPunycoded = new URL('http://中文').hostname === 'xn--fiq228c';
+
+      const fn = this.getNormalizedHostname = hostnameIsPunycoded ?
+        hostname => hostname :
+        hostname => punycode.toASCII(hostname);
+      return fn(hostname);
+    },
+
     getNormalizedUrl(url) {
       let urlObj;
       try {
@@ -245,10 +260,7 @@
       const t = urlObj.port;
       return urlObj.protocol + '//' +
           (u ? u + (p ? ':' + p : '') + '@' : '') +
-
-          // URL.hostname is not punycoded in some old browsers (e.g. Firefox 52)
-          punycode.toASCII(urlObj.hostname) +
-
+          this.getNormalizedHostname(urlObj.hostname) +
           (t ? ':' + t : '') +
           urlObj.pathname + urlObj.search + urlObj.hash;
     },

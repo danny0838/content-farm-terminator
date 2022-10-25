@@ -178,8 +178,8 @@
             if (t.startsWith('www.')) {
               t = t.slice(4);
             }
-            // convert IDN to punycode
-            t = punycode.toASCII(t);
+            // normalize
+            t = utils.getNormalizedHostname(t);
           } catch (ex) {
             this.set('', {ruleOnly: true, error: ex});
             break;
@@ -973,10 +973,7 @@
           // bad URL
           return result;
         }
-
-        // URL.hostname is not punycoded in some old browsers (e.g. Firefox 52)
-        const hostname = punycode.toASCII(urlObj.hostname);
-
+        const hostname = utils.getNormalizedHostname(urlObj.hostname);
         const url = utils.getNormalizedUrl(urlObj);
 
         if (!details) {
