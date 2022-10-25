@@ -47,12 +47,10 @@ async function autoUpdateUnblockButton() {
   }
 
   const now = Date.now();
-  let countdown;
+  let countdown = 0;
   if (tempUnblockLastAccess > 0 &&
       tempUnblockLastAccess + tempUnblockCountdownReset > now) {
     countdown = Math.max(tempUnblockLastAccess + tempUnblockCountdown - now, 0);
-  } else {
-    countdown = 0;
   }
 
   elem.hidden = false;
