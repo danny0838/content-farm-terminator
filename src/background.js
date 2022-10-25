@@ -582,8 +582,7 @@ function initMessageListener() {
 function initStorageChangeListener() {
   browser.storage.onChanged.addListener(async (changes, areaName) => {
     // Config keys are stored in storage.sync and fallbacks to storage.local;
-    // cache keys are stored in storage.local and are valid JSON format.
-    // We only take action when at least one config key is changed.
+    // cache keys are stored in storage.local.
     if (areaName !== "sync") {
       // skip if it's a storage.local.remove() rather than a real user modification
       for (let key in changes) {
