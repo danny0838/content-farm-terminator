@@ -25,8 +25,6 @@ async function recheckBlock() {
 }
 
 async function autoUpdateUnblockButton() {
-  const now = Date.now();
-
   let {
     showUnblockButton,
     tempUnblockCountdownBase,
@@ -48,6 +46,7 @@ async function autoUpdateUnblockButton() {
     return;
   }
 
+  const now = Date.now();
   let countdown;
   if (tempUnblockLastAccess > 0 &&
       tempUnblockLastAccess + tempUnblockCountdownReset > now) {
