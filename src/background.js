@@ -51,13 +51,14 @@ const contextMenuController = {
     });
   },
 
-  async refresh(options = [
-    "showContextMenuCommands",
-    "quickContextMenuCommands",
-  ]) {
+  async refresh(showContextMenuCommands, quickContextMenuCommands) {
     if (!browser.contextMenus) { return; }
 
-    const {showContextMenuCommands, quickContextMenuCommands} = await utils.getOptions(options);
+    if (typeof showContextMenuCommands === 'undefined' && typeof quickContextMenuCommands === 'undefined') {
+      ({showContextMenuCommands, quickContextMenuCommands} = await utils.getOptions([
+        "showContextMenuCommands", "quickContextMenuCommands",
+      ]));
+    }
 
     if (typeof quickContextMenuCommands !== 'undefined') {
       this.quickMode = !!quickContextMenuCommands;
@@ -121,10 +122,10 @@ const historyController = {
     }
   },
 
-  async refresh() {
-    const {suppressHistory} = await utils.getOptions([
-      "suppressHistory",
-    ]);
+  async refresh(suppressHistory) {
+    if (typeof suppressHistory === 'undefined') {
+      ({suppressHistory} = await utils.getOptions(["suppressHistory"]));
+    }
     this.listen(suppressHistory);
   },
 };
@@ -206,15 +207,15 @@ async function updateAssets() {
   await autoUpdateAssets();
 }
 
-async function autoUpdateAssets() {
+async function autoUpdateAssets(webBlacklistsUpdateInterval) {
   if (autoUpdateAssetsTimer) {
     clearTimeout(autoUpdateAssetsTimer);
     autoUpdateAssetsTimer = null;
   }
 
-  const {webBlacklistsUpdateInterval} = await utils.getOptions([
-    "webBlacklistsUpdateInterval",
-  ]);
+  if (typeof webBlacklistsUpdateInterval === 'undefined') {
+    ({webBlacklistsUpdateInterval} = await utils.getOptions(["webBlacklistsUpdateInterval"]));
+  }
   autoUpdateAssetsTimer = setTimeout(updateAssets, webBlacklistsUpdateInterval);
 }
 
@@ -591,49 +592,52 @@ function initStorageChangeListener() {
       }
     }
 
-    {
-      const contextMenuOptions = [
-        "showContextMenuCommands",
-        "quickContextMenuCommands",
-      ].filter(x => x in changes);
-      if (contextMenuOptions.length) {
-        contextMenuController.refresh(contextMenuOptions);
+    const {
+      showContextMenuCommands,
+      quickContextMenuCommands,
+      suppressHistory,
+      webBlacklistsUpdateInterval,
+      webBlacklists,
+      userBlacklist,
+      userWhitelist,
+      userGraylist,
+      transformRules,
+      showLinkMarkers,
+    } = changes;
+
+    if (showContextMenuCommands || quickContextMenuCommands) {
+      contextMenuController.refresh(
+        showContextMenuCommands ? showContextMenuCommands.newValue : undefined,
+        quickContextMenuCommands ? quickContextMenuCommands.newValue : undefined,
+      );
+    }
+
+    if (suppressHistory) {
+      historyController.refresh(suppressHistory.newValue); // async
+    }
+
+    if (webBlacklistsUpdateInterval) {
+      autoUpdateAssets(webBlacklistsUpdateInterval.newValue); // async
+    }
+
+    if (userBlacklist || userWhitelist || userGraylist || webBlacklists || transformRules) {
+      await updateFilter(changes);
+
+      // @TODO:
+      // Say we have a shift from local to sync:
+      //
+      //     local {webBlacklists: "list1\nlist2"} => sync {webBlacklists: "list1"}
+      //     sync  {webBlacklists: ""}
+      //
+      // We get a change of sync: "" => "list1" and a change of local: "list1\nlist2" => undefined,
+      // and the cache of list2 is not cleared, while it should be, leaving staled cache not cleared.
+      if (webBlacklists) {
+        filter.clearStaleWebListCache(webBlacklists);
       }
     }
-
-    if ("suppressHistory" in changes) {
-      historyController.refresh(); // async
-    }
-
-    if ("webBlacklistsUpdateInterval" in changes) {
-      autoUpdateAssets(); // async
-    }
-
-    {
-      const listOptions = [
-        "webBlacklists",
-        "userBlacklist",
-        "userWhitelist",
-        "userGraylist",
-        "transformRules",
-      ].filter(x => x in changes);
-      if (listOptions.length) {
-        await updateFilter(changes);
-
-        // @TODO:
-        // Say we have a shift from local to sync:
-        //
-        //     local {webBlacklists: "list1\nlist2"} => sync {webBlacklists: "list1"}
-        //     sync  {webBlacklists: ""}
-        //
-        // We get a change of sync: "" => "list1" and a change of local: "list1\nlist2" => undefined,
-        // and the cache of list2 is not cleared, while it should be, leaving staled cache not cleared.
-        if (changes.webBlacklists) {
-          filter.clearStaleWebListCache(changes.webBlacklists);
-        }
-      } else if ("showLinkMarkers" in changes) {
-        refreshTabs();  // async
-      }
+    // skip this check for above cases as updateFilter() calls refreshTabs() at last
+    else if (showLinkMarkers) {
+      refreshTabs();  // async
     }
   });
 }
