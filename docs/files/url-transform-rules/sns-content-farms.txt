@@ -41,7 +41,9 @@
   ---- Videos ----
 
   -- Youtube
-/^https?://(?:\w+\.)?youtube\.com/c(?:hannel)?/([\w%-]+)(?=[/?#]|$)/ /^https?://(?:\w+\.)?youtube\.com/c(?:hannel)?/$1(?=[/?#]|$)/
+/^https?://(?:\w+\.)?youtube\.com/@([\w.-]+)(?=[/?#]|$)/ /^https?://(?:\w+\.)?youtube\.com/@$1(?=[/?#]|$)/
+/^https?://(?:\w+\.)?youtube\.com/c/([\w%-]+)(?=[/?#]|$)/ /^https?://(?:\w+\.)?youtube\.com/c/$1(?=[/?#]|$)/
+/^https?://(?:\w+\.)?youtube\.com/channel/([\w-]+)(?=[/?#]|$)/ /^https?://(?:\w+\.)?youtube\.com/channel/$1(?=[/?#]|$)/
 /^https?://(?:\w+\.)?youtube\.com/user/([\w-]+)(?=[/?#]|$)/ /^https?://(?:\w+\.)?youtube\.com/user/$1(?=[/?#]|$)/
 
   -- Vimeo
