@@ -1,6 +1,6 @@
 # Title: Content Farm Filters
 # Description: Filter for general content farms, mostly in Chinese.
-# Last modified: 2022-11-03T15:41:18+00:00
+# Last modified: 2022-11-05T06:08:59+00:00
 # Homepage: https://danny0838.github.io/content-farm-terminator/
 # Licence: MIT License
 # Source: https://danny0838.github.io/content-farm-terminator/files/blocklist-hosts/content-farms.txt
@@ -9266,6 +9266,77 @@
 0.0.0.0 fao-nettoyage.fr  #redirects to mix.zdes.online
 0.0.0.0 mcna.asia  #fake_site
 0.0.0.0 charlotteauchocolat.ch  #redirects to web.eujen.space
+0.0.0.0 hkvpnkgffrv.ru.com  #redirects to tiktokfinder.shop
+0.0.0.0 buckigo.co  #redirects to goetrack.top
+0.0.0.0 youwaf.com
+0.0.0.0 qxbroker.com
+0.0.0.0 sweepstakessurveytoday.com  #malicious scripts
+0.0.0.0 inoradde.com  #redirects to youwaf.com
+0.0.0.0 viapawniarda.com  #redirects to sweepstakessurveytoday.com
+0.0.0.0 roudoduor.com  #redirects to puskc.xyz
+0.0.0.0 johren.games
+0.0.0.0 johren.net  #redirects to rcv.johren.games
+0.0.0.0 supanimegames.com
+0.0.0.0 hungryrise.com  #redirects to supanimegames.com
+0.0.0.0 dwerls.eu.org  #redirects to hungryrise.com
+0.0.0.0 bangkoknews22.blogspot.com
+0.0.0.0 vibestream5.blogspot.com
+0.0.0.0 bangkok-new.blogspot.com
+0.0.0.0 tvpool1.blogspot.com
+0.0.0.0 motionsaucermentioned.com  #redirects to supanimegames.com
+0.0.0.0 s.id  #redirects to motionsaucermentioned.com
+0.0.0.0 educivica.it  #redirects to topawardhere.life
+0.0.0.0 stopkoronapassi.fi  #redirects to grgxro.delicatedate.net
+0.0.0.0 barryphoto.tw  #redirects to jaavnacsdw.com
+0.0.0.0 pbmab.co  #redirects to goetrack.top
+0.0.0.0 vinbsous.co  #redirects to goetrack.top
+0.0.0.0 kyl-helmet.com.tw  #redirects to jaavnacsdw.com
+0.0.0.0 sinjhanran.com.tw  #redirects to jaavnacsdw.com
+0.0.0.0 kwofalon.co  #redirects to goetrack.top
+0.0.0.0 nextlas.co  #redirects to goetrack.top
+0.0.0.0 mosiyt.me  #redirects to kwofalon.co
+0.0.0.0 hmedsame.co  #redirects to nextlas.co
+0.0.0.0 panona.co  #redirects to goetrack.top
+0.0.0.0 yi-yuan035778220.com.tw  #redirects to jaavnacsdw.com
+0.0.0.0 balitny.co  #redirects to panona.co
+0.0.0.0 roviil.co  #redirects to goetrack.top
+0.0.0.0 wjs.com.tw  #redirects to jaavnacsdw.com
+0.0.0.0 dafapack.com.tw  #redirects to jaavnacsdw.com
+0.0.0.0 newbnb.tw  #redirects to jaavnacsdw.com
+0.0.0.0 hongli-only.com.tw  #redirects to jaavnacsdw.com
+0.0.0.0 eloanbank.com.tw  #redirects to jaavnacsdw.com
+0.0.0.0 lune-garden.com.tw  #redirects to jaavnacsdw.com
+0.0.0.0 nanocera.com.tw  #redirects to jaavnacsdw.com
+0.0.0.0 siao-liouciou.com.tw  #redirects to jaavnacsdw.com
+0.0.0.0 hhhotel.com.tw  #redirects to jaavnacsdw.com
+0.0.0.0 vagabond.com.tw  #redirects to jaavnacsdw.com
+0.0.0.0 car999.com.tw  #redirects to jaavnacsdw.com
+0.0.0.0 chu-sing.com.tw  #redirects to jaavnacsdw.com
+0.0.0.0 yunlinpuppet.tw  #redirects to jaavnacsdw.com
+0.0.0.0 h-steak.com.tw  #redirects to jaavnacsdw.com
+0.0.0.0 nc-hotel.com.tw  #redirects to jaavnacsdw.com
+0.0.0.0 kptpx.co  #redirects to goetrack.top
+0.0.0.0 ebed.com.tw  #redirects to jaavnacsdw.com
+0.0.0.0 cash688.com.tw  #redirects to jaavnacsdw.com
+0.0.0.0 richermoon.com.tw  #redirects to jaavnacsdw.com
+0.0.0.0 thgroup.com.tw  #redirects to jaavnacsdw.com
+0.0.0.0 obyoxi.co  #redirects to kptpx.co
+0.0.0.0 yespink.com.tw  #redirects to jaavnacsdw.com
+0.0.0.0 pdmte.co  #redirects to goetrack.top
+0.0.0.0 shunhui.com.tw  #redirects to jaavnacsdw.com
+0.0.0.0 itlele.co  #redirects to pdmte.co
+0.0.0.0 sdsdas.co  #redirects to goetrack.top
+0.0.0.0 yuhogvip.co  #redirects to goetrack.top
+0.0.0.0 mediaprim.ru  #fake_site
+0.0.0.0 kaneyama.com.tw  #redirects to jaavnacsdw.com
+0.0.0.0 heshuo.com.tw  #redirects to jaavnacsdw.com
+0.0.0.0 ttlife.com.tw  #redirects to jaavnacsdw.com
+0.0.0.0 newspirits-clinic.com.tw  #redirects to jaavnacsdw.com
+0.0.0.0 agroler.co  #redirects to goetrack.top
+0.0.0.0 jsespech.co  #redirects to goetrack.top
+0.0.0.0 wearnuev.me  #redirects to agroler.co
+0.0.0.0 aiosizz.me  #redirects to jsespech.co
+0.0.0.0 sun-bright.com.tw  #redirects to jaavnacsdw.com
 #!aggreg-cxyzjd: https://raw.githubusercontent.com/wdmpa/content-farm-list/main/domains/spam/cxyzjd.txt (https://github.com/wdmpa/content-farm-list)
 0.0.0.0 cxybb.com  #!aggreg-cxyzjd
 0.0.0.0 cxymm.net  #!aggreg-cxyzjd
