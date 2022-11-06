@@ -79,7 +79,7 @@ const contextMenuController = {
     const value = async (info, tab) => {
       switch (info.menuItemId) {
         case "blockTab": {
-          return await blockSite(info.pageUrl, tab.id, 0, this.quickMode);
+          return await blockTabs(info.pageUrl, tab.id, this.quickMode);
         }
         case "blockPage": {
           return await blockSite(info.pageUrl, tab.id, info.frameId, this.quickMode);
@@ -323,6 +323,17 @@ async function blockSites(urlOrHostnames, tabId, frameId, quickMode) {
     cmd: 'alert',
     args: {msg: utils.lang("blockSitesSuccess", rules.join('\n'))},
   }, {frameId});
+}
+
+async function blockTabs(urlOrHostname, tabId, quickMode) {
+  const tabs = await browser.tabs.query({currentWindow: true, highlighted: true});
+  if (tabs.length > 1) {
+    const urlOrHostnames = tabs
+      .map(tab => tab.url)
+      .filter(url => url.startsWith('https:') || url.startsWith('http:'));
+    return await blockSites(urlOrHostnames, tabId, 0, quickMode);
+  }
+  return await blockSite(urlOrHostname, tabId, 0, quickMode);
 }
 
 async function blockSelectedLinks(tabId, frameId, quickMode) {
