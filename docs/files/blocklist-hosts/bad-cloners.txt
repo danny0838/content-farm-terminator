@@ -2,7 +2,7 @@
 # Description: Filter for cloner sites that are mostly free of copyright issue since the source site
 #     is copyleft or copyfree, but provide only trivial layout change or poor-quality bot translation
 #     and are thus spam-like.
-# Last modified: 2022-10-30T19:49:10+00:00
+# Last modified: 2022-11-06T19:49:18+00:00
 # Homepage: https://danny0838.github.io/content-farm-terminator/
 # Licence: MIT License
 # Source: https://danny0838.github.io/content-farm-terminator/files/blocklist-hosts/bad-cloners.txt
@@ -204,22 +204,12 @@
 0.0.0.0 coder.gay  #!aggreg-ublSoT
 0.0.0.0 jtuto.com  #!aggreg-ublSoT
 0.0.0.0 9to5answer.com  #!aggreg-ublSoT
-0.0.0.0 knews.vip  #!aggreg-ublSoT
-0.0.0.0 try2explore.com  #!aggreg-ublSoT
-0.0.0.0 xsprogram.com  #!aggreg-ublSoT
 0.0.0.0 5axxw.com  #!aggreg-ublSoT
-0.0.0.0 sysadminde.com  #!aggreg-ublSoT
-0.0.0.0 serveanswer.com  #!aggreg-ublSoT
-0.0.0.0 it-roy-ru.com  #!aggreg-ublSoT
-0.0.0.0 coder-solution-es.com  #!aggreg-ublSoT
 0.0.0.0 questu.ru  #!aggreg-ublSoT
-0.0.0.0 ape-ask.com  #!aggreg-ublSoT
 0.0.0.0 thecodeteacher.com  #!aggreg-ublSoT
 0.0.0.0 mejorcodigo.com  #!aggreg-ublSoT
 0.0.0.0 waymanamechurch.org  #!aggreg-ublSoT
 0.0.0.0 ntcdoon.org  #!aggreg-ublSoT
-0.0.0.0 techinplanet.com  #!aggreg-ublSoT
-0.0.0.0 stackubuntu.com  #!aggreg-ublSoT
 #!aggreg-wdmpaMtSo: https://raw.githubusercontent.com/wdmpa/content-farm-list/main/domains/machine-translated/stackoverflow.txt (https://github.com/wdmpa/content-farm-list)
 0.0.0.0 stackoverrun.com  #!aggreg-wdmpaMtSo
 0.0.0.0 thinbug.com  #!aggreg-wdmpaMtSo

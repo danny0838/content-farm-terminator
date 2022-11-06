@@ -1,6 +1,6 @@
 # Title: Extra Content Farm Filters
 # Description: Extra filter for content-farm-like sites, mostly aggregated from other sources.
-# Last modified: 2022-10-30T19:49:10+00:00
+# Last modified: 2022-11-06T19:49:18+00:00
 # Homepage: https://danny0838.github.io/content-farm-terminator/
 # Licence: MIT License
 # Source: https://danny0838.github.io/content-farm-terminator/files/blocklist-hosts/extra-content-farms.txt
@@ -72516,6 +72516,7 @@
 0.0.0.0 cjkfd.top  #!aggreg-nonpnt
 0.0.0.0 clubhouse-club.site  #!aggreg-nonpnt
 0.0.0.0 cmen.cc  #!aggreg-nonpnt
+0.0.0.0 cmm3d.com  #!aggreg-nonpnt
 0.0.0.0 cn.com  #!aggreg-nonpnt
 0.0.0.0 cnfreedomrtveas.ru.com  #!aggreg-nonpnt
 0.0.0.0 cnvhair.com  #!aggreg-nonpnt
@@ -72634,6 +72635,9 @@
 0.0.0.0 liwu.bi  #!aggreg-nonpnt
 0.0.0.0 liyi1688.com  #!aggreg-nonpnt
 0.0.0.0 lovfp.com  #!aggreg-nonpnt
+0.0.0.0 macsc.com  #!aggreg-nonpnt
+0.0.0.0 macxf.com  #!aggreg-nonpnt
+0.0.0.0 macz.com  #!aggreg-nonpnt
 0.0.0.0 mango66.com  #!aggreg-nonpnt
 0.0.0.0 mattkaydiary.com  #!aggreg-nonpnt
 0.0.0.0 measart.com  #!aggreg-nonpnt
@@ -72666,9 +72670,11 @@
 0.0.0.0 onitroad.com  #!aggreg-nonpnt
 0.0.0.0 outofmemory.cn  #!aggreg-nonpnt
 0.0.0.0 panjk.com  #!aggreg-nonpnt
+0.0.0.0 php.cn  #!aggreg-nonpnt
 0.0.0.0 picclick.co.uk  #!aggreg-nonpnt
 0.0.0.0 pinkypink.org  #!aggreg-nonpnt
 0.0.0.0 pintformation.com  #!aggreg-nonpnt
+0.0.0.0 pipecraft.net  #!aggreg-nonpnt
 0.0.0.0 piqiuda.com  #!aggreg-nonpnt
 0.0.0.0 pixelprivacy.com  #!aggreg-nonpnt
 0.0.0.0 pn3p.com  #!aggreg-nonpnt
@@ -72750,6 +72756,7 @@
 0.0.0.0 ttyshi.com  #!aggreg-nonpnt
 0.0.0.0 tumblr.com  #!aggreg-nonpnt
 0.0.0.0 tumlls.xyz  #!aggreg-nonpnt
+0.0.0.0 tumpik.com  #!aggreg-nonpnt
 0.0.0.0 turnoffthelights.com  #!aggreg-nonpnt
 0.0.0.0 twfeq.com  #!aggreg-nonpnt
 0.0.0.0 txcsjlb.com  #!aggreg-nonpnt
@@ -72769,6 +72776,7 @@
 0.0.0.0 vvfx.cc  #!aggreg-nonpnt
 0.0.0.0 wallmama.com  #!aggreg-nonpnt
 0.0.0.0 wallzhihu.com  #!aggreg-nonpnt
+0.0.0.0 wangluotizi.com  #!aggreg-nonpnt
 0.0.0.0 waymanamechurch.org  #!aggreg-nonpnt
 0.0.0.0 wbolt.com  #!aggreg-nonpnt
 0.0.0.0 wdfxw.net  #!aggreg-nonpnt
