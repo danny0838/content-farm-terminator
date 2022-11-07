@@ -1,6 +1,6 @@
 # Title: Content Farm Filters
 # Description: Filter for general content farms, mostly in Chinese.
-# Last modified: 2022-11-06T19:49:18+00:00
+# Last modified: 2022-11-07T11:53:45+00:00
 # Homepage: https://danny0838.github.io/content-farm-terminator/
 # Licence: MIT License
 # Source: https://danny0838.github.io/content-farm-terminator/files/blocklist-hosts/content-farms.txt
@@ -9376,6 +9376,14 @@
 0.0.0.0 news20zone.com
 0.0.0.0 newskdaily.com
 0.0.0.0 onlinetime7newsthaiforyou.com
+0.0.0.0 zizhi888.cn
+0.0.0.0 niice-woker.com
+0.0.0.0 39health.com.tw
+0.0.0.0 tjxdjx.cn
+0.0.0.0 dyhzdl.cn
+0.0.0.0 gmja8.com
+0.0.0.0 musiccweb.com
+0.0.0.0 supertime01.com
 #!aggreg-cxyzjd: https://raw.githubusercontent.com/wdmpa/content-farm-list/main/domains/spam/cxyzjd.txt (https://github.com/wdmpa/content-farm-list)
 0.0.0.0 cxybb.com  #!aggreg-cxyzjd
 0.0.0.0 cxymm.net  #!aggreg-cxyzjd
