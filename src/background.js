@@ -272,10 +272,8 @@ async function blockSite(urlOrHostname, tabId, frameId, quickMode) {
   }, {frameId});
 }
 
-async function blockSelectedLinks(tabId, frameId, quickMode) {
-  let rules = (await browser.tabs.sendMessage(tabId, {
-      cmd: 'blockSelectedLinks',
-    }, {frameId}))
+async function blockSites(urlOrHostnames, tabId, frameId, quickMode) {
+  let rules = urlOrHostnames
     .map(urlOrHostname => filter.transform(filter.parseRuleLine(urlOrHostname)).validate().toString())
     .filter(rule => !filter.isInBlacklist(rule));
 
@@ -325,6 +323,13 @@ async function blockSelectedLinks(tabId, frameId, quickMode) {
     cmd: 'alert',
     args: {msg: utils.lang("blockSitesSuccess", rules.join('\n'))},
   }, {frameId});
+}
+
+async function blockSelectedLinks(tabId, frameId, quickMode) {
+  const urlOrHostnames = await browser.tabs.sendMessage(tabId, {
+    cmd: 'blockSelectedLinks',
+  }, {frameId});
+  return await blockSites(urlOrHostnames, tabId, frameId, quickMode);
 }
 
 function onRequestRecorder(details) {
