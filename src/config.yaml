@@ -286,7 +286,7 @@ build:
           value: /^https?://(?:(?:[\w-]+\.)?facebook\.com|fb\.(?:com|me))/(?!\w+\.php(?:\?|$))(?:(?:pg|groups)/)?(?:{value})(?!/user/)(?=[/?#]|$)/
         facebook-user:
           <<: *grouping_regex_scheme
-          value: /^https?://(?:(?:[\w-]+\.)?facebook\.com|fb\.(?:com|me))/(?=(?:groups/\w+/user/)?\w+(?=[?#]|/?$)|profile\.php\?(?:[^&#]*&)*?id=\w+(?=[&#]|$))(?:(?:groups/\w+/user/)?|profile\.php\?(?:[^&#]*&)*?id=)(?:{value})(?=[/?&#]|$)/
+          value: /^https?://(?:(?:[\w-]+\.)?facebook\.com|fb\.(?:com|me))/(?=(?:groups/\w+/user/)?\w+\b|(?:profile|permalink)\.php\?(?:[^&#]*&)*?id=\w+(?=[&#]|$))(?:(?:groups/\w+/user/)?|(?:profile|permalink)\.php\?(?:[^&#]*&)*?id=)(?:{value})(?=[/?&#]|$)/
         facebook-page:
           <<: *grouping_regex_scheme
           value: /^https?://(?:(?:[\w-]+\.)?facebook\.com|fb\.(?:com|me))/(?:pg/)?(?:[\w%]+-)?(?:{value})(?=[/?#]|$)/

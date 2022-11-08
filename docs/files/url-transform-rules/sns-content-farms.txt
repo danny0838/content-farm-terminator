@@ -1,8 +1,8 @@
   ---- Facebook-like ----
 
   -- Facebook
-/^https?://(?:(?:[\w-]+\.)?facebook\.com|fb\.(?:com|me))/profile\.php\?(?:[^&#]*&)*?id=(\w+)(?=[&#]|$)/ /^https?://(?:(?:[\w-]+\.)?facebook\.com|fb\.(?:com|me))/(?=(?:groups/\w+/user/)?\w+(?=[?#]|/?$)|profile\.php\?(?:[^&#]*&)*?id=\w+(?=[&#]|$))(?:(?:groups/\w+/user/)?|profile\.php\?(?:[^&#]*&)*?id=)$1(?=[/?&#]|$)/
-/^https?://(?:(?:[\w-]+\.)?facebook\.com|fb\.(?:com|me))/groups/\w+/user/(\w+)(?=[/?#]|$)/ /^https?://(?:(?:[\w-]+\.)?facebook\.com|fb\.(?:com|me))/(?=(?:groups/\w+/user/)?\w+(?=[?#]|/?$)|profile\.php\?(?:[^&#]*&)*?id=\w+(?=[&#]|$))(?:(?:groups/\w+/user/)?|profile\.php\?(?:[^&#]*&)*?id=)$1(?=[/?&#]|$)/
+/^https?://(?:(?:[\w-]+\.)?facebook\.com|fb\.(?:com|me))/(?:profile|permalink)\.php\?(?:[^&#]*&)*?id=(\w+)(?=[&#]|$)/ /^https?://(?:(?:[\w-]+\.)?facebook\.com|fb\.(?:com|me))/(?=(?:groups/\w+/user/)?\w+\b|(?:profile|permalink)\.php\?(?:[^&#]*&)*?id=\w+(?=[&#]|$))(?:(?:groups/\w+/user/)?|(?:profile|permalink)\.php\?(?:[^&#]*&)*?id=)$1(?=[/?&#]|$)/
+/^https?://(?:(?:[\w-]+\.)?facebook\.com|fb\.(?:com|me))/groups/\w+/user/(\w+)\b/ /^https?://(?:(?:[\w-]+\.)?facebook\.com|fb\.(?:com|me))/(?=(?:groups/\w+/user/)?\w+\b|(?:profile|permalink)\.php\?(?:[^&#]*&)*?id=\w+(?=[&#]|$))(?:(?:groups/\w+/user/)?|(?:profile|permalink)\.php\?(?:[^&#]*&)*?id=)$1(?=[/?&#]|$)/
 /^https?://(?:(?:[\w-]+\.)?facebook\.com|fb\.(?:com|me))/groups/(\w+)(?=[/?#]|$)/ /^https?://(?:(?:[\w-]+\.)?facebook\.com|fb\.(?:com|me))/(?:groups/)?$1(?!/user/)(?=[/?#]|$)/
 /^https?://(?:(?:[\w-]+\.)?facebook\.com|fb\.(?:com|me))/(?:[\w%]+-)?(\d+)(?=[/?#]|$)/ /^https?://(?:(?:[\w-]+\.)?facebook\.com|fb\.(?:com|me))/(?:pg/)?(?:[\w%]+-)?$1(?=[/?#]|$)/
 /^https?://(?:(?:[\w-]+\.)?facebook\.com|fb\.(?:com|me))/(?!\w+\.php(?:\?|$))([\w.-]+)(?=[/?#]|$)/ /^https?://(?:(?:[\w-]+\.)?facebook\.com|fb\.(?:com|me))/(?!\w+\.php(?:\?|$))(?:(?:pg|groups)/)?$1(?!/user/)(?=[/?#]|$)/
