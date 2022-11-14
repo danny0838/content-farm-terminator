@@ -283,13 +283,10 @@ build:
       schemes: &sns_content_farms_schemes
         facebook:
           <<: *grouping_regex_scheme
-          value: /^https?://(?:(?:[\w-]+\.)?facebook\.com|fb\.(?:com|me))/(?!\w+\.php(?:\?|$))(?:(?:pg|groups)/)?(?:{value})(?!/user/)(?=[/?#]|$)/
-        facebook-user:
+          value: /^https?://(?:(?:[\w-]+\.)?facebook\.com|fb\.(?:com|me))/(?!\w+\.php\?)(?:pg/)?(?:{value})(?=[/?#]|$)/
+        facebook-id:
           <<: *grouping_regex_scheme
-          value: /^https?://(?:(?:[\w-]+\.)?facebook\.com|fb\.(?:com|me))/(?=(?:groups/\w+/user/)?\w+\b|(?:profile|permalink)\.php\?(?:[^&#]*&)*?id=\w+(?=[&#]|$))(?:(?:groups/\w+/user/)?|(?:profile|permalink)\.php\?(?:[^&#]*&)*?id=)(?:{value})(?=[/?&#]|$)/
-        facebook-page:
-          <<: *grouping_regex_scheme
-          value: /^https?://(?:(?:[\w-]+\.)?facebook\.com|fb\.(?:com|me))/(?:pg/)?(?:[\w%]+-)?(?:{value})(?=[/?#]|$)/
+          value: /^https?://(?:(?:[\w-]+\.)?facebook\.com|fb\.(?:com|me))/(?=(?:(?:pg/)?(?:[\w%]+-)?|profile/|people/[\w%]+/|groups/[0-9a-z.]+/user/)\d+\b|(?:profile|permalink)\.php\?(?:[^&#]*&)*?id=\d+(?=[&#]|$))(?:(?:(?:pg/)?(?:[\w%]+-)?|profile/|people/[\w%]+/|groups/[0-9a-z.]+/user/)|(?:profile|permalink)\.php\?(?:[^&#]*&)*?id=)(?:{value})(?=[/?&#]|$)/
         facebook-group:
           <<: *grouping_regex_scheme
           value: /^https?://(?:(?:[\w-]+\.)?facebook\.com|fb\.(?:com|me))/(?:groups/)?(?:{value})(?!/user/)(?=[/?#]|$)/
