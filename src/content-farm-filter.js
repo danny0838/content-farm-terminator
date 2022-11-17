@@ -512,11 +512,11 @@
 
   class regex {
     static firstCharCodeClass(s) {
-      return /^[\x01%0-9A-Za-z]/.test(s) ? 1 : 0;
+      return /^[\x01\x03%0-9A-Za-z]/.test(s) ? 1 : 0;
     }
 
     static lastCharCodeClass(s) {
-      return /[\x01%0-9A-Za-z]$/.test(s) ? 1 : 0;
+      return /[\x01\x03%0-9A-Za-z]$/.test(s) ? 1 : 0;
     }
 
     static tokenizableStrFromNode(node) {
@@ -545,18 +545,23 @@
           return String.fromCharCode(firstChar, lastChar);
         }
         case 4: /* T_GROUP, 'Group' */ {
-          if (node.flags.NegativeLookAhead === 1) { return '\x01'; }
-          if (node.flags.NegativeLookBehind === 1) { return '\x01'; }
+          if (
+            node.flags.NegativeLookAhead === 1 ||
+            node.flags.NegativeLookBehind === 1
+          ) {
+            return '';
+          }
           return this.tokenizableStrFromNode(node.val);
         }
         case 16: /* T_QUANTIFIER, 'Quantifier' */ {
+          if (node.flags.max === 0) { return ''; }
           const s = this.tokenizableStrFromNode(node.val);
           const first = this.firstCharCodeClass(s);
           const last = this.lastCharCodeClass(s);
-          if (node.flags.min === 0 && first === 0 && last === 0) {
-            return '';
+          if (node.flags.min !== 0) {
+            return String.fromCharCode(first, last);
           }
-          return String.fromCharCode(first, last);
+          return String.fromCharCode(first + 2, last + 2);
         }
         case 64: /* T_HEXCHAR, 'HexChar' */ {
           return String.fromCharCode(parseInt(node.val.slice(1), 16));
@@ -599,6 +604,7 @@
     }
 
     static toTokenizableStr(reStr) {
+      let s = '';
       try {
         // Depends on:
         // https://github.com/foo123/RegexAnalyzer
@@ -608,12 +614,33 @@
         reStr = reStr.replace(REGEX_RE_STR_FIXER, REGEX_RE_STR_FIXER_FUNC);
 
         const node = regexAnalyzer(reStr, false).tree();
-        return this.tokenizableStrFromNode(node);
+        s = this.tokenizableStrFromNode(node);
       } catch(ex) {
         // Certain regex cannot be parsed by the analyzer,
         // such as /\u{20000}/.
       }
-      return '';
+
+      // Process optional sequences
+      const reOptional = /[\x02\x03]+/;
+      for (;;) {
+        const match = reOptional.exec(s);
+        if (match === null) { break; }
+        const left = s.slice(0, match.index);
+        const middle = match[0];
+        const right = s.slice(match.index + middle.length);
+        s = left;
+        s += this.firstCharCodeClass(right) === 1 ||
+            this.firstCharCodeClass(middle) === 1
+          ? '\x01'
+          : '\x00';
+        s += this.lastCharCodeClass(left) === 1 ||
+            this.lastCharCodeClass(middle) === 1
+          ? '\x01'
+          : '\x00';
+        s += right;
+      }
+
+      return s;
     }
   }
 
