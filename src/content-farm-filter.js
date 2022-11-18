@@ -507,8 +507,10 @@
     }
   }
 
-  const REGEX_RE_STR_FIXER = /(\\[\s\S])|-/g;
-  const REGEX_RE_STR_FIXER_FUNC = (m, e) => (e || `\\${m}`);
+  const REGEX_RE_STR_FIXER = /\\[\s\S]|\[([^\\\]]*(?:\\[\S\s][^\\\]]*)*)\]/g;
+  const REGEX_RE_STR_FIXER_FUNC = (m, cg) => (cg ? '[' + cg.replace(REGEX_RE_STR_FIXER_CG, REGEX_RE_STR_FIXER_CG_FUNC) + ']' : m);
+  const REGEX_RE_STR_FIXER_CG = /^\^|(?:[^\\\]]|\\(?:x[0-9A-Fa-f]{2}|u[0-9A-Fa-f]{4}|[^dDsSwW]))-(?:[^\\\]]|\\(?:x[0-9A-Fa-f]{2}|u[0-9A-Fa-f]{4}|[^dDsSwW]))|\\[\s\S]|(-)/g;
+  const REGEX_RE_STR_FIXER_CG_FUNC = (m, h) => (h ? '\\-' : m);
 
   class regex {
     static firstCharCodeClass(s) {
@@ -610,7 +612,8 @@
         // https://github.com/foo123/RegexAnalyzer
         const regexAnalyzer = Regex.Analyzer;
 
-        // fix error for analyzer for [x-]
+        // fix analyzer bug for e.g. [x-], [-x], [\d-x], [x-\d]
+        // https://github.com/foo123/RegexAnalyzer/issues/5
         reStr = reStr.replace(REGEX_RE_STR_FIXER, REGEX_RE_STR_FIXER_FUNC);
 
         const node = regexAnalyzer(reStr, false).tree();
