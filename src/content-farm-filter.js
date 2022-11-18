@@ -565,6 +565,7 @@
           }
           return String.fromCharCode(first + 2, last + 2);
         }
+        case 32: /* T_UNICODECHAR, 'UnicodeChar' */
         case 64: /* T_HEXCHAR, 'HexChar' */ {
           // prevent confusion with internally used chars
           // (note: control chars are invalid in a normal URL)
