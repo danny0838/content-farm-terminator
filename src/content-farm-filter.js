@@ -566,7 +566,12 @@
           return String.fromCharCode(first + 2, last + 2);
         }
         case 64: /* T_HEXCHAR, 'HexChar' */ {
-          return String.fromCharCode(parseInt(node.val.slice(1), 16));
+          // prevent confusion with internally used chars
+          // (note: control chars are invalid in a normal URL)
+          const code = parseInt(node.flags.Code, 16);
+          if (0x00 <= code && code <= 0x03) { return '\x00'; }
+
+          return node.flags.Char;
         }
         case 128: /* T_SPECIAL, 'Special' */ {
           const flags = node.flags;
