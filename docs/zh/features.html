@@ -136,3 +136,5 @@ title: 功能介紹
 <p>「終結內容農場」黑名單主要是針對網域，但有些內容農場只是網域下的一小部分，封鎖整個網域並不適當。比如用右鍵選單把超連結 <code>https://www.youtube.com/channel/ContentFarmVideos</code> 加入黑名單，或在自訂黑名單加入此網址時，預設會封鎖 <code>youtube.com</code>，但實際上我們往往只想封鎖該頻道，而不是整個 YouTube。</p>
 
 <p>此時可以在 [網址轉換規則] 加入一條轉換規則：<code>/^https?://www\.youtube\.com/channel/([\w-]+)(?=[/?#]|$)/ /^https?://www\.youtube\.com/channel/$1(?=[/?#]|$)/</code>，這麼一來加入此網址時就會先經過轉換而變成封鎖 <code>/^https?://www\.youtube\.com/channel/ContentFarmVideos(?=[/?#]|$)/</code>。</p>
+
+<p>一些知名網站的網址轉換規則可在<a href="./subscriptions">後台資料庫</a>找到。</p>
