@@ -532,6 +532,7 @@
         }
         case 2: /* T_ALTERNATION, 'Alternation' */
         case 8: /* T_CHARGROUP, 'CharacterGroup' */ {
+          if (node.flags.NegativeMatch) { return '\x01'; }
           let firstChar = 0;
           let lastChar = 0;
           for (let i = 0; i < node.val.length; i++) {
