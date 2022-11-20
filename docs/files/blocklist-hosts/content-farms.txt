@@ -1,6 +1,6 @@
 # Title: Content Farm Filters
 # Description: Filter for general content farms, mostly in Chinese.
-# Last modified: 2022-11-17T14:06:29+00:00
+# Last modified: 2022-11-20T14:08:46+00:00
 # Homepage: https://danny0838.github.io/content-farm-terminator/
 # Licence: MIT License
 # Source: https://danny0838.github.io/content-farm-terminator/files/blocklist-hosts/content-farms.txt
@@ -9451,6 +9451,20 @@
 0.0.0.0 kitgortalk.com
 0.0.0.0 mamalovecooking.com
 0.0.0.0 catcommun.com
+0.0.0.0 agonew.com
+0.0.0.0 urinfotw.com
+0.0.0.0 pwrtik.co  #redirects to goetrack.top
+0.0.0.0 wenewstw.com
+0.0.0.0 endegenc.co  #redirects to goetrack.top
+0.0.0.0 isolano.fr  #redirects to topawardhere.life
+0.0.0.0 vetrerianzio1.it  #redirects to topawardhere.life
+0.0.0.0 skrfashion.com  #redirects to jonygame.com
+0.0.0.0 rulemanhold.live  #malicious scripts
+0.0.0.0 f9dle.skin  #redirects to 2022.rulemanhold.live
+0.0.0.0 sancarlohumilitas.it  #redirects to tout.f9dle.skin
+0.0.0.0 lannenlasipalvelu.fi  #redirects to tout.f9dle.skin
+0.0.0.0 kakakiko.fi  #redirects to tout.f9dle.skin
+0.0.0.0 ssdrq.com
 #!aggreg-cxyzjd: https://raw.githubusercontent.com/wdmpa/content-farm-list/main/domains/spam/cxyzjd.txt (https://github.com/wdmpa/content-farm-list)
 0.0.0.0 cxybb.com  #!aggreg-cxyzjd
 0.0.0.0 cxymm.net  #!aggreg-cxyzjd

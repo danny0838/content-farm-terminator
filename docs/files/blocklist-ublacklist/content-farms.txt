@@ -1,6 +1,6 @@
 # Title: Content Farm Filters
 # Description: Filter for general content farms, mostly in Chinese.
-# Last modified: 2022-11-17T14:06:29+00:00
+# Last modified: 2022-11-20T14:08:46+00:00
 # Homepage: https://danny0838.github.io/content-farm-terminator/
 # Licence: MIT License
 # Source: https://danny0838.github.io/content-farm-terminator/files/blocklist-ublacklist/content-farms.txt
@@ -9350,6 +9350,20 @@
 *://*.kitgortalk.com/*
 *://*.mamalovecooking.com/*
 *://*.catcommun.com/*
+*://*.agonew.com/*
+*://*.urinfotw.com/*
+*://*.pwrtik.co/*  #redirects to goetrack.top
+*://*.wenewstw.com/*
+*://*.endegenc.co/*  #redirects to goetrack.top
+*://*.isolano.fr/*  #redirects to topawardhere.life
+*://*.vetrerianzio1.it/*  #redirects to topawardhere.life
+*://*.skrfashion.com/*  #redirects to jonygame.com
+*://*.rulemanhold.live/*  #malicious scripts
+*://*.f9dle.skin/*  #redirects to 2022.rulemanhold.live
+*://*.sancarlohumilitas.it/*  #redirects to tout.f9dle.skin
+*://*.lannenlasipalvelu.fi/*  #redirects to tout.f9dle.skin
+*://*.kakakiko.fi/*  #redirects to tout.f9dle.skin
+*://*.ssdrq.com/*
 #!aggreg-cxyzjd: https://raw.githubusercontent.com/wdmpa/content-farm-list/main/domains/spam/cxyzjd.txt (https://github.com/wdmpa/content-farm-list)
 *://*.cxybb.com/*  #!aggreg-cxyzjd
 *://*.cxymm.net/*  #!aggreg-cxyzjd
