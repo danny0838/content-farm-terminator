@@ -1,6 +1,6 @@
 # Title: Content Farm Filters
 # Description: Filter for general content farms, mostly in Chinese.
-# Last modified: 2022-11-20T19:49:15+00:00
+# Last modified: 2022-11-26T11:45:56+00:00
 # Homepage: https://danny0838.github.io/content-farm-terminator/
 # Licence: MIT License
 # Source: https://danny0838.github.io/content-farm-terminator/files/blocklist-hosts/content-farms.txt
@@ -9465,6 +9465,42 @@
 0.0.0.0 lannenlasipalvelu.fi  #redirects to tout.f9dle.skin
 0.0.0.0 kakakiko.fi  #redirects to tout.f9dle.skin
 0.0.0.0 ssdrq.com
+0.0.0.0 fane8.com
+0.0.0.0 italyon.it
+0.0.0.0 agrocompost.es
+0.0.0.0 allishea.co  #redirects to goetrack.top
+0.0.0.0 wayzhng.co  #redirects to goetrack.top
+0.0.0.0 sawformblow.live  #malicious scripts
+0.0.0.0 the-best-prizes.life  #redirects to 2421.sawformblow.live
+0.0.0.0 nuvute.cz  #redirects to the-best-prizes.life
+0.0.0.0 qwiki.pub
+0.0.0.0 avple.tv
+0.0.0.0 mlladele.co  #redirects to goetrack.top
+0.0.0.0 easkid.co  #redirects to goetrack.top
+0.0.0.0 paulaharjunkoulu.fi  #redirects to tiktokfinder.shop
+0.0.0.0 varein.me  #redirects to mlladele.co
+0.0.0.0 hornbt.co  #redirects to goetrack.top
+0.0.0.0 provh.co  #redirects to goetrack.top
+0.0.0.0 trustedstream.life  #malicious scripts
+0.0.0.0 corepsh.top  #redirects to one.trustedstream.life
+0.0.0.0 noriglio.tn.it  #redirects to corepsh.top
+0.0.0.0 qickpoo.co  #redirects to goetrack.top
+0.0.0.0 elarassi.co  #redirects to goetrack.top
+0.0.0.0 rabzco.co  #redirects to goetrack.top
+0.0.0.0 nobkos.co  #redirects to goetrack.top
+0.0.0.0 quadrmmo.co  #redirects to goetrack.top
+0.0.0.0 bfoob.co  #redirects to goetrack.top
+0.0.0.0 npccoir.co  #redirects to goetrack.top
+0.0.0.0 withmven.co  #redirects to goetrack.top
+0.0.0.0 machherb.co  #redirects to goetrack.top
+0.0.0.0 remexrio.co  #redirects to goetrack.top
+0.0.0.0 toscana.it  #redirects to corepsh.top
+0.0.0.0 masteypc.me  #redirects to npccoir.co
+0.0.0.0 zorntop.co  #redirects to remexrio.co
+0.0.0.0 mayauntz.co  #redirects to rabzco.co
+0.0.0.0 golfoid.co  #redirects to nobkos.co
+0.0.0.0 animalshopmenfi.it  #redirects to the-best-prizes.life
+0.0.0.0 jendow.com.tw
 #!aggreg-cxyzjd: https://raw.githubusercontent.com/wdmpa/content-farm-list/main/domains/spam/cxyzjd.txt (https://github.com/wdmpa/content-farm-list)
 0.0.0.0 cxybb.com  #!aggreg-cxyzjd
 0.0.0.0 cxymm.net  #!aggreg-cxyzjd
