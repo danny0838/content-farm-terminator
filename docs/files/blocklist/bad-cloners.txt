@@ -2,7 +2,7 @@
   # Description: Filter for cloner sites that are mostly free of copyright issue since the source site
   #     is copyleft or copyfree, but provide only trivial layout change or poor-quality bot translation
   #     and are thus spam-like.
-  # Last modified: 2022-11-20T19:49:15+00:00
+  # Last modified: 2022-11-26T11:44:07+00:00
   # Homepage: https://danny0838.github.io/content-farm-terminator/
   # Licence: MIT License
   # Source: https://danny0838.github.io/content-farm-terminator/files/blocklist/bad-cloners.txt
@@ -210,6 +210,7 @@ thecodeteacher.com #!aggreg-ublSoT
 mejorcodigo.com #!aggreg-ublSoT
 waymanamechurch.org #!aggreg-ublSoT
 ntcdoon.org #!aggreg-ublSoT
+itecnotes.com #!aggreg-ublSoT
   #!aggreg-wdmpaMtSo: https://raw.githubusercontent.com/wdmpa/content-farm-list/main/domains/machine-translated/stackoverflow.txt (https://github.com/wdmpa/content-farm-list)
 stackoverrun.com #!aggreg-wdmpaMtSo
 thinbug.com #!aggreg-wdmpaMtSo
