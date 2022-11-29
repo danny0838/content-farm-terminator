@@ -2,7 +2,7 @@
   # Description: Filter for cloner sites that are mostly free of copyright issue since the source site
   #     is copyleft or copyfree, but provide only trivial layout change or poor-quality bot translation
   #     and are thus spam-like.
-  # Last modified: 2022-11-27T19:49:13+00:00
+  # Last modified: 2022-11-29T17:09:24+00:00
   # Homepage: https://danny0838.github.io/content-farm-terminator/
   # Licence: MIT License
   # Source: https://danny0838.github.io/content-farm-terminator/files/blocklist/bad-cloners.txt
@@ -212,6 +212,8 @@ waymanamechurch.org #!aggreg-ublSoT
 ntcdoon.org #!aggreg-ublSoT
 itecnotes.com #!aggreg-ublSoT
   #!aggreg-wdmpaMtSo: https://raw.githubusercontent.com/wdmpa/content-farm-list/main/domains/machine-translated/stackoverflow.txt (https://github.com/wdmpa/content-farm-list)
+/https?://(?:www\.coder\.work/article/.*)$/ #!aggreg-wdmpaMtSo
+/https?://(?:xbuba\.com/questions/.*)$/ #!aggreg-wdmpaMtSo
 stackoverrun.com #!aggreg-wdmpaMtSo
 thinbug.com #!aggreg-wdmpaMtSo
 voidcn.com #!aggreg-wdmpaMtSo
@@ -220,9 +222,10 @@ soinside.com #!aggreg-wdmpaMtSo
 androidcookie.com #!aggreg-wdmpaMtSo
 qastack.in #!aggreg-wdmpaMtSo
 qastack.lk #!aggreg-wdmpaMtSo
+/https?://(?:twitter\.com/qastack/.*)$/ #!aggreg-wdmpaMtSo
+/https?://(?:codingdict\.com/questions/.*)$/ #!aggreg-wdmpaMtSo
 kb.kutu66.com #!aggreg-wdmpaMtSo
 366service.com #!aggreg-wdmpaMtSo
 mlog.club #!aggreg-wdmpaMtSo
 koubeiblog.com #!aggreg-wdmpaMtSo
 recalll.co #!aggreg-wdmpaMtSo
-/https?://(?:www\.coder\.work/article/.*|xbuba\.com/questions/.*|twitter\.com/qastack/.*|codingdict\.com/questions/.*)$/

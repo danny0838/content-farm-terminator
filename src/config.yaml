@@ -212,35 +212,30 @@ build:
         Licence: MIT License
         Source: https://danny0838.github.io/content-farm-terminator/files/blocklist/content-farms.txt
       schemes: &content_farms_schemes
-        xuite: &grouping_regex_scheme
+        domain-part:
+          value: /https?://(?:[\w-]+\.)*(?:{value})(?:\.[\w-]+)*(?=[:/?#]|$)/
+          escape: regex
+        domain-path:
+          value: /https?://(?:[\w-]+\.)*(?:{value})(?=[/?#]|$)/
+          escape: regex
+        mp-path:
+          value: /https?://(?:[\w-]+\.)*[\w-]+/(?:{value})$/
+          escape: regex_with_wildcard_a
+        mp-hosts-path:
+          value: /https?://(?:[\w-]+\.)*(?:{value})$/
+          escape: regex_with_wildcard_a
+        mp-host-path:
+          value: /https?://(?:{value})$/
+          escape: regex_with_wildcard_a
+        xuite: &content_farms_scheme_xuite
           value: /^https?://(?:(?:m\.)?(?:[bv]log|photo)\.xuite\.net|m\.xuite\.net/blog)/(?:{value})(?=[/?#]|$)/
           escape: regex
-          grouping: "|"
-          max: 524288
-        udn:
-          <<: *grouping_regex_scheme
+        udn: &content_farms_scheme_udn
           value: /^https?://(?:blog|album)\.udn\.com/(?:mobile/)?(?:{value})(?=[/?#]|$)/
-        pchome:
-          <<: *grouping_regex_scheme
+          escape: regex
+        pchome: &content_farms_scheme_pchome
           value: /^https?://mypaper\.(?:m\.)?pchome\.com\.tw/(?:{value})(?=[/?#]|$)/
-        domain-part:
-          <<: *grouping_regex_scheme
-          value: /https?://(?:[\w-]+\.)*(?:{value})(?:\.[\w-]+)*(?=[:/?#]|$)/
-        domain-path:
-          <<: *grouping_regex_scheme
-          value: /https?://(?:[\w-]+\.)*(?:{value})(?=[/?#]|$)/
-        mp-path:
-          <<: *grouping_regex_scheme
-          escape: regex_with_wildcard_a
-          value: /https?://(?:[\w-]+\.)*[\w-]+/(?:{value})$/
-        mp-hosts-path:
-          <<: *grouping_regex_scheme
-          escape: regex_with_wildcard_a
-          value: /https?://(?:[\w-]+\.)*(?:{value})$/
-        mp-host-path:
-          <<: *grouping_regex_scheme
-          escape: regex_with_wildcard_a
-          value: /https?://(?:{value})$/
+          escape: regex
 
   - source: src/blocklist/nearly-content-farms.txt
     publish: docs/files/blocklist/nearly-content-farms.txt
@@ -282,47 +277,47 @@ build:
         Source: https://danny0838.github.io/content-farm-terminator/files/blocklist/sns-content-farms.txt
       schemes: &sns_content_farms_schemes
         facebook:
-          <<: *grouping_regex_scheme
           value: /^https?://(?:(?:[\w-]+\.)?facebook\.com|fb\.(?:com|me))/(?!\w+\.php\?)(?:pg/)?(?:{value})(?=[/?#]|$)/
+          escape: regex
         facebook-id:
-          <<: *grouping_regex_scheme
           value: /^https?://(?:(?:[\w-]+\.)?facebook\.com|fb\.(?:com|me))/(?=(?:(?:pg/)?(?:[\w%]+-)?|profile/|people/[\w%]+/|groups/[0-9a-z.]+/user/)\d+\b|(?:profile|permalink)\.php\?(?:[^&#]*&)*?id=\d+(?=[&#]|$))(?:(?:(?:pg/)?(?:[\w%]+-)?|profile/|people/[\w%]+/|groups/[0-9a-z.]+/user/)|(?:profile|permalink)\.php\?(?:[^&#]*&)*?id=)(?:{value})(?=[/?&#]|$)/
+          escape: regex
         facebook-group:
-          <<: *grouping_regex_scheme
           value: /^https?://(?:(?:[\w-]+\.)?facebook\.com|fb\.(?:com|me))/(?:groups/)?(?:{value})(?!/user/)(?=[/?#]|$)/
+          escape: regex
         twitter:
-          <<: *grouping_regex_scheme
           value: /^https?://(?:\w+\.)?twitter\.com/(?:{value})(?=[/?#]|$)/
+          escape: regex
         youtube-handle:
-          <<: *grouping_regex_scheme
           value: /^https?://(?:\w+\.)?youtube\.com/@(?:{value})(?=[/?#]|$)/
+          escape: regex
         youtube-channel:
-          <<: *grouping_regex_scheme
           value: /^https?://(?:\w+\.)?youtube\.com/channel/(?:{value})(?=[/?#]|$)/
+          escape: regex
         youtube-custom:
-          <<: *grouping_regex_scheme
           value: /^https?://(?:\w+\.)?youtube\.com/c/(?:{value})(?=[/?#]|$)/
+          escape: regex
         youtube-user:
-          <<: *grouping_regex_scheme
           value: /^https?://(?:\w+\.)?youtube\.com/user/(?:{value})(?=[/?#]|$)/
+          escape: regex
         instagram:
-          <<: *grouping_regex_scheme
           value: /^https?://(?:www\.)?instagram\.com/(?:{value})(?=[/?#]|$)/
+          escape: regex
         pinterest:
-          <<: *grouping_regex_scheme
           value: /^https?://(?:www\.)?pinterest(?:\.[a-z]+)+/(?:{value})(?=[/?#]|$)/
+          escape: regex
         plurk:
-          <<: *grouping_regex_scheme
           value: /^https?://(?:www\.)?plurk\.com/(?:m/p/)?(?:{value})(?=[/?#]|$)/
+          escape: regex
         line-page:
-          <<: *grouping_regex_scheme
           value: /^https?://page\.line\.me/(?:{value})(?=[/?#]|$)/
+          escape: regex
         line-timeline:
-          <<: *grouping_regex_scheme
           value: /^https?://timeline\.line\.me/(?:\w+?)/(?:{value})(?=[/?#]|$)/
+          escape: regex
         haokan-author:
-          <<: *grouping_regex_scheme
           value: /https?://(?:haokan|sv)\.baidu\.com/author/(?:{value})(?=[/?#]|$)/
+          escape: regex
 
   - source:
       - src/blocklist/bad-cloners.txt
@@ -592,8 +587,10 @@ build:
           replacement: blogspot:\1
       schemes: &content_farms_schemes_ublacklist
         <<: *content_farms_schemes
-        domain-part:
-          <<: *grouping_regex_scheme
+        domain-part: &grouping_regex_scheme
+          escape: regex
+          grouping: "|"
+          max: 524288
           value: /https?://(?:[\w-]+\.)*(?:{value})(?:\.[\w-]+)*(?=[:\/?#]|$)/
         domain-path:
           value: "*://*.{value}\n*://*.{value}/*"
@@ -610,6 +607,12 @@ build:
         blogspot:
           <<: *grouping_regex_scheme
           value: /https?://(?:[\w-]+\.)*(?:{value})\.blogspot\.(?:[\w.-]+)(?=[:\/?#]|$)/
+        xuite:
+          <<: [*content_farms_scheme_xuite, *grouping_regex_scheme]
+        udn:
+          <<: [*content_farms_scheme_udn, *grouping_regex_scheme]
+        pchome:
+          <<: [*content_farms_scheme_pchome, *grouping_regex_scheme]
 
   - source: src/blocklist/nearly-content-farms.txt
     publish: docs/files/blocklist-ublacklist/nearly-content-farms.txt
