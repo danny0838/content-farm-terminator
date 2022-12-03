@@ -1,6 +1,6 @@
 # Title: Content Farm Filters
 # Description: Filter for general content farms, mostly in Chinese.
-# Last modified: 2022-11-27T19:49:13+00:00
+# Last modified: 2022-12-03T13:25:55+00:00
 # Homepage: https://danny0838.github.io/content-farm-terminator/
 # Licence: MIT License
 # Source: https://danny0838.github.io/content-farm-terminator/files/blocklist-hosts/content-farms.txt
@@ -9501,6 +9501,58 @@
 0.0.0.0 golfoid.co  #redirects to nobkos.co
 0.0.0.0 animalshopmenfi.it  #redirects to the-best-prizes.life
 0.0.0.0 jendow.com.tw
+0.0.0.0 zhiu.cn
+0.0.0.0 dulcet-torte-ddf1d5.netlify.app
+0.0.0.0 goojie.eu
+0.0.0.0 moidoc.ru  #redirects to corepsh.top
+0.0.0.0 designspace.fi  #redirects to newip.eujen.space
+0.0.0.0 jewnoseya.live  #malicious scripts
+0.0.0.0 f9rlf.yachts  #redirects to 320.jewnoseya.live
+0.0.0.0 goldmaster-msk.ru  #redirects to corepsh.top
+0.0.0.0 pavia.it  #redirects to corepsh.top
+0.0.0.0 gdax.mi.it  #redirects to corepsh.top
+0.0.0.0 verona.it  #redirects to corepsh.top
+0.0.0.0 snowcall.fi  #redirects to corepsh.top
+0.0.0.0 impresatraslochimilano.mi.it  #redirects to corepsh.top
+0.0.0.0 firenze.it  #redirects to corepsh.top
+0.0.0.0 mario-siegenthaler.ch  #redirects to the-best-prizes.life
+0.0.0.0 impresaonline.ra.it  #redirects to corepsh.top
+0.0.0.0 bss-zh.ch  #redirects to the-best-prizes.life
+0.0.0.0 audreyeclecticshop.it  #redirects to the-best-prizes.life
+0.0.0.0 abo24.it  #redirects to the-best-prizes.life
+0.0.0.0 est2020.ch  #redirects to newip.eujen.space
+0.0.0.0 luethi-partner.ch  #redirects to qait.f9rlf.yachts
+0.0.0.0 moniques-fotografie.nl  #redirects to tout.f9dle.skin
+0.0.0.0 maqurein.nl  #redirects to newip.eujen.space
+0.0.0.0 degetrouwenvanroeh.nl  #redirects to the-best-prizes.life
+0.0.0.0 menuiseriessaintmartinboulogne.fr  #redirects to qait.f9rlf.yachts
+0.0.0.0 livorno.it  #redirects to corepsh.top
+0.0.0.0 milano.it  #redirects to corepsh.top
+0.0.0.0 bergsteiger.cz  #redirects to newip.zdes.online
+0.0.0.0 jelcodejong.nl  #redirects to the-best-prizes.life
+0.0.0.0 vikaden.ru  #redirects to corepsh.top
+0.0.0.0 ameliericher.fr  #redirects to newip.eujen.space
+0.0.0.0 design-ek.ru  #redirects to corepsh.top
+0.0.0.0 pbfoto.nl  #redirects to newip.eujen.space
+0.0.0.0 chastnyj-detektiv54.ru  #redirects to corepsh.top
+0.0.0.0 krasota-ptz.ru  #redirects to corepsh.top
+0.0.0.0 korm-chehov.ru  #redirects to corepsh.top
+0.0.0.0 aes-generac.ru  #redirects to corepsh.top
+0.0.0.0 fondtws.buzz  #malicious scripts
+0.0.0.0 wentsb.sbs  #redirects to fondtws.buzz
+0.0.0.0 motori.tv.it  #redirects to corepsh.top
+0.0.0.0 carrozzeriaroma.rm.it  #redirects to corepsh.top
+0.0.0.0 piemonte.it  #redirects to corepsh.top
+0.0.0.0 windsall.co  #redirects to wentsb.sbs
+0.0.0.0 sulzyska.co  #redirects to wentsb.sbs
+0.0.0.0 abruzzo.it  #redirects to corepsh.top
+0.0.0.0 summa.pz.it  #redirects to corepsh.top
+0.0.0.0 klassiekweb.nl  #redirects to the-best-prizes.life
+0.0.0.0 pflegezentrum-linthgebiet.ch  #redirects to newip.eujen.space
+0.0.0.0 sintenpietenapeldoorn.nl  #redirects to newip.zdes.online
+0.0.0.0 fuococostruzioni.it  #redirects to qait.f9rlf.yachts
+0.0.0.0 laminus.cz  #redirects to the-best-prizes.life
+0.0.0.0 qnmxmx.co  #redirects to wentsb.sbs
 #!aggreg-cxyzjd: https://raw.githubusercontent.com/wdmpa/content-farm-list/main/domains/spam/cxyzjd.txt (https://github.com/wdmpa/content-farm-list)
 0.0.0.0 cxybb.com  #!aggreg-cxyzjd
 0.0.0.0 cxymm.net  #!aggreg-cxyzjd
