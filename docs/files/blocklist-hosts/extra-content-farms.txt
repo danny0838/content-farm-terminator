@@ -1,6 +1,6 @@
 # Title: Extra Content Farm Filters
 # Description: Extra filter for content-farm-like sites, mostly aggregated from other sources.
-# Last modified: 2022-12-04T19:49:11+00:00
+# Last modified: 2022-12-07T14:02:23+00:00
 # Homepage: https://danny0838.github.io/content-farm-terminator/
 # Licence: MIT License
 # Source: https://danny0838.github.io/content-farm-terminator/files/blocklist-hosts/extra-content-farms.txt
@@ -72448,6 +72448,7 @@
 0.0.0.0 4meahc.com  #!aggreg-nonpnt
 0.0.0.0 51xuexiaoyi.com  #!aggreg-nonpnt
 0.0.0.0 521cc.com  #!aggreg-nonpnt
+0.0.0.0 52sbl.cn  #!aggreg-nonpnt
 0.0.0.0 5868685.com  #!aggreg-nonpnt
 0.0.0.0 58hengqi.com  #!aggreg-nonpnt
 0.0.0.0 61655.app  #!aggreg-nonpnt
@@ -72534,6 +72535,7 @@
 0.0.0.0 dedeapps.com  #!aggreg-nonpnt
 0.0.0.0 digidash.in  #!aggreg-nonpnt
 0.0.0.0 dkfp88.cn  #!aggreg-nonpnt
+0.0.0.0 driedpeel.com  #!aggreg-nonpnt
 0.0.0.0 du-mon.com  #!aggreg-nonpnt
 0.0.0.0 dyecn.com  #!aggreg-nonpnt
 0.0.0.0 edition-eltern.com  #!aggreg-nonpnt
@@ -72564,6 +72566,7 @@
 0.0.0.0 ghacks.net  #!aggreg-nonpnt
 0.0.0.0 gizchina.it  #!aggreg-nonpnt
 0.0.0.0 gldq123.com  #!aggreg-nonpnt
+0.0.0.0 go-travels.com  #!aggreg-nonpnt
 0.0.0.0 gome.com.cn  #!aggreg-nonpnt
 0.0.0.0 gov-civil-leiria.pt  #!aggreg-nonpnt
 0.0.0.0 greatcappuccino.net  #!aggreg-nonpnt
@@ -72585,6 +72588,7 @@
 0.0.0.0 hongniuxinxi.com  #!aggreg-nonpnt
 0.0.0.0 hooos.com  #!aggreg-nonpnt
 0.0.0.0 hostphb.com  #!aggreg-nonpnt
+0.0.0.0 howtl.com  #!aggreg-nonpnt
 0.0.0.0 howtopapa.com  #!aggreg-nonpnt
 0.0.0.0 hpnews.online  #!aggreg-nonpnt
 0.0.0.0 html.cn  #!aggreg-nonpnt
@@ -72619,12 +72623,14 @@
 0.0.0.0 jynews.net  #!aggreg-nonpnt
 0.0.0.0 jzhcgm.com  #!aggreg-nonpnt
 0.0.0.0 kaimalo.com  #!aggreg-nonpnt
+0.0.0.0 kbpp.org  #!aggreg-nonpnt
 0.0.0.0 kickscooter.ru  #!aggreg-nonpnt
 0.0.0.0 kissbaidu.com  #!aggreg-nonpnt
 0.0.0.0 kontur-sb.ru  #!aggreg-nonpnt
 0.0.0.0 ksctec.com  #!aggreg-nonpnt
 0.0.0.0 ksyzakq.com  #!aggreg-nonpnt
 0.0.0.0 kunyuyuan.com  #!aggreg-nonpnt
+0.0.0.0 lacomparacion.com  #!aggreg-nonpnt
 0.0.0.0 lehuotuan.com  #!aggreg-nonpnt
 0.0.0.0 leixue.com  #!aggreg-nonpnt
 0.0.0.0 libhunt.com  #!aggreg-nonpnt
@@ -72653,6 +72659,7 @@
 0.0.0.0 moe.ms  #!aggreg-nonpnt
 0.0.0.0 mop.com  #!aggreg-nonpnt
 0.0.0.0 mostexpo.com  #!aggreg-nonpnt
+0.0.0.0 moyens.net  #!aggreg-nonpnt
 0.0.0.0 mozzinovo.club  #!aggreg-nonpnt
 0.0.0.0 msfxt.com  #!aggreg-nonpnt
 0.0.0.0 my-pmu.com  #!aggreg-nonpnt
@@ -72668,6 +72675,7 @@
 0.0.0.0 nyist.net  #!aggreg-nonpnt
 0.0.0.0 ofweek.com  #!aggreg-nonpnt
 0.0.0.0 onitroad.com  #!aggreg-nonpnt
+0.0.0.0 opython.com  #!aggreg-nonpnt
 0.0.0.0 outofmemory.cn  #!aggreg-nonpnt
 0.0.0.0 panjk.com  #!aggreg-nonpnt
 0.0.0.0 php.cn  #!aggreg-nonpnt
@@ -72725,6 +72733,7 @@
 0.0.0.0 sportsoho.com  #!aggreg-nonpnt
 0.0.0.0 squadguide.net  #!aggreg-nonpnt
 0.0.0.0 sqzlsy.cn  #!aggreg-nonpnt
+0.0.0.0 sshce.com  #!aggreg-nonpnt
 0.0.0.0 statestpizza.com  #!aggreg-nonpnt
 0.0.0.0 sucaixi.com  #!aggreg-nonpnt
 0.0.0.0 superweb999.com  #!aggreg-nonpnt
@@ -72763,6 +72772,7 @@
 0.0.0.0 tysp.org  #!aggreg-nonpnt
 0.0.0.0 ujjainyoga.com  #!aggreg-nonpnt
 0.0.0.0 uk.com  #!aggreg-nonpnt
+0.0.0.0 ulidc.com  #!aggreg-nonpnt
 0.0.0.0 ultimate-communications.com  #!aggreg-nonpnt
 0.0.0.0 unansea.com  #!aggreg-nonpnt
 0.0.0.0 uosohyc.site  #!aggreg-nonpnt
@@ -72825,6 +72835,7 @@
 0.0.0.0 zakcret.xyz  #!aggreg-nonpnt
 0.0.0.0 zglangying.com  #!aggreg-nonpnt
 0.0.0.0 zhizhiguan.com  #!aggreg-nonpnt
+0.0.0.0 zhuji.gd  #!aggreg-nonpnt
 0.0.0.0 zjzmxny.com  #!aggreg-nonpnt
 0.0.0.0 zmmoo.com  #!aggreg-nonpnt
 0.0.0.0 znj.com  #!aggreg-nonpnt

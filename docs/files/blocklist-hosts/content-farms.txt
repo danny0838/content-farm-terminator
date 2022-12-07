@@ -1,6 +1,6 @@
 # Title: Content Farm Filters
 # Description: Filter for general content farms, mostly in Chinese.
-# Last modified: 2022-12-04T19:49:11+00:00
+# Last modified: 2022-12-07T14:02:23+00:00
 # Homepage: https://danny0838.github.io/content-farm-terminator/
 # Licence: MIT License
 # Source: https://danny0838.github.io/content-farm-terminator/files/blocklist-hosts/content-farms.txt
@@ -9569,6 +9569,13 @@
 0.0.0.0 its203.com  #!aggreg-cxyzjd
 0.0.0.0 its301.com  #!aggreg-cxyzjd
 0.0.0.0 houseword.com  #!aggreg-cxyzjd
+0.0.0.0 zhangbj.com  #!aggreg-cxyzjd
+0.0.0.0 phpmianshi.com  #!aggreg-cxyzjd
+0.0.0.0 u72.net  #!aggreg-cxyzjd
+0.0.0.0 zhuxianfei.com  #!aggreg-cxyzjd
+0.0.0.0 qilin668.com  #!aggreg-cxyzjd
+0.0.0.0 liweiliang.com  #!aggreg-cxyzjd
+0.0.0.0 17bigdata.com  #!aggreg-cxyzjd
 #!aggreg-ksou: https://raw.githubusercontent.com/wdmpa/content-farm-list/main/domains/spam/ksou.cc.txt (https://github.com/wdmpa/content-farm-list)
 0.0.0.0 zhfx.cc  #!aggreg-ksou
 0.0.0.0 kkup.cc  #!aggreg-ksou

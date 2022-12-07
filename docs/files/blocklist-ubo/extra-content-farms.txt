@@ -1,7 +1,7 @@
 ! Title: Extra Content Farm Filters
 ! Description: Extra filter for content-farm-like sites, mostly aggregated from other sources.
 ! Expires: 3 days
-! Last modified: 2022-12-04T19:49:11+00:00
+! Last modified: 2022-12-07T14:02:23+00:00
 ! Homepage: https://danny0838.github.io/content-farm-terminator/
 ! Licence: MIT License
 ! Source: https://danny0838.github.io/content-farm-terminator/files/blocklist-ubo/extra-content-farms.txt
@@ -72525,6 +72525,7 @@ zzzzbj.com  #!aggreg-gyli
 /https?://(?:[\w-]+\.)*(?:51cto\.com/topic/.*)$/$doc  #!aggreg-nonpnt
 51xuexiaoyi.com  #!aggreg-nonpnt
 521cc.com  #!aggreg-nonpnt
+52sbl.cn  #!aggreg-nonpnt
 5868685.com  #!aggreg-nonpnt
 58hengqi.com  #!aggreg-nonpnt
 61655.app  #!aggreg-nonpnt
@@ -72614,6 +72615,7 @@ dedeapps.com  #!aggreg-nonpnt
 digidash.in  #!aggreg-nonpnt
 dkfp88.cn  #!aggreg-nonpnt
 /https?://(?:[\w-]+\.)*(?:dongchedi\.com/tag/.*)$/$doc  #!aggreg-nonpnt
+driedpeel.com  #!aggreg-nonpnt
 du-mon.com  #!aggreg-nonpnt
 dyecn.com  #!aggreg-nonpnt
 edition-eltern.com  #!aggreg-nonpnt
@@ -72644,6 +72646,7 @@ gghu.com  #!aggreg-nonpnt
 ghacks.net  #!aggreg-nonpnt
 gizchina.it  #!aggreg-nonpnt
 gldq123.com  #!aggreg-nonpnt
+go-travels.com  #!aggreg-nonpnt
 gome.com.cn  #!aggreg-nonpnt
 gov-civil-leiria.pt  #!aggreg-nonpnt
 greatcappuccino.net  #!aggreg-nonpnt
@@ -72665,6 +72668,7 @@ homedo.com  #!aggreg-nonpnt
 hongniuxinxi.com  #!aggreg-nonpnt
 hooos.com  #!aggreg-nonpnt
 hostphb.com  #!aggreg-nonpnt
+howtl.com  #!aggreg-nonpnt
 howtopapa.com  #!aggreg-nonpnt
 hpnews.online  #!aggreg-nonpnt
 html.cn  #!aggreg-nonpnt
@@ -72701,12 +72705,14 @@ juzhekooo.com  #!aggreg-nonpnt
 jynews.net  #!aggreg-nonpnt
 jzhcgm.com  #!aggreg-nonpnt
 kaimalo.com  #!aggreg-nonpnt
+kbpp.org  #!aggreg-nonpnt
 kickscooter.ru  #!aggreg-nonpnt
 kissbaidu.com  #!aggreg-nonpnt
 kontur-sb.ru  #!aggreg-nonpnt
 ksctec.com  #!aggreg-nonpnt
 ksyzakq.com  #!aggreg-nonpnt
 kunyuyuan.com  #!aggreg-nonpnt
+lacomparacion.com  #!aggreg-nonpnt
 lehuotuan.com  #!aggreg-nonpnt
 leixue.com  #!aggreg-nonpnt
 /https?://(?:[\w-]+\.)*(?:lete\.com/kdwenda/.*)$/$doc  #!aggreg-nonpnt
@@ -72737,6 +72743,7 @@ modb.pro  #!aggreg-nonpnt
 moe.ms  #!aggreg-nonpnt
 mop.com  #!aggreg-nonpnt
 mostexpo.com  #!aggreg-nonpnt
+moyens.net  #!aggreg-nonpnt
 mozzinovo.club  #!aggreg-nonpnt
 msfxt.com  #!aggreg-nonpnt
 my-pmu.com  #!aggreg-nonpnt
@@ -72752,6 +72759,7 @@ nuomiphp.com  #!aggreg-nonpnt
 nyist.net  #!aggreg-nonpnt
 ofweek.com  #!aggreg-nonpnt
 onitroad.com  #!aggreg-nonpnt
+opython.com  #!aggreg-nonpnt
 /https?://(?:[\w-]+\.)*(?:oschina\.net/informat/.*)$/$doc  #!aggreg-nonpnt
 /https?://(?:[\w-]+\.)*(?:ourplay\.net/ask/.*)$/$doc  #!aggreg-nonpnt
 /https?://(?:[\w-]+\.)*(?:ourplay\.net/qazt/.*)$/$doc  #!aggreg-nonpnt
@@ -72813,6 +72821,7 @@ sohoblink.com  #!aggreg-nonpnt
 sportsoho.com  #!aggreg-nonpnt
 squadguide.net  #!aggreg-nonpnt
 sqzlsy.cn  #!aggreg-nonpnt
+sshce.com  #!aggreg-nonpnt
 statestpizza.com  #!aggreg-nonpnt
 sucaixi.com  #!aggreg-nonpnt
 superweb999.com  #!aggreg-nonpnt
@@ -72853,6 +72862,7 @@ txcsjlb.com  #!aggreg-nonpnt
 tysp.org  #!aggreg-nonpnt
 ujjainyoga.com  #!aggreg-nonpnt
 uk.com  #!aggreg-nonpnt
+ulidc.com  #!aggreg-nonpnt
 ultimate-communications.com  #!aggreg-nonpnt
 unansea.com  #!aggreg-nonpnt
 uosohyc.site  #!aggreg-nonpnt
@@ -72917,6 +72927,7 @@ za.com  #!aggreg-nonpnt
 zakcret.xyz  #!aggreg-nonpnt
 zglangying.com  #!aggreg-nonpnt
 zhizhiguan.com  #!aggreg-nonpnt
+zhuji.gd  #!aggreg-nonpnt
 zjzmxny.com  #!aggreg-nonpnt
 zmmoo.com  #!aggreg-nonpnt
 znj.com  #!aggreg-nonpnt
