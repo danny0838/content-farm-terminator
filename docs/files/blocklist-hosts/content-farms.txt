@@ -1,6 +1,6 @@
 # Title: Content Farm Filters
 # Description: Filter for general content farms, mostly in Chinese.
-# Last modified: 2022-12-07T14:03:21+00:00
+# Last modified: 2022-12-10T07:54:01+00:00
 # Homepage: https://danny0838.github.io/content-farm-terminator/
 # Licence: MIT License
 # Source: https://danny0838.github.io/content-farm-terminator/files/blocklist-hosts/content-farms.txt
@@ -9559,6 +9559,57 @@
 0.0.0.0 virus-removal-guide.net  #scam tutorial
 0.0.0.0 cserl.com
 0.0.0.0 folkstalk.com
+0.0.0.0 tomikovyhracky.cz  #redirects to newip.eujen.space
+0.0.0.0 langtrans.cz  #redirects to newip.zdes.online
+0.0.0.0 shake-up.it  #redirects to newip.eujen.space
+0.0.0.0 outletin.it  #redirects to newip.zdes.online
+0.0.0.0 partymirror.cz  #redirects to newip.eujen.space
+0.0.0.0 mo13.biz  #malicious scripts
+0.0.0.0 maximilienzamanski.eu  #redirects to mo13.biz
+0.0.0.0 mssfseguros.pt  #redirects to newip.eujen.space
+0.0.0.0 golden-memories.nl  #redirects to the-best-prizes.life
+0.0.0.0 a-tipico.pt  #redirects to newip.zdes.online
+0.0.0.0 archiwamaz.pl  #redirects to mo13.biz
+0.0.0.0 revibraeuropa.eu  #redirects to mo13.biz
+0.0.0.0 foto-mikulska.pl  #redirects to mo13.biz
+0.0.0.0 ssakyjov.cz  #redirects to newip.eujen.space
+0.0.0.0 konferencjaprewencyjnaorlik.pl  #redirects to mo13.biz
+0.0.0.0 rotax-stb.de  #redirects to newip.eujen.space
+0.0.0.0 blumen-brigitte.at  #redirects to newip.eujen.space
+0.0.0.0 batinet.ch  #redirects to newip.zdes.online
+0.0.0.0 reiniekooi.nl  #redirects to the-best-prizes.life
+0.0.0.0 yeg.dpadvisory.eu  #redirects to mo13.biz
+0.0.0.0 madmen-garnitury.pl  #redirects to mo13.biz
+0.0.0.0 traslochimarzaroli.it  #redirects to newip.zdes.online
+0.0.0.0 dreamleague.pt  #redirects to the-best-prizes.life
+0.0.0.0 paakaupunkiseudunvirolahtelaiset.fi  #redirects to the-best-prizes.life
+0.0.0.0 chezlee.fr  #redirects to newip.eujen.space
+0.0.0.0 neukastels.ch  #redirects to newip.zdes.online
+0.0.0.0 silesiadent.cz  #redirects to the-best-prizes.life
+0.0.0.0 gftlpy.co  #redirects to wentsb.sbs
+0.0.0.0 mailte.co  #redirects to wentsb.sbs
+0.0.0.0 shopafa.co  #redirects to wentsb.sbs
+0.0.0.0 mahaland.co  #redirects to wentsb.sbs
+0.0.0.0 clinicadentalmilenio.es  #redirects to newip.zdes.online
+0.0.0.0 mzillk.co  #redirects to wentsb.sbs
+0.0.0.0 secsm.co  #redirects to wentsb.sbs
+0.0.0.0 simace.co  #redirects to wentsb.sbs
+0.0.0.0 alocfe.co  #redirects to wentsb.sbs
+0.0.0.0 sadesu.co  #redirects to wentsb.sbs
+0.0.0.0 em-ekogreen.cz  #redirects to newip.eujen.space
+0.0.0.0 les-sieges-daurelie.fr  #redirects to the-best-prizes.life
+0.0.0.0 mvantielpaardenrevalidatie.nl  #redirects to newip.eujen.space
+0.0.0.0 samenps.co  #redirects to wentsb.sbs
+0.0.0.0 savica.si  #redirects to the-best-prizes.life
+0.0.0.0 birocity.es  #redirects to di06.biz
+0.0.0.0 oneveuw.co  #redirects to wentsb.sbs
+0.0.0.0 standphone.fr  #redirects to the-best-prizes.life
+0.0.0.0 stockcar-zwo-null.de  #redirects to the-best-prizes.life
+0.0.0.0 bremancitywallcross.nl  #redirects to newip.eujen.space
+0.0.0.0 ixina-nantes.fr  #redirects to newip.eujen.space
+0.0.0.0 wealwomen.com
+0.0.0.0 cwtea.net
+0.0.0.0 hzhcontrols.com
 #!aggreg-cxyzjd: https://raw.githubusercontent.com/wdmpa/content-farm-list/main/domains/spam/cxyzjd.txt (https://github.com/wdmpa/content-farm-list)
 0.0.0.0 cxybb.com  #!aggreg-cxyzjd
 0.0.0.0 cxymm.net  #!aggreg-cxyzjd
