@@ -3,7 +3,7 @@
 !     is copyleft or copyfree, but provide only trivial layout change or poor-quality bot translation
 !     and are thus spam-like.
 ! Expires: 3 days
-! Last modified: 2022-12-04T19:49:11+00:00
+! Last modified: 2022-12-11T19:49:19+00:00
 ! Homepage: https://danny0838.github.io/content-farm-terminator/
 ! Licence: MIT License
 ! Source: https://danny0838.github.io/content-farm-terminator/files/blocklist-ubo/bad-cloners.txt
@@ -212,6 +212,7 @@ mejorcodigo.com  #!aggreg-ublSoT
 waymanamechurch.org  #!aggreg-ublSoT
 ntcdoon.org  #!aggreg-ublSoT
 itecnotes.com  #!aggreg-ublSoT
+code2s.com  #!aggreg-ublSoT
 #!aggreg-wdmpaMtSo: https://raw.githubusercontent.com/wdmpa/content-farm-list/main/domains/machine-translated/stackoverflow.txt (https://github.com/wdmpa/content-farm-list)
 /https?://(?:www\.coder\.work/article/.*)$/$doc  #!aggreg-wdmpaMtSo
 /https?://(?:xbuba\.com/questions/.*)$/$doc  #!aggreg-wdmpaMtSo
