@@ -1,6 +1,6 @@
 # Title: Extra Content Farm Filters
 # Description: Extra filter for content-farm-like sites, mostly aggregated from other sources.
-# Last modified: 2022-12-18T19:49:25+00:00
+# Last modified: 2022-12-23T08:37:01+00:00
 # Homepage: https://danny0838.github.io/content-farm-terminator/
 # Licence: MIT License
 # Source: https://danny0838.github.io/content-farm-terminator/files/blocklist-ublacklist/extra-content-farms.txt
@@ -72538,6 +72538,7 @@
 *://*.97hs.com/*  #!aggreg-nonpnt
 *://*.99jiehun.com/*  #!aggreg-nonpnt
 *://*.9idudu.com/*  #!aggreg-nonpnt
+*://*.a5vpn.com/*  #!aggreg-nonpnt
 *://*.a7la-home.com/*  #!aggreg-nonpnt
 *://*.aalahty.cn/*  #!aggreg-nonpnt
 *://*.actualidadiphone.com/*  #!aggreg-nonpnt
@@ -72571,6 +72572,7 @@
 *://*.beeeup.com/*  #!aggreg-nonpnt
 *://*.biobu.it/*  #!aggreg-nonpnt
 *://*.bit86.cn/*  #!aggreg-nonpnt
+*://*.bloggersideas.com/*  #!aggreg-nonpnt
 *://*.blogsbodasdeisabel.com/*  #!aggreg-nonpnt
 *://*.bmw8830.com/*  #!aggreg-nonpnt
 *://*.bohlsenpr.com/*  #!aggreg-nonpnt
@@ -72811,6 +72813,7 @@
 *://*.sirhow.com/*  #!aggreg-nonpnt
 *://*.sjzjgbj.com/*  #!aggreg-nonpnt
 *://*.sjzjyyx.com/*  #!aggreg-nonpnt
+*://*.sktfaker.com/*  #!aggreg-nonpnt
 *://*.sm-tc.cn/*  #!aggreg-nonpnt
 *://*.sm1234.net/*  #!aggreg-nonpnt
 *://*.smart-gamma.com/*  #!aggreg-nonpnt
@@ -72866,6 +72869,7 @@
 *://*.unansea.com/*  #!aggreg-nonpnt
 *://*.uosohyc.site/*  #!aggreg-nonpnt
 *://*.ux6.com/*  #!aggreg-nonpnt
+*://*.versus.com/*  #!aggreg-nonpnt
 *://*.vimsky.com/*  #!aggreg-nonpnt
 *://*.vlexpert.com/*  #!aggreg-nonpnt
 *://*.volvootofinans.com/*  #!aggreg-nonpnt
