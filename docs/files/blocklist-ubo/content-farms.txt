@@ -1,7 +1,7 @@
 ! Title: Content Farm Filters
 ! Description: Filter for general content farms, mostly in Chinese.
 ! Expires: 3 days
-! Last modified: 2022-12-18T19:49:25+00:00
+! Last modified: 2022-12-23T08:38:29+00:00
 ! Homepage: https://danny0838.github.io/content-farm-terminator/
 ! Licence: MIT License
 ! Source: https://danny0838.github.io/content-farm-terminator/files/blocklist-ubo/content-farms.txt
@@ -12989,6 +12989,16 @@ mnbkw.com
 nuomiphp.com
 post2021.net
 aissue.com
+abcjsg.com
+taiwanlawmp3.com
+cochine.com
+saltbythecazaproject.com
+kzaobao.com
+marisacozzini.it  #redirects to the-best-prizes.life
+giteliebrand.nl  #redirects to newip.zdes.online
+sendgemhold.live  #malicious scripts
+greatprize.life  #redirects to 2316.sendgemhold.live
+elektronos.pl  #redirects to greatprize.life
 #!aggreg-cxyzjd: https://raw.githubusercontent.com/wdmpa/content-farm-list/main/domains/spam/cxyzjd.txt (https://github.com/wdmpa/content-farm-list)
 cxybb.com  #!aggreg-cxyzjd
 cxymm.net  #!aggreg-cxyzjd
