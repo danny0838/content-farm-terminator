@@ -1,6 +1,6 @@
 # Title: Extra Content Farm Filters
 # Description: Extra filter for content-farm-like sites, mostly aggregated from other sources.
-# Last modified: 2022-12-23T08:37:01+00:00
+# Last modified: 2022-12-25T19:49:17+00:00
 # Homepage: https://danny0838.github.io/content-farm-terminator/
 # Licence: MIT License
 # Source: https://danny0838.github.io/content-farm-terminator/files/blocklist-hosts/extra-content-farms.txt
@@ -72538,8 +72538,10 @@
 0.0.0.0 digidash.in  #!aggreg-nonpnt
 0.0.0.0 dkfp88.cn  #!aggreg-nonpnt
 0.0.0.0 driedpeel.com  #!aggreg-nonpnt
+0.0.0.0 driversupport.com  #!aggreg-nonpnt
 0.0.0.0 du-mon.com  #!aggreg-nonpnt
 0.0.0.0 dyecn.com  #!aggreg-nonpnt
+0.0.0.0 edianyun.com  #!aggreg-nonpnt
 0.0.0.0 edition-eltern.com  #!aggreg-nonpnt
 0.0.0.0 edoghaitao.com  #!aggreg-nonpnt
 0.0.0.0 eeyyoo.com.cn  #!aggreg-nonpnt
@@ -72751,6 +72753,7 @@
 0.0.0.0 tbganhuo.com  #!aggreg-nonpnt
 0.0.0.0 tcly6.com  #!aggreg-nonpnt
 0.0.0.0 techdevian.com  #!aggreg-nonpnt
+0.0.0.0 techloris.com  #!aggreg-nonpnt
 0.0.0.0 techonegame.com  #!aggreg-nonpnt
 0.0.0.0 tedabg.com  #!aggreg-nonpnt
 0.0.0.0 theastrologypage.com  #!aggreg-nonpnt
@@ -72801,6 +72804,7 @@
 0.0.0.0 westack.live  #!aggreg-nonpnt
 0.0.0.0 whoisua.com  #!aggreg-nonpnt
 0.0.0.0 wikicell.org  #!aggreg-nonpnt
+0.0.0.0 windows101tricks.com  #!aggreg-nonpnt
 0.0.0.0 windowsdispatch.com  #!aggreg-nonpnt
 0.0.0.0 windowsphoneinfo.com  #!aggreg-nonpnt
 0.0.0.0 wintoog.com.cn  #!aggreg-nonpnt

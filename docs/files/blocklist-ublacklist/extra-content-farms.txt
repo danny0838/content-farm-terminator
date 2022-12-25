@@ -1,6 +1,6 @@
 # Title: Extra Content Farm Filters
 # Description: Extra filter for content-farm-like sites, mostly aggregated from other sources.
-# Last modified: 2022-12-23T08:37:01+00:00
+# Last modified: 2022-12-25T19:49:17+00:00
 # Homepage: https://danny0838.github.io/content-farm-terminator/
 # Licence: MIT License
 # Source: https://danny0838.github.io/content-farm-terminator/files/blocklist-ublacklist/extra-content-farms.txt
@@ -72617,8 +72617,10 @@
 *://*.dkfp88.cn/*  #!aggreg-nonpnt
 *://*.dongchedi.com/tag/*  #!aggreg-nonpnt
 *://*.driedpeel.com/*  #!aggreg-nonpnt
+*://*.driversupport.com/*  #!aggreg-nonpnt
 *://*.du-mon.com/*  #!aggreg-nonpnt
 *://*.dyecn.com/*  #!aggreg-nonpnt
+*://*.edianyun.com/*  #!aggreg-nonpnt
 *://*.edition-eltern.com/*  #!aggreg-nonpnt
 *://*.edoghaitao.com/*  #!aggreg-nonpnt
 *://*.eeyyoo.com.cn/*  #!aggreg-nonpnt
@@ -72633,6 +72635,7 @@
 *://*.fpppw.com/*  #!aggreg-nonpnt
 *://*.framedfm.net/*  #!aggreg-nonpnt
 *://*.frederique-davezac.fr/*  #!aggreg-nonpnt
+*://*.freecodecamp.org/news/*  #!aggreg-nonpnt
 *://*.freejobalerts24.com/*  #!aggreg-nonpnt
 *://*.freejournal.info/*  #!aggreg-nonpnt
 *://*.fukuyama-okoku.com/*  #!aggreg-nonpnt
@@ -72838,6 +72841,7 @@
 *://*.tbganhuo.com/*  #!aggreg-nonpnt
 *://*.tcly6.com/*  #!aggreg-nonpnt
 *://*.techdevian.com/*  #!aggreg-nonpnt
+*://*.techloris.com/*  #!aggreg-nonpnt
 *://*.techonegame.com/*  #!aggreg-nonpnt
 *://*.tedabg.com/*  #!aggreg-nonpnt
 *://*.theastrologypage.com/*  #!aggreg-nonpnt
@@ -72891,6 +72895,7 @@
 *://*.westack.live/*  #!aggreg-nonpnt
 *://*.whoisua.com/*  #!aggreg-nonpnt
 *://*.wikicell.org/*  #!aggreg-nonpnt
+*://*.windows101tricks.com/*  #!aggreg-nonpnt
 *://*.windowsdispatch.com/*  #!aggreg-nonpnt
 *://*.windowsphoneinfo.com/*  #!aggreg-nonpnt
 *://*.wintoog.com.cn/*  #!aggreg-nonpnt
