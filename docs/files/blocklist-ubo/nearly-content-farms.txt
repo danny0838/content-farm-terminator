@@ -1,7 +1,7 @@
 ! Title: Nearly Content Farm Filters
 ! Description: Filter for content-farm-like sites, mostly in Chinese.
 ! Expires: 3 days
-! Last modified: 2022-12-25T19:49:17+00:00
+! Last modified: 2022-12-31T15:34:22+00:00
 ! Homepage: https://danny0838.github.io/content-farm-terminator/
 ! Licence: MIT License
 ! Source: https://danny0838.github.io/content-farm-terminator/files/blocklist-ubo/nearly-content-farms.txt
@@ -257,6 +257,7 @@ yushuge.me  #bkplg
 fansg.cc  #bkplg
 ptwxz.com  #bkplg
 fantinovels.com  #bkplg
+oaksh.cn  #bkplg
 # tag: #kwsr18
 # R18 site series with massive keyword stuffing, auto-redirects, and/or
 # clones. Clients may be redirected to an R18 site unexpectedly when

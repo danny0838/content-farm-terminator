@@ -1,6 +1,6 @@
 # Title: Content Farm Filters
 # Description: Filter for general content farms, mostly in Chinese.
-# Last modified: 2022-12-26T13:00:00+00:00
+# Last modified: 2022-12-31T15:34:22+00:00
 # Homepage: https://danny0838.github.io/content-farm-terminator/
 # Licence: MIT License
 # Source: https://danny0838.github.io/content-farm-terminator/files/blocklist-hosts/content-farms.txt
@@ -9868,6 +9868,60 @@
 0.0.0.0 speakersuccesskit.com
 0.0.0.0 tehran-lux-furnished.com
 0.0.0.0 dynotennisbackboard.com
+0.0.0.0 lifealsosen.live  #malicious scripts
+0.0.0.0 winquick.life  #redirects to 302.lifealsosen.live
+0.0.0.0 visaqua.lt  #redirects to winquick.life
+0.0.0.0 maxprint.pt  #redirects to newip.zdes.online
+0.0.0.0 publi-city.ch  #redirects to newip.eujen.space
+0.0.0.0 naszbeskid.pl  #redirects to mo13.biz
+0.0.0.0 prosema.nl  #redirects to mo13.biz
+0.0.0.0 h2medical.fr  #redirects to winquick.life
+0.0.0.0 firmakaja.com.pl  #redirects to newip.eujen.space
+0.0.0.0 icvs.lv  #redirects to newip.eujen.space
+0.0.0.0 technitektura.pl  #redirects to mo13.biz
+0.0.0.0 choice4better.nl  #redirects to winquick.life
+0.0.0.0 vrtec-gg.si  #redirects to newip.eujen.space
+0.0.0.0 attergau-raffinesse.at  #redirects to newip.eujen.space
+0.0.0.0 gite-lesbambous-echourgnac.fr  #redirects to mo13.biz
+0.0.0.0 jeanninemartens.ch  #redirects to newip.eujen.space
+0.0.0.0 dashboard-reparatie.nl  #redirects to winquick.life
+0.0.0.0 chalet-champery.ch  #redirects to winquick.life
+0.0.0.0 electricexperience.it  #redirects to winquick.life
+0.0.0.0 osteopathie-collura.fr  #redirects to mo13.biz
+0.0.0.0 wingolden.life  #redirects to 303.lifealsosen.live
+0.0.0.0 idealcartoucherie.fr  #redirects to di06.biz
+0.0.0.0 remotador.es  #redirects to wingolden.life
+0.0.0.0 portfelbiur.pl  #redirects to wingolden.life
+0.0.0.0 religio.pl  #redirects to wingolden.life
+0.0.0.0 orshea.pl  #redirects to wingolden.life
+0.0.0.0 supermedyczny.pl  #redirects to wingolden.life
+0.0.0.0 hunterstudio.pl  #redirects to wingolden.life
+0.0.0.0 bronda.cz  #redirects to newip.eujen.space
+0.0.0.0 edonacije.si  #redirects to newip.eujen.space
+0.0.0.0 knihkupectvi-praha.cz  #redirects to winquick.life
+0.0.0.0 regaltechnik.cz  #redirects to newip.zdes.online
+0.0.0.0 perspektivwechsel-seeheim.de  #redirects to newip.zdes.online
+0.0.0.0 qwpper.co  #redirects to wentsb.sbs
+0.0.0.0 rockfitness.cz  #redirects to winquick.life
+0.0.0.0 lnntkg.co  #redirects to wentsb.sbs
+0.0.0.0 wutker.co  #redirects to stasoe.co
+0.0.0.0 hedah.co  #redirects to wentsb.sbs
+0.0.0.0 bioech.co  #redirects to wentsb.sbs
+0.0.0.0 lakufman.co  #redirects to wentsb.sbs
+0.0.0.0 ellirye.co  #redirects to wentsb.sbs
+0.0.0.0 oewgue.co  #redirects to hedah.co
+0.0.0.0 rgbgshop.de  #redirects to newip.zdes.online
+0.0.0.0 cleanme.at  #redirects to newip.eujen.space
+0.0.0.0 dwg.net.pl  #redirects to newip.eujen.space
+0.0.0.0 vpntwttplnmh.ru.com  #redirects to mo08.biz
+0.0.0.0 antyblockdtfqa.ru.com  #redirects to tiktokfinder.shop
+0.0.0.0 t9y3c.com
+0.0.0.0 faropharma.com
+0.0.0.0 khamsan.com
+0.0.0.0 wioter.com
+0.0.0.0 haochen3d.com
+0.0.0.0 sayapintar.com
+0.0.0.0 moeansari.com
 #!aggreg-cxyzjd: https://raw.githubusercontent.com/wdmpa/content-farm-list/main/domains/spam/cxyzjd.txt (https://github.com/wdmpa/content-farm-list)
 0.0.0.0 cxybb.com  #!aggreg-cxyzjd
 0.0.0.0 cxymm.net  #!aggreg-cxyzjd
