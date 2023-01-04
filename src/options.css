@@ -93,7 +93,7 @@ textarea[readonly] {
   background-color: #DDDDDD;
 }
 
-.button {
+input[type="button"] {
   display: inline-block;
   border: 1px solid #C1C1C1;
   border-radius: 5px;
@@ -106,7 +106,7 @@ textarea[readonly] {
   text-transform: uppercase;
 }
 
-.button:hover {
+input[type="button"]:hover {
   background-color: #EBEBEB;
 }
 
