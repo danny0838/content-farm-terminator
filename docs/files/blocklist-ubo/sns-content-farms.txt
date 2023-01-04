@@ -3,7 +3,7 @@
 !     This may not work well for all cases as many things cannot be fully determined by URL.
 !     This list is mostly regex-based and may have a negative effect on performance.
 ! Expires: 3 days
-! Last modified: 2023-01-04T16:13:23+00:00
+! Last modified: 2023-01-04T16:14:22+00:00
 ! Homepage: https://danny0838.github.io/content-farm-terminator/
 ! Licence: MIT License
 ! Source: https://danny0838.github.io/content-farm-terminator/files/blocklist-ubo/sns-content-farms.txt
@@ -1480,3 +1480,95 @@
 /^https?://(?:(?:[\w-]+\.)?facebook\.com|fb\.(?:com|me))/(?=(?:(?:pg/)?(?:[\w%]+-)?|profile/|people/[\w%]+/|groups/[0-9a-z.]+/user/)\d+\b|(?:profile|permalink)\.php\?(?:[^&#]*&)*?id=\d+(?=[&#]|$))(?:(?:(?:pg/)?(?:[\w%]+-)?|profile/|people/[\w%]+/|groups/[0-9a-z.]+/user/)|(?:profile|permalink)\.php\?(?:[^&#]*&)*?id=)(?:1100522356652838)(?=[/?&#]|$)/$doc
 /^https?://(?:(?:[\w-]+\.)?facebook\.com|fb\.(?:com|me))/(?=(?:(?:pg/)?(?:[\w%]+-)?|profile/|people/[\w%]+/|groups/[0-9a-z.]+/user/)\d+\b|(?:profile|permalink)\.php\?(?:[^&#]*&)*?id=\d+(?=[&#]|$))(?:(?:(?:pg/)?(?:[\w%]+-)?|profile/|people/[\w%]+/|groups/[0-9a-z.]+/user/)|(?:profile|permalink)\.php\?(?:[^&#]*&)*?id=)(?:100069560047377)(?=[/?&#]|$)/$doc
 /^https?://(?:(?:[\w-]+\.)?facebook\.com|fb\.(?:com|me))/(?=(?:(?:pg/)?(?:[\w%]+-)?|profile/|people/[\w%]+/|groups/[0-9a-z.]+/user/)\d+\b|(?:profile|permalink)\.php\?(?:[^&#]*&)*?id=\d+(?=[&#]|$))(?:(?:(?:pg/)?(?:[\w%]+-)?|profile/|people/[\w%]+/|groups/[0-9a-z.]+/user/)|(?:profile|permalink)\.php\?(?:[^&#]*&)*?id=)(?:petssslover)(?=[/?&#]|$)/$doc
+/^https?://(?:\w+\.)?youtube\.com/@(?:user\-cl4gc7sb7i)(?=[/?#]|$)/$doc
+/^https?://(?:\w+\.)?youtube\.com/@(?:user\-sj5rh7fd3n)(?=[/?#]|$)/$doc
+/^https?://(?:\w+\.)?youtube\.com/@(?:Dogland888)(?=[/?#]|$)/$doc
+/^https?://(?:\w+\.)?youtube\.com/@(?:a22764658a)(?=[/?#]|$)/$doc
+/^https?://(?:\w+\.)?youtube\.com/@(?:PinkyPet)(?=[/?#]|$)/$doc
+/^https?://(?:\w+\.)?youtube\.com/@(?:chenchen8888)(?=[/?#]|$)/$doc
+/^https?://(?:\w+\.)?youtube\.com/@(?:user\-qg3wt4mc9x)(?=[/?#]|$)/$doc
+/^https?://(?:\w+\.)?youtube\.com/@(?:lifevip168)(?=[/?#]|$)/$doc
+/^https?://(?:\w+\.)?youtube\.com/@(?:user\-sz4ip6eo7z)(?=[/?#]|$)/$doc
+/^https?://(?:\w+\.)?youtube\.com/@(?:user\-jk9gi3ek6j)(?=[/?#]|$)/$doc
+/^https?://(?:\w+\.)?youtube\.com/@(?:Foody)(?=[/?#]|$)/$doc
+/^https?://(?:\w+\.)?youtube\.com/@(?:user\-kk9gt6py5b)(?=[/?#]|$)/$doc
+/^https?://(?:\w+\.)?youtube\.com/@(?:Taiwan16888)(?=[/?#]|$)/$doc
+/^https?://(?:\w+\.)?youtube\.com/@(?:user\-ee8bl3ow7x)(?=[/?#]|$)/$doc
+/^https?://(?:\w+\.)?youtube\.com/@(?:user\-tx4tv3ov3z)(?=[/?#]|$)/$doc
+/^https?://(?:\w+\.)?youtube\.com/@(?:Qingping)(?=[/?#]|$)/$doc
+/^https?://(?:\w+\.)?youtube\.com/@(?:user\-rs4ic7jh1p)(?=[/?#]|$)/$doc
+/^https?://(?:\w+\.)?youtube\.com/@(?:user\-jg5vf5vq2h)(?=[/?#]|$)/$doc
+/^https?://(?:\w+\.)?youtube\.com/@(?:user\-jc4su4fj1m)(?=[/?#]|$)/$doc
+/^https?://(?:\w+\.)?youtube\.com/@(?:user\-qc4lv7xv3b)(?=[/?#]|$)/$doc
+/^https?://(?:\w+\.)?youtube\.com/@(?:xibao_tw)(?=[/?#]|$)/$doc
+/^https?://(?:\w+\.)?youtube\.com/@(?:user\-es9mn8xi7e)(?=[/?#]|$)/$doc
+/^https?://(?:\w+\.)?youtube\.com/@(?:user\-lt8zd4wn3w)(?=[/?#]|$)/$doc
+/^https?://(?:\w+\.)?youtube\.com/@(?:HistoryHeadline)(?=[/?#]|$)/$doc
+/^https?://(?:\w+\.)?youtube\.com/@(?:user\-xy4ly2rm9f)(?=[/?#]|$)/$doc
+/^https?://(?:\w+\.)?youtube\.com/@(?:z\.4241)(?=[/?#]|$)/$doc
+/^https?://(?:\w+\.)?youtube\.com/@(?:user\-fy7ws4hu8k)(?=[/?#]|$)/$doc
+/^https?://(?:\w+\.)?youtube\.com/@(?:julica138)(?=[/?#]|$)/$doc
+/^https?://(?:\w+\.)?youtube\.com/@(?:user\-nb2zu5dx7s)(?=[/?#]|$)/$doc
+/^https?://(?:\w+\.)?youtube\.com/@(?:slowlife2728)(?=[/?#]|$)/$doc
+/^https?://(?:\w+\.)?youtube\.com/@(?:krtvtoday2395)(?=[/?#]|$)/$doc
+/^https?://(?:\w+\.)?youtube\.com/@(?:miaoji)(?=[/?#]|$)/$doc
+/^https?://(?:\w+\.)?youtube\.com/@(?:fatnews2819)(?=[/?#]|$)/$doc
+/^https?://(?:\w+\.)?youtube\.com/@(?:MikiandRaymond)(?=[/?#]|$)/$doc
+/^https?://(?:\w+\.)?youtube\.com/@(?:dudeareyoucrazy)(?=[/?#]|$)/$doc
+/^https?://(?:\w+\.)?youtube\.com/@(?:MilitaryHeadline)(?=[/?#]|$)/$doc
+/^https?://(?:\w+\.)?youtube\.com/@(?:changer7597)(?=[/?#]|$)/$doc
+/^https?://(?:\w+\.)?youtube\.com/@(?:Lifevictorygroup)(?=[/?#]|$)/$doc
+/^https?://(?:\w+\.)?youtube\.com/@(?:teeprkpop)(?=[/?#]|$)/$doc
+/^https?://(?:\w+\.)?youtube\.com/@(?:user\-hw9lw4fl4b)(?=[/?#]|$)/$doc
+/^https?://(?:\w+\.)?youtube\.com/@(?:xichiyule)(?=[/?#]|$)/$doc
+/^https?://(?:\w+\.)?youtube\.com/@(?:user\-mv2qy4fp9j)(?=[/?#]|$)/$doc
+/^https?://(?:\w+\.)?youtube\.com/@(?:LifeFunEasy)(?=[/?#]|$)/$doc
+/^https?://(?:\w+\.)?youtube\.com/@(?:Yuanlai\-channel)(?=[/?#]|$)/$doc
+/^https?://(?:\w+\.)?youtube\.com/@(?:user\-oz9wo7yd2s)(?=[/?#]|$)/$doc
+/^https?://(?:\w+\.)?youtube\.com/@(?:user\-qb4kd2dg9i)(?=[/?#]|$)/$doc
+/^https?://(?:\w+\.)?youtube\.com/@(?:user\-js3rn1gu2u)(?=[/?#]|$)/$doc
+/^https?://(?:\w+\.)?youtube\.com/@(?:daily_golden)(?=[/?#]|$)/$doc
+/^https?://(?:\w+\.)?youtube\.com/@(?:jianghubaixiaosheng)(?=[/?#]|$)/$doc
+/^https?://(?:\w+\.)?youtube\.com/@(?:user\-hj6os2th6t)(?=[/?#]|$)/$doc
+/^https?://(?:\w+\.)?youtube\.com/@(?:user\-cp9th3oz5e)(?=[/?#]|$)/$doc
+/^https?://(?:\w+\.)?youtube\.com/@(?:user\-re9qj4cl2p)(?=[/?#]|$)/$doc
+/^https?://(?:\w+\.)?youtube\.com/@(?:user\-bn1kx6zj8n)(?=[/?#]|$)/$doc
+/^https?://(?:\w+\.)?youtube\.com/@(?:user\-mu4yv7ge1k)(?=[/?#]|$)/$doc
+/^https?://(?:\w+\.)?youtube\.com/@(?:catdogfunnyvideos4647)(?=[/?#]|$)/$doc
+/^https?://(?:\w+\.)?youtube\.com/@(?:user\-bd2yc8bg8s)(?=[/?#]|$)/$doc
+/^https?://(?:\w+\.)?youtube\.com/@(?:user\-uf4un1jd8e)(?=[/?#]|$)/$doc
+/^https?://(?:\w+\.)?youtube\.com/@(?:liewok23)(?=[/?#]|$)/$doc
+/^https?://(?:\w+\.)?youtube\.com/@(?:user\-yp2xo1nj5f)(?=[/?#]|$)/$doc
+/^https?://(?:\w+\.)?youtube\.com/@(?:ptt01news)(?=[/?#]|$)/$doc
+/^https?://(?:\w+\.)?youtube\.com/@(?:YummyHomeCooking)(?=[/?#]|$)/$doc
+/^https?://(?:\w+\.)?youtube\.com/@(?:user\-ff6eu1jq2c)(?=[/?#]|$)/$doc
+/^https?://(?:\w+\.)?youtube\.com/@(?:user\-kg9mi8cn6n)(?=[/?#]|$)/$doc
+/^https?://(?:\w+\.)?youtube\.com/@(?:user\-zn4uh7bj5l)(?=[/?#]|$)/$doc
+/^https?://(?:\w+\.)?youtube\.com/@(?:user\-nr6rh9lv7g)(?=[/?#]|$)/$doc
+/^https?://(?:\w+\.)?youtube\.com/@(?:user\-ld6xz2xr5x)(?=[/?#]|$)/$doc
+/^https?://(?:\w+\.)?youtube\.com/@(?:user\-sl2nw7qu7u)(?=[/?#]|$)/$doc
+/^https?://(?:\w+\.)?youtube\.com/@(?:yangshengzhilu)(?=[/?#]|$)/$doc
+/^https?://(?:\w+\.)?youtube\.com/@(?:Xiaoan\-)(?=[/?#]|$)/$doc
+/^https?://(?:\w+\.)?youtube\.com/@(?:Yi_Ma)(?=[/?#]|$)/$doc
+/^https?://(?:\w+\.)?youtube\.com/@(?:analife688)(?=[/?#]|$)/$doc
+/^https?://(?:\w+\.)?youtube\.com/@(?:Kajia_Mama)(?=[/?#]|$)/$doc
+/^https?://(?:\w+\.)?youtube\.com/@(?:health_care)(?=[/?#]|$)/$doc
+/^https?://(?:\w+\.)?youtube\.com/@(?:user\-nm4jm9io8r)(?=[/?#]|$)/$doc
+/^https?://(?:\w+\.)?youtube\.com/@(?:user\-lx3ju7zq6m)(?=[/?#]|$)/$doc
+/^https?://(?:\w+\.)?youtube\.com/@(?:user\-yt8vr6dd2h)(?=[/?#]|$)/$doc
+/^https?://(?:\w+\.)?youtube\.com/@(?:NamoAmitabha)(?=[/?#]|$)/$doc
+/^https?://(?:\w+\.)?youtube\.com/@(?:w888)(?=[/?#]|$)/$doc
+/^https?://(?:\w+\.)?youtube\.com/@(?:user\-cg2ms8su2g)(?=[/?#]|$)/$doc
+/^https?://(?:\w+\.)?youtube\.com/@(?:DLJX)(?=[/?#]|$)/$doc
+/^https?://(?:\w+\.)?youtube\.com/@(?:user\-se7eh3zt9f)(?=[/?#]|$)/$doc
+/^https?://(?:\w+\.)?youtube\.com/@(?:user\-wr6gs4ns7q)(?=[/?#]|$)/$doc
+/^https?://(?:\w+\.)?youtube\.com/@(?:Soulheart)(?=[/?#]|$)/$doc
+/^https?://(?:\w+\.)?youtube\.com/@(?:epal75)(?=[/?#]|$)/$doc
+/^https?://(?:\w+\.)?youtube\.com/@(?:ronnieyates11)(?=[/?#]|$)/$doc
+/^https?://(?:\w+\.)?youtube\.com/@(?:angliis)(?=[/?#]|$)/$doc
+/^https?://(?:\w+\.)?youtube\.com/@(?:zachkcool)(?=[/?#]|$)/$doc
+/^https?://(?:\w+\.)?youtube\.com/@(?:LetsPlayNewRockwood)(?=[/?#]|$)/$doc
+/^https?://(?:\w+\.)?youtube\.com/@(?:darrentan9579)(?=[/?#]|$)/$doc
+/^https?://(?:\w+\.)?youtube\.com/@(?:baojianyangsheng)(?=[/?#]|$)/$doc
+/^https?://(?:\w+\.)?youtube\.com/@(?:user\-uq1ri9po2e)(?=[/?#]|$)/$doc
+/^https?://(?:\w+\.)?youtube\.com/@(?:user\-qp4ju9fh7k)(?=[/?#]|$)/$doc
