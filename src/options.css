@@ -124,12 +124,13 @@ input[type="button"]:hover {
 
 #submitButton {
   float: __MSG_@@bidi_end_edge__;
-  background-color: #2da44e;
-  color: white;
+  background-color: #f6f8fa;
+  color: #2da44e;
 }
 
 #submitButton:hover {
   background-color: #2c974b;
+  color: white;
 }
 
 /* https://bootsnipp.com/snippets/featured/material-design-switch */
