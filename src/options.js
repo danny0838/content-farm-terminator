@@ -179,7 +179,9 @@ async function init(event) {
     document.querySelector('#suppressHistory').hidden = true;
   }
 
-  loadOptions(); // async
+  loadOptions().then(() => {
+    document.querySelector('#submitButton').disabled = false;
+  }); // async
   showInfo(); // async
 }
 
