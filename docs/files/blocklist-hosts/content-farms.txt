@@ -1,6 +1,6 @@
 # Title: Content Farm Filters
 # Description: Filter for general content farms, mostly in Chinese.
-# Last modified: 2023-01-01T19:49:21+00:00
+# Last modified: 2023-01-04T16:16:26+00:00
 # Homepage: https://danny0838.github.io/content-farm-terminator/
 # Licence: MIT License
 # Source: https://danny0838.github.io/content-farm-terminator/files/blocklist-hosts/content-farms.txt
@@ -9922,6 +9922,114 @@
 0.0.0.0 haochen3d.com
 0.0.0.0 sayapintar.com
 0.0.0.0 moeansari.com
+0.0.0.0 rich-entertainment.nl  #redirects to winquick.life
+0.0.0.0 eacademy.fi  #redirects to newip.eujen.space
+0.0.0.0 unimakslinieki.lv  #redirects to newip.zdes.online
+0.0.0.0 myproudpets.fi  #redirects to grgxro.delicatedate.net
+0.0.0.0 florariadavid.ro  #redirects to di06.biz
+0.0.0.0 sperky-rovski.cz  #redirects to di06.biz
+0.0.0.0 multimedia-service.at  #redirects to di06.biz
+0.0.0.0 jughadjaw.live  #malicious scripts
+0.0.0.0 elitewining.life  #redirects to 422.jughadjaw.live
+0.0.0.0 mbtrk1.com  #redirects to elitewining.life
+0.0.0.0 copperblade.top  #redirects to mbtrk1.com
+0.0.0.0 fastssp.top  #redirects to fly.copperblade.top
+0.0.0.0 gourmetbar.eu  #redirects to mvgde.fastssp.top
+0.0.0.0 habitat-jardin24.ch  #redirects to mvgde.fastssp.top
+0.0.0.0 mhs-365.de  #redirects to newip.zdes.online
+0.0.0.0 edu-imedias.ch  #redirects to mvgde.fastssp.top
+0.0.0.0 lekarma.ch  #redirects to mvgde.fastssp.top
+0.0.0.0 raido.ch  #redirects to mvgde.fastssp.top
+0.0.0.0 institutlagruyere.ch  #redirects to mvgde.fastssp.top
+0.0.0.0 ndl-decoration.ch  #redirects to mvgde.fastssp.top
+0.0.0.0 catmedien.ch  #redirects to mvgde.fastssp.top
+0.0.0.0 macmel.ch  #redirects to mvgde.fastssp.top
+0.0.0.0 cashscout.ch  #redirects to mvgde.fastssp.top
+0.0.0.0 eightyfour.ch  #redirects to mvgde.fastssp.top
+0.0.0.0 finishers.uk  #redirects to mvgde.fastssp.top
+0.0.0.0 u1play.net  #redirects to mvgde.fastssp.top
+0.0.0.0 calandaskoschka.ch  #redirects to mvgde.fastssp.top
+0.0.0.0 actuauto.ch  #redirects to mvgde.fastssp.top
+0.0.0.0 eerlausanne.ch  #redirects to mvgde.fastssp.top
+0.0.0.0 samedelman.eu  #redirects to mvgde.fastssp.top
+0.0.0.0 pinoymoviepedia.ch  #redirects to mvgde.fastssp.top
+0.0.0.0 paiement.ch  #redirects to mvgde.fastssp.top
+0.0.0.0 estecenter.net  #redirects to mvgde.fastssp.top
+0.0.0.0 leslivreslus.ch  #redirects to mvgde.fastssp.top
+0.0.0.0 hee-coboi.ch  #redirects to mvgde.fastssp.top
+0.0.0.0 matecsoudure.ch  #redirects to mvgde.fastssp.top
+0.0.0.0 24fun.ch  #redirects to mvgde.fastssp.top
+0.0.0.0 theswissmiss.ch  #redirects to mvgde.fastssp.top
+0.0.0.0 watch4freemovies.co.uk  #redirects to mvgde.fastssp.top
+0.0.0.0 girav.ch  #redirects to mvgde.fastssp.top
+0.0.0.0 7bam.net  #redirects to mvgde.fastssp.top
+0.0.0.0 knaufintegral.eu  #redirects to mvgde.fastssp.top
+0.0.0.0 jewellerys.eu  #redirects to mvgde.fastssp.top
+0.0.0.0 sexylove24.ch  #redirects to mvgde.fastssp.top
+0.0.0.0 cigabrasil.ch  #redirects to mvgde.fastssp.top
+0.0.0.0 gpceurope.eu  #redirects to mvgde.fastssp.top
+0.0.0.0 filmeshare.net  #redirects to mvgde.fastssp.top
+0.0.0.0 stmforum.net  #redirects to mvgde.fastssp.top
+0.0.0.0 survivalforum.ch  #redirects to mvgde.fastssp.top
+0.0.0.0 adgenius.ch  #redirects to mvgde.fastssp.top
+0.0.0.0 cupola-festival.ch  #redirects to mvgde.fastssp.top
+0.0.0.0 starloop.net  #redirects to mvgde.fastssp.top
+0.0.0.0 iberlin.eu  #redirects to mvgde.fastssp.top
+0.0.0.0 juez.eu  #redirects to mvgde.fastssp.top
+0.0.0.0 espacesjeux.ch  #redirects to mvgde.fastssp.top
+0.0.0.0 nimbl.eu  #redirects to mvgde.fastssp.top
+0.0.0.0 eorlingas.ch  #redirects to mvgde.fastssp.top
+0.0.0.0 thepickler.co.uk  #redirects to mvgde.fastssp.top
+0.0.0.0 djweb.ch  #redirects to mvgde.fastssp.top
+0.0.0.0 sisauto.net  #redirects to mvgde.fastssp.top
+0.0.0.0 glueckssplitter.ch  #redirects to mvgde.fastssp.top
+0.0.0.0 yourlove.biz  #redirects to mvgde.fastssp.top
+0.0.0.0 anishinaabe.ch  #redirects to mvgde.fastssp.top
+0.0.0.0 zephyrrecords.co.uk  #redirects to mvgde.fastssp.top
+0.0.0.0 magnetsonline.net  #redirects to mvgde.fastssp.top
+0.0.0.0 thebestreward.life  #redirects to 423.jughadjaw.live
+0.0.0.0 sugarandbutterbakes.co.uk  #redirects to mvgde.fastssp.top
+0.0.0.0 maglev.co.uk  #redirects to mvgde.fastssp.top
+0.0.0.0 mbasc.uk  #redirects to mvgde.fastssp.top
+0.0.0.0 juarex.es  #redirects to thebestreward.life
+0.0.0.0 edificiovalparaiso.es  #redirects to thebestreward.life
+0.0.0.0 halloweendog.co.uk  #redirects to mvgde.fastssp.top
+0.0.0.0 alabamafishingguide.net  #redirects to mvgde.fastssp.top
+0.0.0.0 lessportifs.ch  #redirects to mvgde.fastssp.top
+0.0.0.0 flyingduchessranch.net  #redirects to mvgde.fastssp.top
+0.0.0.0 bielingue.ch  #redirects to mvgde.fastssp.top
+0.0.0.0 brightonlewesbeekeepers.uk  #redirects to mvgde.fastssp.top
+0.0.0.0 doux.ch  #redirects to mvgde.fastssp.top
+0.0.0.0 marquettabreslin.net  #redirects to mvgde.fastssp.top
+0.0.0.0 amazon88.net  #redirects to mvgde.fastssp.top
+0.0.0.0 korenix.ch  #redirects to mvgde.fastssp.top
+0.0.0.0 energiestudie.ch  #redirects to mvgde.fastssp.top
+0.0.0.0 al-wid.net  #redirects to mvgde.fastssp.top
+0.0.0.0 misdibujos.net  #redirects to mvgde.fastssp.top
+0.0.0.0 automotive-mediaventions.co.uk  #redirects to mvgde.fastssp.top
+0.0.0.0 karlzehnderag.ch  #redirects to mvgde.fastssp.top
+0.0.0.0 crowcanyonwine.net  #redirects to mvgde.fastssp.top
+0.0.0.0 korzo.co.uk  #redirects to mvgde.fastssp.top
+0.0.0.0 fxsear.ch  #redirects to mvgde.fastssp.top
+0.0.0.0 ziering.co.uk  #redirects to mvgde.fastssp.top
+0.0.0.0 prizesense.life  #redirects to 423.jughadjaw.live
+0.0.0.0 stylnails.ch  #redirects to newip.eujen.space
+0.0.0.0 rafdu.co  #redirects to wentsb.sbs
+0.0.0.0 demaker.co  #redirects to wentsb.sbs
+0.0.0.0 x-cell.pl  #redirects to newip.eujen.space
+0.0.0.0 autohoku.cz  #redirects to prizesense.life
+0.0.0.0 3tioz.de  #redirects to 423.jughadjaw.live
+0.0.0.0 collegiostetricienna.it  #redirects to prizesense.life
+0.0.0.0 wohnenimkreuz.ch  #redirects to prizesense.life
+0.0.0.0 sparkrestaurant.cz  #redirects to newip.zdes.online
+0.0.0.0 empreendejovem.pt  #redirects to newip.zdes.online
+0.0.0.0 neonlux.cz  #redirects to prizesense.life
+0.0.0.0 tectenia.es  #redirects to sl.3tioz.de
+0.0.0.0 chb-creations.fr  #redirects to newip.zdes.online
+0.0.0.0 ctn-annecy.fr  #redirects to newip.eujen.space
+0.0.0.0 spazioideatende.it  #redirects to newip.eujen.space
+0.0.0.0 medsebojna-delitev.si  #redirects to newip.zdes.online
+0.0.0.0 good-timess.com
 #!aggreg-cxyzjd: https://raw.githubusercontent.com/wdmpa/content-farm-list/main/domains/spam/cxyzjd.txt (https://github.com/wdmpa/content-farm-list)
 0.0.0.0 cxybb.com  #!aggreg-cxyzjd
 0.0.0.0 cxymm.net  #!aggreg-cxyzjd
