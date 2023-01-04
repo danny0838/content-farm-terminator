@@ -2,7 +2,7 @@
   # Description: Filter for content-farm-like or related social network service (SNS) URLs, mostly in Chinese.
   #     This may not work well for all cases as many things cannot be fully determined by URL.
   #     This list is mostly regex-based and may have a negative effect on performance.
-  # Last modified: 2023-01-01T19:49:21+00:00
+  # Last modified: 2023-01-04T16:13:23+00:00
   # Homepage: https://danny0838.github.io/content-farm-terminator/
   # Licence: MIT License
   # Source: https://danny0838.github.io/content-farm-terminator/files/blocklist/sns-content-farms.txt
@@ -1138,9 +1138,7 @@
 /^https?://(?:\w+\.)?youtube\.com/channel/(?:UCzAOdjLlfyW19t8PtG1f7MA)(?=[/?#]|$)/
 /^https?://(?:\w+\.)?youtube\.com/channel/(?:UCzHk_dZclFHUks7h83RxUlA)(?=[/?#]|$)/
 /^https?://(?:\w+\.)?youtube\.com/user/(?:a22764658a)(?=[/?#]|$)/
-/^https?://(?:\w+\.)?youtube\.com/user/(?:izzyrodriguez1)(?=[/?#]|$)/
 /^https?://(?:\w+\.)?youtube\.com/user/(?:julica138)(?=[/?#]|$)/
-/^https?://(?:\w+\.)?youtube\.com/user/(?:mysoul6876)(?=[/?#]|$)/
 /^https?://(?:\w+\.)?youtube\.com/user/(?:tvbc0m)(?=[/?#]|$)/
 /^https?://(?:(?:[\w-]+\.)?facebook\.com|fb\.(?:com|me))/(?!\w+\.php\?)(?:pg/)?(?:report\.omg)(?=[/?#]|$)/
 /^https?://(?:\w+\.)?youtube\.com/channel/(?:UCbKd1dQrelTtWHkvqqnHjGA)(?=[/?#]|$)/
