@@ -2,7 +2,7 @@
   # Description: Filter for cloner sites that are mostly free of copyright issue since the source site
   #     is copyleft or copyfree, but provide only trivial layout change or poor-quality bot translation
   #     and are thus spam-like.
-  # Last modified: 2023-01-15T19:49:21+00:00
+  # Last modified: 2023-01-20T07:31:58+00:00
   # Homepage: https://danny0838.github.io/content-farm-terminator/
   # Licence: MIT License
   # Source: https://danny0838.github.io/content-farm-terminator/files/blocklist/bad-cloners.txt
@@ -55,9 +55,9 @@ bestrustcrates.com #!aggreg-ublGhT
 githubrecord.com #!aggreg-ublGhT
   #!aggreg-ublSoT: https://raw.githubusercontent.com/arosh/ublacklist-stackoverflow-translation/master/uBlacklist.txt (https://github.com/arosh/ublacklist-stackoverflow-translation)
 code-examples.net #!aggreg-ublSoT
-kotaeta.com #!aggreg-ublSoT
 answer-id.com #!aggreg-ublSoT
 de-vraag.com #!aggreg-ublSoT
+kzen.dev #!aggreg-ublSoT
 living-sun.com #!aggreg-ublSoT
 qastack.jp #!aggreg-ublSoT
 qastack.ru #!aggreg-ublSoT
@@ -82,22 +82,14 @@ it-swarm-ja.com #!aggreg-ublSoT
 web-dev-qa-db-ja.com #!aggreg-ublSoT
 it-swarm-fr.com #!aggreg-ublSoT
 web-dev-qa-db-fr.com #!aggreg-ublSoT
-codeflow.site #!aggreg-ublSoT
 codeguides.site #!aggreg-ublSoT
 overcoder.net #!aggreg-ublSoT
 coderoad.ru #!aggreg-ublSoT
-javaer101.com #!aggreg-ublSoT
 voidcc.com #!aggreg-ublSoT
 fixes.pub #!aggreg-ublSoT
 isolution.pro #!aggreg-ublSoT
-nuomiphp.com #!aggreg-ublSoT
-ubuntu.buildwebhost.com #!aggreg-ublSoT
-ubuntuaa.com #!aggreg-ublSoT
 ubuntubin.com #!aggreg-ublSoT
-debugcn.com #!aggreg-ublSoT
 softwareuser.asklobster.com #!aggreg-ublSoT
-pakostnici.com #!aggreg-ublSoT
-athabasca-foto.com #!aggreg-ublSoT
 fmihm.org #!aggreg-ublSoT
 itectec.com #!aggreg-ublSoT
 super-unix.com #!aggreg-ublSoT
@@ -111,12 +103,10 @@ tousu.in #!aggreg-ublSoT
 tutorialmore.com #!aggreg-ublSoT
 wujigu.com #!aggreg-ublSoT
 webdevdesigner.com #!aggreg-ublSoT
-ghcc.net #!aggreg-ublSoT
 developreference.com #!aggreg-ublSoT
 semicolonworld.com #!aggreg-ublSoT
 qi-u.com #!aggreg-ublSoT
 stackoom.com #!aggreg-ublSoT
-cndgn.com #!aggreg-ublSoT
 generacodice.com #!aggreg-ublSoT
 sqlite.in #!aggreg-ublSoT
 stackguides.com #!aggreg-ublSoT
@@ -132,14 +122,10 @@ askcodez.com #!aggreg-ublSoT
 iquestion.pro #!aggreg-ublSoT
 programmierfrage.com #!aggreg-ublSoT
 microeducate.tech #!aggreg-ublSoT
-debugko.com #!aggreg-ublSoT
 1r1g.com #!aggreg-ublSoT
-string.quest #!aggreg-ublSoT
-qa.icopy.site #!aggreg-ublSoT
 errorsfixing.com #!aggreg-ublSoT
 syntaxfix.com #!aggreg-ublSoT
 codegrepr.com #!aggreg-ublSoT
-devfixes.com #!aggreg-ublSoT
 cainiaojiaocheng.com #!aggreg-ublSoT
 linuxfixes.com #!aggreg-ublSoT
 web-dev-qa.com #!aggreg-ublSoT
@@ -151,8 +137,6 @@ peaku.co #!aggreg-ublSoT
 solveforum.com #!aggreg-ublSoT
 edureka.co #!aggreg-ublSoT
 itecnote.com #!aggreg-ublSoT
-tagsqa.com #!aggreg-ublSoT
-faqcode4u.com #!aggreg-ublSoT
 digitrain.ru #!aggreg-ublSoT
 prograide.com #!aggreg-ublSoT
 dovov.com #!aggreg-ublSoT
@@ -162,7 +146,6 @@ codebaoku.com #!aggreg-ublSoT
 daplus.net #!aggreg-ublSoT
 doraprojects.net #!aggreg-ublSoT
 iteramos.com #!aggreg-ublSoT
-faqcodes.com #!aggreg-ublSoT
 anycodings.com #!aggreg-ublSoT
 javafixing.com #!aggreg-ublSoT
 xstack.us #!aggreg-ublSoT
@@ -185,32 +168,49 @@ vigge.cn #!aggreg-ublSoT
 web-dev-qa-db-fra.com #!aggreg-ublSoT
 yaoply.com #!aggreg-ublSoT
 techhelpnotes.com #!aggreg-ublSoT
-wp-qa.com #!aggreg-ublSoT
 querythreads.com #!aggreg-ublSoT
 appsloveworld.com #!aggreg-ublSoT
-dtuto.com #!aggreg-ublSoT
 webdevask.com #!aggreg-ublSoT
-issuecloser.com #!aggreg-ublSoT
-etsoutdoors.com #!aggreg-ublSoT
-waldorf-am-see.org #!aggreg-ublSoT
 arip-photo.org #!aggreg-ublSoT
 answerlib.com #!aggreg-ublSoT
 fluffyfables.com #!aggreg-ublSoT
-qatop.pythonwood.com #!aggreg-ublSoT
 fullstackuser.com #!aggreg-ublSoT
-codeutility.org #!aggreg-ublSoT
 exchangetuts.com #!aggreg-ublSoT
 splunktool.com #!aggreg-ublSoT
-coder.gay #!aggreg-ublSoT
 jtuto.com #!aggreg-ublSoT
 9to5answer.com #!aggreg-ublSoT
 5axxw.com #!aggreg-ublSoT
 questu.ru #!aggreg-ublSoT
-thecodeteacher.com #!aggreg-ublSoT
 mejorcodigo.com #!aggreg-ublSoT
+itecnotes.com #!aggreg-ublSoT
+codeflow.site #!aggreg-ublSoT
+javaer101.com #!aggreg-ublSoT
+nuomiphp.com #!aggreg-ublSoT
+ubuntu.buildwebhost.com #!aggreg-ublSoT
+ubuntuaa.com #!aggreg-ublSoT
+debugcn.com #!aggreg-ublSoT
+pakostnici.com #!aggreg-ublSoT
+athabasca-foto.com #!aggreg-ublSoT
+ghcc.net #!aggreg-ublSoT
+cndgn.com #!aggreg-ublSoT
+debugko.com #!aggreg-ublSoT
+string.quest #!aggreg-ublSoT
+qa.icopy.site #!aggreg-ublSoT
+devfixes.com #!aggreg-ublSoT
+tagsqa.com #!aggreg-ublSoT
+faqcode4u.com #!aggreg-ublSoT
+faqcodes.com #!aggreg-ublSoT
+wp-qa.com #!aggreg-ublSoT
+dtuto.com #!aggreg-ublSoT
+issuecloser.com #!aggreg-ublSoT
+etsoutdoors.com #!aggreg-ublSoT
+waldorf-am-see.org #!aggreg-ublSoT
+qatop.pythonwood.com #!aggreg-ublSoT
+codeutility.org #!aggreg-ublSoT
+coder.gay #!aggreg-ublSoT
+thecodeteacher.com #!aggreg-ublSoT
 waymanamechurch.org #!aggreg-ublSoT
 ntcdoon.org #!aggreg-ublSoT
-itecnotes.com #!aggreg-ublSoT
 code2s.com #!aggreg-ublSoT
   #!aggreg-wdmpaMtSo: https://raw.githubusercontent.com/wdmpa/content-farm-list/main/domains/machine-translated/stackoverflow.txt (https://github.com/wdmpa/content-farm-list)
 /https?://(?:www\.coder\.work/article/.*)$/ #!aggreg-wdmpaMtSo
