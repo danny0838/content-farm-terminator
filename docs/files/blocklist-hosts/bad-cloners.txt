@@ -2,7 +2,7 @@
 # Description: Filter for cloner sites that are mostly free of copyright issue since the source site
 #     is copyleft or copyfree, but provide only trivial layout change or poor-quality bot translation
 #     and are thus spam-like.
-# Last modified: 2023-01-22T19:49:19+00:00
+# Last modified: 2023-01-29T19:49:17+00:00
 # Homepage: https://danny0838.github.io/content-farm-terminator/
 # Licence: MIT License
 # Source: https://danny0838.github.io/content-farm-terminator/files/blocklist-hosts/bad-cloners.txt
@@ -183,17 +183,17 @@
 0.0.0.0 questu.ru  #!aggreg-ublSoT
 0.0.0.0 mejorcodigo.com  #!aggreg-ublSoT
 0.0.0.0 itecnotes.com  #!aggreg-ublSoT
-0.0.0.0 codeflow.site  #!aggreg-ublSoT
 0.0.0.0 javaer101.com  #!aggreg-ublSoT
+0.0.0.0 debugcn.com  #!aggreg-ublSoT
+0.0.0.0 debugko.com  #!aggreg-ublSoT
+0.0.0.0 codeflow.site  #!aggreg-ublSoT
 0.0.0.0 nuomiphp.com  #!aggreg-ublSoT
 0.0.0.0 ubuntu.buildwebhost.com  #!aggreg-ublSoT
 0.0.0.0 ubuntuaa.com  #!aggreg-ublSoT
-0.0.0.0 debugcn.com  #!aggreg-ublSoT
 0.0.0.0 pakostnici.com  #!aggreg-ublSoT
 0.0.0.0 athabasca-foto.com  #!aggreg-ublSoT
 0.0.0.0 ghcc.net  #!aggreg-ublSoT
 0.0.0.0 cndgn.com  #!aggreg-ublSoT
-0.0.0.0 debugko.com  #!aggreg-ublSoT
 0.0.0.0 string.quest  #!aggreg-ublSoT
 0.0.0.0 qa.icopy.site  #!aggreg-ublSoT
 0.0.0.0 devfixes.com  #!aggreg-ublSoT
