@@ -1,6 +1,6 @@
 # Title: Extra Content Farm Filters
 # Description: Extra filter for content-farm-like sites, mostly aggregated from other sources.
-# Last modified: 2023-01-29T19:49:17+00:00
+# Last modified: 2023-02-04T12:27:56+00:00
 # Homepage: https://danny0838.github.io/content-farm-terminator/
 # Licence: MIT License
 # Source: https://danny0838.github.io/content-farm-terminator/files/blocklist-hosts/extra-content-farms.txt
@@ -73459,6 +73459,9 @@
 0.0.0.0 zhidao.juyouxuan.vip  #!aggreg-nonpnt
 0.0.0.0 zhujicankao.com  #!aggreg-nonpnt
 #!aggreg-scyrte: https://raw.githubusercontent.com/scyrte/uBlacklist-Subscription/master/blacklist.txt (https://github.com/scyrte/uBlacklist-Subscription)
+0.0.0.0 beyerdynamic.com.au  #!aggreg-scyrte
+0.0.0.0 uxmatters.com  #!aggreg-scyrte
+0.0.0.0 unsplash.com  #!aggreg-scyrte
 0.0.0.0 000.org.cn  #!aggreg-scyrte
 0.0.0.0 123zaoan.com  #!aggreg-scyrte
 0.0.0.0 18qvod.com  #!aggreg-scyrte
@@ -74330,6 +74333,22 @@
 0.0.0.0 fayble.de  #!aggreg-scyrte
 0.0.0.0 ozonecoffee.co.uk  #!aggreg-scyrte
 0.0.0.0 orfeunegro.org  #!aggreg-scyrte
+0.0.0.0 iardwebprod.azurewebsites.net  #!aggreg-scyrte
+0.0.0.0 rlp.de  #!aggreg-scyrte
+0.0.0.0 takachi-enclosure.com  #!aggreg-scyrte
+0.0.0.0 nickelodeonarabia.com  #!aggreg-scyrte
+0.0.0.0 mygrandma.com  #!aggreg-scyrte
+0.0.0.0 livebinders.com  #!aggreg-scyrte
+0.0.0.0 pearson.com  #!aggreg-scyrte
+0.0.0.0 visitpinedale.org  #!aggreg-scyrte
+0.0.0.0 boundtree.com  #!aggreg-scyrte
+0.0.0.0 primetimer.com  #!aggreg-scyrte
+0.0.0.0 livehindustan.com  #!aggreg-scyrte
+0.0.0.0 catcosmetics.com  #!aggreg-scyrte
+0.0.0.0 yuasa.es  #!aggreg-scyrte
+0.0.0.0 6parkbbs.com  #!aggreg-scyrte
+0.0.0.0 frederiqueconstant.com  #!aggreg-scyrte
+0.0.0.0 nasa.gov  #!aggreg-scyrte
 #!aggreg-yesil: https://raw.githubusercontent.com/YeSilin/uBlacklist/master/list.txt (https://github.com/YeSilin/uBlacklist)
 0.0.0.0 0317car.cn  #!aggreg-yesil
 0.0.0.0 062140.hebiluban.com  #!aggreg-yesil

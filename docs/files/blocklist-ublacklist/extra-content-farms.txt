@@ -1,6 +1,6 @@
 # Title: Extra Content Farm Filters
 # Description: Extra filter for content-farm-like sites, mostly aggregated from other sources.
-# Last modified: 2023-01-29T19:49:17+00:00
+# Last modified: 2023-02-04T12:27:56+00:00
 # Homepage: https://danny0838.github.io/content-farm-terminator/
 # Licence: MIT License
 # Source: https://danny0838.github.io/content-farm-terminator/files/blocklist-ublacklist/extra-content-farms.txt
@@ -73597,6 +73597,9 @@
 /m\.[\w]{5,6}\.[\w]{6,7}\.(?:site|vip).*/  #!aggreg-nonpnt
 *://huifu.wondershare.cn/repair/*  #!aggreg-nonpnt
 #!aggreg-scyrte: https://raw.githubusercontent.com/scyrte/uBlacklist-Subscription/master/blacklist.txt (https://github.com/scyrte/uBlacklist-Subscription)
+*://*.beyerdynamic.com.au/*  #!aggreg-scyrte
+*://*.uxmatters.com/*  #!aggreg-scyrte
+*://*.unsplash.com/*  #!aggreg-scyrte
 *://*.000.org.cn/*  #!aggreg-scyrte
 *://*.123zaoan.com/*  #!aggreg-scyrte
 *://*.18qvod.com/*  #!aggreg-scyrte
@@ -74469,6 +74472,22 @@
 *://*.fayble.de/*  #!aggreg-scyrte
 *://*.ozonecoffee.co.uk/*  #!aggreg-scyrte
 *://*.orfeunegro.org/*  #!aggreg-scyrte
+*://*.iardwebprod.azurewebsites.net/*  #!aggreg-scyrte
+*://*.rlp.de/*  #!aggreg-scyrte
+*://*.takachi-enclosure.com/*  #!aggreg-scyrte
+*://*.nickelodeonarabia.com/*  #!aggreg-scyrte
+*://*.mygrandma.com/*  #!aggreg-scyrte
+*://*.livebinders.com/*  #!aggreg-scyrte
+*://*.pearson.com/*  #!aggreg-scyrte
+*://*.visitpinedale.org/*  #!aggreg-scyrte
+*://*.boundtree.com/*  #!aggreg-scyrte
+*://*.primetimer.com/*  #!aggreg-scyrte
+*://*.livehindustan.com/*  #!aggreg-scyrte
+*://*.catcosmetics.com/*  #!aggreg-scyrte
+*://*.yuasa.es/*  #!aggreg-scyrte
+*://*.6parkbbs.com/*  #!aggreg-scyrte
+*://*.frederiqueconstant.com/*  #!aggreg-scyrte
+*://*.nasa.gov/*  #!aggreg-scyrte
 #!aggreg-yesil: https://raw.githubusercontent.com/YeSilin/uBlacklist/master/list.txt (https://github.com/YeSilin/uBlacklist)
 *://*.0317car.cn/*  #!aggreg-yesil
 *://*.062140.hebiluban.com/*  #!aggreg-yesil
