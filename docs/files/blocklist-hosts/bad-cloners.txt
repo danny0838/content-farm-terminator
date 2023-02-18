@@ -2,7 +2,7 @@
 # Description: Filter for cloner sites that are mostly free of copyright issue since the source site
 #     is copyleft or copyfree, but provide only trivial layout change or poor-quality bot translation
 #     and are thus spam-like.
-# Last modified: 2023-02-12T19:49:14+00:00
+# Last modified: 2023-02-18T07:04:24+00:00
 # Homepage: https://danny0838.github.io/content-farm-terminator/
 # Licence: MIT License
 # Source: https://danny0838.github.io/content-farm-terminator/files/blocklist-hosts/bad-cloners.txt
@@ -20,39 +20,39 @@
 0.0.0.0 wikis.tw
 #!aggreg-ublGhT: https://raw.githubusercontent.com/arosh/ublacklist-github-translation/master/uBlacklist.txt (https://github.com/arosh/ublacklist-github-translation)
 0.0.0.0 lightrun.com  #!aggreg-ublGhT
-0.0.0.0 bleepcoder.com  #!aggreg-ublGhT
-0.0.0.0 githubja.com  #!aggreg-ublGhT
-0.0.0.0 gitmemory.com  #!aggreg-ublGhT
 0.0.0.0 giters.com  #!aggreg-ublGhT
 0.0.0.0 githubmemory.com  #!aggreg-ublGhT
-0.0.0.0 githubmate.com  #!aggreg-ublGhT
 0.0.0.0 wenyanet.com  #!aggreg-ublGhT
 0.0.0.0 codesti.com  #!aggreg-ublGhT
-0.0.0.0 opensourcelibs.com  #!aggreg-ublGhT
 0.0.0.0 awesomeopensource.com  #!aggreg-ublGhT
 0.0.0.0 findbestopensource.com  #!aggreg-ublGhT
 0.0.0.0 githubhelp.com  #!aggreg-ublGhT
-0.0.0.0 golangrepo.com  #!aggreg-ublGhT
-0.0.0.0 gitmemory.cn  #!aggreg-ublGhT
-0.0.0.0 pythonissues.com  #!aggreg-ublGhT
 0.0.0.0 reposhub.com  #!aggreg-ublGhT
-0.0.0.0 openprojectrepo.com  #!aggreg-ublGhT
-0.0.0.0 gitanswer.com  #!aggreg-ublGhT
 0.0.0.0 githubplus.com  #!aggreg-ublGhT
 0.0.0.0 pythonrepo.com  #!aggreg-ublGhT
 0.0.0.0 bestofcpp.com  #!aggreg-ublGhT
-0.0.0.0 github.innominds.com  #!aggreg-ublGhT
-0.0.0.0 higithub.com  #!aggreg-ublGhT
 0.0.0.0 kandi.openweaver.com  #!aggreg-ublGhT
-0.0.0.0 githublab.com  #!aggreg-ublGhT
-0.0.0.0 githubhot.com  #!aggreg-ublGhT
 0.0.0.0 issueantenna.com  #!aggreg-ublGhT
 0.0.0.0 gitanswer.net  #!aggreg-ublGhT
 0.0.0.0 issuehint.com  #!aggreg-ublGhT
-0.0.0.0 curatedgo.com  #!aggreg-ublGhT
 0.0.0.0 rustrepo.com  #!aggreg-ublGhT
-0.0.0.0 bestrustcrates.com  #!aggreg-ublGhT
 0.0.0.0 githubrecord.com  #!aggreg-ublGhT
+0.0.0.0 bleepcoder.com  #!aggreg-ublGhT
+0.0.0.0 githubja.com  #!aggreg-ublGhT
+0.0.0.0 gitmemory.com  #!aggreg-ublGhT
+0.0.0.0 githubmate.com  #!aggreg-ublGhT
+0.0.0.0 opensourcelibs.com  #!aggreg-ublGhT
+0.0.0.0 golangrepo.com  #!aggreg-ublGhT
+0.0.0.0 gitmemory.cn  #!aggreg-ublGhT
+0.0.0.0 pythonissues.com  #!aggreg-ublGhT
+0.0.0.0 openprojectrepo.com  #!aggreg-ublGhT
+0.0.0.0 github.innominds.com  #!aggreg-ublGhT
+0.0.0.0 githubhot.com  #!aggreg-ublGhT
+0.0.0.0 curatedgo.com  #!aggreg-ublGhT
+0.0.0.0 bestrustcrates.com  #!aggreg-ublGhT
+0.0.0.0 gitanswer.com  #!aggreg-ublGhT
+0.0.0.0 higithub.com  #!aggreg-ublGhT
+0.0.0.0 githublab.com  #!aggreg-ublGhT
 #!aggreg-ublSoT: https://raw.githubusercontent.com/arosh/ublacklist-stackoverflow-translation/master/uBlacklist.txt (https://github.com/arosh/ublacklist-stackoverflow-translation)
 0.0.0.0 code-examples.net  #!aggreg-ublSoT
 0.0.0.0 answer-id.com  #!aggreg-ublSoT
