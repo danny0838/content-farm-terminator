@@ -1,6 +1,6 @@
 # Title: Content Farm Filters
 # Description: Filter for general content farms, mostly in Chinese.
-# Last modified: 2023-02-12T19:49:14+00:00
+# Last modified: 2023-02-18T07:23:58+00:00
 # Homepage: https://danny0838.github.io/content-farm-terminator/
 # Licence: MIT License
 # Source: https://danny0838.github.io/content-farm-terminator/files/blocklist-hosts/content-farms.txt
@@ -10177,6 +10177,23 @@
 0.0.0.0 didziojikinija.lt  #redirects to prizesenses.life
 0.0.0.0 theracane.fi  #redirects to prizesenses.life
 0.0.0.0 schneerosenrallye.at  #redirects to ip23.eujen.space
+0.0.0.0 vivicita.nl  #redirects to ip23.f9dle.skin
+0.0.0.0 fishspa.lt  #redirects to ip23.f9rlf.yachts
+0.0.0.0 tapeten-welt.at  #redirects to ip23.f9dle.skin
+0.0.0.0 pets-master.com
+0.0.0.0 akhbara24.news
+0.0.0.0 savewonopen.live  #malicious scripts
+0.0.0.0 bonusscore.life  #redirects to 1815.savewonopen.live
+0.0.0.0 irodarici.it  #redirects to bonusscore.life
+0.0.0.0 aijuu.fi  #redirects to ip23.eujen.space
+0.0.0.0 r4g5y6.site  #redirects to 1815.savewonopen.live
+0.0.0.0 petsyinterieur.nl  #redirects to ip23.r4g5y6.site
+0.0.0.0 recepcni-pulty.cz  #redirects to ip23.r4g5y6.site
+0.0.0.0 dr-peter-rose.de  #redirects to ip23.f9rlf.yachts
+0.0.0.0 portall.zp.ua
+0.0.0.0 immobilien-oberaargau.ch  #redirects to ip23.eujen.space
+0.0.0.0 juewebs.es  #redirects to ip23.f9rlf.yachts
+0.0.0.0 otky.fi  #redirects to prizesenses.life
 #!aggreg-cxyzjd: https://raw.githubusercontent.com/wdmpa/content-farm-list/main/domains/spam/cxyzjd.txt (https://github.com/wdmpa/content-farm-list)
 0.0.0.0 cxybb.com  #!aggreg-cxyzjd
 0.0.0.0 cxymm.net  #!aggreg-cxyzjd

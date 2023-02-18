@@ -1,6 +1,6 @@
 # Title: Content Farm Filters
 # Description: Filter for general content farms, mostly in Chinese.
-# Last modified: 2023-02-12T19:49:14+00:00
+# Last modified: 2023-02-18T07:23:58+00:00
 # Homepage: https://danny0838.github.io/content-farm-terminator/
 # Licence: MIT License
 # Source: https://danny0838.github.io/content-farm-terminator/files/blocklist-ublacklist/content-farms.txt
@@ -10079,6 +10079,23 @@
 *://*.didziojikinija.lt/*  #redirects to prizesenses.life
 *://*.theracane.fi/*  #redirects to prizesenses.life
 *://*.schneerosenrallye.at/*  #redirects to ip23.eujen.space
+*://*.vivicita.nl/*  #redirects to ip23.f9dle.skin
+*://*.fishspa.lt/*  #redirects to ip23.f9rlf.yachts
+*://*.tapeten-welt.at/*  #redirects to ip23.f9dle.skin
+*://*.pets-master.com/*
+*://*.akhbara24.news/*
+*://*.savewonopen.live/*  #malicious scripts
+*://*.bonusscore.life/*  #redirects to 1815.savewonopen.live
+*://*.irodarici.it/*  #redirects to bonusscore.life
+*://*.aijuu.fi/*  #redirects to ip23.eujen.space
+*://*.r4g5y6.site/*  #redirects to 1815.savewonopen.live
+*://*.petsyinterieur.nl/*  #redirects to ip23.r4g5y6.site
+*://*.recepcni-pulty.cz/*  #redirects to ip23.r4g5y6.site
+*://*.dr-peter-rose.de/*  #redirects to ip23.f9rlf.yachts
+*://*.portall.zp.ua/*
+*://*.immobilien-oberaargau.ch/*  #redirects to ip23.eujen.space
+*://*.juewebs.es/*  #redirects to ip23.f9rlf.yachts
+*://*.otky.fi/*  #redirects to prizesenses.life
 #!aggreg-cxyzjd: https://raw.githubusercontent.com/wdmpa/content-farm-list/main/domains/spam/cxyzjd.txt (https://github.com/wdmpa/content-farm-list)
 *://*.cxybb.com/*  #!aggreg-cxyzjd
 *://*.cxymm.net/*  #!aggreg-cxyzjd
