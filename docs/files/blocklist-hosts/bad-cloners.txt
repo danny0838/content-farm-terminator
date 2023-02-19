@@ -2,7 +2,7 @@
 # Description: Filter for cloner sites that are mostly free of copyright issue since the source site
 #     is copyleft or copyfree, but provide only trivial layout change or poor-quality bot translation
 #     and are thus spam-like.
-# Last modified: 2023-02-18T07:04:24+00:00
+# Last modified: 2023-02-19T19:49:16+00:00
 # Homepage: https://danny0838.github.io/content-farm-terminator/
 # Licence: MIT License
 # Source: https://danny0838.github.io/content-farm-terminator/files/blocklist-hosts/bad-cloners.txt
@@ -186,32 +186,7 @@
 0.0.0.0 javaer101.com  #!aggreg-ublSoT
 0.0.0.0 debugcn.com  #!aggreg-ublSoT
 0.0.0.0 debugko.com  #!aggreg-ublSoT
-0.0.0.0 codeflow.site  #!aggreg-ublSoT
-0.0.0.0 nuomiphp.com  #!aggreg-ublSoT
-0.0.0.0 ubuntu.buildwebhost.com  #!aggreg-ublSoT
-0.0.0.0 ubuntuaa.com  #!aggreg-ublSoT
-0.0.0.0 pakostnici.com  #!aggreg-ublSoT
-0.0.0.0 athabasca-foto.com  #!aggreg-ublSoT
-0.0.0.0 ghcc.net  #!aggreg-ublSoT
-0.0.0.0 cndgn.com  #!aggreg-ublSoT
-0.0.0.0 string.quest  #!aggreg-ublSoT
-0.0.0.0 qa.icopy.site  #!aggreg-ublSoT
-0.0.0.0 devfixes.com  #!aggreg-ublSoT
-0.0.0.0 tagsqa.com  #!aggreg-ublSoT
-0.0.0.0 faqcode4u.com  #!aggreg-ublSoT
-0.0.0.0 faqcodes.com  #!aggreg-ublSoT
-0.0.0.0 wp-qa.com  #!aggreg-ublSoT
-0.0.0.0 dtuto.com  #!aggreg-ublSoT
-0.0.0.0 issuecloser.com  #!aggreg-ublSoT
-0.0.0.0 etsoutdoors.com  #!aggreg-ublSoT
-0.0.0.0 waldorf-am-see.org  #!aggreg-ublSoT
-0.0.0.0 qatop.pythonwood.com  #!aggreg-ublSoT
 0.0.0.0 codeutility.org  #!aggreg-ublSoT
-0.0.0.0 coder.gay  #!aggreg-ublSoT
-0.0.0.0 thecodeteacher.com  #!aggreg-ublSoT
-0.0.0.0 waymanamechurch.org  #!aggreg-ublSoT
-0.0.0.0 ntcdoon.org  #!aggreg-ublSoT
-0.0.0.0 code2s.com  #!aggreg-ublSoT
 0.0.0.0 copyprogramming.com  #!aggreg-ublSoT
 #!aggreg-wdmpaMtSo: https://raw.githubusercontent.com/wdmpa/content-farm-list/main/domains/machine-translated/stackoverflow.txt (https://github.com/wdmpa/content-farm-list)
 0.0.0.0 stackoverrun.com  #!aggreg-wdmpaMtSo

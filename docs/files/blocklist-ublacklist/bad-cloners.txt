@@ -2,7 +2,7 @@
 # Description: Filter for cloner sites that are mostly free of copyright issue since the source site
 #     is copyleft or copyfree, but provide only trivial layout change or poor-quality bot translation
 #     and are thus spam-like.
-# Last modified: 2023-02-18T07:04:24+00:00
+# Last modified: 2023-02-19T19:49:16+00:00
 # Homepage: https://danny0838.github.io/content-farm-terminator/
 # Licence: MIT License
 # Source: https://danny0838.github.io/content-farm-terminator/files/blocklist-ublacklist/bad-cloners.txt
@@ -187,32 +187,7 @@
 *://*.javaer101.com/*  #!aggreg-ublSoT
 *://*.debugcn.com/*  #!aggreg-ublSoT
 *://*.debugko.com/*  #!aggreg-ublSoT
-*://*.codeflow.site/*  #!aggreg-ublSoT
-*://*.nuomiphp.com/*  #!aggreg-ublSoT
-*://*.ubuntu.buildwebhost.com/*  #!aggreg-ublSoT
-*://*.ubuntuaa.com/*  #!aggreg-ublSoT
-*://*.pakostnici.com/*  #!aggreg-ublSoT
-*://*.athabasca-foto.com/*  #!aggreg-ublSoT
-*://*.ghcc.net/*  #!aggreg-ublSoT
-*://*.cndgn.com/*  #!aggreg-ublSoT
-*://*.string.quest/*  #!aggreg-ublSoT
-*://*.qa.icopy.site/*  #!aggreg-ublSoT
-*://*.devfixes.com/*  #!aggreg-ublSoT
-*://*.tagsqa.com/*  #!aggreg-ublSoT
-*://*.faqcode4u.com/*  #!aggreg-ublSoT
-*://*.faqcodes.com/*  #!aggreg-ublSoT
-*://*.wp-qa.com/*  #!aggreg-ublSoT
-*://*.dtuto.com/*  #!aggreg-ublSoT
-*://*.issuecloser.com/*  #!aggreg-ublSoT
-*://*.etsoutdoors.com/*  #!aggreg-ublSoT
-*://*.waldorf-am-see.org/*  #!aggreg-ublSoT
-*://*.qatop.pythonwood.com/*  #!aggreg-ublSoT
 *://*.codeutility.org/*  #!aggreg-ublSoT
-*://*.coder.gay/*  #!aggreg-ublSoT
-*://*.thecodeteacher.com/*  #!aggreg-ublSoT
-*://*.waymanamechurch.org/*  #!aggreg-ublSoT
-*://*.ntcdoon.org/*  #!aggreg-ublSoT
-*://*.code2s.com/*  #!aggreg-ublSoT
 *://*.copyprogramming.com/*  #!aggreg-ublSoT
 #!aggreg-wdmpaMtSo: https://raw.githubusercontent.com/wdmpa/content-farm-list/main/domains/machine-translated/stackoverflow.txt (https://github.com/wdmpa/content-farm-list)
 *://www.coder.work/article/*  #!aggreg-wdmpaMtSo
