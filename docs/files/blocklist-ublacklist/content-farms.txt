@@ -1,6 +1,6 @@
 # Title: Content Farm Filters
 # Description: Filter for general content farms, mostly in Chinese.
-# Last modified: 2023-02-21T15:07:52+00:00
+# Last modified: 2023-02-21T15:17:21+00:00
 # Homepage: https://danny0838.github.io/content-farm-terminator/
 # Licence: MIT License
 # Source: https://danny0838.github.io/content-farm-terminator/files/blocklist-ublacklist/content-farms.txt
@@ -10096,6 +10096,17 @@
 *://*.immobilien-oberaargau.ch/*  #redirects to ip23.eujen.space
 *://*.juewebs.es/*  #redirects to ip23.f9rlf.yachts
 *://*.otky.fi/*  #redirects to prizesenses.life
+*://*.tuliheso.com/*
+*://*.teriob.com/*  #redirects to tuliheso.com
+*://*.f4t6y.monster/*  #malicious scripts
+*://*.ritualinespaslaugos.lt/*  #redirects to f4t6y.monster
+*://*.pikescafe.fi/*  #redirects to ip23.f9dle.skin
+*://*.smkpriekule.lv/*  #redirects to prizesenses.life
+*://*.lookup.tw/*
+*://*.peptechno.live/*  #malicious scripts
+*://*.ophe.im/*  #redirects to 1920.peptechno.live
+*://*.universite.fi/*  #redirects to cname.ophe.im
+*://*.high-today.com/*
 #!aggreg-cxyzjd: https://raw.githubusercontent.com/wdmpa/content-farm-list/main/domains/spam/cxyzjd.txt (https://github.com/wdmpa/content-farm-list)
 *://*.cxybb.com/*  #!aggreg-cxyzjd
 *://*.cxymm.net/*  #!aggreg-cxyzjd
@@ -11033,7 +11044,6 @@
 *://*.haijaantasoite.fi/*  #!aggreg-xxcnxx
 *://*.jppy.fi/*  #!aggreg-xxcnxx
 *://*.luftair.fi/*  #!aggreg-xxcnxx
-*://*.pikescafe.fi/*  #!aggreg-xxcnxx
 *://*.westcoastmetal.fi/*  #!aggreg-xxcnxx
 *://*.annugoo.fr/*  #!aggreg-xxcnxx
 *://*.asteroidworld.fr/*  #!aggreg-xxcnxx
