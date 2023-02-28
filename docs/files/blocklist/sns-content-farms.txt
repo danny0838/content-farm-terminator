@@ -2,7 +2,7 @@
   # Description: Filter for content-farm-like or related social network service (SNS) URLs, mostly in Chinese.
   #     This may not work well for all cases as many things cannot be fully determined by URL.
   #     This list is mostly regex-based and may have a negative effect on performance.
-  # Last modified: 2023-02-26T19:49:11+00:00
+  # Last modified: 2023-02-28T13:31:17+00:00
   # Homepage: https://danny0838.github.io/content-farm-terminator/
   # Licence: MIT License
   # Source: https://danny0838.github.io/content-farm-terminator/files/blocklist/sns-content-farms.txt
@@ -1573,3 +1573,4 @@
 /^https?://(?:\w+\.)?youtube\.com/@(?:user\-qp4ju9fh7k)(?=[/?#]|$)/
 /^https?://(?:(?:[\w-]+\.)?facebook\.com|fb\.(?:com|me))/(?!\w+\.php\?)(?:pg/)?(?:lifetoknow)(?=[/?#]|$)/
 /^https?://(?:\w+\.)?youtube\.com/@(?:user\-fz5lf8iv1p)(?=[/?#]|$)/
+/^https?://(?:\w+\.)?youtube\.com/@(?:user\-tb3qu6rk4v)(?=[/?#]|$)/
