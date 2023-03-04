@@ -1,6 +1,6 @@
 # Title: Content Farm Filters
 # Description: Filter for general content farms, mostly in Chinese.
-# Last modified: 2023-02-28T13:31:17+00:00
+# Last modified: 2023-03-04T12:48:51+00:00
 # Homepage: https://danny0838.github.io/content-farm-terminator/
 # Licence: MIT License
 # Source: https://danny0838.github.io/content-farm-terminator/files/blocklist-hosts/content-farms.txt
@@ -10217,6 +10217,24 @@
 0.0.0.0 wintouch.life  #redirects to 2820.edbegwave.live
 0.0.0.0 liceumwsieci.pl  #redirects to wintouch.life
 0.0.0.0 domki-drzazga.pl  #redirects to wintouch.life
+0.0.0.0 iqiqis.com
+0.0.0.0 lowfastlost.live  #malicious scripts
+0.0.0.0 winbigdrip.life  #redirects to 30.lowfastlost.live
+0.0.0.0 lapromeneuse.fr  #redirects to winbigdrip.life
+0.0.0.0 manufakturazywicy.pl  #redirects to winbigdrip.life
+0.0.0.0 armadiooutlet.pl  #redirects to winbigdrip.life
+0.0.0.0 les-saveurs-maraicheres.fr  #redirects to winbigdrip.life
+0.0.0.0 beapeluqueros.es  #redirects to winbigdrip.life
+0.0.0.0 centro-dach.pl  #redirects to winbigdrip.life
+0.0.0.0 emiliesaintecluque-naturopathe.fr  #redirects to winbigdrip.life
+0.0.0.0 pierniczkimargaret.pl  #redirects to winbigdrip.life
+0.0.0.0 rb-domovenok.ru  #redirects to 9flowex.com
+0.0.0.0 expert-traveladvisor.co.uk  #redirects to mvgde.fastssp.top
+0.0.0.0 beurslessen.nl  #redirects to 9flowex.com
+0.0.0.0 fastread.org
+0.0.0.0 picread.net
+0.0.0.0 izvenokvirjev.si  #redirects to cname.ophe.im
+0.0.0.0 nogentpresence.fr  #redirects to sl.3tioz.de
 #!aggreg-cxyzjd: https://raw.githubusercontent.com/wdmpa/content-farm-list/main/domains/spam/cxyzjd.txt (https://github.com/wdmpa/content-farm-list)
 0.0.0.0 cxybb.com  #!aggreg-cxyzjd
 0.0.0.0 cxymm.net  #!aggreg-cxyzjd
