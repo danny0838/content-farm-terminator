@@ -2,7 +2,7 @@
   # Description: Filter for content-farm-like or related social network service (SNS) URLs, mostly in Chinese.
   #     This may not work well for all cases as many things cannot be fully determined by URL.
   #     This list is mostly regex-based and may have a negative effect on performance.
-  # Last modified: 2023-03-05T19:49:19+00:00
+  # Last modified: 2023-03-08T12:46:24+00:00
   # Homepage: https://danny0838.github.io/content-farm-terminator/
   # Licence: MIT License
   # Source: https://danny0838.github.io/content-farm-terminator/files/blocklist/sns-content-farms.txt
@@ -1574,3 +1574,11 @@
 /^https?://(?:(?:[\w-]+\.)?facebook\.com|fb\.(?:com|me))/(?!\w+\.php\?)(?:pg/)?(?:lifetoknow)(?=[/?#]|$)/
 /^https?://(?:\w+\.)?youtube\.com/@(?:user\-fz5lf8iv1p)(?=[/?#]|$)/
 /^https?://(?:\w+\.)?youtube\.com/@(?:user\-tb3qu6rk4v)(?=[/?#]|$)/
+/^https?://(?:(?:[\w-]+\.)?facebook\.com|fb\.(?:com|me))/(?!\w+\.php\?)(?:pg/)?(?:168168No1)(?=[/?#]|$)/
+/^https?://(?:(?:[\w-]+\.)?facebook\.com|fb\.(?:com|me))/(?!\w+\.php\?)(?:pg/)?(?:HELPLIFEGREAT)(?=[/?#]|$)/
+/^https?://(?:(?:[\w-]+\.)?facebook\.com|fb\.(?:com|me))/(?!\w+\.php\?)(?:pg/)?(?:Philosophyandlifes)(?=[/?#]|$)/
+/^https?://(?:(?:[\w-]+\.)?facebook\.com|fb\.(?:com|me))/(?!\w+\.php\?)(?:pg/)?(?:lizhi0101)(?=[/?#]|$)/
+/^https?://(?:(?:[\w-]+\.)?facebook\.com|fb\.(?:com|me))/(?!\w+\.php\?)(?:pg/)?(?:lizhixinlu)(?=[/?#]|$)/
+/^https?://(?:(?:[\w-]+\.)?facebook\.com|fb\.(?:com|me))/(?:groups/)?(?:716027766141575)(?!/user/)(?=[/?#]|$)/
+/^https?://(?:(?:[\w-]+\.)?facebook\.com|fb\.(?:com|me))/(?=(?:(?:pg/)?(?:[\w%]+-)?|profile/|people/[\w%]+/|groups/[0-9a-z.]+/user/)\d+\b|(?:profile|permalink)\.php\?(?:[^&#]*&)*?id=\d+(?=[&#]|$))(?:(?:(?:pg/)?(?:[\w%]+-)?|profile/|people/[\w%]+/|groups/[0-9a-z.]+/user/)|(?:profile|permalink)\.php\?(?:[^&#]*&)*?id=)(?:100067585621344)(?=[/?&#]|$)/
+/^https?://(?:(?:[\w-]+\.)?facebook\.com|fb\.(?:com|me))/(?=(?:(?:pg/)?(?:[\w%]+-)?|profile/|people/[\w%]+/|groups/[0-9a-z.]+/user/)\d+\b|(?:profile|permalink)\.php\?(?:[^&#]*&)*?id=\d+(?=[&#]|$))(?:(?:(?:pg/)?(?:[\w%]+-)?|profile/|people/[\w%]+/|groups/[0-9a-z.]+/user/)|(?:profile|permalink)\.php\?(?:[^&#]*&)*?id=)(?:103899189114718)(?=[/?&#]|$)/

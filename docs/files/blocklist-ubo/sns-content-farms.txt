@@ -3,7 +3,7 @@
 !     This may not work well for all cases as many things cannot be fully determined by URL.
 !     This list is mostly regex-based and may have a negative effect on performance.
 ! Expires: 3 days
-! Last modified: 2023-03-05T19:49:19+00:00
+! Last modified: 2023-03-08T12:46:24+00:00
 ! Homepage: https://danny0838.github.io/content-farm-terminator/
 ! Licence: MIT License
 ! Source: https://danny0838.github.io/content-farm-terminator/files/blocklist-ubo/sns-content-farms.txt
@@ -1575,3 +1575,11 @@
 /^https?://(?:(?:[\w-]+\.)?facebook\.com|fb\.(?:com|me))/(?!\w+\.php\?)(?:pg/)?(?:lifetoknow)(?=[/?#]|$)/$doc
 /^https?://(?:\w+\.)?youtube\.com/@(?:user\-fz5lf8iv1p)(?=[/?#]|$)/$doc
 /^https?://(?:\w+\.)?youtube\.com/@(?:user\-tb3qu6rk4v)(?=[/?#]|$)/$doc
+/^https?://(?:(?:[\w-]+\.)?facebook\.com|fb\.(?:com|me))/(?!\w+\.php\?)(?:pg/)?(?:168168No1)(?=[/?#]|$)/$doc
+/^https?://(?:(?:[\w-]+\.)?facebook\.com|fb\.(?:com|me))/(?!\w+\.php\?)(?:pg/)?(?:HELPLIFEGREAT)(?=[/?#]|$)/$doc
+/^https?://(?:(?:[\w-]+\.)?facebook\.com|fb\.(?:com|me))/(?!\w+\.php\?)(?:pg/)?(?:Philosophyandlifes)(?=[/?#]|$)/$doc
+/^https?://(?:(?:[\w-]+\.)?facebook\.com|fb\.(?:com|me))/(?!\w+\.php\?)(?:pg/)?(?:lizhi0101)(?=[/?#]|$)/$doc
+/^https?://(?:(?:[\w-]+\.)?facebook\.com|fb\.(?:com|me))/(?!\w+\.php\?)(?:pg/)?(?:lizhixinlu)(?=[/?#]|$)/$doc
+/^https?://(?:(?:[\w-]+\.)?facebook\.com|fb\.(?:com|me))/(?:groups/)?(?:716027766141575)(?!/user/)(?=[/?#]|$)/$doc
+/^https?://(?:(?:[\w-]+\.)?facebook\.com|fb\.(?:com|me))/(?=(?:(?:pg/)?(?:[\w%]+-)?|profile/|people/[\w%]+/|groups/[0-9a-z.]+/user/)\d+\b|(?:profile|permalink)\.php\?(?:[^&#]*&)*?id=\d+(?=[&#]|$))(?:(?:(?:pg/)?(?:[\w%]+-)?|profile/|people/[\w%]+/|groups/[0-9a-z.]+/user/)|(?:profile|permalink)\.php\?(?:[^&#]*&)*?id=)(?:100067585621344)(?=[/?&#]|$)/$doc
+/^https?://(?:(?:[\w-]+\.)?facebook\.com|fb\.(?:com|me))/(?=(?:(?:pg/)?(?:[\w%]+-)?|profile/|people/[\w%]+/|groups/[0-9a-z.]+/user/)\d+\b|(?:profile|permalink)\.php\?(?:[^&#]*&)*?id=\d+(?=[&#]|$))(?:(?:(?:pg/)?(?:[\w%]+-)?|profile/|people/[\w%]+/|groups/[0-9a-z.]+/user/)|(?:profile|permalink)\.php\?(?:[^&#]*&)*?id=)(?:103899189114718)(?=[/?&#]|$)/$doc

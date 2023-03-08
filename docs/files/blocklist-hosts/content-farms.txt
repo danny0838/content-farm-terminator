@@ -1,6 +1,6 @@
 # Title: Content Farm Filters
 # Description: Filter for general content farms, mostly in Chinese.
-# Last modified: 2023-03-05T19:49:19+00:00
+# Last modified: 2023-03-08T12:46:24+00:00
 # Homepage: https://danny0838.github.io/content-farm-terminator/
 # Licence: MIT License
 # Source: https://danny0838.github.io/content-farm-terminator/files/blocklist-hosts/content-farms.txt
@@ -10235,6 +10235,48 @@
 0.0.0.0 picread.net
 0.0.0.0 izvenokvirjev.si  #redirects to cname.ophe.im
 0.0.0.0 nogentpresence.fr  #redirects to sl.3tioz.de
+0.0.0.0 strefa-ubran.pl  #redirects to winbigdrip.life
+0.0.0.0 km-bueroservice.de  #redirects to 9flowex.com
+0.0.0.0 festadeltortello.it  #redirects to sl.3tioz.de
+0.0.0.0 next-pops.top  #redirects to turbotrck.art
+0.0.0.0 plugfallby.live  #malicious scripts
+0.0.0.0 listos-shop.fr  #redirects to winbigdrip.life
+0.0.0.0 ecfs2017.ch  #redirects to 9flowex.com
+0.0.0.0 pharmaciedesblancsmonts.fr  #redirects to winbigdrip.life
+0.0.0.0 megumidev.fr  #redirects to winbigdrip.life
+0.0.0.0 reptypark.pl  #redirects to winbigdrip.life
+0.0.0.0 dks-optyk.pl  #redirects to winbigdrip.life
+0.0.0.0 kingsshop.pl  #redirects to winbigdrip.life
+0.0.0.0 dueandgo.es  #redirects to winbigdrip.life
+0.0.0.0 queenshop.fr  #redirects to winbigdrip.life
+0.0.0.0 victorarco.es  #redirects to winbigdrip.life
+0.0.0.0 icarehabilitaciones.es  #redirects to winbigdrip.life
+0.0.0.0 valerianeholley.fr  #redirects to sl.3tioz.de
+0.0.0.0 fermebeauvais.fr  #redirects to winbigdrip.life
+0.0.0.0 krzysztofsztabafoto.pl  #redirects to sl.3tioz.de
+0.0.0.0 visceral.uk  #malicious scripts
+0.0.0.0 remospazioaperto.it  #redirects to sl.3tioz.de
+0.0.0.0 enjoyholiday.com.tw
+0.0.0.0 abwiswry.live  #malicious scripts
+0.0.0.0 f8eke.quest  #redirects to 819.abwiswry.live
+0.0.0.0 4-travel.nl  #redirects to ip.f8eke.quest
+0.0.0.0 picturesofyou.at  #redirects to 9flowex.com
+0.0.0.0 cert-gib.net  #redirects to mvgde.fastssp.top
+0.0.0.0 sussexcinemahire.co.uk  #redirects to mvgde.fastssp.top
+0.0.0.0 maya8.net  #redirects to mvgde.fastssp.top
+0.0.0.0 platformanalyser.co.uk  #redirects to mvgde.fastssp.top
+0.0.0.0 pizzadinapoli.co.uk  #redirects to mvgde.fastssp.top
+0.0.0.0 niceecuun.live  #malicious scripts
+0.0.0.0 rillopert.shop  #redirects to 819.niceecuun.live
+0.0.0.0 datinguniversezone.top  #malicious scripts
+0.0.0.0 asfalskfh070214.shop  #malicious scripts
+0.0.0.0 cookshare123.com
+0.0.0.0 delicacy-map.com
+0.0.0.0 gngfnrnrt.com
+0.0.0.0 history-year.com
+0.0.0.0 justfeed.life  #redirects to video.cklive.live
+0.0.0.0 justyou.cc  #redirects to peekme.cc
+0.0.0.0 nofail8.com
 #!aggreg-cxyzjd: https://raw.githubusercontent.com/wdmpa/content-farm-list/main/domains/spam/cxyzjd.txt (https://github.com/wdmpa/content-farm-list)
 0.0.0.0 cxybb.com  #!aggreg-cxyzjd
 0.0.0.0 cxymm.net  #!aggreg-cxyzjd
