@@ -1,6 +1,6 @@
 # Title: Content Farm Filters
 # Description: Filter for general content farms, mostly in Chinese.
-# Last modified: 2023-03-08T12:46:24+00:00
+# Last modified: 2023-03-10T07:25:17+00:00
 # Homepage: https://danny0838.github.io/content-farm-terminator/
 # Licence: MIT License
 # Source: https://danny0838.github.io/content-farm-terminator/files/blocklist-hosts/content-farms.txt
@@ -9396,8 +9396,6 @@
 0.0.0.0 happysnews.com
 0.0.0.0 folklines.com  #redirects to uliass.com
 0.0.0.0 uooboxs.com  #redirects to coolnews.cc
-0.0.0.0 etaiwan.news
-0.0.0.0 hsnews.com.tw
 0.0.0.0 funs721.com
 0.0.0.0 onlinedailyupdate.com
 0.0.0.0 pets-homee.com
@@ -10048,7 +10046,6 @@
 0.0.0.0 yohome.hk
 0.0.0.0 signmarketproducts.com
 0.0.0.0 mccourtfoundation.org
-0.0.0.0 frederiqueconstant.com
 0.0.0.0 ncnean.com
 0.0.0.0 workwarehk.com
 0.0.0.0 sallyphillips.com.au
