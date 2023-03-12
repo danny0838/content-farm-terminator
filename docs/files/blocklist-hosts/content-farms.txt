@@ -1,6 +1,6 @@
 # Title: Content Farm Filters
 # Description: Filter for general content farms, mostly in Chinese.
-# Last modified: 2023-03-12T12:58:04+00:00
+# Last modified: 2023-03-12T19:49:23+00:00
 # Homepage: https://danny0838.github.io/content-farm-terminator/
 # Licence: MIT License
 # Source: https://danny0838.github.io/content-farm-terminator/files/blocklist-hosts/content-farms.txt
@@ -10556,6 +10556,7 @@
 0.0.0.0 bduichenb.xyz  #!aggreg-www6532033
 #!aggreg-xxcnxx: https://raw.githubusercontent.com/mxt305/smashXxcnxx/main/filters/xxcnxx-list.json (https://github.com/mxt305/smashXxcnxx)
 0.0.0.0 motorsportal.at  #!aggreg-xxcnxx
+0.0.0.0 oerhb-weiz.at  #!aggreg-xxcnxx
 0.0.0.0 beglaubigteuebersetzungen.ch  #!aggreg-xxcnxx
 0.0.0.0 brautmode-aroha.ch  #!aggreg-xxcnxx
 0.0.0.0 hellopsy.ch  #!aggreg-xxcnxx
@@ -10798,6 +10799,7 @@
 0.0.0.0 h72kkp.co  #!aggreg-xxcnxx
 0.0.0.0 h7h8h9.co  #!aggreg-xxcnxx
 0.0.0.0 habihia.co  #!aggreg-xxcnxx
+0.0.0.0 halenews.co  #!aggreg-xxcnxx
 0.0.0.0 hangitupheck.co  #!aggreg-xxcnxx
 0.0.0.0 happyplannhool.co  #!aggreg-xxcnxx
 0.0.0.0 hargaepoxyjkrta.co  #!aggreg-xxcnxx
@@ -11197,15 +11199,22 @@
 0.0.0.0 dachdeckerschwabach.de  #!aggreg-xxcnxx
 0.0.0.0 outdoor-fitcamp.de  #!aggreg-xxcnxx
 0.0.0.0 amamas.es  #!aggreg-xxcnxx
+0.0.0.0 artistasasociados.es  #!aggreg-xxcnxx
 0.0.0.0 barberiaavila.es  #!aggreg-xxcnxx
+0.0.0.0 carefreetire.es  #!aggreg-xxcnxx
+0.0.0.0 circuitoduatlongranadino.es  #!aggreg-xxcnxx
 0.0.0.0 clinicadentalsanfernando.es  #!aggreg-xxcnxx
 0.0.0.0 cuerisimoss.es  #!aggreg-xxcnxx
 0.0.0.0 dmartbeautymicropigmentacion.es  #!aggreg-xxcnxx
 0.0.0.0 doctoratorresandrade.es  #!aggreg-xxcnxx
+0.0.0.0 ebookalcompleto.es  #!aggreg-xxcnxx
+0.0.0.0 errosparadiabeticos.es  #!aggreg-xxcnxx
+0.0.0.0 eyrp.es  #!aggreg-xxcnxx
 0.0.0.0 fernandokuaresmapeluqueriaymoda.es  #!aggreg-xxcnxx
 0.0.0.0 galcaconstruccion.es  #!aggreg-xxcnxx
 0.0.0.0 hierroslayosa.es  #!aggreg-xxcnxx
 0.0.0.0 hoteltrans.eu  #!aggreg-xxcnxx
+0.0.0.0 innovawebs.es  #!aggreg-xxcnxx
 0.0.0.0 japanbignew.es  #!aggreg-xxcnxx
 0.0.0.0 leerdasuenos.es  #!aggreg-xxcnxx
 0.0.0.0 limpiezasmarframa.es  #!aggreg-xxcnxx
@@ -11222,6 +11231,7 @@
 0.0.0.0 grande-maison.eu  #!aggreg-xxcnxx
 0.0.0.0 mobileadv.eu  #!aggreg-xxcnxx
 0.0.0.0 nanosterile.eu  #!aggreg-xxcnxx
+0.0.0.0 road2cps.eu  #!aggreg-xxcnxx
 0.0.0.0 studio-parquet-paris.eu  #!aggreg-xxcnxx
 0.0.0.0 wilcy.eu  #!aggreg-xxcnxx
 0.0.0.0 digiartesaani.fi  #!aggreg-xxcnxx
@@ -11231,12 +11241,15 @@
 0.0.0.0 westcoastmetal.fi  #!aggreg-xxcnxx
 0.0.0.0 annugoo.fr  #!aggreg-xxcnxx
 0.0.0.0 asteroidworld.fr  #!aggreg-xxcnxx
+0.0.0.0 aurelienhubert.fr  #!aggreg-xxcnxx
 0.0.0.0 autempsdelarose.fr  #!aggreg-xxcnxx
 0.0.0.0 bse-events.fr  #!aggreg-xxcnxx
 0.0.0.0 chaussmode.fr  #!aggreg-xxcnxx
 0.0.0.0 chevaline-charcuterie-charlet.fr  #!aggreg-xxcnxx
 0.0.0.0 deputech.fr  #!aggreg-xxcnxx
+0.0.0.0 deschiensdeschatsdeshumains.fr  #!aggreg-xxcnxx
 0.0.0.0 duchatelet-paysage.fr  #!aggreg-xxcnxx
+0.0.0.0 epsylon-assos.fr  #!aggreg-xxcnxx
 0.0.0.0 espaceco45.fr  #!aggreg-xxcnxx
 0.0.0.0 fiat600ricambi.fr  #!aggreg-xxcnxx
 0.0.0.0 japannowonline.fr  #!aggreg-xxcnxx
@@ -11245,12 +11258,17 @@
 0.0.0.0 lefebvre-traiteur-76.fr  #!aggreg-xxcnxx
 0.0.0.0 lemagnac.fr  #!aggreg-xxcnxx
 0.0.0.0 lepetitcadenas.fr  #!aggreg-xxcnxx
+0.0.0.0 location-catamaran-vip.fr  #!aggreg-xxcnxx
+0.0.0.0 location-lecypres.fr  #!aggreg-xxcnxx
 0.0.0.0 lsqueen.fr  #!aggreg-xxcnxx
+0.0.0.0 mahthailungahn.fr  #!aggreg-xxcnxx
 0.0.0.0 misstchintchin.fr  #!aggreg-xxcnxx
+0.0.0.0 mondabplus.fr  #!aggreg-xxcnxx
 0.0.0.0 mondial-infos.fr  #!aggreg-xxcnxx
 0.0.0.0 newheel.fr  #!aggreg-xxcnxx
 0.0.0.0 nicolascorre.fr  #!aggreg-xxcnxx
 0.0.0.0 polenaturemaraisdyves.fr  #!aggreg-xxcnxx
+0.0.0.0 s-100-a-standard-for-the-ocean.fr  #!aggreg-xxcnxx
 0.0.0.0 sapue.fr  #!aggreg-xxcnxx
 0.0.0.0 selfportrait.fr  #!aggreg-xxcnxx
 0.0.0.0 sramelie.fr  #!aggreg-xxcnxx
@@ -11274,16 +11292,20 @@
 0.0.0.0 mangazip.in.net  #!aggreg-xxcnxx
 0.0.0.0 ryg.in.net  #!aggreg-xxcnxx
 0.0.0.0 airscnew.it  #!aggreg-xxcnxx
+0.0.0.0 amicibicilaino.it  #!aggreg-xxcnxx
 0.0.0.0 artelucelapedalina.it  #!aggreg-xxcnxx
 0.0.0.0 enjoyfoggia.it  #!aggreg-xxcnxx
+0.0.0.0 farmaciecomunalibergamo.it  #!aggreg-xxcnxx
 0.0.0.0 giorgiolorefice.it  #!aggreg-xxcnxx
 0.0.0.0 in-cantiere.it  #!aggreg-xxcnxx
 0.0.0.0 lausviaggi.it  #!aggreg-xxcnxx
 0.0.0.0 malonumui.lt  #!aggreg-xxcnxx
 0.0.0.0 marcobrundu.it  #!aggreg-xxcnxx
 0.0.0.0 naturalsi.it  #!aggreg-xxcnxx
+0.0.0.0 nolexgo.it  #!aggreg-xxcnxx
 0.0.0.0 opusarea.it  #!aggreg-xxcnxx
 0.0.0.0 rizzimobili.it  #!aggreg-xxcnxx
+0.0.0.0 studiovangieri.it  #!aggreg-xxcnxx
 0.0.0.0 alde.jp.net  #!aggreg-xxcnxx
 0.0.0.0 blackline.jp.net  #!aggreg-xxcnxx
 0.0.0.0 channel.jp.net  #!aggreg-xxcnxx
@@ -11444,14 +11466,20 @@
 0.0.0.0 smb-binnenstebuiten.nl  #!aggreg-xxcnxx
 0.0.0.0 toversalon.nl  #!aggreg-xxcnxx
 0.0.0.0 yvoweb.nl  #!aggreg-xxcnxx
+0.0.0.0 akredytacjabik.pl  #!aggreg-xxcnxx
 0.0.0.0 apartamenty-brzeznicka.pl  #!aggreg-xxcnxx
+0.0.0.0 atecaircraft.pl  #!aggreg-xxcnxx
 0.0.0.0 baniaryb.pl  #!aggreg-xxcnxx
+0.0.0.0 dronwork.pl  #!aggreg-xxcnxx
 0.0.0.0 ekoclean-tavik.pl  #!aggreg-xxcnxx
+0.0.0.0 garwackibus.pl  #!aggreg-xxcnxx
 0.0.0.0 ideria.pl  #!aggreg-xxcnxx
 0.0.0.0 mediavers.pl  #!aggreg-xxcnxx
 0.0.0.0 msopony.pl  #!aggreg-xxcnxx
 0.0.0.0 murielsense.pl  #!aggreg-xxcnxx
 0.0.0.0 nosmaske.pl  #!aggreg-xxcnxx
+0.0.0.0 selfbook.pl  #!aggreg-xxcnxx
+0.0.0.0 staniszewski-triathlon.pl  #!aggreg-xxcnxx
 0.0.0.0 stop-bazom-usa.pl  #!aggreg-xxcnxx
 0.0.0.0 wtempie.pl  #!aggreg-xxcnxx
 0.0.0.0 zwracaprowizje.pl  #!aggreg-xxcnxx
@@ -11484,13 +11512,19 @@
 0.0.0.0 tati-tatis.ru  #!aggreg-xxcnxx
 0.0.0.0 uk-arkada.ru  #!aggreg-xxcnxx
 0.0.0.0 zolotoylew.ru  #!aggreg-xxcnxx
+0.0.0.0 aem.si  #!aggreg-xxcnxx
+0.0.0.0 arhi-tura.si  #!aggreg-xxcnxx
+0.0.0.0 iaas.si  #!aggreg-xxcnxx
 0.0.0.0 invizion-studios.si  #!aggreg-xxcnxx
 0.0.0.0 nezaillustrations.si  #!aggreg-xxcnxx
 0.0.0.0 queens-plan.si  #!aggreg-xxcnxx
 0.0.0.0 wolfofsnowstorm.si  #!aggreg-xxcnxx
 0.0.0.0 subzero6969.site  #!aggreg-xxcnxx
 0.0.0.0 auto-moto-diely.sk  #!aggreg-xxcnxx
+0.0.0.0 maxfit.sk  #!aggreg-xxcnxx
 0.0.0.0 omegailava.sk  #!aggreg-xxcnxx
+0.0.0.0 sebastova.sk  #!aggreg-xxcnxx
+0.0.0.0 solinotes.sk  #!aggreg-xxcnxx
 0.0.0.0 technickeplynysklad.sk  #!aggreg-xxcnxx
 0.0.0.0 tofakt.sk  #!aggreg-xxcnxx
 0.0.0.0 vedenie-ludi  #!aggreg-xxcnxx
@@ -11501,4 +11535,3 @@
 0.0.0.0 testrubwant.xyz  #!aggreg-xxcnxx
 0.0.0.0 trkcwlk.xyz  #!aggreg-xxcnxx
 0.0.0.0 zoomftolk.xyz  #!aggreg-xxcnxx
-0.0.0.0 halenews.co  #!aggreg-xxcnxx
