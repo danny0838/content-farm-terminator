@@ -1,6 +1,6 @@
 # Title: Content Farm Filters
 # Description: Filter for general content farms, mostly in Chinese.
-# Last modified: 2023-03-10T07:27:27+00:00
+# Last modified: 2023-03-12T12:58:04+00:00
 # Homepage: https://danny0838.github.io/content-farm-terminator/
 # Licence: MIT License
 # Source: https://danny0838.github.io/content-farm-terminator/files/blocklist-hosts/content-farms.txt
@@ -10278,6 +10278,21 @@
 0.0.0.0 warmeetpan.live  #malicious scripts
 0.0.0.0 getbigbonuses.life  #redirects to 923.warmeetpan.live
 0.0.0.0 bettermombaby.com
+0.0.0.0 dariazasun.pl  #redirects to sl.3tioz.de
+0.0.0.0 adt-france-togo.fr
+0.0.0.0 sophro-et-cie.fr  #redirects to getbigbonuses.life
+0.0.0.0 gigamir.net  #redirects to mvgde.fastssp.top
+0.0.0.0 planethaze.net  #redirects to mvgde.fastssp.top
+0.0.0.0 betonowe-inspiracje.pl  #redirects to getbigbonuses.life
+0.0.0.0 postfeow.live  #malicious scripts
+0.0.0.0 slow.im  #redirects to 1220.postfeow.live
+0.0.0.0 olsztyn.pl
+0.0.0.0 kracmarovat.cz  #redirects to ip.slow.im
+0.0.0.0 fke0f.radio.fm  #redirects to 1220.postfeow.live
+0.0.0.0 loreleieventi.it  #redirects to ip.fke0f.radio.fm
+0.0.0.0 entenrennen-steele11.de  #redirects to cname.f8eke.quest
+0.0.0.0 pyramid.st  #redirects to 9flowex.com
+0.0.0.0 cartoonfans766.com
 #!aggreg-cxyzjd: https://raw.githubusercontent.com/wdmpa/content-farm-list/main/domains/spam/cxyzjd.txt (https://github.com/wdmpa/content-farm-list)
 0.0.0.0 cxybb.com  #!aggreg-cxyzjd
 0.0.0.0 cxymm.net  #!aggreg-cxyzjd
