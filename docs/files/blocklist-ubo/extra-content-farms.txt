@@ -1,7 +1,7 @@
 ! Title: Extra Content Farm Filters
 ! Description: Extra filter for content-farm-like sites, mostly aggregated from other sources.
 ! Expires: 3 days
-! Last modified: 2023-03-12T19:49:23+00:00
+! Last modified: 2023-03-19T19:49:17+00:00
 ! Homepage: https://danny0838.github.io/content-farm-terminator/
 ! Licence: MIT License
 ! Source: https://danny0838.github.io/content-farm-terminator/files/blocklist-ubo/extra-content-farms.txt
@@ -72503,6 +72503,7 @@ zzzzbj.com  #!aggreg-gyli
 1007171.com  #!aggreg-nonpnt
 100ke.cc  #!aggreg-nonpnt
 1024sou.com  #!aggreg-nonpnt
+10jqka.com.cn  #!aggreg-nonpnt
 1688.com  #!aggreg-nonpnt
 17qq.com  #!aggreg-nonpnt
 21food.cn  #!aggreg-nonpnt
@@ -72626,6 +72627,7 @@ devicesfaq.com  #!aggreg-nonpnt
 digidash.in  #!aggreg-nonpnt
 dkfp88.cn  #!aggreg-nonpnt
 /https?://(?:[\w-]+\.)*(?:dongchedi\.com/tag/.*)$/$doc  #!aggreg-nonpnt
+/https?://(?:[\w-]+\.)*(?:douyin\.com/zhuanti/.*)$/$doc  #!aggreg-nonpnt
 driedpeel.com  #!aggreg-nonpnt
 drivereasy.com  #!aggreg-nonpnt
 driversupport.com  #!aggreg-nonpnt
@@ -72645,6 +72647,7 @@ exotips.com  #!aggreg-nonpnt
 express.co.uk  #!aggreg-nonpnt
 fhsas.com  #!aggreg-nonpnt
 fofa.so  #!aggreg-nonpnt
+fonedog.com  #!aggreg-nonpnt
 fonelab.com  #!aggreg-nonpnt
 food-week.ru  #!aggreg-nonpnt
 fpppw.com  #!aggreg-nonpnt
@@ -72674,6 +72677,7 @@ guangdiu.com  #!aggreg-nonpnt
 guidecycle.net  #!aggreg-nonpnt
 guidlings.com  #!aggreg-nonpnt
 guoguofen.com  #!aggreg-nonpnt
+gzhttp.com  #!aggreg-nonpnt
 hanjifoods.com  #!aggreg-nonpnt
 haoshangbang.net  #!aggreg-nonpnt
 hbs163.com  #!aggreg-nonpnt
@@ -72813,6 +72817,7 @@ qciss.net  #!aggreg-nonpnt
 qiangwaikan.com  #!aggreg-nonpnt
 qingdaosailing.com  #!aggreg-nonpnt
 qingyunl.com  #!aggreg-nonpnt
+/https?://(?:[\w-]+\.)*(?:qiniu\.com/qfans/.*)$/$doc  #!aggreg-nonpnt
 qnid.cc  #!aggreg-nonpnt
 qpb2b.com  #!aggreg-nonpnt
 qu-qu.net  #!aggreg-nonpnt
@@ -72873,6 +72878,7 @@ techdevian.com  #!aggreg-nonpnt
 techloris.com  #!aggreg-nonpnt
 techonegame.com  #!aggreg-nonpnt
 tedabg.com  #!aggreg-nonpnt
+tenorshare.cn  #!aggreg-nonpnt
 tenorshare.com  #!aggreg-nonpnt
 theastrologypage.com  #!aggreg-nonpnt
 tidewaterschool.org  #!aggreg-nonpnt
@@ -72914,6 +72920,7 @@ vouchercodes.co.uk  #!aggreg-nonpnt
 vpn5best.com  #!aggreg-nonpnt
 vpnmentor.com  #!aggreg-nonpnt
 vsbuys.com  #!aggreg-nonpnt
+vsdiffer.com  #!aggreg-nonpnt
 vvfx.cc  #!aggreg-nonpnt
 wallmama.com  #!aggreg-nonpnt
 wallzhihu.com  #!aggreg-nonpnt
