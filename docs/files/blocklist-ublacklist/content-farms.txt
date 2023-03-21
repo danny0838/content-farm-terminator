@@ -1,6 +1,6 @@
 # Title: Content Farm Filters
 # Description: Filter for general content farms, mostly in Chinese.
-# Last modified: 2023-03-19T19:49:17+00:00
+# Last modified: 2023-03-21T12:08:18+00:00
 # Homepage: https://danny0838.github.io/content-farm-terminator/
 # Licence: MIT License
 # Source: https://danny0838.github.io/content-farm-terminator/files/blocklist-ublacklist/content-farms.txt
@@ -10257,6 +10257,80 @@
 *://*.jojosunny.com/*
 *://*.inlove77.com/*
 *://*.anime0128.com/*
+*://*.brit-travel.uk/*  #redirects to mvgde.fastssp.top
+*://*.chytrerazitko.cz/*  #redirects to ip.slow.im
+*://*.sacanflow.live/*  #malicious scripts
+*://*.heinaverkko.fi/*  #redirects to 9flowex.com
+*://*.piterpit.it/*  #redirects to cname.f8eke.quest
+*://*.smart-city.fi/*  #redirects to 9flowex.com
+*://*.cd93k.motorcycles/*  #redirects to 161.sacanflow.live
+*://*.sannamariabertell.fi/*  #redirects to cname.cd93k.motorcycles
+*://*.auto-moto-service.pl/*  #redirects to getbigbonuses.life
+*://*.brliilantsdates.com/*
+*://*.higeek.cl/*  #redirects to grgxro.brliilantsdates.com
+*://*.suttoncoldfieldpestcontrol.co.uk/*  #redirects to mvgde.fastssp.top
+*://*.waltonpestcontrol.co.uk/*  #redirects to mvgde.fastssp.top
+*://*.chicago.ck.ua/*  #redirects to grgxro.brliilantsdates.com
+*://*.osteo-rochedreux.fr/*  #redirects to getbigbonuses.life
+*://*.poloncum.live/*  #malicious scripts
+*://*.justakeit2.de/*  #redirects to 213.poloncum.live
+*://*.mobile-hundeschule-friesland.de/*  #redirects to justakeit2.de
+*://*.arcsonlus.it/*  #redirects to 37.1.213.100
+*://*.spaziper.it/*  #redirects to 37.1.213.100
+*://*.emacademy.it/*  #redirects to 37.1.213.100
+*://*.cooldatinglife.top/*
+*://*.secretdatingplace.top/*  #redirects to a.cooldatinglife.top
+*://*.sexgamezz.click/*  #redirects to secretdatingplace.top
+*://*.amtremtextbatua.tk/*  #redirects to sexgamezz.click
+*://*.conjulhala.wiki/*  #malicious scripts
+*://*.delguercio.com.br/*  #redirects to amtremtextbatua.tk
+*://*.nooddiopracenimlu.ml/*  #redirects to sexgamezz.click
+*://*.inagizkinresa.tk/*  #redirects to sexgamezz.click
+*://*.vexingrowhighfanc.ga/*  #redirects to sexgamezz.click
+*://*.folensonline.ie/*  #redirects to vexingrowhighfanc.ga
+*://*.baidiallux.ga/*  #redirects to sexgamezz.click
+*://*.kunmeostal.gq/*  #redirects to sexgamezz.click
+*://*.dealbulkaim.live/*  #malicious scripts
+*://*.paycocoponome.tk/*  #redirects to sexgamezz.click
+*://*.stanophen.ga/*  #redirects to sexgamezz.click
+*://*.monaron.com/*  #redirects to paycocoponome.tk
+*://*.ticketbox.vn/*  #redirects to stanophen.ga
+*://*.lynnrijeslacudec.ga/*  #malicious scripts
+*://*.flexybox.com/*  #redirects to lynnrijeslacudec.ga
+*://*.peypresabvesthywa.ml/*  #malicious scripts
+*://*.fortcollinschamber.com/*  #redirects to peypresabvesthywa.ml
+*://*.amedeoferrari.it/*  #redirects to 37.1.213.100
+*://*.rolltabus.ml/*  #malicious scripts
+*://*.rzeczuklini.ml/*  #redirects to sexgamezz.click
+*://*.tonistborjohnfolle.ga/*  #redirects to sexgamezz.click
+*://*.hotcar.com.tw/*  #redirects to tonistborjohnfolle.ga
+*://*.brother.eu/*  #redirects to rolltabus.ml
+*://*.contactmonkey.com/*  #redirects to nooddiopracenimlu.ml
+*://*.dipcas.es/*  #redirects to inagizkinresa.tk
+*://5.61.55.143/*  #malicious scripts
+*://*.cooperativapitagora.it/*  #redirects to 5.61.55.143
+*://*.onlinebritish.it/*  #redirects to 5.61.55.143
+*://*.avectra.com/*  #redirects to baidiallux.ga
+*://*.iaai.com/*  #redirects to kunmeostal.gq
+*://*.amlurovaten.ga/*  #malicious scripts
+*://*.ogfojalacapen.tk/*  #redirects to sexgamezz.click
+*://*.deonadersiostenma.ga/*  #redirects to sexgamezz.click
+*://*.eurofinsgenomics.com/*  #redirects to deonadersiostenma.ga
+*://*.motobuy.com.tw/*  #redirects to rzeczuklini.ml
+*://*.hicktariduztols.tk/*  #redirects to sexgamezz.click
+*://*.buitudesysfi.tk/*  #malicious scripts
+*://*.eutraining.eu/*  #redirects to hicktariduztols.tk
+*://*.radicigroup.com/*  #redirects to buitudesysfi.tk
+*://*.switalglasfesringsi.tk/*  #redirects to sexgamezz.click
+*://*.fi.co/*  #redirects to switalglasfesringsi.tk
+*://*.remisve.ml/*  #redirects to sexgamezz.click
+*://*.raviminfo.ee/*  #redirects to remisve.ml
+*://*.learnrimamehome.cf/*  #redirects to sexgamezz.click
+*://*.edfringe.com/*  #redirects to learnrimamehome.cf
+*://*.indianaeconomicdigest.org/*  #redirects to mvgde.fastssp.top
+*://*.autosverwertung.ch/*  #redirects to 9flowex.com
+*://*.ntptour.co.uk/*  #redirects to mvgde.fastssp.top
+*://*.bipath.net/*  #redirects to mvgde.fastssp.top
 #!aggreg-cxyzjd: https://raw.githubusercontent.com/wdmpa/content-farm-list/main/domains/spam/cxyzjd.txt (https://github.com/wdmpa/content-farm-list)
 *://*.cxybb.com/*  #!aggreg-cxyzjd
 *://*.cxymm.net/*  #!aggreg-cxyzjd

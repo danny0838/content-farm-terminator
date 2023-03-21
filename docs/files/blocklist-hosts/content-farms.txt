@@ -1,6 +1,6 @@
 # Title: Content Farm Filters
 # Description: Filter for general content farms, mostly in Chinese.
-# Last modified: 2023-03-19T19:49:17+00:00
+# Last modified: 2023-03-21T12:08:18+00:00
 # Homepage: https://danny0838.github.io/content-farm-terminator/
 # Licence: MIT License
 # Source: https://danny0838.github.io/content-farm-terminator/files/blocklist-hosts/content-farms.txt
@@ -10355,6 +10355,79 @@
 0.0.0.0 jojosunny.com
 0.0.0.0 inlove77.com
 0.0.0.0 anime0128.com
+0.0.0.0 brit-travel.uk  #redirects to mvgde.fastssp.top
+0.0.0.0 chytrerazitko.cz  #redirects to ip.slow.im
+0.0.0.0 sacanflow.live  #malicious scripts
+0.0.0.0 heinaverkko.fi  #redirects to 9flowex.com
+0.0.0.0 piterpit.it  #redirects to cname.f8eke.quest
+0.0.0.0 smart-city.fi  #redirects to 9flowex.com
+0.0.0.0 cd93k.motorcycles  #redirects to 161.sacanflow.live
+0.0.0.0 sannamariabertell.fi  #redirects to cname.cd93k.motorcycles
+0.0.0.0 auto-moto-service.pl  #redirects to getbigbonuses.life
+0.0.0.0 brliilantsdates.com
+0.0.0.0 higeek.cl  #redirects to grgxro.brliilantsdates.com
+0.0.0.0 suttoncoldfieldpestcontrol.co.uk  #redirects to mvgde.fastssp.top
+0.0.0.0 waltonpestcontrol.co.uk  #redirects to mvgde.fastssp.top
+0.0.0.0 chicago.ck.ua  #redirects to grgxro.brliilantsdates.com
+0.0.0.0 osteo-rochedreux.fr  #redirects to getbigbonuses.life
+0.0.0.0 poloncum.live  #malicious scripts
+0.0.0.0 justakeit2.de  #redirects to 213.poloncum.live
+0.0.0.0 mobile-hundeschule-friesland.de  #redirects to justakeit2.de
+0.0.0.0 arcsonlus.it  #redirects to 37.1.213.100
+0.0.0.0 spaziper.it  #redirects to 37.1.213.100
+0.0.0.0 emacademy.it  #redirects to 37.1.213.100
+0.0.0.0 cooldatinglife.top
+0.0.0.0 secretdatingplace.top  #redirects to a.cooldatinglife.top
+0.0.0.0 sexgamezz.click  #redirects to secretdatingplace.top
+0.0.0.0 amtremtextbatua.tk  #redirects to sexgamezz.click
+0.0.0.0 conjulhala.wiki  #malicious scripts
+0.0.0.0 delguercio.com.br  #redirects to amtremtextbatua.tk
+0.0.0.0 nooddiopracenimlu.ml  #redirects to sexgamezz.click
+0.0.0.0 inagizkinresa.tk  #redirects to sexgamezz.click
+0.0.0.0 vexingrowhighfanc.ga  #redirects to sexgamezz.click
+0.0.0.0 folensonline.ie  #redirects to vexingrowhighfanc.ga
+0.0.0.0 baidiallux.ga  #redirects to sexgamezz.click
+0.0.0.0 kunmeostal.gq  #redirects to sexgamezz.click
+0.0.0.0 dealbulkaim.live  #malicious scripts
+0.0.0.0 paycocoponome.tk  #redirects to sexgamezz.click
+0.0.0.0 stanophen.ga  #redirects to sexgamezz.click
+0.0.0.0 monaron.com  #redirects to paycocoponome.tk
+0.0.0.0 ticketbox.vn  #redirects to stanophen.ga
+0.0.0.0 lynnrijeslacudec.ga  #malicious scripts
+0.0.0.0 flexybox.com  #redirects to lynnrijeslacudec.ga
+0.0.0.0 peypresabvesthywa.ml  #malicious scripts
+0.0.0.0 fortcollinschamber.com  #redirects to peypresabvesthywa.ml
+0.0.0.0 amedeoferrari.it  #redirects to 37.1.213.100
+0.0.0.0 rolltabus.ml  #malicious scripts
+0.0.0.0 rzeczuklini.ml  #redirects to sexgamezz.click
+0.0.0.0 tonistborjohnfolle.ga  #redirects to sexgamezz.click
+0.0.0.0 hotcar.com.tw  #redirects to tonistborjohnfolle.ga
+0.0.0.0 brother.eu  #redirects to rolltabus.ml
+0.0.0.0 contactmonkey.com  #redirects to nooddiopracenimlu.ml
+0.0.0.0 dipcas.es  #redirects to inagizkinresa.tk
+0.0.0.0 cooperativapitagora.it  #redirects to 5.61.55.143
+0.0.0.0 onlinebritish.it  #redirects to 5.61.55.143
+0.0.0.0 avectra.com  #redirects to baidiallux.ga
+0.0.0.0 iaai.com  #redirects to kunmeostal.gq
+0.0.0.0 amlurovaten.ga  #malicious scripts
+0.0.0.0 ogfojalacapen.tk  #redirects to sexgamezz.click
+0.0.0.0 deonadersiostenma.ga  #redirects to sexgamezz.click
+0.0.0.0 eurofinsgenomics.com  #redirects to deonadersiostenma.ga
+0.0.0.0 motobuy.com.tw  #redirects to rzeczuklini.ml
+0.0.0.0 hicktariduztols.tk  #redirects to sexgamezz.click
+0.0.0.0 buitudesysfi.tk  #malicious scripts
+0.0.0.0 eutraining.eu  #redirects to hicktariduztols.tk
+0.0.0.0 radicigroup.com  #redirects to buitudesysfi.tk
+0.0.0.0 switalglasfesringsi.tk  #redirects to sexgamezz.click
+0.0.0.0 fi.co  #redirects to switalglasfesringsi.tk
+0.0.0.0 remisve.ml  #redirects to sexgamezz.click
+0.0.0.0 raviminfo.ee  #redirects to remisve.ml
+0.0.0.0 learnrimamehome.cf  #redirects to sexgamezz.click
+0.0.0.0 edfringe.com  #redirects to learnrimamehome.cf
+0.0.0.0 indianaeconomicdigest.org  #redirects to mvgde.fastssp.top
+0.0.0.0 autosverwertung.ch  #redirects to 9flowex.com
+0.0.0.0 ntptour.co.uk  #redirects to mvgde.fastssp.top
+0.0.0.0 bipath.net  #redirects to mvgde.fastssp.top
 #!aggreg-cxyzjd: https://raw.githubusercontent.com/wdmpa/content-farm-list/main/domains/spam/cxyzjd.txt (https://github.com/wdmpa/content-farm-list)
 0.0.0.0 cxybb.com  #!aggreg-cxyzjd
 0.0.0.0 cxymm.net  #!aggreg-cxyzjd
