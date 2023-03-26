@@ -1,6 +1,6 @@
   # Title: Content Farm Filters
   # Description: Filter for general content farms, mostly in Chinese.
-  # Last modified: 2023-03-21T12:08:18+00:00
+  # Last modified: 2023-03-26T19:49:18+00:00
   # Homepage: https://danny0838.github.io/content-farm-terminator/
   # Licence: MIT License
   # Source: https://danny0838.github.io/content-farm-terminator/files/blocklist/content-farms.txt
@@ -13926,14 +13926,20 @@ zhinengtoukui.com #!aggreg-www6532033
 tucaozhiyin.com #!aggreg-www6532033
 bduichenb.xyz #!aggreg-www6532033
   #!aggreg-xxcnxx: https://raw.githubusercontent.com/mxt305/smashXxcnxx/main/filters/xxcnxx-list.json (https://github.com/mxt305/smashXxcnxx)
+brauchma.at #!aggreg-xxcnxx
+hundecollege.at #!aggreg-xxcnxx
 motorsportal.at #!aggreg-xxcnxx
 oerhb-weiz.at #!aggreg-xxcnxx
+vulcanino.at #!aggreg-xxcnxx
 beglaubigteuebersetzungen.ch #!aggreg-xxcnxx
 brautmode-aroha.ch #!aggreg-xxcnxx
 hellopsy.ch #!aggreg-xxcnxx
 isaro.ch #!aggreg-xxcnxx
+iznutri.ch #!aggreg-xxcnxx
 kantonalcup.ch #!aggreg-xxcnxx
 mvg5014.ch #!aggreg-xxcnxx
+parkett-schreiner.ch #!aggreg-xxcnxx
+sigiwidmer.ch #!aggreg-xxcnxx
 venegreen.cl #!aggreg-xxcnxx
 07nanyan.co #!aggreg-xxcnxx
 11yourtub.co #!aggreg-xxcnxx
@@ -14562,11 +14568,15 @@ raw2022.com #!aggreg-xxcnxx
 smart-gamma.com #!aggreg-xxcnxx
 alejandrocorrales.com.co #!aggreg-xxcnxx
 bymaverick.com.co #!aggreg-xxcnxx
+dynamickainkluze.cz #!aggreg-xxcnxx
 iscj.it #!aggreg-xxcnxx
+kreatiffestival.cz #!aggreg-xxcnxx
 kytkatrend.cz #!aggreg-xxcnxx
 najdupovinneruceni.cz #!aggreg-xxcnxx
 newlookclaudiaparrucchiere.it #!aggreg-xxcnxx
+polarobchod.cz #!aggreg-xxcnxx
 puntidicomunita.it #!aggreg-xxcnxx
+ritual-peti-elementu.cz #!aggreg-xxcnxx
 dachdeckerschwabach.de #!aggreg-xxcnxx
 outdoor-fitcamp.de #!aggreg-xxcnxx
 amamas.es #!aggreg-xxcnxx
@@ -14575,10 +14585,13 @@ barberiaavila.es #!aggreg-xxcnxx
 carefreetire.es #!aggreg-xxcnxx
 circuitoduatlongranadino.es #!aggreg-xxcnxx
 clinicadentalsanfernando.es #!aggreg-xxcnxx
+compra-seguidores.es #!aggreg-xxcnxx
+congresomedicosjubilados-sevilla2022.es #!aggreg-xxcnxx
 cuerisimoss.es #!aggreg-xxcnxx
 dmartbeautymicropigmentacion.es #!aggreg-xxcnxx
 doctoratorresandrade.es #!aggreg-xxcnxx
 ebookalcompleto.es #!aggreg-xxcnxx
+ecosverdes.es #!aggreg-xxcnxx
 errosparadiabeticos.es #!aggreg-xxcnxx
 eyrp.es #!aggreg-xxcnxx
 fernandokuaresmapeluqueriaymoda.es #!aggreg-xxcnxx
@@ -14590,6 +14603,7 @@ japanbignew.es #!aggreg-xxcnxx
 leerdasuenos.es #!aggreg-xxcnxx
 limpiezasmarframa.es #!aggreg-xxcnxx
 lookbeautyoropesa.es #!aggreg-xxcnxx
+mestredelpino.es #!aggreg-xxcnxx
 mohever.es #!aggreg-xxcnxx
 moontoppings.es #!aggreg-xxcnxx
 nuevaimagenestilistas.es #!aggreg-xxcnxx
@@ -14597,6 +14611,8 @@ pasamontanas.es #!aggreg-xxcnxx
 peluqueriasuarez.es #!aggreg-xxcnxx
 restauranteparavos.es #!aggreg-xxcnxx
 stop-serviciotecnico.es #!aggreg-xxcnxx
+trashumandorecuerdos.es #!aggreg-xxcnxx
+tutiauto.es #!aggreg-xxcnxx
 comphard.eu #!aggreg-xxcnxx
 fotomagisch.eu #!aggreg-xxcnxx
 grande-maison.eu #!aggreg-xxcnxx
@@ -14604,12 +14620,17 @@ mobileadv.eu #!aggreg-xxcnxx
 nanosterile.eu #!aggreg-xxcnxx
 road2cps.eu #!aggreg-xxcnxx
 studio-parquet-paris.eu #!aggreg-xxcnxx
+stylowakobieta.eu #!aggreg-xxcnxx
 wilcy.eu #!aggreg-xxcnxx
+codens.fi #!aggreg-xxcnxx
 digiartesaani.fi #!aggreg-xxcnxx
 haijaantasoite.fi #!aggreg-xxcnxx
 jppy.fi #!aggreg-xxcnxx
+juhanijuuruspolvi.fi #!aggreg-xxcnxx
+keskisavonyrittajanaiset.fi #!aggreg-xxcnxx
 luftair.fi #!aggreg-xxcnxx
 westcoastmetal.fi #!aggreg-xxcnxx
+aluverres.fr #!aggreg-xxcnxx
 annugoo.fr #!aggreg-xxcnxx
 asteroidworld.fr #!aggreg-xxcnxx
 aurelienhubert.fr #!aggreg-xxcnxx
@@ -14626,6 +14647,8 @@ fiat600ricambi.fr #!aggreg-xxcnxx
 japannowonline.fr #!aggreg-xxcnxx
 jumelage34800.fr #!aggreg-xxcnxx
 larquey-environnement.fr #!aggreg-xxcnxx
+lechoixfacile.fr #!aggreg-xxcnxx
+lecomptoirmedical-fougeres.fr #!aggreg-xxcnxx
 lefebvre-traiteur-76.fr #!aggreg-xxcnxx
 lemagnac.fr #!aggreg-xxcnxx
 lepetitcadenas.fr #!aggreg-xxcnxx
@@ -14669,14 +14692,18 @@ enjoyfoggia.it #!aggreg-xxcnxx
 farmaciecomunalibergamo.it #!aggreg-xxcnxx
 giorgiolorefice.it #!aggreg-xxcnxx
 in-cantiere.it #!aggreg-xxcnxx
+istintoclub.it #!aggreg-xxcnxx
 lausviaggi.it #!aggreg-xxcnxx
 malonumui.lt #!aggreg-xxcnxx
 marcobrundu.it #!aggreg-xxcnxx
+modulo-esta.it #!aggreg-xxcnxx
 naturalsi.it #!aggreg-xxcnxx
 nolexgo.it #!aggreg-xxcnxx
 opusarea.it #!aggreg-xxcnxx
 rizzimobili.it #!aggreg-xxcnxx
 studiovangieri.it #!aggreg-xxcnxx
+teatroantea.it #!aggreg-xxcnxx
+torosportitalia.it #!aggreg-xxcnxx
 alde.jp.net #!aggreg-xxcnxx
 blackline.jp.net #!aggreg-xxcnxx
 channel.jp.net #!aggreg-xxcnxx
@@ -14832,23 +14859,36 @@ yuuan.me #!aggreg-xxcnxx
 zhewang.me #!aggreg-xxcnxx
 debspastryshop.nl #!aggreg-xxcnxx
 dichterbijafscheid.nl #!aggreg-xxcnxx
+flirts-online.nl #!aggreg-xxcnxx
+franseliteratuur.nl #!aggreg-xxcnxx
+jurk-store.nl #!aggreg-xxcnxx
+pianolessoest.nl #!aggreg-xxcnxx
 redninos.nl #!aggreg-xxcnxx
 rtpraktijkbijdehand.nl #!aggreg-xxcnxx
+sandamor.nl #!aggreg-xxcnxx
 smb-binnenstebuiten.nl #!aggreg-xxcnxx
 toversalon.nl #!aggreg-xxcnxx
+welzijnsalonyvonne.nl #!aggreg-xxcnxx
 yvoweb.nl #!aggreg-xxcnxx
 akredytacjabik.pl #!aggreg-xxcnxx
 apartamenty-brzeznicka.pl #!aggreg-xxcnxx
 atecaircraft.pl #!aggreg-xxcnxx
+babajagasklep.pl #!aggreg-xxcnxx
 baniaryb.pl #!aggreg-xxcnxx
+cytaty-szeridan.pl #!aggreg-xxcnxx
 dronwork.pl #!aggreg-xxcnxx
 ekoclean-tavik.pl #!aggreg-xxcnxx
 garwackibus.pl #!aggreg-xxcnxx
+haftkon.pl #!aggreg-xxcnxx
 ideria.pl #!aggreg-xxcnxx
+luknij.net.pl #!aggreg-xxcnxx
 mediavers.pl #!aggreg-xxcnxx
 msopony.pl #!aggreg-xxcnxx
 murielsense.pl #!aggreg-xxcnxx
 nosmaske.pl #!aggreg-xxcnxx
+perfumeriaamalfi.pl #!aggreg-xxcnxx
+pontony-storm.pl #!aggreg-xxcnxx
+projektkamieniolom.pl #!aggreg-xxcnxx
 selfbook.pl #!aggreg-xxcnxx
 staniszewski-triathlon.pl #!aggreg-xxcnxx
 stop-bazom-usa.pl #!aggreg-xxcnxx
@@ -14892,14 +14932,21 @@ queens-plan.si #!aggreg-xxcnxx
 wolfofsnowstorm.si #!aggreg-xxcnxx
 subzero6969.site #!aggreg-xxcnxx
 auto-moto-diely.sk #!aggreg-xxcnxx
+klikteplo.sk #!aggreg-xxcnxx
 maxfit.sk #!aggreg-xxcnxx
+naobay.sk #!aggreg-xxcnxx
 omegailava.sk #!aggreg-xxcnxx
+oravskapomoc.sk #!aggreg-xxcnxx
 sebastova.sk #!aggreg-xxcnxx
 solinotes.sk #!aggreg-xxcnxx
+sospeticia.sk #!aggreg-xxcnxx
 technickeplynysklad.sk #!aggreg-xxcnxx
 tofakt.sk #!aggreg-xxcnxx
 vedenie-ludi #!aggreg-xxcnxx
 yvamasaze.sk #!aggreg-xxcnxx
+fefu.tv #!aggreg-xxcnxx
+mediainvest.tv #!aggreg-xxcnxx
+radiorap.tv #!aggreg-xxcnxx
 amesburytownband.co.uk #!aggreg-xxcnxx
 natrajstre.xyz #!aggreg-xxcnxx
 snvialla.xyz #!aggreg-xxcnxx
