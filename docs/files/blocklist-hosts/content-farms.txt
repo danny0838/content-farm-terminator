@@ -1,6 +1,6 @@
 # Title: Content Farm Filters
 # Description: Filter for general content farms, mostly in Chinese.
-# Last modified: 2023-04-11T12:01:04+00:00
+# Last modified: 2023-04-15T15:58:08+00:00
 # Homepage: https://danny0838.github.io/content-farm-terminator/
 # Licence: MIT License
 # Source: https://danny0838.github.io/content-farm-terminator/files/blocklist-hosts/content-farms.txt
@@ -10472,6 +10472,68 @@
 0.0.0.0 heu8.net
 0.0.0.0 blog.fiime.cn
 0.0.0.0 pcnow.cc
+0.0.0.0 appcloudactive.com  #redirects to link.next-pops.top
+0.0.0.0 wisecarom.live  #redirects to appcloudactive.com
+0.0.0.0 giftbonus.life  #redirects to 1523.wisecarom.live
+0.0.0.0 pharmacie-3amis-angely.fr  #redirects to giftbonus.life
+0.0.0.0 pizza-szczecinek.pl  #redirects to giftbonus.life
+0.0.0.0 bandol-pressing.fr  #redirects to giftbonus.life
+0.0.0.0 perheadbookie.net  #redirects to mvgde.fastssp.top
+0.0.0.0 pantipcrypto.org  #redirects to mvgde.fastssp.top
+0.0.0.0 511166.org  #redirects to mvgde.fastssp.top
+0.0.0.0 metocanada.net  #redirects to mvgde.fastssp.top
+0.0.0.0 cornwallboilers.uk  #redirects to mvgde.fastssp.top
+0.0.0.0 l4yg08.net  #redirects to mvgde.fastssp.top
+0.0.0.0 cyteinvolve.co.uk  #redirects to mvgde.fastssp.top
+0.0.0.0 kilithg.net  #redirects to mvgde.fastssp.top
+0.0.0.0 leicesterpestcontrol.uk  #redirects to mvgde.fastssp.top
+0.0.0.0 civicdiversity.org  #redirects to mvgde.fastssp.top
+0.0.0.0 laswim.net  #redirects to mvgde.fastssp.top
+0.0.0.0 cintaspartnerconnect.net  #redirects to mvgde.fastssp.top
+0.0.0.0 towerhamletsboilers.uk  #redirects to mvgde.fastssp.top
+0.0.0.0 theworldmenu.fr  #redirects to giftbonus.life
+0.0.0.0 merismoscenter.com
+0.0.0.0 equipejaguar.com
+0.0.0.0 sammhoist.com
+0.0.0.0 premium-lines.com
+0.0.0.0 telemedicine-solutions.com
+0.0.0.0 infomaxworld.com
+0.0.0.0 vedicvillageresorts.com
+0.0.0.0 toplandriskmanagement.com
+0.0.0.0 onlinecolibri.com
+0.0.0.0 pcpoftexas.com
+0.0.0.0 vivekratan.com
+0.0.0.0 layangkancana.org
+0.0.0.0 rabiefares.com
+0.0.0.0 denihoyphotography.com
+0.0.0.0 pitonga.com
+0.0.0.0 jackfilmcompany.com
+0.0.0.0 ojibwaylodge.org  #redirects to mvgde.fastssp.top
+0.0.0.0 hhinternational.org
+0.0.0.0 dominicancondos.net  #redirects to mvgde.fastssp.top
+0.0.0.0 victoriawhittaker.co.uk  #redirects to mvgde.fastssp.top
+0.0.0.0 crone-corkill.co.uk  #redirects to mvgde.fastssp.top
+0.0.0.0 voteearlyohio.org  #redirects to mvgde.fastssp.top
+0.0.0.0 phononics2019.org  #redirects to mvgde.fastssp.top
+0.0.0.0 gravesendpestcontrol.co.uk  #redirects to mvgde.fastssp.top
+0.0.0.0 belohe.uk  #redirects to mvgde.fastssp.top
+0.0.0.0 ukmask-force.co.uk  #redirects to mvgde.fastssp.top
+0.0.0.0 smartercyberassessment.uk  #redirects to mvgde.fastssp.top
+0.0.0.0 watchbotmail.net  #redirects to mvgde.fastssp.top
+0.0.0.0 tetherstreet.org  #redirects to mvgde.fastssp.top
+0.0.0.0 voheno.uk  #redirects to mvgde.fastssp.top
+0.0.0.0 storage-london.org.uk  #redirects to mvgde.fastssp.top
+0.0.0.0 pointoftotality.org  #redirects to mvgde.fastssp.top
+0.0.0.0 rifoci.co.uk  #redirects to mvgde.fastssp.top
+0.0.0.0 chickenexpressjardinecresent.co.uk  #redirects to mvgde.fastssp.top
+0.0.0.0 keypromo.net  #redirects to mvgde.fastssp.top
+0.0.0.0 ufcvip.co.uk  #redirects to mvgde.fastssp.top
+0.0.0.0 adequate.wiki
+0.0.0.0 admire.wiki
+0.0.0.0 arrived.cfd
+0.0.0.0 sluthenew.online
+0.0.0.0 admiration.wiki
+0.0.0.0 already.wiki
 #!aggreg-cxyzjd: https://raw.githubusercontent.com/wdmpa/content-farm-list/main/domains/spam/cxyzjd.txt (https://github.com/wdmpa/content-farm-list)
 0.0.0.0 cxybb.com  #!aggreg-cxyzjd
 0.0.0.0 cxymm.net  #!aggreg-cxyzjd
