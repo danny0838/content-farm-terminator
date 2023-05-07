@@ -1,7 +1,7 @@
 ! Title: Extra Content Farm Filters
 ! Description: Extra filter for content-farm-like sites, mostly aggregated from other sources.
 ! Expires: 3 days
-! Last modified: 2023-04-30T19:49:29+00:00
+! Last modified: 2023-05-07T19:49:21+00:00
 ! Homepage: https://danny0838.github.io/content-farm-terminator/
 ! Licence: MIT License
 ! Source: https://danny0838.github.io/content-farm-terminator/files/blocklist-ubo/extra-content-farms.txt
@@ -72524,6 +72524,7 @@ zzzzbj.com  #!aggreg-gyli
 /https?://(?:[\w-]+\.)*(?:4hou\.com/posts/.*)$/$doc  #!aggreg-nonpnt
 4meahc.com  #!aggreg-nonpnt
 /https?://(?:[\w-]+\.)*(?:51cto\.com/topic/.*)$/$doc  #!aggreg-nonpnt
+51offer.com  #!aggreg-nonpnt
 51xuexiaoyi.com  #!aggreg-nonpnt
 521cc.com  #!aggreg-nonpnt
 52sbl.cn  #!aggreg-nonpnt
@@ -72546,6 +72547,7 @@ aalahty.cn  #!aggreg-nonpnt
 actualidadiphone.com  #!aggreg-nonpnt
 aes-chile.cl  #!aggreg-nonpnt
 aesml.com  #!aggreg-nonpnt
+aifengbei.com  #!aggreg-nonpnt
 aimizn.com  #!aggreg-nonpnt
 aiseesoft.com  #!aggreg-nonpnt
 aishuaijiao.com  #!aggreg-nonpnt
@@ -72839,6 +72841,7 @@ sdxinli.org  #!aggreg-nonpnt
 seafastcenter.com  #!aggreg-nonpnt
 sefyc.com  #!aggreg-nonpnt
 shejiben.com  #!aggreg-nonpnt
+shihuishuo.com  #!aggreg-nonpnt
 shluqu.cn  #!aggreg-nonpnt
 shoujishu.com  #!aggreg-nonpnt
 showmetech.com.br  #!aggreg-nonpnt
@@ -72915,6 +72918,7 @@ ux6.com  #!aggreg-nonpnt
 versus.com  #!aggreg-nonpnt
 vimsky.com  #!aggreg-nonpnt
 vlexpert.com  #!aggreg-nonpnt
+/https?://(?:[\w-]+\.)*(?:volcengine\.com/theme/.*)$/$doc  #!aggreg-nonpnt
 volvootofinans.com  #!aggreg-nonpnt
 vouchercodes.co.uk  #!aggreg-nonpnt
 vpn5best.com  #!aggreg-nonpnt

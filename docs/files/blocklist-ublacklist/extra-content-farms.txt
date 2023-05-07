@@ -1,6 +1,6 @@
 # Title: Extra Content Farm Filters
 # Description: Extra filter for content-farm-like sites, mostly aggregated from other sources.
-# Last modified: 2023-04-30T19:49:29+00:00
+# Last modified: 2023-05-07T19:49:21+00:00
 # Homepage: https://danny0838.github.io/content-farm-terminator/
 # Licence: MIT License
 # Source: https://danny0838.github.io/content-farm-terminator/files/blocklist-ublacklist/extra-content-farms.txt
@@ -72523,6 +72523,7 @@
 *://*.4hou.com/posts/*  #!aggreg-nonpnt
 *://*.4meahc.com/*  #!aggreg-nonpnt
 *://*.51cto.com/topic/*  #!aggreg-nonpnt
+*://*.51offer.com/*  #!aggreg-nonpnt
 *://*.51xuexiaoyi.com/*  #!aggreg-nonpnt
 *://*.521cc.com/*  #!aggreg-nonpnt
 *://*.52sbl.cn/*  #!aggreg-nonpnt
@@ -72545,6 +72546,7 @@
 *://*.actualidadiphone.com/*  #!aggreg-nonpnt
 *://*.aes-chile.cl/*  #!aggreg-nonpnt
 *://*.aesml.com/*  #!aggreg-nonpnt
+*://*.aifengbei.com/*  #!aggreg-nonpnt
 *://*.aimizn.com/*  #!aggreg-nonpnt
 *://*.aiseesoft.com/*  #!aggreg-nonpnt
 *://*.aishuaijiao.com/*  #!aggreg-nonpnt
@@ -72838,6 +72840,7 @@
 *://*.seafastcenter.com/*  #!aggreg-nonpnt
 *://*.sefyc.com/*  #!aggreg-nonpnt
 *://*.shejiben.com/*  #!aggreg-nonpnt
+*://*.shihuishuo.com/*  #!aggreg-nonpnt
 *://*.shluqu.cn/*  #!aggreg-nonpnt
 *://*.shoujishu.com/*  #!aggreg-nonpnt
 *://*.showmetech.com.br/*  #!aggreg-nonpnt
@@ -72914,6 +72917,7 @@
 *://*.versus.com/*  #!aggreg-nonpnt
 *://*.vimsky.com/*  #!aggreg-nonpnt
 *://*.vlexpert.com/*  #!aggreg-nonpnt
+*://*.volcengine.com/theme/*  #!aggreg-nonpnt
 *://*.volvootofinans.com/*  #!aggreg-nonpnt
 *://*.vouchercodes.co.uk/*  #!aggreg-nonpnt
 *://*.vpn5best.com/*  #!aggreg-nonpnt
