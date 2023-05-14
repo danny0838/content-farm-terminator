@@ -1,7 +1,7 @@
 ! Title: Extra Content Farm Filters
 ! Description: Extra filter for content-farm-like sites, mostly aggregated from other sources.
 ! Expires: 3 days
-! Last modified: 2023-05-07T19:49:21+00:00
+! Last modified: 2023-05-14T12:36:10+00:00
 ! Homepage: https://danny0838.github.io/content-farm-terminator/
 ! Licence: MIT License
 ! Source: https://danny0838.github.io/content-farm-terminator/files/blocklist-ubo/extra-content-farms.txt
@@ -72688,6 +72688,7 @@ helloworldkb.com  #!aggreg-nonpnt
 heyloadsmmkr.ru.com  #!aggreg-nonpnt
 hfflvfc.site  #!aggreg-nonpnt
 hkk666.com  #!aggreg-nonpnt
+hnce.org  #!aggreg-nonpnt
 hnfangkeyi.com  #!aggreg-nonpnt
 hnfyzx.com  #!aggreg-nonpnt
 homedo.com  #!aggreg-nonpnt
@@ -72728,6 +72729,7 @@ jkzh.net  #!aggreg-nonpnt
 jnw.cc  #!aggreg-nonpnt
 jqgcs123.com  #!aggreg-nonpnt
 /https?://(?:[\w-]+\.)*(?:juejin\.cn/s/.*)$/$doc  #!aggreg-nonpnt
+jugomobile.com  #!aggreg-nonpnt
 juhebbs.com  #!aggreg-nonpnt
 juzhekooo.com  #!aggreg-nonpnt
 jynews.net  #!aggreg-nonpnt
@@ -72843,6 +72845,7 @@ sefyc.com  #!aggreg-nonpnt
 shejiben.com  #!aggreg-nonpnt
 shihuishuo.com  #!aggreg-nonpnt
 shluqu.cn  #!aggreg-nonpnt
+shopwtn.com  #!aggreg-nonpnt
 shoujishu.com  #!aggreg-nonpnt
 showmetech.com.br  #!aggreg-nonpnt
 shtaxi.com  #!aggreg-nonpnt
@@ -72890,6 +72893,7 @@ tlyshi.com  #!aggreg-nonpnt
 tnbta.com  #!aggreg-nonpnt
 todohealth.com  #!aggreg-nonpnt
 tomzx.com  #!aggreg-nonpnt
+/https?://(?:[\w-]+\.)*(?:toutiao\.com/keyword/.*)$/$doc  #!aggreg-nonpnt
 /https?://(?:[\w-]+\.)*(?:toutiao\.com/search/.*)$/$doc  #!aggreg-nonpnt
 /https?://(?:[\w-]+\.)*(?:toutiao\.com/search\?keyword=.*)$/$doc  #!aggreg-nonpnt
 toutiao.io  #!aggreg-nonpnt
