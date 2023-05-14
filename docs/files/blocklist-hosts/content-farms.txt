@@ -1,6 +1,6 @@
 # Title: Content Farm Filters
 # Description: Filter for general content farms, mostly in Chinese.
-# Last modified: 2023-05-07T19:49:21+00:00
+# Last modified: 2023-05-14T12:37:59+00:00
 # Homepage: https://danny0838.github.io/content-farm-terminator/
 # Licence: MIT License
 # Source: https://danny0838.github.io/content-farm-terminator/files/blocklist-hosts/content-farms.txt
@@ -10889,6 +10889,58 @@
 0.0.0.0 almaxohades.com
 0.0.0.0 twittintwee.com
 0.0.0.0 vannessaplaza.com
+0.0.0.0 installati.one
+0.0.0.0 almayadeen.net
+0.0.0.0 denfallbeer.live  #malicious scripts
+0.0.0.0 sweetwins.life  #redirects to 1420.denfallbeer.live
+0.0.0.0 boroszewo.pl  #redirects to sweetwins.life
+0.0.0.0 d-drama.cfd
+0.0.0.0 rollingfxs.com
+0.0.0.0 timandtheo.com
+0.0.0.0 storritomarketing.com
+0.0.0.0 sparkdirecthealth.com
+0.0.0.0 sharybom.com
+0.0.0.0 teaandbe.com
+0.0.0.0 sharongrayart.com
+0.0.0.0 sergiotrigo.net
+0.0.0.0 spectpromotion.com
+0.0.0.0 sendaturquesa.com
+0.0.0.0 smallnations.org
+0.0.0.0 roxadamedikal.com
+0.0.0.0 shulestartupaward.com
+0.0.0.0 shopbiografi.com
+0.0.0.0 senchmedia.com
+0.0.0.0 shynailsandco.com
+0.0.0.0 sunetrafarms.com
+0.0.0.0 sukikotoblog.com
+0.0.0.0 sketchpadink.net
+0.0.0.0 shopsaveb4.com
+0.0.0.0 ephraimverse.com
+0.0.0.0 ellegreybooks.com
+0.0.0.0 eatbetterbadder.com
+0.0.0.0 deeoriginals.com
+0.0.0.0 doviverse.com
+0.0.0.0 deyartrade.com
+0.0.0.0 digitalsitesweb.com
+0.0.0.0 dearmeswim.com
+0.0.0.0 erinacinea.com
+0.0.0.0 denmanenergymanagement.com
+0.0.0.0 cureatecannabis.com
+0.0.0.0 sezarmarcopolo.com
+0.0.0.0 russelnormandia.com
+0.0.0.0 tendasexata.com
+0.0.0.0 themindbeauty.com
+0.0.0.0 sensetele.org
+0.0.0.0 scorilomedia.com
+0.0.0.0 salteddreams.com
+0.0.0.0 thelifestylelane.com
+0.0.0.0 taxilatours.com
+0.0.0.0 scratchbuildwithjohn.com
+0.0.0.0 tasmakina.com
+0.0.0.0 thenightofjustice.com
+0.0.0.0 staffordshops.com
+0.0.0.0 thefitanista.com
+0.0.0.0 skwmarketingllc.com
 #!aggreg-cxyzjd: https://raw.githubusercontent.com/wdmpa/content-farm-list/main/domains/spam/cxyzjd.txt (https://github.com/wdmpa/content-farm-list)
 0.0.0.0 cxybb.com  #!aggreg-cxyzjd
 0.0.0.0 cxymm.net  #!aggreg-cxyzjd
