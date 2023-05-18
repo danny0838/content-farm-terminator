@@ -1,6 +1,6 @@
 # Title: Content Farm Filters
 # Description: Filter for general content farms, mostly in Chinese.
-# Last modified: 2023-05-18T14:23:17+00:00
+# Last modified: 2023-05-18T14:52:58+00:00
 # Homepage: https://danny0838.github.io/content-farm-terminator/
 # Licence: MIT License
 # Source: https://danny0838.github.io/content-farm-terminator/files/blocklist-hosts/content-farms.txt
@@ -10940,6 +10940,39 @@
 0.0.0.0 staffordshops.com
 0.0.0.0 thefitanista.com
 0.0.0.0 skwmarketingllc.com
+0.0.0.0 huntsbot.com
+0.0.0.0 fasola.edu.pl  #redirects to ip.cd93k.motorcycles
+0.0.0.0 steakhouseriihimaki.fi  #redirects to ip03.cd93k.motorcycles
+0.0.0.0 scs-drums.ch  #redirects to ip.ophe.im
+0.0.0.0 travelzone.com.pl  #redirects to ip.fke0f.radio.fm
+0.0.0.0 stind.es  #redirects to ip03.fke0f.radio.fm
+0.0.0.0 mrm.edu.pl
+0.0.0.0 maykalcarrion.es  #redirects to prizesenses.life
+0.0.0.0 clothesenvisage.com  #redirects to dochethywu.com
+0.0.0.0 datlngllfe.net
+0.0.0.0 allhypefeed.com  #redirects to youwaf.com
+0.0.0.0 itponytaa.com  #redirects to youwaf.com
+0.0.0.0 st-redirect.com  #redirects to ak.itponytaa.com
+0.0.0.0 goldensmith.top
+0.0.0.0 siriusprocyon.top  #redirects to mvgde.goldensmith.top
+0.0.0.0 py.bike24.uk  #redirects to mvgde.siriusprocyon.top
+0.0.0.0 da.rt-redirect.com
+0.0.0.0 flora.pw  #redirects to da.rt-redirect.com
+0.0.0.0 newsermans.blogspot.com
+0.0.0.0 derdiko.online  #redirects to newsermans.blogspot.com
+0.0.0.0 likesmania2019.blogspot.com
+0.0.0.0 neredeydi.online  #redirects to newsermans.blogspot.com
+0.0.0.0 fantasticality.pw  #redirects to likesmania2019.blogspot.com
+0.0.0.0 hectare.pw  #redirects to likesmania2019.blogspot.com
+0.0.0.0 mercy.pw  #redirects to likesmania2019.blogspot.com
+0.0.0.0 ferah.pw  #redirects to da.rt-redirect.com
+0.0.0.0 estirecez.online  #redirects to newsermans.blogspot.com
+0.0.0.0 neverimabime.online  #redirects to newsermans.blogspot.com
+0.0.0.0 esecegiz.online  #redirects to newsermans.blogspot.com
+0.0.0.0 celebrationscompany.uk  #redirects to mvgde.siriusprocyon.top
+0.0.0.0 nupune.co.uk  #redirects to mvgde.siriusprocyon.top
+0.0.0.0 ozcanden.online  #redirects to newsermans.blogspot.com
+0.0.0.0 bluesespoo.fi  #redirects to ip03.f8eke.quest
 #!aggreg-cxyzjd: https://raw.githubusercontent.com/wdmpa/content-farm-list/main/domains/spam/cxyzjd.txt (https://github.com/wdmpa/content-farm-list)
 0.0.0.0 cxybb.com  #!aggreg-cxyzjd
 0.0.0.0 cxymm.net  #!aggreg-cxyzjd
