@@ -2,7 +2,7 @@
   # Description: Filter for content-farm-like or related social network service (SNS) URLs, mostly in Chinese.
   #     This may not work well for all cases as many things cannot be fully determined by URL.
   #     This list is mostly regex-based and may have a negative effect on performance.
-  # Last modified: 2023-06-04T19:49:33+00:00
+  # Last modified: 2023-06-07T13:49:11+00:00
   # Homepage: https://danny0838.github.io/content-farm-terminator/
   # Licence: MIT License
   # Source: https://danny0838.github.io/content-farm-terminator/files/blocklist/sns-content-farms.txt
@@ -1587,3 +1587,10 @@
 /^https?://(?:(?:[\w-]+\.)?facebook\.com|fb\.(?:com|me))/(?=(?:(?:pg/)?(?:[\w%]+-)?|profile/|people/[\w%]+/|groups/[0-9a-z.]+/user/)\d+\b|(?:profile|permalink)\.php\?(?:[^&#]*&)*?id=\d+(?=[&#]|$))(?:(?:(?:pg/)?(?:[\w%]+-)?|profile/|people/[\w%]+/|groups/[0-9a-z.]+/user/)|(?:profile|permalink)\.php\?(?:[^&#]*&)*?id=)(?:100076152608452)(?=[/?&#]|$)/
 /^https?://(?:\w+\.)?youtube\.com/@(?:user\-iw1sk2og5j)(?=[/?#]|$)/
 /^https?://(?:(?:[\w-]+\.)?facebook\.com|fb\.(?:com|me))/(?=(?:(?:pg/)?(?:[\w%]+-)?|profile/|people/[\w%]+/|groups/[0-9a-z.]+/user/)\d+\b|(?:profile|permalink)\.php\?(?:[^&#]*&)*?id=\d+(?=[&#]|$))(?:(?:(?:pg/)?(?:[\w%]+-)?|profile/|people/[\w%]+/|groups/[0-9a-z.]+/user/)|(?:profile|permalink)\.php\?(?:[^&#]*&)*?id=)(?:100070210320800)(?=[/?&#]|$)/
+/^https?://(?:\w+\.)?youtube\.com/@(?:user\-vc9nn6bn4h)(?=[/?#]|$)/
+/^https?://(?:\w+\.)?youtube\.com/@(?:user\-tf5zg6zn7o)(?=[/?#]|$)/
+/^https?://(?:\w+\.)?youtube\.com/@(?:user\-je5sh4mw4f)(?=[/?#]|$)/
+/^https?://(?:\w+\.)?youtube\.com/@(?:SmallGoldfish)(?=[/?#]|$)/
+/^https?://(?:\w+\.)?youtube\.com/@(?:user\-xr5yj9vk1q)(?=[/?#]|$)/
+/^https?://(?:\w+\.)?youtube\.com/@(?:user\-lk2lx3di6t)(?=[/?#]|$)/
+/^https?://(?:\w+\.)?youtube\.com/@(?:YuLeShuoBuTing)(?=[/?#]|$)/
