@@ -1,311 +1,311 @@
 # Title: Extra Content Farm Filters
 # Description: Extra filter for content-farm-like sites, mostly aggregated from other sources.
-# Last modified: 2023-06-24T13:23:37+00:00
+# Last modified: 2023-06-24T13:46:54+00:00
 # Homepage: https://danny0838.github.io/content-farm-terminator/
 # Licence: MIT License
 # Source: https://danny0838.github.io/content-farm-terminator/files/blocklist-ublacklist/extra-content-farms.txt
 #!aggreg-bbw: Ban Bad Websites (https://greasyfork.org/scripts/389721)
-*://*.0937car.cn/*  #爬虫采集 SEO 机器翻译垃圾网站
-*://*.11px.cn/*  #爬虫采集 SEO 机器翻译垃圾网站
-*://*.1applehealth.com/*  #爬虫采集 SEO 机器翻译垃圾网站
-*://*.1r1g.cn/*  #爬虫采集 SEO 机器翻译垃圾网站
-*://*.1r1g.com/*  #爬虫采集 SEO 机器翻译垃圾网站
-*://*.2266601.com/*  #博彩垃圾网站
-*://*.322cpw.com/*  #博彩垃圾网站
-*://*.36511cp.com/*  #博彩垃圾网站
-*://*.36545622.com/*  #博彩垃圾网站
-*://*.365888432.com/*  #博彩垃圾网站
-*://*.366service.com/*  #爬虫采集 SEO 机器翻译垃圾网站
-*://*.3li.cc/*  #爬虫采集 SEO 机器翻译垃圾网站
-*://*.4008140202.com/*  #爬虫采集 SEO 机器翻译垃圾网站
-*://*.400sbc.com/*  #博彩垃圾网站
-*://*.4659855.com/*  #爬虫采集 SEO 机器翻译垃圾网站
-*://*.4k8k.xyz/*  #爬虫采集 SEO 机器翻译垃圾网站
-*://*.52365o.com/*  #博彩垃圾网站
-*://*.52movs.com/*  #爬虫采集 SEO 机器翻译垃圾网站
-*://*.5571100.com/*  #博彩垃圾网站
-*://*.57mcp.com/*  #博彩垃圾网站
-*://*.585906.com/*  #爬虫采集 SEO 机器翻译垃圾网站
-*://*.58pjy.com/*  #博彩垃圾网站
-*://*.723g.com.cn/*  #爬虫采集 SEO 机器翻译垃圾网站
-*://*.91webs.cn/*  #爬虫采集 SEO 机器翻译垃圾网站
-*://*.9999ktv.com/*  #爬虫采集 SEO 机器翻译垃圾网站
-*://*.adatiya.com/*  #爬虫采集 SEO 机器翻译垃圾网站
-*://*.adipexdrugstore.com/*  #博彩垃圾网站
-*://*.admin5.com/*  #爬虫采集 SEO 机器翻译垃圾网站
-*://*.affde.com/*  #爬虫采集 SEO 机器翻译垃圾网站
-*://*.africamv.com/*  #爬虫采集 SEO 机器翻译垃圾网站
-*://*.allocmem.com/*  #爬虫采集 SEO 机器翻译垃圾网站
-*://*.androidcookie.com/*  #爬虫采集 SEO 机器翻译垃圾网站
-*://*.androidsis.com/*  #爬虫采集 SEO 机器翻译垃圾网站
-*://*.answer-id.com/*  #爬虫采集 SEO 机器翻译垃圾网站
-*://*.artez.org.cn/*  #爬虫采集 SEO 机器翻译垃圾网站
-*://*.aspxhtml.com/*  #爬虫采集 SEO 机器翻译垃圾网站
-*://*.athabasca-foto.com/*  #爬虫采集 SEO 机器翻译垃圾网站
-*://*.babyitellyou.com/*  #爬虫采集 SEO 机器翻译垃圾网站
-*://*.baobaoyuer.com/*  #爬虫采集 SEO 机器翻译垃圾网站
-*://*.baopen.xyz/*  #爬虫采集 SEO 机器翻译垃圾网站
-*://*.bayouseo.com/*  #爬虫采集 SEO 机器翻译垃圾网站
-*://*.bbsah.com/*  #爬虫采集 SEO 机器翻译垃圾网站
-*://*.bbsmax.com/*  #爬虫采集 SEO 机器翻译垃圾网站
-*://*.bdqxgw.com/*  #爬虫采集 SEO 机器翻译垃圾网站
-*://*.bookset.io/*  #爬虫采集 SEO 机器翻译垃圾网站
-*://*.bubuko.com/*  #爬虫采集 SEO 机器翻译垃圾网站
-*://*.bugjia.net/*  #爬虫采集 SEO 机器翻译垃圾网站
-*://*.bugshoot.cn/*  #爬虫采集 SEO 机器翻译垃圾网站
-*://*.bullforyou.com/*  #爬虫采集 SEO 机器翻译垃圾网站
-*://*.bynss.com/*  #爬虫采集 SEO 机器翻译垃圾网站
-*://*.cairoibf.org/*  #博彩垃圾网站
-*://*.canmanuel.com/*  #爬虫采集 SEO 机器翻译垃圾网站
-*://*.cctsuzhou.cn/*  #爬虫采集 SEO 机器翻译垃圾网站
-*://*.cdmana.com/*  #爬虫采集 SEO 机器翻译垃圾网站
-*://*.ceptchina.com/*  #博彩垃圾网站
-*://*.chnweiyu.com/*  #博彩垃圾网站
-*://*.chowdera.com/*  #爬虫采集 SEO 机器翻译垃圾网站
-*://*.chubuntu.com/*  #爬虫采集 SEO 机器翻译垃圾网站
-*://*.cn.computer-clans.com/*  #爬虫采集 SEO 机器翻译垃圾网站
-*://*.cnpython.com/*  #爬虫采集 SEO 机器翻译垃圾网站
-*://*.cocoachina.com/*  #爬虫采集 SEO 机器翻译垃圾网站
-*://*.code-paper.com/*  #爬虫采集 SEO 机器翻译垃圾网站
-*://*.code.i-harness.com/*  #爬虫采集 SEO 机器翻译垃圾网站
-*://*.code5.cn/*  #博彩垃圾网站
-*://*.codeantenna.com/*  #爬虫采集 SEO 机器翻译垃圾网站
-*://*.codebug.vip/*  #爬虫采集 SEO 机器翻译垃圾网站
-*://*.codecocoa.com/*  #爬虫采集 SEO 机器翻译垃圾网站
-*://*.codeday.me/*  #爬虫采集 SEO 机器翻译垃圾网站
-*://*.codenong.com/*  #爬虫采集 SEO 机器翻译垃圾网站
-*://*.codeqq.com/*  #爬虫采集 SEO 机器翻译垃圾网站
-*://*.coder.work/*  #爬虫采集 SEO 机器翻译垃圾网站
-*://*.coderbridge.com/*  #爬虫采集 SEO 机器翻译垃圾网站
-*://*.codercto.com/*  #爬虫采集 SEO 机器翻译垃圾网站
-*://*.codingdict.com/*  #爬虫采集 SEO 机器翻译垃圾网站
-*://*.codingnote.cc/*  #爬虫采集 SEO 机器翻译垃圾网站
-*://*.colabug.com/*  #爬虫采集 SEO 机器翻译垃圾网站
-*://*.copyan.com/*  #爬虫采集 SEO 机器翻译垃圾网站
-*://*.copyfuture.com/*  #爬虫采集 SEO 机器翻译垃圾网站
-*://*.crifan.com/*  #爬虫采集 SEO 机器翻译垃圾网站
-*://*.css8.cn/*  #爬虫采集 SEO 机器翻译垃圾网站
-*://*.cwptz.com/*  #博彩垃圾网站
-*://*.cxymm.net/*  #爬虫采集 SEO 机器翻译垃圾网站
-*://*.cxyzjd.com/*  #爬虫采集 SEO 机器翻译垃圾网站
-*://*.daimajiaoliu.com/*  #爬虫采集 SEO 机器翻译垃圾网站
-*://*.dajiayouxi.com/*  #爬虫采集 SEO 机器翻译垃圾网站
-*://*.danengtzs.com/*  #博彩垃圾网站
-*://*.dazhuanlan.com/*  #爬虫采集 SEO 机器翻译垃圾网站
-*://*.dc120.com.cn/*  #爬虫采集 SEO 机器翻译垃圾网站
-*://*.ddeevv.com/*  #爬虫采集 SEO 机器翻译垃圾网站
-*://*.debug8.com/*  #爬虫采集 SEO 机器翻译垃圾网站
-*://*.debugger.wiki/*  #爬虫采集 SEO 机器翻译垃圾网站
-*://*.desdelinux.net/*  #爬虫采集 SEO 机器翻译垃圾网站
-*://*.diglog.com/*  #爬虫采集 SEO 机器翻译垃圾网站
-*://*.djcxy.com/*  #爬虫采集 SEO 机器翻译垃圾网站
-*://*.dnxxj.com/*  #爬虫采集 SEO 机器翻译垃圾网站
-*://*.dofe.com.cn/*  #爬虫采集 SEO 机器翻译垃圾网站
-*://*.dovov.com/*  #爬虫采集 SEO 机器翻译垃圾网站
-*://*.dtmao.cc/*  #爬虫采集 SEO 机器翻译垃圾网站
-*://*.dzim.net/*  #博彩垃圾网站
-*://*.edwardsrailcar.com/*  #爬虫采集 SEO 机器翻译垃圾网站
-*://*.eskere.club/*  #爬虫采集 SEO 机器翻译垃圾网站
-*://*.etsoutdoors.com/*  #爬虫采集 SEO 机器翻译垃圾网站
-*://*.fajicy.com/*  #爬虫采集 SEO 机器翻译垃圾网站
-*://*.feimao777.com/*  #爬虫采集 SEO 机器翻译垃圾网站
-*://*.fulucaijing.com/*  #爬虫采集 SEO 机器翻译垃圾网站
-*://*.fuyimokuai.com/*  #爬虫采集 SEO 机器翻译垃圾网站
-*://*.gan-ren.com/*  #爬虫采集 SEO 机器翻译垃圾网站
-*://*.gedixinxi.com/*  #爬虫采集 SEO 机器翻译垃圾网站
-*://*.geek-share.com/*  #爬虫采集 SEO 机器翻译垃圾网站
-*://*.geeknb.com/*  #爬虫采集 SEO 机器翻译垃圾网站
-*://*.generacodice.com/*  #爬虫采集 SEO 机器翻译垃圾网站
-*://*.generacodice.it/*  #爬虫采集 SEO 机器翻译垃圾网站
-*://*.glcopy.com/*  #爬虫采集 SEO 机器翻译垃圾网站
-*://*.gouma.org/*  #爬虫采集 SEO 机器翻译垃圾网站
-*://*.gushidazahui.com/*  #爬虫采集 SEO 机器翻译垃圾网站
-*://*.haberindeks.com/*  #爬虫采集 SEO 机器翻译垃圾网站
-*://*.haowuliaoa.com/*  #爬虫采集 SEO 机器翻译垃圾网站
-*://*.hardreset.info/*  #爬虫采集 SEO 机器翻译垃圾网站
-*://*.helplib.com/*  #爬虫采集 SEO 机器翻译垃圾网站
-*://*.hotbak.net/*  #爬虫采集 SEO 机器翻译垃圾网站
-*://*.hotbarebaking.com/*  #爬虫采集 SEO 机器翻译垃圾网站
-*://*.howtoing.com/*  #爬虫采集 SEO 机器翻译垃圾网站
-*://*.howtoip.com/*  #爬虫采集 SEO 机器翻译垃圾网站
-*://*.huangxiaobo.org/*  #爬虫采集 SEO 机器翻译垃圾网站
-*://*.hyhome.com.cn/*  #爬虫采集 SEO 机器翻译垃圾网站
-*://*.icode9.com/*  #爬虫采集 SEO 机器翻译垃圾网站
-*://*.icopy.site/*  #爬虫采集 SEO 机器翻译垃圾网站
-*://*.it-swarm.asia/*  #爬虫采集 SEO 机器翻译垃圾网站
-*://*.it-swarm.cn/*  #爬虫采集 SEO 机器翻译垃圾网站
-*://*.it-swarm.dev/*  #爬虫采集 SEO 机器翻译垃圾网站
-*://*.it-swarm.net/*  #爬虫采集 SEO 机器翻译垃圾网站
-*://*.it1352.com/*  #爬虫采集 SEO 机器翻译垃圾网站
-*://*.itbaoku.cn/*  #爬虫采集 SEO 机器翻译垃圾网站
-*://*.itdaan.com/*  #爬虫采集 SEO 机器翻译垃圾网站
-*://*.iter01.com/*  #爬虫采集 SEO 机器翻译垃圾网站
-*://*.itkeyword.com/*  #爬虫采集 SEO 机器翻译垃圾网站
-*://*.itranslater.com/*  #爬虫采集 SEO 机器翻译垃圾网站
-*://*.itread01.com/*  #爬虫采集 SEO 机器翻译垃圾网站
-*://*.its404.com/*  #爬虫采集 SEO 机器翻译垃圾网站
-*://*.itsharecircle.com/*  #爬虫采集 SEO 机器翻译垃圾网站
-*://*.itxueyuan.com/*  #爬虫采集 SEO 机器翻译垃圾网站
-*://*.javaer101.com/*  #爬虫采集 SEO 机器翻译垃圾网站
-*://*.javahlw.com/*  #爬虫采集 SEO 机器翻译垃圾网站
-*://*.javamana.com/*  #爬虫采集 SEO 机器翻译垃圾网站
-*://*.jb51.net/*  #垃圾中文技术性网站
-*://*.jeepxie.net/*  #爬虫采集 SEO 机器翻译垃圾网站
-*://*.jiankangjiaoliu.com/*  #爬虫采集 SEO 机器翻译垃圾网站
-*://*.jingjiamitan.com/*  #爬虫采集 SEO 机器翻译垃圾网站
-*://*.jishuwen.com/*  #爬虫采集 SEO 机器翻译垃圾网站
-*://*.jiucenglou.cn/*  #爬虫采集 SEO 机器翻译垃圾网站
-*://*.joecomp.com/*  #爬虫采集 SEO 机器翻译垃圾网站
-*://*.joyk.com/*  #爬虫采集 SEO 机器翻译垃圾网站
-*://*.jquery.online/*  #爬虫采集 SEO 机器翻译垃圾网站
-*://*.jrccn.cn/*  #爬虫采集 SEO 机器翻译垃圾网站
-*://*.juhc66.cn/*  #爬虫采集 SEO 机器翻译垃圾网站
-*://*.kaicen.cn/*  #爬虫采集 SEO 机器翻译垃圾网站
-*://*.kbase101.com/*  #爬虫采集 SEO 机器翻译垃圾网站
-*://*.kknews.cc/*  #爬虫采集 SEO 机器翻译垃圾网站
-*://*.ksa-boy.com/*  #爬虫采集 SEO 机器翻译垃圾网站
-*://*.kutu66.com/*  #爬虫采集 SEO 机器翻译垃圾网站
-*://*.lanzhouyangsheng.com/*  #爬虫采集 SEO 机器翻译垃圾网站
-*://*.lidihuo.com/*  #爬虫采集 SEO 机器翻译垃圾网站
-*://*.likecs.com/*  #爬虫采集 SEO 机器翻译垃圾网站
-*://*.linuxadictos.com/*  #爬虫采集 SEO 机器翻译垃圾网站
-*://*.loudoun-valley.com/*  #爬虫采集 SEO 机器翻译垃圾网站
-*://*.lsd365.com/*  #爬虫采集 SEO 机器翻译垃圾网站
-*://*.luxury-condos-miami.com/*  #爬虫采集 SEO 机器翻译垃圾网站
-*://*.lygzywl.com/*  #博彩垃圾网站
-*://*.macaodaily.com/*  #博彩垃圾网站
-*://*.mahwaqib.com/*  #爬虫采集 SEO 机器翻译垃圾网站
-*://*.maiyewang.com/*  #爬虫采集 SEO 机器翻译垃圾网站
-*://*.mamicode.com/*  #爬虫采集 SEO 机器翻译垃圾网站
-*://*.manong5.com/*  #垃圾下载站
-*://*.manongjc.com/*  #爬虫采集 SEO 机器翻译垃圾网站
-*://*.mashen.zone/*  #爬虫采集 SEO 机器翻译垃圾网站
-*://*.mdeditor.tw/*  #爬虫采集 SEO 机器翻译垃圾网站
-*://*.meihuijj.com/*  #博彩垃圾网站
-*://*.meirongjiaoliu.com/*  #爬虫采集 SEO 机器翻译垃圾网站
-*://*.mlog.club/*  #爬虫采集 SEO 机器翻译垃圾网站
-*://*.mos86.com/*  #爬虫采集 SEO 机器翻译垃圾网站
-*://*.movervip.com/*  #爬虫采集 SEO 机器翻译垃圾网站
-*://*.moviebukkake.com/*  #博彩垃圾网站
-*://*.naozhuanwan.com/*  #爬虫采集 SEO 机器翻译垃圾网站
-*://*.nibaihe.cn/*  #博彩垃圾网站
-*://*.noobyard.com/*  #爬虫采集 SEO 机器翻译垃圾网站
-*://*.ntcdoon.org/*  #爬虫采集 SEO 机器翻译垃圾网站
-*://*.ohmyrss.com/*  #爬虫采集 SEO 机器翻译垃圾网站
-*://*.ojit.com/*  #爬虫采集 SEO 机器翻译垃圾网站
-*://*.oomake.com/*  #爬虫采集 SEO 机器翻译垃圾网站
-*://*.oox8.com/*  #爬虫采集 SEO 机器翻译垃圾网站
-*://*.orcode.com/*  #爬虫采集 SEO 机器翻译垃圾网站
-*://*.pai-hang-bang.com/*  #爬虫采集 SEO 机器翻译垃圾网站
-*://*.paradacreativa.es/*  #爬虫采集 SEO 机器翻译垃圾网站
-*://*.pcpc.me/*  #爬虫采集 SEO 机器翻译垃圾网站
-*://*.phpheidong.com/*  #爬虫采集 SEO 机器翻译垃圾网站
-*://*.pianshen.com/*  #爬虫采集 SEO 机器翻译垃圾网站
-*://*.planetgammon.com/*  #博彩垃圾网站
-*://*.poolandspapartsmart.com/*  #爬虫采集 SEO 机器翻译垃圾网站
-*://*.portaldacalheta.pt/*  #爬虫采集 SEO 机器翻译垃圾网站
-*://*.pyerror.com/*  #爬虫采集 SEO 机器翻译垃圾网站
-*://*.pythonf.cn/*  #爬虫采集 SEO 机器翻译垃圾网站
-*://*.pythonheidong.com/*  #爬虫采集 SEO 机器翻译垃圾网站
-*://*.pythonmana.com/*  #爬虫采集 SEO 机器翻译垃圾网站
-*://*.qastack.cn/*  #爬虫采集 SEO 机器翻译垃圾网站
-*://*.qdmana.com/*  #爬虫采集 SEO 机器翻译垃圾网站
-*://*.qishunwang.net/*  #爬虫采集 SEO 机器翻译垃圾网站
-*://*.qqyouyan.com/*  #爬虫采集 SEO 机器翻译垃圾网站
-*://*.qu02.com/*  #爬虫采集 SEO 机器翻译垃圾网站
-*://*.quish.tv/*  #爬虫采集 SEO 机器翻译垃圾网站
-*://*.read01.com/*  #爬虫采集 SEO 机器翻译垃圾网站
-*://*.reallifetucson.com/*  #爬虫采集 SEO 机器翻译垃圾网站
-*://*.rongtaihe1879.com/*  #博彩垃圾网站
-*://*.routinepanic.com/*  #爬虫采集 SEO 机器翻译垃圾网站
-*://*.rsfaf.com/*  #爬虫采集 SEO 机器翻译垃圾网站
-*://*.sbo511.com/*  #博彩垃圾网站
-*://*.sdtasdb.com/*  #博彩垃圾网站
-*://*.seaolife.com/*  #博彩垃圾网站
-*://*.secn.net/*  #爬虫采集 SEO 机器翻译垃圾网站
-*://*.shangdixinxi.com/*  #爬虫采集 SEO 机器翻译垃圾网站
-*://*.shangmayuan.com/*  #爬虫采集 SEO 机器翻译垃圾网站
-*://*.shehuiwenhua.com/*  #爬虫采集 SEO 机器翻译垃圾网站
-*://*.shengqian001.com/*  #爬虫采集 SEO 机器翻译垃圾网站
-*://*.shishangjiaoliu.com/*  #爬虫采集 SEO 机器翻译垃圾网站
-*://*.shuzhiduo.com/*  #爬虫采集 SEO 机器翻译垃圾网站
-*://*.shxy888.com/*  #爬虫采集 SEO 机器翻译垃圾网站
-*://*.slowmotionvideoclips.com/*  #爬虫采集 SEO 机器翻译垃圾网站
-*://*.soblog.cc/*  #爬虫采集 SEO 机器翻译垃圾网站
-*://*.soinside.com/*  #爬虫采集 SEO 机器翻译垃圾网站
-*://*.someabcd.com/*  #爬虫采集 SEO 机器翻译垃圾网站
-*://*.soolco.com/*  #爬虫采集 SEO 机器翻译垃圾网站
-*://*.sosozy.cn/*  #爬虫采集 SEO 机器翻译垃圾网站
-*://*.sov5.cn/*  #爬虫采集 SEO 机器翻译垃圾网站
-*://*.soydemac.com/*  #爬虫采集 SEO 机器翻译垃圾网站
-*://*.srcmini.com/*  #爬虫采集 SEO 机器翻译垃圾网站
-*://*.stackoom.com/*  #爬虫采集 SEO 机器翻译垃圾网站
-*://*.stackovernet.com/*  #爬虫采集 SEO 机器翻译垃圾网站
-*://*.stackoverrun.com/*  #爬虫采集 SEO 机器翻译垃圾网站
-*://*.stx160.com/*  #博彩垃圾网站
-*://*.taodudu.cc/*  #爬虫采集 SEO 机器翻译垃圾网站
-*://*.thehesedlove.com/*  #爬虫采集 SEO 机器翻译垃圾网站
-*://*.thinbug.com/*  #爬虫采集 SEO 机器翻译垃圾网站
-*://*.tiyiba.com/*  #博彩垃圾网站
-*://*.tiyujiaoliu.com/*  #爬虫采集 SEO 机器翻译垃圾网站
-*://*.tl80.cn/*  #爬虫采集 SEO 机器翻译垃圾网站
-*://*.tongfengqu.com/*  #爬虫采集 SEO 机器翻译垃圾网站
-*://*.tujiebar.com/*  #爬虫采集 SEO 机器翻译垃圾网站
-*://*.twblogs.net/*  #爬虫采集 SEO 机器翻译垃圾网站
-*://*.ubunlog.com/*  #爬虫采集 SEO 机器翻译垃圾网站
-*://*.ubuntuqa.com/*  #爬虫采集 SEO 机器翻译垃圾网站
-*://*.ups360.net/*  #爬虫采集 SEO 机器翻译垃圾网站
-*://*.uwenku.com/*  #爬虫采集 SEO 机器翻译垃圾网站
-*://*.v2as.com/*  #爬虫采集 SEO 机器翻译垃圾网站
-*://*.voidcc.com/*  #爬虫采集 SEO 机器翻译垃圾网站
-*://*.voidcn.com/*  #爬虫采集 SEO 机器翻译垃圾网站
-*://*.w3xue.com/*  #爬虫采集 SEO 机器翻译垃圾网站
-*://*.wangt.cc/*  #爬虫采集 SEO 机器翻译垃圾网站
-*://*.wanmeiyule2.com/*  #爬虫采集 SEO 机器翻译垃圾网站
-*://*.websetnet.net/*  #爬虫采集 SEO 机器翻译垃圾网站
-*://*.weikuanxi.cn/*  #博彩垃圾网站
-*://*.wenjiangs.com/*  #爬虫采集 SEO 机器翻译垃圾网站
-*://*.wenliku.com/*  #博彩垃圾网站
-*://*.wenyanet.com/*  #爬虫采集 SEO 机器翻译垃圾网站
-*://*.win10xiazai.com/*  #爬虫采集 SEO 机器翻译垃圾网站
-*://*.winenine.com/*  #博彩垃圾网站
-*://*.wiwiku.com/*  #爬虫采集 SEO 机器翻译垃圾网站
-*://*.wntzx.cn/*  #爬虫采集 SEO 机器翻译垃圾网站
-*://*.wpata.com/*  #爬虫采集 SEO 机器翻译垃圾网站
-*://*.wyxbc.com/*  #爬虫采集 SEO 机器翻译垃圾网站
-*://*.xbuba.com/*  #爬虫采集 SEO 机器翻译垃圾网站
-*://*.xiaoxtea.com/*  #博彩垃圾网站
-*://*.xinhexinli.com/*  #爬虫采集 SEO 机器翻译垃圾网站
-*://*.xknote.com/*  #爬虫采集 SEO 机器翻译垃圾网站
-*://*.xuexidushu.com/*  #爬虫采集 SEO 机器翻译垃圾网站
-*://*.xy2401.com/*  #爬虫采集 SEO 机器翻译垃圾网站
-*://*.yangzheng365.com/*  #博彩垃圾网站
-*://*.yehe.org/*  #爬虫采集 SEO 机器翻译垃圾网站
-*://*.yfkwzpc.cn/*  #博彩垃圾网站
-*://*.yht7.com/*  #爬虫采集 SEO 机器翻译垃圾网站
-*://*.yiaisan.com/*  #爬虫采集 SEO 机器翻译垃圾网站
-*://*.yisoge.com/*  #爬虫采集 SEO 机器翻译垃圾网站
-*://*.yixuebiancheng.com/*  #爬虫采集 SEO 机器翻译垃圾网站
-*://*.yuanmas.com/*  #爬虫采集 SEO 机器翻译垃圾网站
-*://*.yuerxinde.com/*  #爬虫采集 SEO 机器翻译垃圾网站
-*://*.yulejiaoliu.com/*  #爬虫采集 SEO 机器翻译垃圾网站
-*://*.yunjuu.com/*  #爬虫采集 SEO 机器翻译垃圾网站
-*://*.yxwjlrm.cn/*  #博彩垃圾网站
-*://*.z4q7.com/*  #爬虫采集 SEO 机器翻译垃圾网站
-*://*.zditect.com/*  #爬虫采集 SEO 机器翻译垃圾网站
-*://*.zgserver.com/*  #爬虫采集 SEO 机器翻译垃圾网站
-*://*.zhetiaohe.com/*  #爬虫采集 SEO 机器翻译垃圾网站
-*://*.zhezhier.com/*  #爬虫采集 SEO 机器翻译垃圾网站
-*://*.zhihesj.com/*  #爬虫采集 SEO 机器翻译垃圾网站
-*://*.zhipanyou.com/*  #爬虫采集 SEO 机器翻译垃圾网站
-*://*.zhishibo.com/*  #爬虫采集 SEO 机器翻译垃圾网站
-*://*.zhuaniphone.com/*  #爬虫采集 SEO 机器翻译垃圾网站
-*://*.zhz.wiki/*  #爬虫采集 SEO 机器翻译垃圾网站
-*://*.zjwsrcw.com/*  #博彩垃圾网站
-*://*.zkyshop.com/*  #爬虫采集 SEO 机器翻译垃圾网站
-*://*.zl.rs/*  #爬虫采集 SEO 机器翻译垃圾网站
-*://*.zoukankan.com/*  #爬虫采集 SEO 机器翻译垃圾网站
-*://*.zsyawen.com/*  #爬虫采集 SEO 机器翻译垃圾网站
+*://*.0937car.cn/*  #!aggreg-bbw #爬虫采集 SEO 机器翻译垃圾网站
+*://*.11px.cn/*  #!aggreg-bbw #爬虫采集 SEO 机器翻译垃圾网站
+*://*.1applehealth.com/*  #!aggreg-bbw #爬虫采集 SEO 机器翻译垃圾网站
+*://*.1r1g.cn/*  #!aggreg-bbw #爬虫采集 SEO 机器翻译垃圾网站
+*://*.1r1g.com/*  #!aggreg-bbw #爬虫采集 SEO 机器翻译垃圾网站
+*://*.2266601.com/*  #!aggreg-bbw #博彩垃圾网站
+*://*.322cpw.com/*  #!aggreg-bbw #博彩垃圾网站
+*://*.36511cp.com/*  #!aggreg-bbw #博彩垃圾网站
+*://*.36545622.com/*  #!aggreg-bbw #博彩垃圾网站
+*://*.365888432.com/*  #!aggreg-bbw #博彩垃圾网站
+*://*.366service.com/*  #!aggreg-bbw #爬虫采集 SEO 机器翻译垃圾网站
+*://*.3li.cc/*  #!aggreg-bbw #爬虫采集 SEO 机器翻译垃圾网站
+*://*.4008140202.com/*  #!aggreg-bbw #爬虫采集 SEO 机器翻译垃圾网站
+*://*.400sbc.com/*  #!aggreg-bbw #博彩垃圾网站
+*://*.4659855.com/*  #!aggreg-bbw #爬虫采集 SEO 机器翻译垃圾网站
+*://*.4k8k.xyz/*  #!aggreg-bbw #爬虫采集 SEO 机器翻译垃圾网站
+*://*.52365o.com/*  #!aggreg-bbw #博彩垃圾网站
+*://*.52movs.com/*  #!aggreg-bbw #爬虫采集 SEO 机器翻译垃圾网站
+*://*.5571100.com/*  #!aggreg-bbw #博彩垃圾网站
+*://*.57mcp.com/*  #!aggreg-bbw #博彩垃圾网站
+*://*.585906.com/*  #!aggreg-bbw #爬虫采集 SEO 机器翻译垃圾网站
+*://*.58pjy.com/*  #!aggreg-bbw #博彩垃圾网站
+*://*.723g.com.cn/*  #!aggreg-bbw #爬虫采集 SEO 机器翻译垃圾网站
+*://*.91webs.cn/*  #!aggreg-bbw #爬虫采集 SEO 机器翻译垃圾网站
+*://*.9999ktv.com/*  #!aggreg-bbw #爬虫采集 SEO 机器翻译垃圾网站
+*://*.adatiya.com/*  #!aggreg-bbw #爬虫采集 SEO 机器翻译垃圾网站
+*://*.adipexdrugstore.com/*  #!aggreg-bbw #博彩垃圾网站
+*://*.admin5.com/*  #!aggreg-bbw #爬虫采集 SEO 机器翻译垃圾网站
+*://*.affde.com/*  #!aggreg-bbw #爬虫采集 SEO 机器翻译垃圾网站
+*://*.africamv.com/*  #!aggreg-bbw #爬虫采集 SEO 机器翻译垃圾网站
+*://*.allocmem.com/*  #!aggreg-bbw #爬虫采集 SEO 机器翻译垃圾网站
+*://*.androidcookie.com/*  #!aggreg-bbw #爬虫采集 SEO 机器翻译垃圾网站
+*://*.androidsis.com/*  #!aggreg-bbw #爬虫采集 SEO 机器翻译垃圾网站
+*://*.answer-id.com/*  #!aggreg-bbw #爬虫采集 SEO 机器翻译垃圾网站
+*://*.artez.org.cn/*  #!aggreg-bbw #爬虫采集 SEO 机器翻译垃圾网站
+*://*.aspxhtml.com/*  #!aggreg-bbw #爬虫采集 SEO 机器翻译垃圾网站
+*://*.athabasca-foto.com/*  #!aggreg-bbw #爬虫采集 SEO 机器翻译垃圾网站
+*://*.babyitellyou.com/*  #!aggreg-bbw #爬虫采集 SEO 机器翻译垃圾网站
+*://*.baobaoyuer.com/*  #!aggreg-bbw #爬虫采集 SEO 机器翻译垃圾网站
+*://*.baopen.xyz/*  #!aggreg-bbw #爬虫采集 SEO 机器翻译垃圾网站
+*://*.bayouseo.com/*  #!aggreg-bbw #爬虫采集 SEO 机器翻译垃圾网站
+*://*.bbsah.com/*  #!aggreg-bbw #爬虫采集 SEO 机器翻译垃圾网站
+*://*.bbsmax.com/*  #!aggreg-bbw #爬虫采集 SEO 机器翻译垃圾网站
+*://*.bdqxgw.com/*  #!aggreg-bbw #爬虫采集 SEO 机器翻译垃圾网站
+*://*.bookset.io/*  #!aggreg-bbw #爬虫采集 SEO 机器翻译垃圾网站
+*://*.bubuko.com/*  #!aggreg-bbw #爬虫采集 SEO 机器翻译垃圾网站
+*://*.bugjia.net/*  #!aggreg-bbw #爬虫采集 SEO 机器翻译垃圾网站
+*://*.bugshoot.cn/*  #!aggreg-bbw #爬虫采集 SEO 机器翻译垃圾网站
+*://*.bullforyou.com/*  #!aggreg-bbw #爬虫采集 SEO 机器翻译垃圾网站
+*://*.bynss.com/*  #!aggreg-bbw #爬虫采集 SEO 机器翻译垃圾网站
+*://*.cairoibf.org/*  #!aggreg-bbw #博彩垃圾网站
+*://*.canmanuel.com/*  #!aggreg-bbw #爬虫采集 SEO 机器翻译垃圾网站
+*://*.cctsuzhou.cn/*  #!aggreg-bbw #爬虫采集 SEO 机器翻译垃圾网站
+*://*.cdmana.com/*  #!aggreg-bbw #爬虫采集 SEO 机器翻译垃圾网站
+*://*.ceptchina.com/*  #!aggreg-bbw #博彩垃圾网站
+*://*.chnweiyu.com/*  #!aggreg-bbw #博彩垃圾网站
+*://*.chowdera.com/*  #!aggreg-bbw #爬虫采集 SEO 机器翻译垃圾网站
+*://*.chubuntu.com/*  #!aggreg-bbw #爬虫采集 SEO 机器翻译垃圾网站
+*://*.cn.computer-clans.com/*  #!aggreg-bbw #爬虫采集 SEO 机器翻译垃圾网站
+*://*.cnpython.com/*  #!aggreg-bbw #爬虫采集 SEO 机器翻译垃圾网站
+*://*.cocoachina.com/*  #!aggreg-bbw #爬虫采集 SEO 机器翻译垃圾网站
+*://*.code-paper.com/*  #!aggreg-bbw #爬虫采集 SEO 机器翻译垃圾网站
+*://*.code.i-harness.com/*  #!aggreg-bbw #爬虫采集 SEO 机器翻译垃圾网站
+*://*.code5.cn/*  #!aggreg-bbw #博彩垃圾网站
+*://*.codeantenna.com/*  #!aggreg-bbw #爬虫采集 SEO 机器翻译垃圾网站
+*://*.codebug.vip/*  #!aggreg-bbw #爬虫采集 SEO 机器翻译垃圾网站
+*://*.codecocoa.com/*  #!aggreg-bbw #爬虫采集 SEO 机器翻译垃圾网站
+*://*.codeday.me/*  #!aggreg-bbw #爬虫采集 SEO 机器翻译垃圾网站
+*://*.codenong.com/*  #!aggreg-bbw #爬虫采集 SEO 机器翻译垃圾网站
+*://*.codeqq.com/*  #!aggreg-bbw #爬虫采集 SEO 机器翻译垃圾网站
+*://*.coder.work/*  #!aggreg-bbw #爬虫采集 SEO 机器翻译垃圾网站
+*://*.coderbridge.com/*  #!aggreg-bbw #爬虫采集 SEO 机器翻译垃圾网站
+*://*.codercto.com/*  #!aggreg-bbw #爬虫采集 SEO 机器翻译垃圾网站
+*://*.codingdict.com/*  #!aggreg-bbw #爬虫采集 SEO 机器翻译垃圾网站
+*://*.codingnote.cc/*  #!aggreg-bbw #爬虫采集 SEO 机器翻译垃圾网站
+*://*.colabug.com/*  #!aggreg-bbw #爬虫采集 SEO 机器翻译垃圾网站
+*://*.copyan.com/*  #!aggreg-bbw #爬虫采集 SEO 机器翻译垃圾网站
+*://*.copyfuture.com/*  #!aggreg-bbw #爬虫采集 SEO 机器翻译垃圾网站
+*://*.crifan.com/*  #!aggreg-bbw #爬虫采集 SEO 机器翻译垃圾网站
+*://*.css8.cn/*  #!aggreg-bbw #爬虫采集 SEO 机器翻译垃圾网站
+*://*.cwptz.com/*  #!aggreg-bbw #博彩垃圾网站
+*://*.cxymm.net/*  #!aggreg-bbw #爬虫采集 SEO 机器翻译垃圾网站
+*://*.cxyzjd.com/*  #!aggreg-bbw #爬虫采集 SEO 机器翻译垃圾网站
+*://*.daimajiaoliu.com/*  #!aggreg-bbw #爬虫采集 SEO 机器翻译垃圾网站
+*://*.dajiayouxi.com/*  #!aggreg-bbw #爬虫采集 SEO 机器翻译垃圾网站
+*://*.danengtzs.com/*  #!aggreg-bbw #博彩垃圾网站
+*://*.dazhuanlan.com/*  #!aggreg-bbw #爬虫采集 SEO 机器翻译垃圾网站
+*://*.dc120.com.cn/*  #!aggreg-bbw #爬虫采集 SEO 机器翻译垃圾网站
+*://*.ddeevv.com/*  #!aggreg-bbw #爬虫采集 SEO 机器翻译垃圾网站
+*://*.debug8.com/*  #!aggreg-bbw #爬虫采集 SEO 机器翻译垃圾网站
+*://*.debugger.wiki/*  #!aggreg-bbw #爬虫采集 SEO 机器翻译垃圾网站
+*://*.desdelinux.net/*  #!aggreg-bbw #爬虫采集 SEO 机器翻译垃圾网站
+*://*.diglog.com/*  #!aggreg-bbw #爬虫采集 SEO 机器翻译垃圾网站
+*://*.djcxy.com/*  #!aggreg-bbw #爬虫采集 SEO 机器翻译垃圾网站
+*://*.dnxxj.com/*  #!aggreg-bbw #爬虫采集 SEO 机器翻译垃圾网站
+*://*.dofe.com.cn/*  #!aggreg-bbw #爬虫采集 SEO 机器翻译垃圾网站
+*://*.dovov.com/*  #!aggreg-bbw #爬虫采集 SEO 机器翻译垃圾网站
+*://*.dtmao.cc/*  #!aggreg-bbw #爬虫采集 SEO 机器翻译垃圾网站
+*://*.dzim.net/*  #!aggreg-bbw #博彩垃圾网站
+*://*.edwardsrailcar.com/*  #!aggreg-bbw #爬虫采集 SEO 机器翻译垃圾网站
+*://*.eskere.club/*  #!aggreg-bbw #爬虫采集 SEO 机器翻译垃圾网站
+*://*.etsoutdoors.com/*  #!aggreg-bbw #爬虫采集 SEO 机器翻译垃圾网站
+*://*.fajicy.com/*  #!aggreg-bbw #爬虫采集 SEO 机器翻译垃圾网站
+*://*.feimao777.com/*  #!aggreg-bbw #爬虫采集 SEO 机器翻译垃圾网站
+*://*.fulucaijing.com/*  #!aggreg-bbw #爬虫采集 SEO 机器翻译垃圾网站
+*://*.fuyimokuai.com/*  #!aggreg-bbw #爬虫采集 SEO 机器翻译垃圾网站
+*://*.gan-ren.com/*  #!aggreg-bbw #爬虫采集 SEO 机器翻译垃圾网站
+*://*.gedixinxi.com/*  #!aggreg-bbw #爬虫采集 SEO 机器翻译垃圾网站
+*://*.geek-share.com/*  #!aggreg-bbw #爬虫采集 SEO 机器翻译垃圾网站
+*://*.geeknb.com/*  #!aggreg-bbw #爬虫采集 SEO 机器翻译垃圾网站
+*://*.generacodice.com/*  #!aggreg-bbw #爬虫采集 SEO 机器翻译垃圾网站
+*://*.generacodice.it/*  #!aggreg-bbw #爬虫采集 SEO 机器翻译垃圾网站
+*://*.glcopy.com/*  #!aggreg-bbw #爬虫采集 SEO 机器翻译垃圾网站
+*://*.gouma.org/*  #!aggreg-bbw #爬虫采集 SEO 机器翻译垃圾网站
+*://*.gushidazahui.com/*  #!aggreg-bbw #爬虫采集 SEO 机器翻译垃圾网站
+*://*.haberindeks.com/*  #!aggreg-bbw #爬虫采集 SEO 机器翻译垃圾网站
+*://*.haowuliaoa.com/*  #!aggreg-bbw #爬虫采集 SEO 机器翻译垃圾网站
+*://*.hardreset.info/*  #!aggreg-bbw #爬虫采集 SEO 机器翻译垃圾网站
+*://*.helplib.com/*  #!aggreg-bbw #爬虫采集 SEO 机器翻译垃圾网站
+*://*.hotbak.net/*  #!aggreg-bbw #爬虫采集 SEO 机器翻译垃圾网站
+*://*.hotbarebaking.com/*  #!aggreg-bbw #爬虫采集 SEO 机器翻译垃圾网站
+*://*.howtoing.com/*  #!aggreg-bbw #爬虫采集 SEO 机器翻译垃圾网站
+*://*.howtoip.com/*  #!aggreg-bbw #爬虫采集 SEO 机器翻译垃圾网站
+*://*.huangxiaobo.org/*  #!aggreg-bbw #爬虫采集 SEO 机器翻译垃圾网站
+*://*.hyhome.com.cn/*  #!aggreg-bbw #爬虫采集 SEO 机器翻译垃圾网站
+*://*.icode9.com/*  #!aggreg-bbw #爬虫采集 SEO 机器翻译垃圾网站
+*://*.icopy.site/*  #!aggreg-bbw #爬虫采集 SEO 机器翻译垃圾网站
+*://*.it-swarm.asia/*  #!aggreg-bbw #爬虫采集 SEO 机器翻译垃圾网站
+*://*.it-swarm.cn/*  #!aggreg-bbw #爬虫采集 SEO 机器翻译垃圾网站
+*://*.it-swarm.dev/*  #!aggreg-bbw #爬虫采集 SEO 机器翻译垃圾网站
+*://*.it-swarm.net/*  #!aggreg-bbw #爬虫采集 SEO 机器翻译垃圾网站
+*://*.it1352.com/*  #!aggreg-bbw #爬虫采集 SEO 机器翻译垃圾网站
+*://*.itbaoku.cn/*  #!aggreg-bbw #爬虫采集 SEO 机器翻译垃圾网站
+*://*.itdaan.com/*  #!aggreg-bbw #爬虫采集 SEO 机器翻译垃圾网站
+*://*.iter01.com/*  #!aggreg-bbw #爬虫采集 SEO 机器翻译垃圾网站
+*://*.itkeyword.com/*  #!aggreg-bbw #爬虫采集 SEO 机器翻译垃圾网站
+*://*.itranslater.com/*  #!aggreg-bbw #爬虫采集 SEO 机器翻译垃圾网站
+*://*.itread01.com/*  #!aggreg-bbw #爬虫采集 SEO 机器翻译垃圾网站
+*://*.its404.com/*  #!aggreg-bbw #爬虫采集 SEO 机器翻译垃圾网站
+*://*.itsharecircle.com/*  #!aggreg-bbw #爬虫采集 SEO 机器翻译垃圾网站
+*://*.itxueyuan.com/*  #!aggreg-bbw #爬虫采集 SEO 机器翻译垃圾网站
+*://*.javaer101.com/*  #!aggreg-bbw #爬虫采集 SEO 机器翻译垃圾网站
+*://*.javahlw.com/*  #!aggreg-bbw #爬虫采集 SEO 机器翻译垃圾网站
+*://*.javamana.com/*  #!aggreg-bbw #爬虫采集 SEO 机器翻译垃圾网站
+*://*.jb51.net/*  #!aggreg-bbw #垃圾中文技术性网站
+*://*.jeepxie.net/*  #!aggreg-bbw #爬虫采集 SEO 机器翻译垃圾网站
+*://*.jiankangjiaoliu.com/*  #!aggreg-bbw #爬虫采集 SEO 机器翻译垃圾网站
+*://*.jingjiamitan.com/*  #!aggreg-bbw #爬虫采集 SEO 机器翻译垃圾网站
+*://*.jishuwen.com/*  #!aggreg-bbw #爬虫采集 SEO 机器翻译垃圾网站
+*://*.jiucenglou.cn/*  #!aggreg-bbw #爬虫采集 SEO 机器翻译垃圾网站
+*://*.joecomp.com/*  #!aggreg-bbw #爬虫采集 SEO 机器翻译垃圾网站
+*://*.joyk.com/*  #!aggreg-bbw #爬虫采集 SEO 机器翻译垃圾网站
+*://*.jquery.online/*  #!aggreg-bbw #爬虫采集 SEO 机器翻译垃圾网站
+*://*.jrccn.cn/*  #!aggreg-bbw #爬虫采集 SEO 机器翻译垃圾网站
+*://*.juhc66.cn/*  #!aggreg-bbw #爬虫采集 SEO 机器翻译垃圾网站
+*://*.kaicen.cn/*  #!aggreg-bbw #爬虫采集 SEO 机器翻译垃圾网站
+*://*.kbase101.com/*  #!aggreg-bbw #爬虫采集 SEO 机器翻译垃圾网站
+*://*.kknews.cc/*  #!aggreg-bbw #爬虫采集 SEO 机器翻译垃圾网站
+*://*.ksa-boy.com/*  #!aggreg-bbw #爬虫采集 SEO 机器翻译垃圾网站
+*://*.kutu66.com/*  #!aggreg-bbw #爬虫采集 SEO 机器翻译垃圾网站
+*://*.lanzhouyangsheng.com/*  #!aggreg-bbw #爬虫采集 SEO 机器翻译垃圾网站
+*://*.lidihuo.com/*  #!aggreg-bbw #爬虫采集 SEO 机器翻译垃圾网站
+*://*.likecs.com/*  #!aggreg-bbw #爬虫采集 SEO 机器翻译垃圾网站
+*://*.linuxadictos.com/*  #!aggreg-bbw #爬虫采集 SEO 机器翻译垃圾网站
+*://*.loudoun-valley.com/*  #!aggreg-bbw #爬虫采集 SEO 机器翻译垃圾网站
+*://*.lsd365.com/*  #!aggreg-bbw #爬虫采集 SEO 机器翻译垃圾网站
+*://*.luxury-condos-miami.com/*  #!aggreg-bbw #爬虫采集 SEO 机器翻译垃圾网站
+*://*.lygzywl.com/*  #!aggreg-bbw #博彩垃圾网站
+*://*.macaodaily.com/*  #!aggreg-bbw #博彩垃圾网站
+*://*.mahwaqib.com/*  #!aggreg-bbw #爬虫采集 SEO 机器翻译垃圾网站
+*://*.maiyewang.com/*  #!aggreg-bbw #爬虫采集 SEO 机器翻译垃圾网站
+*://*.mamicode.com/*  #!aggreg-bbw #爬虫采集 SEO 机器翻译垃圾网站
+*://*.manong5.com/*  #!aggreg-bbw #垃圾下载站
+*://*.manongjc.com/*  #!aggreg-bbw #爬虫采集 SEO 机器翻译垃圾网站
+*://*.mashen.zone/*  #!aggreg-bbw #爬虫采集 SEO 机器翻译垃圾网站
+*://*.mdeditor.tw/*  #!aggreg-bbw #爬虫采集 SEO 机器翻译垃圾网站
+*://*.meihuijj.com/*  #!aggreg-bbw #博彩垃圾网站
+*://*.meirongjiaoliu.com/*  #!aggreg-bbw #爬虫采集 SEO 机器翻译垃圾网站
+*://*.mlog.club/*  #!aggreg-bbw #爬虫采集 SEO 机器翻译垃圾网站
+*://*.mos86.com/*  #!aggreg-bbw #爬虫采集 SEO 机器翻译垃圾网站
+*://*.movervip.com/*  #!aggreg-bbw #爬虫采集 SEO 机器翻译垃圾网站
+*://*.moviebukkake.com/*  #!aggreg-bbw #博彩垃圾网站
+*://*.naozhuanwan.com/*  #!aggreg-bbw #爬虫采集 SEO 机器翻译垃圾网站
+*://*.nibaihe.cn/*  #!aggreg-bbw #博彩垃圾网站
+*://*.noobyard.com/*  #!aggreg-bbw #爬虫采集 SEO 机器翻译垃圾网站
+*://*.ntcdoon.org/*  #!aggreg-bbw #爬虫采集 SEO 机器翻译垃圾网站
+*://*.ohmyrss.com/*  #!aggreg-bbw #爬虫采集 SEO 机器翻译垃圾网站
+*://*.ojit.com/*  #!aggreg-bbw #爬虫采集 SEO 机器翻译垃圾网站
+*://*.oomake.com/*  #!aggreg-bbw #爬虫采集 SEO 机器翻译垃圾网站
+*://*.oox8.com/*  #!aggreg-bbw #爬虫采集 SEO 机器翻译垃圾网站
+*://*.orcode.com/*  #!aggreg-bbw #爬虫采集 SEO 机器翻译垃圾网站
+*://*.pai-hang-bang.com/*  #!aggreg-bbw #爬虫采集 SEO 机器翻译垃圾网站
+*://*.paradacreativa.es/*  #!aggreg-bbw #爬虫采集 SEO 机器翻译垃圾网站
+*://*.pcpc.me/*  #!aggreg-bbw #爬虫采集 SEO 机器翻译垃圾网站
+*://*.phpheidong.com/*  #!aggreg-bbw #爬虫采集 SEO 机器翻译垃圾网站
+*://*.pianshen.com/*  #!aggreg-bbw #爬虫采集 SEO 机器翻译垃圾网站
+*://*.planetgammon.com/*  #!aggreg-bbw #博彩垃圾网站
+*://*.poolandspapartsmart.com/*  #!aggreg-bbw #爬虫采集 SEO 机器翻译垃圾网站
+*://*.portaldacalheta.pt/*  #!aggreg-bbw #爬虫采集 SEO 机器翻译垃圾网站
+*://*.pyerror.com/*  #!aggreg-bbw #爬虫采集 SEO 机器翻译垃圾网站
+*://*.pythonf.cn/*  #!aggreg-bbw #爬虫采集 SEO 机器翻译垃圾网站
+*://*.pythonheidong.com/*  #!aggreg-bbw #爬虫采集 SEO 机器翻译垃圾网站
+*://*.pythonmana.com/*  #!aggreg-bbw #爬虫采集 SEO 机器翻译垃圾网站
+*://*.qastack.cn/*  #!aggreg-bbw #爬虫采集 SEO 机器翻译垃圾网站
+*://*.qdmana.com/*  #!aggreg-bbw #爬虫采集 SEO 机器翻译垃圾网站
+*://*.qishunwang.net/*  #!aggreg-bbw #爬虫采集 SEO 机器翻译垃圾网站
+*://*.qqyouyan.com/*  #!aggreg-bbw #爬虫采集 SEO 机器翻译垃圾网站
+*://*.qu02.com/*  #!aggreg-bbw #爬虫采集 SEO 机器翻译垃圾网站
+*://*.quish.tv/*  #!aggreg-bbw #爬虫采集 SEO 机器翻译垃圾网站
+*://*.read01.com/*  #!aggreg-bbw #爬虫采集 SEO 机器翻译垃圾网站
+*://*.reallifetucson.com/*  #!aggreg-bbw #爬虫采集 SEO 机器翻译垃圾网站
+*://*.rongtaihe1879.com/*  #!aggreg-bbw #博彩垃圾网站
+*://*.routinepanic.com/*  #!aggreg-bbw #爬虫采集 SEO 机器翻译垃圾网站
+*://*.rsfaf.com/*  #!aggreg-bbw #爬虫采集 SEO 机器翻译垃圾网站
+*://*.sbo511.com/*  #!aggreg-bbw #博彩垃圾网站
+*://*.sdtasdb.com/*  #!aggreg-bbw #博彩垃圾网站
+*://*.seaolife.com/*  #!aggreg-bbw #博彩垃圾网站
+*://*.secn.net/*  #!aggreg-bbw #爬虫采集 SEO 机器翻译垃圾网站
+*://*.shangdixinxi.com/*  #!aggreg-bbw #爬虫采集 SEO 机器翻译垃圾网站
+*://*.shangmayuan.com/*  #!aggreg-bbw #爬虫采集 SEO 机器翻译垃圾网站
+*://*.shehuiwenhua.com/*  #!aggreg-bbw #爬虫采集 SEO 机器翻译垃圾网站
+*://*.shengqian001.com/*  #!aggreg-bbw #爬虫采集 SEO 机器翻译垃圾网站
+*://*.shishangjiaoliu.com/*  #!aggreg-bbw #爬虫采集 SEO 机器翻译垃圾网站
+*://*.shuzhiduo.com/*  #!aggreg-bbw #爬虫采集 SEO 机器翻译垃圾网站
+*://*.shxy888.com/*  #!aggreg-bbw #爬虫采集 SEO 机器翻译垃圾网站
+*://*.slowmotionvideoclips.com/*  #!aggreg-bbw #爬虫采集 SEO 机器翻译垃圾网站
+*://*.soblog.cc/*  #!aggreg-bbw #爬虫采集 SEO 机器翻译垃圾网站
+*://*.soinside.com/*  #!aggreg-bbw #爬虫采集 SEO 机器翻译垃圾网站
+*://*.someabcd.com/*  #!aggreg-bbw #爬虫采集 SEO 机器翻译垃圾网站
+*://*.soolco.com/*  #!aggreg-bbw #爬虫采集 SEO 机器翻译垃圾网站
+*://*.sosozy.cn/*  #!aggreg-bbw #爬虫采集 SEO 机器翻译垃圾网站
+*://*.sov5.cn/*  #!aggreg-bbw #爬虫采集 SEO 机器翻译垃圾网站
+*://*.soydemac.com/*  #!aggreg-bbw #爬虫采集 SEO 机器翻译垃圾网站
+*://*.srcmini.com/*  #!aggreg-bbw #爬虫采集 SEO 机器翻译垃圾网站
+*://*.stackoom.com/*  #!aggreg-bbw #爬虫采集 SEO 机器翻译垃圾网站
+*://*.stackovernet.com/*  #!aggreg-bbw #爬虫采集 SEO 机器翻译垃圾网站
+*://*.stackoverrun.com/*  #!aggreg-bbw #爬虫采集 SEO 机器翻译垃圾网站
+*://*.stx160.com/*  #!aggreg-bbw #博彩垃圾网站
+*://*.taodudu.cc/*  #!aggreg-bbw #爬虫采集 SEO 机器翻译垃圾网站
+*://*.thehesedlove.com/*  #!aggreg-bbw #爬虫采集 SEO 机器翻译垃圾网站
+*://*.thinbug.com/*  #!aggreg-bbw #爬虫采集 SEO 机器翻译垃圾网站
+*://*.tiyiba.com/*  #!aggreg-bbw #博彩垃圾网站
+*://*.tiyujiaoliu.com/*  #!aggreg-bbw #爬虫采集 SEO 机器翻译垃圾网站
+*://*.tl80.cn/*  #!aggreg-bbw #爬虫采集 SEO 机器翻译垃圾网站
+*://*.tongfengqu.com/*  #!aggreg-bbw #爬虫采集 SEO 机器翻译垃圾网站
+*://*.tujiebar.com/*  #!aggreg-bbw #爬虫采集 SEO 机器翻译垃圾网站
+*://*.twblogs.net/*  #!aggreg-bbw #爬虫采集 SEO 机器翻译垃圾网站
+*://*.ubunlog.com/*  #!aggreg-bbw #爬虫采集 SEO 机器翻译垃圾网站
+*://*.ubuntuqa.com/*  #!aggreg-bbw #爬虫采集 SEO 机器翻译垃圾网站
+*://*.ups360.net/*  #!aggreg-bbw #爬虫采集 SEO 机器翻译垃圾网站
+*://*.uwenku.com/*  #!aggreg-bbw #爬虫采集 SEO 机器翻译垃圾网站
+*://*.v2as.com/*  #!aggreg-bbw #爬虫采集 SEO 机器翻译垃圾网站
+*://*.voidcc.com/*  #!aggreg-bbw #爬虫采集 SEO 机器翻译垃圾网站
+*://*.voidcn.com/*  #!aggreg-bbw #爬虫采集 SEO 机器翻译垃圾网站
+*://*.w3xue.com/*  #!aggreg-bbw #爬虫采集 SEO 机器翻译垃圾网站
+*://*.wangt.cc/*  #!aggreg-bbw #爬虫采集 SEO 机器翻译垃圾网站
+*://*.wanmeiyule2.com/*  #!aggreg-bbw #爬虫采集 SEO 机器翻译垃圾网站
+*://*.websetnet.net/*  #!aggreg-bbw #爬虫采集 SEO 机器翻译垃圾网站
+*://*.weikuanxi.cn/*  #!aggreg-bbw #博彩垃圾网站
+*://*.wenjiangs.com/*  #!aggreg-bbw #爬虫采集 SEO 机器翻译垃圾网站
+*://*.wenliku.com/*  #!aggreg-bbw #博彩垃圾网站
+*://*.wenyanet.com/*  #!aggreg-bbw #爬虫采集 SEO 机器翻译垃圾网站
+*://*.win10xiazai.com/*  #!aggreg-bbw #爬虫采集 SEO 机器翻译垃圾网站
+*://*.winenine.com/*  #!aggreg-bbw #博彩垃圾网站
+*://*.wiwiku.com/*  #!aggreg-bbw #爬虫采集 SEO 机器翻译垃圾网站
+*://*.wntzx.cn/*  #!aggreg-bbw #爬虫采集 SEO 机器翻译垃圾网站
+*://*.wpata.com/*  #!aggreg-bbw #爬虫采集 SEO 机器翻译垃圾网站
+*://*.wyxbc.com/*  #!aggreg-bbw #爬虫采集 SEO 机器翻译垃圾网站
+*://*.xbuba.com/*  #!aggreg-bbw #爬虫采集 SEO 机器翻译垃圾网站
+*://*.xiaoxtea.com/*  #!aggreg-bbw #博彩垃圾网站
+*://*.xinhexinli.com/*  #!aggreg-bbw #爬虫采集 SEO 机器翻译垃圾网站
+*://*.xknote.com/*  #!aggreg-bbw #爬虫采集 SEO 机器翻译垃圾网站
+*://*.xuexidushu.com/*  #!aggreg-bbw #爬虫采集 SEO 机器翻译垃圾网站
+*://*.xy2401.com/*  #!aggreg-bbw #爬虫采集 SEO 机器翻译垃圾网站
+*://*.yangzheng365.com/*  #!aggreg-bbw #博彩垃圾网站
+*://*.yehe.org/*  #!aggreg-bbw #爬虫采集 SEO 机器翻译垃圾网站
+*://*.yfkwzpc.cn/*  #!aggreg-bbw #博彩垃圾网站
+*://*.yht7.com/*  #!aggreg-bbw #爬虫采集 SEO 机器翻译垃圾网站
+*://*.yiaisan.com/*  #!aggreg-bbw #爬虫采集 SEO 机器翻译垃圾网站
+*://*.yisoge.com/*  #!aggreg-bbw #爬虫采集 SEO 机器翻译垃圾网站
+*://*.yixuebiancheng.com/*  #!aggreg-bbw #爬虫采集 SEO 机器翻译垃圾网站
+*://*.yuanmas.com/*  #!aggreg-bbw #爬虫采集 SEO 机器翻译垃圾网站
+*://*.yuerxinde.com/*  #!aggreg-bbw #爬虫采集 SEO 机器翻译垃圾网站
+*://*.yulejiaoliu.com/*  #!aggreg-bbw #爬虫采集 SEO 机器翻译垃圾网站
+*://*.yunjuu.com/*  #!aggreg-bbw #爬虫采集 SEO 机器翻译垃圾网站
+*://*.yxwjlrm.cn/*  #!aggreg-bbw #博彩垃圾网站
+*://*.z4q7.com/*  #!aggreg-bbw #爬虫采集 SEO 机器翻译垃圾网站
+*://*.zditect.com/*  #!aggreg-bbw #爬虫采集 SEO 机器翻译垃圾网站
+*://*.zgserver.com/*  #!aggreg-bbw #爬虫采集 SEO 机器翻译垃圾网站
+*://*.zhetiaohe.com/*  #!aggreg-bbw #爬虫采集 SEO 机器翻译垃圾网站
+*://*.zhezhier.com/*  #!aggreg-bbw #爬虫采集 SEO 机器翻译垃圾网站
+*://*.zhihesj.com/*  #!aggreg-bbw #爬虫采集 SEO 机器翻译垃圾网站
+*://*.zhipanyou.com/*  #!aggreg-bbw #爬虫采集 SEO 机器翻译垃圾网站
+*://*.zhishibo.com/*  #!aggreg-bbw #爬虫采集 SEO 机器翻译垃圾网站
+*://*.zhuaniphone.com/*  #!aggreg-bbw #爬虫采集 SEO 机器翻译垃圾网站
+*://*.zhz.wiki/*  #!aggreg-bbw #爬虫采集 SEO 机器翻译垃圾网站
+*://*.zjwsrcw.com/*  #!aggreg-bbw #博彩垃圾网站
+*://*.zkyshop.com/*  #!aggreg-bbw #爬虫采集 SEO 机器翻译垃圾网站
+*://*.zl.rs/*  #!aggreg-bbw #爬虫采集 SEO 机器翻译垃圾网站
+*://*.zoukankan.com/*  #!aggreg-bbw #爬虫采集 SEO 机器翻译垃圾网站
+*://*.zsyawen.com/*  #!aggreg-bbw #爬虫采集 SEO 机器翻译垃圾网站
 #!aggreg-diveng: https://raw.githubusercontent.com/DivineEngine/uBlacklist/master/blacklist.txt (https://github.com/DivineEngine/uBlacklist)
 *://*.m.toutiao.com/*  #!aggreg-diveng
 *://*.baidu.com/*  #!aggreg-diveng
