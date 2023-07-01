@@ -1,6 +1,6 @@
 # Title: Extra Content Farm Filters
 # Description: Extra filter for content-farm-like sites, mostly aggregated from other sources.
-# Last modified: 2023-06-25T19:49:22+00:00
+# Last modified: 2023-07-01T12:49:54+00:00
 # Homepage: https://danny0838.github.io/content-farm-terminator/
 # Licence: MIT License
 # Source: https://danny0838.github.io/content-farm-terminator/files/blocklist-ublacklist/extra-content-farms.txt
@@ -74687,7 +74687,9 @@
 *://*.alarmanlage-finder.de/*  #!aggreg-SpamdexingSites
 *://*.alcyoni.pl/*  #!aggreg-SpamdexingSites
 *://*.aldemetrio.it/*  #!aggreg-SpamdexingSites
+*://*.aldeon.nl/*  #!aggreg-SpamdexingSites
 *://*.alefarba.pl/*  #!aggreg-SpamdexingSites
+*://*.alejandraarroyo.es/*  #!aggreg-SpamdexingSites
 *://*.aletheia-collection.it/*  #!aggreg-SpamdexingSites
 *://*.alexander-ahrens.de/*  #!aggreg-SpamdexingSites
 *://*.alexluxuryhair.nl/*  #!aggreg-SpamdexingSites
@@ -74707,7 +74709,9 @@
 *://*.alvitobello.it/*  #!aggreg-SpamdexingSites
 *://*.amados-tanzclub.de/*  #!aggreg-SpamdexingSites
 *://*.ambershopkids.pl/*  #!aggreg-SpamdexingSites
+*://*.amcfatmayon.de/*  #!aggreg-SpamdexingSites
 *://*.amicidicortina.it/*  #!aggreg-SpamdexingSites
+*://*.amiciwarszawa.pl/*  #!aggreg-SpamdexingSites
 *://*.amondo.it/*  #!aggreg-SpamdexingSites
 *://*.amqcharity.nl/*  #!aggreg-SpamdexingSites
 *://*.amsherzo.eu/*  #!aggreg-SpamdexingSites
@@ -74746,6 +74750,7 @@
 *://*.apolloniosoluzioni.it/*  #!aggreg-SpamdexingSites
 *://*.appart-vermietung.de/*  #!aggreg-SpamdexingSites
 *://*.appartement-pueo-luchon.fr/*  #!aggreg-SpamdexingSites
+*://*.appcoaching.nl/*  #!aggreg-SpamdexingSites
 *://*.apticket.pl/*  #!aggreg-SpamdexingSites
 *://*.aptproject.eu/*  #!aggreg-SpamdexingSites
 *://*.aqs-consulting.fr/*  #!aggreg-SpamdexingSites
@@ -74766,6 +74771,7 @@
 *://*.arteparrucchieriestetica.it/*  #!aggreg-SpamdexingSites
 *://*.arteryproject.eu/*  #!aggreg-SpamdexingSites
 *://*.artfishmed.eu/*  #!aggreg-SpamdexingSites
+*://*.artfull-nails.de/*  #!aggreg-SpamdexingSites
 *://*.article-box.eu/*  #!aggreg-SpamdexingSites
 *://*.artiksdesign.fr/*  #!aggreg-SpamdexingSites
 *://*.artilex.eu/*  #!aggreg-SpamdexingSites
@@ -74843,6 +74849,7 @@
 *://*.bejessa.de/*  #!aggreg-SpamdexingSites
 *://*.bekonscot.eu/*  #!aggreg-SpamdexingSites
 *://*.belerf.de/*  #!aggreg-SpamdexingSites
+*://*.believeshoponline.it/*  #!aggreg-SpamdexingSites
 *://*.belladieta.pl/*  #!aggreg-SpamdexingSites
 *://*.bellamoda.es/*  #!aggreg-SpamdexingSites
 *://*.bellatv.it/*  #!aggreg-SpamdexingSites
@@ -74854,6 +74861,7 @@
 *://*.berlin-arrival.de/*  #!aggreg-SpamdexingSites
 *://*.beschaeftigtentest.de/*  #!aggreg-SpamdexingSites
 *://*.bessosalou.es/*  #!aggreg-SpamdexingSites
+*://*.bestekontaktlinsen.de/*  #!aggreg-SpamdexingSites
 *://*.bestfit-dan.de/*  #!aggreg-SpamdexingSites
 *://*.bezirkslandfrauen-fmtk.de/*  #!aggreg-SpamdexingSites
 *://*.bezpiecznainwestycja.pl/*  #!aggreg-SpamdexingSites
@@ -74957,6 +74965,7 @@
 *://*.cdleycom.nl/*  #!aggreg-SpamdexingSites
 *://*.cdu-lueneburg-stadt.de/*  #!aggreg-SpamdexingSites
 *://*.cecile-delouvrier.fr/*  #!aggreg-SpamdexingSites
+*://*.cedricvillani2022.fr/*  #!aggreg-SpamdexingSites
 *://*.celebritygolfclub.de/*  #!aggreg-SpamdexingSites
 *://*.celestemarbella.es/*  #!aggreg-SpamdexingSites
 *://*.centralrico.es/*  #!aggreg-SpamdexingSites
@@ -74999,6 +75008,7 @@
 *://*.clbci.fr/*  #!aggreg-SpamdexingSites
 *://*.cleancare-reinigung.de/*  #!aggreg-SpamdexingSites
 *://*.cleantechnano.com/*  #!aggreg-SpamdexingSites
+*://*.clemelectrik.fr/*  #!aggreg-SpamdexingSites
 *://*.cleocaffe.it/*  #!aggreg-SpamdexingSites
 *://*.clever-style.de/*  #!aggreg-SpamdexingSites
 *://*.clicodyssee.fr/*  #!aggreg-SpamdexingSites
@@ -75033,6 +75043,7 @@
 *://*.cotedazur-villarental.eu/*  #!aggreg-SpamdexingSites
 *://*.covatoviaggi.it/*  #!aggreg-SpamdexingSites
 *://*.covid19goods.nl/*  #!aggreg-SpamdexingSites
+*://*.covid19info.pl/*  #!aggreg-SpamdexingSites
 *://*.covidsneltestpunt.nl/*  #!aggreg-SpamdexingSites
 *://*.cp4allproject.eu/*  #!aggreg-SpamdexingSites
 *://*.cplasvegascorvera.es/*  #!aggreg-SpamdexingSites
@@ -75047,12 +75058,14 @@
 *://*.crossfer-schnellspanner.de/*  #!aggreg-SpamdexingSites
 *://*.crumh.fr/*  #!aggreg-SpamdexingSites
 *://*.cryotshock.it/*  #!aggreg-SpamdexingSites
+*://*.cti-demontage.de/*  #!aggreg-SpamdexingSites
 *://*.cukiernialucynka.pl/*  #!aggreg-SpamdexingSites
 *://*.cult-stylz.de/*  #!aggreg-SpamdexingSites
 *://*.culture-med.eu/*  #!aggreg-SpamdexingSites
 *://*.cutundcolor-byinaschmidt.de/*  #!aggreg-SpamdexingSites
 *://*.cvlostendales.es/*  #!aggreg-SpamdexingSites
 *://*.cwyk.fr/*  #!aggreg-SpamdexingSites
+*://*.cyclespascalmichael.fr/*  #!aggreg-SpamdexingSites
 *://*.cynamonowyslon.pl/*  #!aggreg-SpamdexingSites
 *://*.cyprusbiodiversity.eu/*  #!aggreg-SpamdexingSites
 *://*.czyzsport.pl/*  #!aggreg-SpamdexingSites
@@ -75093,6 +75106,7 @@
 *://*.deittitreffit.eu/*  #!aggreg-SpamdexingSites
 *://*.delaherayrabadan.es/*  #!aggreg-SpamdexingSites
 *://*.deli-deko.de/*  #!aggreg-SpamdexingSites
+*://*.delices-iberiques.fr/*  #!aggreg-SpamdexingSites
 *://*.demassari.it/*  #!aggreg-SpamdexingSites
 *://*.demikops.nl/*  #!aggreg-SpamdexingSites
 *://*.demo-testcenter-software.de/*  #!aggreg-SpamdexingSites
@@ -75119,6 +75133,7 @@
 *://*.dis-c.de/*  #!aggreg-SpamdexingSites
 *://*.diskurspresse.de/*  #!aggreg-SpamdexingSites
 *://*.disturbialimentariviterbo.it/*  #!aggreg-SpamdexingSites
+*://*.disvolvi.pl/*  #!aggreg-SpamdexingSites
 *://*.dittfach-online.eu/*  #!aggreg-SpamdexingSites
 *://*.divaswigs.com/*  #!aggreg-SpamdexingSites
 *://*.diwes.de/*  #!aggreg-SpamdexingSites
@@ -75150,6 +75165,7 @@
 *://*.dsyc.es/*  #!aggreg-SpamdexingSites
 *://*.dtybks.de/*  #!aggreg-SpamdexingSites
 *://*.duchaine-paysagiste35.fr/*  #!aggreg-SpamdexingSites
+*://*.duende-glasfusing.nl/*  #!aggreg-SpamdexingSites
 *://*.duet-z-goretta.pl/*  #!aggreg-SpamdexingSites
 *://*.dufeu2022.fr/*  #!aggreg-SpamdexingSites
 *://*.dunboutalautre.eu/*  #!aggreg-SpamdexingSites
@@ -75225,6 +75241,7 @@
 *://*.erbit.nl/*  #!aggreg-SpamdexingSites
 *://*.erdosell.pl/*  #!aggreg-SpamdexingSites
 *://*.ergositter.eu/*  #!aggreg-SpamdexingSites
+*://*.escolabressollaxana.es/*  #!aggreg-SpamdexingSites
 *://*.escuelabarberiaprietos.es/*  #!aggreg-SpamdexingSites
 *://*.escuelainfantilcasiopea.es/*  #!aggreg-SpamdexingSites
 *://*.eshopelektro.eu/*  #!aggreg-SpamdexingSites
@@ -75233,6 +75250,7 @@
 *://*.estedemocratica.it/*  #!aggreg-SpamdexingSites
 *://*.estetachivasso.it/*  #!aggreg-SpamdexingSites
 *://*.esteticacocomisbellezas.es/*  #!aggreg-SpamdexingSites
+*://*.estherprotection.es/*  #!aggreg-SpamdexingSites
 *://*.estylshop.pl/*  #!aggreg-SpamdexingSites
 *://*.eufloodcommand.eu/*  #!aggreg-SpamdexingSites
 *://*.eukorea-fire.eu/*  #!aggreg-SpamdexingSites
@@ -75259,7 +75277,9 @@
 *://*.fabioscandola.it/*  #!aggreg-SpamdexingSites
 *://*.fabrianoedintorni.it/*  #!aggreg-SpamdexingSites
 *://*.fadotrans.de/*  #!aggreg-SpamdexingSites
+*://*.fahrrad-worldtravel.de/*  #!aggreg-SpamdexingSites
 *://*.failadifferenziata.it/*  #!aggreg-SpamdexingSites
+*://*.faire-une-formation.fr/*  #!aggreg-SpamdexingSites
 *://*.fallavollita.it/*  #!aggreg-SpamdexingSites
 *://*.famigliachiropratica.it/*  #!aggreg-SpamdexingSites
 *://*.familienzentrum-deutenheim.de/*  #!aggreg-SpamdexingSites
@@ -75329,6 +75349,7 @@
 *://*.franciscofiardo.fr/*  #!aggreg-SpamdexingSites
 *://*.francofasulo.it/*  #!aggreg-SpamdexingSites
 *://*.frankdeblok.fr/*  #!aggreg-SpamdexingSites
+*://*.fraternelle-sacem.fr/*  #!aggreg-SpamdexingSites
 *://*.frauen-aus-rio.eu/*  #!aggreg-SpamdexingSites
 *://*.fre-style.de/*  #!aggreg-SpamdexingSites
 *://*.freeauto.pl/*  #!aggreg-SpamdexingSites
@@ -75337,6 +75358,7 @@
 *://*.froschinsel-grossenister.de/*  #!aggreg-SpamdexingSites
 *://*.ftprivacy.cloud/*  #!aggreg-SpamdexingSites
 *://*.fuchsimwald.de/*  #!aggreg-SpamdexingSites
+*://*.fuhrmann-hochzeitsfotografie.de/*  #!aggreg-SpamdexingSites
 *://*.funerariaiparraguirre.es/*  #!aggreg-SpamdexingSites
 *://*.furch.pl/*  #!aggreg-SpamdexingSites
 *://*.fusspflege-farkasch.de/*  #!aggreg-SpamdexingSites
@@ -75436,10 +75458,12 @@
 *://*.heimatverein-scheiden.de/*  #!aggreg-SpamdexingSites
 *://*.heinisch-fleischmann.eu/*  #!aggreg-SpamdexingSites
 *://*.helpi-pozyczka.pl/*  #!aggreg-SpamdexingSites
+*://*.herbatychwila.pl/*  #!aggreg-SpamdexingSites
 *://*.hifi-platform.eu/*  #!aggreg-SpamdexingSites
 *://*.highlevelbody.fr/*  #!aggreg-SpamdexingSites
 *://*.highwheels.it/*  #!aggreg-SpamdexingSites
 *://*.hilaldesign.fr/*  #!aggreg-SpamdexingSites
+*://*.hipicaelruedo.es/*  #!aggreg-SpamdexingSites
 *://*.hixpizza-town.de/*  #!aggreg-SpamdexingSites
 *://*.hkv-lombach.de/*  #!aggreg-SpamdexingSites
 *://*.hmxgw.com/*  #!aggreg-SpamdexingSites
@@ -75507,6 +75531,7 @@
 *://*.innovation-entwicklung.de/*  #!aggreg-SpamdexingSites
 *://*.inpraiseofchina.com/*  #!aggreg-SpamdexingSites
 *://*.instaltech-ad.pl/*  #!aggreg-SpamdexingSites
+*://*.institutamazone.fr/*  #!aggreg-SpamdexingSites
 *://*.institutbeaute-les-orchidees.fr/*  #!aggreg-SpamdexingSites
 *://*.institutlucile.fr/*  #!aggreg-SpamdexingSites
 *://*.intemporemed.pl/*  #!aggreg-SpamdexingSites
@@ -75548,6 +75573,7 @@
 *://*.jm-assistant-administratif.fr/*  #!aggreg-SpamdexingSites
 *://*.jmservera.com/*  #!aggreg-SpamdexingSites
 *://*.joecapista.eu/*  #!aggreg-SpamdexingSites
+*://*.josevicenteabogado.es/*  #!aggreg-SpamdexingSites
 *://*.jozwiakrafal.pl/*  #!aggreg-SpamdexingSites
 *://*.jubilee-ace-info.de/*  #!aggreg-SpamdexingSites
 *://*.jubilu.pl/*  #!aggreg-SpamdexingSites
@@ -75568,6 +75594,7 @@
 *://*.karwat-psychoterapia.pl/*  #!aggreg-SpamdexingSites
 *://*.kassandraroberts.com/*  #!aggreg-SpamdexingSites
 *://*.katarzynagarbas.pl/*  #!aggreg-SpamdexingSites
+*://*.kavoia.de/*  #!aggreg-SpamdexingSites
 *://*.keepcalmandbebeautiful.pl/*  #!aggreg-SpamdexingSites
 *://*.keletiszki.eu/*  #!aggreg-SpamdexingSites
 *://*.kemenammo.eu/*  #!aggreg-SpamdexingSites
@@ -75605,6 +75632,7 @@
 *://*.kunstpostkartengraf.de/*  #!aggreg-SpamdexingSites
 *://*.kunz-modeundmehr.de/*  #!aggreg-SpamdexingSites
 *://*.kwiatynagranacie.pl/*  #!aggreg-SpamdexingSites
+*://*.kyoba.es/*  #!aggreg-SpamdexingSites
 *://*.la-margot.it/*  #!aggreg-SpamdexingSites
 *://*.la-vitrine.eu/*  #!aggreg-SpamdexingSites
 *://*.laboratrieste.it/*  #!aggreg-SpamdexingSites
@@ -75621,10 +75649,12 @@
 *://*.lamourshop.fr/*  #!aggreg-SpamdexingSites
 *://*.landesjazzfestival2017.de/*  #!aggreg-SpamdexingSites
 *://*.landjugend-oesterweg.de/*  #!aggreg-SpamdexingSites
+*://*.lanuovamargellina.it/*  #!aggreg-SpamdexingSites
 *://*.larenaissanceverte.fr/*  #!aggreg-SpamdexingSites
 *://*.lasaludintegral.es/*  #!aggreg-SpamdexingSites
 *://*.laserprouslugilaserem.pl/*  #!aggreg-SpamdexingSites
 *://*.lasuite-depotvente.fr/*  #!aggreg-SpamdexingSites
+*://*.latelierdejeannette.fr/*  #!aggreg-SpamdexingSites
 *://*.lathelier.fr/*  #!aggreg-SpamdexingSites
 *://*.latitudesud.eu/*  #!aggreg-SpamdexingSites
 *://*.lauga-gmbh.de/*  #!aggreg-SpamdexingSites
@@ -75648,6 +75678,7 @@
 *://*.lepiceriegourmande30560.fr/*  #!aggreg-SpamdexingSites
 *://*.lerotteghiotte.it/*  #!aggreg-SpamdexingSites
 *://*.lesbonneschosesdaurelie.fr/*  #!aggreg-SpamdexingSites
+*://*.lesmontboucons.fr/*  #!aggreg-SpamdexingSites
 *://*.lesrapporteurs.fr/*  #!aggreg-SpamdexingSites
 *://*.letempsdescoquelicots.fr/*  #!aggreg-SpamdexingSites
 *://*.level-shop.eu/*  #!aggreg-SpamdexingSites
@@ -75657,6 +75688,7 @@
 *://*.libriditestoardea2021.it/*  #!aggreg-SpamdexingSites
 *://*.libro-biuro.pl/*  #!aggreg-SpamdexingSites
 *://*.librology.it/*  #!aggreg-SpamdexingSites
+*://*.lichtundenergy.de/*  #!aggreg-SpamdexingSites
 *://*.liesbosweg160.nl/*  #!aggreg-SpamdexingSites
 *://*.life20.net/*  #!aggreg-SpamdexingSites
 *://*.lifetricks.de/*  #!aggreg-SpamdexingSites
@@ -75665,9 +75697,11 @@
 *://*.limburger-trockenbau-team.de/*  #!aggreg-SpamdexingSites
 *://*.limeric.eu/*  #!aggreg-SpamdexingSites
 *://*.limited.shop/*  #!aggreg-SpamdexingSites
+*://*.limpiezasarjona.es/*  #!aggreg-SpamdexingSites
 *://*.lippoldt-metz-kunz.de/*  #!aggreg-SpamdexingSites
 *://*.liscamanent.it/*  #!aggreg-SpamdexingSites
 *://*.lisura.pl/*  #!aggreg-SpamdexingSites
+*://*.litalien-resto.fr/*  #!aggreg-SpamdexingSites
 *://*.littleshoes.fr/*  #!aggreg-SpamdexingSites
 *://*.livestream-rockt.de/*  #!aggreg-SpamdexingSites
 *://*.locajet.fr/*  #!aggreg-SpamdexingSites
@@ -75686,6 +75720,7 @@
 *://*.louvedetoi.fr/*  #!aggreg-SpamdexingSites
 *://*.love4home.eu/*  #!aggreg-SpamdexingSites
 *://*.lowacademy.nl/*  #!aggreg-SpamdexingSites
+*://*.lrg-tp.fr/*  #!aggreg-SpamdexingSites
 *://*.lt-global.eu/*  #!aggreg-SpamdexingSites
 *://*.luccabikeevolution.it/*  #!aggreg-SpamdexingSites
 *://*.luigiscoglio.it/*  #!aggreg-SpamdexingSites
@@ -75695,6 +75730,7 @@
 *://*.luxeproperty.pl/*  #!aggreg-SpamdexingSites
 *://*.luxevillacorse.eu/*  #!aggreg-SpamdexingSites
 *://*.luxusni-kabelky.eu/*  #!aggreg-SpamdexingSites
+*://*.lyndabeauty.fr/*  #!aggreg-SpamdexingSites
 *://*.lzmddqfw.com/*  #!aggreg-SpamdexingSites
 *://*.mac-info.pl/*  #!aggreg-SpamdexingSites
 *://*.macadamya.it/*  #!aggreg-SpamdexingSites
@@ -75708,16 +75744,19 @@
 *://*.magdalenamazurek.pl/*  #!aggreg-SpamdexingSites
 *://*.magdawyczk.pl/*  #!aggreg-SpamdexingSites
 *://*.magicbackery.de/*  #!aggreg-SpamdexingSites
+*://*.magmel.pl/*  #!aggreg-SpamdexingSites
 *://*.mahnu.fr/*  #!aggreg-SpamdexingSites
 *://*.mainradweg-service.de/*  #!aggreg-SpamdexingSites
 *://*.malenews.nl/*  #!aggreg-SpamdexingSites
 *://*.malina-24.eu/*  #!aggreg-SpamdexingSites
 *://*.mamawlodzi.pl/*  #!aggreg-SpamdexingSites
 *://*.mannenpanel.nl/*  #!aggreg-SpamdexingSites
+*://*.mansarderive.it/*  #!aggreg-SpamdexingSites
 *://*.manufakturamuch.pl/*  #!aggreg-SpamdexingSites
 *://*.manziorafi.it/*  #!aggreg-SpamdexingSites
 *://*.maquinasdecoserkosse.es/*  #!aggreg-SpamdexingSites
 *://*.marcelaine.fr/*  #!aggreg-SpamdexingSites
+*://*.marcodefelicecatering.nl/*  #!aggreg-SpamdexingSites
 *://*.marekwalczak.pl/*  #!aggreg-SpamdexingSites
 *://*.mariakoltschin.de/*  #!aggreg-SpamdexingSites
 *://*.marialamet.es/*  #!aggreg-SpamdexingSites
@@ -75743,6 +75782,7 @@
 *://*.max-titan-gel-gold.eu/*  #!aggreg-SpamdexingSites
 *://*.max-xtrazex.eu/*  #!aggreg-SpamdexingSites
 *://*.mayanapdt.fr/*  #!aggreg-SpamdexingSites
+*://*.mayidea.fr/*  #!aggreg-SpamdexingSites
 *://*.mbcotton.pl/*  #!aggreg-SpamdexingSites
 *://*.mcarre.eu/*  #!aggreg-SpamdexingSites
 *://*.mcformations.fr/*  #!aggreg-SpamdexingSites
@@ -75785,10 +75825,12 @@
 *://*.mijnvoetafdruk.eu/*  #!aggreg-SpamdexingSites
 *://*.mikado-montpellier.fr/*  #!aggreg-SpamdexingSites
 *://*.milosctotu.pl/*  #!aggreg-SpamdexingSites
+*://*.mindhala.es/*  #!aggreg-SpamdexingSites
 *://*.minimashop.eu/*  #!aggreg-SpamdexingSites
 *://*.minkybaby.pl/*  #!aggreg-SpamdexingSites
 *://*.miramarecarini.it/*  #!aggreg-SpamdexingSites
 *://*.miroirinfrarouge.biz/*  #!aggreg-SpamdexingSites
+*://*.misofia.es/*  #!aggreg-SpamdexingSites
 *://*.missmi.pl/*  #!aggreg-SpamdexingSites
 *://*.mister-pizza.it/*  #!aggreg-SpamdexingSites
 *://*.mistrzogrodu.pl/*  #!aggreg-SpamdexingSites
@@ -75822,6 +75864,7 @@
 *://*.motoavisbo.it/*  #!aggreg-SpamdexingSites
 *://*.motorcentrum-suzuki.pl/*  #!aggreg-SpamdexingSites
 *://*.motorpoetsbedrijf.nl/*  #!aggreg-SpamdexingSites
+*://*.movkitchen.fr/*  #!aggreg-SpamdexingSites
 *://*.mpu-freising.de/*  #!aggreg-SpamdexingSites
 *://*.mr-borna-mde.de/*  #!aggreg-SpamdexingSites
 *://*.mrx-emploi-ouest.fr/*  #!aggreg-SpamdexingSites
@@ -75830,6 +75873,7 @@
 *://*.mtgkrakow.pl/*  #!aggreg-SpamdexingSites
 *://*.mtr-design.eu/*  #!aggreg-SpamdexingSites
 *://*.muaythaimadrid.es/*  #!aggreg-SpamdexingSites
+*://*.mujatransdem.fr/*  #!aggreg-SpamdexingSites
 *://*.multig.pl/*  #!aggreg-SpamdexingSites
 *://*.musculosmaiores.eu/*  #!aggreg-SpamdexingSites
 *://*.musicallexikon.com/*  #!aggreg-SpamdexingSites
@@ -75845,6 +75889,7 @@
 *://*.mystische-wesen.de/*  #!aggreg-SpamdexingSites
 *://*.mysurepass.biz/*  #!aggreg-SpamdexingSites
 *://*.mzakatek.pl/*  #!aggreg-SpamdexingSites
+*://*.nagareeventos.es/*  #!aggreg-SpamdexingSites
 *://*.nakshaat.eu/*  #!aggreg-SpamdexingSites
 *://*.naszalaliga.pl/*  #!aggreg-SpamdexingSites
 *://*.natrzechkolach.pl/*  #!aggreg-SpamdexingSites
@@ -75863,6 +75908,7 @@
 *://*.neosbagni.it/*  #!aggreg-SpamdexingSites
 *://*.netcom-online.nl/*  #!aggreg-SpamdexingSites
 *://*.nets-crm.it/*  #!aggreg-SpamdexingSites
+*://*.netwerkhaagsebeemden.nl/*  #!aggreg-SpamdexingSites
 *://*.netzwerk-nord.de/*  #!aggreg-SpamdexingSites
 *://*.neubau-mariendorf.de/*  #!aggreg-SpamdexingSites
 *://*.neumoconnectformacion.es/*  #!aggreg-SpamdexingSites
@@ -75871,6 +75917,7 @@
 *://*.niebieskislon.edu.pl/*  #!aggreg-SpamdexingSites
 *://*.nikonfilmfestival.pl/*  #!aggreg-SpamdexingSites
 *://*.nikooedu.biz/*  #!aggreg-SpamdexingSites
+*://*.nilnunesbeaute.fr/*  #!aggreg-SpamdexingSites
 *://*.ninalawson.de/*  #!aggreg-SpamdexingSites
 *://*.nionme.de/*  #!aggreg-SpamdexingSites
 *://*.noahboats.de/*  #!aggreg-SpamdexingSites
@@ -75882,6 +75929,7 @@
 *://*.nostrocondominio.it/*  #!aggreg-SpamdexingSites
 *://*.noteazure-music.de/*  #!aggreg-SpamdexingSites
 *://*.notteverdevenezia.eu/*  #!aggreg-SpamdexingSites
+*://*.nouvelles-perspectives-vdi.fr/*  #!aggreg-SpamdexingSites
 *://*.nowaanvraag.nl/*  #!aggreg-SpamdexingSites
 *://*.nowybuklak.pl/*  #!aggreg-SpamdexingSites
 *://*.nualjewels.it/*  #!aggreg-SpamdexingSites
@@ -75899,9 +75947,11 @@
 *://*.offroadzimy.pl/*  #!aggreg-SpamdexingSites
 *://*.ofspv-turnaje.eu/*  #!aggreg-SpamdexingSites
 *://*.og-huellhorst.de/*  #!aggreg-SpamdexingSites
+*://*.oknarudnicki.pl/*  #!aggreg-SpamdexingSites
 *://*.olgajedrzejewska.pl/*  #!aggreg-SpamdexingSites
 *://*.olgakowalska.pl/*  #!aggreg-SpamdexingSites
 *://*.olimposhop.it/*  #!aggreg-SpamdexingSites
+*://*.oliverselzer.de/*  #!aggreg-SpamdexingSites
 *://*.oliviercorp.pl/*  #!aggreg-SpamdexingSites
 *://*.omgstore.pl/*  #!aggreg-SpamdexingSites
 *://*.omniamedica.it/*  #!aggreg-SpamdexingSites
@@ -75926,6 +75976,7 @@
 *://*.osswald-wandert.de/*  #!aggreg-SpamdexingSites
 *://*.osteopathie-poing.de/*  #!aggreg-SpamdexingSites
 *://*.ostojacamp.pl/*  #!aggreg-SpamdexingSites
+*://*.ostseevelosophen.de/*  #!aggreg-SpamdexingSites
 *://*.otorinosonzogni.it/*  #!aggreg-SpamdexingSites
 *://*.otticawalter.it/*  #!aggreg-SpamdexingSites
 *://*.ourbigday.nl/*  #!aggreg-SpamdexingSites
@@ -75933,12 +75984,14 @@
 *://*.over50footballcuneo.it/*  #!aggreg-SpamdexingSites
 *://*.owiprod.fr/*  #!aggreg-SpamdexingSites
 *://*.pacon.it/*  #!aggreg-SpamdexingSites
+*://*.padelindooralbalat.es/*  #!aggreg-SpamdexingSites
 *://*.paestumaltocilentocultura2024.it/*  #!aggreg-SpamdexingSites
 *://*.pagarteralis.com/*  #!aggreg-SpamdexingSites
 *://*.pamatech-profi.pl/*  #!aggreg-SpamdexingSites
 *://*.pan.dev/*  #!aggreg-SpamdexingSites
 *://*.panabas.es/*  #!aggreg-SpamdexingSites
 *://*.papybio.fr/*  #!aggreg-SpamdexingSites
+*://*.paradoxia.de/*  #!aggreg-SpamdexingSites
 *://*.parafiamsciszewice.pl/*  #!aggreg-SpamdexingSites
 *://*.paroleinvaligia.it/*  #!aggreg-SpamdexingSites
 *://*.partnersin.eu/*  #!aggreg-SpamdexingSites
@@ -76005,6 +76058,7 @@
 *://*.poshlashes-zuidholland.nl/*  #!aggreg-SpamdexingSites
 *://*.postime.pl/*  #!aggreg-SpamdexingSites
 *://*.potagezvous.fr/*  #!aggreg-SpamdexingSites
+*://*.pozytywnaportal.pl/*  #!aggreg-SpamdexingSites
 *://*.pparchem.pl/*  #!aggreg-SpamdexingSites
 *://*.ppkarton.pl/*  #!aggreg-SpamdexingSites
 *://*.ppps.tv/*  #!aggreg-SpamdexingSites
@@ -76039,6 +76093,7 @@
 *://*.psicologoscerdanyola.es/*  #!aggreg-SpamdexingSites
 *://*.psicotandem.es/*  #!aggreg-SpamdexingSites
 *://*.psicoterapeutispcp.it/*  #!aggreg-SpamdexingSites
+*://*.pslashes.pl/*  #!aggreg-SpamdexingSites
 *://*.pspkruszew.pl/*  #!aggreg-SpamdexingSites
 *://*.psychologie-wieser.de/*  #!aggreg-SpamdexingSites
 *://*.ptstudiodonna.it/*  #!aggreg-SpamdexingSites
@@ -76047,6 +76102,7 @@
 *://*.puntoexpress.es/*  #!aggreg-SpamdexingSites
 *://*.purokawa.pl/*  #!aggreg-SpamdexingSites
 *://*.pygmalion-effect.fr/*  #!aggreg-SpamdexingSites
+*://*.pzhgp-gostyn.pl/*  #!aggreg-SpamdexingSites
 *://*.pzngrodbielsko.pl/*  #!aggreg-SpamdexingSites
 *://*.pzw-wojnicz.pl/*  #!aggreg-SpamdexingSites
 *://*.qantascomplaints.com/*  #!aggreg-SpamdexingSites
@@ -76127,6 +76183,7 @@
 *://*.rsv-brottewitz.de/*  #!aggreg-SpamdexingSites
 *://*.rsw-personal.de/*  #!aggreg-SpamdexingSites
 *://*.ru-bau.de/*  #!aggreg-SpamdexingSites
+*://*.rubbettinopills.it/*  #!aggreg-SpamdexingSites
 *://*.ruenmai-thaimassage.de/*  #!aggreg-SpamdexingSites
 *://*.ruizdecardenas.it/*  #!aggreg-SpamdexingSites
 *://*.rundrejser.eu/*  #!aggreg-SpamdexingSites
@@ -76148,6 +76205,7 @@
 *://*.sarahgonidec.fr/*  #!aggreg-SpamdexingSites
 *://*.sarasazo.it/*  #!aggreg-SpamdexingSites
 *://*.sat-serviciotecnicofujitsu.es/*  #!aggreg-SpamdexingSites
+*://*.saulignac2022.fr/*  #!aggreg-SpamdexingSites
 *://*.sauna-am-see-wandlitz.de/*  #!aggreg-SpamdexingSites
 *://*.sazodia.it/*  #!aggreg-SpamdexingSites
 *://*.sbaconseil.fr/*  #!aggreg-SpamdexingSites
@@ -76185,6 +76243,7 @@
 *://*.serbupoker.biz/*  #!aggreg-SpamdexingSites
 *://*.sercekryspinka.eu/*  #!aggreg-SpamdexingSites
 *://*.serviceclubs.eu/*  #!aggreg-SpamdexingSites
+*://*.serviciosvalor.es/*  #!aggreg-SpamdexingSites
 *://*.servis-concept.de/*  #!aggreg-SpamdexingSites
 *://*.sg-perbing.de/*  #!aggreg-SpamdexingSites
 *://*.sgranati.it/*  #!aggreg-SpamdexingSites
@@ -76263,6 +76322,8 @@
 *://*.stockinator.de/*  #!aggreg-SpamdexingSites
 *://*.stopprism.eu/*  #!aggreg-SpamdexingSites
 *://*.stopvid.es/*  #!aggreg-SpamdexingSites
+*://*.stranoamilano.it/*  #!aggreg-SpamdexingSites
+*://*.streetarteverywhere.fr/*  #!aggreg-SpamdexingSites
 *://*.strefauvc.pl/*  #!aggreg-SpamdexingSites
 *://*.strohschein-it.de/*  #!aggreg-SpamdexingSites
 *://*.stronylaskowski.pl/*  #!aggreg-SpamdexingSites
@@ -76288,12 +76349,14 @@
 *://*.sutherlandfelt.nl/*  #!aggreg-SpamdexingSites
 *://*.sved-masszazs.eu/*  #!aggreg-SpamdexingSites
 *://*.synodwkonarzewie.pl/*  #!aggreg-SpamdexingSites
+*://*.sytapszczola.pl/*  #!aggreg-SpamdexingSites
 *://*.szepski.pl/*  #!aggreg-SpamdexingSites
 *://*.szermierkabuduje.pl/*  #!aggreg-SpamdexingSites
 *://*.szglodland.com/*  #!aggreg-SpamdexingSites
 *://*.szy-ha.pl/*  #!aggreg-SpamdexingSites
 *://*.tageseltern-vp.de/*  #!aggreg-SpamdexingSites
 *://*.taimup.it/*  #!aggreg-SpamdexingSites
+*://*.talentinelbassolazio.it/*  #!aggreg-SpamdexingSites
 *://*.tallermidasgines.es/*  #!aggreg-SpamdexingSites
 *://*.tanieszparowanie.pl/*  #!aggreg-SpamdexingSites
 *://*.tappezzeriadatres.it/*  #!aggreg-SpamdexingSites
@@ -76303,7 +76366,9 @@
 *://*.taxislaurent13.fr/*  #!aggreg-SpamdexingSites
 *://*.taxitransferalmunecar.es/*  #!aggreg-SpamdexingSites
 *://*.tc-westeresch.de/*  #!aggreg-SpamdexingSites
+*://*.tchp-silesia.pl/*  #!aggreg-SpamdexingSites
 *://*.tdateatro.it/*  #!aggreg-SpamdexingSites
+*://*.teana-team.es/*  #!aggreg-SpamdexingSites
 *://*.teatrocentena.it/*  #!aggreg-SpamdexingSites
 *://*.technic-carrosserie-rivat.fr/*  #!aggreg-SpamdexingSites
 *://*.technikigrzewcze-widera.pl/*  #!aggreg-SpamdexingSites
@@ -76324,17 +76389,20 @@
 *://*.thanittahua.pl/*  #!aggreg-SpamdexingSites
 *://*.thebridgecatania.it/*  #!aggreg-SpamdexingSites
 *://*.thefamilygarage.it/*  #!aggreg-SpamdexingSites
+*://*.themedesign.nl/*  #!aggreg-SpamdexingSites
 *://*.themiddlekeys.de/*  #!aggreg-SpamdexingSites
 *://*.themorningwalk.fr/*  #!aggreg-SpamdexingSites
 *://*.theplantlab.de/*  #!aggreg-SpamdexingSites
 *://*.therapie-schneider.de/*  #!aggreg-SpamdexingSites
 *://*.therm-coats.eu/*  #!aggreg-SpamdexingSites
+*://*.thermoklima.pl/*  #!aggreg-SpamdexingSites
 *://*.thg-wolfsburg.eu/*  #!aggreg-SpamdexingSites
 *://*.thorntonanddavies.eu/*  #!aggreg-SpamdexingSites
 *://*.thuismetspelen.nl/*  #!aggreg-SpamdexingSites
 *://*.tiagocardoso.eu/*  #!aggreg-SpamdexingSites
 *://*.tierarztpraxis-rummer.de/*  #!aggreg-SpamdexingSites
 *://*.tikala.co/*  #!aggreg-SpamdexingSites
+*://*.tilburg-shop.nl/*  #!aggreg-SpamdexingSites
 *://*.tintoreriahigiensecmadrid.es/*  #!aggreg-SpamdexingSites
 *://*.tischtennis-korntal.de/*  #!aggreg-SpamdexingSites
 *://*.titan-gel-gold-max.eu/*  #!aggreg-SpamdexingSites
@@ -76368,6 +76436,7 @@
 *://*.transportpgg.pl/*  #!aggreg-SpamdexingSites
 *://*.transzlom.pl/*  #!aggreg-SpamdexingSites
 *://*.travelinbox.pl/*  #!aggreg-SpamdexingSites
+*://*.travelkathmandu.es/*  #!aggreg-SpamdexingSites
 *://*.traveltures.de/*  #!aggreg-SpamdexingSites
 *://*.treptow-logopaedie.de/*  #!aggreg-SpamdexingSites
 *://*.tresjoliedenise.it/*  #!aggreg-SpamdexingSites
@@ -76396,6 +76465,7 @@
 *://*.ubshow.it/*  #!aggreg-SpamdexingSites
 *://*.uczelniatodobremiejsce.pl/*  #!aggreg-SpamdexingSites
 *://*.udclazio.it/*  #!aggreg-SpamdexingSites
+*://*.uhlmann-politikberatung.de/*  #!aggreg-SpamdexingSites
 *://*.uicmantova.it/*  #!aggreg-SpamdexingSites
 *://*.ukdgb1.de/*  #!aggreg-SpamdexingSites
 *://*.ukiyo-studio.fr/*  #!aggreg-SpamdexingSites
@@ -76422,12 +76492,14 @@
 *://*.valmypermis.fr/*  #!aggreg-SpamdexingSites
 *://*.valorandco.nl/*  #!aggreg-SpamdexingSites
 *://*.valtellinatrailbike.it/*  #!aggreg-SpamdexingSites
+*://*.vanillakosmetologia.pl/*  #!aggreg-SpamdexingSites
 *://*.vanitybaby.es/*  #!aggreg-SpamdexingSites
 *://*.vanityestetic.es/*  #!aggreg-SpamdexingSites
 *://*.vapeandcig.de/*  #!aggreg-SpamdexingSites
 *://*.vase-zahrada.eu/*  #!aggreg-SpamdexingSites
 *://*.vdbbb.de/*  #!aggreg-SpamdexingSites
 *://*.veelaanbiedingen.nl/*  #!aggreg-SpamdexingSites
+*://*.vefaselection.fr/*  #!aggreg-SpamdexingSites
 *://*.velolobby.eu/*  #!aggreg-SpamdexingSites
 *://*.ventadeexpositoresgraficos.es/*  #!aggreg-SpamdexingSites
 *://*.venturearchitects.pl/*  #!aggreg-SpamdexingSites
@@ -76479,13 +76551,16 @@
 *://*.wirfuermg.de/*  #!aggreg-SpamdexingSites
 *://*.wit3k.pl/*  #!aggreg-SpamdexingSites
 *://*.woceanieslow.pl/*  #!aggreg-SpamdexingSites
+*://*.wohlfuehl-toys.de/*  #!aggreg-SpamdexingSites
 *://*.wojartrans.pl/*  #!aggreg-SpamdexingSites
 *://*.wollzauber-dortmund.de/*  #!aggreg-SpamdexingSites
+*://*.womanslife.nl/*  #!aggreg-SpamdexingSites
 *://*.womenlookingharmonydating.eu/*  #!aggreg-SpamdexingSites
 *://*.woordenvanliefde.nl/*  #!aggreg-SpamdexingSites
 *://*.work-legal.nl/*  #!aggreg-SpamdexingSites
 *://*.workfirstnederland.nl/*  #!aggreg-SpamdexingSites
 *://*.worldsportweb.it/*  #!aggreg-SpamdexingSites
+*://*.wp-stats.nl/*  #!aggreg-SpamdexingSites
 *://*.wrohelpsukr.pl/*  #!aggreg-SpamdexingSites
 *://*.wyczuciesmaku.pl/*  #!aggreg-SpamdexingSites
 *://*.wynajemdomen.eu/*  #!aggreg-SpamdexingSites
