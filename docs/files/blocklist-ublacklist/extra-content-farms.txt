@@ -1,6 +1,6 @@
 # Title: Extra Content Farm Filters
 # Description: Extra filter for content-farm-like sites, mostly aggregated from other sources.
-# Last modified: 2023-07-02T19:49:15+00:00
+# Last modified: 2023-07-08T13:07:33+00:00
 # Homepage: https://danny0838.github.io/content-farm-terminator/
 # Licence: MIT License
 # Source: https://danny0838.github.io/content-farm-terminator/files/blocklist-ublacklist/extra-content-farms.txt
@@ -72551,6 +72551,7 @@
 *://*.aiseesoft.com/*  #!aggreg-nonpnt
 *://*.aishuaijiao.com/*  #!aggreg-nonpnt
 *://*.ajhujiao.com/*  #!aggreg-nonpnt
+*://*.alibabacloud.com/blog/*  #!aggreg-nonpnt
 *://*.alltechbuzz.net/*  #!aggreg-nonpnt
 *://*.altapps.net/*  #!aggreg-nonpnt
 *://*.amalur-madretierra.es/*  #!aggreg-nonpnt
@@ -72567,6 +72568,7 @@
 *://*.artibilim.com/*  #!aggreg-nonpnt
 *://*.asklobster.com/*  #!aggreg-nonpnt
 *://*.assignmenter.com/*  #!aggreg-nonpnt
+*://*.atsit.in/*  #!aggreg-nonpnt
 *://*.awshao.com/*  #!aggreg-nonpnt
 *://*.ayxbwy.com/*  #!aggreg-nonpnt
 *://*.b00h.com/*  #!aggreg-nonpnt
@@ -72579,6 +72581,7 @@
 *://*.beeeup.com/*  #!aggreg-nonpnt
 *://*.biobu.it/*  #!aggreg-nonpnt
 *://*.bit86.cn/*  #!aggreg-nonpnt
+*://*.bitwarsoft.com/*  #!aggreg-nonpnt
 *://*.bloggersideas.com/*  #!aggreg-nonpnt
 *://*.blogsbodasdeisabel.com/*  #!aggreg-nonpnt
 *://*.bmw8830.com/*  #!aggreg-nonpnt
@@ -72600,6 +72603,7 @@
 *://*.china.cn/*  #!aggreg-nonpnt
 *://*.china2uk.com/*  #!aggreg-nonpnt
 *://*.chiphell.com/*  #!aggreg-nonpnt
+*://*.chiphells.com/*  #!aggreg-nonpnt
 *://*.cjavapy.com/*  #!aggreg-nonpnt
 *://*.cjkfd.top/*  #!aggreg-nonpnt
 *://*.clubhouse-club.site/*  #!aggreg-nonpnt
@@ -72623,6 +72627,7 @@
 *://*.daka111.cn/*  #!aggreg-nonpnt
 *://*.dav01.com/*  #!aggreg-nonpnt
 *://*.ddosi.org/*  #!aggreg-nonpnt
+*://*.debian8.com/*  #!aggreg-nonpnt
 *://*.dedeapps.com/*  #!aggreg-nonpnt
 *://*.devicesfaq.com/*  #!aggreg-nonpnt
 *://*.digidash.in/*  #!aggreg-nonpnt
@@ -72637,6 +72642,7 @@
 *://*.duotin.com/*  #!aggreg-nonpnt
 *://*.dyecn.com/*  #!aggreg-nonpnt
 *://*.eastwriting.com/*  #!aggreg-nonpnt
+*://*.edge66.com/*  #!aggreg-nonpnt
 *://*.edianyun.com/*  #!aggreg-nonpnt
 *://*.edition-eltern.com/*  #!aggreg-nonpnt
 *://*.edoghaitao.com/*  #!aggreg-nonpnt
@@ -72734,6 +72740,7 @@
 *://*.jynews.net/*  #!aggreg-nonpnt
 *://*.jzhcgm.com/*  #!aggreg-nonpnt
 *://*.kaimalo.com/*  #!aggreg-nonpnt
+*://*.kandaoni.com/*  #!aggreg-nonpnt
 *://*.kbpp.org/*  #!aggreg-nonpnt
 *://*.kickscooter.ru/*  #!aggreg-nonpnt
 *://*.kissbaidu.com/*  #!aggreg-nonpnt
@@ -72776,6 +72783,7 @@
 *://*.moyens.net/*  #!aggreg-nonpnt
 *://*.mozzinovo.club/*  #!aggreg-nonpnt
 *://*.msfxt.com/*  #!aggreg-nonpnt
+*://*.mweda.com/*  #!aggreg-nonpnt
 *://*.my-pmu.com/*  #!aggreg-nonpnt
 *://*.mymac.info/*  #!aggreg-nonpnt
 *://*.nasge.com/*  #!aggreg-nonpnt
@@ -72790,6 +72798,7 @@
 *://*.nuoptima.com/*  #!aggreg-nonpnt
 *://*.nweon.com/*  #!aggreg-nonpnt
 *://*.nyist.net/*  #!aggreg-nonpnt
+*://*.obagua.com/*  #!aggreg-nonpnt
 *://*.ofweek.com/*  #!aggreg-nonpnt
 *://*.onitroad.com/*  #!aggreg-nonpnt
 *://*.opython.com/*  #!aggreg-nonpnt
@@ -72821,15 +72830,20 @@
 *://*.qingdaosailing.com/*  #!aggreg-nonpnt
 *://*.qingyunl.com/*  #!aggreg-nonpnt
 *://*.qiniu.com/qfans/*  #!aggreg-nonpnt
+*://*.qiuyexitong.com/*  #!aggreg-nonpnt
 *://*.qnid.cc/*  #!aggreg-nonpnt
 *://*.qpb2b.com/*  #!aggreg-nonpnt
 *://*.qu-qu.net/*  #!aggreg-nonpnt
 *://*.qumiaodong.com/*  #!aggreg-nonpnt
 *://*.qunkong.com.cn/*  #!aggreg-nonpnt
+*://*.raysync.cn/*  #!aggreg-nonpnt
 *://*.redian.news/*  #!aggreg-nonpnt
 *://*.remosoftware.com/*  #!aggreg-nonpnt
+*://*.reneelab.com.cn/*  #!aggreg-nonpnt
+*://*.reneelab.net/*  #!aggreg-nonpnt
 *://*.repinku.com/*  #!aggreg-nonpnt
 *://*.ricardoeleinara.com/*  #!aggreg-nonpnt
+*://*.rocketdrivers.com/*  #!aggreg-nonpnt
 *://*.rollingfhr.xyz/*  #!aggreg-nonpnt
 *://*.rtxmail.net/*  #!aggreg-nonpnt
 *://*.rukomos.ru/*  #!aggreg-nonpnt
@@ -72862,6 +72876,7 @@
 *://*.soft-vn.net/*  #!aggreg-nonpnt
 *://*.softwarekeep.com/*  #!aggreg-nonpnt
 *://*.sohoblink.com/*  #!aggreg-nonpnt
+*://*.somode.com/*  #!aggreg-nonpnt
 *://*.sportsoho.com/*  #!aggreg-nonpnt
 *://*.squadguide.net/*  #!aggreg-nonpnt
 *://*.sqzlsy.cn/*  #!aggreg-nonpnt
@@ -72879,6 +72894,7 @@
 *://*.taocms.org/*  #!aggreg-nonpnt
 *://*.tbganhuo.com/*  #!aggreg-nonpnt
 *://*.tcly6.com/*  #!aggreg-nonpnt
+*://*.techbriefly.com/*  #!aggreg-nonpnt
 *://*.techdevian.com/*  #!aggreg-nonpnt
 *://*.techloris.com/*  #!aggreg-nonpnt
 *://*.techonegame.com/*  #!aggreg-nonpnt
@@ -72886,6 +72902,7 @@
 *://*.tenorshare.cn/*  #!aggreg-nonpnt
 *://*.tenorshare.com/*  #!aggreg-nonpnt
 *://*.theastrologypage.com/*  #!aggreg-nonpnt
+*://*.thrivemyway.com/*  #!aggreg-nonpnt
 *://*.tidewaterschool.org/*  #!aggreg-nonpnt
 *://*.tintsoft.com/*  #!aggreg-nonpnt
 *://*.tlyshi.com/*  #!aggreg-nonpnt
@@ -73061,6 +73078,7 @@
 *://cloud.tencent.com/developer/ask/*  #!aggreg-nonpnt
 *://cloud.tencent.com/developer/information/*  #!aggreg-nonpnt
 *://*.cn.jptele.com/*  #!aggreg-nonpnt
+*://cn.pingcap.com/article/post/*  #!aggreg-nonpnt
 *://*.cn846.com/*  #!aggreg-nonpnt
 *://*.contact-who-called.com/*  #!aggreg-nonpnt
 *://*.contactnumbers.buzz/*  #!aggreg-nonpnt
@@ -73127,10 +73145,12 @@
 *://*.lqkweb.com/*  #!aggreg-nonpnt
 *://*.m.3g.qqs9.com/*  #!aggreg-nonpnt
 *://*.m.9ji.com/*  #!aggreg-nonpnt
+*://*.m.bilibili.com/*  #!aggreg-nonpnt
 *://*.m.ccidnet.com/*  #!aggreg-nonpnt
 *://*.m.eoudu.com/*  #!aggreg-nonpnt
 *://*.m.fengli.com/*  #!aggreg-nonpnt
 *://*.m.fofama.com/*  #!aggreg-nonpnt
+*://*.m.freebuf.com/*  #!aggreg-nonpnt
 *://*.m.fy35.com/*  #!aggreg-nonpnt
 *://*.m.hljysbk.com/*  #!aggreg-nonpnt
 *://*.m.imooc.com/*  #!aggreg-nonpnt
@@ -73138,6 +73158,7 @@
 *://*.m.jiasuba.com/*  #!aggreg-nonpnt
 *://*.m.kan186.com/*  #!aggreg-nonpnt
 *://*.m.kjw.cc/*  #!aggreg-nonpnt
+*://*.m.liepin.com/*  #!aggreg-nonpnt
 *://*.m.mmaatthh.com/*  #!aggreg-nonpnt
 *://*.m.pjtime.com/*  #!aggreg-nonpnt
 *://*.m.qu99.com/*  #!aggreg-nonpnt
@@ -74867,6 +74888,7 @@
 *://*.bessosalou.es/*  #!aggreg-SpamdexingSites
 *://*.bestekontaktlinsen.de/*  #!aggreg-SpamdexingSites
 *://*.bestfit-dan.de/*  #!aggreg-SpamdexingSites
+*://*.bevandechiozzini.it/*  #!aggreg-SpamdexingSites
 *://*.bezirkslandfrauen-fmtk.de/*  #!aggreg-SpamdexingSites
 *://*.bezpiecznainwestycja.pl/*  #!aggreg-SpamdexingSites
 *://*.bhabhapersianbistro.com/*  #!aggreg-SpamdexingSites
@@ -75145,10 +75167,12 @@
 *://*.dipendenzeaddio.it/*  #!aggreg-SpamdexingSites
 *://*.dis-c.de/*  #!aggreg-SpamdexingSites
 *://*.diskurspresse.de/*  #!aggreg-SpamdexingSites
+*://*.distrivent.es/*  #!aggreg-SpamdexingSites
 *://*.disturbialimentariviterbo.it/*  #!aggreg-SpamdexingSites
 *://*.disvolvi.pl/*  #!aggreg-SpamdexingSites
 *://*.dittfach-online.eu/*  #!aggreg-SpamdexingSites
 *://*.divaswigs.com/*  #!aggreg-SpamdexingSites
+*://*.divershop.fr/*  #!aggreg-SpamdexingSites
 *://*.diwes.de/*  #!aggreg-SpamdexingSites
 *://*.dlugtoniekoniecswiata.pl/*  #!aggreg-SpamdexingSites
 *://*.dmazh.nl/*  #!aggreg-SpamdexingSites
@@ -75314,6 +75338,7 @@
 *://*.feelthebeat.pl/*  #!aggreg-SpamdexingSites
 *://*.fenixoneart.pl/*  #!aggreg-SpamdexingSites
 *://*.ferienwohnungen-wilken.de/*  #!aggreg-SpamdexingSites
+*://*.fermedanimation-phvv.fr/*  #!aggreg-SpamdexingSites
 *://*.ferreteriahercules.es/*  #!aggreg-SpamdexingSites
 *://*.feuerwehr-gemeinde-elleben.de/*  #!aggreg-SpamdexingSites
 *://*.feuerwerk-westend.de/*  #!aggreg-SpamdexingSites
@@ -75327,6 +75352,7 @@
 *://*.fincaelpardito.es/*  #!aggreg-SpamdexingSites
 *://*.findmdlaw.com/*  #!aggreg-SpamdexingSites
 *://*.firmafucha.pl/*  #!aggreg-SpamdexingSites
+*://*.firstlegalservices.es/*  #!aggreg-SpamdexingSites
 *://*.firstlighty.com/*  #!aggreg-SpamdexingSites
 *://*.fisquis.es/*  #!aggreg-SpamdexingSites
 *://*.fist-koeln.de/*  #!aggreg-SpamdexingSites
@@ -75435,6 +75461,7 @@
 *://*.grillantalya-detmold.de/*  #!aggreg-SpamdexingSites
 *://*.groupescolairehenrisarrado.fr/*  #!aggreg-SpamdexingSites
 *://*.gruniverpal.fr/*  #!aggreg-SpamdexingSites
+*://*.grupisenda.es/*  #!aggreg-SpamdexingSites
 *://*.gruppoverderoma.it/*  #!aggreg-SpamdexingSites
 *://*.gruzoperevozki.eu/*  #!aggreg-SpamdexingSites
 *://*.gsi-marex.pl/*  #!aggreg-SpamdexingSites
@@ -75541,6 +75568,7 @@
 *://*.indecomazury.pl/*  #!aggreg-SpamdexingSites
 *://*.indenboschuit.nl/*  #!aggreg-SpamdexingSites
 *://*.indianadriana.pl/*  #!aggreg-SpamdexingSites
+*://*.inesterron.es/*  #!aggreg-SpamdexingSites
 *://*.infanziaedintorni.it/*  #!aggreg-SpamdexingSites
 *://*.infinityenglishexams.es/*  #!aggreg-SpamdexingSites
 *://*.inforia.es/*  #!aggreg-SpamdexingSites
@@ -75609,6 +75637,7 @@
 *://*.kajakurczuk.pl/*  #!aggreg-SpamdexingSites
 *://*.kalteneck-araber.de/*  #!aggreg-SpamdexingSites
 *://*.kanzlei-meis.de/*  #!aggreg-SpamdexingSites
+*://*.karierafreelancera.pl/*  #!aggreg-SpamdexingSites
 *://*.karin-wagner.de/*  #!aggreg-SpamdexingSites
 *://*.karlottesdesigns.de/*  #!aggreg-SpamdexingSites
 *://*.karolptaszkiewicz.pl/*  #!aggreg-SpamdexingSites
@@ -75663,6 +75692,7 @@
 *://*.lacadaltrifulin.it/*  #!aggreg-SpamdexingSites
 *://*.lachouettegalerieart.fr/*  #!aggreg-SpamdexingSites
 *://*.lacivicadarfoboarioterme.it/*  #!aggreg-SpamdexingSites
+*://*.lacollineauxcoquelicots.fr/*  #!aggreg-SpamdexingSites
 *://*.laetifi.pl/*  #!aggreg-SpamdexingSites
 *://*.lafabriquedecellestine.fr/*  #!aggreg-SpamdexingSites
 *://*.lafilledelalune.fr/*  #!aggreg-SpamdexingSites
@@ -75842,6 +75872,7 @@
 *://*.meyer-bausanierung.de/*  #!aggreg-SpamdexingSites
 *://*.mginterieur.nl/*  #!aggreg-SpamdexingSites
 *://*.michael-lai.com/*  #!aggreg-SpamdexingSites
+*://*.michaelsemle.de/*  #!aggreg-SpamdexingSites
 *://*.micheleconcas.it/*  #!aggreg-SpamdexingSites
 *://*.midasowe.pl/*  #!aggreg-SpamdexingSites
 *://*.miechunka-pomidorowa-24.eu/*  #!aggreg-SpamdexingSites
@@ -75944,6 +75975,7 @@
 *://*.neumoconnectformacion.es/*  #!aggreg-SpamdexingSites
 *://*.newstrusted.de/*  #!aggreg-SpamdexingSites
 *://*.nice-soutien-scolaire.fr/*  #!aggreg-SpamdexingSites
+*://*.nidopoland.pl/*  #!aggreg-SpamdexingSites
 *://*.niebieskislon.edu.pl/*  #!aggreg-SpamdexingSites
 *://*.nikonfilmfestival.pl/*  #!aggreg-SpamdexingSites
 *://*.nikooedu.biz/*  #!aggreg-SpamdexingSites
@@ -75965,6 +75997,7 @@
 *://*.nualjewels.it/*  #!aggreg-SpamdexingSites
 *://*.nueva-energia.eu/*  #!aggreg-SpamdexingSites
 *://*.number1store.pl/*  #!aggreg-SpamdexingSites
+*://*.nuriacarnsiaus.es/*  #!aggreg-SpamdexingSites
 *://*.nutres.es/*  #!aggreg-SpamdexingSites
 *://*.obesite-chirurgie74.fr/*  #!aggreg-SpamdexingSites
 *://*.obiadwsloiku.pl/*  #!aggreg-SpamdexingSites
@@ -75997,6 +76030,7 @@
 *://*.opportunity-marketing.nl/*  #!aggreg-SpamdexingSites
 *://*.oprogramowanie-call-center.pl/*  #!aggreg-SpamdexingSites
 *://*.optitarif.de/*  #!aggreg-SpamdexingSites
+*://*.or-jeu.fr/*  #!aggreg-SpamdexingSites
 *://*.oralsurgerysupplies.it/*  #!aggreg-SpamdexingSites
 *://*.oranje-huiskamer.nl/*  #!aggreg-SpamdexingSites
 *://*.orionkamieniarstwo.pl/*  #!aggreg-SpamdexingSites
@@ -76023,6 +76057,7 @@
 *://*.papybio.fr/*  #!aggreg-SpamdexingSites
 *://*.paradoxia.de/*  #!aggreg-SpamdexingSites
 *://*.parafiamsciszewice.pl/*  #!aggreg-SpamdexingSites
+*://*.parenthesebienetreparis.fr/*  #!aggreg-SpamdexingSites
 *://*.paroleinvaligia.it/*  #!aggreg-SpamdexingSites
 *://*.partitouren-niedersachsen.de/*  #!aggreg-SpamdexingSites
 *://*.partnersin.eu/*  #!aggreg-SpamdexingSites
@@ -76125,6 +76160,7 @@
 *://*.psicotandem.es/*  #!aggreg-SpamdexingSites
 *://*.psicoterapeutispcp.it/*  #!aggreg-SpamdexingSites
 *://*.pslashes.pl/*  #!aggreg-SpamdexingSites
+*://*.psoepedralba.es/*  #!aggreg-SpamdexingSites
 *://*.pspkruszew.pl/*  #!aggreg-SpamdexingSites
 *://*.psychologie-wieser.de/*  #!aggreg-SpamdexingSites
 *://*.ptstudiodonna.it/*  #!aggreg-SpamdexingSites
@@ -76148,6 +76184,7 @@
 *://*.racquetmag.eu/*  #!aggreg-SpamdexingSites
 *://*.radiocolorata.eu/*  #!aggreg-SpamdexingSites
 *://*.radoslawswinarski.pl/*  #!aggreg-SpamdexingSites
+*://*.rainer-hagge.de/*  #!aggreg-SpamdexingSites
 *://*.rajapizzeria-moers.de/*  #!aggreg-SpamdexingSites
 *://*.ramacities.biz/*  #!aggreg-SpamdexingSites
 *://*.ramosprocuradores.es/*  #!aggreg-SpamdexingSites
@@ -76173,6 +76210,7 @@
 *://*.regeneracja-przekladni.pl/*  #!aggreg-SpamdexingSites
 *://*.reisen-rast.de/*  #!aggreg-SpamdexingSites
 *://*.reitverein-twistetal.de/*  #!aggreg-SpamdexingSites
+*://*.reitzentrum-annikagroth.de/*  #!aggreg-SpamdexingSites
 *://*.relaxmatelas.fr/*  #!aggreg-SpamdexingSites
 *://*.relooking-formation.fr/*  #!aggreg-SpamdexingSites
 *://*.remikorepetycje.pl/*  #!aggreg-SpamdexingSites
@@ -76272,6 +76310,7 @@
 *://*.segheriasalentina.it/*  #!aggreg-SpamdexingSites
 *://*.sejusstyle.fr/*  #!aggreg-SpamdexingSites
 *://*.sekretyf1.pl/*  #!aggreg-SpamdexingSites
+*://*.selectaparma.it/*  #!aggreg-SpamdexingSites
 *://*.selectosnieva.es/*  #!aggreg-SpamdexingSites
 *://*.semis-partyservice.de/*  #!aggreg-SpamdexingSites
 *://*.senli.pl/*  #!aggreg-SpamdexingSites
@@ -76294,6 +76333,7 @@
 *://*.sholi-brautmoden.de/*  #!aggreg-SpamdexingSites
 *://*.shovondesign.com/*  #!aggreg-SpamdexingSites
 *://*.sidly-care.de/*  #!aggreg-SpamdexingSites
+*://*.sidrerialajoguera.es/*  #!aggreg-SpamdexingSites
 *://*.sidroswimwear.pl/*  #!aggreg-SpamdexingSites
 *://*.sienti.pl/*  #!aggreg-SpamdexingSites
 *://*.silvialovetere.it/*  #!aggreg-SpamdexingSites
@@ -76330,6 +76370,7 @@
 *://*.sokoll-computers.de/*  #!aggreg-SpamdexingSites
 *://*.solenita.pl/*  #!aggreg-SpamdexingSites
 *://*.sonnenblick-wildenfels.de/*  #!aggreg-SpamdexingSites
+*://*.sopchy.de/*  #!aggreg-SpamdexingSites
 *://*.sophyangelflorist.com/*  #!aggreg-SpamdexingSites
 *://*.soul-spa-berlin.de/*  #!aggreg-SpamdexingSites
 *://*.soulfoodvalentinakusche.de/*  #!aggreg-SpamdexingSites
@@ -76342,6 +76383,7 @@
 *://*.spencerpub.pl/*  #!aggreg-SpamdexingSites
 *://*.speurwerker.nl/*  #!aggreg-SpamdexingSites
 *://*.spiritoemateria.it/*  #!aggreg-SpamdexingSites
+*://*.spizarniaormianskiej.pl/*  #!aggreg-SpamdexingSites
 *://*.sportasign.de/*  #!aggreg-SpamdexingSites
 *://*.sportsponsorhub.it/*  #!aggreg-SpamdexingSites
 *://*.sportydogs.biz/*  #!aggreg-SpamdexingSites
@@ -76410,18 +76452,22 @@
 *://*.teatrocentena.it/*  #!aggreg-SpamdexingSites
 *://*.technic-carrosserie-rivat.fr/*  #!aggreg-SpamdexingSites
 *://*.technikigrzewcze-widera.pl/*  #!aggreg-SpamdexingSites
+*://*.technotronik-konin.pl/*  #!aggreg-SpamdexingSites
 *://*.teddys-reifenmarkt.de/*  #!aggreg-SpamdexingSites
 *://*.teentalent.es/*  #!aggreg-SpamdexingSites
 *://*.teichert-kuentzler.de/*  #!aggreg-SpamdexingSites
 *://*.telon.pl/*  #!aggreg-SpamdexingSites
 *://*.tenutegucciardi.it/*  #!aggreg-SpamdexingSites
 *://*.tepe2015.eu/*  #!aggreg-SpamdexingSites
+*://*.teppichankauf-service.de/*  #!aggreg-SpamdexingSites
 *://*.terz-schlag.de/*  #!aggreg-SpamdexingSites
 *://*.tes-tin.eu/*  #!aggreg-SpamdexingSites
 *://*.tessacosmetici.it/*  #!aggreg-SpamdexingSites
 *://*.test-supper.nl/*  #!aggreg-SpamdexingSites
 *://*.testefes.eu/*  #!aggreg-SpamdexingSites
 *://*.testen-hellersdorf.de/*  #!aggreg-SpamdexingSites
+*://*.testen-karben.de/*  #!aggreg-SpamdexingSites
+*://*.testzentrum-am-stadion.de/*  #!aggreg-SpamdexingSites
 *://*.testzentrum-marktplatzcenter-nb.de/*  #!aggreg-SpamdexingSites
 *://*.textagentur-satzmelodie.de/*  #!aggreg-SpamdexingSites
 *://*.thanittahua.pl/*  #!aggreg-SpamdexingSites
@@ -76628,6 +76674,7 @@
 *://*.zapiecek-kajakikrutyn.pl/*  #!aggreg-SpamdexingSites
 *://*.zbanowane.pl/*  #!aggreg-SpamdexingSites
 *://*.zdizappa.it/*  #!aggreg-SpamdexingSites
+*://*.zdrowalodowka.pl/*  #!aggreg-SpamdexingSites
 *://*.zecos.eu/*  #!aggreg-SpamdexingSites
 *://*.zeitgunst.com/*  #!aggreg-SpamdexingSites
 *://*.zemstech.pl/*  #!aggreg-SpamdexingSites
