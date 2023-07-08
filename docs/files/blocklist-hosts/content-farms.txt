@@ -1,6 +1,6 @@
 # Title: Content Farm Filters
 # Description: Filter for general content farms, mostly in Chinese.
-# Last modified: 2023-07-02T19:49:15+00:00
+# Last modified: 2023-07-08T13:16:23+00:00
 # Homepage: https://danny0838.github.io/content-farm-terminator/
 # Licence: MIT License
 # Source: https://danny0838.github.io/content-farm-terminator/files/blocklist-hosts/content-farms.txt
@@ -10704,7 +10704,6 @@
 0.0.0.0 legatus-udc.ru  #redirects to 123mediax.com
 0.0.0.0 dentalibiza.es  #redirects to sl.3tioz.de
 0.0.0.0 ttcscan.org  #redirects to mvgde.fastssp.top
-0.0.0.0 statuspage.io
 0.0.0.0 environmental-protective-cc.com
 0.0.0.0 indianwholesaleclothing.com
 0.0.0.0 freebloge.com
@@ -11316,6 +11315,115 @@
 0.0.0.0 ckhq.net
 0.0.0.0 pad02forum.cc
 0.0.0.0 hkcum.com
+0.0.0.0 dentalgranvia.es  #redirects to sl2.wrikenfier.nl
+0.0.0.0 les-rencontres-crisalide.fr  #redirects to sl2.wrikenfier.nl
+0.0.0.0 deadlyshadowsairsoft.fr  #redirects to sl2.wrikenfier.nl
+0.0.0.0 ohunjardin.fr  #redirects to sl2.wrikenfier.nl
+0.0.0.0 panaderiaconfiteriacristorey.es  #redirects to sl2.wrikenfier.nl
+0.0.0.0 labarriqueetlafillette.fr  #redirects to sl2.wrikenfier.nl
+0.0.0.0 ninjalogin.fr  #redirects to sl2.wrikenfier.nl
+0.0.0.0 mesonlabodega.es  #redirects to sl2.wrikenfier.nl
+0.0.0.0 svp-trucks.fr  #redirects to sl2.wrikenfier.nl
+0.0.0.0 omaelcreations.fr  #redirects to sl2.wrikenfier.nl
+0.0.0.0 unfamiliiardates.net
+0.0.0.0 penaflor.cl  #redirects to mwajob.unfamiliiardates.net
+0.0.0.0 ussucsetlignon.fr  #redirects to sl2.wrikenfier.nl
+0.0.0.0 blckwht.es  #redirects to sl2.wrikenfier.nl
+0.0.0.0 conscritsdetrevoux.fr  #redirects to sl2.wrikenfier.nl
+0.0.0.0 soliadesign.fr  #redirects to sl2.wrikenfier.nl
+0.0.0.0 agencetximeleta.fr  #redirects to sl2.wrikenfier.nl
+0.0.0.0 ainpourtous.fr  #redirects to sl2.wrikenfier.nl
+0.0.0.0 simplynatural.es  #redirects to sl2.wrikenfier.nl
+0.0.0.0 alternatifbulldogclubfrancais.fr  #redirects to sl2.wrikenfier.nl
+0.0.0.0 zh-bren.cz  #redirects to giftbonus.life
+0.0.0.0 expneu.cz  #redirects to giftbonus.life
+0.0.0.0 ojumcjz.com  #redirects to
+0.0.0.0 ufaruno.simplyrose.cz  #redirects to giftbonus.life
+0.0.0.0 gj-stjulien-divatte.fr  #redirects to sl2.wrikenfier.nl
+0.0.0.0 canovelles.cat  #redirects to mwajob.unfamiliiardates.net
+0.0.0.0 rigsek.online  #redirects to serapark.online
+0.0.0.0 torsek.online  #redirects to serapark.online
+0.0.0.0 bookings.valenceprimaryschool.com  #redirects to mwajob.unfamiliiardates.net
+0.0.0.0 hornodepansantamaria.es  #redirects to sl2.wrikenfier.nl
+0.0.0.0 etrottaura.fr  #redirects to sl2.wrikenfier.nl
+0.0.0.0 zasklenibalkonu-hruban.cz  #redirects to giftbonus.life
+0.0.0.0 stregazitella.it  #redirects to sl2.wrikenfier.nl
+0.0.0.0 techiegeekiness.com
+0.0.0.0 chexian888.com
+0.0.0.0 maturepoilue.com
+0.0.0.0 googletrace.com
+0.0.0.0 0f982p0.com
+0.0.0.0 14dh1fh.com
+0.0.0.0 1973w10.com
+0.0.0.0 44i3mrt.com
+0.0.0.0 4zdq02z.com
+0.0.0.0 6f6m7h6.com
+0.0.0.0 9qdzwf9.com
+0.0.0.0 chongqiwawa595.com
+0.0.0.0 df2c33j.com
+0.0.0.0 thesaurus.com
+0.0.0.0 14asldy.com
+0.0.0.0 godiwalacards.in  #redirects to giftbonus.life
+0.0.0.0 hwweekly.net  #fake weibo etc. at subdomains with massive redirect sources
+0.0.0.0 1961.com.tw  #redirects to postseo.hwweekly.net
+0.0.0.0 bluefly.com.tw  #redirects to postseo.hwweekly.net
+0.0.0.0 cape8.com.tw  #redirects to postseo.hwweekly.net
+0.0.0.0 placetree.com.tw  #redirects to postseo.hwweekly.net
+0.0.0.0 timcoffee.com.tw  #redirects to postseo.hwweekly.net
+0.0.0.0 si-jou.com.tw  #redirects to postseo.hwweekly.net
+0.0.0.0 mydomain.com.tw  #redirects to postseo.hwweekly.net
+0.0.0.0 yijo.com.tw  #redirects to postseo.hwweekly.net
+0.0.0.0 argoyachtclub.com.tw  #redirects to postseo.hwweekly.net
+0.0.0.0 disnnai.com.tw  #redirects to postseo.hwweekly.net
+0.0.0.0 yarde.com.tw  #redirects to postseo.hwweekly.net
+0.0.0.0 my-no-no.com.tw  #redirects to postseo.hwweekly.net
+0.0.0.0 wkc.com.tw  #redirects to postseo.hwweekly.net
+0.0.0.0 aimg.com.tw  #redirects to postseo.hwweekly.net
+0.0.0.0 beautyhome.tw  #redirects to postseo.hwweekly.net
+0.0.0.0 miao.com.tw  #redirects to postseo.hwweekly.net
+0.0.0.0 bontly.com.tw  #redirects to postseo.hwweekly.net
+0.0.0.0 sakura-kitchen.com.tw  #redirects to postseo.hwweekly.net
+0.0.0.0 muyejia.com.tw  #redirects to postseo.hwweekly.net
+0.0.0.0 pc168.tw  #redirects to postseo.hwweekly.net
+0.0.0.0 wheremyipaddress.com  #redirects to postseo.hwweekly.net
+0.0.0.0 winstore.com.tw  #redirects to postseo.hwweekly.net
+0.0.0.0 lamigoclub.com.tw  #redirects to postseo.hwweekly.net
+0.0.0.0 kushibar.com.tw  #redirects to postseo.hwweekly.net
+0.0.0.0 takecare.com.tw  #redirects to postseo.hwweekly.net
+0.0.0.0 pc.joylife.com.tw  #redirects to postseo.hwweekly.net
+0.0.0.0 cpachia.com  #redirects to postseo.hwweekly.net
+0.0.0.0 bfea.com.tw  #redirects to postseo.hwweekly.net
+0.0.0.0 yaren.com.tw  #redirects to postseo.hwweekly.net
+0.0.0.0 wap.zih-lin.com.tw  #redirects to postseo.hwweekly.net
+0.0.0.0 2010sheep.tw  #redirects to postseo.hwweekly.net
+0.0.0.0 enjoy-yoga.com.tw  #redirects to postseo.hwweekly.net
+0.0.0.0 choince.com.tw  #redirects to postseo.hwweekly.net
+0.0.0.0 tangramweb.com  #redirects to postseo.hwweekly.net
+0.0.0.0 better-life.com.tw  #redirects to postseo.hwweekly.net
+0.0.0.0 millermall.com.tw  #redirects to postseo.hwweekly.net
+0.0.0.0 tstiger.com.tw  #redirects to postseo.hwweekly.net
+0.0.0.0 sonnex.com.tw  #redirects to postseo.hwweekly.net
+0.0.0.0 hongdi.com.tw  #redirects to postseo.hwweekly.net
+0.0.0.0 lastronic.com.tw  #redirects to postseo.hwweekly.net
+0.0.0.0 mv1.com.tw  #redirects to postseo.hwweekly.net
+0.0.0.0 amoon.tw  #redirects to postseo.hwweekly.net
+0.0.0.0 27594000.com.tw  #redirects to postseo.hwweekly.net
+0.0.0.0 hospitalist.tw  #redirects to postseo.hwweekly.net
+0.0.0.0 internetsource.com.tw  #redirects to postseo.hwweekly.net
+0.0.0.0 mapleleaf.com.tw  #redirects to postseo.hwweekly.net
+0.0.0.0 15-1.tw  #redirects to postseo.hwweekly.net
+0.0.0.0 tw168cm.com  #redirects to postseo.hwweekly.net
+0.0.0.0 sumitomo-rd.tw  #redirects to postseo.hwweekly.net
+0.0.0.0 chihome.com.tw  #redirects to postseo.hwweekly.net
+0.0.0.0 taiwanport.net  #redirects to postseo.hwweekly.net
+0.0.0.0 osha-pcgsaims.com.tw
+0.0.0.0 mrfisher.com.tw
+0.0.0.0 chihovet.com.tw
+0.0.0.0 hiteleg.com
+0.0.0.0 goodturns.com.tw
+0.0.0.0 justshare.live
+0.0.0.0 videopress.best  #redirects to justshare.live
+0.0.0.0 videopress.one  #redirects to justshare.live
 #!aggreg-cxyzjd: https://raw.githubusercontent.com/wdmpa/content-farm-list/main/domains/spam/cxyzjd.txt (https://github.com/wdmpa/content-farm-list)
 0.0.0.0 cxybb.com  #!aggreg-cxyzjd
 0.0.0.0 cxymm.net  #!aggreg-cxyzjd

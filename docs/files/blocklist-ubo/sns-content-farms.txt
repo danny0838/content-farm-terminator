@@ -3,7 +3,7 @@
 !     This may not work well for all cases as many things cannot be fully determined by URL.
 !     This list is mostly regex-based and may have a negative effect on performance.
 ! Expires: 3 days
-! Last modified: 2023-07-02T19:49:15+00:00
+! Last modified: 2023-07-08T13:16:23+00:00
 ! Homepage: https://danny0838.github.io/content-farm-terminator/
 ! Licence: MIT License
 ! Source: https://danny0838.github.io/content-farm-terminator/files/blocklist-ubo/sns-content-farms.txt
@@ -1595,3 +1595,4 @@
 /^https?://(?:\w+\.)?youtube\.com/@(?:user\-xr5yj9vk1q)(?=[/?#]|$)/$doc
 /^https?://(?:\w+\.)?youtube\.com/@(?:user\-lk2lx3di6t)(?=[/?#]|$)/$doc
 /^https?://(?:\w+\.)?youtube\.com/@(?:YuLeShuoBuTing)(?=[/?#]|$)/$doc
+/^https?://(?:(?:[\w-]+\.)?facebook\.com|fb\.(?:com|me))/(?!\w+\.php\?)(?:pg/)?(?:thetrader666)(?=[/?#]|$)/$doc
