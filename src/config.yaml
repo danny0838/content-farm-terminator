@@ -127,6 +127,11 @@ aggregate:
     source: https://raw.githubusercontent.com/mxt305/smashXxcnxx/main/filters/xxcnxx-list.json
     dest: src/aggregations/content-farms/xxcnxx-list.txt
     type: domains_json
+  - name: spamdex
+    homepage: https://github.com/elliotwutingfeng/SpamdexingSites
+    source: https://raw.githubusercontent.com/elliotwutingfeng/SpamdexingSites/main/blocklist.txt
+    dest: src/aggregations/content-farms/spamdex.txt
+    type: domains_txt
   # - name: penzai
     # homepage: https://github.com/wdmpa/content-farm-list
     # source: https://raw.githubusercontent.com/wdmpa/content-farm-list/main/domains/spam/g.penzai.com.txt
@@ -196,11 +201,6 @@ aggregate:
     homepage: https://github.com/YeSilin/uBlacklist
     source: https://raw.githubusercontent.com/YeSilin/uBlacklist/master/list.txt
     dest: src/aggregations/extra-content-farms/yesil.txt
-    type: ublacklist
-  - name: SpamdexingSites
-    homepage: https://github.com/elliotwutingfeng/SpamdexingSites
-    source: https://raw.githubusercontent.com/elliotwutingfeng/SpamdexingSites/main/blocklist_UBL.txt
-    dest: src/aggregations/extra-content-farms/spamdexingsites.txt
     type: ublacklist
 
 build:
