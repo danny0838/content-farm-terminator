@@ -1,6 +1,6 @@
   # Title: Content Farm Filters
   # Description: Filter for general content farms, mostly in Chinese.
-  # Last modified: 2023-07-24T12:30:04+00:00
+  # Last modified: 2023-07-24T12:31:03+00:00
   # Homepage: https://danny0838.github.io/content-farm-terminator/
   # Licence: MIT License
   # Source: https://danny0838.github.io/content-farm-terminator/files/blocklist/content-farms.txt
@@ -14689,6 +14689,17 @@ aihuhua.com
 superpark.com.hk
 finloves.com
 /^https?://(?:[\w-]+\.)*zhongguojie\.org/news//
+sciencepurview.com
+feelingsandflowers.com
+gardenencyclopedia.org
+insterne.com
+caqe.com
+stodlo.com
+roadshow-dach.com
+medicinehelpful.com
+blabto.com
+craftipsblog.com
+nowinthegarden.com
   #!aggreg-cxyzjd: https://raw.githubusercontent.com/wdmpa/content-farm-list/main/domains/spam/cxyzjd.txt (https://github.com/wdmpa/content-farm-list)
 cxybb.com #!aggreg-cxyzjd
 cxymm.net #!aggreg-cxyzjd
