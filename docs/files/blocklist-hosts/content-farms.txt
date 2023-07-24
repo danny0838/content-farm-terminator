@@ -1,6 +1,6 @@
 # Title: Content Farm Filters
 # Description: Filter for general content farms, mostly in Chinese.
-# Last modified: 2023-07-23T19:49:14+00:00
+# Last modified: 2023-07-24T12:30:04+00:00
 # Homepage: https://danny0838.github.io/content-farm-terminator/
 # Licence: MIT License
 # Source: https://danny0838.github.io/content-farm-terminator/files/blocklist-hosts/content-farms.txt
@@ -10399,7 +10399,6 @@
 0.0.0.0 rolltabus.ml  #malicious scripts
 0.0.0.0 rzeczuklini.ml  #redirects to sexgamezz.click
 0.0.0.0 tonistborjohnfolle.ga  #redirects to sexgamezz.click
-0.0.0.0 hotcar.com.tw  #redirects to tonistborjohnfolle.ga
 0.0.0.0 brother.eu  #redirects to rolltabus.ml
 0.0.0.0 contactmonkey.com  #redirects to nooddiopracenimlu.ml
 0.0.0.0 dipcas.es  #redirects to inagizkinresa.tk
