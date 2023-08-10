@@ -1,6 +1,6 @@
 # Title: Content Farm Filters
 # Description: Filter for general content farms, mostly in Chinese.
-# Last modified: 2023-08-10T16:34:12+00:00
+# Last modified: 2023-08-10T16:37:18+00:00
 # Homepage: https://danny0838.github.io/content-farm-terminator/
 # Licence: MIT License
 # Source: https://danny0838.github.io/content-farm-terminator/files/blocklist-hosts/content-farms.txt
@@ -11480,6 +11480,44 @@
 0.0.0.0 stormhammer.top  #malicious scripts
 0.0.0.0 88mbx.net  #redirects to mvgde.stormhammer.top
 0.0.0.0 polluxcastor.top  #redirects to mvgde.stormhammer.top
+0.0.0.0 hezkydiplom.cz  #redirects to fiwuwocile.digital
+0.0.0.0 web2thou.com  #redirects to fiwuwocile.digital
+0.0.0.0 ocularsurgery.clinic  #redirects to fiwuwocile.digital
+0.0.0.0 leco-shop.com  #redirects to fiwuwocile.digital
+0.0.0.0 swiftpade.com  #redirects to fiwuwocile.digital
+0.0.0.0 patmcgee-realestate.com  #redirects to fiwuwocile.digital
+0.0.0.0 microsoftonlineverify.com  #redirects to fiwuwocile.digital
+0.0.0.0 cocoandmia.com  #redirects to main.mehdigallois.fr
+0.0.0.0 uloztomedik.cz  #redirects to fiwuwocile.digital
+0.0.0.0 safeportal.cz  #redirects to fiwuwocile.digital
+0.0.0.0 paulbuehlerfotografie.ch  #redirects to fiwuwocile.digital
+0.0.0.0 bugrrace.cz  #redirects to fiwuwocile.digital
+0.0.0.0 meerkatproductions.cz  #redirects to fiwuwocile.digital
+0.0.0.0 justdoeat.ch  #redirects to fiwuwocile.digital
+0.0.0.0 anjumansadat.org  #redirects to mvgde.polluxcastor.top
+0.0.0.0 maturing.co.uk  #redirects to mvgde.polluxcastor.top
+0.0.0.0 onlinebusinesshub.net  #redirects to mvgde.polluxcastor.top
+0.0.0.0 m-wakili.com  #redirects to fiwuwocile.digital
+0.0.0.0 painworkshop.org  #redirects to mvgde.polluxcastor.top
+0.0.0.0 glgcshop.com  #redirects to fiwuwocile.digital
+0.0.0.0 aerisstudios.com  #redirects to fiwuwocile.digital
+0.0.0.0 michaconceptstore.com  #redirects to main.mehdigallois.fr
+0.0.0.0 sukbaelee.org  #redirects to fiwuwocile.digital
+0.0.0.0 wisbechpestcontrol.co.uk  #redirects to mvgde.polluxcastor.top
+0.0.0.0 therawroom.uk  #redirects to mvgde.polluxcastor.top
+0.0.0.0 notime.org  #redirects to mvgde.polluxcastor.top
+0.0.0.0 yourplanyouradvocate.org  #redirects to mvgde.polluxcastor.top
+0.0.0.0 thesurreycopperdistillery.co.uk  #redirects to mvgde.polluxcastor.top
+0.0.0.0 terrainspotting.co.uk  #redirects to mvgde.polluxcastor.top
+0.0.0.0 stacknft.net  #redirects to fiwuwocile.digital
+0.0.0.0 softwaregiants.co.uk  #redirects to mvgde.polluxcastor.top
+0.0.0.0 olimpclub.com  #redirects to fiwuwocile.digital
+0.0.0.0 acegaming888d.net  #redirects to fiwuwocile.digital
+0.0.0.0 aapexecutive.org  #redirects to mvgde.polluxcastor.top
+0.0.0.0 techinfoclub.com  #redirects to fiwuwocile.digital
+0.0.0.0 ribbeemood.live  #malicious scripts
+0.0.0.0 aeprosome.es  #redirects to 945.ribbeemood.live
+0.0.0.0 zdravicobavi.cz  #redirects to sl2.aeprosome.es
 #!aggreg-cxyzjd: https://raw.githubusercontent.com/wdmpa/content-farm-list/main/domains/spam/cxyzjd.txt (https://github.com/wdmpa/content-farm-list)
 0.0.0.0 cxybb.com  #!aggreg-cxyzjd
 0.0.0.0 cxymm.net  #!aggreg-cxyzjd
