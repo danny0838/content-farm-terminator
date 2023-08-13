@@ -1,6 +1,6 @@
 # Title: Content Farm Filters
 # Description: Filter for general content farms, mostly in Chinese.
-# Last modified: 2023-08-10T16:37:18+00:00
+# Last modified: 2023-08-13T19:49:12+00:00
 # Homepage: https://danny0838.github.io/content-farm-terminator/
 # Licence: MIT License
 # Source: https://danny0838.github.io/content-farm-terminator/files/blocklist-hosts/content-farms.txt
@@ -11828,6 +11828,7 @@
 0.0.0.0 annabonfriscopress.it  #!aggreg-spamdex
 0.0.0.0 annalisadesiata.it  #!aggreg-spamdex
 0.0.0.0 annawasij.pl  #!aggreg-spamdex
+0.0.0.0 anningafotografie.nl  #!aggreg-spamdex
 0.0.0.0 annkristin-blome.de  #!aggreg-spamdex
 0.0.0.0 anremopatowek.pl  #!aggreg-spamdex
 0.0.0.0 antalya-mg.de  #!aggreg-spamdex
@@ -11917,6 +11918,7 @@
 0.0.0.0 autopartner-doebert.de  #!aggreg-spamdex
 0.0.0.0 autospa-uniquecars.de  #!aggreg-spamdex
 0.0.0.0 autoszybychorzow.pl  #!aggreg-spamdex
+0.0.0.0 autumn-leaves-kerpen.de  #!aggreg-spamdex
 0.0.0.0 avedon.pl  #!aggreg-spamdex
 0.0.0.0 averie-gmbh.de  #!aggreg-spamdex
 0.0.0.0 avisborgosanmartino.it  #!aggreg-spamdex
@@ -12001,6 +12003,7 @@
 0.0.0.0 biorak.pl  #!aggreg-spamdex
 0.0.0.0 biotrace.pl  #!aggreg-spamdex
 0.0.0.0 bioverdeitalia.it  #!aggreg-spamdex
+0.0.0.0 bischero.ch  #!aggreg-spamdex
 0.0.0.0 bistamultiservice.it  #!aggreg-spamdex
 0.0.0.0 bistur.it  #!aggreg-spamdex
 0.0.0.0 biuroanma.pl  #!aggreg-spamdex
@@ -12021,6 +12024,7 @@
 0.0.0.0 boguszewska-dietetyk.pl  #!aggreg-spamdex
 0.0.0.0 boiliebunker.de  #!aggreg-spamdex
 0.0.0.0 bolle-willem.nl  #!aggreg-spamdex
+0.0.0.0 bombaygrillindian.es  #!aggreg-spamdex
 0.0.0.0 bonstech.eu  #!aggreg-spamdex
 0.0.0.0 booking-fotografia.de  #!aggreg-spamdex
 0.0.0.0 bootsvermietung-fuerstenberg.de  #!aggreg-spamdex
@@ -12035,6 +12039,7 @@
 0.0.0.0 brexitamsterdam.nl  #!aggreg-spamdex
 0.0.0.0 brookstreetfutures.eu  #!aggreg-spamdex
 0.0.0.0 brucehaashockey.com  #!aggreg-spamdex
+0.0.0.0 bubbleit.es  #!aggreg-spamdex
 0.0.0.0 buchhaltungbayern.de  #!aggreg-spamdex
 0.0.0.0 bughy.it  #!aggreg-spamdex
 0.0.0.0 bukowski-remonty.pl  #!aggreg-spamdex
@@ -12087,6 +12092,7 @@
 0.0.0.0 castles-hotels.com  #!aggreg-spamdex
 0.0.0.0 cateringmontejo.es  #!aggreg-spamdex
 0.0.0.0 cateringnapoziomie.pl  #!aggreg-spamdex
+0.0.0.0 catswag.ch  #!aggreg-spamdex
 0.0.0.0 cavi-sus.de  #!aggreg-spamdex
 0.0.0.0 cavour48.it  #!aggreg-spamdex
 0.0.0.0 cbdmonblog.fr  #!aggreg-spamdex
@@ -12155,6 +12161,7 @@
 0.0.0.0 cocowebsy.pl  #!aggreg-spamdex
 0.0.0.0 cofise.es  #!aggreg-spamdex
 0.0.0.0 colegiojoseescandon.es  #!aggreg-spamdex
+0.0.0.0 coloriehobby.it  #!aggreg-spamdex
 0.0.0.0 coloringpage.pics  #!aggreg-spamdex
 0.0.0.0 comiciadhoc.it  #!aggreg-spamdex
 0.0.0.0 communicatiestuderen.nl  #!aggreg-spamdex
@@ -12352,6 +12359,7 @@
 0.0.0.0 economischdoorleren.nl  #!aggreg-spamdex
 0.0.0.0 ecoupled.eu  #!aggreg-spamdex
 0.0.0.0 ecteni.eu  #!aggreg-spamdex
+0.0.0.0 ediliziatroilo.it  #!aggreg-spamdex
 0.0.0.0 edisama.it  #!aggreg-spamdex
 0.0.0.0 edisex.es  #!aggreg-spamdex
 0.0.0.0 edu-magazine.eu  #!aggreg-spamdex
@@ -12368,12 +12376,14 @@
 0.0.0.0 einkaufsbahnhof-bewegt.de  #!aggreg-spamdex
 0.0.0.0 eis-for-kids.de  #!aggreg-spamdex
 0.0.0.0 eiscafe-costa.de  #!aggreg-spamdex
+0.0.0.0 ekki-arens.de  #!aggreg-spamdex
 0.0.0.0 ekogaja.pl  #!aggreg-spamdex
 0.0.0.0 elartesanodeparla.es  #!aggreg-spamdex
 0.0.0.0 elavie.pl  #!aggreg-spamdex
 0.0.0.0 elbadivers.it  #!aggreg-spamdex
 0.0.0.0 elboitaly.pl  #!aggreg-spamdex
 0.0.0.0 elfarodelamujer.es  #!aggreg-spamdex
+0.0.0.0 elisabeth-schoch.ch  #!aggreg-spamdex
 0.0.0.0 elisastella.it  #!aggreg-spamdex
 0.0.0.0 elpsystem.pl  #!aggreg-spamdex
 0.0.0.0 elsonfm.es  #!aggreg-spamdex
@@ -12455,6 +12465,7 @@
 0.0.0.0 familienzentrum-deutenheim.de  #!aggreg-spamdex
 0.0.0.0 familydream.nl  #!aggreg-spamdex
 0.0.0.0 fancygift.de  #!aggreg-spamdex
+0.0.0.0 fapaburgos.es  #!aggreg-spamdex
 0.0.0.0 fapservice.fr  #!aggreg-spamdex
 0.0.0.0 farmaciaortopediabueno.es  #!aggreg-spamdex
 0.0.0.0 farmaciariosrosas.es  #!aggreg-spamdex
@@ -12601,6 +12612,7 @@
 0.0.0.0 gopro9.com  #!aggreg-spamdex
 0.0.0.0 gradeproject.eu  #!aggreg-spamdex
 0.0.0.0 graficheonline.it  #!aggreg-spamdex
+0.0.0.0 grafmoll.ch  #!aggreg-spamdex
 0.0.0.0 grafomanka.pl  #!aggreg-spamdex
 0.0.0.0 grappolorosso.it  #!aggreg-spamdex
 0.0.0.0 grashuepfer-im-eichholz.de  #!aggreg-spamdex
@@ -12658,6 +12670,7 @@
 0.0.0.0 hellcorp.fr  #!aggreg-spamdex
 0.0.0.0 helpi-pozyczka.pl  #!aggreg-spamdex
 0.0.0.0 herbatychwila.pl  #!aggreg-spamdex
+0.0.0.0 herzogen-cup.de  #!aggreg-spamdex
 0.0.0.0 hetkompasteraar.nl  #!aggreg-spamdex
 0.0.0.0 hifi-platform.eu  #!aggreg-spamdex
 0.0.0.0 highlevelbody.fr  #!aggreg-spamdex
@@ -12734,6 +12747,7 @@
 0.0.0.0 infanziaedintorni.it  #!aggreg-spamdex
 0.0.0.0 infinitum-dance.nl  #!aggreg-spamdex
 0.0.0.0 infinityenglishexams.es  #!aggreg-spamdex
+0.0.0.0 infodetective.es  #!aggreg-spamdex
 0.0.0.0 infopd-berlin.de  #!aggreg-spamdex
 0.0.0.0 inforia.es  #!aggreg-spamdex
 0.0.0.0 ingeschuffelen.nl  #!aggreg-spamdex
@@ -12839,6 +12853,7 @@
 0.0.0.0 klickranker.de  #!aggreg-spamdex
 0.0.0.0 klstaging.de  #!aggreg-spamdex
 0.0.0.0 klubseniorapodgorskiwalczyk.pl  #!aggreg-spamdex
+0.0.0.0 klussenvandeik.nl  #!aggreg-spamdex
 0.0.0.0 koalapaku.fr  #!aggreg-spamdex
 0.0.0.0 koenenandco.nl  #!aggreg-spamdex
 0.0.0.0 kojachi.fr  #!aggreg-spamdex
@@ -13190,6 +13205,7 @@
 0.0.0.0 nochefcookin.nl  #!aggreg-spamdex
 0.0.0.0 nokostudio.pl  #!aggreg-spamdex
 0.0.0.0 nonsolorologi.eu  #!aggreg-spamdex
+0.0.0.0 noorderflow.nl  #!aggreg-spamdex
 0.0.0.0 northsailshoes.pl  #!aggreg-spamdex
 0.0.0.0 norwichsunbeds.eu  #!aggreg-spamdex
 0.0.0.0 nostrocondominio.it  #!aggreg-spamdex
@@ -13359,6 +13375,7 @@
 0.0.0.0 prenatalia.pl  #!aggreg-spamdex
 0.0.0.0 prepperstash.pl  #!aggreg-spamdex
 0.0.0.0 presentory.de  #!aggreg-spamdex
+0.0.0.0 pressing-betty40.fr  #!aggreg-spamdex
 0.0.0.0 prestige-estate.pl  #!aggreg-spamdex
 0.0.0.0 prestige-nails.fr  #!aggreg-spamdex
 0.0.0.0 prlbikes.pl  #!aggreg-spamdex
@@ -13392,6 +13409,7 @@
 0.0.0.0 pulitibrillanti.it  #!aggreg-spamdex
 0.0.0.0 pulsandog.it  #!aggreg-spamdex
 0.0.0.0 puntoexpress.es  #!aggreg-spamdex
+0.0.0.0 puppenstube-bamberg.de  #!aggreg-spamdex
 0.0.0.0 purokawa.pl  #!aggreg-spamdex
 0.0.0.0 pygmalion-effect.fr  #!aggreg-spamdex
 0.0.0.0 pzhgp-gostyn.pl  #!aggreg-spamdex
@@ -13508,6 +13526,7 @@
 0.0.0.0 sangraphics.eu  #!aggreg-spamdex
 0.0.0.0 sani-broyeur.eu  #!aggreg-spamdex
 0.0.0.0 sanicar.es  #!aggreg-spamdex
+0.0.0.0 santolocode.de  #!aggreg-spamdex
 0.0.0.0 sarahburroni.it  #!aggreg-spamdex
 0.0.0.0 sarahgonidec.fr  #!aggreg-spamdex
 0.0.0.0 sarasazo.it  #!aggreg-spamdex
@@ -13523,6 +13542,7 @@
 0.0.0.0 scarabedejade.fr  #!aggreg-spamdex
 0.0.0.0 scenadumok.eu  #!aggreg-spamdex
 0.0.0.0 scheherasade.eu  #!aggreg-spamdex
+0.0.0.0 scherershaeusla.de  #!aggreg-spamdex
 0.0.0.0 schildersbedrijfvanmullem.nl  #!aggreg-spamdex
 0.0.0.0 schildervanhetnoorden.nl  #!aggreg-spamdex
 0.0.0.0 schiller-schule-bad-ems.de  #!aggreg-spamdex
@@ -13553,6 +13573,7 @@
 0.0.0.0 selectaparma.it  #!aggreg-spamdex
 0.0.0.0 selectosnieva.es  #!aggreg-spamdex
 0.0.0.0 semis-partyservice.de  #!aggreg-spamdex
+0.0.0.0 seniorenplattform-oberberg.de  #!aggreg-spamdex
 0.0.0.0 senli.pl  #!aggreg-spamdex
 0.0.0.0 senseofcontact.nl  #!aggreg-spamdex
 0.0.0.0 seo-katalogi.eu  #!aggreg-spamdex
@@ -13608,6 +13629,7 @@
 0.0.0.0 sobysurgical.com  #!aggreg-spamdex
 0.0.0.0 socialbyte.it  #!aggreg-spamdex
 0.0.0.0 socke519.de  #!aggreg-spamdex
+0.0.0.0 soestdijksekade822.nl  #!aggreg-spamdex
 0.0.0.0 sofiawebdesign.eu  #!aggreg-spamdex
 0.0.0.0 sognipuliti.it  #!aggreg-spamdex
 0.0.0.0 sokoll-computers.de  #!aggreg-spamdex
@@ -13846,10 +13868,12 @@
 0.0.0.0 vdbbb.de  #!aggreg-spamdex
 0.0.0.0 veelaanbiedingen.nl  #!aggreg-spamdex
 0.0.0.0 vefaselection.fr  #!aggreg-spamdex
+0.0.0.0 vehiculepedagogique.fr  #!aggreg-spamdex
 0.0.0.0 velolobby.eu  #!aggreg-spamdex
 0.0.0.0 vendetuempresa.es  #!aggreg-spamdex
 0.0.0.0 ventadeexpositoresgraficos.es  #!aggreg-spamdex
 0.0.0.0 venturearchitects.pl  #!aggreg-spamdex
+0.0.0.0 vgan.it  #!aggreg-spamdex
 0.0.0.0 viacolvento.eu  #!aggreg-spamdex
 0.0.0.0 viaexpo.eu  #!aggreg-spamdex
 0.0.0.0 vicoregio.it  #!aggreg-spamdex
