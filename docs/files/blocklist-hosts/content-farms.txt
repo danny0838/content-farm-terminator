@@ -1,6 +1,6 @@
 # Title: Content Farm Filters
 # Description: Filter for general content farms, mostly in Chinese.
-# Last modified: 2023-08-15T14:44:44+00:00
+# Last modified: 2023-08-17T12:03:18+00:00
 # Homepage: https://danny0838.github.io/content-farm-terminator/
 # Licence: MIT License
 # Source: https://danny0838.github.io/content-farm-terminator/files/blocklist-hosts/content-farms.txt
@@ -11629,6 +11629,27 @@
 0.0.0.0 pets-dote.com
 0.0.0.0 cookicway.com
 0.0.0.0 furnishwe.com
+0.0.0.0 healthy-blessed.com
+0.0.0.0 rozmarynka-bilovec.cz  #redirects to fiwuwocile.digital
+0.0.0.0 penlom.cz  #redirects to fiwuwocile.digital
+0.0.0.0 8888pgbet.com  #redirects to fiwuwocile.digital
+0.0.0.0 kompasdozivota.cz  #redirects to fiwuwocile.digital
+0.0.0.0 apanalo05.com  #redirects to fiwuwocile.digital
+0.0.0.0 777azinog1.xyz  #redirects to fiwuwocile.digital
+0.0.0.0 tuchonline.com  #redirects to fiwuwocile.digital
+0.0.0.0 22pgwin.com  #redirects to fiwuwocile.digital
+0.0.0.0 mkihvftsx.xyz  #redirects to fiwuwocile.digital
+0.0.0.0 goldoluklu.com  #redirects to fiwuwocile.digital
+0.0.0.0 pgwin4.com  #redirects to fiwuwocile.digital
+0.0.0.0 dimmosit.live  #malicious scripts
+0.0.0.0 blanc.im  #redirects to 1742.dimmosit.live
+0.0.0.0 wilhelmsdorferstube.at  #redirects to 08.blanc.im
+0.0.0.0 restaurant-charleston.fr  #redirects to sl2.aeprosome.es
+0.0.0.0 fly-free.org  #redirects to mvgde.polluxcastor.top
+0.0.0.0 geslar.es  #redirects to sl2.aeprosome.es
+0.0.0.0 botekno.online  #redirects to demolishabolish.com
+0.0.0.0 11pgwin.com  #redirects to fiwuwocile.digital
+0.0.0.0 joyfulgameo.com  #redirects to fiwuwocile.digital
 #!aggreg-cxyzjd: https://raw.githubusercontent.com/wdmpa/content-farm-list/main/domains/spam/cxyzjd.txt (https://github.com/wdmpa/content-farm-list)
 0.0.0.0 cxybb.com  #!aggreg-cxyzjd
 0.0.0.0 cxymm.net  #!aggreg-cxyzjd
