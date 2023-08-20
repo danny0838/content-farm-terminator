@@ -1,6 +1,6 @@
 # Title: Content Farm Filters
 # Description: Filter for general content farms, mostly in Chinese.
-# Last modified: 2023-08-20T08:59:04+00:00
+# Last modified: 2023-08-20T09:19:45+00:00
 # Homepage: https://danny0838.github.io/content-farm-terminator/
 # Licence: MIT License
 # Source: https://danny0838.github.io/content-farm-terminator/files/blocklist-hosts/content-farms.txt
@@ -495,7 +495,6 @@
 0.0.0.0 aagov.shop
 0.0.0.0 aalsw.com
 0.0.0.0 aap5.com
-0.0.0.0 ab6931.nbsd0923.com
 0.0.0.0 abcnews.asia
 0.0.0.0 abcsearch.cc  #redirects to ksou.cc
 0.0.0.0 ablaxy.me  #redirects to soonmiss.top
@@ -731,7 +730,6 @@
 0.0.0.0 asiamedia.tw  #指動傳播科技有限公司
 0.0.0.0 asianews.cc
 0.0.0.0 ask.com
-0.0.0.0 ask.sov5.cn
 0.0.0.0 askleather.com
 0.0.0.0 askshould.com
 0.0.0.0 askypu.cn
@@ -1006,7 +1004,6 @@
 0.0.0.0 bge45vr38f.blog.fc2.com
 0.0.0.0 bglqts.com
 0.0.0.0 bgnepal.com
-0.0.0.0 bgrte.almsh8fi.shop
 0.0.0.0 bgtero.co  #redirects to soonmiss.top
 0.0.0.0 bgyjr.com  #redirects to tspweb.com
 0.0.0.0 bh18530260.pixnet.net
@@ -1526,7 +1523,6 @@
 0.0.0.0 commreader.com
 0.0.0.0 comparestillplural.top  #malicious ads scripts
 0.0.0.0 coms.pub
-0.0.0.0 conc100.pixnet.net
 0.0.0.0 conglinds.com
 0.0.0.0 conroy712.pixnet.net
 0.0.0.0 consta28.pixnet.net
@@ -3991,7 +3987,6 @@
 0.0.0.0 jw33572043.blog.fc2.com
 0.0.0.0 jw8oo020.pixnet.net
 0.0.0.0 jwi2850lqw.pixnet.net
-0.0.0.0 jwich.chaochui010.com
 0.0.0.0 jwk73uh58k.blog.fc2.com
 0.0.0.0 jwztys.com  #歡享網
 0.0.0.0 jx21413798.pixnet.net
@@ -4957,7 +4952,6 @@
 0.0.0.0 mytieins.me  #redirects to meetwill.xyz
 0.0.0.0 mytimes.org
 0.0.0.0 mytouchstory.com
-0.0.0.0 mytz.gyamfz.com
 0.0.0.0 mywordsndwder.co  #redirects to cacnka.xyz
 0.0.0.0 myx0121gio.pixnet.net
 0.0.0.0 myytaoli.blogspot.com
@@ -9240,6 +9234,7 @@
 0.0.0.0 conc28.pixnet.net
 0.0.0.0 conc3.pixnet.net
 0.0.0.0 conc30.pixnet.net
+0.0.0.0 conc100.pixnet.net
 0.0.0.0 por.tw
 0.0.0.0 fuoridaidebiti.eu  #redirects to videoplay-on.com
 0.0.0.0 talleresreyes.eu  #redirects to videoplay-on.com
