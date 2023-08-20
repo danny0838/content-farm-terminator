@@ -1,11 +1,11 @@
 ! Title: Content Farm Filters
 ! Description: Filter for general content farms, mostly in Chinese.
 ! Expires: 3 days
-! Last modified: 2023-08-20T08:29:40+00:00
+! Last modified: 2023-08-20T08:30:15+00:00
 ! Homepage: https://danny0838.github.io/content-farm-terminator/
 ! Licence: MIT License
 ! Source: https://danny0838.github.io/content-farm-terminator/files/blocklist-ubo/content-farms.txt
-/^https?://(?!www\.)(?:[\w.-]+\.)+y2mate\.com//$doc
+/^https?://(?!www\.)(?:[\w-]+\.)+y2mate\.com//$doc
 /^https?://www\.ettoday\.net/dalemon/$doc
 /^https?://(?:[\w-]+\.)*zhongguojie\.org/news//$doc
 00000258.com
