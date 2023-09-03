@@ -1,6 +1,6 @@
 # Title: Content Farm Filters
 # Description: Filter for general content farms, mostly in Chinese.
-# Last modified: 2023-09-03T06:27:24+00:00
+# Last modified: 2023-09-03T19:49:31+00:00
 # Homepage: https://danny0838.github.io/content-farm-terminator/
 # Licence: MIT License
 # Source: https://danny0838.github.io/content-farm-terminator/files/blocklist-ublacklist/content-farms.txt
@@ -11933,6 +11933,7 @@
 *://*.1majeolomouc.eu/*  #!aggreg-spamdex
 *://*.20-kg-goldbarren.de/*  #!aggreg-spamdex
 *://*.24-rabat.pl/*  #!aggreg-spamdex
+*://*.240hz-monitor.de/*  #!aggreg-spamdex
 *://*.24volt-ecu.nl/*  #!aggreg-spamdex
 *://*.27radio.eu/*  #!aggreg-spamdex
 *://*.30jahreprenzlkomm.de/*  #!aggreg-spamdex
@@ -11943,6 +11944,7 @@
 *://*.4allfinanz.eu/*  #!aggreg-spamdex
 *://*.4lf.pl/*  #!aggreg-spamdex
 *://*.4par.eu/*  #!aggreg-spamdex
+*://*.4x100coups.fr/*  #!aggreg-spamdex
 *://*.5shgniazdo.pl/*  #!aggreg-spamdex
 *://*.600-jahre-altenbach.de/*  #!aggreg-spamdex
 *://*.a2minutidallospedale.it/*  #!aggreg-spamdex
@@ -11953,6 +11955,7 @@
 *://*.abolicorporation.fr/*  #!aggreg-spamdex
 *://*.abra-ka-dabra-decoration.fr/*  #!aggreg-spamdex
 *://*.abschleppdienst-thielmann.de/*  #!aggreg-spamdex
+*://*.absolventicum.de/*  #!aggreg-spamdex
 *://*.abteilung7bigband.de/*  #!aggreg-spamdex
 *://*.accademiadelcinemaares.it/*  #!aggreg-spamdex
 *://*.aceconseileval.fr/*  #!aggreg-spamdex
@@ -12019,6 +12022,7 @@
 *://*.alumetalicaporcuna.es/*  #!aggreg-spamdex
 *://*.alvitobello.it/*  #!aggreg-spamdex
 *://*.am-findling-ruegen.de/*  #!aggreg-spamdex
+*://*.am-sprengelkiez.de/*  #!aggreg-spamdex
 *://*.amados-tanzclub.de/*  #!aggreg-spamdex
 *://*.amatomultiservice.it/*  #!aggreg-spamdex
 *://*.ambershopkids.pl/*  #!aggreg-spamdex
@@ -12057,6 +12061,7 @@
 *://*.antonio-rivas.es/*  #!aggreg-spamdex
 *://*.antoniofuentespsico.es/*  #!aggreg-spamdex
 *://*.antonioherman.es/*  #!aggreg-spamdex
+*://*.anunturi-olanda.eu/*  #!aggreg-spamdex
 *://*.anunturipeweb.eu/*  #!aggreg-spamdex
 *://*.anunturirapide.eu/*  #!aggreg-spamdex
 *://*.anwaltsuch-service.de/*  #!aggreg-spamdex
@@ -12082,6 +12087,7 @@
 *://*.archiviogiannidova.it/*  #!aggreg-spamdex
 *://*.arcoanticobb.it/*  #!aggreg-spamdex
 *://*.arcoorion.es/*  #!aggreg-spamdex
+*://*.ardeaoltreilponte.it/*  #!aggreg-spamdex
 *://*.aristokrass.de/*  #!aggreg-spamdex
 *://*.aritex.pl/*  #!aggreg-spamdex
 *://*.armand-rochas.eu/*  #!aggreg-spamdex
@@ -12119,6 +12125,7 @@
 *://*.assoinformazioni.it/*  #!aggreg-spamdex
 *://*.assonenuphar.fr/*  #!aggreg-spamdex
 *://*.assurancescollectives.fr/*  #!aggreg-spamdex
+*://*.asv-breesen.de/*  #!aggreg-spamdex
 *://*.asyanoleggi.it/*  #!aggreg-spamdex
 *://*.asytenisa.pl/*  #!aggreg-spamdex
 *://*.ateliermakingmemories.nl/*  #!aggreg-spamdex
@@ -12139,6 +12146,7 @@
 *://*.automar-bilgoraj.pl/*  #!aggreg-spamdex
 *://*.automotoserwismikolajuk.pl/*  #!aggreg-spamdex
 *://*.autopartner-doebert.de/*  #!aggreg-spamdex
+*://*.autor-unbekannt.de/*  #!aggreg-spamdex
 *://*.autospa-uniquecars.de/*  #!aggreg-spamdex
 *://*.autoszybychorzow.pl/*  #!aggreg-spamdex
 *://*.autumn-leaves-kerpen.de/*  #!aggreg-spamdex
@@ -12162,6 +12170,7 @@
 *://*.bagheriatech.it/*  #!aggreg-spamdex
 *://*.baldoinrete.eu/*  #!aggreg-spamdex
 *://*.balkon-bebauung.de/*  #!aggreg-spamdex
+*://*.ballsfrezze.fr/*  #!aggreg-spamdex
 *://*.balustradex.pl/*  #!aggreg-spamdex
 *://*.bambulka.eu/*  #!aggreg-spamdex
 *://*.bancadeltempoavt.it/*  #!aggreg-spamdex
@@ -12207,10 +12216,12 @@
 *://*.bergaminopellet.eu/*  #!aggreg-spamdex
 *://*.berlin-arrival.de/*  #!aggreg-spamdex
 *://*.berliner-menschen-helfen.de/*  #!aggreg-spamdex
+*://*.berlinlash.de/*  #!aggreg-spamdex
 *://*.beschaeftigtentest.de/*  #!aggreg-spamdex
 *://*.bessosalou.es/*  #!aggreg-spamdex
 *://*.bestekontaktlinsen.de/*  #!aggreg-spamdex
 *://*.bestfit-dan.de/*  #!aggreg-spamdex
+*://*.beusekomit.nl/*  #!aggreg-spamdex
 *://*.bevandechiozzini.it/*  #!aggreg-spamdex
 *://*.bezirkslandfrauen-fmtk.de/*  #!aggreg-spamdex
 *://*.bezpiecznainwestycja.pl/*  #!aggreg-spamdex
@@ -12225,6 +12236,7 @@
 *://*.bijdevoordeur.nl/*  #!aggreg-spamdex
 *://*.bijougastronomica.es/*  #!aggreg-spamdex
 *://*.billigaskor.eu/*  #!aggreg-spamdex
+*://*.billybobpop.de/*  #!aggreg-spamdex
 *://*.bimosyn.eu/*  #!aggreg-spamdex
 *://*.bio-cleaner.fr/*  #!aggreg-spamdex
 *://*.bionexenergy.pl/*  #!aggreg-spamdex
@@ -12245,6 +12257,7 @@
 *://*.blumenkisterl.de/*  #!aggreg-spamdex
 *://*.blumescosmetics.it/*  #!aggreg-spamdex
 *://*.bluming-lab.fr/*  #!aggreg-spamdex
+*://*.blutegel-heilpraxis.de/*  #!aggreg-spamdex
 *://*.blutelecomunicazioni.it/*  #!aggreg-spamdex
 *://*.bo-sushi.fr/*  #!aggreg-spamdex
 *://*.bochenekmateusz.pl/*  #!aggreg-spamdex
@@ -12264,6 +12277,7 @@
 *://*.boutiquemanola.it/*  #!aggreg-spamdex
 *://*.boydhuigsloot.nl/*  #!aggreg-spamdex
 *://*.bpvdekanaalstreek.nl/*  #!aggreg-spamdex
+*://*.brasseriepompadour.fr/*  #!aggreg-spamdex
 *://*.brescianiline.it/*  #!aggreg-spamdex
 *://*.breuer-zelte.de/*  #!aggreg-spamdex
 *://*.brexitamsterdam.nl/*  #!aggreg-spamdex
@@ -12297,6 +12311,7 @@
 *://*.caminolusco.es/*  #!aggreg-spamdex
 *://*.camp-koszykarski.pl/*  #!aggreg-spamdex
 *://*.campanamedicalcenter.it/*  #!aggreg-spamdex
+*://*.campementduferlo.fr/*  #!aggreg-spamdex
 *://*.camperistaitinerante.it/*  #!aggreg-spamdex
 *://*.camping-tschechien.de/*  #!aggreg-spamdex
 *://*.camposcuolaferrara.it/*  #!aggreg-spamdex
@@ -12309,6 +12324,7 @@
 *://*.cantoliturgico.it/*  #!aggreg-spamdex
 *://*.capitanhook.es/*  #!aggreg-spamdex
 *://*.car-brilliance.eu/*  #!aggreg-spamdex
+*://*.cardamomoeduca.es/*  #!aggreg-spamdex
 *://*.carlobugada.it/*  #!aggreg-spamdex
 *://*.carniceriacharcuterialucas.es/*  #!aggreg-spamdex
 *://*.carnisseriacanmia.es/*  #!aggreg-spamdex
@@ -12372,6 +12388,7 @@
 *://*.chrzescijanka.pl/*  #!aggreg-spamdex
 *://*.cicinedda.it/*  #!aggreg-spamdex
 *://*.cies-ucsg-ec.es/*  #!aggreg-spamdex
+*://*.cincerelyyours.de/*  #!aggreg-spamdex
 *://*.cinderella-lounge.de/*  #!aggreg-spamdex
 *://*.cinselsohbet.de/*  #!aggreg-spamdex
 *://*.circolovelicoospedaletti.it/*  #!aggreg-spamdex
@@ -12390,10 +12407,13 @@
 *://*.cleocaffe.it/*  #!aggreg-spamdex
 *://*.clever-style.de/*  #!aggreg-spamdex
 *://*.clicodyssee.fr/*  #!aggreg-spamdex
+*://*.clinicacores.es/*  #!aggreg-spamdex
 *://*.clinicaveterinariasaludanimal.es/*  #!aggreg-spamdex
 *://*.clkonskie.pl/*  #!aggreg-spamdex
+*://*.clubsoundradio.de/*  #!aggreg-spamdex
 *://*.cmpulimentacion.es/*  #!aggreg-spamdex
 *://*.coal-uv.es/*  #!aggreg-spamdex
+*://*.cocolare-bloemen.nl/*  #!aggreg-spamdex
 *://*.cocowebsy.pl/*  #!aggreg-spamdex
 *://*.cofise.es/*  #!aggreg-spamdex
 *://*.colegiojoseescandon.es/*  #!aggreg-spamdex
@@ -12438,6 +12458,7 @@
 *://*.crisiena.it/*  #!aggreg-spamdex
 *://*.croceverdefaggiano.it/*  #!aggreg-spamdex
 *://*.crossfer-schnellspanner.de/*  #!aggreg-spamdex
+*://*.crossfitstendal.de/*  #!aggreg-spamdex
 *://*.crumh.fr/*  #!aggreg-spamdex
 *://*.cryotshock.it/*  #!aggreg-spamdex
 *://*.csf21.pl/*  #!aggreg-spamdex
@@ -12480,6 +12501,7 @@
 *://*.danke-fuer-nichts.de/*  #!aggreg-spamdex
 *://*.darbau-service.de/*  #!aggreg-spamdex
 *://*.darekmytych.pl/*  #!aggreg-spamdex
+*://*.das-eventtalent.de/*  #!aggreg-spamdex
 *://*.das-landhaus28.de/*  #!aggreg-spamdex
 *://*.dasrestaurant-eiche.de/*  #!aggreg-spamdex
 *://*.davecooke.eu/*  #!aggreg-spamdex
@@ -12557,6 +12579,7 @@
 *://*.dorpshuisdepaol.nl/*  #!aggreg-spamdex
 *://*.dosstrento.it/*  #!aggreg-spamdex
 *://*.dottormicelipsi.it/*  #!aggreg-spamdex
+*://*.doubledarts.de/*  #!aggreg-spamdex
 *://*.dplr.it/*  #!aggreg-spamdex
 *://*.dravyaguna.de/*  #!aggreg-spamdex
 *://*.drbeardabakkerstraat80.nl/*  #!aggreg-spamdex
@@ -12595,6 +12618,7 @@
 *://*.e-sufity.pl/*  #!aggreg-spamdex
 *://*.ea-we.de/*  #!aggreg-spamdex
 *://*.easeandsee.eu/*  #!aggreg-spamdex
+*://*.easy-voucher.de/*  #!aggreg-spamdex
 *://*.eclubpolito.it/*  #!aggreg-spamdex
 *://*.ecm-uniecampus.it/*  #!aggreg-spamdex
 *://*.eco-ricicli-filiere.it/*  #!aggreg-spamdex
@@ -12648,6 +12672,7 @@
 *://*.enne8.it/*  #!aggreg-spamdex
 *://*.ennionasoartist.it/*  #!aggreg-spamdex
 *://*.enricabottiniparrucchieri.it/*  #!aggreg-spamdex
+*://*.entreprise-pmr.fr/*  #!aggreg-spamdex
 *://*.enviedequilibre.fr/*  #!aggreg-spamdex
 *://*.envivotv.es/*  #!aggreg-spamdex
 *://*.eo2019.eu/*  #!aggreg-spamdex
@@ -12672,6 +12697,7 @@
 *://*.estedemocratica.it/*  #!aggreg-spamdex
 *://*.estetachivasso.it/*  #!aggreg-spamdex
 *://*.esteticacocomisbellezas.es/*  #!aggreg-spamdex
+*://*.esteticajoli.it/*  #!aggreg-spamdex
 *://*.estetycznymokiem.pl/*  #!aggreg-spamdex
 *://*.estherprotection.es/*  #!aggreg-spamdex
 *://*.estylshop.pl/*  #!aggreg-spamdex
@@ -12715,6 +12741,7 @@
 *://*.fanonlyskowa.de/*  #!aggreg-spamdex
 *://*.fapaburgos.es/*  #!aggreg-spamdex
 *://*.fapservice.fr/*  #!aggreg-spamdex
+*://*.farmacialombarda.it/*  #!aggreg-spamdex
 *://*.farmaciaortopediabueno.es/*  #!aggreg-spamdex
 *://*.farmaciariosrosas.es/*  #!aggreg-spamdex
 *://*.fashion-shop-2.fr/*  #!aggreg-spamdex
@@ -12723,6 +12750,7 @@
 *://*.fashionstylez.nl/*  #!aggreg-spamdex
 *://*.fastbass.de/*  #!aggreg-spamdex
 *://*.favs.pics/*  #!aggreg-spamdex
+*://*.fcblaubeuren.de/*  #!aggreg-spamdex
 *://*.fdbeaute.fr/*  #!aggreg-spamdex
 *://*.fedezu.es/*  #!aggreg-spamdex
 *://*.feelfitinbalance.nl/*  #!aggreg-spamdex
@@ -12738,6 +12766,7 @@
 *://*.fewo-kuss.de/*  #!aggreg-spamdex
 *://*.ffhf-strongman.fr/*  #!aggreg-spamdex
 *://*.fibretesting.eu/*  #!aggreg-spamdex
+*://*.fidelis-immo-lpa.fr/*  #!aggreg-spamdex
 *://*.filmypozboju.pl/*  #!aggreg-spamdex
 *://*.filtryult.pl/*  #!aggreg-spamdex
 *://*.finalwars.eu/*  #!aggreg-spamdex
@@ -12754,6 +12783,7 @@
 *://*.flaviamodista.es/*  #!aggreg-spamdex
 *://*.flechtplatz.de/*  #!aggreg-spamdex
 *://*.flexmaxthea.eu/*  #!aggreg-spamdex
+*://*.fliesenausstellung-augsburg.de/*  #!aggreg-spamdex
 *://*.flip-ports.eu/*  #!aggreg-spamdex
 *://*.flo-rider.de/*  #!aggreg-spamdex
 *://*.floradecoration.pl/*  #!aggreg-spamdex
@@ -12802,6 +12832,7 @@
 *://*.ftprivacy.cloud/*  #!aggreg-spamdex
 *://*.fuchsimwald.de/*  #!aggreg-spamdex
 *://*.fuhrmann-hochzeitsfotografie.de/*  #!aggreg-spamdex
+*://*.fundacjapl.eu/*  #!aggreg-spamdex
 *://*.fundusz-senior.pl/*  #!aggreg-spamdex
 *://*.funerariaiparraguirre.es/*  #!aggreg-spamdex
 *://*.furahabyhome.fr/*  #!aggreg-spamdex
@@ -12811,6 +12842,7 @@
 *://*.g-wood.pl/*  #!aggreg-spamdex
 *://*.gabbianello.it/*  #!aggreg-spamdex
 *://*.gaertnerei-rech.de/*  #!aggreg-spamdex
+*://*.gakker.eu/*  #!aggreg-spamdex
 *://*.galabau-trautmann.de/*  #!aggreg-spamdex
 *://*.galanteriafutrzana.pl/*  #!aggreg-spamdex
 *://*.galloway-emmeram.de/*  #!aggreg-spamdex
@@ -12862,10 +12894,12 @@
 *://*.golfcapesterel.fr/*  #!aggreg-spamdex
 *://*.goodkebab.pl/*  #!aggreg-spamdex
 *://*.gopro9.com/*  #!aggreg-spamdex
+*://*.gp-move.eu/*  #!aggreg-spamdex
 *://*.gradeproject.eu/*  #!aggreg-spamdex
 *://*.graficheonline.it/*  #!aggreg-spamdex
 *://*.grafmoll.ch/*  #!aggreg-spamdex
 *://*.grafomanka.pl/*  #!aggreg-spamdex
+*://*.grainesatouts.fr/*  #!aggreg-spamdex
 *://*.grandemaison-fontainebleau.fr/*  #!aggreg-spamdex
 *://*.grappolorosso.it/*  #!aggreg-spamdex
 *://*.grashuepfer-im-eichholz.de/*  #!aggreg-spamdex
@@ -12876,6 +12910,7 @@
 *://*.grsmembers.eu/*  #!aggreg-spamdex
 *://*.gruniverpal.fr/*  #!aggreg-spamdex
 *://*.grupisenda.es/*  #!aggreg-spamdex
+*://*.gruppodimichele.it/*  #!aggreg-spamdex
 *://*.gruppoverderoma.it/*  #!aggreg-spamdex
 *://*.gruzoperevozki.eu/*  #!aggreg-spamdex
 *://*.gsi-marex.pl/*  #!aggreg-spamdex
@@ -12925,6 +12960,7 @@
 *://*.hellcorp.fr/*  #!aggreg-spamdex
 *://*.helpi-pozyczka.pl/*  #!aggreg-spamdex
 *://*.herbatychwila.pl/*  #!aggreg-spamdex
+*://*.herrmann-simmershausen.de/*  #!aggreg-spamdex
 *://*.herzogen-cup.de/*  #!aggreg-spamdex
 *://*.hetkompasteraar.nl/*  #!aggreg-spamdex
 *://*.hifi-platform.eu/*  #!aggreg-spamdex
@@ -13047,6 +13083,7 @@
 *://*.jakdziecko.pl/*  #!aggreg-spamdex
 *://*.jamniki-szczytno.pl/*  #!aggreg-spamdex
 *://*.jaslo-hs.pl/*  #!aggreg-spamdex
+*://*.jaspero.pl/*  #!aggreg-spamdex
 *://*.javascriptkennisbank.nl/*  #!aggreg-spamdex
 *://*.javiercars.es/*  #!aggreg-spamdex
 *://*.jbbb.fr/*  #!aggreg-spamdex
@@ -13058,6 +13095,7 @@
 *://*.jestnatorada.pl/*  #!aggreg-spamdex
 *://*.jgpersonaltrainer.fr/*  #!aggreg-spamdex
 *://*.jiadamagnet.de/*  #!aggreg-spamdex
+*://*.jiraienstagecheztoi.fr/*  #!aggreg-spamdex
 *://*.jj-tauben.de/*  #!aggreg-spamdex
 *://*.jksun.de/*  #!aggreg-spamdex
 *://*.jm-assistant-administratif.fr/*  #!aggreg-spamdex
@@ -13071,6 +13109,7 @@
 *://*.jugendfeuerwehr-riepsdorf.de/*  #!aggreg-spamdex
 *://*.jugendherberge-haderslev.de/*  #!aggreg-spamdex
 *://*.jugendhilfevereinnf.de/*  #!aggreg-spamdex
+*://*.jugendinfo-hannover.de/*  #!aggreg-spamdex
 *://*.jushiert.shop/*  #!aggreg-spamdex
 *://*.justmyporn.fr/*  #!aggreg-spamdex
 *://*.juwelier-gap.de/*  #!aggreg-spamdex
@@ -13148,6 +13187,7 @@
 *://*.lacollineauxcoquelicots.fr/*  #!aggreg-spamdex
 *://*.laetifi.pl/*  #!aggreg-spamdex
 *://*.lafabriquedecellestine.fr/*  #!aggreg-spamdex
+*://*.lafder.fr/*  #!aggreg-spamdex
 *://*.lafilledelalune.fr/*  #!aggreg-spamdex
 *://*.lagarnica.es/*  #!aggreg-spamdex
 *://*.lakathini.pl/*  #!aggreg-spamdex
@@ -13156,6 +13196,7 @@
 *://*.landesjazzfestival2017.de/*  #!aggreg-spamdex
 *://*.landjugend-oesterweg.de/*  #!aggreg-spamdex
 *://*.lanuovamargellina.it/*  #!aggreg-spamdex
+*://*.laphee.fr/*  #!aggreg-spamdex
 *://*.larenaissanceverte.fr/*  #!aggreg-spamdex
 *://*.lasaludintegral.es/*  #!aggreg-spamdex
 *://*.laserllum.es/*  #!aggreg-spamdex
@@ -13184,6 +13225,7 @@
 *://*.leffeneiricordi.it/*  #!aggreg-spamdex
 *://*.legalintech.pl/*  #!aggreg-spamdex
 *://*.legalmarketing.pl/*  #!aggreg-spamdex
+*://*.lemoinebistro.de/*  #!aggreg-spamdex
 *://*.lemondeoled.fr/*  #!aggreg-spamdex
 *://*.lemontree-mobil.de/*  #!aggreg-spamdex
 *://*.lendewig-reinigung.de/*  #!aggreg-spamdex
@@ -13218,6 +13260,7 @@
 *://*.lisura.pl/*  #!aggreg-spamdex
 *://*.litalien-resto.fr/*  #!aggreg-spamdex
 *://*.little-italy-pizzeria.de/*  #!aggreg-spamdex
+*://*.littlemagics.eu/*  #!aggreg-spamdex
 *://*.littleshoes.fr/*  #!aggreg-spamdex
 *://*.livestream-rockt.de/*  #!aggreg-spamdex
 *://*.locajet.fr/*  #!aggreg-spamdex
@@ -13278,6 +13321,7 @@
 *://*.malenews.nl/*  #!aggreg-spamdex
 *://*.malewesele.pl/*  #!aggreg-spamdex
 *://*.malina-24.eu/*  #!aggreg-spamdex
+*://*.mamalila-showroom.de/*  #!aggreg-spamdex
 *://*.mamawlodzi.pl/*  #!aggreg-spamdex
 *://*.mannenpanel.nl/*  #!aggreg-spamdex
 *://*.mansarderive.it/*  #!aggreg-spamdex
@@ -13287,6 +13331,7 @@
 *://*.marcelaine.fr/*  #!aggreg-spamdex
 *://*.marcodefelicecatering.nl/*  #!aggreg-spamdex
 *://*.marekwalczak.pl/*  #!aggreg-spamdex
+*://*.mariacelico.it/*  #!aggreg-spamdex
 *://*.mariakoltschin.de/*  #!aggreg-spamdex
 *://*.marialamet.es/*  #!aggreg-spamdex
 *://*.marianogioielli.it/*  #!aggreg-spamdex
@@ -13443,6 +13488,7 @@
 *://*.nadziejazwyciestwo.pl/*  #!aggreg-spamdex
 *://*.nagareeventos.es/*  #!aggreg-spamdex
 *://*.nakshaat.eu/*  #!aggreg-spamdex
+*://*.naprawylaptopa.pl/*  #!aggreg-spamdex
 *://*.naszalaliga.pl/*  #!aggreg-spamdex
 *://*.natas-berlin.de/*  #!aggreg-spamdex
 *://*.natrzechkolach.pl/*  #!aggreg-spamdex
@@ -13469,6 +13515,7 @@
 *://*.newlifeenergy.fr/*  #!aggreg-spamdex
 *://*.newstrusted.de/*  #!aggreg-spamdex
 *://*.nice-soutien-scolaire.fr/*  #!aggreg-spamdex
+*://*.nicolasmaups.nl/*  #!aggreg-spamdex
 *://*.nidopoland.pl/*  #!aggreg-spamdex
 *://*.niebieskislon.edu.pl/*  #!aggreg-spamdex
 *://*.nikonfilmfestival.pl/*  #!aggreg-spamdex
@@ -13476,6 +13523,7 @@
 *://*.nilnunesbeaute.fr/*  #!aggreg-spamdex
 *://*.ninalawson.de/*  #!aggreg-spamdex
 *://*.nionme.de/*  #!aggreg-spamdex
+*://*.nlpwetenschap.nl/*  #!aggreg-spamdex
 *://*.noahboats.de/*  #!aggreg-spamdex
 *://*.nochefcookin.nl/*  #!aggreg-spamdex
 *://*.nokostudio.pl/*  #!aggreg-spamdex
@@ -13558,6 +13606,7 @@
 *://*.padelindooralbalat.es/*  #!aggreg-spamdex
 *://*.paestumaltocilentocultura2024.it/*  #!aggreg-spamdex
 *://*.pagarteralis.com/*  #!aggreg-spamdex
+*://*.palletkoning.nl/*  #!aggreg-spamdex
 *://*.palomaresbeach.es/*  #!aggreg-spamdex
 *://*.pamatech-profi.pl/*  #!aggreg-spamdex
 *://*.pan.dev/*  #!aggreg-spamdex
@@ -13577,6 +13626,7 @@
 *://*.passivhausmeister.de/*  #!aggreg-spamdex
 *://*.paulundruscher.de/*  #!aggreg-spamdex
 *://*.pauwer.pl/*  #!aggreg-spamdex
+*://*.pavux.fr/*  #!aggreg-spamdex
 *://*.payotik.it/*  #!aggreg-spamdex
 *://*.pbbde.eu/*  #!aggreg-spamdex
 *://*.pbprawa.pl/*  #!aggreg-spamdex
@@ -13591,6 +13641,7 @@
 *://*.percorsoprotetto.it/*  #!aggreg-spamdex
 *://*.peri-plock.pl/*  #!aggreg-spamdex
 *://*.perrosdelaisla.es/*  #!aggreg-spamdex
+*://*.pervestigo.de/*  #!aggreg-spamdex
 *://*.peter-bergmann.de/*  #!aggreg-spamdex
 *://*.peter-schmode.de/*  #!aggreg-spamdex
 *://*.petra-siemens.de/*  #!aggreg-spamdex
@@ -13614,6 +13665,7 @@
 *://*.pisaditas.es/*  #!aggreg-spamdex
 *://*.pixa-weazel.pl/*  #!aggreg-spamdex
 *://*.pizza-dop.it/*  #!aggreg-spamdex
+*://*.pizza-nonna.de/*  #!aggreg-spamdex
 *://*.pizzaclubdreux.fr/*  #!aggreg-spamdex
 *://*.pizzamozaik.fr/*  #!aggreg-spamdex
 *://*.pizzanino17.fr/*  #!aggreg-spamdex
@@ -13767,6 +13819,7 @@
 *://*.ristoranteilcolosseo.it/*  #!aggreg-spamdex
 *://*.ritabarbera.it/*  #!aggreg-spamdex
 *://*.river-estates.pl/*  #!aggreg-spamdex
+*://*.rlutz-mtc.de/*  #!aggreg-spamdex
 *://*.rmz-itzauen.de/*  #!aggreg-spamdex
 *://*.robert-janke-immobilien.de/*  #!aggreg-spamdex
 *://*.rockycreekdesigns.eu/*  #!aggreg-spamdex
@@ -13818,6 +13871,7 @@
 *://*.sarahburroni.it/*  #!aggreg-spamdex
 *://*.sarahgonidec.fr/*  #!aggreg-spamdex
 *://*.sarasazo.it/*  #!aggreg-spamdex
+*://*.sasloue.fr/*  #!aggreg-spamdex
 *://*.sat-serviciotecnicofujitsu.es/*  #!aggreg-spamdex
 *://*.saulignac2022.fr/*  #!aggreg-spamdex
 *://*.sauna-am-see-wandlitz.de/*  #!aggreg-spamdex
@@ -13868,6 +13922,7 @@
 *://*.seo-katalogi.eu/*  #!aggreg-spamdex
 *://*.serbupoker.biz/*  #!aggreg-spamdex
 *://*.sercekryspinka.eu/*  #!aggreg-spamdex
+*://*.serinco.es/*  #!aggreg-spamdex
 *://*.serpcraft.pl/*  #!aggreg-spamdex
 *://*.serremar.it/*  #!aggreg-spamdex
 *://*.serrurerie-habitat66.fr/*  #!aggreg-spamdex
@@ -13962,8 +14017,10 @@
 *://*.startupjunkies.eu/*  #!aggreg-spamdex
 *://*.stcfilm.com/*  #!aggreg-spamdex
 *://*.stefaniastefanelli.it/*  #!aggreg-spamdex
+*://*.stefanie-ahlbrecht.de/*  #!aggreg-spamdex
 *://*.stella-school.eu/*  #!aggreg-spamdex
 *://*.stellafashion.eu/*  #!aggreg-spamdex
+*://*.stephan-semrau.de/*  #!aggreg-spamdex
 *://*.stewartoverland.de/*  #!aggreg-spamdex
 *://*.stichtinggetontrack.nl/*  #!aggreg-spamdex
 *://*.stichtingont-moet.nl/*  #!aggreg-spamdex
@@ -14022,6 +14079,7 @@
 *://*.tc-westeresch.de/*  #!aggreg-spamdex
 *://*.tchp-silesia.pl/*  #!aggreg-spamdex
 *://*.tdateatro.it/*  #!aggreg-spamdex
+*://*.tdpost-select.de/*  #!aggreg-spamdex
 *://*.teana-team.es/*  #!aggreg-spamdex
 *://*.teatrocentena.it/*  #!aggreg-spamdex
 *://*.technic-carrosserie-rivat.fr/*  #!aggreg-spamdex
@@ -14090,6 +14148,7 @@
 *://*.torrepratesi.eu/*  #!aggreg-spamdex
 *://*.tourismtrends.eu/*  #!aggreg-spamdex
 *://*.tousavecalex.fr/*  #!aggreg-spamdex
+*://*.tpesolutions.fr/*  #!aggreg-spamdex
 *://*.tpve.fr/*  #!aggreg-spamdex
 *://*.traildellerocche.it/*  #!aggreg-spamdex
 *://*.trailerownia.pl/*  #!aggreg-spamdex
@@ -14132,6 +14191,7 @@
 *://*.udclazio.it/*  #!aggreg-spamdex
 *://*.uhlmann-politikberatung.de/*  #!aggreg-spamdex
 *://*.uicmantova.it/*  #!aggreg-spamdex
+*://*.uitgeverijbeste.nl/*  #!aggreg-spamdex
 *://*.ukdgb1.de/*  #!aggreg-spamdex
 *://*.ukiyo-studio.fr/*  #!aggreg-spamdex
 *://*.ukrainawzlotowie.pl/*  #!aggreg-spamdex
@@ -14176,6 +14236,7 @@
 *://*.vehiculepedagogique.fr/*  #!aggreg-spamdex
 *://*.velolobby.eu/*  #!aggreg-spamdex
 *://*.vendetuempresa.es/*  #!aggreg-spamdex
+*://*.venete-so-nicht.de/*  #!aggreg-spamdex
 *://*.ventadeexpositoresgraficos.es/*  #!aggreg-spamdex
 *://*.venturearchitects.pl/*  #!aggreg-spamdex
 *://*.verliesaanzet.nl/*  #!aggreg-spamdex
@@ -14193,6 +14254,8 @@
 *://*.vivereameglia.it/*  #!aggreg-spamdex
 *://*.viveroscentrals.es/*  #!aggreg-spamdex
 *://*.viverosvedo.es/*  #!aggreg-spamdex
+*://*.vklabogadosgava.es/*  #!aggreg-spamdex
+*://*.vklabogadosseudurgell.es/*  #!aggreg-spamdex
 *://*.vmcassistenza.it/*  #!aggreg-spamdex
 *://*.vnembassy.nl/*  #!aggreg-spamdex
 *://*.voce24.it/*  #!aggreg-spamdex
@@ -14237,6 +14300,7 @@
 *://*.wicher-pomocdrogowa.pl/*  #!aggreg-spamdex
 *://*.wielkopolska-nieruchomosci.pl/*  #!aggreg-spamdex
 *://*.wiemjak.eu/*  #!aggreg-spamdex
+*://*.wierzcholowskipremium.pl/*  #!aggreg-spamdex
 *://*.wildhunters.it/*  #!aggreg-spamdex
 *://*.wir-testen-hamburg.de/*  #!aggreg-spamdex
 *://*.wirfuermg.de/*  #!aggreg-spamdex
@@ -14278,6 +14342,7 @@
 *://*.youreca.it/*  #!aggreg-spamdex
 *://*.yslhandbags.net/*  #!aggreg-spamdex
 *://*.yummyluli.es/*  #!aggreg-spamdex
+*://*.yvoriresearch.de/*  #!aggreg-spamdex
 *://*.zabieganinoca.pl/*  #!aggreg-spamdex
 *://*.zahnarzt-debald.de/*  #!aggreg-spamdex
 *://*.zahnarzt-greifenstein-beilstein.de/*  #!aggreg-spamdex
