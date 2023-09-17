@@ -1,6 +1,6 @@
 # Title: Content Farm Filters
 # Description: Filter for general content farms, mostly in Chinese.
-# Last modified: 2023-09-17T07:37:23+00:00
+# Last modified: 2023-09-17T07:40:43+00:00
 # Homepage: https://danny0838.github.io/content-farm-terminator/
 # Licence: MIT License
 # Source: https://danny0838.github.io/content-farm-terminator/files/blocklist-ublacklist/content-farms.txt
@@ -11737,6 +11737,21 @@
 *://*.alecycling.com/*  #redirects to zxy.yepbox.fr
 *://*.syveren.ru/*  #redirects to pbz.mehdigallois.fr
 *://*.blibliread.com/*
+*://*.oasiscoworking.es/*  #redirects to sl2.aeprosome.es
+*://*.mmartshop.pl/*  #redirects to my-get-bigbonus-here.life
+*://*.firmawydawnicza.pl/*  #redirects to my-get-bigbonus-here.life
+*://*.teabotravel.com/*  #redirects to fiwuwocile.digital
+*://*.mgpz8.com/*  #redirects to fiwuwocile.digital
+*://*.63798yh.com/*  #redirects to fiwuwocile.digital
+*://*.futonandbreakfast.com/*  #redirects to fiwuwocile.digital
+*://*.designassistla.com/*  #redirects to fiwuwocile.digital
+*://*.stardustglobalventuress.com/*  #redirects to fiwuwocile.digital
+*://*.61f58d4.com/*  #redirects to fiwuwocile.digital
+*://*.mailbpg.com/*  #redirects to fiwuwocile.digital
+*://*.coachsbbq.com/*  #redirects to fiwuwocile.digital
+*://*.acessoemobile.com/*  #redirects to fiwuwocile.digital
+*://*.coccad.com/*
+*://*.babyimaster.com/*
 #!aggreg-cxyzjd: https://raw.githubusercontent.com/wdmpa/content-farm-list/main/domains/spam/cxyzjd.txt (https://github.com/wdmpa/content-farm-list)
 *://*.cxybb.com/*  #!aggreg-cxyzjd
 *://*.cxymm.net/*  #!aggreg-cxyzjd
