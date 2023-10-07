@@ -1,6 +1,6 @@
 # Title: Content Farm Filters
 # Description: Filter for general content farms, mostly in Chinese.
-# Last modified: 2023-10-03T17:05:15+00:00
+# Last modified: 2023-10-07T12:24:18+00:00
 # Homepage: https://danny0838.github.io/content-farm-terminator/
 # Licence: MIT License
 # Source: https://danny0838.github.io/content-farm-terminator/files/blocklist-hosts/content-farms.txt
@@ -884,7 +884,6 @@
 0.0.0.0 bagua5.net
 0.0.0.0 baidow.com
 0.0.0.0 baijiabo365.com
-0.0.0.0 baike.com
 0.0.0.0 bailong.pub
 0.0.0.0 baiyongqin.cc
 0.0.0.0 baiyuns.me  #redirects to cznono.xyz
