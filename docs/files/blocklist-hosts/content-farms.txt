@@ -1,6 +1,6 @@
 # Title: Content Farm Filters
 # Description: Filter for general content farms, mostly in Chinese.
-# Last modified: 2023-10-13T08:43:37+00:00
+# Last modified: 2023-10-15T19:49:14+00:00
 # Homepage: https://danny0838.github.io/content-farm-terminator/
 # Licence: MIT License
 # Source: https://danny0838.github.io/content-farm-terminator/files/blocklist-hosts/content-farms.txt
@@ -13688,6 +13688,7 @@
 0.0.0.0 kemenammo.eu  #!aggreg-spamdex
 0.0.0.0 keshop.pl  #!aggreg-spamdex
 0.0.0.0 kfz-landtechnik-behr.de  #!aggreg-spamdex
+0.0.0.0 kijkkoffie.nl  #!aggreg-spamdex
 0.0.0.0 kikigarage.pl  #!aggreg-spamdex
 0.0.0.0 kinderinfrasdorf.de  #!aggreg-spamdex
 0.0.0.0 kindertagespflege-bei-robenja.de  #!aggreg-spamdex
