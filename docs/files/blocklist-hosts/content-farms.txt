@@ -1,6 +1,6 @@
 # Title: Content Farm Filters
 # Description: Filter for general content farms, mostly in Chinese.
-# Last modified: 2023-10-22T06:43:10+00:00
+# Last modified: 2023-10-22T06:43:51+00:00
 # Homepage: https://danny0838.github.io/content-farm-terminator/
 # Licence: MIT License
 # Source: https://danny0838.github.io/content-farm-terminator/files/blocklist-hosts/content-farms.txt
@@ -10880,7 +10880,6 @@
 0.0.0.0 twittintwee.com
 0.0.0.0 vannessaplaza.com
 0.0.0.0 installati.one
-0.0.0.0 almayadeen.net
 0.0.0.0 denfallbeer.live  #malicious scripts
 0.0.0.0 sweetwins.life  #redirects to 1420.denfallbeer.live
 0.0.0.0 boroszewo.pl  #redirects to sweetwins.life
