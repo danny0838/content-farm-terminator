@@ -1,6 +1,6 @@
 # Title: Content Farm Filters
 # Description: Filter for general content farms, mostly in Chinese.
-# Last modified: 2023-10-22T19:49:18+00:00
+# Last modified: 2023-10-29T06:15:01+00:00
 # Homepage: https://danny0838.github.io/content-farm-terminator/
 # Licence: MIT License
 # Source: https://danny0838.github.io/content-farm-terminator/files/blocklist-ublacklist/content-farms.txt
@@ -12635,6 +12635,8 @@
 *://*.bloggerrella.de/*  #!aggreg-spamdex
 *://*.blogmercaderribo.es/*  #!aggreg-spamdex
 *://*.blogsg.de/*  #!aggreg-spamdex
+*://*.blogspot.de/*  #!aggreg-spamdex
+*://*.blogspot.fr/*  #!aggreg-spamdex
 *://*.blossomcoleccion.es/*  #!aggreg-spamdex
 *://*.blumarksystems.pl/*  #!aggreg-spamdex
 *://*.blumenkisterl.de/*  #!aggreg-spamdex
@@ -13064,6 +13066,7 @@
 *://*.dolinakawy.pl/*  #!aggreg-spamdex
 *://*.dolomitismartfood.it/*  #!aggreg-spamdex
 *://*.dom4d.pl/*  #!aggreg-spamdex
+*://*.domainedecaylus.fr/*  #!aggreg-spamdex
 *://*.domenicomarrazzo.it/*  #!aggreg-spamdex
 *://*.domingagulli.it/*  #!aggreg-spamdex
 *://*.dommorena.pl/*  #!aggreg-spamdex
@@ -13137,6 +13140,7 @@
 *://*.ecodnova.pl/*  #!aggreg-spamdex
 *://*.ecomise.eu/*  #!aggreg-spamdex
 *://*.economischdoorleren.nl/*  #!aggreg-spamdex
+*://*.ecosmartfire.es/*  #!aggreg-spamdex
 *://*.ecoupled.eu/*  #!aggreg-spamdex
 *://*.ecteni.eu/*  #!aggreg-spamdex
 *://*.ediliziatroilo.it/*  #!aggreg-spamdex
@@ -13509,9 +13513,6 @@
 *://*.golfcapesterel.fr/*  #!aggreg-spamdex
 *://*.gomico.de/*  #!aggreg-spamdex
 *://*.goodkebab.pl/*  #!aggreg-spamdex
-*://*.google.fr/*  #!aggreg-spamdex
-*://*.google.it/*  #!aggreg-spamdex
-*://*.googlevideo.com/*  #!aggreg-spamdex
 *://*.gootta.es/*  #!aggreg-spamdex
 *://*.gopro9.com/*  #!aggreg-spamdex
 *://*.gp-move.eu/*  #!aggreg-spamdex

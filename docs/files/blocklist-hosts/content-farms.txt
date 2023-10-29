@@ -1,6 +1,6 @@
 # Title: Content Farm Filters
 # Description: Filter for general content farms, mostly in Chinese.
-# Last modified: 2023-10-22T19:49:18+00:00
+# Last modified: 2023-10-29T06:15:01+00:00
 # Homepage: https://danny0838.github.io/content-farm-terminator/
 # Licence: MIT License
 # Source: https://danny0838.github.io/content-farm-terminator/files/blocklist-hosts/content-farms.txt
@@ -12729,6 +12729,8 @@
 0.0.0.0 bloggerrella.de  #!aggreg-spamdex
 0.0.0.0 blogmercaderribo.es  #!aggreg-spamdex
 0.0.0.0 blogsg.de  #!aggreg-spamdex
+0.0.0.0 blogspot.de  #!aggreg-spamdex
+0.0.0.0 blogspot.fr  #!aggreg-spamdex
 0.0.0.0 blossomcoleccion.es  #!aggreg-spamdex
 0.0.0.0 blumarksystems.pl  #!aggreg-spamdex
 0.0.0.0 blumenkisterl.de  #!aggreg-spamdex
@@ -13158,6 +13160,7 @@
 0.0.0.0 dolinakawy.pl  #!aggreg-spamdex
 0.0.0.0 dolomitismartfood.it  #!aggreg-spamdex
 0.0.0.0 dom4d.pl  #!aggreg-spamdex
+0.0.0.0 domainedecaylus.fr  #!aggreg-spamdex
 0.0.0.0 domenicomarrazzo.it  #!aggreg-spamdex
 0.0.0.0 domingagulli.it  #!aggreg-spamdex
 0.0.0.0 dommorena.pl  #!aggreg-spamdex
@@ -13231,6 +13234,7 @@
 0.0.0.0 ecodnova.pl  #!aggreg-spamdex
 0.0.0.0 ecomise.eu  #!aggreg-spamdex
 0.0.0.0 economischdoorleren.nl  #!aggreg-spamdex
+0.0.0.0 ecosmartfire.es  #!aggreg-spamdex
 0.0.0.0 ecoupled.eu  #!aggreg-spamdex
 0.0.0.0 ecteni.eu  #!aggreg-spamdex
 0.0.0.0 ediliziatroilo.it  #!aggreg-spamdex
@@ -13603,9 +13607,6 @@
 0.0.0.0 golfcapesterel.fr  #!aggreg-spamdex
 0.0.0.0 gomico.de  #!aggreg-spamdex
 0.0.0.0 goodkebab.pl  #!aggreg-spamdex
-0.0.0.0 google.fr  #!aggreg-spamdex
-0.0.0.0 google.it  #!aggreg-spamdex
-0.0.0.0 googlevideo.com  #!aggreg-spamdex
 0.0.0.0 gootta.es  #!aggreg-spamdex
 0.0.0.0 gopro9.com  #!aggreg-spamdex
 0.0.0.0 gp-move.eu  #!aggreg-spamdex
