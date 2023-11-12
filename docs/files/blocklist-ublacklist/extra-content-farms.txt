@@ -1,6 +1,6 @@
 # Title: Extra Content Farm Filters
 # Description: Extra filter for content-farm-like sites, mostly aggregated from other sources.
-# Last modified: 2023-11-05T19:49:17+00:00
+# Last modified: 2023-11-12T13:21:35+00:00
 # Homepage: https://danny0838.github.io/content-farm-terminator/
 # Licence: MIT License
 # Source: https://danny0838.github.io/content-farm-terminator/files/blocklist-ublacklist/extra-content-farms.txt
@@ -72569,6 +72569,7 @@
 *://*.asklobster.com/*  #!aggreg-nonpnt
 *://*.assignmenter.com/*  #!aggreg-nonpnt
 *://*.atsit.in/*  #!aggreg-nonpnt
+*://*.atwebpages.com/*  #!aggreg-nonpnt
 *://*.awshao.com/*  #!aggreg-nonpnt
 *://*.ayxbwy.com/*  #!aggreg-nonpnt
 *://*.b00h.com/*  #!aggreg-nonpnt
@@ -72584,6 +72585,7 @@
 *://*.bitwarsoft.com/*  #!aggreg-nonpnt
 *://*.bloggersideas.com/*  #!aggreg-nonpnt
 *://*.blogsbodasdeisabel.com/*  #!aggreg-nonpnt
+*://*.bmhysw.com/*  #!aggreg-nonpnt
 *://*.bmw8830.com/*  #!aggreg-nonpnt
 *://*.bohlsenpr.com/*  #!aggreg-nonpnt
 *://*.bollywoods.ru.com/*  #!aggreg-nonpnt
@@ -72627,6 +72629,7 @@
 *://*.daka111.cn/*  #!aggreg-nonpnt
 *://*.dav01.com/*  #!aggreg-nonpnt
 *://*.ddosi.org/*  #!aggreg-nonpnt
+*://*.dealmoon.co.uk/top/*  #!aggreg-nonpnt
 *://*.debian8.com/*  #!aggreg-nonpnt
 *://*.dedeapps.com/*  #!aggreg-nonpnt
 *://*.devicesfaq.com/*  #!aggreg-nonpnt
@@ -72652,6 +72655,7 @@
 *://*.eue5xbp.site/*  #!aggreg-nonpnt
 *://*.exotips.com/*  #!aggreg-nonpnt
 *://*.express.co.uk/*  #!aggreg-nonpnt
+*://*.extrabux.com/*  #!aggreg-nonpnt
 *://*.fhsas.com/*  #!aggreg-nonpnt
 *://*.fofa.so/*  #!aggreg-nonpnt
 *://*.fonedog.com/*  #!aggreg-nonpnt
@@ -72676,6 +72680,7 @@
 *://*.ghacks.net/*  #!aggreg-nonpnt
 *://*.gizchina.it/*  #!aggreg-nonpnt
 *://*.gldq123.com/*  #!aggreg-nonpnt
+*://*.glxyjqx.com/*  #!aggreg-nonpnt
 *://*.go-travels.com/*  #!aggreg-nonpnt
 *://*.gome.com.cn/*  #!aggreg-nonpnt
 *://*.gov-civil-leiria.pt/*  #!aggreg-nonpnt
@@ -72724,11 +72729,13 @@
 *://*.iqqoz.com/*  #!aggreg-nonpnt
 *://*.isdakar.org/*  #!aggreg-nonpnt
 *://*.it.net.cn/*  #!aggreg-nonpnt
+*://*.itamtech.com/catalogsearch/*  #!aggreg-nonpnt
 *://*.itecnote.com/*  #!aggreg-nonpnt
 *://*.ixigua.com/*  #!aggreg-nonpnt
 *://*.jdon.com/*  #!aggreg-nonpnt
 *://*.jhfgl.com/*  #!aggreg-nonpnt
 *://*.jiao-yiqie.info/*  #!aggreg-nonpnt
+*://*.jiqiren999.com/*  #!aggreg-nonpnt
 *://*.jiyimusic.com/*  #!aggreg-nonpnt
 *://*.jkzh.net/*  #!aggreg-nonpnt
 *://*.jnw.cc/*  #!aggreg-nonpnt
@@ -72736,6 +72743,7 @@
 *://*.juejin.cn/s/*  #!aggreg-nonpnt
 *://*.jugomobile.com/*  #!aggreg-nonpnt
 *://*.juhebbs.com/*  #!aggreg-nonpnt
+*://*.juyifx.cn/*  #!aggreg-nonpnt
 *://*.juzhekooo.com/*  #!aggreg-nonpnt
 *://*.jynews.net/*  #!aggreg-nonpnt
 *://*.jzhcgm.com/*  #!aggreg-nonpnt
@@ -72762,6 +72770,7 @@
 *://*.liyi1688.com/*  #!aggreg-nonpnt
 *://*.lovfp.com/*  #!aggreg-nonpnt
 *://*.lsbin.com/*  #!aggreg-nonpnt
+*://*.luyouqi.com/*  #!aggreg-nonpnt
 *://*.macsc.com/*  #!aggreg-nonpnt
 *://*.macxf.com/*  #!aggreg-nonpnt
 *://*.macz.com/*  #!aggreg-nonpnt
@@ -72935,6 +72944,7 @@
 *://*.urtasker.com/*  #!aggreg-nonpnt
 *://*.ux6.com/*  #!aggreg-nonpnt
 *://*.v2ex.com/amp/*  #!aggreg-nonpnt
+*://*.vectormagic.com/*  #!aggreg-nonpnt
 *://*.versus.com/*  #!aggreg-nonpnt
 *://*.vimsky.com/*  #!aggreg-nonpnt
 *://*.vlexpert.com/*  #!aggreg-nonpnt
@@ -72984,6 +72994,7 @@
 *://*.xn----8sbnnlfdiifnglmc.xn--p1ai/*  #!aggreg-nonpnt
 *://*.xnntw.com/*  #!aggreg-nonpnt
 *://*.xujun.org/*  #!aggreg-nonpnt
+*://*.xyjqxi.com/*  #!aggreg-nonpnt
 *://*.xykjsqg.com/*  #!aggreg-nonpnt
 *://*.xyttt.com/*  #!aggreg-nonpnt
 *://*.xzlbjg.com/*  #!aggreg-nonpnt
@@ -73881,7 +73892,6 @@
 *://*.europa.eu/*  #!aggreg-scyrte
 *://*.eventbrite.ca/*  #!aggreg-scyrte
 *://*.eventbrite.com/*  #!aggreg-scyrte
-*://*.extrabux.com/*  #!aggreg-scyrte
 *://*.fabaoonline.com/*  #!aggreg-scyrte
 *://*.fablabs.io/*  #!aggreg-scyrte
 *://*.famke.co.za/*  #!aggreg-scyrte

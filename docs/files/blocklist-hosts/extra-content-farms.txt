@@ -1,6 +1,6 @@
 # Title: Extra Content Farm Filters
 # Description: Extra filter for content-farm-like sites, mostly aggregated from other sources.
-# Last modified: 2023-11-05T19:49:17+00:00
+# Last modified: 2023-11-12T13:21:35+00:00
 # Homepage: https://danny0838.github.io/content-farm-terminator/
 # Licence: MIT License
 # Source: https://danny0838.github.io/content-farm-terminator/files/blocklist-hosts/extra-content-farms.txt
@@ -72492,6 +72492,7 @@
 0.0.0.0 asklobster.com  #!aggreg-nonpnt
 0.0.0.0 assignmenter.com  #!aggreg-nonpnt
 0.0.0.0 atsit.in  #!aggreg-nonpnt
+0.0.0.0 atwebpages.com  #!aggreg-nonpnt
 0.0.0.0 awshao.com  #!aggreg-nonpnt
 0.0.0.0 ayxbwy.com  #!aggreg-nonpnt
 0.0.0.0 b00h.com  #!aggreg-nonpnt
@@ -72506,6 +72507,7 @@
 0.0.0.0 bitwarsoft.com  #!aggreg-nonpnt
 0.0.0.0 bloggersideas.com  #!aggreg-nonpnt
 0.0.0.0 blogsbodasdeisabel.com  #!aggreg-nonpnt
+0.0.0.0 bmhysw.com  #!aggreg-nonpnt
 0.0.0.0 bmw8830.com  #!aggreg-nonpnt
 0.0.0.0 bohlsenpr.com  #!aggreg-nonpnt
 0.0.0.0 bollywoods.ru.com  #!aggreg-nonpnt
@@ -72571,6 +72573,7 @@
 0.0.0.0 eue5xbp.site  #!aggreg-nonpnt
 0.0.0.0 exotips.com  #!aggreg-nonpnt
 0.0.0.0 express.co.uk  #!aggreg-nonpnt
+0.0.0.0 extrabux.com  #!aggreg-nonpnt
 0.0.0.0 fhsas.com  #!aggreg-nonpnt
 0.0.0.0 fofa.so  #!aggreg-nonpnt
 0.0.0.0 fonedog.com  #!aggreg-nonpnt
@@ -72594,6 +72597,7 @@
 0.0.0.0 ghacks.net  #!aggreg-nonpnt
 0.0.0.0 gizchina.it  #!aggreg-nonpnt
 0.0.0.0 gldq123.com  #!aggreg-nonpnt
+0.0.0.0 glxyjqx.com  #!aggreg-nonpnt
 0.0.0.0 go-travels.com  #!aggreg-nonpnt
 0.0.0.0 gome.com.cn  #!aggreg-nonpnt
 0.0.0.0 gov-civil-leiria.pt  #!aggreg-nonpnt
@@ -72646,12 +72650,14 @@
 0.0.0.0 jdon.com  #!aggreg-nonpnt
 0.0.0.0 jhfgl.com  #!aggreg-nonpnt
 0.0.0.0 jiao-yiqie.info  #!aggreg-nonpnt
+0.0.0.0 jiqiren999.com  #!aggreg-nonpnt
 0.0.0.0 jiyimusic.com  #!aggreg-nonpnt
 0.0.0.0 jkzh.net  #!aggreg-nonpnt
 0.0.0.0 jnw.cc  #!aggreg-nonpnt
 0.0.0.0 jqgcs123.com  #!aggreg-nonpnt
 0.0.0.0 jugomobile.com  #!aggreg-nonpnt
 0.0.0.0 juhebbs.com  #!aggreg-nonpnt
+0.0.0.0 juyifx.cn  #!aggreg-nonpnt
 0.0.0.0 juzhekooo.com  #!aggreg-nonpnt
 0.0.0.0 jynews.net  #!aggreg-nonpnt
 0.0.0.0 jzhcgm.com  #!aggreg-nonpnt
@@ -72676,6 +72682,7 @@
 0.0.0.0 liyi1688.com  #!aggreg-nonpnt
 0.0.0.0 lovfp.com  #!aggreg-nonpnt
 0.0.0.0 lsbin.com  #!aggreg-nonpnt
+0.0.0.0 luyouqi.com  #!aggreg-nonpnt
 0.0.0.0 macsc.com  #!aggreg-nonpnt
 0.0.0.0 macxf.com  #!aggreg-nonpnt
 0.0.0.0 macz.com  #!aggreg-nonpnt
@@ -72840,6 +72847,7 @@
 0.0.0.0 uosohyc.site  #!aggreg-nonpnt
 0.0.0.0 urtasker.com  #!aggreg-nonpnt
 0.0.0.0 ux6.com  #!aggreg-nonpnt
+0.0.0.0 vectormagic.com  #!aggreg-nonpnt
 0.0.0.0 versus.com  #!aggreg-nonpnt
 0.0.0.0 vimsky.com  #!aggreg-nonpnt
 0.0.0.0 vlexpert.com  #!aggreg-nonpnt
@@ -72886,6 +72894,7 @@
 0.0.0.0 xn----8sbnnlfdiifnglmc.xn--p1ai  #!aggreg-nonpnt
 0.0.0.0 xnntw.com  #!aggreg-nonpnt
 0.0.0.0 xujun.org  #!aggreg-nonpnt
+0.0.0.0 xyjqxi.com  #!aggreg-nonpnt
 0.0.0.0 xykjsqg.com  #!aggreg-nonpnt
 0.0.0.0 xyttt.com  #!aggreg-nonpnt
 0.0.0.0 xzlbjg.com  #!aggreg-nonpnt
@@ -73735,7 +73744,6 @@
 0.0.0.0 europa.eu  #!aggreg-scyrte
 0.0.0.0 eventbrite.ca  #!aggreg-scyrte
 0.0.0.0 eventbrite.com  #!aggreg-scyrte
-0.0.0.0 extrabux.com  #!aggreg-scyrte
 0.0.0.0 fabaoonline.com  #!aggreg-scyrte
 0.0.0.0 fablabs.io  #!aggreg-scyrte
 0.0.0.0 famke.co.za  #!aggreg-scyrte
