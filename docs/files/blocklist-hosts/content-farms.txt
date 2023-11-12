@@ -1,6 +1,6 @@
 # Title: Content Farm Filters
 # Description: Filter for general content farms, mostly in Chinese.
-# Last modified: 2023-11-12T13:21:35+00:00
+# Last modified: 2023-11-12T13:25:10+00:00
 # Homepage: https://danny0838.github.io/content-farm-terminator/
 # Licence: MIT License
 # Source: https://danny0838.github.io/content-farm-terminator/files/blocklist-hosts/content-farms.txt
@@ -12083,6 +12083,16 @@
 0.0.0.0 sajew.net
 0.0.0.0 nanyang.news  #redirects to video.cklive.live
 0.0.0.0 7otech.com
+0.0.0.0 imagebunk.com
+0.0.0.0 tzxzsh.com
+0.0.0.0 jhzxd.com
+0.0.0.0 miogiornale.com
+0.0.0.0 ptt-carshop.tw
+0.0.0.0 idforread.com
+0.0.0.0 mopress.io
+0.0.0.0 vodsilo.cc
+0.0.0.0 hknews.me  #redirects to coms.pub
+0.0.0.0 lovers521.com
 #!aggreg-cxyzjd: https://raw.githubusercontent.com/wdmpa/content-farm-list/main/domains/spam/cxyzjd.txt (https://github.com/wdmpa/content-farm-list)
 0.0.0.0 cxybb.com  #!aggreg-cxyzjd
 0.0.0.0 cxymm.net  #!aggreg-cxyzjd
