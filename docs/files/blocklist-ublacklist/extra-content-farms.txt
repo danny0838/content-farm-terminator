@@ -1,6 +1,6 @@
 # Title: Extra Content Farm Filters
 # Description: Extra filter for content-farm-like sites, mostly aggregated from other sources.
-# Last modified: 2023-11-19T19:49:11+00:00
+# Last modified: 2023-11-26T19:49:01+00:00
 # Homepage: https://danny0838.github.io/content-farm-terminator/
 # Licence: MIT License
 # Source: https://danny0838.github.io/content-farm-terminator/files/blocklist-ublacklist/extra-content-farms.txt
@@ -72845,6 +72845,7 @@
 *://*.qu-qu.net/*  #!aggreg-nonpnt
 *://*.qumiaodong.com/*  #!aggreg-nonpnt
 *://*.qunkong.com.cn/*  #!aggreg-nonpnt
+*://*.qyyd5g.top/*  #!aggreg-nonpnt
 *://*.raysync.cn/*  #!aggreg-nonpnt
 *://*.redian.news/*  #!aggreg-nonpnt
 *://*.remosoftware.com/*  #!aggreg-nonpnt
@@ -73120,6 +73121,7 @@
 *://*.gfgyyq.com/*  #!aggreg-nonpnt
 *://*.ggchewl.com/*  #!aggreg-nonpnt
 *://*.giskaa.com/*  #!aggreg-nonpnt
+*://github.com/qyyd5g/*  #!aggreg-nonpnt
 *://*.guolianglaoshi.com/*  #!aggreg-nonpnt
 *://*.hairunwatertr.com/*  #!aggreg-nonpnt
 *://*.hantenglaw.com/*  #!aggreg-nonpnt
