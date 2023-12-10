@@ -1,7 +1,7 @@
 ! Title: Content Farm Filters
 ! Description: Filter for general content farms, mostly in Chinese.
 ! Expires: 3 days
-! Last modified: 2023-12-07T15:54:28+00:00
+! Last modified: 2023-12-10T14:19:15+00:00
 ! Homepage: https://danny0838.github.io/content-farm-terminator/
 ! Licence: MIT License
 ! Source: https://danny0838.github.io/content-farm-terminator/files/blocklist-ubo/content-farms.txt
@@ -15341,6 +15341,16 @@ digitalixy.com
 ball-lah.com
 duidaima.com
 bedeutungonline.de
+academic-accelerator.com
+coreforger.top  #malicious scripts
+rhpin.altairaquilae.top  #redirects to rhpin.coreforger.top
+go.mnaspm.com  #redirects to stripchat.com
+twinfill.com  #redirects to go.mnaspm.com
+pricklywolf.com  #redirects to twinfill.com
+retwyia.com  #redirects to pricklywolf.com
+termansia.com  #redirects to pricklywolf.com
+erwsiwc.com  #redirects to pricklywolf.com
+malinasi.com  #redirects to pricklywolf.com
 #!aggreg-cxyzjd: https://raw.githubusercontent.com/wdmpa/content-farm-list/main/domains/spam/cxyzjd.txt (https://github.com/wdmpa/content-farm-list)
 cxybb.com  #!aggreg-cxyzjd
 cxymm.net  #!aggreg-cxyzjd
