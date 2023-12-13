@@ -2,7 +2,7 @@
   # Description: Filter for content-farm-like or related social network service (SNS) URLs, mostly in Chinese.
   #     This may not work well for all cases as many things cannot be fully determined by URL.
   #     This list is mostly regex-based and may have a negative effect on performance.
-  # Last modified: 2023-12-10T19:49:16+00:00
+  # Last modified: 2023-12-13T13:00:27+00:00
   # Homepage: https://danny0838.github.io/content-farm-terminator/
   # Licence: MIT License
   # Source: https://danny0838.github.io/content-farm-terminator/files/blocklist/sns-content-farms.txt
@@ -1628,14 +1628,13 @@
 /^https?://(?:(?:[\w-]+\.)?facebook\.com|fb\.(?:com|me))/(?:(?:(?:pg/)?(?:[\w%]+-)?|profile/|people/[\w%-]+/|groups/[0-9a-z.]+/user/)(?=\d+\b)|(?:profile|permalink|story)\.php\?(?:[^&#]*&)*?id=(?=\d+(?:[&#]|$)))(?:100068149994819)/
 /^https?://(?:(?:[\w-]+\.)?facebook\.com|fb\.(?:com|me))/(?!\w+\.php\?)(?:pg/)?(?:thaihitsong)(?=[/?#]|$)/
 /^https?://(?:(?:[\w-]+\.)?facebook\.com|fb\.(?:com|me))/(?!\w+\.php\?)(?:pg/)?(?:foodtone\.hk)(?=[/?#]|$)/
-/^https?://(?:\w+\.)?youtube\.com/@(?:@just6025)(?=[/?#]|$)/
-/^https?://(?:\w+\.)?youtube\.com/@(?:@user\-qj3fw5jp8d)(?=[/?#]|$)/
-/^https?://(?:\w+\.)?youtube\.com/@(?:@user\-nf2ou3lg3e)(?=[/?#]|$)/
+/^https?://(?:\w+\.)?youtube\.com/@(?:just6025)(?=[/?#]|$)/
+/^https?://(?:\w+\.)?youtube\.com/@(?:user\-qj3fw5jp8d)(?=[/?#]|$)/
+/^https?://(?:\w+\.)?youtube\.com/@(?:user\-nf2ou3lg3e)(?=[/?#]|$)/
 /^https?://(?:(?:[\w-]+\.)?facebook\.com|fb\.(?:com|me))/(?!\w+\.php\?)(?:pg/)?(?:people\.article)(?=[/?#]|$)/
 /^https?://(?:(?:[\w-]+\.)?facebook\.com|fb\.(?:com|me))/(?!\w+\.php\?)(?:pg/)?(?:we\.like\.to\.share)(?=[/?#]|$)/
 /^https?://(?:(?:[\w-]+\.)?facebook\.com|fb\.(?:com|me))/(?:(?:(?:pg/)?(?:[\w%]+-)?|profile/|people/[\w%-]+/|groups/[0-9a-z.]+/user/)(?=\d+\b)|(?:profile|permalink|story)\.php\?(?:[^&#]*&)*?id=(?=\d+(?:[&#]|$)))(?:100069224396054)/
 /^https?://(?:(?:[\w-]+\.)?facebook\.com|fb\.(?:com|me))/(?:(?:(?:pg/)?(?:[\w%]+-)?|profile/|people/[\w%-]+/|groups/[0-9a-z.]+/user/)(?=\d+\b)|(?:profile|permalink|story)\.php\?(?:[^&#]*&)*?id=(?=\d+(?:[&#]|$)))(?:100057854978457)/
-/^https?://(?:\w+\.)?youtube\.com/@(?:just6025)(?=[/?#]|$)/
 /^https?://(?:\w+\.)?youtube\.com/@(?:user\-hw2dr6mx2x)(?=[/?#]|$)/
 /^https?://(?:\w+\.)?youtube\.com/channel/(?:UCfmhgy\-jmq_P2m\-rSXsEq3g)(?=[/?#]|$)/
 /^https?://(?:(?:[\w-]+\.)?facebook\.com|fb\.(?:com|me))/(?!\w+\.php\?)(?:pg/)?(?:StardomShow)(?=[/?#]|$)/
@@ -1650,7 +1649,7 @@
 /^https?://(?:(?:[\w-]+\.)?facebook\.com|fb\.(?:com|me))/(?:(?:(?:pg/)?(?:[\w%]+-)?|profile/|people/[\w%-]+/|groups/[0-9a-z.]+/user/)(?=\d+\b)|(?:profile|permalink|story)\.php\?(?:[^&#]*&)*?id=(?=\d+(?:[&#]|$)))(?:100082953741496)/
 /^https?://(?:(?:[\w-]+\.)?facebook\.com|fb\.(?:com|me))/(?:(?:(?:pg/)?(?:[\w%]+-)?|profile/|people/[\w%-]+/|groups/[0-9a-z.]+/user/)(?=\d+\b)|(?:profile|permalink|story)\.php\?(?:[^&#]*&)*?id=(?=\d+(?:[&#]|$)))(?:100088986756086)/
 /^https?://(?:(?:[\w-]+\.)?facebook\.com|fb\.(?:com|me))/(?!\w+\.php\?)(?:pg/)?(?:man9on9)(?=[/?#]|$)/
-/^https?://(?:\w+\.)?youtube\.com/@(?:@SpicyEvaluationEntertainment)(?=[/?#]|$)/
+/^https?://(?:\w+\.)?youtube\.com/@(?:SpicyEvaluationEntertainment)(?=[/?#]|$)/
 /^https?://(?:(?:[\w-]+\.)?facebook\.com|fb\.(?:com|me))/(?!\w+\.php\?)(?:pg/)?(?:lapingyuquan)(?=[/?#]|$)/
 /^https?://(?:(?:[\w-]+\.)?facebook\.com|fb\.(?:com|me))/(?!\w+\.php\?)(?:pg/)?(?:footballlah)(?=[/?#]|$)/
 /^https?://(?:(?:[\w-]+\.)?facebook\.com|fb\.(?:com|me))/(?!\w+\.php\?)(?:pg/)?(?:Yuxuan\.FC)(?=[/?#]|$)/
