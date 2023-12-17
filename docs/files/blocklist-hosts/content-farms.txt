@@ -1,6 +1,6 @@
 # Title: Content Farm Filters
 # Description: Filter for general content farms, mostly in Chinese.
-# Last modified: 2023-12-13T13:08:48+00:00
+# Last modified: 2023-12-17T19:49:13+00:00
 # Homepage: https://danny0838.github.io/content-farm-terminator/
 # Licence: MIT License
 # Source: https://danny0838.github.io/content-farm-terminator/files/blocklist-hosts/content-farms.txt
@@ -12391,6 +12391,7 @@
 0.0.0.0 agora-albatros.pl  #!aggreg-spamdex
 0.0.0.0 agora-journal.fr  #!aggreg-spamdex
 0.0.0.0 agronomie-services.fr  #!aggreg-spamdex
+0.0.0.0 agrotrebol.es  #!aggreg-spamdex
 0.0.0.0 ahtownetrze.pl  #!aggreg-spamdex
 0.0.0.0 ai-technology.it  #!aggreg-spamdex
 0.0.0.0 airsies.pl  #!aggreg-spamdex
@@ -12820,6 +12821,7 @@
 0.0.0.0 business-meeting-kassel.de  #!aggreg-spamdex
 0.0.0.0 business4coffee.eu  #!aggreg-spamdex
 0.0.0.0 businesscenter-vodafone.de  #!aggreg-spamdex
+0.0.0.0 buzztron.nl  #!aggreg-spamdex
 0.0.0.0 byanya.pl  #!aggreg-spamdex
 0.0.0.0 byblondmerkstein.de  #!aggreg-spamdex
 0.0.0.0 bzdetowo.pl  #!aggreg-spamdex
@@ -13239,6 +13241,8 @@
 0.0.0.0 dvirtex.eu  #!aggreg-spamdex
 0.0.0.0 dwabratanki.eu  #!aggreg-spamdex
 0.0.0.0 dworek-mieszczanski.pl  #!aggreg-spamdex
+0.0.0.0 dynamorphq.nl  #!aggreg-spamdex
+0.0.0.0 dynaway.nl  #!aggreg-spamdex
 0.0.0.0 dyskretnykontakt.pl  #!aggreg-spamdex
 0.0.0.0 dywany-miks.pl  #!aggreg-spamdex
 0.0.0.0 dzaviech.fr  #!aggreg-spamdex
@@ -13677,6 +13681,7 @@
 0.0.0.0 gruniverpal.fr  #!aggreg-spamdex
 0.0.0.0 gruparenovatio.pl  #!aggreg-spamdex
 0.0.0.0 grupisenda.es  #!aggreg-spamdex
+0.0.0.0 grupolimpio.es  #!aggreg-spamdex
 0.0.0.0 gruppoautoclass.it  #!aggreg-spamdex
 0.0.0.0 gruppodimichele.it  #!aggreg-spamdex
 0.0.0.0 gruppoverderoma.it  #!aggreg-spamdex
@@ -13875,6 +13880,7 @@
 0.0.0.0 innovatehub.nl  #!aggreg-spamdex
 0.0.0.0 innovation-entwicklung.de  #!aggreg-spamdex
 0.0.0.0 innovaxa.nl  #!aggreg-spamdex
+0.0.0.0 innoviaz.nl  #!aggreg-spamdex
 0.0.0.0 innovme.nl  #!aggreg-spamdex
 0.0.0.0 inpraiseofchina.com  #!aggreg-spamdex
 0.0.0.0 insel-poel-landhaus-am-meer.de  #!aggreg-spamdex
@@ -14847,6 +14853,7 @@
 0.0.0.0 promobologna.it  #!aggreg-spamdex
 0.0.0.0 promoloco.it  #!aggreg-spamdex
 0.0.0.0 promoteur-lemistral.fr  #!aggreg-spamdex
+0.0.0.0 prosilvestre.es  #!aggreg-spamdex
 0.0.0.0 protectus.es  #!aggreg-spamdex
 0.0.0.0 protezioneciviletriggiano-ba.it  #!aggreg-spamdex
 0.0.0.0 provanto.pl  #!aggreg-spamdex
@@ -15095,6 +15102,7 @@
 0.0.0.0 schwarzbauer-online.de  #!aggreg-spamdex
 0.0.0.0 schwestern-kaufhaus.de  #!aggreg-spamdex
 0.0.0.0 schwurverband.de  #!aggreg-spamdex
+0.0.0.0 scopeio.nl  #!aggreg-spamdex
 0.0.0.0 scoppitoservizi.it  #!aggreg-spamdex
 0.0.0.0 scopusrevista.es  #!aggreg-spamdex
 0.0.0.0 scotbugey.fr  #!aggreg-spamdex
@@ -15207,6 +15215,7 @@
 0.0.0.0 sokoll-computers.de  #!aggreg-spamdex
 0.0.0.0 solenita.pl  #!aggreg-spamdex
 0.0.0.0 solis-online.de  #!aggreg-spamdex
+0.0.0.0 solucionsreals.es  #!aggreg-spamdex
 0.0.0.0 solutions-entreprise.fr  #!aggreg-spamdex
 0.0.0.0 sonnenblick-wildenfels.de  #!aggreg-spamdex
 0.0.0.0 sopchy.de  #!aggreg-spamdex
@@ -15366,6 +15375,7 @@
 0.0.0.0 techify.it  #!aggreg-spamdex
 0.0.0.0 technic-carrosserie-rivat.fr  #!aggreg-spamdex
 0.0.0.0 technikigrzewcze-widera.pl  #!aggreg-spamdex
+0.0.0.0 technixo.nl  #!aggreg-spamdex
 0.0.0.0 technotronik-konin.pl  #!aggreg-spamdex
 0.0.0.0 teddys-reifenmarkt.de  #!aggreg-spamdex
 0.0.0.0 teicasa.it  #!aggreg-spamdex
@@ -15701,6 +15711,7 @@
 0.0.0.0 x3mediastudio.it  #!aggreg-spamdex
 0.0.0.0 xbinary.it  #!aggreg-spamdex
 0.0.0.0 xellia.nl  #!aggreg-spamdex
+0.0.0.0 xelliz.nl  #!aggreg-spamdex
 0.0.0.0 xfiles.es  #!aggreg-spamdex
 0.0.0.0 xiaogirls.com  #!aggreg-spamdex
 0.0.0.0 xinvoice.biz  #!aggreg-spamdex

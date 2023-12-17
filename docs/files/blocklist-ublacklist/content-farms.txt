@@ -1,6 +1,6 @@
 # Title: Content Farm Filters
 # Description: Filter for general content farms, mostly in Chinese.
-# Last modified: 2023-12-13T13:08:48+00:00
+# Last modified: 2023-12-17T19:49:13+00:00
 # Homepage: https://danny0838.github.io/content-farm-terminator/
 # Licence: MIT License
 # Source: https://danny0838.github.io/content-farm-terminator/files/blocklist-ublacklist/content-farms.txt
@@ -12297,6 +12297,7 @@
 *://*.agora-albatros.pl/*  #!aggreg-spamdex
 *://*.agora-journal.fr/*  #!aggreg-spamdex
 *://*.agronomie-services.fr/*  #!aggreg-spamdex
+*://*.agrotrebol.es/*  #!aggreg-spamdex
 *://*.ahtownetrze.pl/*  #!aggreg-spamdex
 *://*.ai-technology.it/*  #!aggreg-spamdex
 *://*.airsies.pl/*  #!aggreg-spamdex
@@ -12726,6 +12727,7 @@
 *://*.business-meeting-kassel.de/*  #!aggreg-spamdex
 *://*.business4coffee.eu/*  #!aggreg-spamdex
 *://*.businesscenter-vodafone.de/*  #!aggreg-spamdex
+*://*.buzztron.nl/*  #!aggreg-spamdex
 *://*.byanya.pl/*  #!aggreg-spamdex
 *://*.byblondmerkstein.de/*  #!aggreg-spamdex
 *://*.bzdetowo.pl/*  #!aggreg-spamdex
@@ -13145,6 +13147,8 @@
 *://*.dvirtex.eu/*  #!aggreg-spamdex
 *://*.dwabratanki.eu/*  #!aggreg-spamdex
 *://*.dworek-mieszczanski.pl/*  #!aggreg-spamdex
+*://*.dynamorphq.nl/*  #!aggreg-spamdex
+*://*.dynaway.nl/*  #!aggreg-spamdex
 *://*.dyskretnykontakt.pl/*  #!aggreg-spamdex
 *://*.dywany-miks.pl/*  #!aggreg-spamdex
 *://*.dzaviech.fr/*  #!aggreg-spamdex
@@ -13583,6 +13587,7 @@
 *://*.gruniverpal.fr/*  #!aggreg-spamdex
 *://*.gruparenovatio.pl/*  #!aggreg-spamdex
 *://*.grupisenda.es/*  #!aggreg-spamdex
+*://*.grupolimpio.es/*  #!aggreg-spamdex
 *://*.gruppoautoclass.it/*  #!aggreg-spamdex
 *://*.gruppodimichele.it/*  #!aggreg-spamdex
 *://*.gruppoverderoma.it/*  #!aggreg-spamdex
@@ -13781,6 +13786,7 @@
 *://*.innovatehub.nl/*  #!aggreg-spamdex
 *://*.innovation-entwicklung.de/*  #!aggreg-spamdex
 *://*.innovaxa.nl/*  #!aggreg-spamdex
+*://*.innoviaz.nl/*  #!aggreg-spamdex
 *://*.innovme.nl/*  #!aggreg-spamdex
 *://*.inpraiseofchina.com/*  #!aggreg-spamdex
 *://*.insel-poel-landhaus-am-meer.de/*  #!aggreg-spamdex
@@ -14753,6 +14759,7 @@
 *://*.promobologna.it/*  #!aggreg-spamdex
 *://*.promoloco.it/*  #!aggreg-spamdex
 *://*.promoteur-lemistral.fr/*  #!aggreg-spamdex
+*://*.prosilvestre.es/*  #!aggreg-spamdex
 *://*.protectus.es/*  #!aggreg-spamdex
 *://*.protezioneciviletriggiano-ba.it/*  #!aggreg-spamdex
 *://*.provanto.pl/*  #!aggreg-spamdex
@@ -15001,6 +15008,7 @@
 *://*.schwarzbauer-online.de/*  #!aggreg-spamdex
 *://*.schwestern-kaufhaus.de/*  #!aggreg-spamdex
 *://*.schwurverband.de/*  #!aggreg-spamdex
+*://*.scopeio.nl/*  #!aggreg-spamdex
 *://*.scoppitoservizi.it/*  #!aggreg-spamdex
 *://*.scopusrevista.es/*  #!aggreg-spamdex
 *://*.scotbugey.fr/*  #!aggreg-spamdex
@@ -15113,6 +15121,7 @@
 *://*.sokoll-computers.de/*  #!aggreg-spamdex
 *://*.solenita.pl/*  #!aggreg-spamdex
 *://*.solis-online.de/*  #!aggreg-spamdex
+*://*.solucionsreals.es/*  #!aggreg-spamdex
 *://*.solutions-entreprise.fr/*  #!aggreg-spamdex
 *://*.sonnenblick-wildenfels.de/*  #!aggreg-spamdex
 *://*.sopchy.de/*  #!aggreg-spamdex
@@ -15272,6 +15281,7 @@
 *://*.techify.it/*  #!aggreg-spamdex
 *://*.technic-carrosserie-rivat.fr/*  #!aggreg-spamdex
 *://*.technikigrzewcze-widera.pl/*  #!aggreg-spamdex
+*://*.technixo.nl/*  #!aggreg-spamdex
 *://*.technotronik-konin.pl/*  #!aggreg-spamdex
 *://*.teddys-reifenmarkt.de/*  #!aggreg-spamdex
 *://*.teicasa.it/*  #!aggreg-spamdex
@@ -15607,6 +15617,7 @@
 *://*.x3mediastudio.it/*  #!aggreg-spamdex
 *://*.xbinary.it/*  #!aggreg-spamdex
 *://*.xellia.nl/*  #!aggreg-spamdex
+*://*.xelliz.nl/*  #!aggreg-spamdex
 *://*.xfiles.es/*  #!aggreg-spamdex
 *://*.xiaogirls.com/*  #!aggreg-spamdex
 *://*.xinvoice.biz/*  #!aggreg-spamdex
