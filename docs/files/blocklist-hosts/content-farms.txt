@@ -1,6 +1,6 @@
 # Title: Content Farm Filters
 # Description: Filter for general content farms, mostly in Chinese.
-# Last modified: 2023-12-17T19:49:13+00:00
+# Last modified: 2023-12-24T19:49:12+00:00
 # Homepage: https://danny0838.github.io/content-farm-terminator/
 # Licence: MIT License
 # Source: https://danny0838.github.io/content-farm-terminator/files/blocklist-hosts/content-farms.txt
@@ -12385,6 +12385,7 @@
 0.0.0.0 afslankpillen2017nl.eu  #!aggreg-spamdex
 0.0.0.0 agakor.pl  #!aggreg-spamdex
 0.0.0.0 agcled.es  #!aggreg-spamdex
+0.0.0.0 agencesileo.fr  #!aggreg-spamdex
 0.0.0.0 aggiustasiti.it  #!aggreg-spamdex
 0.0.0.0 agnieszkasielewicz.pl  #!aggreg-spamdex
 0.0.0.0 agnieszkaszostakfotografia.pl  #!aggreg-spamdex
@@ -12755,14 +12756,13 @@
 0.0.0.0 blackthornian.eu  #!aggreg-spamdex
 0.0.0.0 blaich-sportpartner.de  #!aggreg-spamdex
 0.0.0.0 blancolaguia.es  #!aggreg-spamdex
+0.0.0.0 blitzify.nl  #!aggreg-spamdex
 0.0.0.0 blog-terreimaginaire.fr  #!aggreg-spamdex
 0.0.0.0 blogaudilex.es  #!aggreg-spamdex
 0.0.0.0 blogesblog.es  #!aggreg-spamdex
 0.0.0.0 bloggerrella.de  #!aggreg-spamdex
 0.0.0.0 blogmercaderribo.es  #!aggreg-spamdex
 0.0.0.0 blogsg.de  #!aggreg-spamdex
-0.0.0.0 blogspot.de  #!aggreg-spamdex
-0.0.0.0 blogspot.fr  #!aggreg-spamdex
 0.0.0.0 blossomcoleccion.es  #!aggreg-spamdex
 0.0.0.0 blumarksystems.pl  #!aggreg-spamdex
 0.0.0.0 blumenkisterl.de  #!aggreg-spamdex
@@ -12879,6 +12879,7 @@
 0.0.0.0 casevacanzesiracusa.it  #!aggreg-spamdex
 0.0.0.0 cassefortisicure.it  #!aggreg-spamdex
 0.0.0.0 castello-liepelt.de  #!aggreg-spamdex
+0.0.0.0 castillpielnoviasyceremonia.es  #!aggreg-spamdex
 0.0.0.0 castles-hotels.com  #!aggreg-spamdex
 0.0.0.0 catalog-sg.it  #!aggreg-spamdex
 0.0.0.0 catedrasemergenugr.es  #!aggreg-spamdex
@@ -12931,6 +12932,7 @@
 0.0.0.0 chance-krise-unternehmenskultur.de  #!aggreg-spamdex
 0.0.0.0 chantolivette.fr  #!aggreg-spamdex
 0.0.0.0 chaos-leben.de  #!aggreg-spamdex
+0.0.0.0 chapeau-bc.de  #!aggreg-spamdex
 0.0.0.0 charlotte-wilking.de  #!aggreg-spamdex
 0.0.0.0 chatanakoncuswiata.pl  #!aggreg-spamdex
 0.0.0.0 checkmijnbtw.nl  #!aggreg-spamdex
@@ -13235,6 +13237,7 @@
 0.0.0.0 duet-z-goretta.pl  #!aggreg-spamdex
 0.0.0.0 dufeu2022.fr  #!aggreg-spamdex
 0.0.0.0 dunboutalautre.eu  #!aggreg-spamdex
+0.0.0.0 dupont-electricite.fr  #!aggreg-spamdex
 0.0.0.0 durchblog.de  #!aggreg-spamdex
 0.0.0.0 duzone-birkenhaus.de  #!aggreg-spamdex
 0.0.0.0 dvert.org  #!aggreg-spamdex
@@ -13294,6 +13297,7 @@
 0.0.0.0 efeunoconocho.es  #!aggreg-spamdex
 0.0.0.0 egeria-gmbh.de  #!aggreg-spamdex
 0.0.0.0 eglestore.it  #!aggreg-spamdex
+0.0.0.0 eic2022.de  #!aggreg-spamdex
 0.0.0.0 einigkeit-tettenweis.de  #!aggreg-spamdex
 0.0.0.0 einkaufsbahnhof-bewegt.de  #!aggreg-spamdex
 0.0.0.0 eis-for-kids.de  #!aggreg-spamdex
@@ -13316,6 +13320,7 @@
 0.0.0.0 elisabeth-schoch.ch  #!aggreg-spamdex
 0.0.0.0 elisaclementelli.it  #!aggreg-spamdex
 0.0.0.0 elisastella.it  #!aggreg-spamdex
+0.0.0.0 elodiecoachetpsychanalyste.fr  #!aggreg-spamdex
 0.0.0.0 elpsystem.pl  #!aggreg-spamdex
 0.0.0.0 elsonfm.es  #!aggreg-spamdex
 0.0.0.0 eltallerdesilvia.es  #!aggreg-spamdex
@@ -13558,11 +13563,13 @@
 0.0.0.0 frauen-aus-rio.eu  #!aggreg-spamdex
 0.0.0.0 frauen-union-ov-nu.de  #!aggreg-spamdex
 0.0.0.0 fre-style.de  #!aggreg-spamdex
+0.0.0.0 fredi-unverpackt.de  #!aggreg-spamdex
 0.0.0.0 freeauto.pl  #!aggreg-spamdex
 0.0.0.0 frischergegenwind.de  #!aggreg-spamdex
 0.0.0.0 friseur-in-hagen.de  #!aggreg-spamdex
 0.0.0.0 froschinsel-grossenister.de  #!aggreg-spamdex
 0.0.0.0 ftprivacy.cloud  #!aggreg-spamdex
+0.0.0.0 ftvlab.es  #!aggreg-spamdex
 0.0.0.0 fuchsimwald.de  #!aggreg-spamdex
 0.0.0.0 fuhrmann-hochzeitsfotografie.de  #!aggreg-spamdex
 0.0.0.0 fumisteriaonline.it  #!aggreg-spamdex
@@ -13951,6 +13958,7 @@
 0.0.0.0 jj-tauben.de  #!aggreg-spamdex
 0.0.0.0 jksun.de  #!aggreg-spamdex
 0.0.0.0 jm-assistant-administratif.fr  #!aggreg-spamdex
+0.0.0.0 jm-epave.fr  #!aggreg-spamdex
 0.0.0.0 jmservera.com  #!aggreg-spamdex
 0.0.0.0 joecapista.eu  #!aggreg-spamdex
 0.0.0.0 josevicenteabogado.es  #!aggreg-spamdex
@@ -13979,6 +13987,7 @@
 0.0.0.0 kajakurczuk.pl  #!aggreg-spamdex
 0.0.0.0 kalmardarlowko.pl  #!aggreg-spamdex
 0.0.0.0 kalteneck-araber.de  #!aggreg-spamdex
+0.0.0.0 kameralnysggw.pl  #!aggreg-spamdex
 0.0.0.0 kamilkozybski.pl  #!aggreg-spamdex
 0.0.0.0 kamilrytel.pl  #!aggreg-spamdex
 0.0.0.0 kanep.es  #!aggreg-spamdex
@@ -13998,6 +14007,7 @@
 0.0.0.0 katarzynagarbas.pl  #!aggreg-spamdex
 0.0.0.0 katharinaschreibt.de  #!aggreg-spamdex
 0.0.0.0 katiacirrincione.it  #!aggreg-spamdex
+0.0.0.0 kavali.de  #!aggreg-spamdex
 0.0.0.0 kavoia.de  #!aggreg-spamdex
 0.0.0.0 kawaorganiczna.pl  #!aggreg-spamdex
 0.0.0.0 kazakhbonus.eu  #!aggreg-spamdex
@@ -14529,6 +14539,7 @@
 0.0.0.0 naturaeshop.fr  #!aggreg-spamdex
 0.0.0.0 naturalflavour.it  #!aggreg-spamdex
 0.0.0.0 naturallymade.fr  #!aggreg-spamdex
+0.0.0.0 naturaloze.pl  #!aggreg-spamdex
 0.0.0.0 naturalser.es  #!aggreg-spamdex
 0.0.0.0 naturbaustoffe-onlineshop.de  #!aggreg-spamdex
 0.0.0.0 nature-experience.de  #!aggreg-spamdex
@@ -14681,6 +14692,7 @@
 0.0.0.0 pacon.it  #!aggreg-spamdex
 0.0.0.0 padagoginhande.de  #!aggreg-spamdex
 0.0.0.0 padelindooralbalat.es  #!aggreg-spamdex
+0.0.0.0 padovanews.it  #!aggreg-spamdex
 0.0.0.0 paestumaltocilentocultura2024.it  #!aggreg-spamdex
 0.0.0.0 pagarteralis.com  #!aggreg-spamdex
 0.0.0.0 palletkoning.nl  #!aggreg-spamdex
@@ -14810,6 +14822,7 @@
 0.0.0.0 portaprosciutto.it  #!aggreg-spamdex
 0.0.0.0 posclan.pl  #!aggreg-spamdex
 0.0.0.0 poshlashes-zuidholland.nl  #!aggreg-spamdex
+0.0.0.0 postaw-namiot.pl  #!aggreg-spamdex
 0.0.0.0 postime.pl  #!aggreg-spamdex
 0.0.0.0 potagezvous.fr  #!aggreg-spamdex
 0.0.0.0 pozytywnaportal.pl  #!aggreg-spamdex
@@ -14834,6 +14847,7 @@
 0.0.0.0 prestige-nails.fr  #!aggreg-spamdex
 0.0.0.0 prestitoinpdapdipendentipubblici.it  #!aggreg-spamdex
 0.0.0.0 prestitotuo.it  #!aggreg-spamdex
+0.0.0.0 priveefest.es  #!aggreg-spamdex
 0.0.0.0 prlbikes.pl  #!aggreg-spamdex
 0.0.0.0 produitpourtoi.fr  #!aggreg-spamdex
 0.0.0.0 profeoweb.pl  #!aggreg-spamdex
@@ -14931,6 +14945,7 @@
 0.0.0.0 rechtsanwaltanhalt.de  #!aggreg-spamdex
 0.0.0.0 recoctopus.eu  #!aggreg-spamdex
 0.0.0.0 recre73.fr  #!aggreg-spamdex
+0.0.0.0 recruitya.de  #!aggreg-spamdex
 0.0.0.0 rectificadoscorega.es  #!aggreg-spamdex
 0.0.0.0 recuperesudinero.es  #!aggreg-spamdex
 0.0.0.0 recursodron.es  #!aggreg-spamdex
@@ -15346,6 +15361,7 @@
 0.0.0.0 szy-ha.pl  #!aggreg-spamdex
 0.0.0.0 szybkietesty.pl  #!aggreg-spamdex
 0.0.0.0 szybkisposob.pl  #!aggreg-spamdex
+0.0.0.0 szybkizapieks.pl  #!aggreg-spamdex
 0.0.0.0 taffixprotect.es  #!aggreg-spamdex
 0.0.0.0 tageseltern-vp.de  #!aggreg-spamdex
 0.0.0.0 taichiverbindet.de  #!aggreg-spamdex
@@ -15422,6 +15438,7 @@
 0.0.0.0 thg-wolfsburg.eu  #!aggreg-spamdex
 0.0.0.0 thiosixregister.nl  #!aggreg-spamdex
 0.0.0.0 thorntonanddavies.eu  #!aggreg-spamdex
+0.0.0.0 thp-stoll.de  #!aggreg-spamdex
 0.0.0.0 thuismetspelen.nl  #!aggreg-spamdex
 0.0.0.0 ti-mi-fit.de  #!aggreg-spamdex
 0.0.0.0 tiagocardoso.eu  #!aggreg-spamdex
@@ -15538,6 +15555,7 @@
 0.0.0.0 unimulticampus.it  #!aggreg-spamdex
 0.0.0.0 unoseiuno.it  #!aggreg-spamdex
 0.0.0.0 unpuntomacrobiotico.it  #!aggreg-spamdex
+0.0.0.0 unsere-region-hilft.de  #!aggreg-spamdex
 0.0.0.0 unsertraumvomhof.de  #!aggreg-spamdex
 0.0.0.0 unsicvarese.it  #!aggreg-spamdex
 0.0.0.0 unternehmen-business-fotografie-berlin-brandenburg.de  #!aggreg-spamdex
@@ -15635,6 +15653,7 @@
 0.0.0.0 walter-fliesen-gmbh.de  #!aggreg-spamdex
 0.0.0.0 wandbilderlounge.de  #!aggreg-spamdex
 0.0.0.0 wapak.biz  #!aggreg-spamdex
+0.0.0.0 waraald.fr  #!aggreg-spamdex
 0.0.0.0 warszawa345lat.pl  #!aggreg-spamdex
 0.0.0.0 wasserlehrpfad-pegnitz.de  #!aggreg-spamdex
 0.0.0.0 water-bird.eu  #!aggreg-spamdex
@@ -15760,6 +15779,7 @@
 0.0.0.0 zenskiparfemi.com  #!aggreg-spamdex
 0.0.0.0 zephirin.eu  #!aggreg-spamdex
 0.0.0.0 zephyrtechc.nl  #!aggreg-spamdex
+0.0.0.0 zestria.nl  #!aggreg-spamdex
 0.0.0.0 zetakos.fr  #!aggreg-spamdex
 0.0.0.0 zhouweilang.com  #!aggreg-spamdex
 0.0.0.0 ziel4u.de  #!aggreg-spamdex
