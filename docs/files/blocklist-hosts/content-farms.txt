@@ -1,6 +1,6 @@
 # Title: Content Farm Filters
 # Description: Filter for general content farms, mostly in Chinese.
-# Last modified: 2023-12-28T11:15:49+00:00
+# Last modified: 2023-12-28T11:38:57+00:00
 # Homepage: https://danny0838.github.io/content-farm-terminator/
 # Licence: MIT License
 # Source: https://danny0838.github.io/content-farm-terminator/files/blocklist-hosts/content-farms.txt
@@ -12062,7 +12062,7 @@
 0.0.0.0 millepiedsferme.fr  #redirects to sl2.aeprosome.es
 0.0.0.0 przeciwpogardzie.pl  #redirects to my-get-bigbonus-here.life
 0.0.0.0 lesroues.ch  #redirects to pufonline.es
-0.0.0.0 onsc.jardignois.fr  #redirects to my-get-bigbonus-here.life
+0.0.0.0 jardignois.fr  #redirects to my-get-bigbonus-here.life
 0.0.0.0 mapacfrance.fr  #redirects to my-get-bigbonus-here.life
 0.0.0.0 drmroz24.pl  #redirects to cianet13.fr
 0.0.0.0 effinshop.com
@@ -12103,8 +12103,8 @@
 0.0.0.0 bedeutungonline.de
 0.0.0.0 academic-accelerator.com
 0.0.0.0 coreforger.top  #malicious scripts
-0.0.0.0 rhpin.altairaquilae.top  #redirects to rhpin.coreforger.top
-0.0.0.0 go.mnaspm.com  #redirects to stripchat.com
+0.0.0.0 altairaquilae.top  #redirects to rhpin.coreforger.top
+0.0.0.0 mnaspm.com  #redirects to stripchat.com
 0.0.0.0 twinfill.com  #redirects to go.mnaspm.com
 0.0.0.0 pricklywolf.com  #redirects to twinfill.com
 0.0.0.0 retwyia.com  #redirects to pricklywolf.com
@@ -12112,6 +12112,62 @@
 0.0.0.0 erwsiwc.com  #redirects to pricklywolf.com
 0.0.0.0 malinasi.com  #redirects to pricklywolf.com
 0.0.0.0 ucying.com
+0.0.0.0 boreplune.com  #redirects to pricklywolf.com
+0.0.0.0 yukilen.info  #redirects to pricklywolf.com
+0.0.0.0 terrishersrt.com  #redirects to pricklywolf.com
+0.0.0.0 unctnebes.com  #redirects to pricklywolf.com
+0.0.0.0 waysuser.com  #redirects to pricklywolf.com
+0.0.0.0 woologratede.com  #redirects to pricklywolf.com
+0.0.0.0 vitreks.info  #redirects to pricklywolf.com
+0.0.0.0 haystrousea.com  #redirects to pricklywolf.com
+0.0.0.0 examblacy.com  #redirects to pricklywolf.com
+0.0.0.0 northwesew.com  #redirects to pricklywolf.com
+0.0.0.0 samprengwi.com  #redirects to pricklywolf.com
+0.0.0.0 dateryt.com
+0.0.0.0 benrike.info  #redirects to pricklywolf.com
+0.0.0.0 winctutinism.com  #redirects to pricklywolf.com
+0.0.0.0 hermannial.com  #redirects to pricklywolf.com
+0.0.0.0 adrosonesia.com  #redirects to pricklywolf.com
+0.0.0.0 voyager-club.pl
+0.0.0.0 lk70t.com
+0.0.0.0 cic8p.com
+0.0.0.0 al4f2.com
+0.0.0.0 db21q.com
+0.0.0.0 zqmkr.com
+0.0.0.0 5j9g4.com
+0.0.0.0 yio4e.com
+0.0.0.0 76qe8.com
+0.0.0.0 2whuc.com
+0.0.0.0 pqq83.com
+0.0.0.0 ihjlo.com
+0.0.0.0 c8f50.com
+0.0.0.0 aci5l.com
+0.0.0.0 g8cya.com
+0.0.0.0 h6imz.com
+0.0.0.0 r9nob.com
+0.0.0.0 t527e.com
+0.0.0.0 pf0sp.com
+0.0.0.0 axu41.com
+0.0.0.0 8hacr.com
+0.0.0.0 hyrvs.com
+0.0.0.0 wna4p.com
+0.0.0.0 22enn.com
+0.0.0.0 68zld.com
+0.0.0.0 fmdp1.com
+0.0.0.0 88z5b.com
+0.0.0.0 3i72t.com
+0.0.0.0 m06vw.com
+0.0.0.0 dzqvg.com
+0.0.0.0 5safj.com
+0.0.0.0 knnkg.com
+0.0.0.0 57c1y.com
+0.0.0.0 5lavg.com
+0.0.0.0 yqc1s.com
+0.0.0.0 m7hk4.com
+0.0.0.0 7t4ia.com
+0.0.0.0 hil1z.com
+0.0.0.0 one-sups.com
+0.0.0.0 photoread.top
 #!aggreg-cxyzjd: https://raw.githubusercontent.com/wdmpa/content-farm-list/main/domains/spam/cxyzjd.txt (https://github.com/wdmpa/content-farm-list)
 0.0.0.0 cxybb.com  #!aggreg-cxyzjd
 0.0.0.0 cxymm.net  #!aggreg-cxyzjd
