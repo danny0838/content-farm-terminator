@@ -1,6 +1,6 @@
 # Title: Extra Content Farm Filters
 # Description: Extra filter for content-farm-like sites, mostly aggregated from other sources.
-# Last modified: 2023-12-31T19:49:03+00:00
+# Last modified: 2024-01-07T19:49:22+00:00
 # Homepage: https://danny0838.github.io/content-farm-terminator/
 # Licence: MIT License
 # Source: https://danny0838.github.io/content-farm-terminator/files/blocklist-hosts/extra-content-farms.txt
@@ -72429,6 +72429,7 @@
 0.0.0.0 100ke.cc  #!aggreg-nonpnt
 0.0.0.0 1024sou.com  #!aggreg-nonpnt
 0.0.0.0 10jqka.com.cn  #!aggreg-nonpnt
+0.0.0.0 1637.com  #!aggreg-nonpnt
 0.0.0.0 1688.com  #!aggreg-nonpnt
 0.0.0.0 17qq.com  #!aggreg-nonpnt
 0.0.0.0 21food.cn  #!aggreg-nonpnt
@@ -72534,6 +72535,7 @@
 0.0.0.0 cmen.cc  #!aggreg-nonpnt
 0.0.0.0 cmm3d.com  #!aggreg-nonpnt
 0.0.0.0 cn.com  #!aggreg-nonpnt
+0.0.0.0 cncyjm.com  #!aggreg-nonpnt
 0.0.0.0 cnfreedomrtveas.ru.com  #!aggreg-nonpnt
 0.0.0.0 cnvhair.com  #!aggreg-nonpnt
 0.0.0.0 cnxiangyan.com  #!aggreg-nonpnt
@@ -72553,6 +72555,7 @@
 0.0.0.0 debian8.com  #!aggreg-nonpnt
 0.0.0.0 dedeapps.com  #!aggreg-nonpnt
 0.0.0.0 devicesfaq.com  #!aggreg-nonpnt
+0.0.0.0 devicetests.com  #!aggreg-nonpnt
 0.0.0.0 digidash.in  #!aggreg-nonpnt
 0.0.0.0 dkfp88.cn  #!aggreg-nonpnt
 0.0.0.0 driedpeel.com  #!aggreg-nonpnt
@@ -72607,6 +72610,7 @@
 0.0.0.0 guidlings.com  #!aggreg-nonpnt
 0.0.0.0 guoguofen.com  #!aggreg-nonpnt
 0.0.0.0 gzhttp.com  #!aggreg-nonpnt
+0.0.0.0 hackernews.cc  #!aggreg-nonpnt
 0.0.0.0 hanjifoods.com  #!aggreg-nonpnt
 0.0.0.0 haoshangbang.net  #!aggreg-nonpnt
 0.0.0.0 hbs163.com  #!aggreg-nonpnt
@@ -72799,7 +72803,9 @@
 0.0.0.0 sqzlsy.cn  #!aggreg-nonpnt
 0.0.0.0 sshce.com  #!aggreg-nonpnt
 0.0.0.0 statestpizza.com  #!aggreg-nonpnt
+0.0.0.0 storagereview.com  #!aggreg-nonpnt
 0.0.0.0 sucaixi.com  #!aggreg-nonpnt
+0.0.0.0 sufangxu.cn  #!aggreg-nonpnt
 0.0.0.0 superweb999.com  #!aggreg-nonpnt
 0.0.0.0 swimmingcows.com  #!aggreg-nonpnt
 0.0.0.0 sxncw.com  #!aggreg-nonpnt

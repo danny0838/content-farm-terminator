@@ -1,7 +1,7 @@
 ! Title: Extra Content Farm Filters
 ! Description: Extra filter for content-farm-like sites, mostly aggregated from other sources.
 ! Expires: 3 days
-! Last modified: 2023-12-31T19:49:03+00:00
+! Last modified: 2024-01-07T19:49:22+00:00
 ! Homepage: https://danny0838.github.io/content-farm-terminator/
 ! Licence: MIT License
 ! Source: https://danny0838.github.io/content-farm-terminator/files/blocklist-ubo/extra-content-farms.txt
@@ -72504,6 +72504,7 @@ zzzzbj.com  #!aggreg-gyli
 100ke.cc  #!aggreg-nonpnt
 1024sou.com  #!aggreg-nonpnt
 10jqka.com.cn  #!aggreg-nonpnt
+1637.com  #!aggreg-nonpnt
 1688.com  #!aggreg-nonpnt
 17qq.com  #!aggreg-nonpnt
 21food.cn  #!aggreg-nonpnt
@@ -72613,6 +72614,7 @@ clubhouse-club.site  #!aggreg-nonpnt
 cmen.cc  #!aggreg-nonpnt
 cmm3d.com  #!aggreg-nonpnt
 cn.com  #!aggreg-nonpnt
+cncyjm.com  #!aggreg-nonpnt
 cnfreedomrtveas.ru.com  #!aggreg-nonpnt
 cnvhair.com  #!aggreg-nonpnt
 cnxiangyan.com  #!aggreg-nonpnt
@@ -72634,9 +72636,11 @@ ddosi.org  #!aggreg-nonpnt
 debian8.com  #!aggreg-nonpnt
 dedeapps.com  #!aggreg-nonpnt
 devicesfaq.com  #!aggreg-nonpnt
+devicetests.com  #!aggreg-nonpnt
 digidash.in  #!aggreg-nonpnt
 dkfp88.cn  #!aggreg-nonpnt
 /https?://(?:[\w-]+\.)*(?:dongchedi\.com/tag/.*)$/$doc  #!aggreg-nonpnt
+/https?://(?:[\w-]+\.)*(?:douyin\.com/search/.*)$/$doc  #!aggreg-nonpnt
 /https?://(?:[\w-]+\.)*(?:douyin\.com/zhuanti/.*)$/$doc  #!aggreg-nonpnt
 driedpeel.com  #!aggreg-nonpnt
 drivereasy.com  #!aggreg-nonpnt
@@ -72691,6 +72695,7 @@ guidecycle.net  #!aggreg-nonpnt
 guidlings.com  #!aggreg-nonpnt
 guoguofen.com  #!aggreg-nonpnt
 gzhttp.com  #!aggreg-nonpnt
+hackernews.cc  #!aggreg-nonpnt
 hanjifoods.com  #!aggreg-nonpnt
 haoshangbang.net  #!aggreg-nonpnt
 hbs163.com  #!aggreg-nonpnt
@@ -72893,7 +72898,9 @@ squadguide.net  #!aggreg-nonpnt
 sqzlsy.cn  #!aggreg-nonpnt
 sshce.com  #!aggreg-nonpnt
 statestpizza.com  #!aggreg-nonpnt
+storagereview.com  #!aggreg-nonpnt
 sucaixi.com  #!aggreg-nonpnt
+sufangxu.cn  #!aggreg-nonpnt
 superweb999.com  #!aggreg-nonpnt
 swimmingcows.com  #!aggreg-nonpnt
 sxncw.com  #!aggreg-nonpnt
