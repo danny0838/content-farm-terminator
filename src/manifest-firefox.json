@@ -6,7 +6,7 @@
   "author": "Danny Lin",
   "default_locale": "en",
 
-  "applications": {
+  "browser_specific_settings": {
     "gecko": {
       "id": "content-farm-terminator@danny0838.addons.mozilla.org",
       "strict_min_version": "52.0"
