@@ -856,13 +856,18 @@
      */
     async fetchWebBlackList(url) {
       const time = Date.now();
-      let text;
+
+      // fallback to 'omit' when host permission not granted to allow CORS fetch
+      // Firefox < 55: no browser.permissions => always use 'include'
+      const credentials = (!browser.permissions || await browser.permissions.contains({origins: [url]}))
+        ? 'include' : 'omit';
+
       const response = await fetch(url, {
-        credentials: 'include',
+        credentials,
         cache: 'no-cache',
       });
       if (!response.ok) { throw new Error("response not ok"); }
-      text = await response.text();
+      const text = await response.text();
       await this.setWebListCache(url, {time, text});
       return text;
     }
