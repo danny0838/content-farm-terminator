@@ -228,6 +228,10 @@ input[type="button"]:hover {
     border-color: #888;
   }
 
+  .lowlight {
+    opacity: 0.8;
+  }
+
   #resetButton,
   #submitButton {
     background-color: #444;
