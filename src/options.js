@@ -25,14 +25,7 @@ async function saveOptions() {
   const showUnblockButton = document.querySelector('#showUnblockButton input').checked;
 
   if (suppressHistory) {
-    // @FIXME:
-    // Firefox < 54: No browser.permissions.
-    // Firefox < 56: the request dialog prompts repeatedly even if the
-    // permissions are already granted. Checking permissions.contains() in
-    // prior doesn't work as Promise.then() breaks tracing of the user input
-    // event handler and makes the request always fail.
-    // https://bugzilla.mozilla.org/show_bug.cgi?id=1398833
-    if (!(browser.permissions && await browser.permissions.request({permissions: ['history']}).catch(ex => {
+    if (!(await browser.permissions.request({permissions: ['history']}).catch(ex => {
       console.error(ex);
       return false;
     }))) {
@@ -170,12 +163,10 @@ async function init(event) {
   }
 
   // hide some options if browser.history is not available
-  // Firefox < 55: no browser.permissions, and permissions listed in
-  // "optional_permissions" are ignored.
   // Chromium mobile (e.g. Kiwi): cannot call browser.permissions.request()
   // Firefox for Android: no browser.history. However, we cannot simply check
   // browser.history as it's undefined before granted permission.
-  if (!browser.permissions && !browser.history || utils.userAgent.soup.has('mobile')) {
+  if (utils.userAgent.soup.has('mobile')) {
     document.querySelector('#suppressHistory').hidden = true;
   }
 

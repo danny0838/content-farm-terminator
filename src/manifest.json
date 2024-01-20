@@ -35,7 +35,6 @@
     "persistent": true,
     "scripts": [
       "lib/browser-polyfill.js",
-      "lib/punycode.js",
       "lib/Regex.js",
       "content-farm-filter.js",
       "utils.js",
@@ -53,7 +52,6 @@
       ],
       "js": [
         "lib/browser-polyfill.js",
-        "lib/punycode.js",
         "utils.js",
         "content.js"
       ],

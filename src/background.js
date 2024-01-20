@@ -404,16 +404,6 @@ function onBeforeRequestBlocker(details) {
   const blockType = blocker.type;
   if (details.type === "main_frame") {
     const redirectUrl = utils.getBlockedPageUrl(url, {blockType, inFrame: false, tabId, requestId});
-
-    // Firefox < 56 does not allow redirecting to an extension page
-    // even if it is listed in web_accessible_resources.
-    // Using data URI with meta or script refresh works but generates
-    // an extra history entry.
-    if (utils.userAgent.soup.has('firefox') && utils.userAgent.major < 56) {
-      browser.tabs.update(tabId, {url: redirectUrl}); // async
-      return {cancel: true};
-    }
-
     return {redirectUrl};
   } else {
     const redirectUrl = utils.getBlockedPageUrl(url, {blockType, inFrame: true, tabId, requestId});
@@ -714,18 +704,6 @@ function initInstallListener() {
 }
 
 function initBrowserAction() {
-  if (!browser.browserAction) {
-    // Firefox Android < 55: no browserAction
-    // Fallback to pageAction.
-    // Firefox Android ignores the tabId parameter and
-    // shows the pageAction for all tabs
-    browser.pageAction.onClicked.addListener((tab) => {
-      const url = browser.runtime.getURL("options.html");
-      browser.tabs.create({url: url, active: true});
-    });
-    browser.pageAction.show(0);
-  }
-
   browser.browserAction.onClicked.addListener((tab) => {
     const u = new URL(browser.runtime.getURL("options.html"));
     u.searchParams.set('t', tab.id);

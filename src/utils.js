@@ -22,9 +22,8 @@
      *   to local if failed.
      *
      *   A set could fail due to:
-     *   - storage.sync not available: storage.sync is undefined in Firefox < 52;
-     *     storage.sync methods fail if Firefox config
-     *     webextensions.storage.sync.enabled is not set to true.
+     *   - storage.sync not available: storage.sync methods fail if Firefox
+     *     config webextensions.storage.sync.enabled is not set to true.
      *   - the data to be stored exceeds quota or other limit
      *   - other unclear reason (during data syncing?)
      *
@@ -238,13 +237,8 @@
      * @param {string} hostname - a URL.hostname (or URL.host)
      */
     getNormalizedHostname(hostname) {
-      // URL.hostname is not punycoded in some old browsers (e.g. Firefox 52)
-      const hostnameIsPunycoded = new URL('http://中文').hostname === 'xn--fiq228c';
-
-      const fn = this.getNormalizedHostname = hostnameIsPunycoded ?
-        hostname => hostname :
-        hostname => punycode.toASCII(hostname);
-      return fn(hostname);
+      // Preserved for historical reason and potential future usage.
+      return hostname;
     },
 
     getNormalizedUrl(url) {
