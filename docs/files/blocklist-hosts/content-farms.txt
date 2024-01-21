@@ -1,6 +1,6 @@
 # Title: Content Farm Filters
 # Description: Filter for general content farms, mostly in Chinese.
-# Last modified: 2024-01-14T19:49:16+00:00
+# Last modified: 2024-01-21T19:49:19+00:00
 # Homepage: https://danny0838.github.io/content-farm-terminator/
 # Licence: MIT License
 # Source: https://danny0838.github.io/content-farm-terminator/files/blocklist-hosts/content-farms.txt
@@ -12808,6 +12808,7 @@
 0.0.0.0 bimosyn.eu  #!aggreg-spamdex
 0.0.0.0 binas-bs.de  #!aggreg-spamdex
 0.0.0.0 bineeditoregroup.it  #!aggreg-spamdex
+0.0.0.0 bingo-lot.nl  #!aggreg-spamdex
 0.0.0.0 bio-cleaner.fr  #!aggreg-spamdex
 0.0.0.0 bionexenergy.pl  #!aggreg-spamdex
 0.0.0.0 biorak.pl  #!aggreg-spamdex
