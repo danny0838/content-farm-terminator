@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html dir="__MSG_@@bidi_dir__">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<link rel="shortcut icon" href="img/content-farm-marker_48.png">
+<link rel="stylesheet" href="startup.css">
+<script src="lib/browser-polyfill.js"></script>
+<script src="lib/purify.js"></script>
+<script src="utils.js"></script>
+<script src="startup.js"></script>
+<title>__MSG_startupTitle__</title>
+</head>
+<body>
+
+<div id="startup-go" hidden>__MSG_startupGoDesc__</div>
+<div id="startup-ok" hidden>__MSG_startupOkDesc__</div>
+
+<!--
+    In Chromium, webRequestBlocking permission is not supported unless force installed.
+-->
+<section id="startup-web-request-blocking" hidden>
+<h2>__MSG_startupWebRequestBlockingTitle__</h2>
+<div>__HTML_startupWebRequestBlockingDesc__</div>
+</section>
+
+<!--
+    In Firefox (up to at least 122), all host permissions are not granted by default.
+    https://bugzilla.mozilla.org/show_bug.cgi?id=1839129
+ -->
+<section id="host-permissions" hidden>
+<h2>__MSG_startupHostPermissionsTitle__</h2>
+<div>__HTML_startupHostPermissionsDesc__</div>
+</section>
+
+</body>
+</html>

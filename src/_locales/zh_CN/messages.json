@@ -7,6 +7,34 @@
     "message": "标示内容农场链接，防止误入内容农场，并封锁内容农场的广告与恶意程序。"
   },
 
+  "startupTitle": {
+    "message": "开始使用__MSG_appName__"
+  },
+
+  "startupGoDesc": {
+    "message": "__MSG_appName__需要以下的进一步设置才能发挥完整功能。完成后可重新整理本页以再次检测。"
+  },
+
+  "startupOkDesc": {
+    "message": "__MSG_appName__已正确设置。"
+  },
+
+  "startupWebRequestBlockingTitle": {
+    "message": "设置阻挡网络请求权限"
+  },
+
+  "startupWebRequestBlockingDesc": {
+    "message": "<p>一些 Chromium 系浏览器需要强制安装套件，才能支持阻挡网络请求功能。若不支持，则只能在网页加载时（而非加载前）进行封锁，网页中的恶意程序将有机会成功执行。</p>\n\n<h3>Windows</h3>\n<p>在注册表加入字符串形式的政策值：</p>\n<ul>\n<li>Google Chrome: {主机码}\\SOFTWARE\\Policies\\Google\\Chrome\\ExtensionInstallForcelist\\{编号} = \"{套件ID}\"\n<li>Microsoft Edge: {主机码}\\SOFTWARE\\Policies\\Microsoft\\Edge\\ExtensionInstallForcelist\\{编号} = \"{套件ID}\"\n</ul>\n<p>其中 {主机码} 可为 HKEY_CURRENT_USER（对目前用户）或 HKEY_LOCAL_MACHINE（对所有用户），{编号} 由 1 开始，视总数而定；{套件ID} 可在套件管理页面中查询。完成后须重新启动浏览器。</p>\n\n<h3>其他操作系统</h3>\n<p>其他操作系统的设置方法请参见官方说明：</p>\n<ul>\n<li><a href=\"https://chromeenterprise.google/intl/zh_cn/policies/#ExtensionInstallForcelist\">Google Chrome</a></li>\n<li><a href=\"https://learn.microsoft.com/zh-cn/DeployEdge/microsoft-edge-policies#extensioninstallforcelist\">Microsoft Edge</a></li>\n</ul>"
+  },
+
+  "startupHostPermissionsTitle": {
+    "message": "设置主机访问权限"
+  },
+
+  "startupHostPermissionsDesc": {
+    "message": "<p>本套件需要启用对所有网站的访问权限，才能正常执行封锁及链接标示。可在浏览器套件管理页面中设置。</p>"
+  },
+
   "blockTab": {
     "message": "把选中分页的网域加入黑名单",
     "description": "Label of context menu blocker on tab"
@@ -325,6 +353,11 @@
   "suppressHistory": {
     "message": "终结内容农场相关页面不产生历史记录",
     "description": "Label of suppressHistory in options page"
+  },
+
+  "startup": {
+    "message": "检查套件配置",
+    "description": "Label of the startup link in options page"
   },
 
   "report": {

@@ -7,6 +7,34 @@
     "message": "Marks content farm links, prevents accidental visiting, and blocks content farms' ads and mallicious scripts."
   },
 
+  "startupTitle": {
+    "message": "Starting __MSG_appName__"
+  },
+
+  "startupGoDesc": {
+    "message": "__MSG_appName__ requires the following configuration(s) to function well. Refresh this page when done to recheck."
+  },
+
+  "startupOkDesc": {
+    "message": "__MSG_appName__ is configured correctly."
+  },
+
+  "startupWebRequestBlockingTitle": {
+    "message": "Configure webRequestBlocking permission"
+  },
+
+  "startupWebRequestBlockingDesc": {
+    "message": "<p>An extension needs a forced installation to support web request blocking in some Chromium-based browsers. When not supported, a web page is blocked during loading (rather than before loading), and malicious scripts in the web page may have run successfully.</p>\n\n<h3>Windows</h3>\n<p>Add a new string in the registry:</p>\n<ul>\n<li>Google Chrome: {main_key}\\SOFTWARE\\Policies\\Google\\Chrome\\ExtensionInstallForcelist\\{num} = \"{extension_id}\"\n<li>Microsoft Edge: {main_key}\\SOFTWARE\\Policies\\Microsoft\\Edge\\ExtensionInstallForcelist\\{num} = \"{extension_id}\"\n</ul>\n<p>Where {main_key} can be either HKEY_CURRENT_USER (for the current user) or HKEY_LOCAL_MACHINE (for all users), {num} starts from 1 depending on the total number, and {extension_id} can be found in the extension management page. Restart the browser after done.</p>\n\n<h3>Other OS</h3>\n<p>For configuration for other operating systems, see the official document:</p>\n<ul>\n<li><a href=\"https://chromeenterprise.google/intl/en_us/policies/#ExtensionInstallForcelist\">Google Chrome</a></li>\n<li><a href=\"https://learn.microsoft.com/en-us/DeployEdge/microsoft-edge-policies#extensioninstallforcelist\">Microsoft Edge</a></li>\n</ul>"
+  },
+
+  "startupHostPermissionsTitle": {
+    "message": "Configure host permission"
+  },
+
+  "startupHostPermissionsDesc": {
+    "message": "<p>This extension requires access permission for all web sites to perform site blocking and hyperlink marking. You can configure it in the browser extension management page.</p>"
+  },
+
   "blockTab": {
     "message": "Blacklist the domain(s) of the selected tab(s)",
     "description": "Label of context menu blocker on tab"
@@ -325,6 +353,11 @@
   "suppressHistory": {
     "message": "Suppress history for content farm terminator pages",
     "description": "Label of suppressHistory in options page"
+  },
+
+  "startup": {
+    "message": "Check extension configs",
+    "description": "Label of the startup link in options page"
   },
 
   "report": {
