@@ -1,0 +1,35 @@
+html {
+  font-size: 16px;
+}
+
+body {
+  box-sizing: border-box;
+  margin: auto;
+  padding: 20px;
+  width: 80%;
+  min-width: 700px;
+  font-size: 1rem;
+}
+
+pre {
+  white-space: pre-wrap;
+}
+
+a:visited {
+  color: blue; /* fallback for old browsers */
+  color: LinkText;
+}
+
+@media screen and (max-width: 720px) {
+  body {
+    width: 100%;
+    min-width: initial;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #333;
+    color: #ccc;
+  }
+}
