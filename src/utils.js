@@ -166,14 +166,26 @@ if (typeof browser !== 'undefined') {
     },
 
     loadLanguages(...args) {
-      const msgRegex = /__MSG_(.*?)__/g;
-      const msgReplacer = (m, k) => utils.lang(k);
-      const fn = this.loadLanguages = (rootNode = document) => {
+      const msgRegex = /__MSG_(?:(HTML)_)?(.*?)__/g;
+      const msgReplacer = (m, _, k) => utils.lang(k);
+      const msgHtmlReplacer = (...args) => {
+        const options = args.pop();
+        if (typeof DOMPurify === 'undefined') {
+          console.error(`DOMPurify not installed`);
+          return args[0];
+        }
+        return DOMPurify.sanitize(msgReplacer(...args), options);
+      };
+      const anchor = document.createElement("span");
+      const fn = this.loadLanguages = (rootNode = document, {
+        htmlOptions = {ALLOWED_TAGS: ['a', '#text']},
+      } = {}) => {
         const doc = rootNode.ownerDocument || rootNode;
         const walker = doc.createNodeIterator(rootNode, 5 /* NodeFilter.SHOW_ELEMENT | NodeFilter.SHOW_TEXT */);
 
         let node = walker.nextNode();
         while (node) {
+          const next = walker.nextNode();
           switch (node.nodeType) {
             case 1:
               for (const attr of node.attributes) {
@@ -181,11 +193,30 @@ if (typeof browser !== 'undefined') {
               }
               break;
             case 3:
-              node.nodeValue = node.nodeValue.replace(msgRegex, msgReplacer);
+              do {
+                msgRegex.lastIndex = 0;
+                const m = msgRegex.exec(node.nodeValue);
+                if (!m) { break; }
+                const lenBefore = m.index;
+                const lenMatch = m[0].length;
+                const lenAfter = node.nodeValue.length - lenMatch;
+                node = lenBefore ? node.splitText(lenBefore) : node;
+                const nodeNext = lenAfter ? node.splitText(lenMatch) : null;
+                if (m[1] === "HTML") {
+                  node.parentNode.replaceChild(anchor, node);
+                  anchor.insertAdjacentHTML("beforebegin", msgHtmlReplacer(...m, htmlOptions));
+                  anchor.remove();
+                } else {
+                  node.nodeValue = msgReplacer(...m);
+                }
+                node = nodeNext;
+              } while (node);
               break;
           }
-          node = walker.nextNode();
+          node = next;
         }
+
+        rootNode.normalize && rootNode.normalize();
       };
       return fn(...args);
     },
