@@ -173,25 +173,35 @@
       return flavor;
     },
 
-    lang(key, args) {
-      return browser.i18n.getMessage(key, args) || "__MSG_" + key + "__";
+    lang(...args) {
+      const msgRegex = /__MSG_(.*?)__/g;
+      const msgReplacer = (m, k) => utils.lang(k);
+      const fn = this.lang = (key, args) => {
+        const msg = browser.i18n.getMessage(key, args);
+        if (msg) {
+          // recursively replace __MSG_key__
+          return msg.replace(msgRegex, msgReplacer);
+        }
+        return "__MSG_" + key + "__";
+      };
+      return fn(...args);
     },
 
     loadLanguages(...args) {
-      const reReplacer = /__MSG_(.*?)__/;
-      const fnReplacer = (m, k) => utils.lang(k);
+      const msgRegex = /__MSG_(.*?)__/g;
+      const msgReplacer = (m, k) => utils.lang(k);
       const fn = this.loadLanguages = (rootNode = document) => {
-        Array.prototype.forEach.call(rootNode.getElementsByTagName("*"), (elem) => {
+        for (const elem of rootNode.querySelectorAll('*')) {
           if (elem.childNodes.length === 1) {
             const child = elem.firstChild;
             if (child.nodeType === 3) {
-              child.nodeValue = child.nodeValue.replace(reReplacer, fnReplacer);
+              child.nodeValue = child.nodeValue.replace(msgRegex, msgReplacer);
             }
           }
-          Array.prototype.forEach.call(elem.attributes, (attr) => {
-            attr.nodeValue = attr.nodeValue.replace(reReplacer, fnReplacer);
-          }, this);
-        }, this);
+          for (const attr of elem.attributes) {
+            attr.nodeValue = attr.nodeValue.replace(msgRegex, msgReplacer);
+          }
+        }
       };
       return fn(...args);
     },
