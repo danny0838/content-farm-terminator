@@ -103,6 +103,13 @@
       await browser.storage.local.clear();
     },
 
+    async checkPermissions() {
+      return {
+        "webRequestBlocking": await browser.permissions.contains({permissions: ["webRequestBlocking"]}),
+        "host": await browser.permissions.contains({origins: ["http://*/", "https://*/"]}),
+      };
+    },
+
     /**
      * ref: source code of vAPI.webextFlavor of uBlock Origin
      */
