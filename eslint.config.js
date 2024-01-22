@@ -55,6 +55,7 @@ export default [
         utils: false,
         ContentFarmFilter: false,
         Regex: false,
+        DOMPurify: false,
       },
     },
   },
