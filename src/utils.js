@@ -190,12 +190,28 @@
     loadLanguages(...args) {
       const msgRegex = /__MSG_(.*?)__/g;
       const msgReplacer = (m, k) => utils.lang(k);
-      const fn = this.loadLanguages = (rootNode = document) => {
+      const htmlRegex = /__HTML_(.*?)__/g;
+      const fn = this.loadLanguages = (rootNode = document, {
+        htmlOptions = {ALLOWED_TAGS: ['a', '#text']},
+      } = {}) => {
         for (const elem of rootNode.querySelectorAll('*')) {
           if (elem.childNodes.length === 1) {
             const child = elem.firstChild;
             if (child.nodeType === 3) {
-              child.nodeValue = child.nodeValue.replace(msgRegex, msgReplacer);
+              if (child.nodeValue.match(htmlRegex)) {
+                // replace HTML messages
+                elem.innerHTML = child.nodeValue.replace(htmlRegex, (m, k) => {
+                  try {
+                    return DOMPurify.sanitize(utils.lang(k), htmlOptions);
+                  } catch (ex) {
+                    // DOMPurify not installed
+                    console.error(ex);
+                  }
+                  return m;
+                });
+              } else {
+                child.nodeValue = child.nodeValue.replace(msgRegex, msgReplacer);
+              }
             }
           }
           for (const attr of elem.attributes) {
