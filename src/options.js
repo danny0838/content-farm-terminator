@@ -146,11 +146,20 @@ async function showInfo() {
   }
 }
 
+async function showPermissions() {
+  const perms = await utils.checkPermissions();
+  for (const [perm, value] of Object.entries(perms)) {
+    document.getElementById(`permissions_${perm}`).hidden = value;
+  }
+}
+
 async function init(event) {
   document.querySelector('#resetButton').addEventListener('click', onReset);
   document.querySelector('#submitButton').addEventListener('click', onSubmit);
 
-  utils.loadLanguages(document);
+  utils.loadLanguages(document, {htmlOptions: {
+    ALLOWED_TAGS: ['h3', 'p', 'ul', 'ol', 'li', 'a', '#text'],
+  }});
 
   // hide some options if contextMenus is not available
   // (e.g. Firefox for Android)
@@ -170,7 +179,12 @@ async function init(event) {
   loadOptions().then(() => {
     document.querySelector('#submitButton').disabled = false;
   }); // async
+  showPermissions(); // async
   showInfo(); // async
 }
 
 document.addEventListener('DOMContentLoaded', init);
+
+browser.permissions.onAdded.addListener(showPermissions);
+
+browser.permissions.onRemoved.addListener(showPermissions);

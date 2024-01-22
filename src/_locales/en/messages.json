@@ -7,6 +7,26 @@
     "message": "Marks content farm links, prevents accidental visiting, and blocks content farms' ads and mallicious scripts."
   },
 
+  "permWebRequestBlockingTitle": {
+    "message": "Web request blocking permission not granted",
+    "description": "Title for configuration about webRequestBlocking permission"
+  },
+
+  "permWebRequestBlockingDesc": {
+    "message": "<p>An extension needs a forced installation to support web request blocking in some Chromium-based browsers. When not supported, a web page may not be blocked before loading, and malicious scripts in the web page may have a chance to run successfully.</p>\n\n<h3>Windows</h3>\n<p>Add a new string in the registry:</p>\n<ul>\n  <li>Google Chrome: {main_key}\\SOFTWARE\\Policies\\Google\\Chrome\\ExtensionInstallForcelist\\{num} = {extension_id}\n  <li>Microsoft Edge: {main_key}\\SOFTWARE\\Policies\\Microsoft\\Edge\\ExtensionInstallForcelist\\{num} = {extension_id}\n  <li>Chromium: {main_key}\\SOFTWARE\\Policies\\Chromium\\ExtensionInstallForcelist\\{num} = {extension_id}\n</ul>\n<p>Where {main_key} is either HKEY_CURRENT_USER (for the current user) or HKEY_LOCAL_MACHINE (for all users), {num} is any integer, and {extension_id} can be found in the extension management page. Shutdown the browser (including related background processes) and restart it after done.</p>\n\n<h3>Other OS</h3>\n<p>For configuration for another operating system or browser, see the official document:</p>\n<ul>\n  <li><a href=\"https://chromeenterprise.google/intl/en_us/policies/#ExtensionInstallForcelist\">Google Chrome</a>\n  <li><a href=\"https://learn.microsoft.com/en-us/DeployEdge/microsoft-edge-policies#extensioninstallforcelist\">Microsoft Edge</a>\n</ul>",
+    "description": "Description for configuration about webRequestBlocking permission"
+  },
+
+  "permHostTitle": {
+    "message": "Host permission not granted",
+    "description": "Title for configuration about host permission"
+  },
+
+  "permHostDesc": {
+    "message": "<p>This extension requires access permission for all web sites to perform site blocking and hyperlink marking. You can configure it in the browser extension management page.</p>",
+    "description": "Description for configuration about host permission"
+  },
+
   "blockTab": {
     "message": "Blacklist the domain(s) of the selected tab(s)",
     "description": "Label of context menu blocker on tab"

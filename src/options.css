@@ -11,6 +11,31 @@ body {
   font-size: 1rem;
 }
 
+#permissions {
+  position: sticky;
+  z-index: 1;
+  top: 0;
+  max-height: 100vh;
+  overflow-y: auto;
+  background: white;
+}
+
+#permissions details {
+  margin-bottom: .5em;
+  border: 1px solid #EEE;
+  background: #FEE;
+  color: black;
+}
+
+#permissions details > summary {
+  padding: .5em;
+  background-color: #F11;
+}
+
+#permissions details > div {
+  margin: .5em;
+}
+
 a {
   color: blue; /* fallback for old browsers */
   color: LinkText;
@@ -218,6 +243,15 @@ input[type="button"]:hover {
   body {
     background-color: #333;
     color: #ccc;
+  }
+
+  #permissions {
+    background: inherit;
+  }
+
+  #permissions details {
+    border-color: #888;
+    background-color: #FCC;
   }
 
   a {

@@ -7,6 +7,26 @@
     "message": "標示內容農場連結，防止誤入內容農場，並封鎖內容農場的廣告與惡意程式。"
   },
 
+  "permWebRequestBlockingTitle": {
+    "message": "阻擋網路請求權限未授予",
+    "description": "Title for configuration about webRequestBlocking permission"
+  },
+
+  "permWebRequestBlockingDesc": {
+    "message": "<p>一些 Chromium 系瀏覽器需要強制安裝套件，才能支援阻擋網路請求功能。若不支援，則可能無法在網頁載入前進行封鎖，網頁中的惡意程式將有機會成功執行。</p>\n\n<h3>Windows</h3>\n<p>在登錄檔加入一個「字串值」：</p>\n<ul>\n  <li>Google Chrome: {主機碼}\\SOFTWARE\\Policies\\Google\\Chrome\\ExtensionInstallForcelist\\{編號} = {套件ID}\n  <li>Microsoft Edge: {主機碼}\\SOFTWARE\\Policies\\Microsoft\\Edge\\ExtensionInstallForcelist\\{編號} = {套件ID}\n  <li>Chromium: {主機碼}\\SOFTWARE\\Policies\\Chromium\\ExtensionInstallForcelist\\{編號} = {套件ID}\n</ul>\n<p>其中 {主機碼} 可為 HKEY_CURRENT_USER（對目前使用者）或 HKEY_LOCAL_MACHINE（對所有使用者），{編號} 為任意整數，{套件ID} 可在套件管理頁面中查詢。完成後須關閉瀏覽器（包括相關背景程序）並重新啟動。</p>\n\n<h3>其他作業系統</h3>\n<p>其他作業系統的設定方法請參見官方說明：</p>\n<ul>\n  <li><a href=\"https://chromeenterprise.google/intl/zh_tw/policies/#ExtensionInstallForcelist\">Google Chrome</a>\n  <li><a href=\"https://learn.microsoft.com/zh-tw/DeployEdge/microsoft-edge-policies#extensioninstallforcelist\">Microsoft Edge</a>\n</ul>",
+    "description": "Description for configuration about webRequestBlocking permission"
+  },
+
+  "permHostTitle": {
+    "message": "主機存取權限未授予",
+    "description": "Title for configuration about host permission"
+  },
+
+  "permHostDesc": {
+    "message": "<p>本套件需要對所有網站的存取權限，才能正常執行封鎖及超連結標示。可在瀏覽器套件管理頁面中設定。</p>",
+    "description": "Description for configuration about host permission"
+  },
+
   "blockTab": {
     "message": "將選取分頁的網域加入黑名單",
     "description": "Label of context menu blocker on tab"

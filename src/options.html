@@ -6,11 +6,22 @@
 <link rel="shortcut icon" href="img/content-farm-marker_48.png">
 <link rel="stylesheet" href="options.css">
 <script src="lib/browser-polyfill.js"></script>
+<script src="lib/purify.js"></script>
 <script src="utils.js"></script>
 <script src="options.js"></script>
 <title>__MSG_appName__</title>
 </head>
 <body>
+<div id="permissions">
+  <details id="permissions_webRequestBlocking" hidden>
+    <summary>__MSG_permWebRequestBlockingTitle__</summary>
+    <div>__MSG_HTML_permWebRequestBlockingDesc__</div>
+  </details>
+  <details id="permissions_host" hidden>
+    <summary>__MSG_permHostTitle__</summary>
+    <div>__MSG_HTML_permHostDesc__</div>
+  </details>
+</div>
 <div class="content">
   <div class="header">
     <div><img src="img/content-farm-marker.svg"><h1 id="appNameLabel">__MSG_appName__</h1></div>

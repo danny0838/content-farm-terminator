@@ -709,6 +709,16 @@ function initInstallListener() {
   browser.runtime.onInstalled.addListener(async (details) => {
     const {reason, previousVersion} = details;
 
+    // Show options page if required configuration not done when installed or
+    // updated to a new version.
+    // ("update" is also triggered when reinstalling a temporary extension)
+    if (["install", "update"].includes(reason)) {
+      if (Object.values(await utils.checkPermissions()).some(x => !x)) {
+        const url = browser.runtime.getURL("options.html");
+        await browser.tabs.create({url, active: true});
+      }
+    }
+
     if (reason === "update" && utils.versionCompare(previousVersion, "2.1.2") === -1) {
       console.warn("Migrating options from < 2.1.2");
       const options = await utils.getOptions({
