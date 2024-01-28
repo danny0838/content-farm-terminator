@@ -329,12 +329,12 @@
 
   "report": {
     "message": "Report a content farm.",
-    "description": "Label of report button in options page"
+    "description": "Label of report link in options page"
   },
 
   "reportUrl": {
     "message": "https://forms.gle/RvwfY2DEeASYxDXc9",
-    "description": "Target URL of report button in options page"
+    "description": "Target URL of report link in options page"
   },
 
   "save": {
