@@ -2,7 +2,7 @@
   # Description: Filter for content-farm-like or related social network service (SNS) URLs, mostly in Chinese.
   #     This may not work well for all cases as many things cannot be fully determined by URL.
   #     This list is mostly regex-based and may have a negative effect on performance.
-  # Last modified: 2024-01-28T19:49:15+00:00
+  # Last modified: 2024-02-04T15:30:15+00:00
   # Homepage: https://danny0838.github.io/content-farm-terminator/
   # Licence: MIT License
   # Source: https://danny0838.github.io/content-farm-terminator/files/blocklist/sns-content-farms.txt
@@ -1664,3 +1664,7 @@
 /^https?://(?:(?:[\w-]+\.)?facebook\.com|fb\.(?:com|me))/(?!\w+\.php\?)(?:pg/)?(?:renshengluxi)(?=[/?#]|$)/
 /^https?://(?:(?:[\w-]+\.)?facebook\.com|fb\.(?:com|me))/(?!\w+\.php\?)(?:pg/)?(?:Asaa88Entertainment)(?=[/?#]|$)/
 /^https?://(?:(?:[\w-]+\.)?facebook\.com|fb\.(?:com|me))/(?!\w+\.php\?)(?:pg/)?(?:2023reel99)(?=[/?#]|$)/
+/^https?://(?:\w+\.)?youtube\.com/@(?:user\-lq2qj8zj4n)(?=[/?#]|$)/
+/^https?://(?:(?:[\w-]+\.)?facebook\.com|fb\.(?:com|me))/(?!\w+\.php\?)(?:pg/)?(?:positiveenergywords)(?=[/?#]|$)/
+/^https?://(?:(?:[\w-]+\.)?facebook\.com|fb\.(?:com|me))/(?!\w+\.php\?)(?:pg/)?(?:wordsliberty)(?=[/?#]|$)/
+/^https?://(?:www\.)?instagram\.com/(?:z\.y_stay)(?=[/?#]|$)/
