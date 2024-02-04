@@ -34,7 +34,7 @@
   ---- Image sharing ----
 
   -- Instagram
-/^https?://(?:www\.)?instagram\.com/([\w-]+)(?=[/?#]|$)/ /^https?://(?:www\.)?instagram\.com/$1(?=[/?#]|$)/
+/^https?://(?:www\.)?instagram\.com/([\w.-]+)(?=[/?#]|$)/ /^https?://(?:www\.)?instagram\.com/$1(?=[/?#]|$)/
 
   -- Pinterest
 /^https?://(?:www\.)?pinterest(?:\.[a-z]+)+/([\w-]+)(?=[/?#]|$)/ /^https?://(?:www\.)?pinterest(?:\.[a-z]+)+/$1(?=[/?#]|$)/
