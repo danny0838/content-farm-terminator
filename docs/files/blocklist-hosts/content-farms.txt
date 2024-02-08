@@ -1,6 +1,6 @@
 # Title: Content Farm Filters
 # Description: Filter for general content farms, mostly in Chinese.
-# Last modified: 2024-02-04T19:49:07+00:00
+# Last modified: 2024-02-08T12:09:09+00:00
 # Homepage: https://danny0838.github.io/content-farm-terminator/
 # Licence: MIT License
 # Source: https://danny0838.github.io/content-farm-terminator/files/blocklist-hosts/content-farms.txt
@@ -13358,6 +13358,7 @@
 0.0.0.0 easeandsee.eu  #!aggreg-spamdex
 0.0.0.0 easy-voucher.de  #!aggreg-spamdex
 0.0.0.0 easyrenti.pl  #!aggreg-spamdex
+0.0.0.0 ebiznes24.pl  #!aggreg-spamdex
 0.0.0.0 ecarsdm.pl  #!aggreg-spamdex
 0.0.0.0 eclubpolito.it  #!aggreg-spamdex
 0.0.0.0 ecm-uniecampus.it  #!aggreg-spamdex
