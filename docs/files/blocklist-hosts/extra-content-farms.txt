@@ -1,6 +1,6 @@
 # Title: Extra Content Farm Filters
 # Description: Extra filter for content-farm-like sites, mostly aggregated from other sources.
-# Last modified: 2024-03-10T19:49:14+00:00
+# Last modified: 2024-03-17T19:49:10+00:00
 # Homepage: https://danny0838.github.io/content-farm-terminator/
 # Licence: MIT License
 # Source: https://danny0838.github.io/content-farm-terminator/files/blocklist-hosts/extra-content-farms.txt
@@ -61979,7 +61979,6 @@
 0.0.0.0 webmasterask.info  #!aggreg-gyli
 0.0.0.0 weborui.com  #!aggreg-gyli
 0.0.0.0 websan.fr  #!aggreg-gyli
-0.0.0.0 website.informer.com  #!aggreg-gyli
 0.0.0.0 websterforrest.com  #!aggreg-gyli
 0.0.0.0 webtag123.com  #!aggreg-gyli
 0.0.0.0 webzervice.com  #!aggreg-gyli
@@ -72469,6 +72468,7 @@
 0.0.0.0 a7la-home.com  #!aggreg-nonpnt
 0.0.0.0 aalahty.cn  #!aggreg-nonpnt
 0.0.0.0 actualidadiphone.com  #!aggreg-nonpnt
+0.0.0.0 adoncn.com  #!aggreg-nonpnt
 0.0.0.0 aes-chile.cl  #!aggreg-nonpnt
 0.0.0.0 aesml.com  #!aggreg-nonpnt
 0.0.0.0 aifengbei.com  #!aggreg-nonpnt
@@ -72483,6 +72483,7 @@
 0.0.0.0 amyspastasauce.com  #!aggreg-nonpnt
 0.0.0.0 anche.cn  #!aggreg-nonpnt
 0.0.0.0 answers.gethuman.com  #!aggreg-nonpnt
+0.0.0.0 anyviewer.com  #!aggreg-nonpnt
 0.0.0.0 apkyu.com  #!aggreg-nonpnt
 0.0.0.0 appike.com  #!aggreg-nonpnt
 0.0.0.0 appspot.com  #!aggreg-nonpnt
@@ -72523,6 +72524,7 @@
 0.0.0.0 ccvic.com  #!aggreg-nonpnt
 0.0.0.0 centroricercainsubria.it  #!aggreg-nonpnt
 0.0.0.0 cetturismo.cl  #!aggreg-nonpnt
+0.0.0.0 ceyicm.cn  #!aggreg-nonpnt
 0.0.0.0 chattaboo.com  #!aggreg-nonpnt
 0.0.0.0 chcpd.com  #!aggreg-nonpnt
 0.0.0.0 china.cn  #!aggreg-nonpnt
@@ -72577,6 +72579,7 @@
 0.0.0.0 exotips.com  #!aggreg-nonpnt
 0.0.0.0 express.co.uk  #!aggreg-nonpnt
 0.0.0.0 extrabux.com  #!aggreg-nonpnt
+0.0.0.0 fastestvpn.com  #!aggreg-nonpnt
 0.0.0.0 fhsas.com  #!aggreg-nonpnt
 0.0.0.0 fofa.so  #!aggreg-nonpnt
 0.0.0.0 fonedog.com  #!aggreg-nonpnt
@@ -72643,6 +72646,7 @@
 0.0.0.0 iizhao.com  #!aggreg-nonpnt
 0.0.0.0 imacso.com  #!aggreg-nonpnt
 0.0.0.0 imaycon.com  #!aggreg-nonpnt
+0.0.0.0 informer.com  #!aggreg-nonpnt
 0.0.0.0 ios.im  #!aggreg-nonpnt
 0.0.0.0 iosvm.com  #!aggreg-nonpnt
 0.0.0.0 iqingyan.cn  #!aggreg-nonpnt
@@ -72658,6 +72662,7 @@
 0.0.0.0 jiyimusic.com  #!aggreg-nonpnt
 0.0.0.0 jkzh.net  #!aggreg-nonpnt
 0.0.0.0 jnw.cc  #!aggreg-nonpnt
+0.0.0.0 joyoshare.com  #!aggreg-nonpnt
 0.0.0.0 jqgcs123.com  #!aggreg-nonpnt
 0.0.0.0 jugomobile.com  #!aggreg-nonpnt
 0.0.0.0 juhebbs.com  #!aggreg-nonpnt
@@ -72694,11 +72699,13 @@
 0.0.0.0 mattkaydiary.com  #!aggreg-nonpnt
 0.0.0.0 measart.com  #!aggreg-nonpnt
 0.0.0.0 meetthebookworld.com  #!aggreg-nonpnt
+0.0.0.0 mefj.com.cn  #!aggreg-nonpnt
 0.0.0.0 megavolt67.ru  #!aggreg-nonpnt
 0.0.0.0 meirikeji.com  #!aggreg-nonpnt
 0.0.0.0 metropaintballgames.com  #!aggreg-nonpnt
 0.0.0.0 mhaohuo.com  #!aggreg-nonpnt
 0.0.0.0 mississippifaithinaction.org  #!aggreg-nonpnt
+0.0.0.0 mnxcc.com  #!aggreg-nonpnt
 0.0.0.0 mo08.biz  #!aggreg-nonpnt
 0.0.0.0 mobile2day.com  #!aggreg-nonpnt
 0.0.0.0 modb.pro  #!aggreg-nonpnt
@@ -72770,8 +72777,10 @@
 0.0.0.0 rukomos.ru  #!aggreg-nonpnt
 0.0.0.0 rxadderall.com  #!aggreg-nonpnt
 0.0.0.0 sa123.cc  #!aggreg-nonpnt
+0.0.0.0 safetydetectives.com  #!aggreg-nonpnt
 0.0.0.0 saintlad.com  #!aggreg-nonpnt
 0.0.0.0 sakoba.fr  #!aggreg-nonpnt
+0.0.0.0 saoyu.com  #!aggreg-nonpnt
 0.0.0.0 scpaean.com  #!aggreg-nonpnt
 0.0.0.0 sdxinli.org  #!aggreg-nonpnt
 0.0.0.0 seafastcenter.com  #!aggreg-nonpnt
@@ -72780,6 +72789,7 @@
 0.0.0.0 shihuishuo.com  #!aggreg-nonpnt
 0.0.0.0 shluqu.cn  #!aggreg-nonpnt
 0.0.0.0 shopwtn.com  #!aggreg-nonpnt
+0.0.0.0 shoujide.com  #!aggreg-nonpnt
 0.0.0.0 shoujishu.com  #!aggreg-nonpnt
 0.0.0.0 showmetech.com.br  #!aggreg-nonpnt
 0.0.0.0 shtaxi.com  #!aggreg-nonpnt
@@ -72821,6 +72831,7 @@
 0.0.0.0 techdevian.com  #!aggreg-nonpnt
 0.0.0.0 techloris.com  #!aggreg-nonpnt
 0.0.0.0 techonegame.com  #!aggreg-nonpnt
+0.0.0.0 techtarget.com  #!aggreg-nonpnt
 0.0.0.0 tedabg.com  #!aggreg-nonpnt
 0.0.0.0 tenorshare.cn  #!aggreg-nonpnt
 0.0.0.0 tenorshare.com  #!aggreg-nonpnt
@@ -72832,6 +72843,7 @@
 0.0.0.0 tnbta.com  #!aggreg-nonpnt
 0.0.0.0 todohealth.com  #!aggreg-nonpnt
 0.0.0.0 tomzx.com  #!aggreg-nonpnt
+0.0.0.0 topvpnguides.com  #!aggreg-nonpnt
 0.0.0.0 toutiao.io  #!aggreg-nonpnt
 0.0.0.0 touyinghome.com  #!aggreg-nonpnt
 0.0.0.0 tpyyes.com  #!aggreg-nonpnt
@@ -72866,6 +72878,7 @@
 0.0.0.0 vsdiffer.com  #!aggreg-nonpnt
 0.0.0.0 vvfx.cc  #!aggreg-nonpnt
 0.0.0.0 wallmama.com  #!aggreg-nonpnt
+0.0.0.0 wallvpn.com  #!aggreg-nonpnt
 0.0.0.0 wallzhihu.com  #!aggreg-nonpnt
 0.0.0.0 wangluotizi.com  #!aggreg-nonpnt
 0.0.0.0 wanshifu.com  #!aggreg-nonpnt
