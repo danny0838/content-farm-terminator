@@ -4,7 +4,6 @@ import argparse
 import glob
 import inspect
 import ipaddress
-import json
 import logging
 import os
 import re
@@ -975,8 +974,7 @@ class Aggregator:
             log.error('Failed to fetch "%s": %i', url, r.status_code)
             return
 
-        text = r.text
-        rules = self.convert_rules(type, text, url)
+        rules = self.convert_rules(type, r, url)
 
         os.makedirs(os.path.dirname(dest), exist_ok=True)
         with open(dest, 'w', encoding='UTF-8') as fh:
@@ -993,31 +991,31 @@ class Aggregator:
             log.debug('Stripping eol for %s ...', dest)
             file_strip_eol(dest)
 
-    def convert_rules(self, type, text, url):
+    def convert_rules(self, type, response, url):
         fn = getattr(self, f'convert_rules_{type}')
-        return fn(text, url)
+        return fn(response, url)
 
-    def convert_rules_domains_txt(self, text, url):
+    def convert_rules_domains_txt(self, response, url):
         """Parse a file with line-separated domains."""
         rules = []
-        for i, domain in enumerate(text.split('\n')):
+        for i, domain in enumerate(response.text.split('\n')):
             if not domain.strip():
                 continue
             rule = Rule(domain, path=url, line_no=i + 1)
             rules.append(rule)
         return rules
 
-    def convert_rules_domains_json(self, text, url):
+    def convert_rules_domains_json(self, response, url):
         """Parse a JSON with an Array of domains."""
         rules = []
-        for domain in json.loads(text):
+        for domain in response.json():
             if not domain.strip():
                 continue
             rule = Rule(domain, path=url)
             rules.append(rule)
         return rules
 
-    def convert_rules_ublacklist(self, text, url):
+    def convert_rules_ublacklist(self, response, url):
         def re_line():
             """Line parser for uBlacklist.
 
@@ -1048,7 +1046,7 @@ class Aggregator:
 
         regex = re_line()
         rules = []
-        for i, line in enumerate(text.split('\n')):
+        for i, line in enumerate(response.text.split('\n')):
             if not line.strip():
                 continue
 
