@@ -976,7 +976,8 @@ class Aggregator:
             with redirect_stdout(fh):
                 print(f'  #!aggreg-{name}: {url}{s_homepage}')
                 for rule in rules:
-                    print(f'{rule.rule} {rule.comment}{" " if rule.comment else ""}#!aggreg-{name}')
+                    comment = (' ' + rule.comment) if rule.comment else ''
+                    print(f'{rule.rule}{comment} #!aggreg-{name}')
 
         if strip_eol:
             log.debug('Stripping eol for %s ...', dest)
