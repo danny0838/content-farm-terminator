@@ -14,5 +14,5 @@ uBlock Origin 黑名單
 * [擴充內容農場清單](../files/blocklist-ubo/extra-content-farms.txt)
 * [社群內容農場清單](../files/blocklist-ubo/sns-content-farms.txt)
 * [劣質複製農場清單](../files/blocklist-ubo/bad-cloners.txt)
-* [假新聞網站清單](../files/blocklist-ubo/fake-news.txt)
 * [詐騙網站清單](../files/blocklist-ubo/scam-sites.txt)
+* [假新聞網站清單](../files/blocklist-ubo/fake-news.txt)

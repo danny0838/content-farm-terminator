@@ -19,5 +19,5 @@ hosts 黑名單
 * [類內容農場清單](../files/blocklist-hosts/nearly-content-farms.txt)
 * [擴充內容農場清單](../files/blocklist-hosts/extra-content-farms.txt)
 * [劣質複製農場清單](../files/blocklist-hosts/bad-cloners.txt)
-* [假新聞網站清單](../files/blocklist-hosts/fake-news.txt)
 * [詐騙網站清單](../files/blocklist-hosts/scam-sites.txt)
+* [假新聞網站清單](../files/blocklist-hosts/fake-news.txt)

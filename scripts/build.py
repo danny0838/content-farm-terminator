@@ -1,8 +1,10 @@
 #!/usr/bin/env python3
 """Check and publish blocklists for Content Farm Terminator."""
 import argparse
+import csv
 import glob
 import inspect
+import io
 import ipaddress
 import logging
 import os
@@ -10,7 +12,7 @@ import re
 from contextlib import contextmanager, redirect_stdout
 from datetime import datetime, timezone
 from functools import partial
-from urllib.parse import quote
+from urllib.parse import quote, urlsplit
 
 import requests
 import yaml
@@ -1104,6 +1106,42 @@ class Aggregator:
             rule = Rule(rule, path=url, line_no=i + 1)
             rules.append(rule)
 
+        return rules
+
+    def convert_rules_json_twnicscams(self, response, url):
+        """Special JSON for TWNIC scam sites."""
+        response.encoding = 'utf-8-sig'
+        rules = []
+        for entry in response.json():
+            domain = entry.get('網域名稱')
+            if not domain.strip():
+                continue
+            if domain.startswith('www.'):
+                domain = domain[4:]
+            rule = Rule(domain, path=url)
+            rules.append(rule)
+        return rules
+
+    def convert_rules_csv_165jtz(self, response, url):
+        """Special CSV for 假投資 sites from 165."""
+        rules = []
+        fh = io.StringIO(response.text)
+        reader = csv.reader(fh)
+        i = 0
+        for row in reader:
+            # skip first 2 rows, which are field definitions
+            if i < 2:
+                i += 1
+                continue
+
+            u = urlsplit(('' if row[1].startswith('https:') else 'http://') + row[1])
+            domain = u.hostname
+            if not domain.strip():
+                continue
+            if domain.startswith('www.'):
+                domain = domain[4:]
+            rule = Rule(domain, path=url)
+            rules.append(rule)
         return rules
 
 

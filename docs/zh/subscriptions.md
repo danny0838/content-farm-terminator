@@ -18,9 +18,9 @@ lang: zh
 
 * [社群內容農場清單](../files/blocklist/sns-content-farms.txt)：內容農場相關的社群網站頁面，例如大量分享、導流內容農場的臉書粉絲團，或盜用他人文章剪輯成影片的 Youtube 帳號等。由於社群網站架構因素，可能無法涵蓋所有相關頁面。
 
-* [假新聞網站清單](../files/blocklist/fake-news.txt): 假新聞網站清單，整併自 [<s>Fake News Alert</s>](https://github.com/bfeldman/fake-site-alert)、[<s>Fake News Guard</s>](https://www.fakenewsguard.com/)、[Fake news detector](https://chrome.google.com/webstore/detail/fake-news-detector/aebaikmeedenaijgjcfmndfknoobahep)、[Real or Satire](https://realorsatire.com/)。（目前未積極維護，僅供備查，不建議無篩選及除錯能力者使用。）
+* [詐騙網站清單](../files/blocklist/scam-sites.txt): 詐騙網站清單。此清單主要聚合自政府資料，如數位發展部及165全民防騙網整理的詐騙網站名單。
 
-* [詐騙網站清單](../files/blocklist/scam-sites.txt): 詐騙網站清單，取自 Chrome 擴充功能「[詐騙網站及內容農場評價系統](https://chrome.google.com/webstore/detail/%E8%A9%90%E9%A8%99%E7%B6%B2%E7%AB%99%E5%8F%8A%E5%85%A7%E5%AE%B9%E8%BE%B2%E5%A0%B4%E8%A9%95%E5%83%B9%E7%B3%BB%E7%B5%B1/mpeppilpojkpjkplhihbcfapmlnlkckb)」。（目前未積極維護，僅供備查，不建議無篩選及除錯能力者使用。）
+* [假新聞網站清單](../files/blocklist/fake-news.txt): 假新聞網站清單，整併自 [<s>Fake News Alert</s>](https://github.com/bfeldman/fake-site-alert)、[<s>Fake News Guard</s>](https://www.fakenewsguard.com/)、[Fake news detector](https://chrome.google.com/webstore/detail/fake-news-detector/aebaikmeedenaijgjcfmndfknoobahep)、[Real or Satire](https://realorsatire.com/)。（目前未積極維護，僅供備查，不建議無篩選及除錯能力者使用。）
 
 上述黑名單亦提供 [uBlock Origin](./subscriptions-ubo)、[uBlacklist](./subscriptions-ublacklist)、及 [hosts 檔案](./subscriptions-hosts)版本。
 

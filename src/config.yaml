@@ -202,6 +202,16 @@ aggregate:
     source: https://raw.githubusercontent.com/YeSilin/uBlacklist/master/list.txt
     dest: src/aggregations/extra-content-farms/yesil.txt
     type: ublacklist
+  - name: TWNICscams
+    homepage: https://data.gov.tw/dataset/165027
+    source: https://www-api.moda.gov.tw/OpenData/Files/5791
+    dest: src/aggregations/scam-sites/twnicscams.txt
+    type: json_twnicscams
+  - name: 165jtz
+    homepage: https://data.gov.tw/dataset/160055
+    source: https://data.moi.gov.tw/MoiOD/System/DownloadFile.aspx?DATA=3BB8E3CE-8223-43AF-B1AB-5824FA889883
+    dest: src/aggregations/scam-sites/165jtz.txt
+    type: csv_165jtz
 
 build:
   - source:
@@ -353,14 +363,15 @@ build:
         Source: https://danny0838.github.io/content-farm-terminator/files/blocklist/fake-news.txt
       schemes: *content_farms_schemes
 
-  - source: src/blocklist/scam-sites.txt
+  - source:
+      - src/blocklist/scam-sites.txt
+      - src/aggregations/scam-sites/
     publish: docs/files/blocklist/scam-sites.txt
     data:
       headers: |
         Title: Scam Sites Filters
-        Description: Filter for scam sites. (For reference)
-            This list is slightly organized from the database of ContenFarm Filter and Critic
-            (https://github.com/xianshengyou8/filterfarm) and is NOT actively maintained.
+        Description: Filter for scam sites. Mostly aggregrated from governmental sources, such as Ministry
+            of Digital Affairs and National Police Agency of Taiwan.
         Last modified: {now}
         Homepage: https://danny0838.github.io/content-farm-terminator/
         Licence: MIT License
@@ -440,15 +451,16 @@ build:
         Licence: MIT License
         Source: https://danny0838.github.io/content-farm-terminator/files/blocklist-hosts/fake-news.txt
 
-  - source: src/blocklist/scam-sites.txt
+  - source:
+      - src/blocklist/scam-sites.txt
+      - src/aggregations/scam-sites/
     publish: docs/files/blocklist-hosts/scam-sites.txt
     type: hosts
     data:
       headers: |
         Title: Scam Sites Filters
-        Description: Filter for scam sites. (For reference)
-            This list is slightly organized from the database of ContenFarm Filter and Critic
-            (https://github.com/xianshengyou8/filterfarm) and is NOT actively maintained.
+        Description: Filter for scam sites. Mostly aggregrated from governmental sources, such as Ministry
+            of Digital Affairs and National Police Agency of Taiwan.
         Last modified: {now}
         Homepage: https://danny0838.github.io/content-farm-terminator/
         Licence: MIT License
@@ -557,15 +569,16 @@ build:
         Source: https://danny0838.github.io/content-farm-terminator/files/blocklist-ubo/fake-news.txt
       schemes: *content_farms_schemes_ubo
 
-  - source: src/blocklist/scam-sites.txt
+  - source:
+      - src/blocklist/scam-sites.txt
+      - src/aggregations/scam-sites/
     publish: docs/files/blocklist-ubo/scam-sites.txt
     type: ubo
     data:
       headers: |
         Title: Scam Sites Filters
-        Description: Filter for scam sites. (For reference)
-            This list is slightly organized from the database of ContenFarm Filter and Critic
-            (https://github.com/xianshengyou8/filterfarm) and is NOT actively maintained.
+        Description: Filter for scam sites. Mostly aggregrated from governmental sources, such as Ministry
+            of Digital Affairs and National Police Agency of Taiwan.
         Expires: 3 days
         Last modified: {now}
         Homepage: https://danny0838.github.io/content-farm-terminator/
@@ -682,15 +695,16 @@ build:
       processors: *content_farms_processors_ublacklist
       schemes: *content_farms_schemes_ublacklist
 
-  - source: src/blocklist/scam-sites.txt
+  - source:
+      - src/blocklist/scam-sites.txt
+      - src/aggregations/scam-sites/
     publish: docs/files/blocklist-ublacklist/scam-sites.txt
     type: ublacklist
     data:
       headers: |
         Title: Scam Sites Filters
-        Description: Filter for scam sites. (For reference)
-            This list is slightly organized from the database of ContenFarm Filter and Critic
-            (https://github.com/xianshengyou8/filterfarm) and is NOT actively maintained.
+        Description: Filter for scam sites. Mostly aggregrated from governmental sources, such as Ministry
+            of Digital Affairs and National Police Agency of Taiwan.
         Last modified: {now}
         Homepage: https://danny0838.github.io/content-farm-terminator/
         Licence: MIT License
