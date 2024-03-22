@@ -970,14 +970,16 @@ class Aggregator:
         text = r.text
         rules = self.convert_rules(type, text, url)
 
-        s_homepage = f' ({homepage})' if homepage else ''
         os.makedirs(os.path.dirname(dest), exist_ok=True)
         with open(dest, 'w', encoding='UTF-8') as fh:
             with redirect_stdout(fh):
-                print(f'  #!aggreg-{name}: {url}{s_homepage}')
+                print(f'  # aggregation: #!{name}')
+                print(f'  # source: {url}')
+                if homepage:
+                    print(f'  # homepage: {homepage}')
                 for rule in rules:
                     comment = (' ' + rule.comment) if rule.comment else ''
-                    print(f'{rule.rule}{comment} #!aggreg-{name}')
+                    print(f'{rule.rule}{comment} #!{name}')
 
         if strip_eol:
             log.debug('Stripping eol for %s ...', dest)
