@@ -1,6 +1,6 @@
 # Title: Content Farm Filters
 # Description: Filter for general content farms, mostly in Chinese.
-# Last modified: 2024-03-22T13:08:53+00:00
+# Last modified: 2024-03-22T13:26:20+00:00
 # Homepage: https://danny0838.github.io/content-farm-terminator/
 # Licence: MIT License
 # Source: https://danny0838.github.io/content-farm-terminator/files/blocklist-hosts/content-farms.txt
@@ -15317,6 +15317,7 @@
 0.0.0.0 shopware-commerce.de  #!aggreg-spamdex
 0.0.0.0 shovondesign.com  #!aggreg-spamdex
 0.0.0.0 sidly-care.de  #!aggreg-spamdex
+0.0.0.0 sidodetailing.pl  #!aggreg-spamdex
 0.0.0.0 sidrerialajoguera.es  #!aggreg-spamdex
 0.0.0.0 sidroswimwear.pl  #!aggreg-spamdex
 0.0.0.0 siejek.pl  #!aggreg-spamdex
