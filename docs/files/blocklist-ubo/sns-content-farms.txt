@@ -3,10 +3,11 @@
 !     This may not work well for all cases as many things cannot be fully determined by URL.
 !     This list is mostly regex-based and may have a negative effect on performance.
 ! Expires: 3 days
-! Last modified: 2024-03-19T11:34:24+00:00
+! Last modified: 2024-03-23T03:00:15+00:00
 ! Homepage: https://danny0838.github.io/content-farm-terminator/
 ! Licence: MIT License
 ! Source: https://danny0838.github.io/content-farm-terminator/files/blocklist-ubo/sns-content-farms.txt
+
 /^https?://(?:(?:[\w-]+\.)?facebook\.com|fb\.(?:com|me))/(?:groups/)?(?:1010583825638662)(?!/user/)(?=[/?#]|$)/$doc
 /^https?://(?:(?:[\w-]+\.)?facebook\.com|fb\.(?:com|me))/(?:groups/)?(?:145771259199711)(?!/user/)(?=[/?#]|$)/$doc
 /^https?://(?:(?:[\w-]+\.)?facebook\.com|fb\.(?:com|me))/(?:groups/)?(?:1549064148684254)(?!/user/)(?=[/?#]|$)/$doc

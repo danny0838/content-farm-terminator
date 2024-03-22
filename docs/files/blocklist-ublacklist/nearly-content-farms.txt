@@ -1,9 +1,10 @@
 # Title: Nearly Content Farm Filters
 # Description: Filter for content-farm-like sites, mostly in Chinese.
-# Last modified: 2024-03-22T13:54:30+00:00
+# Last modified: 2024-03-23T03:00:15+00:00
 # Homepage: https://danny0838.github.io/content-farm-terminator/
 # Licence: MIT License
 # Source: https://danny0838.github.io/content-farm-terminator/files/blocklist-ublacklist/nearly-content-farms.txt
+
 *://*.0nion.com/*  #網站已明確說明為學術性爬蟲且有附上來源，但似乎未事先取得被爬站方授權
 *://*.25xt.com/*  #內容有主題性且經過篩選，許多轉文有附來源但疑似未經授權
 *://*.94477.com/*  #轉發微信公眾號的平台，似乎未經作者授權

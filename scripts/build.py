@@ -786,7 +786,9 @@ class Converter:
             now=self.date.astimezone(timezone.utc).isoformat(timespec='seconds'),
         )
         headers = '\n'.join(f'# {s}' for s in headers.split('\n'))
-        print(headers)
+        if headers:
+            print(headers)
+            print('')
 
     def print_rule(self, rule):
         print(rule.rule + rule.sep + rule.comment)
@@ -816,7 +818,9 @@ class ConverterCopy(Converter):
         headers = headers.rstrip('\n').format(
             now=self.date.astimezone(timezone.utc).isoformat(timespec='seconds'),
         )
-        print(headers)
+        if headers:
+            print(headers)
+            print('')
 
 
 class ConverterCft(Converter):
@@ -831,7 +835,9 @@ class ConverterCft(Converter):
             now=self.date.astimezone(timezone.utc).isoformat(timespec='seconds'),
         )
         headers = '\n'.join(f'  # {s}' for s in headers.split('\n'))
-        print(headers)
+        if headers:
+            print(headers)
+            print('')
 
     def print_rule(self, rule):
         # skip invalid rule
@@ -880,7 +886,9 @@ class ConverterUbo(Converter):
             now=self.date.astimezone(timezone.utc).isoformat(timespec='seconds'),
         )
         headers = '\n'.join(f'! {s}' for s in headers.split('\n'))
-        print(headers)
+        if headers:
+            print(headers)
+            print('')
 
     def print_rule(self, rule):
         comment = '  #' + re.sub(r'^\s*(?://|#)', r'', rule.comment) if rule.comment else ''
