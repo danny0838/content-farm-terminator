@@ -2,7 +2,7 @@
   # Description: Filter for content-farm-like or related social network service (SNS) URLs, mostly in Chinese.
   #     This may not work well for all cases as many things cannot be fully determined by URL.
   #     This list is mostly regex-based and may have a negative effect on performance.
-  # Last modified: 2024-03-23T03:00:15+00:00
+  # Last modified: 2024-03-23T03:35:30+00:00
   # Homepage: https://danny0838.github.io/content-farm-terminator/
   # Licence: MIT License
   # Source: https://danny0838.github.io/content-farm-terminator/files/blocklist/sns-content-farms.txt
@@ -1065,11 +1065,11 @@
 /https?://(?:haokan|sv)\.baidu\.com/author/(?:lPH5Bl7KPnQdlR7CXEjMuw)(?=[/?#]|$)/
 /https?://(?:haokan|sv)\.baidu\.com/author/(?:nI9uu3oRsKnivTazP5ufNw)(?=[/?#]|$)/
 /^https?://(?:www\.)?instagram\.com/(?:viralane)(?=[/?#]|$)/
-/^https?://page\.line\.me/(?:healthylives)(?=[/?#]|$)/
-/^https?://page\.line\.me/(?:how01)(?=[/?#]|$)/
-/^https?://page\.line\.me/(?:lifenews)(?=[/?#]|$)/
-/^https?://page\.line\.me/(?:opz7509n)(?=[/?#]|$)/
-/^https?://page\.line\.me/(?:teepr)(?=[/?#]|$)/
+/^https?://(?:page\.line\.me/|line\.me/(?:R/)?ti/p/@)(?:healthylives)(?=[/?#]|$)/
+/^https?://(?:page\.line\.me/|line\.me/(?:R/)?ti/p/@)(?:how01)(?=[/?#]|$)/
+/^https?://(?:page\.line\.me/|line\.me/(?:R/)?ti/p/@)(?:lifenews)(?=[/?#]|$)/
+/^https?://(?:page\.line\.me/|line\.me/(?:R/)?ti/p/@)(?:opz7509n)(?=[/?#]|$)/
+/^https?://(?:page\.line\.me/|line\.me/(?:R/)?ti/p/@)(?:teepr)(?=[/?#]|$)/
 /^https?://timeline\.line\.me/(?:\w+?)/(?:_dQ068h3QIXedbEgzPF\-ereDRVCa6eJwrqVvQ5n4)(?=[/?#]|$)/
 /^https?://timeline\.line\.me/(?:\w+?)/(?:_dWGN46duZKytqGp2wMVWg65NvnfviJ7s14PDjMM)(?=[/?#]|$)/
 /^https?://(?:www\.)?pinterest(?:\.[a-z]+)+/(?:ViralaneNews)(?=[/?#]|$)/

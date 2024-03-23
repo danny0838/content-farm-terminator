@@ -324,8 +324,11 @@ build:
         plurk:
           value: /^https?://(?:www\.)?plurk\.com/(?:m/p/)?(?:{value})(?=[/?#]|$)/
           escape: regex
+        line-user:
+          value: /^https?://(?:line\.me/(?:R/)?ti/p/)(?:{value})(?=[/?#]|$)/
+          escape: regex
         line-page:
-          value: /^https?://page\.line\.me/(?:{value})(?=[/?#]|$)/
+          value: /^https?://(?:page\.line\.me/|line\.me/(?:R/)?ti/p/@)(?:{value})(?=[/?#]|$)/
           escape: regex
         line-timeline:
           value: /^https?://timeline\.line\.me/(?:\w+?)/(?:{value})(?=[/?#]|$)/
