@@ -1,7 +1,7 @@
 # Title: Scam Sites Filters
 # Description: Filter for scam sites. Mostly aggregrated from governmental sources, such as Ministry
 #     of Digital Affairs and National Police Agency of Taiwan.
-# Last modified: 2024-03-23T03:18:06+00:00
+# Last modified: 2024-03-23T03:51:33+00:00
 # Homepage: https://danny0838.github.io/content-farm-terminator/
 # Licence: MIT License
 # Source: https://danny0838.github.io/content-farm-terminator/files/blocklist-hosts/scam-sites.txt
@@ -21,7 +21,6 @@
 0.0.0.0 1der.tw  #!cffc
 0.0.0.0 1ooa.com  #!cffc
 0.0.0.0 1shop.tw  #!cffc
-0.0.0.0 1winpress.cc  #!cffc
 0.0.0.0 2018dream.com  #!cffc
 0.0.0.0 2688.tw  #!cffc
 0.0.0.0 360tsj.com  #!cffc
@@ -632,7 +631,6 @@
 0.0.0.0 elleo.tw  #!cffc
 0.0.0.0 emall-discount.com  #!cffc
 0.0.0.0 enamelpot-tw.com  #!cffc
-0.0.0.0 entertainment14.net  #!cffc
 0.0.0.0 enzyme-tw.com  #!cffc
 0.0.0.0 eoqil.com  #!cffc
 0.0.0.0 eoykb.com  #!cffc

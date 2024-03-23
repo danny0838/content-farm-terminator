@@ -1,7 +1,7 @@
 # Title: Scam Sites Filters
 # Description: Filter for scam sites. Mostly aggregrated from governmental sources, such as Ministry
 #     of Digital Affairs and National Police Agency of Taiwan.
-# Last modified: 2024-03-23T03:18:06+00:00
+# Last modified: 2024-03-23T03:51:33+00:00
 # Homepage: https://danny0838.github.io/content-farm-terminator/
 # Licence: MIT License
 # Source: https://danny0838.github.io/content-farm-terminator/files/blocklist-ublacklist/scam-sites.txt
@@ -21,7 +21,6 @@
 *://*.1der.tw/*  #!cffc
 *://*.1ooa.com/*  #!cffc
 *://*.1shop.tw/*  #!cffc
-*://*.1winpress.cc/*  #!cffc
 *://*.2018dream.com/*  #!cffc
 *://*.2688.tw/*  #!cffc
 *://*.360tsj.com/*  #!cffc
@@ -686,7 +685,6 @@
 *://*.elleo.tw/*  #!cffc
 *://*.emall-discount.com/*  #!cffc
 *://*.enamelpot-tw.com/*  #!cffc
-*://*.entertainment14.net/*  #!cffc
 *://*.enzyme-tw.com/*  #!cffc
 *://*.eoqil.com/*  #!cffc
 *://*.eoykb.com/*  #!cffc
@@ -15283,4 +15281,3 @@
 *://*.hiopa.top/*  #!TWNICscams
 *://*.nabeu.top/*  #!TWNICscams
 *://*.vsoic.top/*  #!TWNICscams
-/https?:\/\/(?:[\w-]+\.)*(?:axn2000|faminereports|peopleinsider)\.blogspot\.(?:[\w.-]+)(?=[:\/?#]|$)/
