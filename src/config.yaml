@@ -391,8 +391,7 @@ build:
         Licence: MIT License
         Source: https://danny0838.github.io/content-farm-terminator/files/blocklist/scam-sites.txt
       schemes:
-        <<: *content_farms_schemes
-        <<: *sns_content_farms_schemes
+        <<: [*sns_content_farms_schemes, *content_farms_schemes]
 
   - source:
       - src/blocklist/content-farms.txt
@@ -601,8 +600,7 @@ build:
         Licence: MIT License
         Source: https://danny0838.github.io/content-farm-terminator/files/blocklist-ubo/scam-sites.txt
       schemes:
-        <<: *content_farms_schemes_ubo
-        <<: *sns_content_farms_schemes
+        <<: [*sns_content_farms_schemes, *content_farms_schemes_ubo]
 
   - source:
       - src/blocklist/content-farms.txt
