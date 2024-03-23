@@ -239,19 +239,19 @@ build:
         Source: https://danny0838.github.io/content-farm-terminator/files/blocklist/content-farms.txt
       schemes: &content_farms_schemes
         domain-part:
-          value: /https?://(?:[\w-]+\.)*(?:{value})(?:\.[\w-]+)*(?=[:/?#]|$)/
+          value: /^https?://(?:[\w-]+\.)*(?:{value})(?:\.[\w-]+)*(?=[:/?#]|$)/
           escape: regex
         domain-path:
-          value: /https?://(?:[\w-]+\.)*(?:{value})(?=[/?#]|$)/
+          value: /^https?://(?:[\w-]+\.)*(?:{value})(?=[/?#]|$)/
           escape: regex
         mp-path:
-          value: /https?://(?:[\w-]+\.)*[\w-]+/(?:{value})$/
+          value: /^https?://(?:[\w-]+\.)*[\w-]+/(?:{value})$/
           escape: regex_with_wildcard_a
         mp-hosts-path:
-          value: /https?://(?:[\w-]+\.)*(?:{value})$/
+          value: /^https?://(?:[\w-]+\.)*(?:{value})$/
           escape: regex_with_wildcard_a
         mp-host-path:
-          value: /https?://(?:{value})$/
+          value: /^https?://(?:{value})$/
           escape: regex_with_wildcard_a
         xuite: &content_farms_scheme_xuite
           value: /^https?://(?:(?:m\.)?(?:[bv]log|photo)\.xuite\.net|m\.xuite\.net/blog)/(?:{value})(?=[/?#]|$)/

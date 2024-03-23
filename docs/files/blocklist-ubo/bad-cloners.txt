@@ -3,7 +3,7 @@
 !     is copyleft or copyfree, but provide only trivial layout change or poor-quality bot translation
 !     and are thus spam-like.
 ! Expires: 3 days
-! Last modified: 2024-03-23T03:00:15+00:00
+! Last modified: 2024-03-23T05:09:39+00:00
 ! Homepage: https://danny0838.github.io/content-farm-terminator/
 ! Licence: MIT License
 ! Source: https://danny0838.github.io/content-farm-terminator/files/blocklist-ubo/bad-cloners.txt
@@ -199,8 +199,8 @@ copyprogramming.com  #!ublSoT
 # aggregation: #!wdmpaMtSo
 # source: https://raw.githubusercontent.com/wdmpa/content-farm-list/main/domains/machine-translated/stackoverflow.txt
 # homepage: https://github.com/wdmpa/content-farm-list
-/https?://(?:www\.coder\.work/article/.*)$/$doc  #!wdmpaMtSo
-/https?://(?:xbuba\.com/questions/.*)$/$doc  #!wdmpaMtSo
+/^https?://(?:www\.coder\.work/article/.*)$/$doc  #!wdmpaMtSo
+/^https?://(?:xbuba\.com/questions/.*)$/$doc  #!wdmpaMtSo
 stackoverrun.com  #!wdmpaMtSo
 thinbug.com  #!wdmpaMtSo
 voidcn.com  #!wdmpaMtSo
@@ -209,8 +209,8 @@ soinside.com  #!wdmpaMtSo
 androidcookie.com  #!wdmpaMtSo
 qastack.in  #!wdmpaMtSo
 qastack.lk  #!wdmpaMtSo
-/https?://(?:twitter\.com/qastack/.*)$/$doc  #!wdmpaMtSo
-/https?://(?:codingdict\.com/questions/.*)$/$doc  #!wdmpaMtSo
+/^https?://(?:twitter\.com/qastack/.*)$/$doc  #!wdmpaMtSo
+/^https?://(?:codingdict\.com/questions/.*)$/$doc  #!wdmpaMtSo
 kb.kutu66.com  #!wdmpaMtSo
 366service.com  #!wdmpaMtSo
 mlog.club  #!wdmpaMtSo

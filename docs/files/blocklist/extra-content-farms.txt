@@ -1,6 +1,6 @@
   # Title: Extra Content Farm Filters
   # Description: Extra filter for content-farm-like sites, mostly aggregated from other sources.
-  # Last modified: 2024-03-23T03:00:15+00:00
+  # Last modified: 2024-03-23T05:09:39+00:00
   # Homepage: https://danny0838.github.io/content-farm-terminator/
   # Licence: MIT License
   # Source: https://danny0838.github.io/content-farm-terminator/files/blocklist/extra-content-farms.txt
@@ -315,13 +315,13 @@ zsyawen.com  #!bbw #爬虫采集 SEO 机器翻译垃圾网站
 m.toutiao.com #!diveng
 baidu.com #!diveng
 csdn.net #!diveng
-/https?://(?:cloud\.tencent\.com/developer/.*)$/ #!diveng
-/https?://(?:cn\.aliyun\.com/ss/.*)$/ #!diveng
-/https?://(?:cn\.aliyun\.com/sswm/.*)$/ #!diveng
-/https?://(?:developer\.aliyun\.com/ask/.*)$/ #!diveng
-/https?://(?:juejin\.cn/s/.*)$/ #!diveng
-/https?://(?:www\.aliyun\.com/sswd/.*)$/ #!diveng
-/https?://(?:www\.huaweicloud\.com/theme/.*)$/ #!diveng
+/^https?://(?:cloud\.tencent\.com/developer/.*)$/ #!diveng
+/^https?://(?:cn\.aliyun\.com/ss/.*)$/ #!diveng
+/^https?://(?:cn\.aliyun\.com/sswm/.*)$/ #!diveng
+/^https?://(?:developer\.aliyun\.com/ask/.*)$/ #!diveng
+/^https?://(?:juejin\.cn/s/.*)$/ #!diveng
+/^https?://(?:www\.aliyun\.com/sswd/.*)$/ #!diveng
+/^https?://(?:www\.huaweicloud\.com/theme/.*)$/ #!diveng
 kafan.cn #!diveng
 z.sogou.com #!diveng
 07yue.com #!diveng
@@ -650,7 +650,7 @@ kanzhongguo.com #!diveng
 mh4u.org #!diveng
 mhradio.org #!diveng
 minghui.org #!diveng
-/https?://(?:[\w-]+\.)*(?:ntdtv\.com//.*)$/ #!diveng
+/^https?://(?:[\w-]+\.)*(?:ntdtv\.com//.*)$/ #!diveng
 ogate.org #!diveng
 open.com.hk #!diveng
 renminbao.com #!diveng
@@ -72531,9 +72531,9 @@ zzzzbj.com #!gyli
 369369.xyz #!nonpnt
 3955017.com #!nonpnt
 3cwu.com #!nonpnt
-/https?://(?:[\w-]+\.)*(?:4hou\.com/posts/.*)$/ #!nonpnt
+/^https?://(?:[\w-]+\.)*(?:4hou\.com/posts/.*)$/ #!nonpnt
 4meahc.com #!nonpnt
-/https?://(?:[\w-]+\.)*(?:51cto\.com/topic/.*)$/ #!nonpnt
+/^https?://(?:[\w-]+\.)*(?:51cto\.com/topic/.*)$/ #!nonpnt
 51offer.com #!nonpnt
 51xuexiaoyi.com #!nonpnt
 521cc.com #!nonpnt
@@ -72563,7 +72563,7 @@ aimizn.com #!nonpnt
 aiseesoft.com #!nonpnt
 aishuaijiao.com #!nonpnt
 ajhujiao.com #!nonpnt
-/https?://(?:[\w-]+\.)*(?:alibabacloud\.com/blog/.*)$/ #!nonpnt
+/^https?://(?:[\w-]+\.)*(?:alibabacloud\.com/blog/.*)$/ #!nonpnt
 alltechbuzz.net #!nonpnt
 altapps.net #!nonpnt
 amalur-madretierra.es #!nonpnt
@@ -72586,7 +72586,7 @@ atwebpages.com #!nonpnt
 awshao.com #!nonpnt
 ayxbwy.com #!nonpnt
 b00h.com #!nonpnt
-/https?://(?:[\w-]+\.)*(?:baidu\.com/s\?word=.*)$/ #!nonpnt
+/^https?://(?:[\w-]+\.)*(?:baidu\.com/s\?word=.*)$/ #!nonpnt
 bangjun168.com #!nonpnt
 banyantp.com #!nonpnt
 barber-klipp.com #!nonpnt
@@ -72633,7 +72633,7 @@ cnxiangyan.com #!nonpnt
 comparitech.com #!nonpnt
 crackorg.com #!nonpnt
 craffts.com #!nonpnt
-/https?://(?:[\w-]+\.)*(?:csdn\.net/weixin_26722031/article/.*)$/ #!nonpnt
+/^https?://(?:[\w-]+\.)*(?:csdn\.net/weixin_26722031/article/.*)$/ #!nonpnt
 csolmy.com #!nonpnt
 cspfocus.cn #!nonpnt
 cundang.cc #!nonpnt
@@ -72644,16 +72644,16 @@ daixieessay.com #!nonpnt
 daka111.cn #!nonpnt
 dav01.com #!nonpnt
 ddosi.org #!nonpnt
-/https?://(?:[\w-]+\.)*(?:dealmoon\.co\.uk/top/.*)$/ #!nonpnt
+/^https?://(?:[\w-]+\.)*(?:dealmoon\.co\.uk/top/.*)$/ #!nonpnt
 debian8.com #!nonpnt
 dedeapps.com #!nonpnt
 devicesfaq.com #!nonpnt
 devicetests.com #!nonpnt
 digidash.in #!nonpnt
 dkfp88.cn #!nonpnt
-/https?://(?:[\w-]+\.)*(?:dongchedi\.com/tag/.*)$/ #!nonpnt
-/https?://(?:[\w-]+\.)*(?:douyin\.com/search/.*)$/ #!nonpnt
-/https?://(?:[\w-]+\.)*(?:douyin\.com/zhuanti/.*)$/ #!nonpnt
+/^https?://(?:[\w-]+\.)*(?:dongchedi\.com/tag/.*)$/ #!nonpnt
+/^https?://(?:[\w-]+\.)*(?:douyin\.com/search/.*)$/ #!nonpnt
+/^https?://(?:[\w-]+\.)*(?:douyin\.com/zhuanti/.*)$/ #!nonpnt
 driedpeel.com #!nonpnt
 drivereasy.com #!nonpnt
 driversupport.com #!nonpnt
@@ -72682,7 +72682,7 @@ food-week.ru #!nonpnt
 fpppw.com #!nonpnt
 framedfm.net #!nonpnt
 frederique-davezac.fr #!nonpnt
-/https?://(?:[\w-]+\.)*(?:freecodecamp\.org/news/.*)$/ #!nonpnt
+/^https?://(?:[\w-]+\.)*(?:freecodecamp\.org/news/.*)$/ #!nonpnt
 freejobalerts24.com #!nonpnt
 freejournal.info #!nonpnt
 fukuyama-okoku.com #!nonpnt
@@ -72741,7 +72741,7 @@ igiftidea.com #!nonpnt
 iizhao.com #!nonpnt
 imacso.com #!nonpnt
 imaycon.com #!nonpnt
-/https?://(?:[\w-]+\.)*(?:imooc\.com/wenda/.*)$/ #!nonpnt
+/^https?://(?:[\w-]+\.)*(?:imooc\.com/wenda/.*)$/ #!nonpnt
 informer.com #!nonpnt
 ios.im #!nonpnt
 iosvm.com #!nonpnt
@@ -72749,7 +72749,7 @@ iqingyan.cn #!nonpnt
 iqqoz.com #!nonpnt
 isdakar.org #!nonpnt
 it.net.cn #!nonpnt
-/https?://(?:[\w-]+\.)*(?:itamtech\.com/catalogsearch/.*)$/ #!nonpnt
+/^https?://(?:[\w-]+\.)*(?:itamtech\.com/catalogsearch/.*)$/ #!nonpnt
 itecnote.com #!nonpnt
 ixigua.com #!nonpnt
 jdon.com #!nonpnt
@@ -72761,7 +72761,7 @@ jkzh.net #!nonpnt
 jnw.cc #!nonpnt
 joyoshare.com #!nonpnt
 jqgcs123.com #!nonpnt
-/https?://(?:[\w-]+\.)*(?:juejin\.cn/s/.*)$/ #!nonpnt
+/^https?://(?:[\w-]+\.)*(?:juejin\.cn/s/.*)$/ #!nonpnt
 jugomobile.com #!nonpnt
 juhebbs.com #!nonpnt
 juyifx.cn #!nonpnt
@@ -72780,8 +72780,8 @@ kunyuyuan.com #!nonpnt
 lacomparacion.com #!nonpnt
 lehuotuan.com #!nonpnt
 leixue.com #!nonpnt
-/https?://(?:[\w-]+\.)*(?:lete\.com/kdwenda/.*)$/ #!nonpnt
-/https?://(?:[\w-]+\.)*(?:liangliangmama\.com/blogs/news/.*)$/ #!nonpnt
+/^https?://(?:[\w-]+\.)*(?:lete\.com/kdwenda/.*)$/ #!nonpnt
+/^https?://(?:[\w-]+\.)*(?:liangliangmama\.com/blogs/news/.*)$/ #!nonpnt
 libhunt.com #!nonpnt
 licenseapps.com #!nonpnt
 liliang.info #!nonpnt
@@ -72834,13 +72834,13 @@ obagua.com #!nonpnt
 ofweek.com #!nonpnt
 onitroad.com #!nonpnt
 opython.com #!nonpnt
-/https?://(?:[\w-]+\.)*(?:oschina\.net/informat/.*)$/ #!nonpnt
-/https?://(?:[\w-]+\.)*(?:ourplay\.net/ask/.*)$/ #!nonpnt
-/https?://(?:[\w-]+\.)*(?:ourplay\.net/qazt/.*)$/ #!nonpnt
+/^https?://(?:[\w-]+\.)*(?:oschina\.net/informat/.*)$/ #!nonpnt
+/^https?://(?:[\w-]+\.)*(?:ourplay\.net/ask/.*)$/ #!nonpnt
+/^https?://(?:[\w-]+\.)*(?:ourplay\.net/qazt/.*)$/ #!nonpnt
 outofmemory.cn #!nonpnt
 panjk.com #!nonpnt
 passfab.com #!nonpnt
-/https?://(?:[\w-]+\.)*(?:pc6\.com/infoview/.*)$/ #!nonpnt
+/^https?://(?:[\w-]+\.)*(?:pc6\.com/infoview/.*)$/ #!nonpnt
 php.cn #!nonpnt
 picclick.co.uk #!nonpnt
 pinkypink.org #!nonpnt
@@ -72861,7 +72861,7 @@ qciss.net #!nonpnt
 qiangwaikan.com #!nonpnt
 qingdaosailing.com #!nonpnt
 qingyunl.com #!nonpnt
-/https?://(?:[\w-]+\.)*(?:qiniu\.com/qfans/.*)$/ #!nonpnt
+/^https?://(?:[\w-]+\.)*(?:qiniu\.com/qfans/.*)$/ #!nonpnt
 qiuyexitong.com #!nonpnt
 qnid.cc #!nonpnt
 qpb2b.com #!nonpnt
@@ -72949,9 +72949,9 @@ tnbta.com #!nonpnt
 todohealth.com #!nonpnt
 tomzx.com #!nonpnt
 topvpnguides.com #!nonpnt
-/https?://(?:[\w-]+\.)*(?:toutiao\.com/keyword/.*)$/ #!nonpnt
-/https?://(?:[\w-]+\.)*(?:toutiao\.com/search/.*)$/ #!nonpnt
-/https?://(?:[\w-]+\.)*(?:toutiao\.com/search\?keyword=.*)$/ #!nonpnt
+/^https?://(?:[\w-]+\.)*(?:toutiao\.com/keyword/.*)$/ #!nonpnt
+/^https?://(?:[\w-]+\.)*(?:toutiao\.com/search/.*)$/ #!nonpnt
+/^https?://(?:[\w-]+\.)*(?:toutiao\.com/search\?keyword=.*)$/ #!nonpnt
 toutiao.io #!nonpnt
 touyinghome.com #!nonpnt
 tpyyes.com #!nonpnt
@@ -72974,12 +72974,12 @@ unansea.com #!nonpnt
 uosohyc.site #!nonpnt
 urtasker.com #!nonpnt
 ux6.com #!nonpnt
-/https?://(?:[\w-]+\.)*(?:v2ex\.com/amp/.*)$/ #!nonpnt
+/^https?://(?:[\w-]+\.)*(?:v2ex\.com/amp/.*)$/ #!nonpnt
 vectormagic.com #!nonpnt
 versus.com #!nonpnt
 vimsky.com #!nonpnt
 vlexpert.com #!nonpnt
-/https?://(?:[\w-]+\.)*(?:volcengine\.com/theme/.*)$/ #!nonpnt
+/^https?://(?:[\w-]+\.)*(?:volcengine\.com/theme/.*)$/ #!nonpnt
 volvootofinans.com #!nonpnt
 vouchercodes.co.uk #!nonpnt
 vpn5best.com #!nonpnt
@@ -72998,7 +72998,7 @@ wdfxw.net #!nonpnt
 weblihost.com #!nonpnt
 website-problem.info #!nonpnt
 websiterating.com #!nonpnt
-/https?://(?:[\w-]+\.)*(?:weibo\.com/a/hot/.*)$/ #!nonpnt
+/^https?://(?:[\w-]+\.)*(?:weibo\.com/a/hot/.*)$/ #!nonpnt
 wenbf.com #!nonpnt
 westack.live #!nonpnt
 whoisua.com #!nonpnt
@@ -73012,7 +73012,7 @@ wjpy55.com #!nonpnt
 woniuwl.com #!nonpnt
 workessay.com #!nonpnt
 wujigu.com #!nonpnt
-/https?://(?:[\w-]+\.)*(?:wuzhuiso\.com/s\?q=.*)$/ #!nonpnt
+/^https?://(?:[\w-]+\.)*(?:wuzhuiso\.com/s\?q=.*)$/ #!nonpnt
 wxkcg.com #!nonpnt
 xagrtx.com #!nonpnt
 xcx1024.com #!nonpnt
@@ -73056,13 +73056,13 @@ znj.com #!nonpnt
 znsjw.com #!nonpnt
 zol.com.cn #!nonpnt
 zx75551.com #!nonpnt
-/https?://(?:[\w-]+\.)*[\w-]+/(?:\?s=.*)$/ #!nonpnt
-/https?://(?:[\w-]+\.)*[\w-]+/(?:cha\.php\?s=.*)$/ #!nonpnt
-/https?://(?:[\w-]+\.)*[\w-]+/(?:home\.php\?mod=space.*)$/ #!nonpnt
-/https?://(?:[\w-]+\.)*[\w-]+/(?:list\.php\?s=.*)$/ #!nonpnt
-/https?://(?:[\w-]+\.)*[\w-]+/(?:so\.php)$/ #!nonpnt
-/https?://(?:[\w-]+\.)*[\w-]+/(?:so\.php\?s=.*)$/ #!nonpnt
-/https?://(?:[\w-]+\.)*[\w-]+/(?:so/.*)$/ #!nonpnt
+/^https?://(?:[\w-]+\.)*[\w-]+/(?:\?s=.*)$/ #!nonpnt
+/^https?://(?:[\w-]+\.)*[\w-]+/(?:cha\.php\?s=.*)$/ #!nonpnt
+/^https?://(?:[\w-]+\.)*[\w-]+/(?:home\.php\?mod=space.*)$/ #!nonpnt
+/^https?://(?:[\w-]+\.)*[\w-]+/(?:list\.php\?s=.*)$/ #!nonpnt
+/^https?://(?:[\w-]+\.)*[\w-]+/(?:so\.php)$/ #!nonpnt
+/^https?://(?:[\w-]+\.)*[\w-]+/(?:so\.php\?s=.*)$/ #!nonpnt
+/^https?://(?:[\w-]+\.)*[\w-]+/(?:so/.*)$/ #!nonpnt
 00w5.com #!nonpnt
 0550pet.cn #!nonpnt
 0w9.harpnetworkinc.com #!nonpnt
@@ -73092,7 +73092,7 @@ app.youfa.coms.hk #!nonpnt
 ask.seowhy.com #!nonpnt
 auditioneasterhelm.com #!nonpnt
 baby918gardeneffect.live #!nonpnt
-/https?://(?:baike\.baidu\.com/tashuo/.*)$/ #!nonpnt
+/^https?://(?:baike\.baidu\.com/tashuo/.*)$/ #!nonpnt
 bameifaze.com #!nonpnt
 bbs.mydigit.cn #!nonpnt
 bbs.nga.cn #!nonpnt
@@ -73103,10 +73103,10 @@ best.pconline.com.cn #!nonpnt
 biggo.com.tw #!nonpnt
 bjtmmh.com #!nonpnt
 blacksprocket.com #!nonpnt
-/https?://(?:blog\.csdn\.net/holybin/.*)$/ #!nonpnt
-/https?://(?:blog\.csdn\.net/weixin_35909238/.*)$/ #!nonpnt
+/^https?://(?:blog\.csdn\.net/holybin/.*)$/ #!nonpnt
+/^https?://(?:blog\.csdn\.net/weixin_35909238/.*)$/ #!nonpnt
 bloomingtonventures.com #!nonpnt
-/https?://(?:book\.jd\.com/publish/Search\?.*)$/ #!nonpnt
+/^https?://(?:book\.jd\.com/publish/Search\?.*)$/ #!nonpnt
 brd2a.com #!nonpnt
 briteming.blogspot.com #!nonpnt
 brrmn.com #!nonpnt
@@ -73117,18 +73117,18 @@ carry.pw #!nonpnt
 check-caller.co.uk #!nonpnt
 checkcaller.cn #!nonpnt
 chinese.alibaba.com #!nonpnt
-/https?://(?:cloud\.tencent\.com/developer/article/.*)$/ #!nonpnt
-/https?://(?:cloud\.tencent\.com/developer/ask/.*)$/ #!nonpnt
-/https?://(?:cloud\.tencent\.com/developer/information/.*)$/ #!nonpnt
+/^https?://(?:cloud\.tencent\.com/developer/article/.*)$/ #!nonpnt
+/^https?://(?:cloud\.tencent\.com/developer/ask/.*)$/ #!nonpnt
+/^https?://(?:cloud\.tencent\.com/developer/information/.*)$/ #!nonpnt
 cn.jptele.com #!nonpnt
-/https?://(?:cn\.pingcap\.com/article/post/.*)$/ #!nonpnt
+/^https?://(?:cn\.pingcap\.com/article/post/.*)$/ #!nonpnt
 cn846.com #!nonpnt
 contact-who-called.com #!nonpnt
 contactnumbers.buzz #!nonpnt
 cx.17house.com #!nonpnt
 daynote.cc #!nonpnt
 ddxiangmu.com #!nonpnt
-/https?://(?:developer\.aliyun\.com/articlezt/.*)$/ #!nonpnt
+/^https?://(?:developer\.aliyun\.com/articlezt/.*)$/ #!nonpnt
 digwow.net #!nonpnt
 dingtalk.com #!nonpnt
 discountcode.dailymail.co.uk #!nonpnt
@@ -73152,7 +73152,7 @@ g36yexigghnzong.icu #!nonpnt
 gfgyyq.com #!nonpnt
 ggchewl.com #!nonpnt
 giskaa.com #!nonpnt
-/https?://(?:github\.com/qyyd5g/.*)$/ #!nonpnt
+/^https?://(?:github\.com/qyyd5g/.*)$/ #!nonpnt
 guolianglaoshi.com #!nonpnt
 hairunwatertr.com #!nonpnt
 hantenglaw.com #!nonpnt
@@ -73165,7 +73165,7 @@ hz-heng-li.com #!nonpnt
 hzhcontrols.com #!nonpnt
 hztx88.com #!nonpnt
 iask.sina.com.cn #!nonpnt
-/https?://(?:iknow\.baidu\.com/search\?word=.*)$/ #!nonpnt
+/^https?://(?:iknow\.baidu\.com/search\?word=.*)$/ #!nonpnt
 ilvruan.com #!nonpnt
 ishiker.com #!nonpnt
 jhsjtxx.com #!nonpnt
@@ -73229,13 +73229,13 @@ mitosediesel.ro.to #!nonpnt
 mnsf.net #!nonpnt
 mostud.com #!nonpnt
 muzoic.org #!nonpnt
-/https?://(?:my\.oschina\.net/u/4394125/.*)$/ #!nonpnt
+/^https?://(?:my\.oschina\.net/u/4394125/.*)$/ #!nonpnt
 mygiftlk.com #!nonpnt
-/https?://(?:new\.qq\.com/omn/.*)$/ #!nonpnt
+/^https?://(?:new\.qq\.com/omn/.*)$/ #!nonpnt
 news.66wz.com #!nonpnt
-/https?://(?:news\.futunn\.com/post/.*)$/ #!nonpnt
+/^https?://(?:news\.futunn\.com/post/.*)$/ #!nonpnt
 news.tom.com #!nonpnt
-/https?://(?:pic\.sogou\.com/pic/searchList\.jsp\?.*)$/ #!nonpnt
+/^https?://(?:pic\.sogou\.com/pic/searchList\.jsp\?.*)$/ #!nonpnt
 product.3g.pconline.com.cn #!nonpnt
 product.mxpkw.com #!nonpnt
 product.pconline.com.cn #!nonpnt
@@ -73292,7 +73292,7 @@ wpsousuo.cn #!nonpnt
 0755qxhj.com #!nonpnt
 07diy.com #!nonpnt
 12y.org #!nonpnt
-/https?://(?:www\.163\.com/dy/article/.*)$/ #!nonpnt
+/^https?://(?:www\.163\.com/dy/article/.*)$/ #!nonpnt
 17qufa.com #!nonpnt
 1984w.com #!nonpnt
 1itao.com #!nonpnt
@@ -73358,7 +73358,7 @@ aprendotodo.com #!nonpnt
 asmrqq.com #!nonpnt
 atwidc.com #!nonpnt
 bacaoo.com #!nonpnt
-/https?://(?:www\.baidu\.com/sf/.*)$/ #!nonpnt
+/^https?://(?:www\.baidu\.com/sf/.*)$/ #!nonpnt
 bairun0769.com #!nonpnt
 baydue.com #!nonpnt
 bbba5.com #!nonpnt
@@ -73393,8 +73393,8 @@ come2vc886.com #!nonpnt
 cosxitong.cn #!nonpnt
 couponbirds.com #!nonpnt
 cppcns.com #!nonpnt
-/https?://(?:www\.csdn\.net/gather_.*)$/ #!nonpnt
-/https?://(?:www\.csdn\.net/tags/.*)$/ #!nonpnt
+/^https?://(?:www\.csdn\.net/gather_.*)$/ #!nonpnt
+/^https?://(?:www\.csdn\.net/tags/.*)$/ #!nonpnt
 csmayi.cn #!nonpnt
 ctolib.com #!nonpnt
 cuplayer.com #!nonpnt
@@ -73459,7 +73459,7 @@ hsjl5821808.com #!nonpnt
 hsjtjz.com #!nonpnt
 hsksuo.com #!nonpnt
 hszw.org #!nonpnt
-/https?://(?:www\.huaweicloud\.com/articles/.*)$/ #!nonpnt
+/^https?://(?:www\.huaweicloud\.com/articles/.*)$/ #!nonpnt
 huaxiatzj.com #!nonpnt
 hui-chao.com #!nonpnt
 hwupsd.com #!nonpnt
@@ -73482,7 +73482,7 @@ juxiu.net #!nonpnt
 k-creat.com #!nonpnt
 kakatongmeng.net #!nonpnt
 kmkejipd.com #!nonpnt
-/https?://(?:www\.lagou\.com/lgeduarticle/.*)$/ #!nonpnt
+/^https?://(?:www\.lagou\.com/lgeduarticle/.*)$/ #!nonpnt
 lansingip.com #!nonpnt
 ld12345.com #!nonpnt
 lightspeedtrucking.com #!nonpnt
@@ -73521,7 +73521,7 @@ nanxinet.com #!nonpnt
 newton.com.tw #!nonpnt
 njqg.net #!nonpnt
 njsz99.com #!nonpnt
-/https?://(?:www\.nme\.com/discount\-codes/.*)$/ #!nonpnt
+/^https?://(?:www\.nme\.com/discount\-codes/.*)$/ #!nonpnt
 nxhh.net #!nonpnt
 offers.com #!nonpnt
 ok168198.com #!nonpnt
@@ -73530,8 +73530,8 @@ paloma.cn #!nonpnt
 pantianxia.com #!nonpnt
 parichyimin.com #!nonpnt
 pclovers.net #!nonpnt
-/https?://(?:www\.pconline\.com\.cn/3g/.*)$/ #!nonpnt
-/https?://(?:www\.pconline\.com\.cn/other_pic.*)$/ #!nonpnt
+/^https?://(?:www\.pconline\.com\.cn/3g/.*)$/ #!nonpnt
+/^https?://(?:www\.pconline\.com\.cn/other_pic.*)$/ #!nonpnt
 phoenixups.com #!nonpnt
 ping-jia.net #!nonpnt
 pinlue.com #!nonpnt
@@ -73556,7 +73556,7 @@ radiant-dragon.com #!nonpnt
 rayjcasting.com #!nonpnt
 rejoiceblog.com #!nonpnt
 rghn.com.cn #!nonpnt
-/https?://(?:www\.right\.com\.cn/FORUM/search\.php\?.*)$/ #!nonpnt
+/^https?://(?:www\.right\.com\.cn/FORUM/search\.php\?.*)$/ #!nonpnt
 riji365.org #!nonpnt
 ruan8.com #!nonpnt
 ruiwen.com #!nonpnt
@@ -73578,8 +73578,8 @@ smpchome.com #!nonpnt
 sociablelabs.com #!nonpnt
 sockvalley.com #!nonpnt
 sodeog.com #!nonpnt
-/https?://(?:www\.sohu\.com/a/.*)$/ #!nonpnt
-/https?://(?:www\.sojson\.com/blog/.*)$/ #!nonpnt
+/^https?://(?:www\.sohu\.com/a/.*)$/ #!nonpnt
+/^https?://(?:www\.sojson\.com/blog/.*)$/ #!nonpnt
 suning.com #!nonpnt
 suoluowan.com #!nonpnt
 sxwshm.com #!nonpnt
@@ -73614,7 +73614,7 @@ wailaike.net #!nonpnt
 waxyz.cn #!nonpnt
 weiyoou8.com #!nonpnt
 wenxuecity.com #!nonpnt
-/https?://(?:www\.west\.cn/docs/.*)$/ #!nonpnt
+/^https?://(?:www\.west\.cn/docs/.*)$/ #!nonpnt
 witdroid.com #!nonpnt
 wolonge.com #!nonpnt
 wordlm.com #!nonpnt
@@ -73626,7 +73626,7 @@ xia3.com #!nonpnt
 xiandai2012.com #!nonpnt
 xiaoheidiannao.com #!nonpnt
 xiexialai.com #!nonpnt
-/https?://(?:www\.xinnet\.com/xinzhi/.*)$/ #!nonpnt
+/^https?://(?:www\.xinnet\.com/xinzhi/.*)$/ #!nonpnt
 xiqb.com #!nonpnt
 xpj665577.com #!nonpnt
 xsjphoto.com #!nonpnt
@@ -73675,9 +73675,9 @@ zbaen.com #!nonpnt
 zh.wizcase.com #!nonpnt
 zhidao.baidu.hk #!nonpnt
 zhidao.juyouxuan.vip #!nonpnt
-/https?://(?:zhidaocommit\.baidu\.com/search\?.*)$/ #!nonpnt
+/^https?://(?:zhidaocommit\.baidu\.com/search\?.*)$/ #!nonpnt
 zhujicankao.com #!nonpnt
-/https?://(?:zidao\.baidu\.com/search\?.*)$/ #!nonpnt
+/^https?://(?:zidao\.baidu\.com/search\?.*)$/ #!nonpnt
 /(?:.*\.){0,1}[\d]{4}[a-z0-9]{5}\.com\.cn/ #!nonpnt
 /(?:www.)[a-z]{2,3}[0-9]{2,3}\.com/ #!nonpnt
 /(?:www\.){0,1}www[\-]*[\w]{4,8}\.com/ #!nonpnt
@@ -73686,7 +73686,7 @@ zhujicankao.com #!nonpnt
 /.*\:\/\/www\..*?\.com\/showinfo\-\d+-\d+-\d+\.html/ #!nonpnt
 /^https?\:\/\/.*?\/list\?q=[a-zA-Z%0-9]*$/ #!nonpnt
 /m\.[\w]{5,6}\.[\w]{6,7}\.(?:site|vip).*/ #!nonpnt
-/https?://(?:huifu\.wondershare\.cn/repair/.*)$/ #!nonpnt
+/^https?://(?:huifu\.wondershare\.cn/repair/.*)$/ #!nonpnt
   # aggregation: #!scyrte
   # source: https://raw.githubusercontent.com/scyrte/uBlacklist-Subscription/master/blacklist.txt
   # homepage: https://github.com/scyrte/uBlacklist-Subscription
