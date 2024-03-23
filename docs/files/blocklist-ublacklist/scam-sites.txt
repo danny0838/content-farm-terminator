@@ -1,7 +1,7 @@
 # Title: Scam Sites Filters
 # Description: Filter for scam sites. Mostly aggregrated from governmental sources, such as Ministry
 #     of Digital Affairs and National Police Agency of Taiwan.
-# Last modified: 2024-03-23T03:51:33+00:00
+# Last modified: 2024-03-23T04:55:38+00:00
 # Homepage: https://danny0838.github.io/content-farm-terminator/
 # Licence: MIT License
 # Source: https://danny0838.github.io/content-farm-terminator/files/blocklist-ublacklist/scam-sites.txt
@@ -3023,7 +3023,6 @@
 *://*.phn.apex-coins.live/*  #!165jtz
 *://*.apexcoins.online/*  #!165jtz
 *://*.tw-apex-coins.top/*  #!165jtz
-*://*.play.google.com/*  #!165jtz
 *://*.apxnow.com/*  #!165jtz
 *://*.agt5391.arbukhsye.com/*  #!165jtz
 *://*.trade8.arbutuse.com/*  #!165jtz

@@ -117,6 +117,12 @@ auto_tasks:
         files:
           - src/blocklist/not-content-farms.txt
           - src/aggregations/bad-cloners/
+    - action: uniquify
+      kwargs:
+        <<: *exclude_non_content_farms
+        files:
+          - src/blocklist/not-content-farms.txt
+          - src/aggregations/scam-sites/
 
   # shortcut
   a: *tasks_aggregate
