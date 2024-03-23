@@ -212,6 +212,11 @@ aggregate:
     source: https://data.moi.gov.tw/MoiOD/System/DownloadFile.aspx?DATA=3BB8E3CE-8223-43AF-B1AB-5824FA889883
     dest: src/aggregations/scam-sites/165jtz.txt
     type: csv_165jtz
+  - name: 165line
+    homepage: https://data.gov.tw/dataset/78432
+    source: https://data.moi.gov.tw/MoiOD/System/DownloadFile.aspx?DATA=7F6BE616-8CE6-449E-8620-5F627C22AA0D
+    dest: src/aggregations/scam-sites/165line.txt
+    type: csv_165line
 
 build:
   - source:
@@ -327,7 +332,7 @@ build:
         line-user:
           value: /^https?://(?:line\.me/(?:R/)?ti/p/)(?:{value})(?=[/?#]|$)/
           escape: regex
-        line-page:
+        line-page: &content_farms_schemes_line_page
           value: /^https?://(?:page\.line\.me/|line\.me/(?:R/)?ti/p/@)(?:{value})(?=[/?#]|$)/
           escape: regex
         line-timeline:
@@ -379,7 +384,9 @@ build:
         Homepage: https://danny0838.github.io/content-farm-terminator/
         Licence: MIT License
         Source: https://danny0838.github.io/content-farm-terminator/files/blocklist/scam-sites.txt
-      schemes: *content_farms_schemes
+      schemes:
+        <<: *content_farms_schemes
+        line-page: *content_farms_schemes_line_page
 
   - source:
       - src/blocklist/content-farms.txt
@@ -587,7 +594,9 @@ build:
         Homepage: https://danny0838.github.io/content-farm-terminator/
         Licence: MIT License
         Source: https://danny0838.github.io/content-farm-terminator/files/blocklist-ubo/scam-sites.txt
-      schemes: *content_farms_schemes_ubo
+      schemes:
+        <<: *content_farms_schemes_ubo
+        line-page: *content_farms_schemes_line_page
 
   - source:
       - src/blocklist/content-farms.txt
@@ -713,4 +722,6 @@ build:
         Licence: MIT License
         Source: https://danny0838.github.io/content-farm-terminator/files/blocklist-ublacklist/scam-sites.txt
       processors: *content_farms_processors_ublacklist
-      schemes: *content_farms_schemes_ublacklist
+      schemes:
+        <<: *content_farms_schemes_ublacklist
+        line-page:

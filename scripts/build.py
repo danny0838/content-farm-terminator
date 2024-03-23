@@ -677,9 +677,13 @@ class Converter:
 
     def handle_scheme_rule(self, rule, scheme_groups):
         """Handle a scheme rule."""
-        scheme = self.info.get('schemes', {}).get(rule.scheme)
-        if scheme is None:
+        try:
+            scheme = self.info.get('schemes', {})[rule.scheme]
+        except KeyError:
             log.warning('Rule "%s" has an undefined scheme', rule.rule)
+            return
+
+        if scheme is None:
             return
 
         value = rule.value
@@ -1141,6 +1145,26 @@ class Aggregator:
             if domain.startswith('www.'):
                 domain = domain[4:]
             rule = Rule(domain, path=url)
+            rules.append(rule)
+        return rules
+
+    def convert_rules_csv_165line(self, response, url):
+        """Special CSV for fake Line IDs from 165."""
+        rules = []
+        fh = io.StringIO(response.text)
+        reader = csv.reader(fh)
+        i = 0
+        for row in reader:
+            # skip first 1 row, which is field definition
+            if i < 1:
+                i += 1
+                continue
+
+            # support Line Pages only, since the invite link for a line user ID is encoded
+            if not (row[1] and row[1].startswith('@')):
+                continue
+
+            rule = Rule(f'line-page:{row[1][1:]}', path=url)
             rules.append(rule)
         return rules
 
