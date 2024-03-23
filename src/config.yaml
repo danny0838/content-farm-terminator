@@ -332,7 +332,7 @@ build:
         line-user:
           value: /^https?://(?:line\.me/(?:R/)?ti/p/)(?:{value})(?=[/?#]|$)/
           escape: regex
-        line-page: &content_farms_schemes_line_page
+        line-page:
           value: /^https?://(?:page\.line\.me/|line\.me/(?:R/)?ti/p/@)(?:{value})(?=[/?#]|$)/
           escape: regex
         line-timeline:
@@ -386,7 +386,7 @@ build:
         Source: https://danny0838.github.io/content-farm-terminator/files/blocklist/scam-sites.txt
       schemes:
         <<: *content_farms_schemes
-        line-page: *content_farms_schemes_line_page
+        <<: *sns_content_farms_schemes
 
   - source:
       - src/blocklist/content-farms.txt
@@ -596,7 +596,7 @@ build:
         Source: https://danny0838.github.io/content-farm-terminator/files/blocklist-ubo/scam-sites.txt
       schemes:
         <<: *content_farms_schemes_ubo
-        line-page: *content_farms_schemes_line_page
+        <<: *sns_content_farms_schemes
 
   - source:
       - src/blocklist/content-farms.txt
