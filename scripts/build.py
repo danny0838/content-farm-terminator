@@ -514,21 +514,17 @@ class Uniquifier:
         regex_dict = {}
         for rule in rules:
             if rule.type == 'domain' and '*' in rule.rule:
-                regex_dict[rule] = re.compile(
+                regex = re.compile(
                     r'^(?:[\w*-]+\.)*'
                     + re.escape(rule.rule).replace(r'\*', r'[\w*-]*')
                     + '$')
+                regex_dict[rule] = (regex, rule)
 
         for rule in rules:
             ok = True
             if rule.type == 'domain':
-                for rule2 in rules:
-                    if rule2.path == rule.path and rule2.line_no == rule.line_no:
-                        continue
-
-                    try:
-                        regex = regex_dict[rule2]
-                    except KeyError:
+                for regex, rule2 in regex_dict.values():
+                    if rule2 is rule:
                         continue
 
                     if regex.search(rule.rule):
