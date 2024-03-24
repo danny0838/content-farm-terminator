@@ -1062,8 +1062,9 @@ class Aggregator:
 
             comment = f' {m.group("comment")}' if m.group('comment') else ''
             if m.group('matchPattern'):
+                # domain rule like
+                # treat "*://*.example.com/" as "*://*.example.com/*"
                 if m.group('host') != '*' and m.group('path') in ('/*', '/'):
-                    # treat "*://*.example.com/" as "*://*.example.com/*"
                     domain = m.group('host')
 
                     # treat "*://example.com/*" as "*://*.example.com/*"
@@ -1074,13 +1075,7 @@ class Aggregator:
                     if domain.startswith('www.'):
                         domain = domain[4:]
 
-                    # treat "*://*.example.com/" as "*://*.example.com/*"
-                    if m.group('path') in ('/*', '/'):
-                        rule = f'{domain}{comment}'
-                    else:
-                        pattern = re.escape(m.group('domain'))
-                        re.escape(m.group('path')).replace(r'\*', r'.*')
-                        rule = f'domain-path-re:{pattern}{comment}'
+                    rule = f'{domain}{comment}'
 
                 else:
                     path = m.group('path')
