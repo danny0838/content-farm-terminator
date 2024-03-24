@@ -96,11 +96,24 @@ auto_tasks:
         files:
           - src/blocklist/content-farms.txt
           - src/blocklist/nearly-content-farms.txt
+          - src/blocklist/sns-content-farms.txt
           - src/blocklist/extra-content-farms.txt
           - src/blocklist/bad-cloners.txt
-          - src/blocklist/sns-content-farms.txt
+          - src/blocklist/scam-sites.txt
+          - src/blocklist/fake-news.txt
         check_subdomains: true
-        check_wildcards: true
+        # check_wildcards: true
+        auto_fix: true
+    - action: uniquify
+      kwargs:
+        files:
+          - src/blocklist/content-farms.txt
+          - src/blocklist/nearly-content-farms.txt
+          - src/blocklist/sns-content-farms.txt
+          - src/blocklist/bad-cloners.txt
+        auto_fix_excludes:
+          - src/blocklist/content-farms.txt
+        check_subdomains: true
         cross_files: true
         auto_fix: true
 
