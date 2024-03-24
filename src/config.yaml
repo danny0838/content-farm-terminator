@@ -43,6 +43,18 @@ auto_tasks:
         files:
           - src/blocklist/not-content-farms.txt
           - src/blocklist/bad-cloners.txt
+    - action: uniquify
+      kwargs:
+        <<: *exclude_non_content_farms
+        files:
+          - src/blocklist/not-content-farms.txt
+          - src/blocklist/scam-sites.txt
+    - action: uniquify
+      kwargs:
+        <<: *exclude_non_content_farms
+        files:
+          - src/blocklist/not-content-farms.txt
+          - src/blocklist/fake-news.txt
 
     # probe for entries listed in the dead list
     - action: uniquify
