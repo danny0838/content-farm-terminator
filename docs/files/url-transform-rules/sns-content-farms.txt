@@ -10,10 +10,10 @@
 /^https?://(?:(?:[\w-]+\.)?facebook\.com|fb\.(?:com|me))/(?!\w+\.php\?)([\w.]+)(?=[/?#]|$)/ /^https?://(?:(?:[\w-]+\.)?facebook\.com|fb\.(?:com|me))/(?!\w+\.php\?)(?:pg/)?$1(?=[/?#]|$)/  #facebook
 
   -- LINE
-/^https?://line\.me/(?:R/)?ti/p/@(\w+)(?=[/?#]|$)/ /^https?://(?:page\.line\.me/|line\.me/(?:R/)?ti/p/@)$1(?=[/?#]|$)/
-/^https?://line\.me/(?:R/)?ti/p/(\w+)(?=[/?#]|$)/ /^https?://line\.me/(?:R/)?ti/p/$1(?=[/?#]|$)/
-/^https?://page\.line\.me/([\w-]+)(?=[/?#]|$)/ /^https?://(?:page\.line\.me/|line\.me/(?:R/)?ti/p/@)$1(?=[/?#]|$)/
-/^https?://timeline\.line\.me/(?:\w+?)/_([\w-]+)(?=[/?#]|$)/ /^https?://timeline\.line\.me/(?:\w+?)/_$1(?=[/?#]|$)/
+/^https?://line\.me/(?:R/)?ti/p/@(\w+)(?=[/?#]|$)/ /^https?://(?:page\.line\.me/|line\.me/(?:R/)?ti/p/@)$1(?=[/?#]|$)/  #line-page
+/^https?://line\.me/(?:R/)?ti/p/(\w+)(?=[/?#]|$)/ /^https?://line\.me/(?:R/)?ti/p/$1(?=[/?#]|$)/  #line-user
+/^https?://page\.line\.me/([\w-]+)(?=[/?#]|$)/ /^https?://(?:page\.line\.me/|line\.me/(?:R/)?ti/p/@)$1(?=[/?#]|$)/  #line-page
+/^https?://timeline\.line\.me/(?:\w+?)/_([\w-]+)(?=[/?#]|$)/ /^https?://timeline\.line\.me/(?:\w+?)/_$1(?=[/?#]|$)/  #line-timeline
 
   -- Twitter
 /^https?://(?:\w+\.)?twitter\.com/([\w-]+)(?=[/?#]|$)/ /^https?://(?:\w+\.)?twitter\.com/$1(?=[/?#]|$)/
