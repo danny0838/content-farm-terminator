@@ -56,7 +56,7 @@ auto_tasks:
           - src/blocklist/not-content-farms.txt
           - src/blocklist/fake-news.txt
 
-    # probe for entries listed in the dead list
+    # detect for re-activation of the domains in the dead list
     - action: uniquify
       kwargs:
         files:
@@ -64,6 +64,17 @@ auto_tasks:
           - src/blocklist/content-farms-inactive.txt
         auto_fix_excludes:
           - src/blocklist/content-farms.txt
+        check_subdomains: true
+        cross_files: true
+        auto_fix: true
+
+    - action: uniquify
+      kwargs:
+        files:
+          - src/blocklist/nearly-content-farms.txt
+          - src/blocklist/content-farms-inactive.txt
+        auto_fix_excludes:
+          - src/blocklist/nearly-content-farms.txt
         check_subdomains: true
         cross_files: true
         auto_fix: true
