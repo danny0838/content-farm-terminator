@@ -1130,12 +1130,18 @@ class Aggregator:
                 continue
 
             u = urlsplit(('' if row[1].startswith('https:') else 'http://') + row[1])
+
             domain = u.hostname
             if not domain.strip():
                 continue
             if domain.startswith('www.'):
                 domain = domain[4:]
-            rule = Rule(domain, path=url)
+
+            path = u.path
+            if path:
+                path = f' #path={path}'
+
+            rule = Rule(f'{domain}{path}', path=url)
             rules.append(rule)
         return rules
 
