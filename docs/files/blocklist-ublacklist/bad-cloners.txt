@@ -2,17 +2,15 @@
 # Description: Filter for cloner sites that are mostly free of copyright issue since the source site
 #     is copyleft or copyfree, but provide only trivial layout change or poor-quality bot translation
 #     and are thus spam-like.
-# Last modified: 2024-03-24T08:39:16+00:00
+# Last modified: 2024-03-24T09:13:36+00:00
 # Homepage: https://danny0838.github.io/content-farm-terminator/
 # Licence: MIT License
 # Source: https://danny0838.github.io/content-farm-terminator/files/blocklist-ublacklist/bad-cloners.txt
 
-*://*.bitcoden.com/*
 *://*.ewikizh.top/*
 *://*.itranslater.com/*
 *://*.qastack.cn/*
 *://*.stackoverflow.org.cn/*
-*://*.uwenku.com/*
 *://*.wake-up-neo.net/*
 *://*.wanweibaike.net/*
 *://*.wikiwand.com/*
@@ -97,6 +95,7 @@
 *://*.voidcc.com/*  #!ublSoT
 *://*.fixes.pub/*  #!ublSoT
 *://*.isolution.pro/*  #!ublSoT
+*://*.uwenku.com/*  #!ublSoT
 *://*.ubuntubin.com/*  #!ublSoT
 *://*.softwareuser.asklobster.com/*  #!ublSoT
 *://*.fmihm.org/*  #!ublSoT
@@ -187,6 +186,7 @@
 *://*.exchangetuts.com/*  #!ublSoT
 *://*.splunktool.com/*  #!ublSoT
 *://*.jtuto.com/*  #!ublSoT
+*://*.bitcoden.com/*  #!ublSoT
 *://*.9to5answer.com/*  #!ublSoT
 *://*.5axxw.com/*  #!ublSoT
 *://*.questu.ru/*  #!ublSoT
