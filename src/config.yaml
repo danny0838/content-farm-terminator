@@ -94,21 +94,11 @@ auto_tasks:
     - action: uniquify
       kwargs:
         files:
-          - src/blocklist/not-content-farms.txt
-        check_subdomains: true
-        check_wildcards: true
-        auto_fix: true
-    - action: uniquify
-      kwargs:
-        files:
-          - src/blocklist/not-content-farms.txt
           - src/blocklist/content-farms.txt
           - src/blocklist/nearly-content-farms.txt
           - src/blocklist/extra-content-farms.txt
           - src/blocklist/bad-cloners.txt
           - src/blocklist/sns-content-farms.txt
-        auto_fix_excludes:
-          - src/blocklist/not-content-farms.txt
         check_subdomains: true
         check_wildcards: true
         cross_files: true
