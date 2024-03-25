@@ -1,6 +1,7 @@
 name: Aggregate sources and rebuild
 
 on:
+  workflow_dispatch:
   schedule:
     # 19:42 UTC every Sunday
     - cron: "42 19 * * 0"
