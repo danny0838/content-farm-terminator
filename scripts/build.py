@@ -967,16 +967,10 @@ class Aggregator:
 
         log.info('Aggregating rules from "%s" to %s ...', url, dest)
         try:
-            r = requests.get(url)
-        except requests.exceptions.RequestException as exc:
-            log.error('Failed to fetch "%s": %s', url, exc)
+            rules = self.get_rules(type, url)
+        except Exception as exc:
+            log.error('%s', exc)
             return
-
-        if not r.ok:
-            log.error('Failed to fetch "%s": %i', url, r.status_code)
-            return
-
-        rules = self.convert_rules(type, r, url)
 
         os.makedirs(os.path.dirname(dest), exist_ok=True)
         with open(dest, 'w', encoding='UTF-8') as fh:
@@ -993,12 +987,24 @@ class Aggregator:
             log.debug('Stripping eol for %s ...', dest)
             file_strip_eol(dest)
 
-    def convert_rules(self, type, response, url):
-        fn = getattr(self, f'convert_rules_{type}')
-        return fn(response, url)
+    def fetch(self, url):
+        try:
+            r = requests.get(url)
+        except requests.exceptions.RequestException as exc:
+            raise RuntimeError(f'Failed to fetch "{url}": {exc}') from exc
 
-    def convert_rules_domains_txt(self, response, url):
-        """Parse a file with line-separated domains."""
+        if not r.ok:
+            raise RuntimeError(f'Failed to fetch "{url}": {r.status_code}')
+
+        return r
+
+    def get_rules(self, type, url):
+        fn = getattr(self, f'get_rules_{type}')
+        return fn(url)
+
+    def get_rules_domains_txt(self, url):
+        """Get a file with line-separated domains."""
+        response = self.fetch(url)
         rules = []
         for i, domain in enumerate(response.text.split('\n')):
             if not domain.strip():
@@ -1007,8 +1013,9 @@ class Aggregator:
             rules.append(rule)
         return rules
 
-    def convert_rules_domains_json(self, response, url):
-        """Parse a JSON with an Array of domains."""
+    def get_rules_domains_json(self, url):
+        """Get a JSON with an Array of domains."""
+        response = self.fetch(url)
         rules = []
         for domain in response.json():
             if not domain.strip():
@@ -1017,7 +1024,7 @@ class Aggregator:
             rules.append(rule)
         return rules
 
-    def convert_rules_ublacklist(self, response, url):
+    def get_rules_ublacklist(self, url):
         def re_line():
             """Line parser for uBlacklist.
 
@@ -1046,6 +1053,7 @@ class Aggregator:
             line = rf"""^{spaceBeforeRuleOrComment}?(?:{rule}{spaceAfterRule}?)?{comment}?$"""  # noqa: N806, F541
             return re.compile(line)
 
+        response = self.fetch(url)
         regex = re_line()
         rules = []
         for i, line in enumerate(response.text.split('\n')):
@@ -1103,8 +1111,9 @@ class Aggregator:
 
         return rules
 
-    def convert_rules_json_twnicscams(self, response, url):
+    def get_rules_json_twnicscams(self, url):
         """Special JSON for TWNIC scam sites."""
+        response = self.fetch(url)
         response.encoding = 'utf-8-sig'
         rules = []
         for entry in response.json():
@@ -1117,8 +1126,9 @@ class Aggregator:
             rules.append(rule)
         return rules
 
-    def convert_rules_csv_165jtz(self, response, url):
+    def get_rules_csv_165jtz(self, url):
         """Special CSV for 假投資 sites from 165."""
+        response = self.fetch(url)
         rules = []
         fh = io.StringIO(response.text)
         reader = csv.reader(fh)
@@ -1145,8 +1155,9 @@ class Aggregator:
             rules.append(rule)
         return rules
 
-    def convert_rules_csv_165line(self, response, url):
+    def get_rules_csv_165line(self, url):
         """Special CSV for fake Line IDs from 165."""
+        response = self.fetch(url)
         rules = []
         fh = io.StringIO(response.text)
         reader = csv.reader(fh)
