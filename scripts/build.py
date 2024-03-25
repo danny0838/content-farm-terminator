@@ -1,10 +1,8 @@
 #!/usr/bin/env python3
 """Check and publish blocklists for Content Farm Terminator."""
 import argparse
-import csv
 import glob
 import inspect
-import io
 import ipaddress
 import logging
 import os
@@ -998,6 +996,31 @@ class Aggregator:
 
         return r
 
+    def fetch_data_gov_tw(self, base_url, chunk_size=3000):
+        """Fetch from API at https://od.moi.gov.tw/api/v1/rest/datastore/"""
+        result = []
+        offset = 0
+        while True:
+            url = f'{base_url}?limit={chunk_size}' + (f'&offset={offset}' if offset else '')
+            log.debug('Fetching: %s', url)
+            try:
+                r = requests.get(url)
+            except requests.exceptions.RequestException as exc:
+                raise RuntimeError(f'Failed to fetch "{url}": {exc}') from exc
+
+            if not r.ok:
+                raise RuntimeError(f'Failed to fetch "{url}": {r.status_code}')
+
+            data = r.json()
+
+            if not data['success']:
+                break
+
+            result.extend(data['result']['records'])
+            offset = data['result'].get('offset', 0) + data['result']['total']
+
+        return result
+
     def get_rules(self, type, url):
         fn = getattr(self, f'get_rules_{type}')
         return fn(url)
@@ -1126,20 +1149,14 @@ class Aggregator:
             rules.append(rule)
         return rules
 
-    def get_rules_csv_165jtz(self, url):
-        """Special CSV for 假投資 sites from 165."""
-        response = self.fetch(url)
+    def get_rules_json_165jtz(self, url):
+        """假投資 sites from 165."""
         rules = []
-        fh = io.StringIO(response.text)
-        reader = csv.reader(fh)
-        i = 0
-        for row in reader:
-            # skip first 2 rows, which are field definitions
-            if i < 2:
-                i += 1
-                continue
-
-            u = urlsplit(('' if row[1].startswith('https:') else 'http://') + row[1])
+        records = self.fetch_data_gov_tw(url)
+        records.pop(0)  # first record is fields
+        for record in records:
+            weburl = record['WEBURL']
+            u = urlsplit(('' if weburl.startswith('https:') else 'http://') + weburl)
 
             domain = u.hostname
             if not domain.strip():
@@ -1155,24 +1172,18 @@ class Aggregator:
             rules.append(rule)
         return rules
 
-    def get_rules_csv_165line(self, url):
-        """Special CSV for fake Line IDs from 165."""
-        response = self.fetch(url)
+    def get_rules_json_165line(self, url):
+        """Fake Line IDs from 165."""
         rules = []
-        fh = io.StringIO(response.text)
-        reader = csv.reader(fh)
-        i = 0
-        for row in reader:
-            # skip first 1 row, which is field definition
-            if i < 1:
-                i += 1
-                continue
+        records = self.fetch_data_gov_tw(url)
+        for record in records:
+            id_ = record['帳號']
 
             # support Line Pages only, since the invite link for a line user ID is encoded
-            if not (row[1] and row[1].startswith('@')):
+            if not (id_ and id_.startswith('@')):
                 continue
 
-            rule = Rule(f'line-page:{row[1][1:]}', path=url)
+            rule = Rule(f'line-page:{id_[1:]}', path=url)
             rules.append(rule)
         return rules
 
