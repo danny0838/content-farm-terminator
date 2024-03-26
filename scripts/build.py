@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """Check and publish blocklists for Content Farm Terminator."""
 import argparse
+import copy
 import glob
 import inspect
 import ipaddress
@@ -686,7 +687,11 @@ class Converter:
             if not rule:
                 continue
 
-            self.print_rule(rule)
+            if isinstance(rule, Rule):
+                self.print_rule(rule)
+            else:
+                for rule in rule:
+                    self.print_rule(rule)
 
         self.handle_grouping_scheme_rules(scheme_groups)
 
@@ -752,21 +757,32 @@ class Converter:
             scheme_groups.setdefault(rule.scheme, []).append((value, rule))
             return None
 
-        value = scheme.get('value', '').format(value=value)
+        templates = scheme.get('value', '')
+        if isinstance(templates, str):
+            templates = [templates]
 
-        # apply max length limit
         scheme_max = scheme.get('max')
-        if scheme_max is not None:
-            if len(value) > scheme_max:
-                log.warning('Rule "%s" exceeds max length %i', rule.rule, scheme_max)
-                return None
+        scheme_mode = scheme.get('mode')
+        rules = []
+        for i, template in enumerate(templates):
+            v = template.format(value=value)
 
-        mode = scheme.get('mode')
-        if mode == 'raw':
-            rule.set_rule_raw(value)
-        else:
-            rule.set_rule(value)
-        return rule
+            # apply max length limit
+            if scheme_max is not None:
+                if len(v) > scheme_max:
+                    log.warning('Rule "%s" formatted with "%s" exceeds max length %i',
+                                rule.rule, template, scheme_max)
+                    continue
+
+            rule_new = copy.copy(rule)
+            if scheme_mode == 'raw':
+                rule_new.set_rule_raw(v)
+            else:
+                rule_new.set_rule(v)
+
+            rules.append(rule_new)
+
+        return rules
 
     def handle_grouping_scheme_rules(self, scheme_groups):
         """Output collected grouping scheme rules."""

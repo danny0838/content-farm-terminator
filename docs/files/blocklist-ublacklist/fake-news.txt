@@ -1,7 +1,7 @@
 # Title: Fake News Filters
 # Description: Filter for fake news sites. (For reference)
 #     This list is slightly organized from several sources only and is NOT actively maintained.
-# Last modified: 2024-03-24T19:53:36+00:00
+# Last modified: 2024-03-26T14:48:44+00:00
 # Homepage: https://danny0838.github.io/content-farm-terminator/
 # Licence: MIT License
 # Source: https://danny0838.github.io/content-farm-terminator/files/blocklist-ublacklist/fake-news.txt
@@ -217,21 +217,21 @@
 *://*.dissentmagazine.org/*  #political
 *://*.diversitychronicle.wordpress.com/*  #satire
 *://*.dollarvigilante.com/*  #bias
-*://*.cato.org/blog
+*://*.cato.org/blog  #political  #reliable
 *://*.cato.org/blog/*  #political  #reliable
-*://*.educateinspirechange.org/health
+*://*.educateinspirechange.org/health  #clickbait  #junksci
 *://*.educateinspirechange.org/health/*  #clickbait  #junksci
-*://*.newyorker.com/humor
+*://*.newyorker.com/humor  #satire
 *://*.newyorker.com/humor/*  #satire
-*://*.nonaiswa.org/wordpress
+*://*.nonaiswa.org/wordpress  #unknown
 *://*.nonaiswa.org/wordpress/*  #unknown
-*://*.smartknowledgeu.com/blog
+*://*.smartknowledgeu.com/blog  #unknown
 *://*.smartknowledgeu.com/blog/*  #unknown
-*://*.solari.com/blog
+*://*.solari.com/blog  #unknown
 *://*.solari.com/blog/*  #unknown
-*://*.szandorblestman.com/index.php
+*://*.szandorblestman.com/index.php  #unknown
 *://*.szandorblestman.com/index.php/*  #unknown
-*://*.thegoldandoilguy.com/articles
+*://*.thegoldandoilguy.com/articles  #unreliable
 *://*.thegoldandoilguy.com/articles/*  #unreliable
 *://*.donaldtrumpnews.co/*  #fake
 *://*.dont-tread-on.me/*  #conspiracy

@@ -659,7 +659,9 @@ build:
           max: 524288
           value: /https?://(?:[\w-]+\.)*(?:{value})(?:\.[\w-]+)*(?=[:\/?#]|$)/
         domain-path:
-          value: "*://*.{value}\n*://*.{value}/*"
+          value:
+            - '*://*.{value}'
+            - '*://*.{value}/*'
           mode: raw
         mp-path:
           value: '*://*/{value}'
