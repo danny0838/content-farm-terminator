@@ -803,14 +803,20 @@ class Converter:
             # Modified binary search to find the max fitting pos.
             pos_max = pos - 1  # skip last pos, which has been checked
             pos_min = 0
+            last_hit = None
             while pos_min <= pos_max:
                 pos = pos_min + (pos_max - pos_min) // 2
                 value = get_joined_value(pos)
                 if len(value) <= scheme_max:
+                    last_hit = pos, value
                     pos_min = pos + 1
                 else:
                     pos_max = pos - 1
-            return pos, value
+
+            if last_hit is not None:
+                return last_hit
+
+            return 0, ''
 
         schemes = self.info.get('schemes', {})
         for scheme_name, items in scheme_groups.items():
