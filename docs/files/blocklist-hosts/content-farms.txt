@@ -1,6 +1,6 @@
 # Title: Content Farm Filters
 # Description: Filter for general content farms, mostly in Chinese.
-# Last modified: 2024-03-24T19:53:36+00:00
+# Last modified: 2024-03-26T13:13:32+00:00
 # Homepage: https://danny0838.github.io/content-farm-terminator/
 # Licence: MIT License
 # Source: https://danny0838.github.io/content-farm-terminator/files/blocklist-hosts/content-farms.txt
@@ -13593,6 +13593,7 @@
 0.0.0.0 finalwars.eu  #!spamdex
 0.0.0.0 financeconsult.pl  #!spamdex
 0.0.0.0 finansowylis.pl  #!spamdex
+0.0.0.0 finanzberater-schaaf.de  #!spamdex
 0.0.0.0 finbase.it  #!spamdex
 0.0.0.0 fincaelpardito.es  #!spamdex
 0.0.0.0 findmdlaw.com  #!spamdex

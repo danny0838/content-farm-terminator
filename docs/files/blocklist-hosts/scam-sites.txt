@@ -1,7 +1,7 @@
 # Title: Scam Sites Filters
 # Description: Filter for scam sites. Mostly aggregrated from governmental sources, such as Ministry
 #     of Digital Affairs and National Police Agency of Taiwan.
-# Last modified: 2024-03-25T16:15:05+00:00
+# Last modified: 2024-03-26T13:13:32+00:00
 # Homepage: https://danny0838.github.io/content-farm-terminator/
 # Licence: MIT License
 # Source: https://danny0838.github.io/content-farm-terminator/files/blocklist-hosts/scam-sites.txt
@@ -2707,7 +2707,7 @@
 0.0.0.0 zzstoo.com  #!cffc
 0.0.0.0 zztzv.com  #!cffc
 # aggregation: #!165jtz
-# source: https://data.moi.gov.tw/MoiOD/System/DownloadFile.aspx?DATA=3BB8E3CE-8223-43AF-B1AB-5824FA889883
+# source: https://od.moi.gov.tw/api/v1/rest/datastore/A01010000C-002150-013
 # homepage: https://data.gov.tw/dataset/160055
 0.0.0.0 0857.games  #!165jtz
 0.0.0.0 0xdappplus.com  #!165jtz
@@ -15036,7 +15036,7 @@
 0.0.0.0 z1.bolee5788.com  #!165jtz
 0.0.0.0 z1.bolerr1688.net  #!165jtz
 # aggregation: #!165line
-# source: https://data.moi.gov.tw/MoiOD/System/DownloadFile.aspx?DATA=7F6BE616-8CE6-449E-8620-5F627C22AA0D
+# source: https://od.moi.gov.tw/api/v1/rest/datastore/A01010000C-001277-053
 # homepage: https://data.gov.tw/dataset/78432
 # aggregation: #!TWNICscams
 # source: https://www-api.moda.gov.tw/OpenData/Files/5791
@@ -15220,3 +15220,21 @@
 0.0.0.0 hiopa.top  #!TWNICscams
 0.0.0.0 nabeu.top  #!TWNICscams
 0.0.0.0 vsoic.top  #!TWNICscams
+0.0.0.0 tw.edanajane.shop  #!TWNICscams
+0.0.0.0 m.momoshopn.com  #!TWNICscams
+0.0.0.0 cftrrr.store  #!TWNICscams
+0.0.0.0 xotir.top  #!TWNICscams
+0.0.0.0 tw.kinglyhall.shop  #!TWNICscams
+0.0.0.0 etgfd.store  #!TWNICscams
+0.0.0.0 amnse.com  #!TWNICscams
+0.0.0.0 ktesr.top  #!TWNICscams
+0.0.0.0 semru.top  #!TWNICscams
+0.0.0.0 nstae.top  #!TWNICscams
+0.0.0.0 atiez.top  #!TWNICscams
+0.0.0.0 npwalterja.shop  #!TWNICscams
+0.0.0.0 rynthreer.shop  #!TWNICscams
+0.0.0.0 deeparoy.shop  #!TWNICscams
+0.0.0.0 yawhehe.shop  #!TWNICscams
+0.0.0.0 afrileadw.shop  #!TWNICscams
+0.0.0.0 spaesveeni.shop  #!TWNICscams
+0.0.0.0 alexansher.shop  #!TWNICscams

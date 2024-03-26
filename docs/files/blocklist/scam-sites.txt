@@ -1,7 +1,7 @@
   # Title: Scam Sites Filters
   # Description: Filter for scam sites. Mostly aggregrated from governmental sources, such as Ministry
   #     of Digital Affairs and National Police Agency of Taiwan.
-  # Last modified: 2024-03-25T16:15:05+00:00
+  # Last modified: 2024-03-26T13:13:32+00:00
   # Homepage: https://danny0838.github.io/content-farm-terminator/
   # Licence: MIT License
   # Source: https://danny0838.github.io/content-farm-terminator/files/blocklist/scam-sites.txt
@@ -2765,7 +2765,7 @@ zzphomme.com  #!cffc
 zzstoo.com  #!cffc
 zztzv.com  #!cffc
   # aggregation: #!165jtz
-  # source: https://data.moi.gov.tw/MoiOD/System/DownloadFile.aspx?DATA=3BB8E3CE-8223-43AF-B1AB-5824FA889883
+  # source: https://od.moi.gov.tw/api/v1/rest/datastore/A01010000C-002150-013
   # homepage: https://data.gov.tw/dataset/160055
 0857.games #!165jtz
 0xdappplus.com #!165jtz
@@ -15096,7 +15096,7 @@ cnhqcf.com #!165jtz
 z1.bolee5788.com #!165jtz
 z1.bolerr1688.net #!165jtz
   # aggregation: #!165line
-  # source: https://data.moi.gov.tw/MoiOD/System/DownloadFile.aspx?DATA=7F6BE616-8CE6-449E-8620-5F627C22AA0D
+  # source: https://od.moi.gov.tw/api/v1/rest/datastore/A01010000C-001277-053
   # homepage: https://data.gov.tw/dataset/78432
 /^https?://(?:page\.line\.me/|line\.me/(?:R/)?ti/p/@)(?:kgi2492f)(?=[/?#]|$)/ #!165line
 /^https?://(?:page\.line\.me/|line\.me/(?:R/)?ti/p/@)(?:sq8742a)(?=[/?#]|$)/ #!165line
@@ -15207,7 +15207,6 @@ z1.bolerr1688.net #!165jtz
 /^https?://(?:page\.line\.me/|line\.me/(?:R/)?ti/p/@)(?:803nauvx)(?=[/?#]|$)/ #!165line
 /^https?://(?:page\.line\.me/|line\.me/(?:R/)?ti/p/@)(?:xaiochen520520)(?=[/?#]|$)/ #!165line
 /^https?://(?:page\.line\.me/|line\.me/(?:R/)?ti/p/@)(?:lk5544)(?=[/?#]|$)/ #!165line
-/^https?://(?:page\.line\.me/|line\.me/(?:R/)?ti/p/@)(?:asv4900b)(?=[/?#]|$)/ #!165line
 /^https?://(?:page\.line\.me/|line\.me/(?:R/)?ti/p/@)(?:834qofot)(?=[/?#]|$)/ #!165line
 /^https?://(?:page\.line\.me/|line\.me/(?:R/)?ti/p/@)(?:978knlqr)(?=[/?#]|$)/ #!165line
 /^https?://(?:page\.line\.me/|line\.me/(?:R/)?ti/p/@)(?:325qetyv)(?=[/?#]|$)/ #!165line
@@ -15640,7 +15639,6 @@ z1.bolerr1688.net #!165jtz
 /^https?://(?:page\.line\.me/|line\.me/(?:R/)?ti/p/@)(?:402xeadb)(?=[/?#]|$)/ #!165line
 /^https?://(?:page\.line\.me/|line\.me/(?:R/)?ti/p/@)(?:170wryzc)(?=[/?#]|$)/ #!165line
 /^https?://(?:page\.line\.me/|line\.me/(?:R/)?ti/p/@)(?:437zbrje)(?=[/?#]|$)/ #!165line
-/^https?://(?:page\.line\.me/|line\.me/(?:R/)?ti/p/@)(?:170wryzc\\)(?=[/?#]|$)/ #!165line
 /^https?://(?:page\.line\.me/|line\.me/(?:R/)?ti/p/@)(?:141gsgtl)(?=[/?#]|$)/ #!165line
 /^https?://(?:page\.line\.me/|line\.me/(?:R/)?ti/p/@)(?:422xvegj)(?=[/?#]|$)/ #!165line
 /^https?://(?:page\.line\.me/|line\.me/(?:R/)?ti/p/@)(?:061rbbdd)(?=[/?#]|$)/ #!165line
@@ -16025,6 +16023,7 @@ z1.bolerr1688.net #!165jtz
 /^https?://(?:page\.line\.me/|line\.me/(?:R/)?ti/p/@)(?:639jngor)(?=[/?#]|$)/ #!165line
 /^https?://(?:page\.line\.me/|line\.me/(?:R/)?ti/p/@)(?:803zyjwv)(?=[/?#]|$)/ #!165line
 /^https?://(?:page\.line\.me/|line\.me/(?:R/)?ti/p/@)(?:894vadyl)(?=[/?#]|$)/ #!165line
+/^https?://(?:page\.line\.me/|line\.me/(?:R/)?ti/p/@)(?:633jzyz)(?=[/?#]|$)/ #!165line
   # aggregation: #!TWNICscams
   # source: https://www-api.moda.gov.tw/OpenData/Files/5791
   # homepage: https://data.gov.tw/dataset/165027
@@ -16207,3 +16206,21 @@ dvrtggg.ink #!TWNICscams
 hiopa.top #!TWNICscams
 nabeu.top #!TWNICscams
 vsoic.top #!TWNICscams
+tw.edanajane.shop #!TWNICscams
+m.momoshopn.com #!TWNICscams
+cftrrr.store #!TWNICscams
+xotir.top #!TWNICscams
+tw.kinglyhall.shop #!TWNICscams
+etgfd.store #!TWNICscams
+amnse.com #!TWNICscams
+ktesr.top #!TWNICscams
+semru.top #!TWNICscams
+nstae.top #!TWNICscams
+atiez.top #!TWNICscams
+npwalterja.shop #!TWNICscams
+rynthreer.shop #!TWNICscams
+deeparoy.shop #!TWNICscams
+yawhehe.shop #!TWNICscams
+afrileadw.shop #!TWNICscams
+spaesveeni.shop #!TWNICscams
+alexansher.shop #!TWNICscams
