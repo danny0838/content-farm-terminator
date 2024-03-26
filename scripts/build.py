@@ -46,6 +46,7 @@ JS_REGEXP_FLAGS_MAP = {
     'm': re.MULTILINE,
     's': re.DOTALL,
     'u': 0,
+    'v': 0,
     'y': 0,
 }
 JS_REGEXP_PATTERN_FIXER = re.compile(
@@ -56,25 +57,59 @@ JS_REGEXP_PATTERN_FIXER = re.compile(
         |
         \\u{(?P<braced_unicode_hex>[0-9A-Fa-f]+)}
         |
-        (?P<escape>\\.)
+        \[(?P<char_class>[^\\\]]*(?:\\.[^\\\]]*)*)\]
+        |
+        \\.
+    """,
+    flags=re.S + re.X,
+)
+JS_REGEXP_PATTERN_FIXER_CHAR_CLASS = re.compile(
+    r"""
+        \\u{(?P<braced_unicode_hex>[0-9A-Fa-f]+)}
+        |
+        \\.
     """,
     flags=re.S + re.X,
 )
 
 
 def _compile_regexp_fixer(m, flags=''):
-    if m.group('escape'):
-        return m.group('escape')
-    elif m.group('named_group_def'):
+    try:
+        assert m.group('named_group_def')
+    except (AssertionError, IndexError):
+        pass
+    else:
         return rf"(?P<{m.group('named_group_def')}>"
-    elif m.group('named_group_ref'):
+
+    try:
+        assert m.group('named_group_ref')
+    except (AssertionError, IndexError):
+        pass
+    else:
         return rf"(?P={m.group('named_group_ref')})"
-    elif m.group('braced_unicode_hex'):
+
+    try:
+        assert m.group('braced_unicode_hex')
+    except (AssertionError, IndexError):
+        pass
+    else:
         if 'u' in flags:
             code = int(m.group('braced_unicode_hex'), 16)
             return rf'\u{code:04X}' if code <= 0xFFFF else rf'\U{code:08X}'
         else:
             return rf"u{{{m.group('braced_unicode_hex')}}}"
+
+    try:
+        assert m.group('char_class')
+    except (AssertionError, IndexError):
+        pass
+    else:
+        subpattern = JS_REGEXP_PATTERN_FIXER_CHAR_CLASS.sub(
+            partial(_compile_regexp_fixer, flags=flags),
+            m.group('char_class'),
+        )
+        return rf'[{subpattern}]'
+
     return m.group(0)
 
 
