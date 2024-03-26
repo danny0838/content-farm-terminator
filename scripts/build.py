@@ -679,15 +679,12 @@ class Converter:
             # apply processors
             self.process_rule(rule, self.info.get('processors', []))
 
-            # special handling for a scheme rule, which forcely defines the raw output rule
+            # special handling for a scheme rule
             if self.allow_schemes and rule.type == 'scheme':
-                self.handle_scheme_rule(rule, scheme_groups)
+                rule = self.handle_scheme_rule(rule, scheme_groups)
 
-                # A rule should be set to another type if handled. This is
-                # either specially handled for grouping or invalid, and should
-                # be skipped here.
-                if rule.type == 'scheme':
-                    continue
+            if not rule:
+                continue
 
             self.print_rule(rule)
 
@@ -727,14 +724,14 @@ class Converter:
             scheme = self.info.get('schemes', {})[rule.scheme]
         except KeyError:
             log.warning('Rule "%s" has an undefined scheme', rule.rule)
-            return
+            return None
 
         if scheme is None:
-            return
+            return None
 
         value = rule.value
         if not value:
-            return
+            return None
 
         # apply escapers
         for escaper in scheme.get('escape', '').split(','):
@@ -753,7 +750,7 @@ class Converter:
         # store the value in the dict for later processing
         if scheme.get('grouping'):
             scheme_groups.setdefault(rule.scheme, []).append((value, rule))
-            return
+            return None
 
         value = scheme.get('value', '').format(value=value)
 
@@ -762,13 +759,14 @@ class Converter:
         if scheme_max is not None:
             if len(value) > scheme_max:
                 log.warning('Rule "%s" exceeds max length %i', rule.rule, scheme_max)
-                return
+                return None
 
         mode = scheme.get('mode')
         if mode == 'raw':
             rule.set_rule_raw(value)
         else:
             rule.set_rule(value)
+        return rule
 
     def handle_grouping_scheme_rules(self, scheme_groups):
         """Output collected grouping scheme rules."""
