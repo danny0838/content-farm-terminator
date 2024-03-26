@@ -249,7 +249,8 @@ class Rule:
 class Linter:
     """Check for issues of the source files."""
     def __init__(self, root, config=None, files=None, check_regex=False, remove_empty=False,
-                 auto_fix=False, sort_rules=False, strip_eol=False):
+                 auto_fix=False, sort_rules=False, strip_eol=False,
+                 no_details=None):
         self.root = root
         self.config = config or {}
         self.files = flatten_files(files or [])
@@ -258,6 +259,13 @@ class Linter:
         self.auto_fix = auto_fix
         self.sort_rules = sort_rules
         self.strip_eol = strip_eol
+        self.no_details = auto_fix if no_details is None else no_details
+
+    @property
+    def log(self):
+        if self.no_details:
+            return log.debug
+        return log.info
 
     def run(self):
         for file in self.files:
@@ -334,34 +342,34 @@ class Linter:
             # A rule of None type should be empty; otherwise it has an invalid
             # format that cannot be recognized as another type.
             if rule.rule.strip():
-                log.info('%s:%i: rule "%s" is invalid',
+                self.log('%s:%i: rule "%s" is invalid',
                          rule.path, rule.line_no, rule.rule)
                 return None
 
             if self.remove_empty:
                 if not rule.rule and not rule.comment:
-                    log.info('%s:%i: rule is empty',
+                    self.log('%s:%i: rule is empty',
                              rule.path, rule.line_no)
                     return None
 
         elif rule.type == 'domain':
             fixed_rule = rule.domain
             if rule.rule != fixed_rule:
-                log.info('%s:%i: rule "%s" should be all lowercase and no consecutive "*"s',
+                self.log('%s:%i: rule "%s" should be all lowercase and no consecutive "*"s',
                          rule.path, rule.line_no, rule.rule)
                 return Rule(f'{fixed_rule}{rule.sep}{rule.comment}')
 
         elif rule.type == 'ipv4':
             fixed_rule = rule.ip
             if rule.rule != fixed_rule:
-                log.info('%s:%i: rule "%s" should be compressed',
+                self.log('%s:%i: rule "%s" should be compressed',
                          rule.path, rule.line_no, rule.rule)
                 return Rule(f'{fixed_rule}{rule.sep}{rule.comment}')
 
         elif rule.type == 'ipv6':
             fixed_rule = f'[{rule.ip}]'
             if rule.rule != fixed_rule:
-                log.info('%s:%i: rule "%s" should be all lowercase and compressed',
+                self.log('%s:%i: rule "%s" should be all lowercase and compressed',
                          rule.path, rule.line_no, rule.rule)
                 return Rule(f'{fixed_rule}{rule.sep}{rule.comment}')
 
@@ -370,20 +378,20 @@ class Linter:
                 try:
                     compile_regexp(rule.pattern, rule.flags)
                 except re.error as exc:
-                    log.info('%s:%i: regex "%s" is invalid: %s',
+                    self.log('%s:%i: regex "%s" is invalid: %s',
                              rule.path, rule.line_no, rule.rule, exc)
                     return None
 
             fixed_rule = f'/{rule.pattern}/{rule.flags}'
             if rule.rule != fixed_rule:
-                log.info('%s:%i: flags of rule "%s" should be sorted alphabetically',
+                self.log('%s:%i: flags of rule "%s" should be sorted alphabetically',
                          rule.path, rule.line_no, rule.rule)
                 return Rule(f'{fixed_rule}{rule.sep}{rule.comment}')
 
         elif rule.type == 'scheme':
             fixed_rule = f'{rule.scheme}:{rule.value}'
             if rule.rule != fixed_rule:
-                log.info('%s:%i: scheme of rule "%s" should be all lowercase',
+                self.log('%s:%i: scheme of rule "%s" should be all lowercase',
                          rule.path, rule.line_no, rule.rule)
                 return Rule(f'{fixed_rule}{rule.sep}{rule.comment}')
 
@@ -394,7 +402,8 @@ class Uniquifier:
     """Check for duplicated rules of the source files."""
     def __init__(self, root, config=None, files=None,
                  check_subdomains=False, check_wildcards=False, cross_files=False,
-                 auto_fix=False, auto_fix_excludes=None, strip_eol=False):
+                 auto_fix=False, auto_fix_excludes=None, strip_eol=False,
+                 no_details=None):
         self.root = root
         self.config = config or {}
         self.files = flatten_files(files or [])
@@ -404,6 +413,13 @@ class Uniquifier:
         self.auto_fix = auto_fix
         self.auto_fix_excludes = set(flatten_files(auto_fix_excludes or []))
         self.strip_eol = strip_eol
+        self.no_details = auto_fix if no_details is None else no_details
+
+    @property
+    def log(self):
+        if self.no_details:
+            return log.debug
+        return log.info
 
     def run(self):
         for _ in self.uniquify():
@@ -466,7 +482,7 @@ class Uniquifier:
                 except KeyError:
                     rules_dict[key] = rule
                 else:
-                    log.info('%s:%i: rule "%s" duplicates "%s" (%s:%i)',
+                    self.log('%s:%i: rule "%s" duplicates "%s" (%s:%i)',
                              rule.path, rule.line_no, rule.rule, rule2.rule, rule2.path, rule2.line_no)
                     continue
 
@@ -495,7 +511,7 @@ class Uniquifier:
                     except KeyError:
                         pass
                     else:
-                        log.info('%s:%i: rule "%s" is a subdomain of "%s" (%s:%i)',
+                        self.log('%s:%i: rule "%s" is a subdomain of "%s" (%s:%i)',
                                  rule.path, rule.line_no, rule.rule, rule2.rule, rule2.path, rule2.line_no)
                         ok = False
                         break
@@ -526,7 +542,7 @@ class Uniquifier:
                         continue
 
                     if regex.search(rule.rule):
-                        log.info('%s:%i: rule "%s" is covered by rule "%s" (%s:%i)',
+                        self.log('%s:%i: rule "%s" is covered by rule "%s" (%s:%i)',
                                  rule.path, rule.line_no, rule.rule, rule2.rule, rule2.path, rule2.line_no)
                         ok = False
                         break
@@ -580,7 +596,8 @@ class Builder:
 
         def gen_rules():
             for new_rules in Uniquifier(
-                self.root, self.config, src_files, check_subdomains=True, cross_files=True
+                self.root, self.config, src_files,
+                check_subdomains=True, cross_files=True, no_details=True,
             ).uniquify():
                 for new_rule in new_rules:
                     if new_rule.path not in exclude_subpaths:
