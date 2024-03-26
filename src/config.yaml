@@ -367,8 +367,14 @@ build:
         line-page:
           value: /^https?://(?:page\.line\.me/|line\.me/(?:R/)?ti/p/@)(?:{value})(?=[/?#]|$)/
           escape: regex
-        line-timeline:
-          value: /^https?://timeline\.line\.me/(?:\w+?)/(?:{value})(?=[/?#]|$)/
+        linevoom-user:
+          value: /^https?://(?:linevoom|timeline)\.line\.me/user/(?:{value})(?=[/?#]|$)/
+          escape: regex
+        linevoom-post:
+          value: /^https?://(?:linevoom|timeline)\.line\.me/post/(?:{value})(?=[/?#]|$)/
+          escape: regex
+        linevoom-hashtag:
+          value: /^https?://(?:linevoom|timeline)\.line\.me/hashtag/(?:{value})(?=[/?#]|$)/
           escape: regex
         haokan-author:
           value: /https?://(?:haokan|sv)\.baidu\.com/author/(?:{value})(?=[/?#]|$)/
