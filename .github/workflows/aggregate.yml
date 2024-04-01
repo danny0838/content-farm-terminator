@@ -35,14 +35,14 @@ jobs:
 
       - name: Aggregate and build
         run: |
-          rm -rf src/aggregations
-          python scripts/build.py auto aggregate
+          rm -rf src/aggregations &&
+          python scripts/build.py auto aggregate &&
           python scripts/build.py auto
 
       - name: Commit files
         run: |
-          git config user.name 'GitHub Action'
-          git config user.email 'actions@github.com'
-          git add -u .
-          git commit -m "cd: auto build at $(TZ=UTC date +'%F'T'%T'Z)"
+          git config user.name 'GitHub Action' &&
+          git config user.email 'actions@github.com' &&
+          git add -u . &&
+          git commit -m "cd: auto build at $(TZ=UTC date +'%F'T'%T'Z)" &&
           git push --force-with-lease
