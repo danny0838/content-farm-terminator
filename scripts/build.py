@@ -1036,11 +1036,7 @@ class Aggregator:
         strip_eol = task.get('strip_eol', False)
 
         log.info('Aggregating rules from "%s" to %s ...', url, dest)
-        try:
-            rules = self.get_rules(type, url)
-        except Exception as exc:
-            log.error('%s', exc)
-            return
+        rules = self.get_rules(type, url)
 
         os.makedirs(os.path.dirname(dest), exist_ok=True)
         with open(dest, 'w', encoding='UTF-8') as fh:
