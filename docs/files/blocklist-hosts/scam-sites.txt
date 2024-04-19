@@ -1,7 +1,7 @@
 # Title: Scam Sites Filters
 # Description: Filter for scam sites. Mostly aggregrated from governmental sources, such as Ministry
 #     of Digital Affairs and National Police Agency of Taiwan.
-# Last modified: 2024-04-07T07:19:10+00:00
+# Last modified: 2024-04-19T07:25:18+00:00
 # Homepage: https://danny0838.github.io/content-farm-terminator/
 # Licence: MIT License
 # Source: https://danny0838.github.io/content-farm-terminator/files/blocklist-hosts/scam-sites.txt
@@ -2763,6 +2763,7 @@
 0.0.0.0 aimhb.shop  #path=/ke3f879l2800 #!165jtz
 0.0.0.0 2okextw.com  #!165jtz
 0.0.0.0 2okextw.net  #!165jtz
+0.0.0.0 aaa1778.com  #!165jtz
 0.0.0.0 aaa1788.net  #!165jtz
 0.0.0.0 3a88.net  #!165jtz
 0.0.0.0 aaa1788.com  #!165jtz
@@ -2823,11 +2824,13 @@
 0.0.0.0 acpcointw.info  #!165jtz
 0.0.0.0 tc.acsfx.cc  #!165jtz
 0.0.0.0 acuxs.com  #!165jtz
+0.0.0.0 acvd.site  #!165jtz
 0.0.0.0 qwer.acycmsdqw.work  #!165jtz
 0.0.0.0 acyvip.cc  #!165jtz
 0.0.0.0 admfx-vip.com  #!165jtz
 0.0.0.0 engbbvr.com  #!165jtz
 0.0.0.0 engbkov.com  #!165jtz
+0.0.0.0 adssobf.com  #!165jtz
 0.0.0.0 aegloballink.com  #!165jtz
 0.0.0.0 bored.aegonx.com  #!165jtz
 0.0.0.0 bored.aegonxip.com  #!165jtz
@@ -3003,6 +3006,7 @@
 0.0.0.0 trade8.armadaoter.com  #!165jtz
 0.0.0.0 armadaotas.com  #!165jtz
 0.0.0.0 arqcdc.com  #!165jtz
+0.0.0.0 tw55.ffuav.com  #!165jtz
 0.0.0.0 tw.asosasts.com  #!165jtz
 0.0.0.0 basinvs.com  #!165jtz
 0.0.0.0 atexkis.vip  #!165jtz
@@ -3012,6 +3016,7 @@
 0.0.0.0 m.atfxvip.cc  #!165jtz
 0.0.0.0 sj.at019.icu  #path=/99 #!165jtz
 0.0.0.0 atfkknp.com  #!165jtz
+0.0.0.0 atfkmfa.com  #!165jtz
 0.0.0.0 atfkmfg.com  #!165jtz
 0.0.0.0 atfkmfn.com  #!165jtz
 0.0.0.0 atfkpkh.com  #!165jtz
@@ -3184,6 +3189,7 @@
 0.0.0.0 w.aliexpshool.vip  #!165jtz
 0.0.0.0 aliexp-app.com  #!165jtz
 0.0.0.0 kjdshfhrf.cyou  #!165jtz
+0.0.0.0 xg.aliexpsshop.vip  #!165jtz
 0.0.0.0 alibabaquan.tw  #!165jtz
 0.0.0.0 tmao121.xyz  #!165jtz
 0.0.0.0 tmao818.xyz  #path=/user.php #!165jtz
@@ -3251,6 +3257,7 @@
 0.0.0.0 amazons6.com  #!165jtz
 0.0.0.0 amazonsoa.com  #!165jtz
 0.0.0.0 amazonsorder.com  #!165jtz
+0.0.0.0 amazozsmmx.top  #!165jtz
 0.0.0.0 dw.amazonshop.work  #!165jtz
 0.0.0.0 dw.chilize.me  #!165jtz
 0.0.0.0 hwswapp.com  #!165jtz
@@ -3379,8 +3386,9 @@
 0.0.0.0 bdiexchange.ausmetw.com  #!165jtz
 0.0.0.0 overlord.agugm.com  #!165jtz
 0.0.0.0 overlord.ausmetw.com  #!165jtz
-0.0.0.0 avastonevdu.com  #!165jtz
 0.0.0.0 avastonejud.com  #!165jtz
+0.0.0.0 avastonevdu.com  #!165jtz
+0.0.0.0 avaetbcrec.com  #!165jtz
 0.0.0.0 avaetfbobtc.com  #!165jtz
 0.0.0.0 avaetmaxbtc.com  #!165jtz
 0.0.0.0 avaetorec.com  #!165jtz
@@ -3406,6 +3414,7 @@
 0.0.0.0 azbitproe.com  #path=/wap #!165jtz
 0.0.0.0 azygww.com  #!165jtz
 0.0.0.0 brich.cyou  #!165jtz
+0.0.0.0 fmcpaybop.com  #!165jtz
 0.0.0.0 bac7746.com  #!165jtz
 0.0.0.0 bak7749.com  #!165jtz
 0.0.0.0 h5.coinbac.net  #!165jtz
@@ -3494,6 +3503,7 @@
 0.0.0.0 bfkhj.store  #!165jtz
 0.0.0.0 77ideal.cn  #path=/denglu.php #!165jtz
 0.0.0.0 bh1788.co  #!165jtz
+0.0.0.0 bhexmax.com  #!165jtz
 0.0.0.0 bhilfg.com  #!165jtz
 0.0.0.0 bhilga.com  #!165jtz
 0.0.0.0 viodaatomicswap.com  #!165jtz
@@ -3570,8 +3580,10 @@
 0.0.0.0 bmdtsj.com  #!165jtz
 0.0.0.0 bmdudc.com  #!165jtz
 0.0.0.0 bmdudv.com  #!165jtz
+0.0.0.0 bmdwfe.com  #!165jtz
 0.0.0.0 bmdyjy.com  #!165jtz
 0.0.0.0 bmdyuv.com  #!165jtz
+0.0.0.0 dovvj.com  #!165jtz
 0.0.0.0 lkfjig.com  #!165jtz
 0.0.0.0 qufjniyutg.com  #!165jtz
 0.0.0.0 xcnivfg.com  #!165jtz
@@ -3583,8 +3595,10 @@
 0.0.0.0 bnwrederkl.com  #!165jtz
 0.0.0.0 bnwredereh.com  #!165jtz
 0.0.0.0 bnwrederik.com  #!165jtz
+0.0.0.0 bnwaencbdi.com  #!165jtz
 0.0.0.0 bnwreuscjs.com  #!165jtz
 0.0.0.0 bnwreusjbf.com  #!165jtz
+0.0.0.0 bnwreusofv.com  #!165jtz
 0.0.0.0 bnwreuserrv.com  #!165jtz
 0.0.0.0 bnwreusijf.com  #!165jtz
 0.0.0.0 bnwreusixf.com  #!165jtz
@@ -3602,6 +3616,7 @@
 0.0.0.0 bnwgk.online  #!165jtz
 0.0.0.0 bvyck.space  #!165jtz
 0.0.0.0 bvyck.xyz  #!165jtz
+0.0.0.0 bokhi.online  #!165jtz
 0.0.0.0 bokhi.shop  #!165jtz
 0.0.0.0 bokhi.xyz  #!165jtz
 0.0.0.0 boqconin.com  #!165jtz
@@ -3660,6 +3675,7 @@
 0.0.0.0 btminka.com  #!165jtz
 0.0.0.0 btminlu.com  #!165jtz
 0.0.0.0 btminza.com  #!165jtz
+0.0.0.0 btmcoltn.vip  #!165jtz
 0.0.0.0 btsedex.club  #!165jtz
 0.0.0.0 btsedex.xyz  #!165jtz
 0.0.0.0 btsemarket.net  #!165jtz
@@ -3715,6 +3731,7 @@
 0.0.0.0 bansgr.com  #!165jtz
 0.0.0.0 basefex.xyz  #!165jtz
 0.0.0.0 bitndf.com  #!165jtz
+0.0.0.0 batonextvu.com  #!165jtz
 0.0.0.0 batonexuid.com  #!165jtz
 0.0.0.0 bba-shopping.top  #!165jtz
 0.0.0.0 coincasso-ex.com  #!165jtz
@@ -3799,6 +3816,7 @@
 0.0.0.0 bikuex.com  #!165jtz
 0.0.0.0 bilaxy.fit  #path=/wxapp #!165jtz
 0.0.0.0 binam2link.top  #!165jtz
+0.0.0.0 binam2link.world  #!165jtz
 0.0.0.0 binam2link.xyz  #!165jtz
 0.0.0.0 binaceysy.com  #!165jtz
 0.0.0.0 binancetr-otc.com  #!165jtz
@@ -3830,6 +3848,7 @@
 0.0.0.0 bingxpq.com  #!165jtz
 0.0.0.0 bingxpro.net  #!165jtz
 0.0.0.0 bingxuu.com  #!165jtz
+0.0.0.0 bingxtop.com  #!165jtz
 0.0.0.0 app.bingbonup-xh5.vip  #!165jtz
 0.0.0.0 bancocrq.com  #!165jtz
 0.0.0.0 usd.binprocdn.com  #!165jtz
@@ -4066,6 +4085,7 @@
 0.0.0.0 bitgetsco.com  #!165jtz
 0.0.0.0 bitgetwvz.com  #!165jtz
 0.0.0.0 bitgetyci.com  #!165jtz
+0.0.0.0 bitgetycy.com  #!165jtz
 0.0.0.0 bitgetzc.com  #!165jtz
 0.0.0.0 bitlkd.com  #!165jtz
 0.0.0.0 bitlkq.com  #!165jtz
@@ -4084,6 +4104,7 @@
 0.0.0.0 blishap.com  #path=/wap #!165jtz
 0.0.0.0 blishba.com  #path=/wap #!165jtz
 0.0.0.0 blishbp.com  #path=/wap #!165jtz
+0.0.0.0 blishoph.com  #path=/wap #!165jtz
 0.0.0.0 blishp.com  #path=/wap #!165jtz
 0.0.0.0 blishs.com  #path=/home #!165jtz
 0.0.0.0 blisht.com  #!165jtz
@@ -4251,6 +4272,7 @@
 0.0.0.0 bobbcoin.top  #!165jtz
 0.0.0.0 boxboxx666.top  #!165jtz
 0.0.0.0 boxxcoin.top  #!165jtz
+0.0.0.0 braoalhysb.com  #!165jtz
 0.0.0.0 brasaotpie.com  #!165jtz
 0.0.0.0 brasaotus.com  #!165jtz
 0.0.0.0 braskiewn.com  #!165jtz
@@ -4301,6 +4323,7 @@
 0.0.0.0 buyer-work.click  #!165jtz
 0.0.0.0 buyer-work.cyou  #!165jtz
 0.0.0.0 buyer-work.life  #!165jtz
+0.0.0.0 buyer-work.one  #!165jtz
 0.0.0.0 bbdown01.com  #!165jtz
 0.0.0.0 bithoh.com  #!165jtz
 0.0.0.0 bybitlines.com  #!165jtz
@@ -4322,6 +4345,7 @@
 0.0.0.0 camellpov.com  #!165jtz
 0.0.0.0 camelppb.com  #!165jtz
 0.0.0.0 camelcrc.com  #!165jtz
+0.0.0.0 camelfaw.com  #!165jtz
 0.0.0.0 camelysd.com  #!165jtz
 0.0.0.0 ht.cbexbei02.top  #!165jtz
 0.0.0.0 ht.cbexjiu01.top  #!165jtz
@@ -4410,6 +4434,7 @@
 0.0.0.0 coinme-b.com  #!165jtz
 0.0.0.0 coinme-d.com  #!165jtz
 0.0.0.0 coinme459.cc  #!165jtz
+0.0.0.0 coinme488.cc  #!165jtz
 0.0.0.0 coinme680.cc  #!165jtz
 0.0.0.0 edgecrypto-v.com  #!165jtz
 0.0.0.0 cmeuwq.com  #!165jtz
@@ -4453,6 +4478,7 @@
 0.0.0.0 app.ajzchduhquweh.com  #!165jtz
 0.0.0.0 dngjfhgj.com  #!165jtz
 0.0.0.0 vbjksfi.com  #!165jtz
+0.0.0.0 tmy.cptmkidc.com  #!165jtz
 0.0.0.0 a013.xcravvess.com  #!165jtz
 0.0.0.0 user.medisou.club  #!165jtz
 0.0.0.0 user.medisou.vip  #!165jtz
@@ -4655,6 +4681,7 @@
 0.0.0.0 coinbasenews.com  #!165jtz
 0.0.0.0 coinbasewallet.gay  #!165jtz
 0.0.0.0 coinbasewebs.com  #!165jtz
+0.0.0.0 cryptosc.top  #!165jtz
 0.0.0.0 fglines.com  #path=/Coinbase #!165jtz
 0.0.0.0 nsdhexvip.com  #!165jtz
 0.0.0.0 ser-groups.com  #!165jtz
@@ -4663,6 +4690,7 @@
 0.0.0.0 dapp.goldstarpro.top  #!165jtz
 0.0.0.0 metawealth.one  #!165jtz
 0.0.0.0 stargoldclub.com  #!165jtz
+0.0.0.0 coinbenep.com  #!165jtz
 0.0.0.0 mobile.coinbene.top  #!165jtz
 0.0.0.0 mobile.coinbene.shop  #!165jtz
 0.0.0.0 cointop3.blsyg.top  #!165jtz
@@ -4698,6 +4726,7 @@
 0.0.0.0 cofwet.com  #!165jtz
 0.0.0.0 coinkool.io  #!165jtz
 0.0.0.0 coinlistusdtzc.com  #!165jtz
+0.0.0.0 bumkh.cqkokibw.com  #path=/233os23y #!165jtz
 0.0.0.0 coinmarketcaps-us.com  #!165jtz
 0.0.0.0 coinmarketcap-us.cc  #!165jtz
 0.0.0.0 coinmarketcaps-us.vip  #!165jtz
@@ -4852,6 +4881,7 @@
 0.0.0.0 coin-store.vip  #!165jtz
 0.0.0.0 coinstoreseve.com  #!165jtz
 0.0.0.0 coinstoreseve.xyz  #!165jtz
+0.0.0.0 h5.cointaste.club  #!165jtz
 0.0.0.0 h5.cointaste.com  #!165jtz
 0.0.0.0 h5.cointaste.net  #!165jtz
 0.0.0.0 h5.cointaste.top  #!165jtz
@@ -4860,6 +4890,7 @@
 0.0.0.0 kucointw.net  #!165jtz
 0.0.0.0 kucointw.top  #!165jtz
 0.0.0.0 kucointw.xyz  #!165jtz
+0.0.0.0 coinntcrt.com  #!165jtz
 0.0.0.0 coinutgnz.com  #!165jtz
 0.0.0.0 coinutsih.com  #!165jtz
 0.0.0.0 coinutust.com  #!165jtz
@@ -4942,6 +4973,7 @@
 0.0.0.0 creditdikd.com  #!165jtz
 0.0.0.0 creditidcv.com  #!165jtz
 0.0.0.0 creditjig.com  #!165jtz
+0.0.0.0 creditjio.com  #!165jtz
 0.0.0.0 creditybf.com  #!165jtz
 0.0.0.0 crex24i.net  #path=/app #!165jtz
 0.0.0.0 crex24ims.com  #!165jtz
@@ -5006,6 +5038,7 @@
 0.0.0.0 bsterceth20.com  #!165jtz
 0.0.0.0 bstetherc20.com  #!165jtz
 0.0.0.0 bstethustd.com  #!165jtz
+0.0.0.0 bstmarbbtc.com  #!165jtz
 0.0.0.0 bstmaxeth.com  #!165jtz
 0.0.0.0 bstmnbcotp.com  #!165jtz
 0.0.0.0 bstobcsmart.com  #!165jtz
@@ -5025,6 +5058,7 @@
 0.0.0.0 cs.syahsk.com  #!165jtz
 0.0.0.0 hfryca.top  #!165jtz
 0.0.0.0 kyazgh.top  #!165jtz
+0.0.0.0 ncyfrd.top  #!165jtz
 0.0.0.0 puuudu.top  #!165jtz
 0.0.0.0 sftmgp.top  #!165jtz
 0.0.0.0 cryptagrbt.vip  #!165jtz
@@ -5129,6 +5163,7 @@
 0.0.0.0 ddexlub.com  #!165jtz
 0.0.0.0 ddaxave.com  #!165jtz
 0.0.0.0 ddaxril.com  #!165jtz
+0.0.0.0 ddesgnz.com  #!165jtz
 0.0.0.0 ddespro.com  #!165jtz
 0.0.0.0 ddesust.com  #!165jtz
 0.0.0.0 ddexaps.com  #path=/app #!165jtz
@@ -5244,6 +5279,7 @@
 0.0.0.0 dxduip.vip  #!165jtz
 0.0.0.0 dxduis.vip  #!165jtz
 0.0.0.0 dxdaoplh.com  #!165jtz
+0.0.0.0 dxdaoplj.com  #!165jtz
 0.0.0.0 dyadicgt.com  #!165jtz
 0.0.0.0 dyadicx.com  #!165jtz
 0.0.0.0 dyadigus.com  #!165jtz
@@ -5390,6 +5426,7 @@
 0.0.0.0 drtsche.fyi  #!165jtz
 0.0.0.0 duobitx.com  #!165jtz
 0.0.0.0 duxgoldingltd.com  #!165jtz
+0.0.0.0 dusmallshop.site  #!165jtz
 0.0.0.0 correlate198.xyz  #!165jtz
 0.0.0.0 divinekk.xyz  #!165jtz
 0.0.0.0 germany2022.egolden.vip  #!165jtz
@@ -5436,9 +5473,9 @@
 0.0.0.0 a.egcoinx.com  #!165jtz
 0.0.0.0 eha-am.com  #!165jtz
 0.0.0.0 eha.ac  #!165jtz
+0.0.0.0 enciof.com  #!165jtz
 0.0.0.0 encjik.com  #!165jtz
 0.0.0.0 encunh.com  #!165jtz
-0.0.0.0 enciof.com  #!165jtz
 0.0.0.0 enciuf.com  #!165jtz
 0.0.0.0 encrvt.com  #!165jtz
 0.0.0.0 reenke.com  #!165jtz
@@ -5538,6 +5575,7 @@
 0.0.0.0 exdtechinc.com  #!165jtz
 0.0.0.0 exdclub.com  #!165jtz
 0.0.0.0 h5.exmoer.com  #!165jtz
+0.0.0.0 exmodex.finance  #!165jtz
 0.0.0.0 exmodex.pro  #!165jtz
 0.0.0.0 mstl.futurescfd.online  #!165jtz
 0.0.0.0 tpyca.exnesjxcsr.com  #!165jtz
@@ -5585,6 +5623,7 @@
 0.0.0.0 intelligentiu.com  #!165jtz
 0.0.0.0 intelligentiy.com  #!165jtz
 0.0.0.0 intelligentltd.com  #!165jtz
+0.0.0.0 elegancepicks.vip  #!165jtz
 0.0.0.0 eliabanking.com  #!165jtz
 0.0.0.0 ellandroadcapital.me  #!165jtz
 0.0.0.0 ellandroadcapital.capital  #!165jtz
@@ -5604,6 +5643,7 @@
 0.0.0.0 enhancesf.com  #!165jtz
 0.0.0.0 twensogoshop.shop  #!165jtz
 0.0.0.0 eve.tuentor.com  #!165jtz
+0.0.0.0 eosxuk.com  #!165jtz
 0.0.0.0 eosnci.com  #!165jtz
 0.0.0.0 eosioapiidc.com  #!165jtz
 0.0.0.0 eosioapirce.com  #!165jtz
@@ -5665,6 +5705,7 @@
 0.0.0.0 taiwan1.etrade200.com  #!165jtz
 0.0.0.0 etuext.xyz  #!165jtz
 0.0.0.0 eurizon.ls-bit.com  #!165jtz
+0.0.0.0 euroasisup.com  #!165jtz
 0.0.0.0 fg.euronext-tranport.top  #!165jtz
 0.0.0.0 sa7.euronext-tranport.top  #!165jtz
 0.0.0.0 sa7.euronext-transcoins.top  #!165jtz
@@ -5720,6 +5761,7 @@
 0.0.0.0 fg90000.com  #!165jtz
 0.0.0.0 sun-shinefarm.vip  #!165jtz
 0.0.0.0 fb197.com  #!165jtz
+0.0.0.0 fbsntmn.com  #!165jtz
 0.0.0.0 fckzoie.vip  #!165jtz
 0.0.0.0 galei.financialcontrol.xyz  #!165jtz
 0.0.0.0 bteensbu.cyou  #!165jtz
@@ -5778,6 +5820,7 @@
 0.0.0.0 fmfwubk.com  #!165jtz
 0.0.0.0 focusbfyy.com  #!165jtz
 0.0.0.0 focusbjv.com  #!165jtz
+0.0.0.0 focusdjn.com  #!165jtz
 0.0.0.0 focusjib.com  #!165jtz
 0.0.0.0 hongnan13.vip  #!165jtz
 0.0.0.0 hongnan16.vip  #!165jtz
@@ -6200,8 +6243,10 @@
 0.0.0.0 geak500s.com  #!165jtz
 0.0.0.0 geaks500.com  #!165jtz
 0.0.0.0 buyeehk.shop  #!165jtz
+0.0.0.0 fustone.store  #!165jtz
 0.0.0.0 appcoinbase.com  #!165jtz
 0.0.0.0 zhuekhl.site  #!165jtz
+0.0.0.0 getfallinlove.com  #!165jtz
 0.0.0.0 cfint.net  #!165jtz
 0.0.0.0 wook.top  #path=/h5 #!165jtz
 0.0.0.0 lwutj.com  #!165jtz
@@ -6230,6 +6275,7 @@
 0.0.0.0 giatw88.com  #!165jtz
 0.0.0.0 giatwn66.com  #!165jtz
 0.0.0.0 gic.run  #!165jtz
+0.0.0.0 mainnetib.com  #!165jtz
 0.0.0.0 mainnetie.com  #!165jtz
 0.0.0.0 mainnetig.com  #!165jtz
 0.0.0.0 mainnetio.com  #!165jtz
@@ -6371,6 +6417,7 @@
 0.0.0.0 gate777445.com  #!165jtz
 0.0.0.0 gate7831.com  #!165jtz
 0.0.0.0 gate863241.com  #!165jtz
+0.0.0.0 gate89635.com  #!165jtz
 0.0.0.0 gatee099.com  #!165jtz
 0.0.0.0 gatee127.com  #!165jtz
 0.0.0.0 gatee24.com  #!165jtz
@@ -6602,6 +6649,7 @@
 0.0.0.0 gsshoponlines.com  #!165jtz
 0.0.0.0 wsd.ghwatop.com  #!165jtz
 0.0.0.0 gushops-asia.com  #!165jtz
+0.0.0.0 htechklsd.com  #!165jtz
 0.0.0.0 htechnab.com  #!165jtz
 0.0.0.0 htechned.com  #!165jtz
 0.0.0.0 haipaiyived.com  #!165jtz
@@ -6651,15 +6699,16 @@
 0.0.0.0 aa2a.cmhkex.top  #!165jtz
 0.0.0.0 gf.hkex01.top  #!165jtz
 0.0.0.0 zghk5888ex.com  #!165jtz
+0.0.0.0 zghk6662ex.com  #!165jtz
 0.0.0.0 zghk6669ex.com  #!165jtz
 0.0.0.0 zghk8886ex.com  #!165jtz
 0.0.0.0 zghk5999ex.com  #!165jtz
 0.0.0.0 hksccbrj.com  #!165jtz
+0.0.0.0 hksccdvi.com  #!165jtz
 0.0.0.0 hksccgy.com  #!165jtz
 0.0.0.0 hksccivm.com  #!165jtz
 0.0.0.0 hksccrnv.com  #!165jtz
 0.0.0.0 hkscctjy.com  #!165jtz
-0.0.0.0 hksccdvi.com  #!165jtz
 0.0.0.0 hkscctiv.com  #!165jtz
 0.0.0.0 hksccvib.com  #!165jtz
 0.0.0.0 hksccwnv.com  #!165jtz
@@ -6680,11 +6729,13 @@
 0.0.0.0 newshonicecol.com  #!165jtz
 0.0.0.0 h5.hpsipstock.com  #!165jtz
 0.0.0.0 hpsip.net  #!165jtz
+0.0.0.0 hrbkf.info  #!165jtz
 0.0.0.0 other.cvhunzw.buzz  #!165jtz
 0.0.0.0 app.djqwiewhq.com  #!165jtz
 0.0.0.0 mdfheth.com  #!165jtz
 0.0.0.0 qhdjffhgh.com  #!165jtz
 0.0.0.0 qnjvkfgfh.com  #!165jtz
+0.0.0.0 hsjkv.info  #!165jtz
 0.0.0.0 smccw.com  #!165jtz
 0.0.0.0 aidefx.com  #!165jtz
 0.0.0.0 velem-trade.com  #!165jtz
@@ -6718,6 +6769,7 @@
 0.0.0.0 albbsh311.com  #!165jtz
 0.0.0.0 haitaohdko.com  #!165jtz
 0.0.0.0 haitaoktb.com  #!165jtz
+0.0.0.0 haitaoky.tw  #!165jtz
 0.0.0.0 haitaopsa.com  #!165jtz
 0.0.0.0 haitaosutw.com  #!165jtz
 0.0.0.0 haitaovet.com  #!165jtz
@@ -6925,6 +6977,7 @@
 0.0.0.0 lydojg.online  #!165jtz
 0.0.0.0 nkhbgy.online  #!165jtz
 0.0.0.0 tnmghu.online  #!165jtz
+0.0.0.0 idxhyk.com  #!165jtz
 0.0.0.0 veshappyenterprise.com  #!165jtz
 0.0.0.0 globalkkmiuseonooline.com  #!165jtz
 0.0.0.0 howgerisiex.com  #!165jtz
@@ -6986,6 +7039,7 @@
 0.0.0.0 instermsyte.com  #!165jtz
 0.0.0.0 insteryes.com  #!165jtz
 0.0.0.0 capitalgain.intuitsdc.com  #!165jtz
+0.0.0.0 invafx.com  #!165jtz
 0.0.0.0 net.ipdwio.com  #!165jtz
 0.0.0.0 ipeenbb.com  #!165jtz
 0.0.0.0 ipeendb.com  #!165jtz
@@ -7047,6 +7101,7 @@
 0.0.0.0 instabankpug.com  #!165jtz
 0.0.0.0 instabankvip.com  #!165jtz
 0.0.0.0 instabankwbc.com  #!165jtz
+0.0.0.0 instabankwwt.com  #!165jtz
 0.0.0.0 instabankxbit.com  #!165jtz
 0.0.0.0 instabankxy.com  #!165jtz
 0.0.0.0 mycoinpsf77on.com  #!165jtz
@@ -7108,6 +7163,7 @@
 0.0.0.0 skilling.jfdboker.com  #!165jtz
 0.0.0.0 m.jinkraltd.com  #!165jtz
 0.0.0.0 jkb8720.com  #!165jtz
+0.0.0.0 elsme.top  #!165jtz
 0.0.0.0 jlrexin.com  #!165jtz
 0.0.0.0 jlrexpro.com  #!165jtz
 0.0.0.0 globalm688.top  #!165jtz
@@ -7122,6 +7178,7 @@
 0.0.0.0 web.joom91.com  #!165jtz
 0.0.0.0 jpacoin.live  #!165jtz
 0.0.0.0 jpacoin.site  #!165jtz
+0.0.0.0 jpacoins.live  #!165jtz
 0.0.0.0 dajdew.com  #path=/CKHJc #!165jtz
 0.0.0.0 jpex-exchange.com  #!165jtz
 0.0.0.0 jpexweb.com  #!165jtz
@@ -7140,6 +7197,7 @@
 0.0.0.0 crmjafcoasia.com  #!165jtz
 0.0.0.0 b.japanbondtw.com  #!165jtz
 0.0.0.0 jcpenney-shops.com  #!165jtz
+0.0.0.0 jeerortw.com  #!165jtz
 0.0.0.0 twjeeror.com  #!165jtz
 0.0.0.0 tw-jetsetgo.pro  #!165jtz
 0.0.0.0 admin.jetswapfx.net  #!165jtz
@@ -7153,6 +7211,7 @@
 0.0.0.0 jetswfx.com  #!165jtz
 0.0.0.0 jetswapmt.com  #!165jtz
 0.0.0.0 iop.yuandbd.com  #!165jtz
+0.0.0.0 smore.jisonshs.com  #!165jtz
 0.0.0.0 win.jisondf.com  #!165jtz
 0.0.0.0 win.jisonxse.com  #!165jtz
 0.0.0.0 www0.jisklsf.com  #!165jtz
@@ -7278,8 +7337,10 @@
 0.0.0.0 kokouas.vip  #!165jtz
 0.0.0.0 kokoubs.vip  #!165jtz
 0.0.0.0 koplce.vip  #!165jtz
+0.0.0.0 vipkofex.com  #!165jtz
 0.0.0.0 kokoubp.vip  #!165jtz
 0.0.0.0 kpyr.pro  #!165jtz
+0.0.0.0 ksvr.pro  #!165jtz
 0.0.0.0 vsw.kekgy.club  #!165jtz
 0.0.0.0 ktpexclsive.com  #!165jtz
 0.0.0.0 ktpexclusngo.com  #!165jtz
@@ -7292,6 +7353,7 @@
 0.0.0.0 kuaiyb.com  #!165jtz
 0.0.0.0 kzhj.shop  #!165jtz
 0.0.0.0 kadenx.com  #!165jtz
+0.0.0.0 kaibangbet.com  #!165jtz
 0.0.0.0 kaibangbrv.com  #!165jtz
 0.0.0.0 kaibangcvx.com  #!165jtz
 0.0.0.0 kaidexbina.top  #!165jtz
@@ -7408,6 +7470,7 @@
 0.0.0.0 ase888.edwinlwe.buzz  #!165jtz
 0.0.0.0 ase888.yomat.buzz  #!165jtz
 0.0.0.0 mookeb.erdenin.buzz  #!165jtz
+0.0.0.0 phx.ekcskad.buzz  #!165jtz
 0.0.0.0 phx.wsdua.buzz  #!165jtz
 0.0.0.0 piq99.wsdua.buzz  #!165jtz
 0.0.0.0 suhs888.rurusuzu.buzz  #!165jtz
@@ -7427,6 +7490,7 @@
 0.0.0.0 kucointwtw.jdkucoiner.com  #!165jtz
 0.0.0.0 m.btctoken.club  #!165jtz
 0.0.0.0 m.maxh.space  #!165jtz
+0.0.0.0 taiwankucoin.kuvdn.com  #!165jtz
 0.0.0.0 ku-bitcoin.com  #!165jtz
 0.0.0.0 ku-excoin.com  #!165jtz
 0.0.0.0 ku-globalcoin.com  #!165jtz
@@ -7516,6 +7580,7 @@
 0.0.0.0 linqcc.cc  #!165jtz
 0.0.0.0 linqsvip.com  #!165jtz
 0.0.0.0 lirunpsiuvb.com  #!165jtz
+0.0.0.0 liteoutw.com  #!165jtz
 0.0.0.0 acquisition.livepers.com  #!165jtz
 0.0.0.0 reg.zhe2222.com  #!165jtz
 0.0.0.0 llbkwzshop-tw.com  #!165jtz
@@ -7683,6 +7748,7 @@
 0.0.0.0 luxurymartplace.com  #!165jtz
 0.0.0.0 h5.ebay88.shop  #!165jtz
 0.0.0.0 m-shoptw.com  #!165jtz
+0.0.0.0 download.m1finance.cc  #!165jtz
 0.0.0.0 w1.whps9898.com  #!165jtz
 0.0.0.0 macubyues.com  #!165jtz
 0.0.0.0 dcoare.manelies.com  #!165jtz
@@ -7793,6 +7859,7 @@
 0.0.0.0 mgs1988.vip  #!165jtz
 0.0.0.0 lvnkfgj.com  #!165jtz
 0.0.0.0 mgttc.top  #!165jtz
+0.0.0.0 msebye.com  #!165jtz
 0.0.0.0 mhex88.net  #!165jtz
 0.0.0.0 mchaekvip.shop  #!165jtz
 0.0.0.0 mining2022.pro  #!165jtz
@@ -7855,6 +7922,7 @@
 0.0.0.0 msejif.com  #!165jtz
 0.0.0.0 mseode.com  #!165jtz
 0.0.0.0 msewiv.com  #!165jtz
+0.0.0.0 msgtrader.com  #!165jtz
 0.0.0.0 app.kopvc.com  #!165jtz
 0.0.0.0 hjksfdhg.com  #!165jtz
 0.0.0.0 jioessx.com  #!165jtz
@@ -7868,6 +7936,7 @@
 0.0.0.0 app.mtooexxt.com  #path=/mto.html #!165jtz
 0.0.0.0 app.qianff136.xyz  #!165jtz
 0.0.0.0 app.qianxz217.xyz  #path=/jpwV #!165jtz
+0.0.0.0 mtooexi.com  #!165jtz
 0.0.0.0 mtooexab.com  #!165jtz
 0.0.0.0 mtooexf.com  #!165jtz
 0.0.0.0 mtooexk.com  #!165jtz
@@ -7927,6 +7996,7 @@
 0.0.0.0 masterex.net  #!165jtz
 0.0.0.0 masterex.org  #!165jtz
 0.0.0.0 twmasterwos.com  #!165jtz
+0.0.0.0 mastershop-website.com  #!165jtz
 0.0.0.0 mastercardbc.com  #!165jtz
 0.0.0.0 mastercards.tw  #!165jtz
 0.0.0.0 mastercardtw.com  #!165jtz
@@ -8028,6 +8098,7 @@
 0.0.0.0 metaverse-financepromax.com  #!165jtz
 0.0.0.0 metaverseprotrade.com  #!165jtz
 0.0.0.0 metaverseprox.com  #!165jtz
+0.0.0.0 metisckd.com  #!165jtz
 0.0.0.0 metisplb.com  #!165jtz
 0.0.0.0 metisplg.com  #!165jtz
 0.0.0.0 metoafa.com  #!165jtz
@@ -8063,6 +8134,7 @@
 0.0.0.0 xlm.msbpit.top  #!165jtz
 0.0.0.0 miixcoin.com  #!165jtz
 0.0.0.0 minacrr.com  #!165jtz
+0.0.0.0 minacrw.com  #!165jtz
 0.0.0.0 minafyb.com  #!165jtz
 0.0.0.0 minafye.com  #!165jtz
 0.0.0.0 impusdt.com  #!165jtz
@@ -8103,6 +8175,7 @@
 0.0.0.0 mtt-ae.com  #!165jtz
 0.0.0.0 beko688.com  #path=/mobile #!165jtz
 0.0.0.0 mdnyy668.com  #!165jtz
+0.0.0.0 modena116.com  #!165jtz
 0.0.0.0 modena366.com  #!165jtz
 0.0.0.0 mtas68.com  #path=/mobile #!165jtz
 0.0.0.0 rkxr89.com  #!165jtz
@@ -8140,6 +8213,7 @@
 0.0.0.0 morgan.common-dos.top  #!165jtz
 0.0.0.0 morrison.shopping  #path=/h5 #!165jtz
 0.0.0.0 moscowdjv.com  #!165jtz
+0.0.0.0 moscowijd.com  #!165jtz
 0.0.0.0 moscowtha.com  #!165jtz
 0.0.0.0 moscownrx.com  #!165jtz
 0.0.0.0 moscowoik.com  #!165jtz
@@ -8213,6 +8287,7 @@
 0.0.0.0 ddolo.naexqq.su  #!165jtz
 0.0.0.0 dolo.naexqq.su  #!165jtz
 0.0.0.0 download.tsxpor.net  #!165jtz
+0.0.0.0 h5.nexqa.su  #!165jtz
 0.0.0.0 b2b199.top  #!165jtz
 0.0.0.0 cbdnasdaq.com  #!165jtz
 0.0.0.0 cbdnasdaq.net  #!165jtz
@@ -8324,6 +8399,7 @@
 0.0.0.0 lcctov.com  #!165jtz
 0.0.0.0 bts.naboxle.com  #!165jtz
 0.0.0.0 gthseer.nadexm.com  #!165jtz
+0.0.0.0 nadexwny.com  #!165jtz
 0.0.0.0 nadexbue.com  #!165jtz
 0.0.0.0 nadexvdb.com  #!165jtz
 0.0.0.0 nartata.com  #!165jtz
@@ -8399,6 +8475,7 @@
 0.0.0.0 foxtwd.com  #!165jtz
 0.0.0.0 icmarkets-forex.net  #!165jtz
 0.0.0.0 oanda-tw.net  #!165jtz
+0.0.0.0 oandaxme.com  #!165jtz
 0.0.0.0 oandeexpro.com  #!165jtz
 0.0.0.0 oandemax.com  #!165jtz
 0.0.0.0 onademaxs.top  #!165jtz
@@ -8414,6 +8491,7 @@
 0.0.0.0 plocmarket.com  #!165jtz
 0.0.0.0 bjlcn.com  #!165jtz
 0.0.0.0 opsalkj.com  #!165jtz
+0.0.0.0 opsavdsda.com  #!165jtz
 0.0.0.0 opsavhjs.com  #!165jtz
 0.0.0.0 opsavkuyt.com  #!165jtz
 0.0.0.0 oecvnci.vip  #!165jtz
@@ -8423,6 +8501,7 @@
 0.0.0.0 oga-svip.com  #!165jtz
 0.0.0.0 vdir.uejfos.com  #path=/WVC4.app #!165jtz
 0.0.0.0 okbblfv.com  #!165jtz
+0.0.0.0 okbndu.com  #!165jtz
 0.0.0.0 okbxjj.com  #!165jtz
 0.0.0.0 okxvex.com  #!165jtz
 0.0.0.0 ivokbcoin.com  #!165jtz
@@ -8430,7 +8509,6 @@
 0.0.0.0 okbeatr.com  #!165jtz
 0.0.0.0 okbemu.com  #!165jtz
 0.0.0.0 okbijs.com  #!165jtz
-0.0.0.0 okbndu.com  #!165jtz
 0.0.0.0 okbnuev.com  #!165jtz
 0.0.0.0 okbnutc.com  #!165jtz
 0.0.0.0 okbnuvn.com  #!165jtz
@@ -8496,6 +8574,7 @@
 0.0.0.0 twokx.com  #!165jtz
 0.0.0.0 vuqfbuyt.com  #!165jtz
 0.0.0.0 xoxvip.com  #!165jtz
+0.0.0.0 m.omfexchange.com  #!165jtz
 0.0.0.0 onboe.gmx333.top  #!165jtz
 0.0.0.0 onboebtc.top  #!165jtz
 0.0.0.0 onboecbd.top  #!165jtz
@@ -8520,6 +8599,7 @@
 0.0.0.0 otcintaiwan.com  #!165jtz
 0.0.0.0 s15.kkkuav.com  #!165jtz
 0.0.0.0 1.ffuav.com  #!165jtz
+0.0.0.0 tw53.ffuav.com  #!165jtz
 0.0.0.0 fruugoshopser.com  #!165jtz
 0.0.0.0 otto-supermall.com  #!165jtz
 0.0.0.0 m.ebuyshop.xyz  #!165jtz
@@ -8527,6 +8607,7 @@
 0.0.0.0 ottoshopsx.com  #!165jtz
 0.0.0.0 otto-buynow.com  #!165jtz
 0.0.0.0 ottoshoppf.com  #!165jtz
+0.0.0.0 ottoshopsk.com  #!165jtz
 0.0.0.0 ottoshopso.com  #!165jtz
 0.0.0.0 ottoshopw.com  #!165jtz
 0.0.0.0 golden.oxeoxe.net  #!165jtz
@@ -8609,6 +8690,7 @@
 0.0.0.0 orsted-dex.com  #!165jtz
 0.0.0.0 orsted-ion.com  #!165jtz
 0.0.0.0 awp.oupeidebbf.com  #!165jtz
+0.0.0.0 awp.oupeideiif.com  #!165jtz
 0.0.0.0 osm.oupeideifb.com  #!165jtz
 0.0.0.0 oulianfx.com  #!165jtz
 0.0.0.0 ouger-mall.com  #!165jtz
@@ -8714,6 +8796,7 @@
 0.0.0.0 fx-pandora.com  #!165jtz
 0.0.0.0 pd-forex.co  #!165jtz
 0.0.0.0 pdfxltd.co  #!165jtz
+0.0.0.0 pfkbd.ltd  #!165jtz
 0.0.0.0 pfkbd.shop  #!165jtz
 0.0.0.0 pguie.online  #!165jtz
 0.0.0.0 pflcoin.com  #!165jtz
@@ -8753,6 +8836,7 @@
 0.0.0.0 plglobal.co  #!165jtz
 0.0.0.0 plglobals.co  #!165jtz
 0.0.0.0 plglobals.com  #!165jtz
+0.0.0.0 plusjof.com  #!165jtz
 0.0.0.0 pmsacapital.com  #!165jtz
 0.0.0.0 pmsacapitalsllc.com  #!165jtz
 0.0.0.0 pmsacp.com  #!165jtz
@@ -8807,6 +8891,7 @@
 0.0.0.0 parxtoo.vip  #!165jtz
 0.0.0.0 patrlg.com  #!165jtz
 0.0.0.0 paymium23.buzz  #!165jtz
+0.0.0.0 paymium49.buzz  #!165jtz
 0.0.0.0 paymium6.buzz  #!165jtz
 0.0.0.0 paymium8.buzz  #!165jtz
 0.0.0.0 paymium9.buzz  #!165jtz
@@ -8879,6 +8964,7 @@
 0.0.0.0 pviponexx.com  #!165jtz
 0.0.0.0 bch.dtap000s2.com  #!165jtz
 0.0.0.0 pitevo.com  #path=/h5 #!165jtz
+0.0.0.0 plantshops.net  #!165jtz
 0.0.0.0 m.plasmaoracleglobal.com  #!165jtz
 0.0.0.0 aner.platforms.agency  #!165jtz
 0.0.0.0 aner.platforms.asia  #!165jtz
@@ -8929,6 +9015,7 @@
 0.0.0.0 polyxit.com  #!165jtz
 0.0.0.0 dapp.ethpools.xyz  #!165jtz
 0.0.0.0 w.e-sell.cc  #!165jtz
+0.0.0.0 imtron.win7777.net  #!165jtz
 0.0.0.0 poontpayup.com  #!165jtz
 0.0.0.0 uk.imtronbit.top  #!165jtz
 0.0.0.0 usa.imtronbit.top  #!165jtz
@@ -9111,6 +9198,7 @@
 0.0.0.0 rcavbdatinibf.com  #!165jtz
 0.0.0.0 rcln.club  #!165jtz
 0.0.0.0 rcln.xyz  #!165jtz
+0.0.0.0 rcavbdatindjn.com  #!165jtz
 0.0.0.0 redaplellz.vip  #!165jtz
 0.0.0.0 redleapc.vip  #!165jtz
 0.0.0.0 redleapv.vip  #!165jtz
@@ -9261,6 +9349,7 @@
 0.0.0.0 rocket-poolf.com  #!165jtz
 0.0.0.0 rocket-poolg.com  #!165jtz
 0.0.0.0 rocket-poolj.com  #!165jtz
+0.0.0.0 uni.rokubit.top  #path=/index0 #!165jtz
 0.0.0.0 usdc.rokubit.top  #path=/index0 #!165jtz
 0.0.0.0 romanticing.org  #!165jtz
 0.0.0.0 rootrex.cc  #!165jtz
@@ -9374,6 +9463,7 @@
 0.0.0.0 wk3.tw-sia.biz  #!165jtz
 0.0.0.0 sjmdownloads.com  #!165jtz
 0.0.0.0 sjmdowns01.com  #!165jtz
+0.0.0.0 sjmhtmls.com  #!165jtz
 0.0.0.0 sktshopping.vip  #!165jtz
 0.0.0.0 m.skshoptw886.com  #!165jtz
 0.0.0.0 skshoptw.com  #!165jtz
@@ -9402,6 +9492,7 @@
 0.0.0.0 ho.mosolarhas.buzz  #!165jtz
 0.0.0.0 pon.geosolah.buzz  #!165jtz
 0.0.0.0 pun.caigelo.buzz  #!165jtz
+0.0.0.0 pun.lucamada.buzz  #!165jtz
 0.0.0.0 pun.mosolarhas.buzz  #!165jtz
 0.0.0.0 racaise.buzz  #!165jtz
 0.0.0.0 si.solartras.buzz  #!165jtz
@@ -9418,6 +9509,7 @@
 0.0.0.0 spxbkr.com  #!165jtz
 0.0.0.0 spxike.com  #!165jtz
 0.0.0.0 spxivb.com  #!165jtz
+0.0.0.0 spxive.com  #!165jtz
 0.0.0.0 spxudn.com  #!165jtz
 0.0.0.0 spxuvd.com  #!165jtz
 0.0.0.0 sre-ex.com  #!165jtz
@@ -9582,6 +9674,7 @@
 0.0.0.0 opensky.club  #!165jtz
 0.0.0.0 ygshopee.cc  #!165jtz
 0.0.0.0 zashopee.cn  #!165jtz
+0.0.0.0 xiapitao.shop  #!165jtz
 0.0.0.0 clickdown.sztehao.com  #!165jtz
 0.0.0.0 down.shopeeix.com  #!165jtz
 0.0.0.0 down.shopeeix.top  #!165jtz
@@ -9653,6 +9746,7 @@
 0.0.0.0 shopingcentral.xyz  #!165jtz
 0.0.0.0 shopingcentrale.com  #!165jtz
 0.0.0.0 shopingcentrale.shop  #!165jtz
+0.0.0.0 shopingcentrale.site  #!165jtz
 0.0.0.0 shopingcentrale.top  #!165jtz
 0.0.0.0 shopingcentrale.xyz  #!165jtz
 0.0.0.0 shopping-gift.xyz  #!165jtz
@@ -9680,6 +9774,7 @@
 0.0.0.0 tw20.joom.ac  #!165jtz
 0.0.0.0 tw21.joom.mx  #!165jtz
 0.0.0.0 tw22.shopyyf.com  #!165jtz
+0.0.0.0 tw23.joom.ac  #!165jtz
 0.0.0.0 tw24.joom.ac  #!165jtz
 0.0.0.0 tw25.shopjjj.com  #!165jtz
 0.0.0.0 tw25.shopssk.com  #!165jtz
@@ -9738,6 +9833,7 @@
 0.0.0.0 sofiofd.com  #!165jtz
 0.0.0.0 sofitwifv.com  #!165jtz
 0.0.0.0 sofitwyre.com  #!165jtz
+0.0.0.0 sofiiwe.com  #!165jtz
 0.0.0.0 sofitwirf.com  #!165jtz
 0.0.0.0 sofiufc.com  #!165jtz
 0.0.0.0 m.sogotrade.cc  #!165jtz
@@ -9854,6 +9950,7 @@
 0.0.0.0 starbucksvipcashbacking.com  #!165jtz
 0.0.0.0 starbucksvipmoneyaward.com  #!165jtz
 0.0.0.0 starbucksvipspreadbonusmoney.com  #!165jtz
+0.0.0.0 starbucksvipspreadbonusmoneyback.com  #!165jtz
 0.0.0.0 starbucksvvippmoneyawardmoney.com  #!165jtz
 0.0.0.0 frishoper.com  #!165jtz
 0.0.0.0 stardaymall.com  #!165jtz
@@ -10044,6 +10141,7 @@
 0.0.0.0 tch.nez9002.com  #!165jtz
 0.0.0.0 tch.nze6988.top  #!165jtz
 0.0.0.0 tcvof.xyz  #!165jtz
+0.0.0.0 tdaex.cyou  #!165jtz
 0.0.0.0 fotumi.tdcxy.com  #!165jtz
 0.0.0.0 gocted.tdcxyers.com  #!165jtz
 0.0.0.0 lotiden.tdcxy.com  #!165jtz
@@ -10125,6 +10223,7 @@
 0.0.0.0 trade8.tiffijnsute.com  #!165jtz
 0.0.0.0 trade8.tiffinsute.com  #!165jtz
 0.0.0.0 zhong.tiffijnssa.com  #!165jtz
+0.0.0.0 tisejvl.com  #!165jtz
 0.0.0.0 beauty-shop.us  #!165jtz
 0.0.0.0 ff.a08.icu  #path=/gfmzvu #!165jtz
 0.0.0.0 tkbcc.com  #!165jtz
@@ -10144,6 +10243,7 @@
 0.0.0.0 hre.marketbfi.com  #!165jtz
 0.0.0.0 hre.marketkvc.com  #!165jtz
 0.0.0.0 jnn.marketruic.com  #!165jtz
+0.0.0.0 pmp.marketjrv.com  #!165jtz
 0.0.0.0 uio.marketruvd.com  #!165jtz
 0.0.0.0 uio.marketrvrf.com  #!165jtz
 0.0.0.0 uio.marketydh.com  #!165jtz
@@ -10215,6 +10315,7 @@
 0.0.0.0 truefizzj.com  #!165jtz
 0.0.0.0 ratcrq.com  #!165jtz
 0.0.0.0 ratcry.com  #!165jtz
+0.0.0.0 ratydb.com  #!165jtz
 0.0.0.0 ratysi.com  #!165jtz
 0.0.0.0 ratyso.com  #!165jtz
 0.0.0.0 trust-coins.com  #!165jtz
@@ -10241,6 +10342,7 @@
 0.0.0.0 tsesiem.com  #!165jtz
 0.0.0.0 tseuse.com  #!165jtz
 0.0.0.0 tseweoi.com  #!165jtz
+0.0.0.0 environmentb.windhxi.com  #!165jtz
 0.0.0.0 tsfdf.live  #!165jtz
 0.0.0.0 avatdi.com  #!165jtz
 0.0.0.0 tsvdf.xyz  #!165jtz
@@ -10394,6 +10496,7 @@
 0.0.0.0 a1001.tiktkoshop.com  #path=/h5 #!165jtz
 0.0.0.0 a1001.twtkshop.com  #!165jtz
 0.0.0.0 a1002.tiktok-shopping.org  #path=/h5 #!165jtz
+0.0.0.0 m.tiktokmal.com  #!165jtz
 0.0.0.0 n1120.tiktkoshop.com  #!165jtz
 0.0.0.0 seller.hottkshop.com  #!165jtz
 0.0.0.0 shop.tiktokshops.vip  #!165jtz
@@ -10521,6 +10624,7 @@
 0.0.0.0 tradingview999.top  #!165jtz
 0.0.0.0 newidea.tips  #!165jtz
 0.0.0.0 transactionview.club  #!165jtz
+0.0.0.0 travelex-ltd.com  #!165jtz
 0.0.0.0 traweb3.club  #!165jtz
 0.0.0.0 traweb3.me  #!165jtz
 0.0.0.0 traweb3.shop  #!165jtz
@@ -10549,6 +10653,7 @@
 0.0.0.0 trendjio.com  #!165jtz
 0.0.0.0 trolleys.cc  #!165jtz
 0.0.0.0 trolleysapp.top  #!165jtz
+0.0.0.0 trubiteih.com  #!165jtz
 0.0.0.0 truistex.com  #!165jtz
 0.0.0.0 ratjkq.com  #!165jtz
 0.0.0.0 ratysp.com  #!165jtz
@@ -10654,6 +10759,7 @@
 0.0.0.0 jiosifsy.com  #!165jtz
 0.0.0.0 vnusaierugf.com  #!165jtz
 0.0.0.0 app.lkmkihhd.com  #!165jtz
+0.0.0.0 constantgreater.com  #!165jtz
 0.0.0.0 ht.ukexba02.top  #!165jtz
 0.0.0.0 ht.ukexba06.top  #path=/wap #!165jtz
 0.0.0.0 ht.ukexba1.top  #path=/wap #!165jtz
@@ -10668,6 +10774,7 @@
 0.0.0.0 unipro-trademax.com  #!165jtz
 0.0.0.0 unipromax.com  #!165jtz
 0.0.0.0 unitrademax.com  #!165jtz
+0.0.0.0 uniup.top  #!165jtz
 0.0.0.0 usdc-vipfx.com  #!165jtz
 0.0.0.0 usdc-vip.com  #!165jtz
 0.0.0.0 usdt-miner.com  #!165jtz
@@ -10717,6 +10824,7 @@
 0.0.0.0 wwwi.uepluss.com  #!165jtz
 0.0.0.0 ulineme.com  #!165jtz
 0.0.0.0 ultimateedw.com  #!165jtz
+0.0.0.0 ultimateior.com  #!165jtz
 0.0.0.0 ultimateovu.com  #!165jtz
 0.0.0.0 m.uncleblockgloballimited.com  #!165jtz
 0.0.0.0 h5.unis-shop.com  #!165jtz
@@ -10745,6 +10853,7 @@
 0.0.0.0 v4uni-swap.com  #!165jtz
 0.0.0.0 wuniswap.top  #!165jtz
 0.0.0.0 uniswap.ee-com89678.xyz  #!165jtz
+0.0.0.0 univeaf.com  #!165jtz
 0.0.0.0 sdf.uniteinnvv.com  #!165jtz
 0.0.0.0 m.unlimtedgold.cc  #!165jtz
 0.0.0.0 m.unlimtedgold.co  #!165jtz
@@ -10889,6 +10998,7 @@
 0.0.0.0 erstoken.com  #!165jtz
 0.0.0.0 tretoken.com  #!165jtz
 0.0.0.0 znystoken.com  #!165jtz
+0.0.0.0 virgotox.vip  #!165jtz
 0.0.0.0 virgouox.vip  #!165jtz
 0.0.0.0 waa.visoikc.com  #!165jtz
 0.0.0.0 wsd.visoikc.com  #!165jtz
@@ -10896,6 +11006,7 @@
 0.0.0.0 vistacoingvp.com  #!165jtz
 0.0.0.0 vistacoinhvp.com  #!165jtz
 0.0.0.0 vistacoinivp.com  #!165jtz
+0.0.0.0 vistacoinjvp.com  #!165jtz
 0.0.0.0 vistacointvp.com  #!165jtz
 0.0.0.0 vistova-bxcrm.com  #!165jtz
 0.0.0.0 vistovamarketcrm.com  #!165jtz
@@ -11017,6 +11128,7 @@
 0.0.0.0 walletaaa.com  #!165jtz
 0.0.0.0 walletaab.com  #!165jtz
 0.0.0.0 walletaac.com  #!165jtz
+0.0.0.0 walletaae.com  #!165jtz
 0.0.0.0 walletcoines.com  #!165jtz
 0.0.0.0 walletdefi-max.com  #!165jtz
 0.0.0.0 walletfinancepro.com  #!165jtz
@@ -11091,6 +11203,7 @@
 0.0.0.0 lucky168.yasenfinancial.xyz  #!165jtz
 0.0.0.0 sdf888.fodesrvnet.online  #!165jtz
 0.0.0.0 sdf888.fodesrvnet.website  #!165jtz
+0.0.0.0 app.dloeor.com  #!165jtz
 0.0.0.0 wealth-era.com  #!165jtz
 0.0.0.0 ckoilo.com  #!165jtz
 0.0.0.0 floioc.com  #!165jtz
@@ -11104,6 +11217,7 @@
 0.0.0.0 cryptoweb3ovip.com  #!165jtz
 0.0.0.0 web3.znyun.xyz  #!165jtz
 0.0.0.0 web3-cypto.com  #!165jtz
+0.0.0.0 webthe3.com  #!165jtz
 0.0.0.0 app.eihidhvd.com  #!165jtz
 0.0.0.0 app.mmsvfgt.com  #!165jtz
 0.0.0.0 wellsfargotw.com  #!165jtz
@@ -11121,6 +11235,7 @@
 0.0.0.0 environmenta.windflv.com  #!165jtz
 0.0.0.0 environmenta.windkjv.com  #!165jtz
 0.0.0.0 environmentb.windjxm.com  #!165jtz
+0.0.0.0 bit.wind-coin.com  #!165jtz
 0.0.0.0 winnieex.com  #!165jtz
 0.0.0.0 trader.maxwinote.com  #!165jtz
 0.0.0.0 trader.ordeforex.com  #!165jtz
@@ -11130,6 +11245,7 @@
 0.0.0.0 m.wwintersnow.com  #!165jtz
 0.0.0.0 download.cloudwirex.net  #!165jtz
 0.0.0.0 m.cloudwirex.com  #!165jtz
+0.0.0.0 wisdomxvdb.com  #!165jtz
 0.0.0.0 aiwisecoin.com  #!165jtz
 0.0.0.0 aaa.wishshop.today  #!165jtz
 0.0.0.0 awishstore.shop  #!165jtz
@@ -11158,6 +11274,7 @@
 0.0.0.0 justcupss.com  #!165jtz
 0.0.0.0 teacupsbuy.com  #!165jtz
 0.0.0.0 teacupsbuys.com  #!165jtz
+0.0.0.0 teacupsnow.com  #!165jtz
 0.0.0.0 teamasterer.com  #!165jtz
 0.0.0.0 topteasnow.com  #!165jtz
 0.0.0.0 uuteas.com  #!165jtz
@@ -11192,6 +11309,7 @@
 0.0.0.0 xedpq.com  #!165jtz
 0.0.0.0 xexsas.vip  #!165jtz
 0.0.0.0 xexvspr.vip  #!165jtz
+0.0.0.0 xexyela.vip  #!165jtz
 0.0.0.0 xfcbg.website  #!165jtz
 0.0.0.0 xfvbg.online  #!165jtz
 0.0.0.0 xfvbg.xyz  #!165jtz
@@ -11227,6 +11345,7 @@
 0.0.0.0 xpromarkets.com  #!165jtz
 0.0.0.0 xpromarkets.website  #!165jtz
 0.0.0.0 xpromarkets.net  #!165jtz
+0.0.0.0 xrexdown.com  #!165jtz
 0.0.0.0 xtexchangepro.com  #path=/wap #!165jtz
 0.0.0.0 xtbcdi.com  #!165jtz
 0.0.0.0 xtbveb.com  #!165jtz
@@ -11252,6 +11371,7 @@
 0.0.0.0 ubsexgk.com  #!165jtz
 0.0.0.0 ubsexgz.com  #!165jtz
 0.0.0.0 xdhjg.shop  #!165jtz
+0.0.0.0 xk.kerryhe.buzz  #!165jtz
 0.0.0.0 xwbig.store  #!165jtz
 0.0.0.0 xwbig.xyz  #!165jtz
 0.0.0.0 curryency.kasnses.com  #!165jtz
@@ -11332,6 +11452,7 @@
 0.0.0.0 ios.yahviy.com  #!165jtz
 0.0.0.0 ios.yahvmd.com  #!165jtz
 0.0.0.0 yahbic.com  #!165jtz
+0.0.0.0 yahbti.com  #!165jtz
 0.0.0.0 yahiie.com  #!165jtz
 0.0.0.0 yahiivk.com  #!165jtz
 0.0.0.0 yahlju.com  #!165jtz
@@ -11445,6 +11566,7 @@
 0.0.0.0 zeusjio.com  #!165jtz
 0.0.0.0 n.ziinitieks.com  #!165jtz
 0.0.0.0 rm1388.ziieatieks.com  #!165jtz
+0.0.0.0 zone-market.com  #!165jtz
 0.0.0.0 zosebd.com  #!165jtz
 0.0.0.0 zosvhu.com  #!165jtz
 0.0.0.0 zouspoi.com  #!165jtz
@@ -11691,6 +11813,7 @@
 0.0.0.0 zizhongtgj.com  #!165jtz
 0.0.0.0 ztgjgloint.com  #!165jtz
 0.0.0.0 wap.zhongyangshengan5g.com  #!165jtz
+0.0.0.0 app.aqrtwf.top  #path=/aqrtwf/ #!165jtz
 0.0.0.0 app.wgdppu.top  #path=/wgdppu/ #!165jtz
 0.0.0.0 rzryok.top  #path=/aaqq #!165jtz
 0.0.0.0 fqbuio.top  #path=/app999 #!165jtz
@@ -11908,6 +12031,7 @@
 0.0.0.0 81768478.youtaosc.vip  #!165jtz
 0.0.0.0 ymgshop.com  #!165jtz
 0.0.0.0 cheknevis.com  #!165jtz
+0.0.0.0 e2ajjqrep.com  #!165jtz
 0.0.0.0 h5.uxshope.com  #!165jtz
 0.0.0.0 ihearttype.com  #!165jtz
 0.0.0.0 m.dozbm.com  #!165jtz
@@ -11956,6 +12080,7 @@
 0.0.0.0 app.rnfenqwndams.com  #!165jtz
 0.0.0.0 gjtjwerkldms.com  #!165jtz
 0.0.0.0 vhtyqyquyha.com  #!165jtz
+0.0.0.0 app.geeols.com  #!165jtz
 0.0.0.0 app.tiosz.com  #!165jtz
 0.0.0.0 m.trustglobal.app  #!165jtz
 0.0.0.0 m.trustglobal.vip  #!165jtz
@@ -11972,6 +12097,7 @@
 0.0.0.0 batao.cc  #path=/m #!165jtz
 0.0.0.0 oinp2p.com  #!165jtz
 0.0.0.0 shop.hongkong.puyansh.com  #path=/home #!165jtz
+0.0.0.0 shop.puyansh.com  #path=/home #!165jtz
 0.0.0.0 globalshopsb.com  #!165jtz
 0.0.0.0 globalshopsf.com  #!165jtz
 0.0.0.0 m.fkptn.top  #path=/h509 #!165jtz
@@ -12052,6 +12178,7 @@
 0.0.0.0 tjbzcgg.com  #!165jtz
 0.0.0.0 yodzown.com  #!165jtz
 0.0.0.0 lwisfhgh.com  #!165jtz
+0.0.0.0 plosir.com  #!165jtz
 0.0.0.0 app.clpowiss.com  #!165jtz
 0.0.0.0 fstfdtgsu.com  #!165jtz
 0.0.0.0 srselo.com  #!165jtz
@@ -12154,6 +12281,7 @@
 0.0.0.0 books-ltd.com  #!165jtz
 0.0.0.0 books-shopcenter.com  #!165jtz
 0.0.0.0 books-shoping.com  #!165jtz
+0.0.0.0 bookshome-tw.com  #!165jtz
 0.0.0.0 m.jrqrml.top  #!165jtz
 0.0.0.0 smnhus.com  #!165jtz
 0.0.0.0 bossxw.com  #!165jtz
@@ -12174,9 +12302,11 @@
 0.0.0.0 acs168.net  #!165jtz
 0.0.0.0 1binvest.com  #!165jtz
 0.0.0.0 download.futuretrade.top  #!165jtz
+0.0.0.0 fmgdobo.icu  #path=/9fvze #!165jtz
 0.0.0.0 xyafzuv.icu  #!165jtz
 0.0.0.0 ams.cali333.net  #!165jtz
 0.0.0.0 cail888.net  #!165jtz
+0.0.0.0 cali1356a.net  #!165jtz
 0.0.0.0 cali1356b.net  #!165jtz
 0.0.0.0 cali777.net  #!165jtz
 0.0.0.0 cali818.net  #!165jtz
@@ -12184,7 +12314,6 @@
 0.0.0.0 cali888.net  #!165jtz
 0.0.0.0 cali8888.net  #!165jtz
 0.0.0.0 calibet.com  #!165jtz
-0.0.0.0 cali1356a.net  #!165jtz
 0.0.0.0 lsknbjgt.com  #!165jtz
 0.0.0.0 app.mbjgifjg.com  #!165jtz
 0.0.0.0 app.qcwvw.top  #path=/qcwvw #!165jtz
@@ -12361,6 +12490,7 @@
 0.0.0.0 carriershares.com  #!165jtz
 0.0.0.0 carrierstocks.com  #!165jtz
 0.0.0.0 carriertrades.com  #!165jtz
+0.0.0.0 fafa258mmbn.xyz  #!165jtz
 0.0.0.0 fafa8569.cyou  #path=/m #!165jtz
 0.0.0.0 jiale923.xyz  #!165jtz
 0.0.0.0 jsgjwftw.com  #!165jtz
@@ -12494,6 +12624,7 @@
 0.0.0.0 xnvjfhod.com  #!165jtz
 0.0.0.0 yjsues.com  #!165jtz
 0.0.0.0 aifeier888.xyz  #!165jtz
+0.0.0.0 fundrichs.com  #!165jtz
 0.0.0.0 app.wootxshop.pw  #!165jtz
 0.0.0.0 dooooobox.com  #!165jtz
 0.0.0.0 z0503.djg88168.net  #!165jtz
@@ -12552,6 +12683,7 @@
 0.0.0.0 xbvncmjdu.com  #!165jtz
 0.0.0.0 yolisg.com  #!165jtz
 0.0.0.0 oni618.gm1788.net  #!165jtz
+0.0.0.0 dasheng889.com  #!165jtz
 0.0.0.0 vvtaa3.com  #path=/rk/vip #!165jtz
 0.0.0.0 app.hkcp75.cc  #!165jtz
 0.0.0.0 app.kdhgudi.com  #!165jtz
@@ -12618,6 +12750,7 @@
 0.0.0.0 timesquare.685553.cfd  #!165jtz
 0.0.0.0 timesquare.688528.cfd  #!165jtz
 0.0.0.0 tmalldlapp.com  #!165jtz
+0.0.0.0 tmalldlinstall.com  #!165jtz
 0.0.0.0 tmallinstall.com  #!165jtz
 0.0.0.0 tmallshtw.com  #!165jtz
 0.0.0.0 tmalltmsh.com  #!165jtz
@@ -12856,6 +12989,7 @@
 0.0.0.0 futuotiiw.com  #!165jtz
 0.0.0.0 rshopmall.info  #!165jtz
 0.0.0.0 pcentmall.tw  #!165jtz
+0.0.0.0 tsslox.com  #!165jtz
 0.0.0.0 photonfin.online  #!165jtz
 0.0.0.0 furaholdings.co  #!165jtz
 0.0.0.0 furaholdings.com  #!165jtz
@@ -12963,6 +13097,7 @@
 0.0.0.0 dgone.realizeideal.fun  #!165jtz
 0.0.0.0 dgone.realizeideal.online  #!165jtz
 0.0.0.0 dgone.realizeideals.shop  #!165jtz
+0.0.0.0 dgone.realizeideals.store  #!165jtz
 0.0.0.0 globalcosmx.com  #!165jtz
 0.0.0.0 app.blzj.tw  #!165jtz
 0.0.0.0 baolaizhengjuan.tw  #!165jtz
@@ -12982,6 +13117,7 @@
 0.0.0.0 imq3vuml.com  #!165jtz
 0.0.0.0 m2rso9uk.com  #!165jtz
 0.0.0.0 rbadrpa95k.com  #!165jtz
+0.0.0.0 app.lklsxc.com  #!165jtz
 0.0.0.0 bkoilx.xyz  #!165jtz
 0.0.0.0 gsjuy.xyz  #!165jtz
 0.0.0.0 jsioiek.xyz  #!165jtz
@@ -13021,6 +13157,7 @@
 0.0.0.0 tw.split-new.com  #!165jtz
 0.0.0.0 v.split-new.com  #!165jtz
 0.0.0.0 w.split-new.com  #!165jtz
+0.0.0.0 malls-shps.com  #!165jtz
 0.0.0.0 samscpop.com  #!165jtz
 0.0.0.0 samscvip.com  #!165jtz
 0.0.0.0 samscvvip.com  #!165jtz
@@ -13368,6 +13505,7 @@
 0.0.0.0 xdgyug.xyz  #!165jtz
 0.0.0.0 sports-xhao.com  #!165jtz
 0.0.0.0 app.voisws.com  #!165jtz
+0.0.0.0 gthjfj.com  #!165jtz
 0.0.0.0 xhuyl.com  #!165jtz
 0.0.0.0 xskljf.com  #!165jtz
 0.0.0.0 xvnhuhfhh.com  #!165jtz
@@ -13478,6 +13616,7 @@
 0.0.0.0 fscm.com.tw  #!165jtz
 0.0.0.0 fsctrades.com  #!165jtz
 0.0.0.0 nfalfj.com  #!165jtz
+0.0.0.0 zliofli.com  #!165jtz
 0.0.0.0 smcxvkg.com  #!165jtz
 0.0.0.0 visit.rixin-inv.com  #!165jtz
 0.0.0.0 m.jdghct.top  #path=/app999 #!165jtz
@@ -13490,6 +13629,7 @@
 0.0.0.0 m.yfnvkr.top  #path=/app999 #!165jtz
 0.0.0.0 m.yqjaij.top  #path=/app999 #!165jtz
 0.0.0.0 m.zsvndx.top  #path=/app999 #!165jtz
+0.0.0.0 htps.cubaefw.buzz  #!165jtz
 0.0.0.0 htps.iamgren.buzz  #!165jtz
 0.0.0.0 htps.lucyhon.buzz  #!165jtz
 0.0.0.0 htps.sunercn.top  #!165jtz
@@ -13522,6 +13662,7 @@
 0.0.0.0 sih168.net  #!165jtz
 0.0.0.0 sw688.net  #!165jtz
 0.0.0.0 starisle.online  #!165jtz
+0.0.0.0 m.xc1388.com  #!165jtz
 0.0.0.0 khcxzinrtmshizf.com  #!165jtz
 0.0.0.0 changying.pw  #!165jtz
 0.0.0.0 celestialfin.com  #!165jtz
@@ -13638,6 +13779,7 @@
 0.0.0.0 pyrxc.com  #!165jtz
 0.0.0.0 tscapitals.com  #!165jtz
 0.0.0.0 tysoncapital.co  #!165jtz
+0.0.0.0 app.tscfjlb.com  #!165jtz
 0.0.0.0 isksksjfn.com  #!165jtz
 0.0.0.0 wausdy.xyz  #!165jtz
 0.0.0.0 xxhjhxx.com  #!165jtz
@@ -13662,6 +13804,7 @@
 0.0.0.0 rakoten.vip  #!165jtz
 0.0.0.0 leshangchao878.top  #!165jtz
 0.0.0.0 ledowsap.com  #!165jtz
+0.0.0.0 matwllsp.com  #!165jtz
 0.0.0.0 tswsphlo.com  #!165jtz
 0.0.0.0 happyonline-go.com  #!165jtz
 0.0.0.0 appilates.com  #!165jtz
@@ -13713,6 +13856,7 @@
 0.0.0.0 app.yonglivip.vip  #!165jtz
 0.0.0.0 app.yongliwins.vip  #!165jtz
 0.0.0.0 h5.donglivip.vip  #!165jtz
+0.0.0.0 hw.8lnb0g.com  #!165jtz
 0.0.0.0 m.wyn777.cc  #!165jtz
 0.0.0.0 m.wyney88.cc  #!165jtz
 0.0.0.0 m.wyney88.vip  #!165jtz
@@ -13754,6 +13898,7 @@
 0.0.0.0 app.fxxvyo.com  #!165jtz
 0.0.0.0 app.kligslhs.com  #!165jtz
 0.0.0.0 uthgnbjrif.com  #!165jtz
+0.0.0.0 xlovk.com  #!165jtz
 0.0.0.0 zldfjkn.com  #!165jtz
 0.0.0.0 app.kosklx.com  #!165jtz
 0.0.0.0 app.yiopqmu.com  #!165jtz
@@ -13768,6 +13913,7 @@
 0.0.0.0 m.diywm.top  #path=/hh7700 #!165jtz
 0.0.0.0 m.ytkgm.top  #path=/hh7700 #!165jtz
 0.0.0.0 m.ytplm.com  #path=/hh7700 #!165jtz
+0.0.0.0 onegomall.com  #!165jtz
 0.0.0.0 app.bdhjfbvv.com  #!165jtz
 0.0.0.0 app.gnfjkdhg.com  #!165jtz
 0.0.0.0 dnfbbih.com  #!165jtz
@@ -13809,6 +13955,7 @@
 0.0.0.0 app.cnoisxl.com  #!165jtz
 0.0.0.0 cjiisss.com  #!165jtz
 0.0.0.0 cklisie.com  #!165jtz
+0.0.0.0 cksiily.com  #!165jtz
 0.0.0.0 tsloirt.com  #!165jtz
 0.0.0.0 xvcnkmio.com  #!165jtz
 0.0.0.0 yiofg.com  #!165jtz
@@ -13820,6 +13967,7 @@
 0.0.0.0 hchnedvc.com  #!165jtz
 0.0.0.0 stgxbfdhvc.com  #!165jtz
 0.0.0.0 theasset.pw  #!165jtz
+0.0.0.0 bosirvn.com  #!165jtz
 0.0.0.0 tg888.in  #!165jtz
 0.0.0.0 tg888.ws  #!165jtz
 0.0.0.0 app.ikmlkp.top  #!165jtz
@@ -14336,6 +14484,7 @@
 0.0.0.0 dolo.nsexdaq.com  #!165jtz
 0.0.0.0 dolo.xensaqd.com  #!165jtz
 0.0.0.0 iqtiedu.com  #!165jtz
+0.0.0.0 jeffersongunclub.com  #!165jtz
 0.0.0.0 m.xeddq659.com  #!165jtz
 0.0.0.0 martyrouse.com  #!165jtz
 0.0.0.0 nasdaqtw.com  #!165jtz
@@ -14358,6 +14507,7 @@
 0.0.0.0 mlcrossltw.com  #!165jtz
 0.0.0.0 mlyptw.com  #!165jtz
 0.0.0.0 mdtrnics.com  #!165jtz
+0.0.0.0 app.fylmza.top  #path=/fylmza/ #!165jtz
 0.0.0.0 jywgzg.top  #path=/kjhek #!165jtz
 0.0.0.0 skazao.top  #path=/kjhek #!165jtz
 0.0.0.0 zpyrgs.top  #path=/kjhek #!165jtz
@@ -14502,6 +14652,7 @@
 0.0.0.0 shubiao.live  #!165jtz
 0.0.0.0 vtdklp.top  #path=/Pc/ #!165jtz
 0.0.0.0 newidea.solutions  #!165jtz
+0.0.0.0 vip.aka9ee.com  #path=/rk/room12 #!165jtz
 0.0.0.0 vip.ce993.com  #path=/rk/room5 #!165jtz
 0.0.0.0 gwyasset.com  #!165jtz
 0.0.0.0 app.huppsl.com  #!165jtz
@@ -14509,6 +14660,7 @@
 0.0.0.0 rthrfxc.com  #!165jtz
 0.0.0.0 weyutrgf.com  #!165jtz
 0.0.0.0 wuxydu.com  #!165jtz
+0.0.0.0 cxa.acceptll.online  #!165jtz
 0.0.0.0 money88.ezsoholl.shop  #!165jtz
 0.0.0.0 money88.ezsoholl.site  #!165jtz
 0.0.0.0 utc.ezsoholl.online  #!165jtz
@@ -14569,6 +14721,7 @@
 0.0.0.0 xinggui888.com  #!165jtz
 0.0.0.0 app.boisgoe.com  #!165jtz
 0.0.0.0 gdgyt.xyz  #!165jtz
+0.0.0.0 fragrancefoud.com  #!165jtz
 0.0.0.0 kpaxxxyn.com  #!165jtz
 0.0.0.0 mjszmw.com  #!165jtz
 0.0.0.0 hjrxxjkj.com  #!165jtz
@@ -14729,6 +14882,7 @@
 0.0.0.0 wzegold.com  #!165jtz
 0.0.0.0 wzgold.vip  #!165jtz
 0.0.0.0 wzigold.com  #!165jtz
+0.0.0.0 wzogold.com  #!165jtz
 0.0.0.0 wzsgold.com  #!165jtz
 0.0.0.0 wzg1.net  #!165jtz
 0.0.0.0 wzgolds.com  #!165jtz
@@ -14814,10 +14968,12 @@
 0.0.0.0 qy.hwzn.cc  #!165jtz
 0.0.0.0 huangchinwan.xingyun-shop.com  #path=/agent/index #!165jtz
 0.0.0.0 zn9.sales0-mall.com  #!165jtz
+0.0.0.0 app.cklsity.com  #!165jtz
 0.0.0.0 plsoef.xyz  #!165jtz
 0.0.0.0 app.dxxssa.com  #!165jtz
 0.0.0.0 app.sxcvos.com  #!165jtz
 0.0.0.0 jsiiief.com  #!165jtz
+0.0.0.0 xcbnvmud.xyz  #!165jtz
 0.0.0.0 app.yuying.biz  #!165jtz
 0.0.0.0 app.yuying.tv  #!165jtz
 0.0.0.0 yuying-app.com  #!165jtz
@@ -15117,6 +15273,7 @@
 0.0.0.0 m.hluws.top  #path=/930kapp #!165jtz
 0.0.0.0 t6699.cc  #!165jtz
 0.0.0.0 t1699.cc  #!165jtz
+0.0.0.0 gmo8650.ofa177.net  #!165jtz
 0.0.0.0 ofa77.net  #!165jtz
 0.0.0.0 ofa777.net  #!165jtz
 0.0.0.0 ofa277.net  #!165jtz
@@ -15180,6 +15337,7 @@
 0.0.0.0 jctaiwan.net  #!165jtz
 0.0.0.0 h5.minhongkejilive.com  #!165jtz
 0.0.0.0 albaba.yhj16688.com  #!165jtz
+0.0.0.0 ali96558.top  #!165jtz
 0.0.0.0 tmao219.xyz  #!165jtz
 0.0.0.0 albb8324.vip  #!165jtz
 0.0.0.0 youhui1688hxak.top  #!165jtz
@@ -15275,6 +15433,7 @@
 0.0.0.0 flyjanes.com  #!165jtz
 0.0.0.0 flywinss.com  #!165jtz
 0.0.0.0 flyxiang3.com  #!165jtz
+0.0.0.0 t9gl3dm.com  #!165jtz
 0.0.0.0 gj2006.com.cn  #!165jtz
 0.0.0.0 gj2008.com.cn  #!165jtz
 0.0.0.0 hkssq.cc  #!165jtz
@@ -15402,6 +15561,7 @@
 0.0.0.0 tssfx.online  #!165jtz
 0.0.0.0 tessd.online  #!165jtz
 0.0.0.0 gds.dinxin.xyz  #!165jtz
+0.0.0.0 gds.weixin8.fun  #!165jtz
 0.0.0.0 cgslce-asia.com  #!165jtz
 0.0.0.0 cskwins.com  #!165jtz
 0.0.0.0 cskkingss.com  #!165jtz
@@ -15615,3 +15775,23 @@
 0.0.0.0 afrileadw.shop  #!TWNICscams
 0.0.0.0 spaesveeni.shop  #!TWNICscams
 0.0.0.0 alexansher.shop  #!TWNICscams
+0.0.0.0 dvrtaaa.ink  #!TWNICscams
+0.0.0.0 ru.bhuies.store  #!TWNICscams
+0.0.0.0 srdat.top  #!TWNICscams
+0.0.0.0 seyor.top  #!TWNICscams
+0.0.0.0 boutique-shop4.com  #!TWNICscams
+0.0.0.0 gjngy.club  #!TWNICscams
+0.0.0.0 momoow.com  #!TWNICscams
+0.0.0.0 dvrtccc.ink  #!TWNICscams
+0.0.0.0 alcellman.shop  #!TWNICscams
+0.0.0.0 skitrse.com  #!TWNICscams
+0.0.0.0 tceuk.top  #!TWNICscams
+0.0.0.0 fniod.top  #!TWNICscams
+0.0.0.0 fcnez.top  #!TWNICscams
+0.0.0.0 gvisn.top  #!TWNICscams
+0.0.0.0 ortus.top  #!TWNICscams
+0.0.0.0 tw.herexpress.shop  #!TWNICscams
+0.0.0.0 nziud.top  #!TWNICscams
+0.0.0.0 tw.myrastone.shop  #!TWNICscams
+0.0.0.0 pocxs.top  #!TWNICscams
+0.0.0.0 hioxe.top  #!TWNICscams

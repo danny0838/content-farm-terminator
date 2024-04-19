@@ -1,7 +1,7 @@
 ! Title: Extra Content Farm Filters
 ! Description: Extra filter for content-farm-like sites, mostly aggregated from other sources.
 ! Expires: 3 days
-! Last modified: 2024-04-07T07:19:10+00:00
+! Last modified: 2024-04-19T07:25:18+00:00
 ! Homepage: https://danny0838.github.io/content-farm-terminator/
 ! Licence: MIT License
 ! Source: https://danny0838.github.io/content-farm-terminator/files/blocklist-ubo/extra-content-farms.txt
@@ -72539,6 +72539,7 @@ zzzzbj.com  #!gyli
 51xuexiaoyi.com  #!nonpnt
 521cc.com  #!nonpnt
 52sbl.cn  #!nonpnt
+54site.com  #!nonpnt
 5868685.com  #!nonpnt
 58hengqi.com  #!nonpnt
 61655.app  #!nonpnt
@@ -72623,6 +72624,9 @@ chiphell.com  #!nonpnt
 chiphells.com  #!nonpnt
 cjavapy.com  #!nonpnt
 cjkfd.top  #!nonpnt
+clashmac.com  #!nonpnt
+clashnode.xyz  #!nonpnt
+clashx.pro  #!nonpnt
 clubhouse-club.site  #!nonpnt
 cmen.cc  #!nonpnt
 cmm3d.com  #!nonpnt
@@ -72733,6 +72737,7 @@ howtopapa.com  #!nonpnt
 hpnews.online  #!nonpnt
 html.cn  #!nonpnt
 huahui08.com  #!nonpnt
+/^https?://(?:[\w-]+\.)*(?:huaweicloud\.com/zhishi/.*)$/$doc  #!nonpnt
 huiyikj.com  #!nonpnt
 hxkj.net  #!nonpnt
 hzhaochengji.com  #!nonpnt
@@ -72761,6 +72766,7 @@ jiqiren999.com  #!nonpnt
 jiyimusic.com  #!nonpnt
 jkzh.net  #!nonpnt
 jnw.cc  #!nonpnt
+jointxperts.com  #!nonpnt
 joyoshare.com  #!nonpnt
 jqgcs123.com  #!nonpnt
 /^https?://(?:[\w-]+\.)*(?:juejin\.cn/s/.*)$/$doc  #!nonpnt
@@ -72800,6 +72806,7 @@ macxf.com  #!nonpnt
 macz.com  #!nonpnt
 mango66.com  #!nonpnt
 mattkaydiary.com  #!nonpnt
+mb-intendance.com  #!nonpnt
 measart.com  #!nonpnt
 meetthebookworld.com  #!nonpnt
 mefj.com.cn  #!nonpnt
@@ -72895,6 +72902,7 @@ seafastcenter.com  #!nonpnt
 sefyc.com  #!nonpnt
 shejiben.com  #!nonpnt
 shihuishuo.com  #!nonpnt
+shijiyin.com  #!nonpnt
 shluqu.cn  #!nonpnt
 shopwtn.com  #!nonpnt
 shoujide.com  #!nonpnt
@@ -72983,6 +72991,7 @@ ux6.com  #!nonpnt
 vectormagic.com  #!nonpnt
 versus.com  #!nonpnt
 vimsky.com  #!nonpnt
+visit-kamnik.com  #!nonpnt
 vlexpert.com  #!nonpnt
 /^https?://(?:[\w-]+\.)*(?:volcengine\.com/theme/.*)$/$doc  #!nonpnt
 volvootofinans.com  #!nonpnt
@@ -73032,6 +73041,7 @@ xn----8sbnnlfdiifnglmc.xn--p1ai  #!nonpnt
 xnntw.com  #!nonpnt
 xujun.org  #!nonpnt
 xunihao.org  #!nonpnt
+xuv.cc  #!nonpnt
 xyjqxi.com  #!nonpnt
 xykjsqg.com  #!nonpnt
 xyttt.com  #!nonpnt
@@ -73110,6 +73120,7 @@ biggo.com.tw  #!nonpnt
 bjtmmh.com  #!nonpnt
 blacksprocket.com  #!nonpnt
 /^https?://(?:blog\.csdn\.net/holybin/.*)$/$doc  #!nonpnt
+/^https?://(?:blog\.csdn\.net/netgc/.*)$/$doc  #!nonpnt
 /^https?://(?:blog\.csdn\.net/weixin_35909238/.*)$/$doc  #!nonpnt
 bloomingtonventures.com  #!nonpnt
 /^https?://(?:book\.jd\.com/publish/Search\?.*)$/$doc  #!nonpnt
@@ -73392,6 +73403,7 @@ chhh.com  #!nonpnt
 chinavolcan.com  #!nonpnt
 chinawenwang.com  #!nonpnt
 cmuswe.com  #!nonpnt
+/^https?://(?:www\.cnblogs\.com/sysin/.*)$/$doc  #!nonpnt
 cnqlk.com  #!nonpnt
 cnshhbs.com  #!nonpnt
 codegrepper.com  #!nonpnt
