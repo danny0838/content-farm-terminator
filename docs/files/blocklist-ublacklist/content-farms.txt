@@ -1,6 +1,6 @@
 # Title: Content Farm Filters
 # Description: Filter for general content farms, mostly in Chinese.
-# Last modified: 2024-04-19T07:25:18+00:00
+# Last modified: 2024-04-25T13:39:36+00:00
 # Homepage: https://danny0838.github.io/content-farm-terminator/
 # Licence: MIT License
 # Source: https://danny0838.github.io/content-farm-terminator/files/blocklist-ublacklist/content-farms.txt
@@ -13292,6 +13292,7 @@
 *://*.easyrenti.pl/*  #!spamdex
 *://*.ebiznes24.pl/*  #!spamdex
 *://*.ecarsdm.pl/*  #!spamdex
+*://*.ecc-belgium.eu/*  #!spamdex
 *://*.eclubpolito.it/*  #!spamdex
 *://*.ecm-uniecampus.it/*  #!spamdex
 *://*.eco-ricicli-filiere.it/*  #!spamdex
@@ -13793,6 +13794,7 @@
 *://*.herzogen-cup.de/*  #!spamdex
 *://*.hetkompasteraar.nl/*  #!spamdex
 *://*.heva-lauenfoerde.de/*  #!spamdex
+*://*.hf-plotter-schmiede.de/*  #!spamdex
 *://*.hifi-platform.eu/*  #!spamdex
 *://*.highlevelbody.fr/*  #!spamdex
 *://*.highwheels.it/*  #!spamdex
@@ -15808,6 +15810,7 @@
 *://*.wojartrans.pl/*  #!spamdex
 *://*.wollewelt-online.de/*  #!spamdex
 *://*.wollzauber-dortmund.de/*  #!spamdex
+*://*.wolverineschuhes.de/*  #!spamdex
 *://*.womanslife.nl/*  #!spamdex
 *://*.womenlookingharmonydating.eu/*  #!spamdex
 *://*.woordenvanliefde.nl/*  #!spamdex
