@@ -1,6 +1,6 @@
 # Title: Extra Content Farm Filters
 # Description: Extra filter for content-farm-like sites, mostly aggregated from other sources.
-# Last modified: 2024-04-19T07:25:18+00:00
+# Last modified: 2024-05-07T16:00:47+00:00
 # Homepage: https://danny0838.github.io/content-farm-terminator/
 # Licence: MIT License
 # Source: https://danny0838.github.io/content-farm-terminator/files/blocklist-ublacklist/extra-content-farms.txt
@@ -72666,6 +72666,7 @@
 *://*.duewriting.com/*  #!nonpnt
 *://*.duotin.com/*  #!nonpnt
 *://*.dyecn.com/*  #!nonpnt
+*://*.dz-x.net/*  #!nonpnt
 *://*.eastwriting.com/*  #!nonpnt
 *://*.edge66.com/*  #!nonpnt
 *://*.edianyun.com/*  #!nonpnt
@@ -72674,7 +72675,9 @@
 *://*.eeyyoo.com.cn/*  #!nonpnt
 *://*.enkj.com/*  #!nonpnt
 *://*.enmsb.com/*  #!nonpnt
+*://*.eolink.com/*  #!nonpnt
 *://*.eue5xbp.site/*  #!nonpnt
+*://*.example-a.com/*  #!nonpnt
 *://*.exotips.com/*  #!nonpnt
 *://*.express.co.uk/*  #!nonpnt
 *://*.extrabux.com/*  #!nonpnt
@@ -72696,6 +72699,7 @@
 *://*.gatelodgekinross.com/*  #!nonpnt
 *://*.gcyfd.shop/*  #!nonpnt
 *://*.gdsdwan.com/*  #!nonpnt
+*://*.geekerline.com/*  #!nonpnt
 *://*.geren-jianli.org/*  #!nonpnt
 *://*.getdroidtips.com/*  #!nonpnt
 *://*.gg4ss.com/*  #!nonpnt
@@ -72785,6 +72789,7 @@
 *://*.ksyzakq.com/*  #!nonpnt
 *://*.kunyuyuan.com/*  #!nonpnt
 *://*.lacomparacion.com/*  #!nonpnt
+*://*.lcydcp.com/*  #!nonpnt
 *://*.lehuotuan.com/*  #!nonpnt
 *://*.leixue.com/*  #!nonpnt
 *://*.lete.com/kdwenda/*  #!nonpnt
@@ -72984,6 +72989,7 @@
 *://*.ultimate-communications.com/*  #!nonpnt
 *://*.unansea.com/*  #!nonpnt
 *://*.uosohyc.site/*  #!nonpnt
+*://*.upx8.com/*  #!nonpnt
 *://*.urtasker.com/*  #!nonpnt
 *://*.ux6.com/*  #!nonpnt
 *://*.v2ex.com/amp/*  #!nonpnt
@@ -73015,6 +73021,7 @@
 *://*.wenbf.com/*  #!nonpnt
 *://*.westack.live/*  #!nonpnt
 *://*.whoisua.com/*  #!nonpnt
+*://*.widede.com/*  #!nonpnt
 *://*.wikicell.org/*  #!nonpnt
 *://*.win7zhijia.cn/*  #!nonpnt
 *://*.windows101tricks.com/*  #!nonpnt
