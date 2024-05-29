@@ -1,6 +1,6 @@
 # Title: Content Farm Filters
 # Description: Filter for general content farms, mostly in Chinese.
-# Last modified: 2024-05-18T03:53:27+00:00
+# Last modified: 2024-05-29T14:05:33+00:00
 # Homepage: https://danny0838.github.io/content-farm-terminator/
 # Licence: MIT License
 # Source: https://danny0838.github.io/content-farm-terminator/files/blocklist-ublacklist/content-farms.txt
@@ -15308,6 +15308,7 @@
 *://*.slawno-noclegi.pl/*  #!spamdex
 *://*.sld-duesseldorf.de/*  #!spamdex
 *://*.slest2-0.eu/*  #!spamdex
+*://*.slubnewezwanie.pl/*  #!spamdex
 *://*.smarek.pl/*  #!spamdex
 *://*.smartestore.it/*  #!spamdex
 *://*.smartintienda.es/*  #!spamdex
@@ -15584,6 +15585,7 @@
 *://*.torsten-hochmuth.de/*  #!spamdex
 *://*.tourismtrends.eu/*  #!spamdex
 *://*.tousavecalex.fr/*  #!spamdex
+*://*.toystars.pl/*  #!spamdex
 *://*.tpesolutions.fr/*  #!spamdex
 *://*.tpve.fr/*  #!spamdex
 *://*.trabocchifeltrinoeuropa.it/*  #!spamdex
