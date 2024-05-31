@@ -35,7 +35,6 @@ jobs:
 
       - name: Aggregate and build
         run: |
-          rm -rf src/aggregations &&
           python scripts/build.py auto aggregate &&
           python scripts/build.py auto
 
