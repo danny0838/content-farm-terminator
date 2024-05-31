@@ -1,6 +1,6 @@
 # Title: Content Farm Filters
 # Description: Filter for general content farms, mostly in Chinese.
-# Last modified: 2024-05-29T14:18:37+00:00
+# Last modified: 2024-05-31T16:28:25+00:00
 # Homepage: https://danny0838.github.io/content-farm-terminator/
 # Licence: MIT License
 # Source: https://danny0838.github.io/content-farm-terminator/files/blocklist-ublacklist/content-farms.txt
@@ -14152,6 +14152,7 @@
 *://*.la-margot.it/*  #!spamdex
 *://*.la-roulette.it/*  #!spamdex
 *://*.la-vitrine.eu/*  #!spamdex
+*://*.laboiteacoccs.fr/*  #!spamdex
 *://*.laboratrieste.it/*  #!spamdex
 *://*.laboutiquedepaul.fr/*  #!spamdex
 *://*.labuenavida40.fr/*  #!spamdex
@@ -14359,6 +14360,7 @@
 *://*.mahnu.fr/*  #!spamdex
 *://*.mainradweg-service.de/*  #!spamdex
 *://*.maisondescopeaux.fr/*  #!spamdex
+*://*.majao.pl/*  #!spamdex
 *://*.makeitup.es/*  #!spamdex
 *://*.malagawellness.es/*  #!spamdex
 *://*.malenews.nl/*  #!spamdex
@@ -14656,6 +14658,7 @@
 *://*.nlpwetenschap.nl/*  #!spamdex
 *://*.noahboats.de/*  #!spamdex
 *://*.nochefcookin.nl/*  #!spamdex
+*://*.noclegi-jeziora-lasy.pl/*  #!spamdex
 *://*.nokostudio.pl/*  #!spamdex
 *://*.nonsolorologi.eu/*  #!spamdex
 *://*.noorderflow.nl/*  #!spamdex

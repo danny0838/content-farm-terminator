@@ -1,7 +1,7 @@
 ! Title: Extra Content Farm Filters
 ! Description: Extra filter for content-farm-like sites, mostly aggregated from other sources.
 ! Expires: 3 days
-! Last modified: 2024-05-18T03:26:21+00:00
+! Last modified: 2024-05-31T16:28:25+00:00
 ! Homepage: https://danny0838.github.io/content-farm-terminator/
 ! Licence: MIT License
 ! Source: https://danny0838.github.io/content-farm-terminator/files/blocklist-ubo/extra-content-farms.txt
@@ -72659,6 +72659,7 @@ devicetests.com  #!nonpnt
 digidash.in  #!nonpnt
 dkfp88.cn  #!nonpnt
 /^https?://(?:[\w-]+\.)*(?:dongchedi\.com/tag/.*)$/$doc  #!nonpnt
+doubao.com  #!nonpnt
 /^https?://(?:[\w-]+\.)*(?:douyin\.com/search/.*)$/$doc  #!nonpnt
 /^https?://(?:[\w-]+\.)*(?:douyin\.com/zhuanti/.*)$/$doc  #!nonpnt
 driedpeel.com  #!nonpnt
