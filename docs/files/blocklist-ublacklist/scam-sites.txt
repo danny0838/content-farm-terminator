@@ -1,7 +1,7 @@
 # Title: Scam Sites Filters
 # Description: Filter for scam sites. Mostly aggregrated from governmental sources, such as Ministry
 #     of Digital Affairs and National Police Agency of Taiwan.
-# Last modified: 2024-06-02T19:50:13+00:00
+# Last modified: 2024-06-09T19:50:16+00:00
 # Homepage: https://danny0838.github.io/content-farm-terminator/
 # Licence: MIT License
 # Source: https://danny0838.github.io/content-farm-terminator/files/blocklist-ublacklist/scam-sites.txt
@@ -17489,9 +17489,16 @@
 *://*.cniusrt.com/*  #!TWNICscams
 *://*.dvrtddd.ink/*  #!TWNICscams
 *://*.dvrtbbb.ink/*  #!TWNICscams
+*://*.linegames.org/*  #!TWNICscams
 *://*.mmm-tw.com/*  #!TWNICscams
 *://*.maisonmargiela.com.tw/*  #!TWNICscams
 *://*.diptyqueofficial.com/*  #!TWNICscams
 *://*.dvrteee.ink/*  #!TWNICscams
 *://*.rsnvc.top/*  #!TWNICscams
 *://*.diptyqueshop.com.tw/*  #!TWNICscams
+*://*.zrtw.net/*  #!TWNICscams
+*://*.dvrthhh.ink/*  #!TWNICscams
+*://*.eisda.top/*  #!TWNICscams
+*://*.dfjhdxfjish.site/*  #!TWNICscams
+*://*.cosru.top/*  #!TWNICscams
+*://*.dvrtfff.ink/*  #!TWNICscams
