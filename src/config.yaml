@@ -219,11 +219,6 @@ aggregate:
     source: https://raw.githubusercontent.com/nonPointer/uBlacklist-Subscription/master/blacklist.txt
     dest: src/aggregations/extra-content-farms/non-pointer.txt
     type: ublacklist
-  - name: diveng
-    homepage: https://github.com/DivineEngine/uBlacklist
-    source: https://raw.githubusercontent.com/DivineEngine/uBlacklist/master/blacklist.txt
-    dest: src/aggregations/extra-content-farms/diveng.txt
-    type: ublacklist
   - name: yesil
     homepage: https://github.com/YeSilin/uBlacklist
     source: https://raw.githubusercontent.com/YeSilin/uBlacklist/master/list.txt
