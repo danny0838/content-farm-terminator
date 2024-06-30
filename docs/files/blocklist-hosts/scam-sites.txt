@@ -1,7 +1,7 @@
 # Title: Scam Sites Filters
 # Description: Filter for scam sites. Mostly aggregrated from governmental sources, such as Ministry
 #     of Digital Affairs and National Police Agency of Taiwan.
-# Last modified: 2024-06-29T14:57:24+00:00
+# Last modified: 2024-06-30T14:36:29+00:00
 # Homepage: https://danny0838.github.io/content-farm-terminator/
 # Licence: MIT License
 # Source: https://danny0838.github.io/content-farm-terminator/files/blocklist-hosts/scam-sites.txt
@@ -574,7 +574,6 @@
 0.0.0.0 dsfstyle.com  #!cffc
 0.0.0.0 dssahyu.com  #!cffc
 0.0.0.0 dthome.tw  #!cffc
-0.0.0.0 duckdns.org  #!cffc
 0.0.0.0 duhtz.com  #!cffc
 0.0.0.0 dultsar.com  #!cffc
 0.0.0.0 duswx.com  #!cffc
@@ -5461,6 +5460,7 @@
 0.0.0.0 crossglobalshop.xyz  #!165jtz
 0.0.0.0 globalshop-ping.com  #!165jtz
 0.0.0.0 iacvtrp.top  #!165jtz
+0.0.0.0 cr1688.duckdns.org  #!165jtz
 0.0.0.0 crypto.servep2p.com  #!165jtz
 0.0.0.0 mhneome.crscapital.top  #!165jtz
 0.0.0.0 bitipcvip.bitipc.com  #!165jtz
