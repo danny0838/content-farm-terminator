@@ -1,7 +1,7 @@
 # Title: Scam Sites Filters
 # Description: Filter for scam sites. Mostly aggregrated from governmental sources, such as Ministry
 #     of Digital Affairs and National Police Agency of Taiwan.
-# Last modified: 2024-06-30T19:50:20+00:00
+# Last modified: 2024-07-07T19:50:04+00:00
 # Homepage: https://danny0838.github.io/content-farm-terminator/
 # Licence: MIT License
 # Source: https://danny0838.github.io/content-farm-terminator/files/blocklist-hosts/scam-sites.txt
@@ -18394,3 +18394,18 @@
 0.0.0.0 dfeq.store  #!TWNICscams
 0.0.0.0 wdgp.store  #!TWNICscams
 0.0.0.0 setw.store  #!TWNICscams
+0.0.0.0 gbol.store  #!TWNICscams
+0.0.0.0 mtsue.top  #!TWNICscams
+0.0.0.0 firno.top  #!TWNICscams
+0.0.0.0 joniro.myfreesites.net  #!TWNICscams
+0.0.0.0 hska.store  #!TWNICscams
+0.0.0.0 24newsudn.com  #!TWNICscams
+0.0.0.0 tradeneupro.co  #!TWNICscams
+0.0.0.0 ggfr.store  #!TWNICscams
+0.0.0.0 qioim.shop  #!TWNICscams
+0.0.0.0 byredo.tw  #!TWNICscams
+0.0.0.0 mm-replica.com.tw  #!TWNICscams
+0.0.0.0 qsyt.store  #!TWNICscams
+0.0.0.0 beauchamp.top  #!TWNICscams
+0.0.0.0 phipps.lol  #!TWNICscams
+0.0.0.0 fontenot.lol  #!TWNICscams
