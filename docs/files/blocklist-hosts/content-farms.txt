@@ -1,6 +1,6 @@
 # Title: Content Farm Filters
 # Description: Filter for general content farms, mostly in Chinese.
-# Last modified: 2024-07-18T16:11:23+00:00
+# Last modified: 2024-07-18T16:32:49+00:00
 # Homepage: https://danny0838.github.io/content-farm-terminator/
 # Licence: MIT License
 # Source: https://danny0838.github.io/content-farm-terminator/files/blocklist-hosts/content-farms.txt
@@ -12201,6 +12201,13 @@
 0.0.0.0 jkwshk.tv
 0.0.0.0 babyystory.com
 0.0.0.0 toopartner.com  #redirects to kknsays.com
+0.0.0.0 onegreatlifestyle.com
+0.0.0.0 12luckyhome.com
+0.0.0.0 daapower.com
+0.0.0.0 parentups.com  #redirects to daapower.com
+0.0.0.0 i-besthome.com  #redirects to dsawjk.com
+0.0.0.0 with-summer.com  #redirects to dsawjk.com
+0.0.0.0 goodtime-life.com  #redirects to niice-woker.com
 # aggregation: #!cxyzjd
 # source: https://raw.githubusercontent.com/wdmpa/content-farm-list/main/domains/spam/cxyzjd.txt
 # homepage: https://github.com/wdmpa/content-farm-list

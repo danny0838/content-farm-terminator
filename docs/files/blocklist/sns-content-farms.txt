@@ -2,7 +2,7 @@
   # Description: Filter for content-farm-like or related social network service (SNS) URLs, mostly in Chinese.
   #     This may not work well for all cases as many things cannot be fully determined by URL.
   #     This list is mostly regex-based and may have a negative effect on performance.
-  # Last modified: 2024-07-14T19:50:04+00:00
+  # Last modified: 2024-07-18T16:32:49+00:00
   # Homepage: https://danny0838.github.io/content-farm-terminator/
   # Licence: MIT License
   # Source: https://danny0838.github.io/content-farm-terminator/files/blocklist/sns-content-farms.txt
@@ -1725,3 +1725,16 @@
 /^https?://(?:(?:[\w-]+\.)?facebook\.com|fb\.(?:com|me))/(?:(?:(?:pg/)?(?:[\w%]+-)?|profile/|people/[\w%-]+/|groups/[0-9a-z.]+/user/)(?=\d+\b)|(?:profile|permalink|story)\.php\?(?:[^&#]*&)*?id=(?=\d+(?:[&#]|$)))(?:100085268701904)/
 /^https?://(?:(?:[\w-]+\.)?facebook\.com|fb\.(?:com|me))/(?:(?:(?:pg/)?(?:[\w%]+-)?|profile/|people/[\w%-]+/|groups/[0-9a-z.]+/user/)(?=\d+\b)|(?:profile|permalink|story)\.php\?(?:[^&#]*&)*?id=(?=\d+(?:[&#]|$)))(?:100095297290417)/
 /^https?://(?:(?:[\w-]+\.)?facebook\.com|fb\.(?:com|me))/(?!\w+\.php\?)(?:pg/)?(?:sbocinema)(?=[/?#]|$)/
+/^https?://(?:(?:[\w-]+\.)?facebook\.com|fb\.(?:com|me))/(?!\w+\.php\?)(?:pg/)?(?:alvnicelife)(?=[/?#]|$)/
+/^https?://(?:(?:[\w-]+\.)?facebook\.com|fb\.(?:com|me))/(?!\w+\.php\?)(?:pg/)?(?:yinyuekong)(?=[/?#]|$)/
+/^https?://(?:(?:[\w-]+\.)?facebook\.com|fb\.(?:com|me))/(?:(?:(?:pg/)?(?:[\w%]+-)?|profile/|people/[\w%-]+/|groups/[0-9a-z.]+/user/)(?=\d+\b)|(?:profile|permalink|story)\.php\?(?:[^&#]*&)*?id=(?=\d+(?:[&#]|$)))(?:100093199480704)/
+/^https?://(?:(?:[\w-]+\.)?facebook\.com|fb\.(?:com|me))/(?:(?:(?:pg/)?(?:[\w%]+-)?|profile/|people/[\w%-]+/|groups/[0-9a-z.]+/user/)(?=\d+\b)|(?:profile|permalink|story)\.php\?(?:[^&#]*&)*?id=(?=\d+(?:[&#]|$)))(?:100082673341522)/
+/^https?://(?:(?:[\w-]+\.)?facebook\.com|fb\.(?:com|me))/(?:(?:(?:pg/)?(?:[\w%]+-)?|profile/|people/[\w%-]+/|groups/[0-9a-z.]+/user/)(?=\d+\b)|(?:profile|permalink|story)\.php\?(?:[^&#]*&)*?id=(?=\d+(?:[&#]|$)))(?:100083760460762)/
+/^https?://(?:(?:[\w-]+\.)?facebook\.com|fb\.(?:com|me))/(?:(?:(?:pg/)?(?:[\w%]+-)?|profile/|people/[\w%-]+/|groups/[0-9a-z.]+/user/)(?=\d+\b)|(?:profile|permalink|story)\.php\?(?:[^&#]*&)*?id=(?=\d+(?:[&#]|$)))(?:100092678455046)/
+/^https?://(?:(?:[\w-]+\.)?facebook\.com|fb\.(?:com|me))/(?:(?:(?:pg/)?(?:[\w%]+-)?|profile/|people/[\w%-]+/|groups/[0-9a-z.]+/user/)(?=\d+\b)|(?:profile|permalink|story)\.php\?(?:[^&#]*&)*?id=(?=\d+(?:[&#]|$)))(?:100064105480277)/
+/^https?://(?:(?:[\w-]+\.)?facebook\.com|fb\.(?:com|me))/(?:(?:(?:pg/)?(?:[\w%]+-)?|profile/|people/[\w%-]+/|groups/[0-9a-z.]+/user/)(?=\d+\b)|(?:profile|permalink|story)\.php\?(?:[^&#]*&)*?id=(?=\d+(?:[&#]|$)))(?:100086485098000)/
+/^https?://(?:(?:[\w-]+\.)?facebook\.com|fb\.(?:com|me))/(?!\w+\.php\?)(?:pg/)?(?:huanlemj18)(?=[/?#]|$)/
+/^https?://(?:(?:[\w-]+\.)?facebook\.com|fb\.(?:com|me))/(?:(?:(?:pg/)?(?:[\w%]+-)?|profile/|people/[\w%-]+/|groups/[0-9a-z.]+/user/)(?=\d+\b)|(?:profile|permalink|story)\.php\?(?:[^&#]*&)*?id=(?=\d+(?:[&#]|$)))(?:100092872190165)/
+/^https?://(?:(?:[\w-]+\.)?facebook\.com|fb\.(?:com|me))/(?!\w+\.php\?)(?:pg/)?(?:funshow01)(?=[/?#]|$)/
+/^https?://(?:(?:[\w-]+\.)?facebook\.com|fb\.(?:com|me))/(?!\w+\.php\?)(?:pg/)?(?:91rich)(?=[/?#]|$)/
+/^https?://(?:(?:[\w-]+\.)?facebook\.com|fb\.(?:com|me))/(?:(?:(?:pg/)?(?:[\w%]+-)?|profile/|people/[\w%-]+/|groups/[0-9a-z.]+/user/)(?=\d+\b)|(?:profile|permalink|story)\.php\?(?:[^&#]*&)*?id=(?=\d+(?:[&#]|$)))(?:100084627434353)/
