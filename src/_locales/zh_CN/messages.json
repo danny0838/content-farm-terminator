@@ -4,7 +4,7 @@
   },
 
   "appDesc": {
-    "message": "标示内容农场链接，防止误入内容农场，并封锁内容农场的广告与恶意程序。"
+    "message": "标示内容农场链接，防止误入内容农场，并屏蔽内容农场的广告与恶意程序。"
   },
 
   "blockTab": {
@@ -106,7 +106,7 @@
   },
 
   "details": {
-    "message": "搞错了？调整封锁名单",
+    "message": "搞错了？调整屏蔽名单",
     "description": "Label of details link in blocked page"
   },
 
@@ -152,7 +152,7 @@
   },
 
   "unblockBtnPrompt": {
-    "message": "内容农场的资讯大多缺乏查证、质量参差不齐、且可能含有不良广告或恶意程序，进入前请三思。\n• 如果想调查页面内容，可使用 [查看] 功能，以免受到恶意程序攻击，且能避免站主得到广告收益。解锁只建议用于 [查看] 功能无法正常运作的网站，但这类网站多需脚本载入，有恶意程序的可能性高，请考虑用独立的浏览器、帐户、容器分页、或无痕视窗浏览，以降低风险。\n• 如果认为此站台不是内容农场，或基于其他理由不想继续封锁，可将网址从黑名单移除或加入灰、白名单。\n\n若还是确定要暂时解锁此页面，请输入验证码：$key$",
+    "message": "内容农场的信息大多缺乏查证、质量参差不齐、且可能含有不良广告或恶意程序，进入前请三思。\n• 如果想调查页面内容，可使用 [查看] 功能，以免受到恶意程序攻击，且能避免站主得到广告收益。解锁只建议用于 [查看] 功能无法正常运作的网站，但这类网站多需脚本加载，有恶意程序的可能性高，请考虑用独立的浏览器、帐户、容器分页、或无痕窗口浏览，以降低风险。\n• 如果认为此站台不是内容农场，或基于其他理由不想继续屏蔽，可将网址从黑名单移除或加入灰、白名单。\n\n若还是确定要暂时解锁此页面，请输入验证码：$key$",
     "description": "Prompt message of unblock button in blocked page",
     "placeholders": {
       "key": {
@@ -168,22 +168,22 @@
   },
 
   "infoUrl": {
-    "message": "最近访问:",
+    "message": "最近造访:",
     "description": "Label of the recently visited URL in options page"
   },
 
   "infoUrlRegex": {
-    "message": "最近访问 (regex):",
+    "message": "最近造访 (regex):",
     "description": "Label of the regex of the recently visited URL in options page"
   },
 
   "infoUrlBlocked": {
-    "message": "最近封锁:",
+    "message": "最近屏蔽:",
     "description": "Label of the recently blocked URL in options page"
   },
 
   "infoUrlBlockedRegex": {
-    "message": "最近封锁 (regex):",
+    "message": "最近屏蔽 (regex):",
     "description": "Label of the regex of the recently blocked URL in options page"
   },
 
@@ -213,7 +213,7 @@
   },
 
   "webBlacklistsDesc": {
-    "message": "网络黑名单的网址。每行一个，空格及以后的字符皆忽略，系统会自动导入黑名单并定期更新。",
+    "message": "网络黑名单的网址。每行一个，空白及之后字符皆忽略。系统会自动导入黑名单并定期更新。",
     "description": "Description of webBlacklists field in options page"
   },
 
@@ -223,7 +223,7 @@
   },
 
   "webBlacklistsLinkView": {
-    "message": "查看已载入的黑名单",
+    "message": "查看已加载的黑名单",
     "description": "Label of the link to all blacklists in options page"
   },
 
@@ -253,7 +253,7 @@
   },
 
   "userWhitelistDesc": {
-    "message": "想解除屏蔽的网站名单。这些网站即使被列入黑名单也不会被屏蔽。每行一个。输入网址会自动修正。",
+    "message": "不想屏蔽的网站名单。这些网站即使被列入黑名单也不会被屏蔽。每行一个。输入网址会自动修正。",
     "description": "Description of userWhitelist field in options page"
   },
 
@@ -283,7 +283,7 @@
   },
 
   "transformRulesDesc": {
-    "message": "用右键选单或在自订黑、白名单加入网址时，会套用这些规则修改。",
+    "message": "用右键菜单或在自订黑、白名单加入网址时，会套用这些规则修改。",
     "description": "Description of transformRules field in options page"
   },
 
@@ -318,7 +318,7 @@
   },
 
   "showUnblockButton": {
-    "message": "在封锁页面显示解锁按钮",
+    "message": "在屏蔽页面显示解锁按钮",
     "description": "Label of showUnblockButton in options page"
   },
 
@@ -348,7 +348,7 @@
   },
 
   "resetConfirm": {
-    "message": "这会把所有选项还原回默认值，目前的设置将永久遗失！\n\n确定要继续吗？",
+    "message": "这会把所有选项还原回默认值，目前的设置值将永久遗失！\n\n确定要继续吗？",
     "description": "Text of confirmination of reset button in options page"
   },
 
@@ -358,7 +358,7 @@
   },
 
   "helpSyntaxContent": {
-    "message": "1. 标准屏蔽规则\n\n《终结内容农场》的标准屏蔽规则是以网域为主，并延及所有子网域。例如以下规则：\n\n    example.com\n\n会作用于以下网页：\n\n    http://example.com\n    https://example.com\n    http://example.com:8000\n    http://user:password@example.com\n    http://example.com/\n    http://example.com/somepage.html\n    http://example.com/subdir/somepage.html\n    http://example.com?id=123\n    http://example.com#main\n\n及 www 型网域中的网页：\n\n    http://www.example.com\n\n及所有子网域中的网页：\n\n    http://sub.example.com\n    http://extra.sub.example.com\n\n而不会作用于以下网页：\n\n    http://nonexample.com\n    http://example.com.tw\n\n标准屏蔽规则也可以指定 IPv4 或 IPv6。如：\n\n    192.168.0.1\n    [::ffff:c0a8:1]\n\n\n2. 通配符\n\n标准屏蔽规则可使用通配符“*”表示任意零或多个字元。例如以下规则：\n\n    example.com.*\n\n会作用于以下网页：\n\n    http://example.com.tw\n    http://example.com.cn\n    http://example.com.extra.tw\n\n指定 IPv4 或 IPv6 时不可使用通配符。\n\n\n3. 注解\n\n每一条规则在空白以后的字元会被忽略，可用于补充说明。例如以下规则：\n\n    example.com 我是说明文字\n\n的作用和以下规则完全相同：\n\n    example.com\n\n\n4. 正则表达式\n\n除了标准屏蔽规则以外，也可以使用正则表达式 (RegExp) 比对复杂的网址，写法是在规则的前后加上“/”。例如：\n\n    /^https?://example\\.com/subdir(?=$|[/?#])/ 我是正则表达式规则\n\n请注意正则表达式规则是比对整个网址，不是比对域名，也不会延及 www 型网域与子网域。此外，如上例所示，“/”不须做转义处理。\n\n正则表达式规则可在尾部的「/」之后加上修饰符。例如：\n\n    /^https?://example\\\\.com/FOO(?=$|[/?#])/i 忽略大小写\n\n\n5. 自动修正\n\n《终结内容农场》会自动修正输入的规则。标准屏蔽规则会自动修正为对应的域名。例如输入以下规则：\n\n    www.example.com\n    http://example.com\n    example.com:8000\n    http://example.com/somepage.html\n\n都会被自动修正为以下规则：\n\n    example.com\n\n国际化域名会自动修正为编码形式。例如输入以下规则：\n\n    中文.tw\n\n会被自动修正为以下规则：\n\n    xn--fiq228c.tw\n\n如果输入的标准屏蔽规则无法转换为有效的域名，或输入的正则表达式规则有语法错误，则会被清空。\n\n如有设定网址转换规则，则在输入网址时会先套用网址转换规则，再执行前述的自动修正。\n\n网络黑名单不会自动修正，语法错误的规则会被忽略。",
+    "message": "1. 标准屏蔽规则\n\n《终结内容农场》的标准屏蔽规则是以网域为主，并延及所有子网域。例如以下规则：\n\n    example.com\n\n会作用于以下网页：\n\n    http://example.com\n    https://example.com\n    http://example.com:8000\n    http://user:password@example.com\n    http://example.com/\n    http://example.com/somepage.html\n    http://example.com/subdir/somepage.html\n    http://example.com?id=123\n    http://example.com#main\n\n及 www 型网域中的网页：\n\n    http://www.example.com\n\n及所有子网域中的网页：\n\n    http://sub.example.com\n    http://extra.sub.example.com\n\n而不会作用于以下网页：\n\n    http://nonexample.com\n    http://example.com.tw\n\n标准屏蔽规则也可以指定 IPv4 或 IPv6。如：\n\n    192.168.0.1\n    [::ffff:c0a8:1]\n\n\n2. 通配符\n\n标准屏蔽规则可使用通配符“*”表示任意零或多个字元。例如以下规则：\n\n    example.com.*\n\n会作用于以下网页：\n\n    http://example.com.tw\n    http://example.com.cn\n    http://example.com.extra.tw\n\n指定 IPv4 或 IPv6 时不可使用通配符。\n\n\n3. 注解\n\n每一条规则在空白以后的字元会被忽略，可用于补充说明。例如以下规则：\n\n    example.com 我是说明文字\n\n的作用和以下规则完全相同：\n\n    example.com\n\n\n4. 正则表达式\n\n除了标准屏蔽规则以外，也可以使用正则表达式 (RegExp) 比对复杂的网址，写法是在规则的前后加上“/”。例如：\n\n    /^https?://example\\.com/subdir(?=$|[/?#])/ 我是正则表达式规则\n\n请注意正则表达式规则是比对整个网址，不是比对域名，也不会延及 www 型网域与子网域。此外，如上例所示，“/”不须做转义处理。\n\n正则表达式规则可在尾部的「/」之后加上修饰符。例如：\n\n    /^https?://example\\\\.com/FOO(?=$|[/?#])/i 忽略大小写\n\n\n5. 自动修正\n\n《终结内容农场》会自动修正输入的规则。标准屏蔽规则会自动修正为对应的域名。例如输入以下规则：\n\n    www.example.com\n    http://example.com\n    example.com:8000\n    http://example.com/somepage.html\n\n都会被自动修正为以下规则：\n\n    example.com\n\n国际化域名会自动修正为编码形式。例如输入以下规则：\n\n    中文.tw\n\n会被自动修正为以下规则：\n\n    xn--fiq228c.tw\n\n如果输入的标准屏蔽规则无法转换为有效的域名，或输入的正则表达式规则有语法错误，则会被清空。\n\n如有设定网址转换规则，则在输入网址时会先套用网址转换规则，再运行前述的自动修正。\n\n网络黑名单不会自动修正，语法错误的规则会被忽略。",
     "description": "Content of the syntax help page"
   },
 
@@ -368,12 +368,12 @@
   },
 
   "helpTransformSyntaxContent": {
-    "message": "网址转换规则是每行一条规则，每一条规则的格式如下：\n\n    <寻找文本> <替换文本> <注解文字>\n\n<寻找文本> 须为有效的正则表达式 (RegExp)，头尾须为 \"/\"。<替换文本> 可以是任意文字，并可使用 \"$$\" 带入特殊内容：\n- \"$$$\": 带入 \"$$\" 符号。\n- \"$$n\": 带入 <寻找文本> 第 n 个括号匹配的字串（n 为正整数）。\n- \"$$&\": 带入与 <寻找文本> 匹配的字串。\n- \"$$`\": 带入与 <寻找文本> 匹配的字串前面的部分。\n- \"$$'\": 带入与 <寻找文本> 匹配的字串后面的部分。\n- 对于 \"$$n\"、\"$$&\"、\"$$`\"、\"$$'\"，如果 <替换文本> 是正则表达式规则（头尾皆为 \"/\"），带入的内容会自动做脱义处理。\n\n转换网址时，会由前往后逐一寻找及替换，找到符合的 <寻找文本> 就会把网址转换为 <替换文本> 并中止后续处理。若没有符合的，则不做任何转换。\n\n例如以下规则：\n\n    /^https?://example\\.com/(.*)/ $$1.example.com\n\n会把网址 \"https://example.com/my.job\" 转换为 \"my.job.example.com\"。\n\n而以下规则：\n\n    /^https?://example\\.com/(.*)/ /^https?://example\\.com/$$1/\n\n则会把网址 \"https://example.com/my.job\" 转换为 \"/^https?://example\\.com/my\\.job/\"。\n\n可以在“我们的网络黑名单”找到一些站台的网址转换规则。",
+    "message": "网址转换规则是每行一条规则，每一条规则的格式如下：\n\n    <寻找文本> <替换文本> <注解文本>\n\n<寻找文本> 须为有效的正则表达式 (RegExp)，头尾须为 \"/\"。<替换文本> 可以是任意文本，并可使用 \"$$\" 带入特殊内容：\n- \"$$$\": 带入 \"$$\" 符号。\n- \"$$n\": 带入 <寻找文本> 第 n 个括号匹配的字符串。（n 为正整数）\n- \"$$&\": 带入与 <寻找文本> 匹配的字符串。\n- \"$$`\": 带入与 <寻找文本> 匹配的字符串前面的部分。\n- \"$$'\": 带入与 <寻找文本> 匹配的字符串后面的部分。\n- 对于 \"$$n\"、\"$$&\"、\"$$`\"、\"$$'\"，如果 <替换文本> 是正则表达式规则（头尾皆为 \"/\"），带入的内容会自动做转义处理。\n\n转换网址时，会由前往后逐一寻找及替换，找到符合的 <寻找文本> 就会把网址转换为 <替换文本> 并中止后续处理。若没有符合的，则不做任何转换。\n\n例如以下规则：\n\n    /^https?://example\\.com/(.*)/ $$1.example.com\n\n会把网址 \"https://example.com/my.job\" 转换为 \"my.job.example.com\"。\n\n而以下规则：\n\n    /^https?://example\\.com/(.*)/ /^https?://example\\.com/$$1/\n\n则会把网址 \"https://example.com/my.job\" 转换为 \"/^https?://example\\.com/my\\.job/\"。\n\n可以在“我们的网络黑名单”找到一些网站的网址转换规则。",
     "description": "Content of the transform syntax help page"
   },
 
   "blacklistsTitle": {
-    "message": "已载入的黑名单",
+    "message": "已加载的黑名单",
     "description": "Title of allBlacklists page"
   },
 
