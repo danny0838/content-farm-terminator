@@ -29,8 +29,8 @@
     "webRequest",
     "webRequestBlocking",
     "storage",
-    "http://*/",
-    "https://*/"
+    "http://*/*",
+    "https://*/*"
   ],
 
   "optional_permissions": [
