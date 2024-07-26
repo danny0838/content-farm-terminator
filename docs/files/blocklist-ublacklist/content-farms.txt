@@ -1,6 +1,6 @@
 # Title: Content Farm Filters
 # Description: Filter for general content farms, mostly in Chinese.
-# Last modified: 2024-07-26T09:36:01+00:00
+# Last modified: 2024-07-26T10:15:32+00:00
 # Homepage: https://danny0838.github.io/content-farm-terminator/
 # Licence: MIT License
 # Source: https://danny0838.github.io/content-farm-terminator/files/blocklist-ublacklist/content-farms.txt
@@ -12116,6 +12116,24 @@
 *://*.i-besthome.com/*  #redirects to dsawjk.com
 *://*.with-summer.com/*  #redirects to dsawjk.com
 *://*.goodtime-life.com/*  #redirects to niice-woker.com
+*://*.petsccs.com/*  #redirects to comeworlds.com
+*://*.healthdst.com/*  #redirects to 12luckyhome.com
+*://*.pzhzwz.com/*
+*://*.ykggwz.com/*
+*://*.wz.36840.com/*
+*://*.xt88888.com/*
+*://*.cdweb.net/article
+*://*.cdweb.net/article/*
+*://*.goodnn.xyz/*
+*://*.wingyyds.com/*  #redirects to goodnn.xyz
+*://*.praiseme12.com/*  #redirects to dsawjk.com
+*://*.superhaoyun01.com/*
+*://*.ntdgamers.com/*
+*://*.freecool.cc/*
+*://*.eeurl.club/*  #redirects to coms.pub
+*://*.thisreader.com/*  #redirects to coms.pub
+*://*.bigeaterxiii.pixnet.net/*
+*://*.jinglemom.com/*  #redirects to picture.t9y3c.com
 # aggregation: #!cxyzjd
 # source: https://raw.githubusercontent.com/wdmpa/content-farm-list/main/domains/spam/cxyzjd.txt
 # homepage: https://github.com/wdmpa/content-farm-list
