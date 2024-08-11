@@ -1,7 +1,7 @@
 # Title: Scam Sites Filters
 # Description: Filter for scam sites. Mostly aggregrated from governmental sources, such as Ministry
 #     of Digital Affairs and National Police Agency of Taiwan.
-# Last modified: 2024-08-04T19:50:06+00:00
+# Last modified: 2024-08-11T19:50:06+00:00
 # Homepage: https://danny0838.github.io/content-farm-terminator/
 # Licence: MIT License
 # Source: https://danny0838.github.io/content-farm-terminator/files/blocklist-hosts/scam-sites.txt
@@ -19573,3 +19573,6 @@
 0.0.0.0 shopeeta.sbs  #!TWNICscams
 0.0.0.0 shopeelem.xyz  #!TWNICscams
 0.0.0.0 shopeeta.cyou  #!TWNICscams
+0.0.0.0 diptyque-store.com.tw  #!TWNICscams
+0.0.0.0 101shop.tw  #!TWNICscams
+0.0.0.0 jrsjk.top  #!TWNICscams
