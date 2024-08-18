@@ -1,7 +1,7 @@
 # Title: Scam Sites Filters
 # Description: Filter for scam sites. Mostly aggregrated from governmental sources, such as Ministry
 #     of Digital Affairs and National Police Agency of Taiwan.
-# Last modified: 2024-08-11T19:50:06+00:00
+# Last modified: 2024-08-18T19:50:12+00:00
 # Homepage: https://danny0838.github.io/content-farm-terminator/
 # Licence: MIT License
 # Source: https://danny0838.github.io/content-farm-terminator/files/blocklist-hosts/scam-sites.txt
@@ -19576,3 +19576,17 @@
 0.0.0.0 diptyque-store.com.tw  #!TWNICscams
 0.0.0.0 101shop.tw  #!TWNICscams
 0.0.0.0 jrsjk.top  #!TWNICscams
+0.0.0.0 books-mall.com  #!TWNICscams
+0.0.0.0 burax.top  #!TWNICscams
+0.0.0.0 fciort.com  #!TWNICscams
+0.0.0.0 rmatc.top  #!TWNICscams
+0.0.0.0 hmgf.store  #!TWNICscams
+0.0.0.0 geuis.top  #!TWNICscams
+0.0.0.0 bxiuo.top  #!TWNICscams
+0.0.0.0 djxyyds.com  #!TWNICscams
+0.0.0.0 djxyyds.store  #!TWNICscams
+0.0.0.0 siktn.top  #!TWNICscams
+0.0.0.0 ateosn.com  #!TWNICscams
+0.0.0.0 huplb.cn  #!TWNICscams
+0.0.0.0 rakutenops.com  #!TWNICscams
+0.0.0.0 rakutensop.com  #!TWNICscams
