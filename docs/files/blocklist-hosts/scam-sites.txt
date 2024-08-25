@@ -1,7 +1,7 @@
 # Title: Scam Sites Filters
 # Description: Filter for scam sites. Mostly aggregrated from governmental sources, such as Ministry
 #     of Digital Affairs and National Police Agency of Taiwan.
-# Last modified: 2024-08-19T15:24:57+00:00
+# Last modified: 2024-08-25T19:50:23+00:00
 # Homepage: https://danny0838.github.io/content-farm-terminator/
 # Licence: MIT License
 # Source: https://danny0838.github.io/content-farm-terminator/files/blocklist-hosts/scam-sites.txt
@@ -20070,3 +20070,15 @@
 0.0.0.0 huplb.cn  #!TWNICscams
 0.0.0.0 rakutenops.com  #!TWNICscams
 0.0.0.0 rakutensop.com  #!TWNICscams
+0.0.0.0 cnurd.top  #!TWNICscams
+0.0.0.0 byredotaiwan.com  #!TWNICscams
+0.0.0.0 rakutensp.com  #!TWNICscams
+0.0.0.0 rakutentcstore.com.tw  #!TWNICscams
+0.0.0.0 fmiev.top  #!TWNICscams
+0.0.0.0 toecrs.com  #!TWNICscams
+0.0.0.0 euomi.top  #!TWNICscams
+0.0.0.0 fcoun.top  #!TWNICscams
+0.0.0.0 dvrtmmm.com  #!TWNICscams
+0.0.0.0 shopeehk.buzz  #!TWNICscams
+0.0.0.0 puaqs.live  #!TWNICscams
+0.0.0.0 shopeetpb.buzz  #!TWNICscams
