@@ -209,11 +209,6 @@ aggregate:
     source: https://raw.githubusercontent.com/gyli/Blocklist/master/BLOCKLIST_uBlacklist
     dest: src/aggregations/extra-content-farms/gyli.txt
     type: ublacklist
-  - name: gyli
-    homepage: https://github.com/gyli/Blocklist
-    source: https://raw.githubusercontent.com/gyli/Blocklist/master/BLOCKLIST_uBlacklist
-    dest: src/aggregations/extra-content-farms/gyli.txt
-    type: ublacklist
   - name: nonpnt
     homepage: https://github.com/nonPointer/uBlacklist-Subscription
     source: https://raw.githubusercontent.com/nonPointer/uBlacklist-Subscription/master/blacklist.txt
