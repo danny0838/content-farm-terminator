@@ -314,7 +314,7 @@ build:
         Source: https://danny0838.github.io/content-farm-terminator/files/blocklist/sns-content-farms.txt
       schemes: &sns_content_farms_schemes
         facebook:
-          value: /^https?://(?:(?:[\w-]+\.)?facebook\.com|fb\.(?:com|me))/(?!\w+\.php\?)(?:pg/)?(?:{value})(?=[/?#]|$)/
+          value: /^https?://(?:(?:[\w-]+\.)?facebook\.com|fb\.(?:com|me))/(?!\w+\.php\?)(?:pg/|@)?(?:{value})(?=[/?#]|$)/
           escape: regex
         facebook-id:
           value: /^https?://(?:(?:[\w-]+\.)?facebook\.com|fb\.(?:com|me))/(?:(?:(?:pg/)?(?:[\w%]+-)?|profile/|people/[\w%-]+/|groups/[0-9a-z.]+/user/)(?=\d+\b)|(?:profile|permalink|story)\.php\?(?:[^&#]*&)*?id=(?=\d+(?:[&#]|$)))(?:{value})/

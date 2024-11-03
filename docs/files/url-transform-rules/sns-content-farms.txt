@@ -7,7 +7,7 @@
 /^https?://(?:(?:[\w-]+\.)?facebook\.com|fb\.(?:com|me))/people/[\w%-]+/(\d+)\b/ /^https?://(?:(?:[\w-]+\.)?facebook\.com|fb\.(?:com|me))/(?:(?:(?:pg/)?(?:[\w%]+-)?|profile/|people/[\w%-]+/|groups/[0-9a-z.]+/user/)(?=\d+\b)|(?:profile|permalink|story)\.php\?(?:[^&#]*&)*?id=(?=\d+(?:[&#]|$)))$1/  #facebook-id
 /^https?://(?:(?:[\w-]+\.)?facebook\.com|fb\.(?:com|me))/(?:profile|permalink)\.php\?(?:[^&#]*&)*?id=(\d+)(?=[&#]|$)/ /^https?://(?:(?:[\w-]+\.)?facebook\.com|fb\.(?:com|me))/(?:(?:(?:pg/)?(?:[\w%]+-)?|profile/|people/[\w%-]+/|groups/[0-9a-z.]+/user/)(?=\d+\b)|(?:profile|permalink|story)\.php\?(?:[^&#]*&)*?id=(?=\d+(?:[&#]|$)))$1/  #facebook-id
 /^https?://(?:(?:[\w-]+\.)?facebook\.com|fb\.(?:com|me))/(?:[\w%]+-)?(\d+)(?=[/?#]|$)/ /^https?://(?:(?:[\w-]+\.)?facebook\.com|fb\.(?:com|me))/(?:(?:(?:pg/)?(?:[\w%]+-)?|profile/|people/[\w%-]+/|groups/[0-9a-z.]+/user/)(?=\d+\b)|(?:profile|permalink|story)\.php\?(?:[^&#]*&)*?id=(?=\d+(?:[&#]|$)))$1/  #facebook-id
-/^https?://(?:(?:[\w-]+\.)?facebook\.com|fb\.(?:com|me))/(?!\w+\.php\?)([\w.]+)(?=[/?#]|$)/ /^https?://(?:(?:[\w-]+\.)?facebook\.com|fb\.(?:com|me))/(?!\w+\.php\?)(?:pg/)?$1(?=[/?#]|$)/  #facebook
+/^https?://(?:(?:[\w-]+\.)?facebook\.com|fb\.(?:com|me))/(?!\w+\.php\?)@?([\w.]+)(?=[/?#]|$)/ /^https?://(?:(?:[\w-]+\.)?facebook\.com|fb\.(?:com|me))/(?!\w+\.php\?)(?:pg/|@)?$1(?=[/?#]|$)/  #facebook
 
   -- LINE
 /^https?://line\.me/(?:R/)?ti/p/@([\w.-]+)(?=[/?#]|$)/ /^https?://(?:page\.line\.me/|line\.me/(?:R/)?ti/p/@)$1(?=[/?#]|$)/  #line-page
