@@ -317,7 +317,7 @@ build:
           value: /^https?://(?:(?:[\w-]+\.)?facebook\.com|fb\.(?:com|me))/(?!\w+\.php\?)(?:pg/|@)?(?:{value})(?=[/?#]|$)/
           escape: regex
         facebook-id:
-          value: /^https?://(?:(?:[\w-]+\.)?facebook\.com|fb\.(?:com|me))/(?:(?:(?:pg/)?(?:[\w%]+-)?|profile/|people/[\w%-]+/|groups/[0-9a-z.]+/user/)(?=\d+\b)|(?:profile|permalink|story)\.php\?(?:[^&#]*&)*?id=(?=\d+(?:[&#]|$)))(?:{value})/
+          value: /^https?://(?:(?:[\w-]+\.)?facebook\.com|fb\.(?:com|me))/(?:(?:(?:pg/)?(?:[\w%]+-)?|profile/|people/[\w%-]+/|groups/[0-9a-z.]+/user/)(?=\d+\b)|(?:profile|permalink|story)\.php\?(?:[^&#]*&)*?id=(?=\d+(?:[&#]|$)))(?:{value})/i
           escape: regex
         facebook-group:
           value: /^https?://(?:(?:[\w-]+\.)?facebook\.com|fb\.(?:com|me))/(?:groups/)?(?:{value})(?!/user/)(?=[/?#]|$)/
