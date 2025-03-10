@@ -13,7 +13,9 @@ const menusController = {
 
     browser.contextMenus.onClicked.addListener(this.onClicked.bind(this));
 
-    await this.refresh();
+    if (browser.runtime.getManifest().background.persistent) {
+      await this.refresh();
+    }
   },
 
   create() {
@@ -699,6 +701,10 @@ function initInstallListener() {
         await updateFilter(changes);
       }
       console.warn("Fetched successfully.");
+    }
+
+    if (!browser.runtime.getManifest().background.persistent) {
+      await menusController.refresh();
     }
   });
 }
