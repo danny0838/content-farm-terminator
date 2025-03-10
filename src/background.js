@@ -50,6 +50,16 @@ const contextMenuController = {
     });
   },
 
+  listen(willListen = true) {
+    if (!browser.contextMenus) { return; }
+
+    if (willListen) {
+      browser.contextMenus.onClicked.addListener(this.onClicked);
+    } else {
+      browser.contextMenus.onClicked.removeListener(this.onClicked);
+    }
+  },
+
   async refresh(showContextMenuCommands, quickContextMenuCommands) {
     if (!browser.contextMenus) { return; }
 
@@ -64,11 +74,9 @@ const contextMenuController = {
     }
 
     if (typeof showContextMenuCommands !== 'undefined') {
-      browser.contextMenus.onClicked.removeListener(this.onClicked);
       browser.contextMenus.removeAll();
       if (showContextMenuCommands) {
         this.create();
-        browser.contextMenus.onClicked.addListener(this.onClicked);
       }
     }
   },
@@ -714,6 +722,8 @@ function initInstallListener() {
       }
       console.warn("Fetched successfully.");
     }
+
+    await contextMenuController.refresh();
   });
 }
 
@@ -745,7 +755,7 @@ function init() {
   initAlarmsListener();
   initBrowserAction();
 
-  contextMenuController.refresh(); // async
+  contextMenuController.listen(); // async
   historyController.refresh(); // async
 
   updateFilter() // async
