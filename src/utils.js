@@ -191,16 +191,22 @@
       const msgRegex = /__MSG_(.*?)__/g;
       const msgReplacer = (m, k) => utils.lang(k);
       const fn = this.loadLanguages = (rootNode = document) => {
-        for (const elem of rootNode.querySelectorAll('*')) {
-          if (elem.childNodes.length === 1) {
-            const child = elem.firstChild;
-            if (child.nodeType === 3) {
-              child.nodeValue = child.nodeValue.replace(msgRegex, msgReplacer);
-            }
+        const doc = rootNode.ownerDocument || rootNode;
+        const walker = doc.createNodeIterator(rootNode, 5 /* NodeFilter.SHOW_ELEMENT | NodeFilter.SHOW_TEXT */);
+
+        let node = walker.nextNode();
+        while (node) {
+          switch (node.nodeType) {
+            case 1:
+              for (const attr of node.attributes) {
+                attr.nodeValue = attr.nodeValue.replace(msgRegex, msgReplacer);
+              }
+              break;
+            case 3:
+              node.nodeValue = node.nodeValue.replace(msgRegex, msgReplacer);
+              break;
           }
-          for (const attr of elem.attributes) {
-            attr.nodeValue = attr.nodeValue.replace(msgRegex, msgReplacer);
-          }
+          node = walker.nextNode();
         }
       };
       return fn(...args);
