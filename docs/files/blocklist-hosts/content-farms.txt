@@ -1,6 +1,6 @@
 # Title: Content Farm Filters
 # Description: Filter for general content farms, mostly in Chinese.
-# Last modified: 2025-03-23T08:18:13+00:00
+# Last modified: 2025-03-23T08:19:14+00:00
 # Homepage: https://danny0838.github.io/content-farm-terminator/
 # Licence: MIT License
 # Source: https://danny0838.github.io/content-farm-terminator/files/blocklist-hosts/content-farms.txt
@@ -12277,6 +12277,37 @@
 0.0.0.0 undergroundship.com
 0.0.0.0 hfhao.com
 0.0.0.0 bk.taobao.com
+0.0.0.0 cfw123.com
+0.0.0.0 clash-verge-rev.com
+0.0.0.0 clash2025.com
+0.0.0.0 clashcfg.com
+0.0.0.0 clashconn.com
+0.0.0.0 clashdocs.com
+0.0.0.0 clashfr.com
+0.0.0.0 clashhk.com
+0.0.0.0 claship.com
+0.0.0.0 clashmode.com
+0.0.0.0 clashplus.com
+0.0.0.0 clashray.com
+0.0.0.0 clashssr.com
+0.0.0.0 clashtk.com
+0.0.0.0 clashv2.com
+0.0.0.0 clashv2ray.com
+0.0.0.0 clashv2rayng.com
+0.0.0.0 clashwin64.com
+0.0.0.0 clashx2.com
+0.0.0.0 clashxray.com
+0.0.0.0 clashxsub.com
+0.0.0.0 clashxv2ray.com
+0.0.0.0 v2android.com
+0.0.0.0 v2cfw.com
+0.0.0.0 v2ray64.com
+0.0.0.0 v2raywin.com
+0.0.0.0 succulenter.net  #redirects to voosweet.com
+0.0.0.0 first-hub.com
+0.0.0.0 kimishare.org  #redirects to maimai.pro
+0.0.0.0 15lifetalking.com  #redirects to first-hub.com
+0.0.0.0 cm-santiago-do-cacem.pt
 # aggregation: #!cxyzjd
 # source: https://raw.githubusercontent.com/wdmpa/content-farm-list/main/domains/spam/cxyzjd.txt
 # homepage: https://github.com/wdmpa/content-farm-list
