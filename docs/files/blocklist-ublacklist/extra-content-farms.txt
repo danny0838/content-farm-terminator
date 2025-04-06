@@ -1,6 +1,6 @@
 # Title: Extra Content Farm Filters
 # Description: Extra filter for content-farm-like sites, mostly aggregated from other sources.
-# Last modified: 2025-03-30T19:50:07+00:00
+# Last modified: 2025-04-06T19:50:19+00:00
 # Homepage: https://danny0838.github.io/content-farm-terminator/
 # Licence: MIT License
 # Source: https://danny0838.github.io/content-farm-terminator/files/blocklist-ublacklist/extra-content-farms.txt
@@ -72151,6 +72151,7 @@
 # aggregation: #!nonpnt
 # source: https://raw.githubusercontent.com/nonPointer/uBlacklist-Subscription/master/blacklist.txt
 # homepage: https://github.com/nonPointer/uBlacklist-Subscription
+*://www.iodraw.com/blog/*  #!nonpnt
 *://*.ziyuanlm.com/*  #!nonpnt
 *://*.hqyman.cn/*  #!nonpnt
 *://*.021east.com/*  #!nonpnt
