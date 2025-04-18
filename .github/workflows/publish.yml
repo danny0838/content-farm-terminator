@@ -1,0 +1,78 @@
+name: Publish extension
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build-and-release:
+    runs-on: ubuntu-latest
+
+    # Add explicit permissions for releases
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Verify no code issue
+        run: npm run lint
+
+      - name: Get version from manifest.json
+        id: get_version
+        run: |
+          VERSION=$(node -p "require('./src/manifest.json').version")
+          VERSION_FX=$(node -p "require('./src/manifest-firefox.json').version")
+
+          if [ "$VERSION" != "$VERSION_FX" ]; then
+            echo "ERROR: mismatching manifest versions"
+            exit 1
+          fi
+
+          echo "VERSION=$VERSION" >> $GITHUB_OUTPUT
+          echo "TAG_NAME=$VERSION" >> $GITHUB_OUTPUT
+
+      - name: Build extension
+        run: build/pack.sh
+
+      - name: Create Git Tag
+        run: |
+          git tag ${{ steps.get_version.outputs.TAG_NAME }}
+          git push origin ${{ steps.get_version.outputs.TAG_NAME }}
+
+      - name: Upload to Chrome Web Store
+        uses: mnao305/chrome-extension-upload@v5.0.0
+        with:
+          file-path: dist/content-farm-terminator.zip
+          extension-id: ${{ secrets.CHROME_EXTENSION_ID }}
+
+          # https://github.com/fregante/chrome-webstore-upload-keys
+          client-id: ${{ secrets.CHROME_CLIENT_ID }}
+          client-secret: ${{ secrets.CHROME_CLIENT_SECRET }}
+          refresh-token: ${{ secrets.CHROME_REFRESH_TOKEN }}
+
+      - name: Upload to Microsoft Edge Add-ons
+        uses: wdzeng/edge-addon@v2
+        with:
+          zip-path: dist/content-farm-terminator.zip
+          product-id: ${{ secrets.EDGE_PRODUCT_ID }}
+          client-id: ${{ secrets.EDGE_CLIENT_ID }}
+          api-key: ${{ secrets.EDGE_API_KEY }}
+
+      - name: Upload to Firefox Add-ons
+        uses: kewisch/action-web-ext@v1
+        with:
+          cmd: sign
+          channel: listed
+          source: dist/content-farm-terminator.xpi
+          artifacts: dist
+          apiKey: ${{ secrets.FIREFOX_API_KEY }}
+          apiSecret: ${{ secrets.FIREFOX_API_SECRET }}

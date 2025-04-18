@@ -1,0 +1,48 @@
+name: Publish extension MV3
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build-and-release:
+    runs-on: ubuntu-latest
+
+    # Add explicit permissions for releases
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Verify no code issue
+        run: npm run lint
+
+      - name: Get version from manifest.json
+        id: get_version
+        run: |
+          VERSION=$(node -p "require('./src/manifest.json').version")
+
+          echo "VERSION=$VERSION" >> $GITHUB_OUTPUT
+
+      - name: Build extension
+        run: build/pack.sh
+
+      - name: Upload to Chrome Web Store
+        uses: mnao305/chrome-extension-upload@v5.0.0
+        with:
+          file-path: dist/content-farm-terminator.zip
+          extension-id: ${{ secrets.CHROME_EXTENSION_ID_MV3 }}
+
+          # https://github.com/fregante/chrome-webstore-upload-keys
+          client-id: ${{ secrets.CHROME_CLIENT_ID }}
+          client-secret: ${{ secrets.CHROME_CLIENT_SECRET }}
+          refresh-token: ${{ secrets.CHROME_REFRESH_TOKEN }}
