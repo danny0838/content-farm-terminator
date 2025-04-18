@@ -720,6 +720,7 @@ function init() {
 
   updateFilter() // async
     .then(() => {
+      // eslint-disable-next-line no-func-assign
       onBeforeRequestCallback = onBeforeRequestBlocker;
       autoUpdateAssets();
     });

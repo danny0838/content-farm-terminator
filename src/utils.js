@@ -233,7 +233,7 @@
     },
 
     escapeRegExp(...args) {
-      const reStandard = /[-\/\\^$*+?.|()[\]{}]/g;
+      const reStandard = /[-/\\^$*+?.|()[\]{}]/g;
       const reSimple = /[\\^$*+?.|()[\]{}]/g;
       const fn = this.escapeRegExp = (str, simple) => {
         if (simple) {
@@ -322,8 +322,8 @@
       return new Promise((resolve, reject) => {
         const xhr = new XMLHttpRequest();
         xhr.responseType = "document";
-        xhr.onload = () => { resolve(xhr.response); }
-        xhr.onerror = () => { reject(new Error("Network request failed.")); }
+        xhr.onload = () => resolve(xhr.response);
+        xhr.onerror = () => reject(new Error("Network request failed."));
         xhr.open("GET", URL.createObjectURL(blob), true);
         xhr.send();
       });

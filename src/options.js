@@ -136,7 +136,7 @@ async function showInfo() {
     rule.action === 0 << 4 /* RULE_ACTION_BLOCK */ ? utils.lang('userBlacklist') :
     rule.action === 1 << 4 /* RULE_ACTION_UNBLOCK */ ? utils.lang('userWhitelist') :
     rule.action === 2 << 4 /* RULE_ACTION_NOOP */ ? utils.lang('userGraylist') :
-    '' /* this shouldn't happen */;
+    ''; /* this shouldn't happen */
 
   if (rule.src) {
     const u = new URL(browser.runtime.getURL('blacklists.html'));
