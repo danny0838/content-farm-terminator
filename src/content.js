@@ -516,7 +516,7 @@ const getRedirectedUrlOrHostname = (() => {
 
   // 搜狗
   addHandler("www.sogou.com", () => {
-    if (docHostname === "www.sogou.com" && (docPathname === "/web" || docPathname === "/sogou" )) {
+    if (docHostname === "www.sogou.com" && (docPathname === "/web" || docPathname === "/sogou")) {
       if (p.startsWith("/link")) {
         if (elem.matches('div.vrwrap h3 a')) {
           const refNode = elem.closest('div.vrwrap').querySelector('div.r-sech[data-url]');
@@ -768,7 +768,7 @@ function observeDomUpdates() {
 
 function initMessageListener() {
   browser.runtime.onMessage.addListener((message, sender) => {
-    //console.warn("omMessage", message);
+    // console.warn("omMessage", message);
     const {cmd, args} = message;
     switch (cmd) {
       case 'updateContent': {
@@ -794,7 +794,7 @@ function initMessageListener() {
         const rv = [];
         const sel = document.getSelection();
         const nodeRange = document.createRange();
-        for(let i = 0, I = sel.rangeCount; i < I; i++) {
+        for (let i = 0, I = sel.rangeCount; i < I; i++) {
           const range = sel.getRangeAt(i);
           if (range.collapsed) {
             continue;

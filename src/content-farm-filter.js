@@ -47,20 +47,20 @@
   const RE_REGEX_RULE = /^\/(.*)\/([a-z]*)$/;
   const RE_TRANSFORM_PLACEHOLDER = /\$([$&`']|\d+)/g;
 
-  const RULE_TYPE_NONE        = 0;
-  const RULE_TYPE_DOMAIN      = 1;
-  const RULE_TYPE_IPV4        = 2;
-  const RULE_TYPE_IPV6        = 3;
-  const RULE_TYPE_PATTERN     = 4;
-  const RULE_TYPE_REGEX       = 5;
+  const RULE_TYPE_NONE = 0;
+  const RULE_TYPE_DOMAIN = 1;
+  const RULE_TYPE_IPV4 = 2;
+  const RULE_TYPE_IPV6 = 3;
+  const RULE_TYPE_PATTERN = 4;
+  const RULE_TYPE_REGEX = 5;
 
-  const TRULE_TYPE_NONE       = 0;
-  const TRULE_TYPE_PLAIN      = 1;
-  const TRULE_TYPE_REGEX      = 2;
+  const TRULE_TYPE_NONE = 0;
+  const TRULE_TYPE_PLAIN = 1;
+  const TRULE_TYPE_REGEX = 2;
 
-  const RULE_ACTION_BLOCK     = 0 << 4;
-  const RULE_ACTION_UNBLOCK   = 1 << 4;
-  const RULE_ACTION_NOOP      = 2 << 4;
+  const RULE_ACTION_BLOCK = 0 << 4;
+  const RULE_ACTION_UNBLOCK = 1 << 4;
+  const RULE_ACTION_NOOP = 2 << 4;
 
   class Rule {
     constructor(text, {action = RULE_ACTION_BLOCK, src = null} = {}) {
@@ -217,7 +217,7 @@
       this.comment = '';
       this.type = null;
       this.error = null;
-      this.set(text, {ruleOnly:false});
+      this.set(text, {ruleOnly: false});
     }
 
     set(text, {ruleOnly = true, error = null} = {}) {
@@ -274,13 +274,13 @@
   // Borrowed from uBlock Orign.
   const MAX_TOKEN_LENGTH = 7;
 
-  const       DOT_TOKEN_HASH = 0x10000000;
-  const       ANY_TOKEN_HASH = 0x20000000;
+  const DOT_TOKEN_HASH = 0x10000000;
+  const ANY_TOKEN_HASH = 0x20000000;
   const ANY_HTTPS_TOKEN_HASH = 0x30000000;
-  const  ANY_HTTP_TOKEN_HASH = 0x40000000;
-  const        NO_TOKEN_HASH = 0x50000000;
-  const     EMPTY_TOKEN_HASH = 0xF0000000;
-  const   INVALID_TOKEN_HASH = 0xFFFFFFFF;
+  const ANY_HTTP_TOKEN_HASH = 0x40000000;
+  const NO_TOKEN_HASH = 0x50000000;
+  const EMPTY_TOKEN_HASH = 0xF0000000;
+  const INVALID_TOKEN_HASH = 0xFFFFFFFF;
 
   const TOKEN_REGEX = /[%0-9A-Za-z]+/g;
   const TOKEN_VALID_CHARS = (() => {
@@ -425,7 +425,7 @@
       return th.toString(16);
     }
 
-    *iterTokensFromUrl(url) {
+    * iterTokensFromUrl(url) {
       TOKEN_REGEX.lastIndex = 0;
       if (url.length > 2048) {
         url = url.slice(0, 2048);
@@ -616,7 +616,7 @@
 
         const node = regexAnalyzer(reStr, false).tree();
         s = this.tokenizableStrFromNode(node);
-      } catch(ex) {
+      } catch (ex) {
         // Regex library not available or regex not parsable.
       }
 
@@ -647,9 +647,9 @@
   // Increase this whenever the compile format is changed.
   const COMPILE_VERSION = 3;
 
-  const BLOCK_TYPE_NONE     = 0;
+  const BLOCK_TYPE_NONE = 0;
   const BLOCK_TYPE_HOSTNAME = 1;
-  const BLOCK_TYPE_URL      = 2;
+  const BLOCK_TYPE_URL = 2;
 
   class ContentFarmFilter {
     constructor() {

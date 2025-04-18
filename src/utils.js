@@ -169,7 +169,7 @@
         soup.add('user_stylesheet');
       }
 
-      Object.defineProperty(this, 'userAgent', { value: flavor });
+      Object.defineProperty(this, 'userAgent', {value: flavor});
       return flavor;
     },
 
@@ -220,7 +220,7 @@
         ">": "&gt;",
         '"': "&quot;",
         "'": "&#39;",
-        " ": "&nbsp;"
+        " ": "&nbsp;",
       };
       const fnEscaper = m => mapEscaper[m];
       const fn = this.escapeHtml = (str, noDoubleQuotes = false, singleQuotes = false, spaces = false) => {
@@ -313,7 +313,7 @@
       if (!doctype) { return ""; }
       let ret = "<!DOCTYPE " + doctype.name;
       if (doctype.publicId) { ret += ' PUBLIC "' + doctype.publicId + '"'; }
-      if (doctype.systemId) { ret += ' "'        + doctype.systemId + '"'; }
+      if (doctype.systemId) { ret += ' "' + doctype.systemId + '"'; }
       ret += ">\n";
       return ret;
     },

@@ -164,7 +164,7 @@ async function updateAssets() {
         url, options.webBlacklistsCacheDuration,
       );
       return {time, uptodate};
-    }
+    },
   ));
 
   const outdateIdxs = states.reduce((rv, state, i) => {
@@ -248,13 +248,13 @@ async function blockSite(urlOrHostname, tabId, frameId, quickMode) {
 
   updateOptions: {
     const options = await utils.getOptions({
-      userBlacklist: ""
+      userBlacklist: "",
     });
     let text = options.userBlacklist;
     if (text) { text += "\n"; }
     text = text + rule;
     await utils.setOptions({
-      userBlacklist: text
+      userBlacklist: text,
     });
   }
 
@@ -572,7 +572,7 @@ function initMessageListener() {
         return (async () => {
           const tabIds = args.tabId ? [args.tabId] : await browser.tabs.query({
             active: true,
-            currentWindow: true
+            currentWindow: true,
           }).then(tabs => tabs.map(x => x.id));
           await browser.tabs.remove(tabIds);
           return true;

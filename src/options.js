@@ -132,7 +132,7 @@ async function showInfo() {
   document.querySelector('#infoUrlBlocker').hidden = false;
   document.querySelector('#infoUrlBlockerSrc').hidden = false;
   document.querySelector('#infoUrlBlocker dd').textContent = [rule.rule, rule.sep, rule.comment].join('');
-  document.querySelector('#infoUrlBlockerSrc dd').textContent = 
+  document.querySelector('#infoUrlBlockerSrc dd').textContent =
     rule.action === 0 << 4 /* RULE_ACTION_BLOCK */ ? utils.lang('userBlacklist') :
     rule.action === 1 << 4 /* RULE_ACTION_UNBLOCK */ ? utils.lang('userWhitelist') :
     rule.action === 2 << 4 /* RULE_ACTION_NOOP */ ? utils.lang('userGraylist') :
