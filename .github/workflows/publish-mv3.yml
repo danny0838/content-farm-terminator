@@ -7,13 +7,13 @@ jobs:
   build-and-release:
     runs-on: ubuntu-latest
 
-    # Add explicit permissions for releases
-    permissions:
-      contents: write
-
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
+
+      - name: Configure and verify
+        run: |
+          echo "EXT_PATH_ZIP=dist/content-farm-terminator.zip" >> $GITHUB_ENV
 
       - name: Set up Node.js
         uses: actions/setup-node@v4
@@ -26,20 +26,13 @@ jobs:
       - name: Verify no code issue
         run: npm run lint
 
-      - name: Get version from manifest.json
-        id: get_version
-        run: |
-          VERSION=$(node -p "require('./src/manifest.json').version")
-
-          echo "VERSION=$VERSION" >> $GITHUB_OUTPUT
-
       - name: Build extension
         run: build/pack.sh
 
       - name: Upload to Chrome Web Store
         uses: mnao305/chrome-extension-upload@v5.0.0
         with:
-          file-path: dist/content-farm-terminator.zip
+          file-path: ${{ env.EXT_PATH_ZIP }}
           extension-id: ${{ vars.CHROME_EXTENSION_ID_MV3 }}
 
           # https://github.com/fregante/chrome-webstore-upload-keys

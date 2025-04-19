@@ -23,14 +23,39 @@ on:
 jobs:
   build-and-release:
     runs-on: ubuntu-latest
+    env:
+      CREATE_TAG: ${{ github.event.inputs.create_tag }}
+      UPLOAD_CHROME: ${{ github.event.inputs.upload_chrome }}
+      UPLOAD_EDGE: ${{ github.event.inputs.upload_edge }}
+      UPLOAD_FX: ${{ github.event.inputs.upload_fx }}
 
-    # Add explicit permissions for releases
+    # Add explicit permissions for tag/release
     permissions:
       contents: write
 
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
+
+      - name: Configure and verify
+        run: |
+          VERSION=$(jq -r '.version' './src/manifest.json')
+          VERSION_FX=$(jq -r '.version' './src/manifest-firefox.json')
+          if [ "$VERSION" != "$VERSION_FX" ]; then
+            echo "❌ Mismatching manifest versions"
+            exit 1
+          fi
+
+          EXPECTED_LINE="## 終結內容農場 v$VERSION"
+          if ! grep -Fxq "$EXPECTED_LINE" RELEASES.md; then
+            echo "❌ Missing expected line in `RELEASES.md`: $EXPECTED_LINE"
+            exit 1
+          fi
+
+          echo "VERSION=$VERSION" >> $GITHUB_ENV
+          echo "TAG_NAME=$VERSION" >> $GITHUB_ENV
+          echo "EXT_PATH_ZIP=dist/content-farm-terminator.zip" >> $GITHUB_ENV
+          echo "EXT_PATH_XPI=dist/content-farm-terminator.xpi" >> $GITHUB_ENV
 
       - name: Set up Node.js
         uses: actions/setup-node@v4
@@ -43,34 +68,20 @@ jobs:
       - name: Verify no code issue
         run: npm run lint
 
-      - name: Get version from manifest.json
-        id: get_version
-        run: |
-          VERSION=$(node -p "require('./src/manifest.json').version")
-          VERSION_FX=$(node -p "require('./src/manifest-firefox.json').version")
-
-          if [ "$VERSION" != "$VERSION_FX" ]; then
-            echo "ERROR: mismatching manifest versions"
-            exit 1
-          fi
-
-          echo "VERSION=$VERSION" >> $GITHUB_OUTPUT
-          echo "TAG_NAME=$VERSION" >> $GITHUB_OUTPUT
-
       - name: Build extension
         run: build/pack.sh
 
       - name: Create Git Tag
-        if: ${{ github.event.inputs.create_tag == 'true' }}
+        if: ${{ env.CREATE_TAG == 'true' }}
         run: |
-          git tag ${{ steps.get_version.outputs.TAG_NAME }}
-          git push origin ${{ steps.get_version.outputs.TAG_NAME }}
+          git tag --force ${{ env.TAG_NAME }}
+          git push origin ${{ env.TAG_NAME }}
 
       - name: Upload to Chrome Web Store
-        if: ${{ github.event.inputs.upload_chrome == 'true' }}
+        if: ${{ env.UPLOAD_CHROME == 'true' }}
         uses: mnao305/chrome-extension-upload@v5.0.0
         with:
-          file-path: dist/content-farm-terminator.zip
+          file-path: ${{ env.EXT_PATH_ZIP }}
           extension-id: ${{ vars.CHROME_EXTENSION_ID }}
 
           # https://github.com/fregante/chrome-webstore-upload-keys
@@ -79,21 +90,21 @@ jobs:
           refresh-token: ${{ secrets.CHROME_REFRESH_TOKEN }}
 
       - name: Upload to Microsoft Edge Add-ons
-        if: ${{ github.event.inputs.upload_edge == 'true' }}
+        if: ${{ env.UPLOAD_EDGE == 'true' }}
         uses: wdzeng/edge-addon@v2
         with:
-          zip-path: dist/content-farm-terminator.zip
+          zip-path: ${{ env.EXT_PATH_ZIP }}
           product-id: ${{ vars.EDGE_PRODUCT_ID }}
           client-id: ${{ secrets.EDGE_CLIENT_ID }}
           api-key: ${{ secrets.EDGE_API_KEY }}
 
       - name: Upload to Firefox Add-ons
-        if: ${{ github.event.inputs.upload_fx == 'true' }}
+        if: ${{ env.UPLOAD_FX == 'true' }}
         uses: kewisch/action-web-ext@v1
         with:
           cmd: sign
           channel: listed
-          source: dist/content-farm-terminator.xpi
+          source: ${{ env.EXT_PATH_XPI }}
           artifacts: dist
           apiKey: ${{ secrets.FIREFOX_API_KEY }}
           apiSecret: ${{ secrets.FIREFOX_API_SECRET }}
