@@ -52,7 +52,7 @@ jobs:
         uses: mnao305/chrome-extension-upload@v5.0.0
         with:
           file-path: dist/content-farm-terminator.zip
-          extension-id: ${{ secrets.CHROME_EXTENSION_ID }}
+          extension-id: ${{ vars.CHROME_EXTENSION_ID }}
 
           # https://github.com/fregante/chrome-webstore-upload-keys
           client-id: ${{ secrets.CHROME_CLIENT_ID }}
@@ -63,7 +63,7 @@ jobs:
         uses: wdzeng/edge-addon@v2
         with:
           zip-path: dist/content-farm-terminator.zip
-          product-id: ${{ secrets.EDGE_PRODUCT_ID }}
+          product-id: ${{ vars.EDGE_PRODUCT_ID }}
           client-id: ${{ secrets.EDGE_CLIENT_ID }}
           api-key: ${{ secrets.EDGE_API_KEY }}
 
