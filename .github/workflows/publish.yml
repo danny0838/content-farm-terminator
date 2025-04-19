@@ -2,6 +2,23 @@ name: Publish extension
 
 on:
   workflow_dispatch:
+    inputs:
+      create_tag:
+        description: Create tag
+        type: boolean
+        default: true
+      upload_chrome:
+        description: Upload Chrome
+        type: boolean
+        default: true
+      upload_edge:
+        description: Upload Edge
+        type: boolean
+        default: true
+      upload_fx:
+        description: Upload Firefox
+        type: boolean
+        default: true
 
 jobs:
   build-and-release:
@@ -44,11 +61,13 @@ jobs:
         run: build/pack.sh
 
       - name: Create Git Tag
+        if: ${{ github.event.inputs.create_tag == 'true' }}
         run: |
           git tag ${{ steps.get_version.outputs.TAG_NAME }}
           git push origin ${{ steps.get_version.outputs.TAG_NAME }}
 
       - name: Upload to Chrome Web Store
+        if: ${{ github.event.inputs.upload_chrome == 'true' }}
         uses: mnao305/chrome-extension-upload@v5.0.0
         with:
           file-path: dist/content-farm-terminator.zip
@@ -60,6 +79,7 @@ jobs:
           refresh-token: ${{ secrets.CHROME_REFRESH_TOKEN }}
 
       - name: Upload to Microsoft Edge Add-ons
+        if: ${{ github.event.inputs.upload_edge == 'true' }}
         uses: wdzeng/edge-addon@v2
         with:
           zip-path: dist/content-farm-terminator.zip
@@ -68,6 +88,7 @@ jobs:
           api-key: ${{ secrets.EDGE_API_KEY }}
 
       - name: Upload to Firefox Add-ons
+        if: ${{ github.event.inputs.upload_fx == 'true' }}
         uses: kewisch/action-web-ext@v1
         with:
           cmd: sign
