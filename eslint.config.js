@@ -25,6 +25,7 @@ export default [
       "no-cond-assign": "off",
       "no-control-regex": "off",
       "no-empty": ["error", {allowEmptyCatch: true}],
+      "no-func-assign": "off",
       "no-prototype-builtins": "off",
       "no-redeclare": "off",
       "no-unused-labels": "off",
