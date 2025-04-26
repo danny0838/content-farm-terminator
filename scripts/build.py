@@ -1086,6 +1086,8 @@ class Aggregator:
             data = r.json()
 
             if not data['success']:
+                if offset == 0:
+                    raise RuntimeError('No record can be fetched.')
                 break
 
             result.extend(data['result']['records'])
