@@ -422,7 +422,7 @@ function onTabRemovedCallback(tabId, removeInfo) {
   requestRecorder.delete(tabId);
 }
 
-function initRequestListener() {
+async function initRequestListener() {
   browser.webRequest.onBeforeRequest.addListener(
     onRequestRecorder,
     {urls: ["*://*/*"], types: ["main_frame"]});
@@ -434,6 +434,26 @@ function initRequestListener() {
   browser.webRequest.onBeforeRequest.addListener((details) => {
     return onBeforeRequestCallback(details);
   }, {urls: ["*://*/*"], types: ["main_frame", "sub_frame"]}, ["blocking"]);
+
+  // fallback way to block the main frame when webRequestBlocking not granted
+  if (!await browser.permissions.contains({permissions: ["webRequestBlocking"]})) {
+    // skip `browser.tabs.onCreated`, which contains "pendingUrl" and will
+    // eventually trigger an `onUpdated` event.
+    browser.tabs.onUpdated.addListener((tabId, changeInfo, tab) => {
+      if (!changeInfo.url) { return; }
+
+      const result = onBeforeRequestBlocker({
+        tabId,
+        requestId: null,
+        type: "main_frame",
+        url: changeInfo.url,
+      });
+
+      if (!result?.redirectUrl) { return; }
+
+      browser.tabs.update(tabId, {url: result.redirectUrl}); // async
+    });
+  }
 }
 
 function initMessageListener() {
@@ -718,7 +738,7 @@ function initBrowserAction() {
 }
 
 function init() {
-  initRequestListener();
+  initRequestListener(); // async
   initMessageListener();
   initStorageChangeListener();
   initInstallListener();
