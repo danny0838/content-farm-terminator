@@ -9,6 +9,9 @@
 /^https?://(?:(?:[\w-]+\.)?facebook\.com|fb\.(?:com|me))/(?:[\w%]+-)?(\d+)(?=[/?#]|$)/i /^https?://(?:(?:[\w-]+\.)?facebook\.com|fb\.(?:com|me))/(?:(?:(?:pg/)?(?:[\w%]+-)?|profile/|people/[\w%-]+/|groups/[0-9a-z.]+/user/)(?=\d+\b)|(?:profile|permalink|story)\.php\?(?:[^&#]*&)*?id=(?=\d+(?:[&#]|$)))$1/i  #facebook-id
 /^https?://(?:(?:[\w-]+\.)?facebook\.com|fb\.(?:com|me))/(?!\w+\.php\?)@?([\w.]+)(?=[/?#]|$)/ /^https?://(?:(?:[\w-]+\.)?facebook\.com|fb\.(?:com|me))/(?!\w+\.php\?)(?:pg/|@)?$1(?=[/?#]|$)/  #facebook
 
+  -- Threads
+/^https://www\.threads\.com/@(\w+)(?=[/?#]|$)/i /^https://www\.threads\.com/@$1(?=[/?#]|$)/i  #threads-id
+
   -- LINE
 /^https?://line\.me/(?:R/)?ti/p/@([\w.-]+)(?=[/?#]|$)/ /^https?://(?:page\.line\.me/|line\.me/(?:R/)?ti/p/@)$1(?=[/?#]|$)/  #line-page
 /^https?://line\.me/(?:R/)?ti/p/([\w.-]+)(?=[/?#]|$)/ /^https?://line\.me/(?:R/)?ti/p/$1(?=[/?#]|$)/  #line-user

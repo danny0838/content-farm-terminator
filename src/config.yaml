@@ -322,6 +322,9 @@ build:
         facebook-group:
           value: /^https?://(?:(?:[\w-]+\.)?facebook\.com|fb\.(?:com|me))/(?:groups/)?(?:{value})(?!/user/)(?=[/?#]|$)/
           escape: regex
+        threads-id:
+          value: /^https://www\.threads\.com/@(?:{value})(?=[/?#]|$)/i
+          escape: regex
         twitter:
           value: /^https?://(?:\w+\.)?twitter\.com/(?:{value})(?=[/?#]|$)/
           escape: regex
