@@ -2,7 +2,7 @@
   # Description: Filter for content-farm-like or related social network service (SNS) URLs, mostly in Chinese.
   #     This may not work well for all cases as many things cannot be fully determined by URL.
   #     This list is mostly regex-based and may have a negative effect on performance.
-  # Last modified: 2025-04-21T01:14:32+00:00
+  # Last modified: 2025-04-26T13:13:45+00:00
   # Homepage: https://danny0838.github.io/content-farm-terminator/
   # Licence: MIT License
   # Source: https://danny0838.github.io/content-farm-terminator/files/blocklist/sns-content-farms.txt
@@ -1876,3 +1876,6 @@
 /^https?://(?:(?:[\w-]+\.)?facebook\.com|fb\.(?:com|me))/(?:(?:(?:pg/)?(?:[\w%]+-)?|profile/|people/[\w%-]+/|groups/[0-9a-z.]+/user/)(?=\d+\b)|(?:profile|permalink|story)\.php\?(?:[^&#]*&)*?id=(?=\d+(?:[&#]|$)))(?:100076147154932)/i
 /^https?://(?:(?:[\w-]+\.)?facebook\.com|fb\.(?:com|me))/(?:(?:(?:pg/)?(?:[\w%]+-)?|profile/|people/[\w%-]+/|groups/[0-9a-z.]+/user/)(?=\d+\b)|(?:profile|permalink|story)\.php\?(?:[^&#]*&)*?id=(?=\d+(?:[&#]|$)))(?:61554640664248)/i
 /^https?://(?:(?:[\w-]+\.)?facebook\.com|fb\.(?:com|me))/(?!\w+\.php\?)(?:pg/|@)?(?:DreamerDOIT)(?=[/?#]|$)/
+/^https?://(?:(?:[\w-]+\.)?facebook\.com|fb\.(?:com|me))/(?!\w+\.php\?)(?:pg/|@)?(?:wishnotekstar)(?=[/?#]|$)/
+/^https?://(?:(?:[\w-]+\.)?facebook\.com|fb\.(?:com|me))/(?:(?:(?:pg/)?(?:[\w%]+-)?|profile/|people/[\w%-]+/|groups/[0-9a-z.]+/user/)(?=\d+\b)|(?:profile|permalink|story)\.php\?(?:[^&#]*&)*?id=(?=\d+(?:[&#]|$)))(?:100068806608655)/i
+/^https://www\.threads\.com/@(?:kagit_kstar)(?=[/?#]|$)/i
