@@ -2,18 +2,41 @@ name: Publish extension MV3
 
 on:
   workflow_dispatch:
+    inputs:
+      environment:
+        description: 'Environment'
+        type: choice
+        options:
+          - development
+          - production
+        default: production
 
 jobs:
-  build-and-release:
+  main:
+    name: Build
     runs-on: ubuntu-latest
+    environment: ${{ github.event.inputs.environment }}
+    outputs:
+      ext_path_zip: ${{ steps.config.outputs.ext_path_zip }}
+      artifact_dir: ${{ steps.config.outputs.artifact_dir }}
+      artifact_zip: ${{ steps.config.outputs.artifact_zip }}
 
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
 
       - name: Configure and verify
+        id: config
         run: |
-          echo "EXT_PATH_ZIP=dist/content-farm-terminator.zip" >> $GITHUB_ENV
+          MANIFEST_VERSION=$(jq -r '.manifest_version' './src/manifest.json')
+          if [ "$MANIFEST_VERSION" != 3 ]; then
+            echo "❌ Unexpected \`manifest_version\`: $MANIFEST_VERSION"
+            exit 1
+          fi
+
+          echo "ext_path_zip=dist/content-farm-terminator.zip" >> $GITHUB_OUTPUT
+          echo "artifact_dir=dist" >> $GITHUB_OUTPUT
+          echo "artifact_zip=content-farm-terminator-zip" >> $GITHUB_OUTPUT
 
       - name: Set up Node.js
         uses: actions/setup-node@v4
@@ -29,10 +52,28 @@ jobs:
       - name: Build extension
         run: build/pack.sh
 
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: ${{ steps.config.outputs.artifact_zip }}
+          path: ${{ steps.config.outputs.ext_path_zip }}
+
+  upload_cws:
+    name: Upload to Chrome Web Store
+    runs-on: ubuntu-latest
+    needs: main
+    environment: ${{ github.event.inputs.environment }}
+    steps:
+      - name: Download artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: ${{ needs.main.outputs.artifact_zip }}
+          path: ${{ needs.main.outputs.artifact_dir }}
+
       - name: Upload to Chrome Web Store
         uses: mnao305/chrome-extension-upload@v5.0.0
         with:
-          file-path: ${{ env.EXT_PATH_ZIP }}
+          file-path: ${{ needs.main.outputs.ext_path_zip }}
           extension-id: ${{ vars.CHROME_EXTENSION_ID_MV3 }}
 
           # https://github.com/fregante/chrome-webstore-upload-keys

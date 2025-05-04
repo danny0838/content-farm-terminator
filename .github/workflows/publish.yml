@@ -3,41 +3,40 @@ name: Publish extension
 on:
   workflow_dispatch:
     inputs:
-      create_tag:
-        description: Create tag
-        type: boolean
-        default: true
-      upload_chrome:
-        description: Upload Chrome
-        type: boolean
-        default: true
-      upload_edge:
-        description: Upload Edge
-        type: boolean
-        default: true
-      upload_fx:
-        description: Upload Firefox
-        type: boolean
-        default: true
+      environment:
+        description: 'Environment'
+        type: choice
+        options:
+          - development
+          - production
+        default: production
+
+permissions:
+  # for updating tag/release
+  contents: write
 
 jobs:
-  build-and-release:
+  main:
+    name: Build and create tag
     runs-on: ubuntu-latest
-    env:
-      CREATE_TAG: ${{ github.event.inputs.create_tag }}
-      UPLOAD_CHROME: ${{ github.event.inputs.upload_chrome }}
-      UPLOAD_EDGE: ${{ github.event.inputs.upload_edge }}
-      UPLOAD_FX: ${{ github.event.inputs.upload_fx }}
-
-    # Add explicit permissions for tag/release
-    permissions:
-      contents: write
+    environment: ${{ github.event.inputs.environment }}
+    outputs:
+      version: ${{ steps.config.outputs.version }}
+      tag_name: ${{ steps.config.outputs.tag_name }}
+      ext_path_zip: ${{ steps.config.outputs.ext_path_zip }}
+      ext_path_xpi: ${{ steps.config.outputs.ext_path_xpi }}
+      artifact_dir: ${{ steps.config.outputs.artifact_dir }}
+      artifact_zip: ${{ steps.config.outputs.artifact_zip }}
+      artifact_xpi: ${{ steps.config.outputs.artifact_xpi }}
 
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
 
       - name: Configure and verify
+        id: config
+        env:
+          TIMEZONE: ${{ vars.TIMEZONE || 'UTC' }}
         run: |
           VERSION=$(jq -r '.version' './src/manifest.json')
           VERSION_FX=$(jq -r '.version' './src/manifest-firefox.json')
@@ -48,14 +47,17 @@ jobs:
 
           EXPECTED_LINE="## 終結內容農場 v$VERSION"
           if ! grep -Fxq "$EXPECTED_LINE" RELEASES.md; then
-            echo "❌ Missing expected line in `RELEASES.md`: $EXPECTED_LINE"
+            echo "❌ Missing expected line in \`RELEASES.md\`: $EXPECTED_LINE"
             exit 1
           fi
 
-          echo "VERSION=$VERSION" >> $GITHUB_ENV
-          echo "TAG_NAME=$VERSION" >> $GITHUB_ENV
-          echo "EXT_PATH_ZIP=dist/content-farm-terminator.zip" >> $GITHUB_ENV
-          echo "EXT_PATH_XPI=dist/content-farm-terminator.xpi" >> $GITHUB_ENV
+          echo "version=$VERSION" >> $GITHUB_OUTPUT
+          echo "tag_name=$VERSION" >> $GITHUB_OUTPUT
+          echo "ext_path_zip=dist/content-farm-terminator.zip" >> $GITHUB_OUTPUT
+          echo "ext_path_xpi=dist/content-farm-terminator.xpi" >> $GITHUB_OUTPUT
+          echo "artifact_dir=dist" >> $GITHUB_OUTPUT
+          echo "artifact_zip=content-farm-terminator-zip" >> $GITHUB_OUTPUT
+          echo "artifact_xpi=content-farm-terminator-xpi" >> $GITHUB_OUTPUT
 
       - name: Set up Node.js
         uses: actions/setup-node@v4
@@ -71,17 +73,39 @@ jobs:
       - name: Build extension
         run: build/pack.sh
 
-      - name: Create Git Tag
-        if: ${{ env.CREATE_TAG == 'true' }}
+      - name: Create Git tag
         run: |
-          git tag --force ${{ env.TAG_NAME }}
-          git push origin ${{ env.TAG_NAME }}
+          git tag --force ${{ steps.config.outputs.tag_name }}
+          git push origin ${{ steps.config.outputs.tag_name }}
+
+      - name: Upload artifact (ZIP)
+        uses: actions/upload-artifact@v4
+        with:
+          name: ${{ steps.config.outputs.artifact_zip }}
+          path: ${{ steps.config.outputs.ext_path_zip }}
+
+      - name: Upload artifact (XPI)
+        uses: actions/upload-artifact@v4
+        with:
+          name: ${{ steps.config.outputs.artifact_xpi }}
+          path: ${{ steps.config.outputs.ext_path_xpi }}
+
+  upload_cws:
+    name: Upload to Chrome Web Store
+    runs-on: ubuntu-latest
+    needs: main
+    environment: ${{ github.event.inputs.environment }}
+    steps:
+      - name: Download artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: ${{ needs.main.outputs.artifact_zip }}
+          path: ${{ needs.main.outputs.artifact_dir }}
 
       - name: Upload to Chrome Web Store
-        if: ${{ env.UPLOAD_CHROME == 'true' }}
         uses: mnao305/chrome-extension-upload@v5.0.0
         with:
-          file-path: ${{ env.EXT_PATH_ZIP }}
+          file-path: ${{ needs.main.outputs.ext_path_zip }}
           extension-id: ${{ vars.CHROME_EXTENSION_ID }}
 
           # https://github.com/fregante/chrome-webstore-upload-keys
@@ -89,22 +113,44 @@ jobs:
           client-secret: ${{ secrets.CHROME_CLIENT_SECRET }}
           refresh-token: ${{ secrets.CHROME_REFRESH_TOKEN }}
 
+  upload_edge:
+    name: Upload to Microsoft Edge Add-ons
+    runs-on: ubuntu-latest
+    needs: main
+    environment: ${{ github.event.inputs.environment }}
+    steps:
+      - name: Download artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: ${{ needs.main.outputs.artifact_zip }}
+          path: ${{ needs.main.outputs.artifact_dir }}
+
       - name: Upload to Microsoft Edge Add-ons
-        if: ${{ env.UPLOAD_EDGE == 'true' }}
         uses: wdzeng/edge-addon@v2
         with:
-          zip-path: ${{ env.EXT_PATH_ZIP }}
+          zip-path: ${{ needs.main.outputs.ext_path_zip }}
           product-id: ${{ vars.EDGE_PRODUCT_ID }}
           client-id: ${{ secrets.EDGE_CLIENT_ID }}
           api-key: ${{ secrets.EDGE_API_KEY }}
 
+  upload_firefox:
+    name: Upload to Firefox Add-ons
+    runs-on: ubuntu-latest
+    needs: main
+    environment: ${{ github.event.inputs.environment }}
+    steps:
+      - name: Download artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: ${{ needs.main.outputs.artifact_xpi }}
+          path: ${{ needs.main.outputs.artifact_dir }}
+
       - name: Upload to Firefox Add-ons
-        if: ${{ env.UPLOAD_FX == 'true' }}
         uses: kewisch/action-web-ext@v1
         with:
           cmd: sign
           channel: listed
-          source: ${{ env.EXT_PATH_XPI }}
+          source: ${{ needs.main.outputs.ext_path_xpi }}
           artifacts: dist
           apiKey: ${{ secrets.FIREFOX_API_KEY }}
           apiSecret: ${{ secrets.FIREFOX_API_SECRET }}
