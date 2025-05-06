@@ -1072,11 +1072,17 @@ class Aggregator:
         """Fetch from API at https://od.moi.gov.tw/api/v1/rest/datastore/"""
         result = []
         offset = 0
+        verify = True
         while True:
             url = f'{base_url}?limit={chunk_size}' + (f'&offset={offset}' if offset else '')
             log.debug('Fetching: %s', url)
             try:
-                r = requests.get(url)
+                r = requests.get(url, verify=verify)
+            except requests.exceptions.SSLError as exc:
+                log.warning('Failed to verify SSL, retry with verify=False: %s', exc)
+                requests.packages.urllib3.disable_warnings(requests.packages.urllib3.exceptions.InsecureRequestWarning)
+                verify = False
+                continue
             except requests.exceptions.RequestException as exc:
                 raise RuntimeError(f'Failed to fetch "{url}": {exc}') from exc
 
