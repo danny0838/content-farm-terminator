@@ -1,7 +1,7 @@
 # Title: Scam Sites Filters
 # Description: Filter for scam sites. Mostly aggregrated from governmental sources, such as Ministry
 #     of Digital Affairs and National Police Agency of Taiwan.
-# Last modified: 2025-05-04T19:49:57+00:00
+# Last modified: 2025-05-06T17:05:39+00:00
 # Homepage: https://danny0838.github.io/content-farm-terminator/
 # Licence: MIT License
 # Source: https://danny0838.github.io/content-farm-terminator/files/blocklist-ublacklist/scam-sites.txt
@@ -2841,6 +2841,7 @@
 *://*.2930.tw/*  #!165jtz
 *://*.2okextw.com/*  #!165jtz
 *://*.2okextw.net/*  #!165jtz
+*://*.37trade.com/*  #!165jtz
 *://*.shengji91.com/*  #!165jtz
 *://*.3a5688.com/*  #!165jtz
 *://*.aaa1778.com/*  #!165jtz
@@ -2883,6 +2884,7 @@
 *://*.91shopes.com/*  #!165jtz
 *://*.flexofflos.com/*  #!165jtz
 *://*.jskhfu.com/*  #!165jtz
+*://*.uhsbhd.com/*  #!165jtz
 *://*.hkrope.com/*  #!165jtz
 *://*.hkeusy.com/*  #!165jtz
 *://*.pruyre.com/*  #!165jtz
@@ -2931,6 +2933,7 @@
 *://*.abvxzone.com/*  #!165jtz
 *://*.access.tips/*  #!165jtz
 *://*.acdx.centere.info/*  #path=/h5 #!165jtz
+*://*.acdx3.cc/*  #!165jtz
 *://*.app.888acdx.vip/*  #!165jtz
 *://*.app.vvacdx.top/*  #!165jtz
 *://*.h5.vvacdx.top/*  #!165jtz
@@ -2998,6 +3001,7 @@
 *://*.mex.aegonxytip.com/*  #!165jtz
 *://*.paa.aegonxyssx.com/*  #!165jtz
 *://*.mkp.aemda.com/*  #!165jtz
+*://*.aeocc.qpon/*  #!165jtz
 *://*.aeosvip.cyou/*  #!165jtz
 *://*.fortune.aeonzd.com/*  #!165jtz
 *://*.fotune.aeoncerse.com/*  #!165jtz
@@ -3049,6 +3053,8 @@
 *://*.aicryptoexn.com/*  #!165jtz
 *://*.ailivem.com/*  #!165jtz
 *://*.host.ainesenb.com/*  #!165jtz
+*://*.aipublicglobalaa.com/*  #!165jtz
+*://*.coinszkesvx.com/*  #!165jtz
 *://*.aiinvesttron.com/*  #!165jtz
 *://*.ai-internationald.com/*  #!165jtz
 *://*.ai-internationale.com/*  #!165jtz
@@ -3171,6 +3177,7 @@
 *://*.mythtwmagic.com/*  #!165jtz
 *://*.alyoe.com/*  #!165jtz
 *://*.alysks.com/*  #!165jtz
+*://*.amexglobe.com/*  #!165jtz
 *://*.888ama.com/*  #!165jtz
 *://*.amarfqzckvob.com/*  #!165jtz
 *://*.amarftlmcaqw.com/*  #!165jtz
@@ -3282,6 +3289,7 @@
 *://*.mob.theaplos.top/*  #!165jtz
 *://*.theaplos.net/*  #!165jtz
 *://*.apnx1.com/*  #!165jtz
+*://*.anotheras.com/*  #!165jtz
 *://*.capitalmesaba.com/*  #!165jtz
 *://*.dream.loadcona.buzz/*  #!165jtz
 *://*.dream.saoalzz.buzz/*  #!165jtz
@@ -3403,10 +3411,12 @@
 *://*.atzd.site/*  #!165jtz
 *://*.at168.info/*  #!165jtz
 *://*.app.88au8.com/*  #!165jtz
+*://*.24.auct.it.com/*  #!165jtz
 *://*.bit.auct.it.com/*  #!165jtz
 *://*.e.aucti.it.com/*  #!165jtz
 *://*.e.auctionshop.site/*  #!165jtz
 *://*.es.auctions.it.com/*  #!165jtz
+*://*.go.auctionshop.site/*  #!165jtz
 *://*.wk.auctio.it.com/*  #!165jtz
 *://*.contractda.com/*  #!165jtz
 *://*.contractog.com/*  #!165jtz
@@ -3423,6 +3433,7 @@
 *://*.ubspork.com/*  #!165jtz
 *://*.avacoin.top/*  #!165jtz
 *://*.avaexapp.com/*  #!165jtz
+*://*.avaexsapp.com/*  #!165jtz
 *://*.avatopapp.com/*  #!165jtz
 *://*.download.ava-loading1.com/*  #path=/download/app-release.apk #!165jtz
 *://*.down.avabroker-tw.com/*  #!165jtz
@@ -3528,6 +3539,7 @@
 *://*.aemdenfex.com/*  #!165jtz
 *://*.adking.club/*  #!165jtz
 *://*.ads.adsquickdeal.org/*  #!165jtz
+*://*.adscloud-pro.store/*  #!165jtz
 *://*.adscloud-pro.xin/*  #!165jtz
 *://*.amtcoltd.com/*  #!165jtz
 *://*.adrvnecd.com/*  #!165jtz
@@ -3676,9 +3688,11 @@
 *://*.aliexpresswapp.com/*  #!165jtz
 *://*.aliexpresswhole.com/*  #!165jtz
 *://*.aliexpresswhs.com/*  #!165jtz
+*://*.aliexprewh.com/*  #!165jtz
 *://*.aliexprewsale.com/*  #!165jtz
 *://*.aliexprwhsale.com/*  #!165jtz
 *://*.aliexpwholesale.com/*  #!165jtz
+*://*.aliexpwsale.com/*  #!165jtz
 *://*.aliexwhole.com/*  #!165jtz
 *://*.aliexwholesale.com/*  #!165jtz
 *://*.alitexwhole.com/*  #!165jtz
@@ -3740,6 +3754,7 @@
 *://*.allepro.shop/*  #!165jtz
 *://*.shopallepro.com/*  #!165jtz
 *://*.eaisecurities.com.tw/*  #!165jtz
+*://*.allianzere.com/*  #!165jtz
 *://*.allscoin.com/*  #!165jtz
 *://*.h5.usallygroup.com/*  #!165jtz
 *://*.h5.usallystock.com/*  #!165jtz
@@ -3771,6 +3786,8 @@
 *://*.vip.alphaxtw.com/*  #!165jtz
 *://*.wk.alphaxvip.com/*  #!165jtz
 *://*.alphaxc.com/*  #!165jtz
+*://*.avinyagw.com/*  #!165jtz
+*://*.avinyate.com/*  #!165jtz
 *://*.avinyatx.com/*  #!165jtz
 *://*.risedatatech.com/*  #!165jtz
 *://*.alvexocdv.com/*  #!165jtz
@@ -3801,6 +3818,7 @@
 *://*.a.mazonsmum.top/*  #!165jtz
 *://*.a.mazonsmut.top/*  #!165jtz
 *://*.aaa.hyllf88888.vip/*  #!165jtz
+*://*.ama.aajkq.cyou/*  #!165jtz
 *://*.amazinon.com/*  #!165jtz
 *://*.amazo.hsakgjsa.com/*  #!165jtz
 *://*.amazomn.cc/*  #!165jtz
@@ -3851,6 +3869,7 @@
 *://*.amzbuy.store/*  #!165jtz
 *://*.amzsan.com/*  #!165jtz
 *://*.amzshop.homes/*  #!165jtz
+*://*.asos3a.com/*  #!165jtz
 *://*.buyamzz.com/*  #!165jtz
 *://*.hceo-group.help/*  #!165jtz
 *://*.hceo-group.lat/*  #!165jtz
@@ -3946,6 +3965,7 @@
 *://*.aokoio.com/*  #!165jtz
 *://*.aokoion.com/*  #!165jtz
 *://*.aokoiopro.com/*  #!165jtz
+*://*.aokoiort.com/*  #!165jtz
 *://*.aokoiot.com/*  #!165jtz
 *://*.aokoioy.com/*  #path=/wap #!165jtz
 *://*.apecoinvc.com/*  #!165jtz
@@ -3997,6 +4017,7 @@
 *://*.mkp.archnnesy.com/*  #!165jtz
 *://*.argos-shop.top/*  #!165jtz
 *://*.argos-stk.xyz/*  #!165jtz
+*://*.arta.atafinan.com/*  #!165jtz
 *://*.qclnforex.com/*  #!165jtz
 *://*.artificialtelligencejjx.com/*  #!165jtz
 *://*.artificialtelligenceyso.com/*  #!165jtz
@@ -4144,6 +4165,7 @@
 *://*.h5.coinbac.net/*  #!165jtz
 *://*.h5.coinbac.xyz/*  #!165jtz
 *://*.h5.wwbac.net/*  #!165jtz
+*://*.baextas.vip/*  #!165jtz
 *://*.baextbp.vip/*  #!165jtz
 *://*.biacoin.net/*  #!165jtz
 *://*.app.baltldd.com/*  #!165jtz
@@ -4332,6 +4354,7 @@
 *://*.d.p2bdwq.top/*  #!165jtz
 *://*.down.bitprosvip.life/*  #!165jtz
 *://*.down.bitsvip.shop/*  #!165jtz
+*://*.m.bit-node.sbs/*  #!165jtz
 *://*.nesbittco.com/*  #!165jtz
 *://*.bestbeo.com/*  #!165jtz
 *://*.bitccoin.top/*  #!165jtz
@@ -4357,6 +4380,7 @@
 *://*.govscourtsci.com/*  #!165jtz
 *://*.paradise1388.com/*  #!165jtz
 *://*.bitcointrust.top/*  #!165jtz
+*://*.bitcointrustex.top/*  #!165jtz
 *://*.bitcoival.com/*  #!165jtz
 *://*.bitcoivas.com/*  #!165jtz
 *://*.bitdf.com/*  #!165jtz
@@ -4638,6 +4662,7 @@
 *://*.cryptocurrencybitcore.com/*  #!165jtz
 *://*.cryptocurrencytradebitcored.com/*  #!165jtz
 *://*.buik-pro.store/*  #path=/9212646552/9212646552_content.html #!165jtz
+*://*.bursacoin88.my/*  #!165jtz
 *://*.max1658.buschill.com/*  #!165jtz
 *://*.buschch.com/*  #!165jtz
 *://*.buschear.com/*  #!165jtz
@@ -4681,6 +4706,7 @@
 *://*.m.bxibitbtc.com/*  #!165jtz
 *://*.m.bxibitgold.com/*  #!165jtz
 *://*.bxibitpro.com/*  #!165jtz
+*://*.lbxlsc.com/*  #!165jtz
 *://*.bybcoin.cc/*  #!165jtz
 *://*.bybit.bitby01.com/*  #!165jtz
 *://*.bybitdow.com/*  #!165jtz
@@ -4716,6 +4742,7 @@
 *://*.bymbymm.com/*  #!165jtz
 *://*.baicoine.com/*  #!165jtz
 *://*.baicoins.com/*  #!165jtz
+*://*.baiahpcex.com/*  #!165jtz
 *://*.banfinancingtyac.com/*  #!165jtz
 *://*.bainpro.top/*  #!165jtz
 *://*.bianpro.app/*  #!165jtz
@@ -4733,6 +4760,8 @@
 *://*.dldownload4.com/*  #!165jtz
 *://*.htmlco3.com/*  #!165jtz
 *://*.balancebit.com/*  #!165jtz
+*://*.balmyggp.com/*  #!165jtz
+*://*.balmyjhb.com/*  #!165jtz
 *://*.balmyyik.com/*  #!165jtz
 *://*.bancoramm-pro.xyz/*  #!165jtz
 *://*.wealthy.znvincibleapex.com/*  #!165jtz
@@ -4822,6 +4851,7 @@
 *://*.bestbuyn3.com/*  #!165jtz
 *://*.bestbuyn8.online/*  #!165jtz
 *://*.new188.top/*  #!165jtz
+*://*.m.bet-top.me/*  #!165jtz
 *://*.m.bet268.life/*  #!165jtz
 *://*.m.bet668.me/*  #!165jtz
 *://*.betcoincenter.com/*  #!165jtz
@@ -4847,6 +4877,7 @@
 *://*.bibox-pro.org/*  #!165jtz
 *://*.us.bicusg.com/*  #!165jtz
 *://*.bicc66.com/*  #!165jtz
+*://*.mu3is6.cc/*  #path=/pvpPCEJyDEgQ #!165jtz
 *://*.lbank-x.com/*  #!165jtz
 *://*.bconomyap.vip/*  #!165jtz
 *://*.bconomyas.vip/*  #!165jtz
@@ -4984,6 +5015,7 @@
 *://*.bingtopjil.com/*  #!165jtz
 *://*.bingafy.com/*  #!165jtz
 *://*.bingfgge.com/*  #!165jtz
+*://*.binghki.com/*  #!165jtz
 *://*.binghmk.com/*  #!165jtz
 *://*.binghxcc.com/*  #!165jtz
 *://*.bingmfgg.com/*  #!165jtz
@@ -5078,6 +5110,7 @@
 *://*.bitceslg.cc/*  #!165jtz
 *://*.bitcetmax.com/*  #!165jtz
 *://*.bitmaxairpro.com/*  #!165jtz
+*://*.bitmaxcoinpro.com/*  #!165jtz
 *://*.bitceig.com/*  #!165jtz
 *://*.bitcetg.com/*  #!165jtz
 *://*.bitcetg.vip/*  #!165jtz
@@ -5094,11 +5127,13 @@
 *://*.bitcluec.com/*  #!165jtz
 *://*.app-download.mitokenex.com/*  #!165jtz
 *://*.app.bitcryptos.vip/*  #!165jtz
+*://*.bit5698hnm.cyou/*  #!165jtz
 *://*.bitcoin-cash.xin/*  #!165jtz
 *://*.mobile.bitcrypto.top/*  #!165jtz
 *://*.bitchawe.com/*  #!165jtz
 *://*.bitchret.com/*  #!165jtz
 *://*.bitchrom.com/*  #!165jtz
+*://*.app.bitcopromax.com/*  #!165jtz
 *://*.bitcoit.cc/*  #!165jtz
 *://*.biticcoin.com/*  #!165jtz
 *://*.bitcompro.com/*  #!165jtz
@@ -5136,6 +5171,7 @@
 *://*.twapp.svipbitfinex.cyou/*  #!165jtz
 *://*.twsvip.bitfinexdown.cyou/*  #!165jtz
 *://*.vlp.bitfinexcc.cyou/*  #!165jtz
+*://*.vlp.bitfinexd.cyou/*  #!165jtz
 *://*.bitfin.cc/*  #!165jtz
 *://*.bitfinex77.com/*  #!165jtz
 *://*.bitfinexappfo.cyou/*  #!165jtz
@@ -5332,6 +5368,7 @@
 *://*.bitcoinetn.vip/*  #!165jtz
 *://*.btcetn.one/*  #!165jtz
 *://*.bitcoin2024.net/*  #!165jtz
+*://*.bit-coin-cash.asia/*  #!165jtz
 *://*.bit-coin-cashe.xin/*  #!165jtz
 *://*.bit-coin-cashes.xin/*  #!165jtz
 *://*.bitcoin-cashe.xin/*  #!165jtz
@@ -5401,6 +5438,7 @@
 *://*.h5.bitget.win/*  #!165jtz
 *://*.m.bitexs.ink/*  #!165jtz
 *://*.web.bsurjhdv.top/*  #!165jtz
+*://*.web.btcpolnt.top/*  #!165jtz
 *://*.bit-get-coin.com/*  #!165jtz
 *://*.bitbvq.com/*  #!165jtz
 *://*.bitdbd.com/*  #!165jtz
@@ -5482,6 +5520,7 @@
 *://*.tsgtw.bitlo.site/*  #!165jtz
 *://*.tsgtw.bitlo.space/*  #!165jtz
 *://*.bit-main.wiki/*  #!165jtz
+*://*.bitmain.buzz/*  #!165jtz
 *://*.bitmain.icu/*  #!165jtz
 *://*.h5.bit-main.shop/*  #!165jtz
 *://*.h5.bit-main.site/*  #!165jtz
@@ -5541,6 +5580,7 @@
 *://*.bitex.bitopay.vip/*  #!165jtz
 *://*.mtmt-coin.cc/*  #!165jtz
 *://*.aj.fdexba.top/*  #!165jtz
+*://*.hashr.top/*  #!165jtz
 *://*.mksqytreaypeiym.top/*  #!165jtz
 *://*.bitpie-ai.com/*  #!165jtz
 *://*.bitpie-ai.vip/*  #!165jtz
@@ -5551,6 +5591,7 @@
 *://*.4pt2yy.eth.limo/*  #!165jtz
 *://*.bitrefill.q58h2p.com/*  #!165jtz
 *://*.bitrefill.q58ph5.icu/*  #!165jtz
+*://*.mbitrres.net/*  #!165jtz
 *://*.bitrich555.top/*  #!165jtz
 *://*.bitrich666.top/*  #!165jtz
 *://*.bitrichbank.top/*  #!165jtz
@@ -5638,6 +5679,7 @@
 *://*.bit9563.xyz/*  #path=/h5 #!165jtz
 *://*.download.bittyllcious.site/*  #!165jtz
 *://*.m.bittyllcious.site/*  #!165jtz
+*://*.bitunex.pro/*  #!165jtz
 *://*.bitunp.com/*  #!165jtz
 *://*.bitunix-c.com/*  #!165jtz
 *://*.51n.fun/*  #!165jtz
@@ -5657,6 +5699,7 @@
 *://*.bitvenzn.com/*  #!165jtz
 *://*.bivenhaze.com/*  #!165jtz
 *://*.bitvn.xyz/*  #!165jtz
+*://*.m.bitwaletm.com/*  #!165jtz
 *://*.bitwasabispo.com/*  #!165jtz
 *://*.trade.bitword.net/*  #!165jtz
 *://*.zgifts.bitwords.co/*  #!165jtz
@@ -5759,6 +5802,7 @@
 *://*.booking-user.com/*  #!165jtz
 *://*.booking-user.ink/*  #!165jtz
 *://*.booking-user.vip/*  #!165jtz
+*://*.booking-vips.com/*  #!165jtz
 *://*.bookingweb.net/*  #!165jtz
 *://*.bookingworld.cc/*  #!165jtz
 *://*.tw-booking.com/*  #!165jtz
@@ -5779,6 +5823,7 @@
 *://*.h5.brainwavecoins.tw/*  #!165jtz
 *://*.h5.brainwaveconvenient.asia/*  #!165jtz
 *://*.h5.brainwaveconvenient.com/*  #!165jtz
+*://*.branch-trade.com/*  #!165jtz
 *://*.braoalhksee.com/*  #!165jtz
 *://*.braoalhnest.com/*  #!165jtz
 *://*.braoalhnsb.com/*  #!165jtz
@@ -5794,6 +5839,7 @@
 *://*.brasuyts.com/*  #!165jtz
 *://*.brauisxa.com/*  #!165jtz
 *://*.brauiytra.com/*  #!165jtz
+*://*.brezto.fun/*  #!165jtz
 *://*.brezto.online/*  #!165jtz
 *://*.brezto.xyz/*  #!165jtz
 *://*.ucbridge.com/*  #!165jtz
@@ -5978,6 +6024,7 @@
 *://*.cbsrs89.cc/*  #!165jtz
 *://*.cbsrsgw01.cc/*  #!165jtz
 *://*.cbsrsgw06.cc/*  #!165jtz
+*://*.cbsrsgw112.cc/*  #!165jtz
 *://*.cbsrsgw66.cc/*  #!165jtz
 *://*.changbaimountainginseng.com/*  #!165jtz
 *://*.gccasebvv.com/*  #!165jtz
@@ -5988,6 +6035,7 @@
 *://*.cdcvnm.com/*  #!165jtz
 *://*.xz.dabaiapp0012.xyz/*  #!165jtz
 *://*.cdktradingplatforma.com/*  #!165jtz
+*://*.cdktradingplatformb.com/*  #!165jtz
 *://*.cdktradingplatformc.com/*  #!165jtz
 *://*.cdon-buyer.com/*  #!165jtz
 *://*.cendley.com/*  #!165jtz
@@ -5998,6 +6046,7 @@
 *://*.ceeixdp.vip/*  #!165jtz
 *://*.ceeixds.vip/*  #!165jtz
 *://*.ceeixfp.vip/*  #!165jtz
+*://*.ceex.su/*  #!165jtz
 *://*.ceexris.vip/*  #!165jtz
 *://*.ceexvip.ru/*  #!165jtz
 *://*.vxceshop.com/*  #!165jtz
@@ -6031,12 +6080,14 @@
 *://*.m.cf-imarket.com/*  #!165jtz
 *://*.m.cficoining.com/*  #!165jtz
 *://*.m.cficoinvvn.com/*  #!165jtz
+*://*.cficoinop.com/*  #!165jtz
 *://*.bit.cfteft.com/*  #!165jtz
 *://*.etf.cftio.com/*  #!165jtz
 *://*.jo.cftio.com/*  #!165jtz
 *://*.tw.cftbit.com/*  #!165jtz
 *://*.tw.cftio.com/*  #!165jtz
 *://*.tw.cftuse.com/*  #!165jtz
+*://*.cghoo.com/*  #!165jtz
 *://*.cghjy.com/*  #!165jtz
 *://*.1go6y.com/*  #path=/VfY9 #!165jtz
 *://*.cgmitw.com/*  #!165jtz
@@ -6088,9 +6139,10 @@
 *://*.zenex.club/*  #!165jtz
 *://*.zenex.icu/*  #!165jtz
 *://*.citiae.com/*  #!165jtz
+*://*.citibh.com/*  #!165jtz
 *://*.citiqxw.com/*  #!165jtz
 *://*.citiqxy.com/*  #!165jtz
-*://*.citibh.com/*  #!165jtz
+*://*.citinl.com/*  #!165jtz
 *://*.citiqxe.com/*  #!165jtz
 *://*.citiqxf.com/*  #!165jtz
 *://*.citiqxh.com/*  #!165jtz
@@ -6122,7 +6174,9 @@
 *://*.fm-marsta.com/*  #!165jtz
 *://*.cmchighs.com/*  #!165jtz
 *://*.cmcwxgr.com/*  #!165jtz
+*://*.cmintopdex.com/*  #!165jtz
 *://*.fm-marstb.com/*  #!165jtz
+*://*.cmcfinance.org/*  #!165jtz
 *://*.bit.cmecoins.life/*  #!165jtz
 *://*.cme-coins.com/*  #!165jtz
 *://*.cme.incoin.vip/*  #path=/h5 #!165jtz
@@ -6138,6 +6192,7 @@
 *://*.cmegro.com/*  #!165jtz
 *://*.coinme-c.com/*  #!165jtz
 *://*.coinme-y.com/*  #!165jtz
+*://*.coinme10020.cc/*  #!165jtz
 *://*.coinme2099.cc/*  #!165jtz
 *://*.coinme3099.cc/*  #!165jtz
 *://*.coinme4099.cc/*  #!165jtz
@@ -6206,6 +6261,7 @@
 *://*.account.coach-steps.com/*  #!165jtz
 *://*.coachfundco.com/*  #!165jtz
 *://*.cocoomart.com/*  #!165jtz
+*://*.okxny.com/*  #!165jtz
 *://*.down.dvndv.live/*  #!165jtz
 *://*.top4h5.xcmud.top/*  #!165jtz
 *://*.coin-ant.com/*  #!165jtz
@@ -6216,6 +6272,7 @@
 *://*.coincjjt.com/*  #!165jtz
 *://*.coincjjtt.com/*  #!165jtz
 *://*.coinftw.com/*  #!165jtz
+*://*.coinftwvip.com/*  #!165jtz
 *://*.coinjiaof.com/*  #!165jtz
 *://*.h5.coingrew.com/*  #!165jtz
 *://*.coingrew.vip/*  #!165jtz
@@ -6229,6 +6286,7 @@
 *://*.coinrf.ygzkfr.top/*  #!165jtz
 *://*.ai-coinsee.cc/*  #!165jtz
 *://*.app.yyapp88.top/*  #path=/kqn7rm #!165jtz
+*://*.comex-vip.com/*  #!165jtz
 *://*.comexwallet.com/*  #path=/ff/ #!165jtz
 *://*.america.comextw.com/*  #!165jtz
 *://*.canada.comextw.com/*  #!165jtz
@@ -6342,6 +6400,7 @@
 *://*.camteke.com/*  #!165jtz
 *://*.down.capitabot.com/*  #!165jtz
 *://*.hotelascopro.com/*  #!165jtz
+*://*.lidemall.vip/*  #!165jtz
 *://*.h5.capitalproxp.com/*  #!165jtz
 *://*.capitalgls.com/*  #!165jtz
 *://*.capitalsmkt.com/*  #!165jtz
@@ -6415,6 +6474,7 @@
 *://*.chainceinfo66.top/*  #!165jtz
 *://*.chainex88.top/*  #!165jtz
 *://*.chairishasia.icu/*  #!165jtz
+*://*.chairishasia.shop/*  #!165jtz
 *://*.chairishasia.top/*  #!165jtz
 *://*.chairishasia.xyz/*  #!165jtz
 *://*.wap.changemax.org/*  #!165jtz
@@ -6426,6 +6486,7 @@
 *://*.tokage.charlesfinance.store/*  #!165jtz
 *://*.borediecsos.com/*  #!165jtz
 *://*.chasethof.com/*  #!165jtz
+*://*.chasethwireless.com/*  #!165jtz
 *://*.chifis.com/*  #!165jtz
 *://*.chimecorpq.com/*  #!165jtz
 *://*.mhneome.dokfcc.buzz/*  #!165jtz
@@ -6460,6 +6521,7 @@
 *://*.workaholictw.com/*  #!165jtz
 *://*.clarinsmas.xyz/*  #!165jtz
 *://*.claytonmcrms.com/*  #!165jtz
+*://*.claytonmkcrms.com/*  #!165jtz
 *://*.clear-skys.cc/*  #!165jtz
 *://*.clear-skys.com/*  #!165jtz
 *://*.clear-skys.net/*  #!165jtz
@@ -6482,8 +6544,11 @@
 *://*.cloud-bitcoin.com/*  #!165jtz
 *://*.h5.cloud-bitcoin.club/*  #!165jtz
 *://*.cloud-bitcoin.vip/*  #!165jtz
+*://*.cloudcart.tech/*  #!165jtz
 *://*.tf-std.vip/*  #!165jtz
 *://*.app.tydcoin.pro/*  #!165jtz
+*://*.cmcfinance.net/*  #!165jtz
+*://*.app.coatue25.com/*  #!165jtz
 *://*.d2owmmtdaxqv4y.cloudfront.net/*  #!165jtz
 *://*.pc.coinant.cc/*  #!165jtz
 *://*.coin-bget.pro/*  #!165jtz
@@ -6560,6 +6625,7 @@
 *://*.gupnec.shop/*  #!165jtz
 *://*.iucoinbase.com/*  #!165jtz
 *://*.nsdhexvip.com/*  #!165jtz
+*://*.rocid.top/*  #!165jtz
 *://*.scoinbase.vip/*  #!165jtz
 *://*.ser-groups.com/*  #!165jtz
 *://*.shorttermtradings.com/*  #!165jtz
@@ -6671,6 +6737,8 @@
 *://*.cointrproaqx.com/*  #!165jtz
 *://*.cointrprocvu.com/*  #!165jtz
 *://*.cointrprouvm.com/*  #!165jtz
+*://*.cointradingex-change.com/*  #!165jtz
+*://*.cointradingexchange.asia/*  #!165jtz
 *://*.coinunions.com/*  #!165jtz
 *://*.coinuniontw.com/*  #!165jtz
 *://*.coinunion.exchange/*  #!165jtz
@@ -6694,6 +6762,7 @@
 *://*.cwpronz.vip/*  #!165jtz
 *://*.cwprodis.vip/*  #!165jtz
 *://*.cwprobis.vip/*  #!165jtz
+*://*.cwproeis.vip/*  #!165jtz
 *://*.coinyct.vip/*  #!165jtz
 *://*.coinzoom.fujitomi1.tw/*  #!165jtz
 *://*.coinzoomref.com/*  #!165jtz
@@ -6758,10 +6827,11 @@
 *://*.gts999666.com/*  #!165jtz
 *://*.tocoinget.com/*  #!165jtz
 *://*.coinget.vg/*  #!165jtz
+*://*.coinha.leyiu.com/*  #!165jtz
 *://*.cohakoin.com/*  #!165jtz
 *://*.coihakos.com/*  #!165jtz
 *://*.coinhakoig.com/*  #!165jtz
-*://*.coinhakoin.com/*  #path=/wap #!165jtz
+*://*.coinhakoin.com/*  #!165jtz
 *://*.coinhakoit.com/*  #!165jtz
 *://*.coinhakopro.co/*  #!165jtz
 *://*.coinhakopro.com/*  #!165jtz
@@ -6870,6 +6940,7 @@
 *://*.coinparks.net/*  #!165jtz
 *://*.coinpayex.com/*  #!165jtz
 *://*.m.atfxapp.com/*  #!165jtz
+*://*.coinpluge.com/*  #!165jtz
 *://*.tyysz.ynqrszvs.com/*  #path=/55al7fy8 #!165jtz
 *://*.coinsproidl.com/*  #!165jtz
 *://*.coinsprovb.com/*  #!165jtz
@@ -6921,7 +6992,10 @@
 *://*.coin-space-ltd.com/*  #!165jtz
 *://*.coinspace-co.com/*  #!165jtz
 *://*.coinspace-tw.com/*  #!165jtz
+*://*.lbank-inter-tw.com/*  #!165jtz
 *://*.coin-store.vip/*  #!165jtz
+*://*.coinlockerpro.vip/*  #!165jtz
+*://*.coinstoervip.com/*  #!165jtz
 *://*.coinstoreseve.com/*  #!165jtz
 *://*.coinstoreseve.xyz/*  #!165jtz
 *://*.coinstorepro.vip/*  #!165jtz
@@ -6996,6 +7070,7 @@
 *://*.www8.phptf.com/*  #!165jtz
 *://*.www9.phptf.com/*  #!165jtz
 *://*.costcomomp.com/*  #!165jtz
+*://*.cotcoswholes.com/*  #!165jtz
 *://*.h5.costcogogg.com/*  #!165jtz
 *://*.alnucostco.com/*  #!165jtz
 *://*.appskcostco.com/*  #!165jtz
@@ -7105,6 +7180,7 @@
 *://*.bstotplink.com/*  #!165jtz
 *://*.crypto-12.top/*  #!165jtz
 *://*.crypto-aave.vip/*  #!165jtz
+*://*.crypto-scwalletx.com/*  #!165jtz
 *://*.crypto.ntefrp.com/*  #!165jtz
 *://*.crypto356.cc/*  #!165jtz
 *://*.cryptoeyr.com/*  #!165jtz
@@ -7133,6 +7209,7 @@
 *://*.gtznycq.top/*  #!165jtz
 *://*.cry.arsaneljc.com/*  #!165jtz
 *://*.cryptocurrencyexz.com/*  #!165jtz
+*://*.aetxl-max.com/*  #!165jtz
 *://*.day-olt.com/*  #!165jtz
 *://*.crypto-investment-journey.com/*  #!165jtz
 *://*.cryptoisland-btc.life/*  #!165jtz
@@ -7176,6 +7253,7 @@
 *://*.cryptotrading-hub.world/*  #!165jtz
 *://*.cryptotrading-hub.xyz/*  #!165jtz
 *://*.cryptoxcr.com/*  #!165jtz
+*://*.cryptoasset-tradingx.top/*  #!165jtz
 *://*.cryptobtx.net/*  #!165jtz
 *://*.cryptocoredex.com/*  #!165jtz
 *://*.cryptocoredex.net/*  #!165jtz
@@ -7215,6 +7293,7 @@
 *://*.crystalchipstti.com/*  #!165jtz
 *://*.intelligentun.com/*  #!165jtz
 *://*.cryptoinsp.com/*  #!165jtz
+*://*.cryzenex.com/*  #!165jtz
 *://*.bi.crazrieu.xyz/*  #!165jtz
 *://*.bi.woofr3e.xyz/*  #!165jtz
 *://*.m.cubicwalletex.com/*  #!165jtz
@@ -7281,6 +7360,7 @@
 *://*.dhdarkibd.com/*  #!165jtz
 *://*.dhdarkrte.com/*  #!165jtz
 *://*.dheatout.com/*  #!165jtz
+*://*.d2xcen.com/*  #!165jtz
 *://*.eterwealtck.com/*  #!165jtz
 *://*.daiether-defipro.com/*  #!165jtz
 *://*.daietherpromaxdefi.com/*  #!165jtz
@@ -7291,6 +7371,7 @@
 *://*.mk-backstage15.com/*  #!165jtz
 *://*.mk-backstage16.com/*  #!165jtz
 *://*.mk-backstage20.com/*  #!165jtz
+*://*.mk-backstage21.com/*  #!165jtz
 *://*.mk-backstage8.com/*  #!165jtz
 *://*.mk-backstage9.com/*  #!165jtz
 *://*.achieve.rtcmt.com/*  #!165jtz
@@ -7298,6 +7379,7 @@
 *://*.mk-backstage2.com/*  #!165jtz
 *://*.mk-backstage3.com/*  #!165jtz
 *://*.mk-backstage5.com/*  #!165jtz
+*://*.mk-backstage6.com/*  #!165jtz
 *://*.fotumi.danarxos.com/*  #!165jtz
 *://*.fotumi.danaxras.com/*  #!165jtz
 *://*.fotumi.daoraiaus.com/*  #!165jtz
@@ -7356,9 +7438,11 @@
 *://*.m.token-dc.com/*  #!165jtz
 *://*.max.dcgorich.com/*  #!165jtz
 *://*.site.dcgopaly.com/*  #!165jtz
+*://*.spil.wehl7.xyz/*  #!165jtz
 *://*.tech.bv582.com/*  #!165jtz
 *://*.web.dcplay588.com/*  #!165jtz
 *://*.win.dcpalyb.com/*  #!165jtz
+*://*.blocktrade-vip.com/*  #!165jtz
 *://*.xeggexvp.com/*  #!165jtz
 *://*.dcenbus.vip/*  #!165jtz
 *://*.dceunus.vip/*  #!165jtz
@@ -7524,6 +7608,7 @@
 *://*.m.djiitw.com/*  #!165jtz
 *://*.djiihk.com/*  #!165jtz
 *://*.djiiihk.com/*  #!165jtz
+*://*.djiiiitw.com/*  #!165jtz
 *://*.twdjiiihk.com/*  #!165jtz
 *://*.dkybn.site/*  #!165jtz
 *://*.dlsms.com/*  #!165jtz
@@ -7539,6 +7624,7 @@
 *://*.dofei.top/*  #!165jtz
 *://*.h5.domp.vip/*  #!165jtz
 *://*.dotcoin.top/*  #!165jtz
+*://*.appdozo.com/*  #!165jtz
 *://*.dqhbn.com/*  #!165jtz
 *://*.dqvbn.live/*  #!165jtz
 *://*.reborndr.com/*  #!165jtz
@@ -7676,6 +7762,7 @@
 *://*.claim.deepbook.tech/*  #!165jtz
 *://*.deepgtp-blue.top/*  #!165jtz
 *://*.deepgtp-pv.top/*  #!165jtz
+*://*.face-deepgtp.top/*  #!165jtz
 *://*.get-deepgtp.top/*  #!165jtz
 *://*.www-deepgtp.top/*  #!165jtz
 *://*.ex.deepspeedpro.com/*  #!165jtz
@@ -7714,6 +7801,7 @@
 *://*.deribdx.com/*  #!165jtz
 *://*.deribdz.com/*  #!165jtz
 *://*.deribic.com/*  #!165jtz
+*://*.deribit.wland.top/*  #!165jtz
 *://*.crypto.minerbitcoin.org/*  #!165jtz
 *://*.derivativear.com/*  #!165jtz
 *://*.derivativejvue.com/*  #!165jtz
@@ -7747,6 +7835,7 @@
 *://*.dextradti.com/*  #!165jtz
 *://*.dextraduc.com/*  #!165jtz
 *://*.dextravs.com/*  #!165jtz
+*://*.dextravsi.com/*  #!165jtz
 *://*.dextraxg.com/*  #!165jtz
 *://*.dextrcme.com/*  #!165jtz
 *://*.dforeceabe.com/*  #!165jtz
@@ -7763,6 +7852,7 @@
 *://*.diamond-seller.com/*  #!165jtz
 *://*.dmd-seller.com/*  #!165jtz
 *://*.mob.diamond-tt.org/*  #!165jtz
+*://*.digainvest.com/*  #!165jtz
 *://*.h5.digeshopping.com/*  #!165jtz
 *://*.digi-dex.pro/*  #!165jtz
 *://*.digi-dexchange.asia/*  #!165jtz
@@ -7840,6 +7930,7 @@
 *://*.dragonclub.club/*  #!165jtz
 *://*.members.drcfx.com/*  #!165jtz
 *://*.dream-mallshop.online/*  #!165jtz
+*://*.dreamall-shop.com/*  #!165jtz
 *://*.dreammall-shop.online/*  #!165jtz
 *://*.dremata.com/*  #!165jtz
 *://*.15.sssuav.com/*  #!165jtz
@@ -7934,6 +8025,7 @@
 *://*.jamercari.com/*  #!165jtz
 *://*.temujp.com/*  #!165jtz
 *://*.dr-reborin.com/*  #!165jtz
+*://*.edgewb.com/*  #!165jtz
 *://*.edgevanae.com/*  #!165jtz
 *://*.edgevanali.com/*  #!165jtz
 *://*.edgevanaoc.com/*  #!165jtz
@@ -8016,6 +8108,7 @@
 *://*.eosibme.com/*  #!165jtz
 *://*.eosobc.com/*  #!165jtz
 *://*.eosrn.com/*  #!165jtz
+*://*.epoch-d.com/*  #!165jtz
 *://*.epochcoindex.online/*  #!165jtz
 *://*.epochcoindex.xyz/*  #!165jtz
 *://*.erc1o.com/*  #!165jtz
@@ -8115,6 +8208,7 @@
 *://*.ethnls.com/*  #!165jtz
 *://*.ethseg.com/*  #!165jtz
 *://*.ethxxx.xyz/*  #!165jtz
+*://*.maskbwe.com/*  #!165jtz
 *://*.maskfwt.com/*  #!165jtz
 *://*.maskvz.com/*  #!165jtz
 *://*.maskrty.com/*  #!165jtz
@@ -8130,6 +8224,7 @@
 *://*.etxcapitaldi.com/*  #!165jtz
 *://*.etxcapitalibr.com/*  #!165jtz
 *://*.etxixt.club/*  #!165jtz
+*://*.dwarecinmer.shop/*  #!165jtz
 *://*.etokumall.com/*  #!165jtz
 *://*.euetscnn.cc/*  #!165jtz
 *://*.ft.euifus.com/*  #!165jtz
@@ -8149,6 +8244,7 @@
 *://*.qmdyq.7p904t3.com/*  #path=/kd1pia9v #!165jtz
 *://*.sdj3ksdh.com/*  #path=/kd1pia9v #!165jtz
 *://*.fi825yhr.com/*  #path=/7ql7ndmk #!165jtz
+*://*.extsoldier.com/*  #!165jtz
 *://*.excgend.com/*  #!165jtz
 *://*.exclents.com/*  #!165jtz
 *://*.excvhuwe.com/*  #!165jtz
@@ -8229,6 +8325,7 @@
 *://*.hsfzdozb.buzz/*  #!165jtz
 *://*.ft.educated.it.com/*  #!165jtz
 *://*.jo.educated.it.com/*  #!165jtz
+*://*.wk.educated.it.com/*  #!165jtz
 *://*.wk.educk.it.com/*  #!165jtz
 *://*.eaiphf777.cyou/*  #!165jtz
 *://*.eecoins.com/*  #!165jtz
@@ -8449,6 +8546,7 @@
 *://*.exmosvip.vip/*  #!165jtz
 *://*.exnestr.com/*  #!165jtz
 *://*.exnesuor.com/*  #!165jtz
+*://*.bf72j1.yn8q6fe3dqa2.cc/*  #!165jtz
 *://*.exewdev.com/*  #!165jtz
 *://*.exneser.com/*  #!165jtz
 *://*.getrich.exchange07.online/*  #!165jtz
@@ -8507,10 +8605,12 @@
 *://*.tw-fbs.cc/*  #!165jtz
 *://*.tw-fbs.com/*  #!165jtz
 *://*.tw-fbs.net/*  #!165jtz
+*://*.tw-fbs.top/*  #!165jtz
 *://*.fbshuiv.com/*  #!165jtz
+*://*.fbstw.net/*  #!165jtz
 *://*.itw-aetos.top/*  #!165jtz
 *://*.sjmhy.hk/*  #!165jtz
-*://*.tw-fbs.top/*  #!165jtz
+*://*.lfxayuh.com/*  #!165jtz
 *://*.lfxgyymbnc.com/*  #!165jtz
 *://*.lfxnjsh.com/*  #!165jtz
 *://*.fckzoie.vip/*  #!165jtz
@@ -8582,6 +8682,7 @@
 *://*.balance.firodedi.com/*  #!165jtz
 *://*.belc.bellagioweb.vip/*  #!165jtz
 *://*.flixsuper.com/*  #!165jtz
+*://*.flixtwsystem.com/*  #!165jtz
 *://*.download.flow-btc.store/*  #!165jtz
 *://*.flow-btc.com/*  #!165jtz
 *://*.flow-eth.com/*  #!165jtz
@@ -8607,6 +8708,7 @@
 *://*.fomoehgxetice.com/*  #!165jtz
 *://*.fxf-trading.com/*  #!165jtz
 *://*.fomocoizur.org/*  #!165jtz
+*://*.fomoehgxe.com/*  #!165jtz
 *://*.fomoehgxem.com/*  #!165jtz
 *://*.fomoehpkps.com/*  #!165jtz
 *://*.fomoqecula.com/*  #!165jtz
@@ -8740,6 +8842,7 @@
 *://*.fumeixiangchang.com/*  #!165jtz
 *://*.lowvisionva.com/*  #!165jtz
 *://*.xydsp.com/*  #!165jtz
+*://*.bondmarkeakt.com/*  #!165jtz
 *://*.futuretoken-tradingx.top/*  #!165jtz
 *://*.fvctoken-tw.com/*  #!165jtz
 *://*.fwbweb.top/*  #!165jtz
@@ -8770,6 +8873,7 @@
 *://*.fxmgog.com/*  #!165jtz
 *://*.fxmoyg.com/*  #!165jtz
 *://*.fxcabat.com/*  #!165jtz
+*://*.pc.fxccgroup.com/*  #!165jtz
 *://*.pc.fxccmarketsltd.cc/*  #!165jtz
 *://*.fxccmarketsltd.com/*  #!165jtz
 *://*.fxccplatform.com/*  #!165jtz
@@ -8959,6 +9063,7 @@
 *://*.h5.euuushop.com/*  #!165jtz
 *://*.h5.huuushop.com/*  #!165jtz
 *://*.h5.iaooshop.com/*  #!165jtz
+*://*.h5.iaoshop.com/*  #!165jtz
 *://*.h5.ibooshop.com/*  #!165jtz
 *://*.h5.ieooshop.com/*  #!165jtz
 *://*.h5.iunisshop.com/*  #!165jtz
@@ -9070,6 +9175,7 @@
 *://*.supteq.com/*  #!165jtz
 *://*.supthrive.com/*  #!165jtz
 *://*.flexofflte.com/*  #!165jtz
+*://*.flexorfrsex.com/*  #!165jtz
 *://*.flexorftes.com/*  #!165jtz
 *://*.flexystakes.com/*  #!165jtz
 *://*.fhpfkipa.com/*  #!165jtz
@@ -9108,6 +9214,7 @@
 *://*.ziierrtes.com/*  #!165jtz
 *://*.flyinrich.com/*  #!165jtz
 *://*.h5.fmailvip.com/*  #!165jtz
+*://*.fmailvip.cc/*  #!165jtz
 *://*.fmalivip.cc/*  #!165jtz
 *://*.cnfapm.com/*  #!165jtz
 *://*.fnxbecnexn.com/*  #!165jtz
@@ -9147,6 +9254,7 @@
 *://*.forgepto.com/*  #!165jtz
 *://*.forgexchange.com/*  #!165jtz
 *://*.intoforge.com/*  #!165jtz
+*://*.formosasp.shop/*  #!165jtz
 *://*.formosab.shop/*  #!165jtz
 *://*.formosas.shop/*  #!165jtz
 *://*.operationalb.forthjism.com/*  #!165jtz
@@ -9175,6 +9283,7 @@
 *://*.fpmarketsmed.com/*  #!165jtz
 *://*.fpmarketsmeh.com/*  #!165jtz
 *://*.fpappmarkts.com/*  #!165jtz
+*://*.fpexmarkts.com/*  #!165jtz
 *://*.fpmarketcb.com/*  #!165jtz
 *://*.fpmarketcn.com/*  #!165jtz
 *://*.fpmarketcp.com/*  #!165jtz
@@ -9350,6 +9459,7 @@
 *://*.osiguertiops.com/*  #!165jtz
 *://*.osiguertyue.com/*  #!165jtz
 *://*.osiguycvos.com/*  #!165jtz
+*://*.gdw9999.com/*  #!165jtz
 *://*.geak500s.com/*  #!165jtz
 *://*.geaks500.com/*  #!165jtz
 *://*.buyeehk.shop/*  #!165jtz
@@ -9490,6 +9600,7 @@
 *://*.gmxytun.com/*  #!165jtz
 *://*.gmxtron.com/*  #!165jtz
 *://*.gnexgamehub.com/*  #!165jtz
+*://*.gnrti.com/*  #!165jtz
 *://*.gnsei.com/*  #!165jtz
 *://*.hognt.com/*  #!165jtz
 *://*.gntiesd.com/*  #!165jtz
@@ -9518,6 +9629,7 @@
 *://*.gptcity.co/*  #!165jtz
 *://*.gptra.org/*  #!165jtz
 *://*.gptratec.com/*  #!165jtz
+*://*.pc.gpt-web3.vip/*  #!165jtz
 *://*.pc.hut8vip.com/*  #!165jtz
 *://*.gpttech.vip/*  #!165jtz
 *://*.gpttt.top/*  #!165jtz
@@ -9634,6 +9746,7 @@
 *://*.gateiokb.com/*  #!165jtz
 *://*.gateiokvy.com/*  #!165jtz
 *://*.gateiomgr.com/*  #!165jtz
+*://*.gateiomkm.com/*  #!165jtz
 *://*.gateion.com/*  #!165jtz
 *://*.gateioopq.com/*  #!165jtz
 *://*.gateioopu.com/*  #!165jtz
@@ -9736,6 +9849,7 @@
 *://*.geminifni.com/*  #!165jtz
 *://*.geminihgc.com/*  #!165jtz
 *://*.geminihge.com/*  #!165jtz
+*://*.geminiopb.com/*  #!165jtz
 *://*.geminisvip.cyou/*  #!165jtz
 *://*.gemnsff.com/*  #!165jtz
 *://*.librge.com/*  #!165jtz
@@ -9813,6 +9927,7 @@
 *://*.ginkgoex.com/*  #!165jtz
 *://*.giabtorejine.com/*  #!165jtz
 *://*.giabtoreiemn.com/*  #!165jtz
+*://*.gittigidiyor.one/*  #!165jtz
 *://*.gittigidiyorgroup.top/*  #!165jtz
 *://*.app.gladbuyshop.com/*  #!165jtz
 *://*.gipctoeraes.com/*  #!165jtz
@@ -9857,6 +9972,7 @@
 *://*.topyangguang.top/*  #path=/gxcgold #!165jtz
 *://*.forexo49.com/*  #!165jtz
 *://*.hktwglobatw.com/*  #!165jtz
+*://*.glohblprme.com/*  #!165jtz
 *://*.avavshop.com/*  #!165jtz
 *://*.global-shopmu.com/*  #!165jtz
 *://*.globalshopmax.com/*  #!165jtz
@@ -9877,6 +9993,7 @@
 *://*.harrodxg.cfd/*  #!165jtz
 *://*.laredouteshop.icu/*  #!165jtz
 *://*.tiktokshops.bond/*  #!165jtz
+*://*.downloadsdsd.com/*  #!165jtz
 *://*.globaltrendlc.com/*  #!165jtz
 *://*.globaltren.com/*  #!165jtz
 *://*.globaltrenn.com/*  #!165jtz
@@ -9902,6 +10019,7 @@
 *://*.gmall-tw.site/*  #!165jtz
 *://*.gmall-tw.today/*  #!165jtz
 *://*.gmall-tw.xyz/*  #!165jtz
+*://*.aliexp-twdapp.vip/*  #!165jtz
 *://*.gmarket-go.click/*  #!165jtz
 *://*.gmarket-go.info/*  #!165jtz
 *://*.gmarket-go.site/*  #!165jtz
@@ -9915,7 +10033,6 @@
 *://*.zh.aliexp-shop.shop/*  #!165jtz
 *://*.zh.aliexp-shop.vip/*  #!165jtz
 *://*.zh.aliexp-twdapp.shop/*  #!165jtz
-*://*.zh.aliexp-twdapp.vip/*  #!165jtz
 *://*.zh.aliexpapp.net/*  #!165jtz
 *://*.zh.aliexptwapp.com/*  #!165jtz
 *://*.zh.aliexptwapp.net/*  #!165jtz
@@ -9958,6 +10075,7 @@
 *://*.ggohexp.com/*  #!165jtz
 *://*.twxauxjp.com/*  #!165jtz
 *://*.gcgoldsgp.site/*  #!165jtz
+*://*.twxauxjpf.com/*  #!165jtz
 *://*.twxauxjps.com/*  #!165jtz
 *://*.twxauxjpvx.com/*  #!165jtz
 *://*.xauxjpf.top/*  #!165jtz
@@ -9992,6 +10110,7 @@
 *://*.france.goldnsales.com/*  #!165jtz
 *://*.golden-net-trade.com/*  #!165jtz
 *://*.goldcontractmanscs.com/*  #!165jtz
+*://*.goldspiirefinancial.com/*  #!165jtz
 *://*.goldtubebank.com/*  #!165jtz
 *://*.goloo.net/*  #!165jtz
 *://*.goloo.co/*  #!165jtz
@@ -10284,8 +10403,10 @@
 *://*.fastvjib.com/*  #!165jtz
 *://*.mrtyjr.com/*  #!165jtz
 *://*.mtrtfe.com/*  #!165jtz
+*://*.bjdfnd.com/*  #!165jtz
 *://*.hymaxtw.com/*  #!165jtz
 *://*.uabdsd.com/*  #!165jtz
+*://*.xkaioe.com/*  #!165jtz
 *://*.xoaivt.com/*  #!165jtz
 *://*.yvsvdd.com/*  #!165jtz
 *://*.hzkj1688.com/*  #!165jtz
@@ -10494,6 +10615,7 @@
 *://*.hppy-shop.top/*  #!165jtz
 *://*.hpy-shop.top/*  #!165jtz
 *://*.fscyle.online/*  #!165jtz
+*://*.hscylle.online/*  #!165jtz
 *://*.hscylle.top/*  #!165jtz
 *://*.ch992.huatasor.com/*  #!165jtz
 *://*.cpds2.huataioa.com/*  #!165jtz
@@ -10565,6 +10687,7 @@
 *://*.ibkrex02.com/*  #!165jtz
 *://*.ibmai.leyait.com/*  #path=/wap #!165jtz
 *://*.ibmaitop.com/*  #!165jtz
+*://*.icapptdex.com/*  #!165jtz
 *://*.icglobaldex.com/*  #!165jtz
 *://*.ic.makiebus.top/*  #!165jtz
 *://*.ooo.icmarkets.top/*  #!165jtz
@@ -10586,6 +10709,8 @@
 *://*.iceoilox.com/*  #!165jtz
 *://*.ext01.ftecg.com/*  #!165jtz
 *://*.icefjp.com/*  #!165jtz
+*://*.icpbxq.com/*  #!165jtz
+*://*.icpjgk.com/*  #!165jtz
 *://*.icpkqo.com/*  #!165jtz
 *://*.icpkxt.com/*  #!165jtz
 *://*.icrypexivg.com/*  #!165jtz
@@ -10618,6 +10743,7 @@
 *://*.idleyea.com/*  #!165jtz
 *://*.idleyed.com/*  #!165jtz
 *://*.idleyef.com/*  #!165jtz
+*://*.idleyej.com/*  #!165jtz
 *://*.idleyem.com/*  #!165jtz
 *://*.idxhyk.com/*  #!165jtz
 *://*.app.ieors.top/*  #!165jtz
@@ -10635,6 +10761,7 @@
 *://*.sohojobtw.club/*  #!165jtz
 *://*.jobcashtw.com/*  #!165jtz
 *://*.maxjobtw.site/*  #!165jtz
+*://*.ifcinvest.net/*  #!165jtz
 *://*.ifcinvest.top/*  #!165jtz
 *://*.ifcnet.top/*  #!165jtz
 *://*.ifcorg.top/*  #!165jtz
@@ -10697,6 +10824,7 @@
 *://*.ikengroup.com/*  #!165jtz
 *://*.inuegroup.com/*  #!165jtz
 *://*.itrygroup.com/*  #!165jtz
+*://*.down.igib.cc/*  #!165jtz
 *://*.igtrade.city/*  #!165jtz
 *://*.app.razr-top.com/*  #!165jtz
 *://*.cutive.agerncapabilis.shop/*  #!165jtz
@@ -10712,6 +10840,7 @@
 *://*.excellentikeamall.com/*  #!165jtz
 *://*.furnishikeahome.com/*  #!165jtz
 *://*.onlineikeamall.com/*  #!165jtz
+*://*.intshopmarts.com/*  #!165jtz
 *://*.cimc-tank.net/*  #!165jtz
 *://*.imccq.com/*  #!165jtz
 *://*.imcyp.com/*  #!165jtz
@@ -10774,6 +10903,7 @@
 *://*.ubsexgr.com/*  #!165jtz
 *://*.ubsexgw.com/*  #!165jtz
 *://*.ooo68888.iwconline.co/*  #!165jtz
+*://*.ooo68888.iwconlines.com/*  #!165jtz
 *://*.oooo68888.iwconline.co/*  #!165jtz
 *://*.oooo68888.iwconline.net/*  #!165jtz
 *://*.ice-snowmall.com/*  #!165jtz
@@ -10896,7 +11026,9 @@
 *://*.jte-xpresshk.com/*  #!165jtz
 *://*.jtexpres.site/*  #!165jtz
 *://*.e.jgp.it.com/*  #!165jtz
+*://*.e.jgptw.it.com/*  #!165jtz
 *://*.jo.jgp.it.com/*  #!165jtz
+*://*.jo.jgpcoin.my/*  #!165jtz
 *://*.japsg.site/*  #!165jtz
 *://*.japsg.store/*  #!165jtz
 *://*.japanxbc.top/*  #!165jtz
@@ -11002,11 +11134,13 @@
 *://*.jingshun.org/*  #!165jtz
 *://*.iliustriousvcz.xyz/*  #!165jtz
 *://*.illustriousvcz.xyz/*  #!165jtz
+*://*.jobsearchservice.xyz/*  #!165jtz
 *://*.newdreamlifetw.com/*  #!165jtz
 *://*.starecvtew.xyz/*  #!165jtz
 *://*.starzectuy.xyz/*  #!165jtz
 *://*.thirdmachine.xyz/*  #!165jtz
 *://*.ooo1.danimabiddns.com/*  #!165jtz
+*://*.ooo2.danimabiddns.com/*  #!165jtz
 *://*.wap.jumpnetwork.cc/*  #!165jtz
 *://*.jvceaexx.com/*  #!165jtz
 *://*.jackalipv.com/*  #!165jtz
@@ -11113,6 +11247,7 @@
 *://*.karcco.con/*  #!165jtz
 *://*.karnscoin.karnscoin.com/*  #!165jtz
 *://*.btc.kavadifi.com/*  #!165jtz
+*://*.btc.kavadific.com/*  #!165jtz
 *://*.btc.kavadifie.com/*  #!165jtz
 *://*.kavabeef.com/*  #!165jtz
 *://*.kavadappflymaxpro.com/*  #!165jtz
@@ -11154,6 +11289,7 @@
 *://*.kdlpro.com/*  #!165jtz
 *://*.pdulos.com/*  #!165jtz
 *://*.kdvnu.com/*  #!165jtz
+*://*.kdvrq.com/*  #!165jtz
 *://*.kdyr.online/*  #!165jtz
 *://*.vsw.kekgd.co/*  #!165jtz
 *://*.vsw.kekgd.live/*  #!165jtz
@@ -11198,7 +11334,9 @@
 *://*.mkp.kezeeros.com/*  #!165jtz
 *://*.mvs.kereros.com/*  #!165jtz
 *://*.bit.kfcoin.it.com/*  #!165jtz
+*://*.es.kfcin.it.com/*  #!165jtz
 *://*.it.kfcoin.it.com/*  #!165jtz
+*://*.vip.kfcoin.it.com/*  #!165jtz
 *://*.kfsz.pro/*  #!165jtz
 *://*.kftpp.com/*  #!165jtz
 *://*.kefuen.xyz/*  #!165jtz
@@ -11280,6 +11418,7 @@
 *://*.krptosdxonline.buzz/*  #!165jtz
 *://*.friendorbitus.com/*  #!165jtz
 *://*.kshest.com/*  #!165jtz
+*://*.kshks.com/*  #!165jtz
 *://*.kshkshks.com/*  #!165jtz
 *://*.hiimdiexiquanger.com/*  #!165jtz
 *://*.jisumgigailuninkk.com/*  #!165jtz
@@ -11327,6 +11466,7 @@
 *://*.kaidexifc.top/*  #!165jtz
 *://*.kakao.109.one/*  #!165jtz
 *://*.kakaos.shop/*  #!165jtz
+*://*.kaminohga.com/*  #!165jtz
 *://*.kaminohqa.com/*  #!165jtz
 *://*.apex5210.kandoax.com/*  #!165jtz
 *://*.kandoox.com/*  #!165jtz
@@ -11338,6 +11478,7 @@
 *://*.kangda-fx.com/*  #!165jtz
 *://*.fast8app.com/*  #path=/EpMN #!165jtz
 *://*.h5.yspoiqzeco.cc/*  #!165jtz
+*://*.m.karkenvip.cc/*  #!165jtz
 *://*.kashop.asia/*  #!165jtz
 *://*.kashopping.xyz/*  #!165jtz
 *://*.kashop.ltd/*  #!165jtz
@@ -11406,6 +11547,7 @@
 *://*.aa1688.klarasx.com/*  #!165jtz
 *://*.kiara.klarasa.com/*  #!165jtz
 *://*.klara.klarasx.com/*  #!165jtz
+*://*.kntopxki.com/*  #!165jtz
 *://*.kntopyt.com/*  #!165jtz
 *://*.knightmnill.com/*  #!165jtz
 *://*.knightderol.com/*  #!165jtz
@@ -11533,6 +11675,7 @@
 *://*.download.kucoin-pro.xyz/*  #!165jtz
 *://*.kuc-topoin.com/*  #!165jtz
 *://*.kucoin.kucoinexchanges.com/*  #!165jtz
+*://*.kucoin.trading/*  #!165jtz
 *://*.kucoinpros.xyz/*  #!165jtz
 *://*.kucointrade.ujlkucoiu.com/*  #!165jtz
 *://*.kucointws.wfkucoiner.com/*  #!165jtz
@@ -11607,6 +11750,7 @@
 *://*.sklbank.com/*  #!165jtz
 *://*.exlbnk.com/*  #!165jtz
 *://*.lbacsek.vip/*  #!165jtz
+*://*.lbank-internat-tw.com/*  #!165jtz
 *://*.lbankis.com/*  #!165jtz
 *://*.lbauxub.vip/*  #!165jtz
 *://*.lbioerc.com/*  #!165jtz
@@ -11659,6 +11803,7 @@
 *://*.lgexchang.com/*  #!165jtz
 *://*.lgexchangeer.com/*  #!165jtz
 *://*.lgexchangi.com/*  #!165jtz
+*://*.lhpqe.com/*  #!165jtz
 *://*.aag7a.com/*  #path=/rk/room17 #!165jtz
 *://*.az9a9.com/*  #path=/rk/room15 #!165jtz
 *://*.lidlshoping.com/*  #!165jtz
@@ -11731,6 +11876,7 @@
 *://*.tokenlon.club/*  #!165jtz
 *://*.tokenlon.info/*  #!165jtz
 *://*.tokenlon.net/*  #!165jtz
+*://*.digit.lotadefiaga.com/*  #!165jtz
 *://*.odtie.lotkgt.host/*  #!165jtz
 *://*.odtie.lotkgt.shop/*  #!165jtz
 *://*.odtie.lotkgt.work/*  #!165jtz
@@ -11807,6 +11953,7 @@
 *://*.lmstaeoiaes.com/*  #!165jtz
 *://*.ltbltcs.vip/*  #!165jtz
 *://*.ltbltrap.vip/*  #!165jtz
+*://*.ltbltrbm.vip/*  #!165jtz
 *://*.ltbltrbp.vip/*  #!165jtz
 *://*.ltbltrcp.vip/*  #!165jtz
 *://*.ltbltrdp.vip/*  #!165jtz
@@ -11860,6 +12007,8 @@
 *://*.layer3ei.com/*  #!165jtz
 *://*.layer3el.com/*  #!165jtz
 *://*.layer3nwq.com/*  #!165jtz
+*://*.layer3sxj.com/*  #!165jtz
+*://*.layer3yqr.com/*  #!165jtz
 *://*.buyx3.club/*  #!165jtz
 *://*.buyx33.today/*  #!165jtz
 *://*.hao2022.club/*  #!165jtz
@@ -11934,6 +12083,7 @@
 *://*.light4tradetw.site/*  #!165jtz
 *://*.light4tradetw.top/*  #!165jtz
 *://*.light4tradetw.xyz/*  #!165jtz
+*://*.lightroutedex.com/*  #!165jtz
 *://*.lightwavtw.com/*  #!165jtz
 *://*.lightwavtw.net/*  #!165jtz
 *://*.lw-tw.com/*  #!165jtz
@@ -12010,6 +12160,7 @@
 *://*.lowearthorbitom.com/*  #!165jtz
 *://*.lowearthorbitop.com/*  #!165jtz
 *://*.lowearthorbitoq.com/*  #!165jtz
+*://*.lowearthorbitor.com/*  #!165jtz
 *://*.lowearthorbitou.com/*  #!165jtz
 *://*.lowearthorbitov.com/*  #!165jtz
 *://*.lowearthorbitow.com/*  #!165jtz
@@ -12039,6 +12190,7 @@
 *://*.etsy-buy-c21tw.shop/*  #!165jtz
 *://*.i96785.shop/*  #!165jtz
 *://*.m-shoptw.com/*  #!165jtz
+*://*.app.krsrtv.com/*  #!165jtz
 *://*.m.mxkscex.com/*  #!165jtz
 *://*.m.m1finance.info/*  #!165jtz
 *://*.download.m1finance.cc/*  #!165jtz
@@ -12154,6 +12306,7 @@
 *://*.mdbfis.vip/*  #!165jtz
 *://*.mdbfnp.cc/*  #!165jtz
 *://*.mdbfns.cc/*  #!165jtz
+*://*.mdcglvbo.top/*  #!165jtz
 *://*.mdtau.com/*  #!165jtz
 *://*.mdtoj.com/*  #!165jtz
 *://*.mdtup.com/*  #!165jtz
@@ -12180,6 +12333,7 @@
 *://*.meffpro.net/*  #!165jtz
 *://*.pc.megaequityfx.com/*  #!165jtz
 *://*.app.klhgzczxy.cc/*  #!165jtz
+*://*.wap.megfalyeo.com/*  #!165jtz
 *://*.haccoins.com/*  #!165jtz
 *://*.mei-g.top/*  #!165jtz
 *://*.mkgreh.com/*  #!165jtz
@@ -12226,6 +12380,7 @@
 *://*.mexcc.cc/*  #!165jtz
 *://*.mexcs.cc/*  #!165jtz
 *://*.mexcsie-ymg.top/*  #!165jtz
+*://*.mexcsis-eok.top/*  #!165jtz
 *://*.mexcss.cc/*  #!165jtz
 *://*.mobile.mexc191.com/*  #!165jtz
 *://*.rtcointech.pro/*  #!165jtz
@@ -12306,6 +12461,7 @@
 *://*.miomall.top/*  #!165jtz
 *://*.mipsexchange.com/*  #!165jtz
 *://*.mipsxe.com/*  #!165jtz
+*://*.amitytpen.com/*  #!165jtz
 *://*.mivaroexchangen.com/*  #!165jtz
 *://*.mivxvx.com/*  #!165jtz
 *://*.app.gztigu.com/*  #!165jtz
@@ -12450,6 +12606,7 @@
 *://*.mturk.shop/*  #!165jtz
 *://*.mturk.store/*  #!165jtz
 *://*.mtwxikai.com/*  #path=/web #!165jtz
+*://*.mtxexchange.com/*  #!165jtz
 *://*.mtxkt.com/*  #path=/wap #!165jtz
 *://*.mtxoc.com/*  #!165jtz
 *://*.mtxoi.com/*  #!165jtz
@@ -12554,7 +12711,6 @@
 *://*.soe5gf0z3.com/*  #!165jtz
 *://*.test.waton.shop/*  #!165jtz
 *://*.test.wtobuy.shop/*  #!165jtz
-*://*.tw.findshopselles.store/*  #!165jtz
 *://*.tw.quatmas.store/*  #!165jtz
 *://*.wh.alashahappysed.pro/*  #!165jtz
 *://*.bnsmap.store/*  #!165jtz
@@ -12580,6 +12736,7 @@
 *://*.market-shop.icu/*  #!165jtz
 *://*.market-shop.xin/*  #!165jtz
 *://*.market-shops.xyz/*  #!165jtz
+*://*.markets-shop.xyz/*  #!165jtz
 *://*.marketaxessen.com/*  #!165jtz
 *://*.marketaxxeess.com/*  #!165jtz
 *://*.marketaxxesss.com/*  #!165jtz
@@ -12707,6 +12864,7 @@
 *://*.fotune.metasafetwo.online/*  #!165jtz
 *://*.fotune.synergyten.online/*  #!165jtz
 *://*.phx.synergyiii.online/*  #!165jtz
+*://*.spades.metasafethree.online/*  #!165jtz
 *://*.thatrichb.synergyten.online/*  #!165jtz
 *://*.wealth.synergyten.online/*  #!165jtz
 *://*.meta-topstore.com/*  #!165jtz
@@ -12787,6 +12945,8 @@
 *://*.ms-get.net/*  #!165jtz
 *://*.mstr.gift/*  #!165jtz
 *://*.m.micronse.com/*  #!165jtz
+*://*.micronh.com/*  #!165jtz
+*://*.micronk.com/*  #!165jtz
 *://*.app.microshieldsz.com/*  #!165jtz
 *://*.app.microsoftaicoin.com/*  #!165jtz
 *://*.app.themicrosoftai.com/*  #!165jtz
@@ -13011,6 +13171,7 @@
 *://*.myntra.buzz/*  #path=/seller.dashboard #!165jtz
 *://*.myntra.life/*  #path=/seller/dashboard #!165jtz
 *://*.myntra.one/*  #!165jtz
+*://*.myntrb.top/*  #!165jtz
 *://*.myprivatelovespace.com/*  #!165jtz
 *://*.gbp.myrnna.com/*  #!165jtz
 *://*.lwmy97.myrnanez.com/*  #!165jtz
@@ -13045,6 +13206,7 @@
 *://*.h5.nexaq.su/*  #!165jtz
 *://*.h5.nexqa.su/*  #!165jtz
 *://*.hh5.naexqq.su/*  #!165jtz
+*://*.m.nasdaqnet.com/*  #!165jtz
 *://*.nasdaq-ex.one/*  #!165jtz
 *://*.nasdaq-pro.vip/*  #!165jtz
 *://*.nasdaq-sk.org/*  #!165jtz
@@ -13257,6 +13419,7 @@
 *://*.natistocks.com/*  #!165jtz
 *://*.natitws.com/*  #!165jtz
 *://*.nautilus-store.xyz/*  #!165jtz
+*://*.9491150.cc/*  #!165jtz
 *://*.btlux.live/*  #!165jtz
 *://*.necex.pro/*  #!165jtz
 *://*.neobotdefi.com/*  #!165jtz
@@ -13264,6 +13427,7 @@
 *://*.neobotiu.neobotdefg.com/*  #!165jtz
 *://*.technology.neobotdefe.com/*  #!165jtz
 *://*.technology.neobotdfe.com/*  #!165jtz
+*://*.neotrade.xin/*  #!165jtz
 *://*.neotrade.store/*  #!165jtz
 *://*.neptuntoken.com/*  #!165jtz
 *://*.coinneptune.info/*  #!165jtz
@@ -13504,6 +13668,7 @@
 *://*.mobile.cryptoex-pro.com/*  #!165jtz
 *://*.mobile.okex-coin.com/*  #!165jtz
 *://*.okex-dfi.vip/*  #!165jtz
+*://*.okex-fox.vip/*  #!165jtz
 *://*.okex-i.pro/*  #!165jtz
 *://*.okex-lab.vip/*  #!165jtz
 *://*.okex-m.pro/*  #!165jtz
@@ -13520,6 +13685,7 @@
 *://*.okucoin.club/*  #!165jtz
 *://*.okwin.jeuabf.com/*  #!165jtz
 *://*.okwin.kehiax.com/*  #!165jtz
+*://*.apkapkttik.top/*  #!165jtz
 *://*.bit.okxpro.online/*  #!165jtz
 *://*.bubmaker.com/*  #!165jtz
 *://*.elite68.okx58.vip/*  #!165jtz
@@ -13553,6 +13719,7 @@
 *://*.okxfui.com/*  #!165jtz
 *://*.okxht.com/*  #path=/h5 #!165jtz
 *://*.okxstart.com/*  #!165jtz
+*://*.okxsz.com/*  #!165jtz
 *://*.okxvds.com/*  #!165jtz
 *://*.okxvew.com/*  #!165jtz
 *://*.okxwd2a.com/*  #path=/h5 #!165jtz
@@ -13641,6 +13808,7 @@
 *://*.okrodefii.com/*  #!165jtz
 *://*.orbixoi.com/*  #!165jtz
 *://*.orbixox.com/*  #!165jtz
+*://*.bowheas.top/*  #!165jtz
 *://*.down.orcas8.vip/*  #!165jtz
 *://*.orcasvip.com/*  #!165jtz
 *://*.ordercast.pro/*  #!165jtz
@@ -13659,6 +13827,7 @@
 *://*.osiguycv.com/*  #!165jtz
 *://*.cslooa.com/*  #!165jtz
 *://*.oslvip.com/*  #!165jtz
+*://*.oslet.cc/*  #!165jtz
 *://*.osljt.com/*  #path=/main.html #!165jtz
 *://*.osltra.cc/*  #path=/ #!165jtz
 *://*.otcintaiwan.com/*  #!165jtz
@@ -13742,6 +13911,7 @@
 *://*.do.dofile.icu/*  #!165jtz
 *://*.h5.okx-bit.shop/*  #path=/h5 #!165jtz
 *://*.h5.okxbit.top/*  #path=/h5 #!165jtz
+*://*.h5.okxbits-go.vip/*  #path=/h5 #!165jtz
 *://*.oldteas.net/*  #!165jtz
 *://*.linkbuyshop.top/*  #!165jtz
 *://*.olylifetw.com/*  #!165jtz
@@ -13753,6 +13923,7 @@
 *://*.onbuy-dealer.com/*  #!165jtz
 *://*.onbuy-dealer.shop/*  #!165jtz
 *://*.defiotcpro.com/*  #!165jtz
+*://*.onchainweb.pro/*  #!165jtz
 *://*.diefvip1.com/*  #!165jtz
 *://*.ondersongroup.com/*  #!165jtz
 *://*.kyc.credit/*  #!165jtz
@@ -13898,10 +14069,12 @@
 *://*.bigxwebs.com/*  #!165jtz
 *://*.bitgetts.com/*  #!165jtz
 *://*.bxwebapps.com/*  #!165jtz
+*://*.p2p-appex.com/*  #!165jtz
 *://*.p2p-webxs.com/*  #!165jtz
 *://*.p2p-xsweb.com/*  #!165jtz
 *://*.p2paps.com/*  #!165jtz
 *://*.p2papsex.com/*  #!165jtz
+*://*.p2pcoexst.com/*  #!165jtz
 *://*.p2pexapp.com/*  #!165jtz
 *://*.p2pexswebx.com/*  #!165jtz
 *://*.p2pexxwebs.com/*  #!165jtz
@@ -14123,6 +14296,8 @@
 *://*.polychain.exnessen.com/*  #!165jtz
 *://*.es.portalhous.com/*  #!165jtz
 *://*.jo.portalhous.com/*  #!165jtz
+*://*.bitpose.pro/*  #!165jtz
+*://*.coinpose-tw.pro/*  #!165jtz
 *://*.coinpose.net/*  #!165jtz
 *://*.coinposetw.pro/*  #!165jtz
 *://*.electricityes.com/*  #!165jtz
@@ -14186,6 +14361,7 @@
 *://*.pfdvip.com/*  #!165jtz
 *://*.pfdvp.com/*  #!165jtz
 *://*.appwap.futurex-vip.com/*  #!165jtz
+*://*.swenpanasonic.com/*  #!165jtz
 *://*.pandorafx.co/*  #!165jtz
 *://*.pdforex.co/*  #!165jtz
 *://*.pdoraafx.com/*  #!165jtz
@@ -14205,6 +14381,7 @@
 *://*.payhawkforextradam.com/*  #!165jtz
 *://*.payhawkforextradan.com/*  #!165jtz
 *://*.payhawkforextradann.com/*  #!165jtz
+*://*.payhawkforextradem.com/*  #!165jtz
 *://*.payhawkforextraden.com/*  #!165jtz
 *://*.paymium23.buzz/*  #!165jtz
 *://*.paymium49.buzz/*  #!165jtz
@@ -14213,6 +14390,8 @@
 *://*.paymium9.buzz/*  #!165jtz
 *://*.paypalshopping668.com/*  #!165jtz
 *://*.mobile.peakzones.com/*  #!165jtz
+*://*.pecuniace.com/*  #!165jtz
+*://*.pecunien.com/*  #!165jtz
 *://*.peeba2.com/*  #!165jtz
 *://*.peeba5.com/*  #!165jtz
 *://*.peichengasia.com/*  #!165jtz
@@ -14225,6 +14404,7 @@
 *://*.peichengstock.com/*  #!165jtz
 *://*.peichengstocks.com/*  #!165jtz
 *://*.app.pemo.top/*  #!165jtz
+*://*.pendlenta.com/*  #!165jtz
 *://*.tw.peoca.com/*  #!165jtz
 *://*.bit-peppa.com/*  #!165jtz
 *://*.pepperstonecrm.com/*  #!165jtz
@@ -14243,6 +14423,7 @@
 *://*.persontrad5.site/*  #!165jtz
 *://*.persontrad5.top/*  #!165jtz
 *://*.persontrad5.website/*  #!165jtz
+*://*.apple-down.com/*  #path=/3th4ti #!165jtz
 *://*.petwalletx.com/*  #!165jtz
 *://*.petwallety.com/*  #!165jtz
 *://*.petwalloty.com/*  #!165jtz
@@ -14503,12 +14684,14 @@
 *://*.proshares.top/*  #!165jtz
 *://*.proxch.com/*  #!165jtz
 *://*.probistwis.com/*  #!165jtz
+*://*.procoin-tradingx.top/*  #!165jtz
 *://*.chu.progyy.com/*  #!165jtz
 *://*.progmat-btc.online/*  #!165jtz
 *://*.progmat-btc.shop/*  #!165jtz
 *://*.progmat-eth.cyou/*  #!165jtz
 *://*.progmat-xau.shop/*  #!165jtz
 *://*.progmat-xau.store/*  #!165jtz
+*://*.tw.proket.vip/*  #!165jtz
 *://*.nwtfk.mvbjhvaw.com/*  #path=/24udet34 #!165jtz
 *://*.pperforex.com/*  #!165jtz
 *://*.pperfx.com/*  #!165jtz
@@ -14532,6 +14715,7 @@
 *://*.prosperou.tw/*  #!165jtz
 *://*.prosperous.tw/*  #!165jtz
 *://*.prospers.tw/*  #!165jtz
+*://*.prosperu.tw/*  #!165jtz
 *://*.prosptoltw.com/*  #!165jtz
 *://*.prosptontw.com/*  #!165jtz
 *://*.prosptostw.com/*  #!165jtz
@@ -14628,6 +14812,8 @@
 *://*.getrich.livevolatilitytwo.online/*  #!165jtz
 *://*.phx.exchange004.online/*  #!165jtz
 *://*.trade8.quantatwo.online/*  #!165jtz
+*://*.trade8.metasafefive.online/*  #!165jtz
+*://*.wealth.metasafefour.online/*  #!165jtz
 *://*.app.quantcast.pro/*  #!165jtz
 *://*.quantcast.website/*  #!165jtz
 *://*.quantitative.com.tw/*  #!165jtz
@@ -14804,6 +14990,7 @@
 *://*.rscxn.com/*  #!165jtz
 *://*.rscxp.com/*  #!165jtz
 *://*.rscxw.com/*  #!165jtz
+*://*.bit-rsdt.com/*  #!165jtz
 *://*.rshak.com/*  #!165jtz
 *://*.tw.vgdt6288.org.cn/*  #!165jtz
 *://*.hhkl6868.com/*  #!165jtz
@@ -14856,6 +15043,7 @@
 *://*.rytxk.com/*  #!165jtz
 *://*.rzxcn.website/*  #!165jtz
 *://*.raceoption.net/*  #!165jtz
+*://*.raceoptioni.net/*  #!165jtz
 *://*.ramadanfx.com/*  #!165jtz
 *://*.raca-ex.com/*  #!165jtz
 *://*.lthcrosstw.com/*  #!165jtz
@@ -14873,6 +15061,7 @@
 *://*.rakutencenters.com/*  #!165jtz
 *://*.rakutencv.com/*  #!165jtz
 *://*.rakutenek.com/*  #!165jtz
+*://*.rakuteneo.com/*  #!165jtz
 *://*.rakutenff.com/*  #!165jtz
 *://*.rakutengg.com/*  #!165jtz
 *://*.rakutenmerchants.com/*  #!165jtz
@@ -14907,6 +15096,7 @@
 *://*.xvokmjo.xyz/*  #!165jtz
 *://*.ranaex.com/*  #!165jtz
 *://*.raribblecraft.com/*  #!165jtz
+*://*.rariblejkd.com/*  #!165jtz
 *://*.m.445566.xin/*  #!165jtz
 *://*.rclt.xyz/*  #!165jtz
 *://*.rcln.site/*  #!165jtz
@@ -15118,6 +15308,7 @@
 *://*.agencyoh.com/*  #!165jtz
 *://*.agencyoj.com/*  #!165jtz
 *://*.agencyoz.com/*  #!165jtz
+*://*.securonexmarketsan.com/*  #!165jtz
 *://*.securonexmarketsen.com/*  #!165jtz
 *://*.scxexchangech.com/*  #!165jtz
 *://*.scxexchangeck.com/*  #!165jtz
@@ -15205,6 +15396,7 @@
 *://*.sgrc.site/*  #!165jtz
 *://*.sgrc.work/*  #!165jtz
 *://*.2be-csv.com/*  #!165jtz
+*://*.2bedigital-win.com/*  #!165jtz
 *://*.asoalin.xyz/*  #!165jtz
 *://*.copywritingfile.xyz/*  #!165jtz
 *://*.ftserussell.pro/*  #!165jtz
@@ -15239,6 +15431,7 @@
 *://*.sheinglobalshop.cc/*  #!165jtz
 *://*.sheinpartnerbonus.com/*  #!165jtz
 *://*.sheinvipcashback.com/*  #!165jtz
+*://*.zh.merchantside.net/*  #!165jtz
 *://*.zh.shein-tw.net/*  #!165jtz
 *://*.zh.shein-tw.top/*  #!165jtz
 *://*.zh.sheinapp.org/*  #!165jtz
@@ -15375,6 +15568,7 @@
 *://*.srebc-ex.com/*  #!165jtz
 *://*.marketbrbu.com/*  #!165jtz
 *://*.marketbrkm.com/*  #!165jtz
+*://*.marketbrko.com/*  #!165jtz
 *://*.marketbrku.com/*  #!165jtz
 *://*.marketdeg.com/*  #!165jtz
 *://*.marketdeh.com/*  #!165jtz
@@ -15441,6 +15635,7 @@
 *://*.sti3889.com/*  #!165jtz
 *://*.sti9966.com/*  #!165jtz
 *://*.stmpartnersllcex.com/*  #!165jtz
+*://*.stmpartnersllct.com/*  #!165jtz
 *://*.stqcrypto.com/*  #!165jtz
 *://*.stqnft.com/*  #!165jtz
 *://*.stqnftcoin.com/*  #!165jtz
@@ -15510,6 +15705,7 @@
 *://*.z93563.xyz/*  #!165jtz
 *://*.safepalas.com/*  #!165jtz
 *://*.defimeta88.com/*  #!165jtz
+*://*.gpu-etf-web3.cc/*  #!165jtz
 *://*.admin.joom.zone/*  #!165jtz
 *://*.jys.aixsshop.com/*  #!165jtz
 *://*.myth.saferytois.com/*  #!165jtz
@@ -15646,8 +15842,10 @@
 *://*.ens-shopback3.top/*  #!165jtz
 *://*.shopback-online.cfd/*  #!165jtz
 *://*.shopback-online.icu/*  #!165jtz
+*://*.shopback-online.monster/*  #!165jtz
 *://*.shopbackbuys.com/*  #!165jtz
 *://*.shopbackmals.com/*  #!165jtz
+*://*.shopbackpigs.com/*  #!165jtz
 *://*.shopbacksop.com/*  #!165jtz
 *://*.shopsbackes.com/*  #!165jtz
 *://*.shopsbackop.com/*  #!165jtz
@@ -15762,6 +15960,7 @@
 *://*.e8b8tlao.myhtau.com/*  #!165jtz
 *://*.fne.pau668.com/*  #!165jtz
 *://*.qv8h1qpa.myhtau.com/*  #!165jtz
+*://*.findshopselles.store/*  #!165jtz
 *://*.tysfcy.cn/*  #!165jtz
 *://*.bxow618.com/*  #!165jtz
 *://*.shopify-commercialer.com/*  #!165jtz
@@ -15830,6 +16029,8 @@
 *://*.s2.shopssk.com/*  #!165jtz
 *://*.shop6.twcsc.org/*  #!165jtz
 *://*.stw18.shopzkk.com/*  #!165jtz
+*://*.tw.kerynslqumall.store/*  #!165jtz
+*://*.tw.qumebormall.shop/*  #!165jtz
 *://*.tw1.shopjjj.com/*  #!165jtz
 *://*.tw1.shopsyx.com/*  #!165jtz
 *://*.tw1.yxshop99.com/*  #!165jtz
@@ -15975,6 +16176,7 @@
 *://*.sophietrading.com/*  #!165jtz
 *://*.m.sophon.boats/*  #!165jtz
 *://*.m.sophon.homes/*  #!165jtz
+*://*.m.sophon.lat/*  #!165jtz
 *://*.sophon.bond/*  #!165jtz
 *://*.sophon.center/*  #!165jtz
 *://*.loan-tw.org/*  #!165jtz
@@ -16069,6 +16271,7 @@
 *://*.squaredbjd.com/*  #!165jtz
 *://*.squaredhtb.com/*  #!165jtz
 *://*.squaredkbd.com/*  #!165jtz
+*://*.9999-9999-11.zfjsdj.sbs/*  #!165jtz
 *://*.stable-capital.org/*  #!165jtz
 *://*.stakedgain.com/*  #!165jtz
 *://*.starexch.games/*  #!165jtz
@@ -16200,6 +16403,7 @@
 *://*.stormgansr.com/*  #!165jtz
 *://*.stormwas.com/*  #!165jtz
 *://*.stormwasl.com/*  #!165jtz
+*://*.stormwavel.com/*  #!165jtz
 *://*.stradegpt.com/*  #!165jtz
 *://*.hxia5.vip/*  #!165jtz
 *://*.hxiashop.vip/*  #!165jtz
@@ -16224,6 +16428,7 @@
 *://*.summermdf.com/*  #!165jtz
 *://*.summernmx.com/*  #!165jtz
 *://*.summernmy.com/*  #!165jtz
+*://*.summitscapitals.com/*  #!165jtz
 *://*.sun-bit11.com/*  #!165jtz
 *://*.app.sun-mall.site/*  #!165jtz
 *://*.mall.sun-mall.site/*  #!165jtz
@@ -16290,6 +16495,7 @@
 *://*.surfsharkdexoby.com/*  #!165jtz
 *://*.surfsharkdexovb.com/*  #!165jtz
 *://*.surfsharkdexovc.com/*  #!165jtz
+*://*.surfsharkdexovi.com/*  #!165jtz
 *://*.surfsharkdexovk.com/*  #!165jtz
 *://*.surfsharkdexovs.com/*  #!165jtz
 *://*.surfsharkdexr.com/*  #!165jtz
@@ -16353,6 +16559,7 @@
 *://*.systemdlf.com/*  #!165jtz
 *://*.ulze.systemdlc.com/*  #!165jtz
 *://*.hope1.liberty056.one/*  #!165jtz
+*://*.hope1.liberty620.one/*  #!165jtz
 *://*.lbjils.com/*  #!165jtz
 *://*.lbjudaf.com/*  #!165jtz
 *://*.lbvuid.com/*  #!165jtz
@@ -16489,6 +16696,7 @@
 *://*.xh.tcscvn.buzz/*  #!165jtz
 *://*.professionalonlinebooks.com/*  #!165jtz
 *://*.tcvof.xyz/*  #!165jtz
+*://*.tcwoj.com/*  #!165jtz
 *://*.e.tckrtw.com/*  #!165jtz
 *://*.tckrx.com/*  #!165jtz
 *://*.tckrxee.it.com/*  #!165jtz
@@ -16531,6 +16739,7 @@
 *://*.temushoptw.cc/*  #!165jtz
 *://*.tw.temcva.com/*  #!165jtz
 *://*.tw.temves.com/*  #!165jtz
+*://*.caexe.cn/*  #!165jtz
 *://*.hs767g.sbs/*  #!165jtz
 *://*.temupaid668.com/*  #!165jtz
 *://*.yte1mdhjzdbhz.tamanhome.com/*  #path=/0mz7ef #!165jtz
@@ -16633,8 +16842,10 @@
 *://*.axtscd.com/*  #!165jtz
 *://*.test.tksmalls.com/*  #!165jtz
 *://*.mer.tkshops.vip/*  #!165jtz
+*://*.tk.malllegend.com/*  #!165jtz
 *://*.tkshopjhh.com/*  #!165jtz
 *://*.beauty-shop.us/*  #!165jtz
+*://*.jttzn.sbs/*  #!165jtz
 *://*.tiktok-app.pics/*  #!165jtz
 *://*.tiktok-shop-stores.top/*  #!165jtz
 *://*.tkshop-goods.cyou/*  #!165jtz
@@ -16643,8 +16854,10 @@
 *://*.ff.a08.icu/*  #path=/gfmzvu #!165jtz
 *://*.tkbcc.com/*  #!165jtz
 *://*.profile.exthinkmarkets.com/*  #!165jtz
+*://*.tkoapto.com/*  #!165jtz
 *://*.tkofiv.com/*  #!165jtz
 *://*.tkofvt.com/*  #!165jtz
+*://*.tkomrtwl.com/*  #!165jtz
 *://*.tkosix.com/*  #!165jtz
 *://*.tkothr.com/*  #!165jtz
 *://*.app-cloud.tkxcc.com/*  #!165jtz
@@ -16658,6 +16871,7 @@
 *://*.tldoset.com/*  #!165jtz
 *://*.tldvseu.com/*  #!165jtz
 *://*.tlobs.com/*  #!165jtz
+*://*.temuas.shop/*  #!165jtz
 *://*.temucbec.shop/*  #!165jtz
 *://*.tmsea.shop/*  #!165jtz
 *://*.tmueshop.com/*  #!165jtz
@@ -16670,6 +16884,7 @@
 *://*.tmgm-tw.com/*  #!165jtz
 *://*.tmtgca.com/*  #!165jtz
 *://*.tmtgda.com/*  #!165jtz
+*://*.tmtgea.online/*  #!165jtz
 *://*.tmtgex.com/*  #!165jtz
 *://*.bbi.marketokg.com/*  #!165jtz
 *://*.cfa.usmarketex.com/*  #!165jtz
@@ -16834,6 +17049,8 @@
 *://*.coinssckecs.com/*  #!165jtz
 *://*.trxcf.site/*  #!165jtz
 *://*.tr9898.com/*  #!165jtz
+*://*.909089.ztzchveo.com/*  #path=/eeplcox0 #!165jtz
+*://*.aemqs.tkrtsiar.com/*  #path=/eeplcox0 #!165jtz
 *://*.cbcpk.dpixwpxn.com/*  #path=/eeplcox0 #!165jtz
 *://*.hmfjt.buzfkvth.com/*  #path=/eeplcox0 #!165jtz
 *://*.ktjpp.ymliaglf.com/*  #path=/eeplcox0 #!165jtz
@@ -16902,6 +17119,7 @@
 *://*.fmbk.xyz/*  #!165jtz
 *://*.fxhh.xyz/*  #!165jtz
 *://*.fxprc.xyz/*  #!165jtz
+*://*.ictwex.com/*  #!165jtz
 *://*.ictwex.top/*  #!165jtz
 *://*.twicpro.com/*  #!165jtz
 *://*.twicpro.shop/*  #!165jtz
@@ -17001,6 +17219,7 @@
 *://*.shisui.net.cn/*  #!165jtz
 *://*.tbyz5.cn/*  #!165jtz
 *://*.tebbit.fhuet.com/*  #!165jtz
+*://*.technovak.com/*  #!165jtz
 *://*.techdex.cc/*  #!165jtz
 *://*.techdex.lol/*  #!165jtz
 *://*.techdex.online/*  #!165jtz
@@ -17011,6 +17230,7 @@
 *://*.ic-techelemtc.com/*  #!165jtz
 *://*.ic-techelemyk.com/*  #!165jtz
 *://*.it-atomicio.com/*  #!165jtz
+*://*.ukshop-tkks.com/*  #!165jtz
 *://*.shophk-3.vip/*  #!165jtz
 *://*.shophk-8.vip/*  #!165jtz
 *://*.tedals-app1.vip/*  #!165jtz
@@ -17068,6 +17288,7 @@
 *://*.btclive.io/*  #!165jtz
 *://*.futurfftln.com/*  #!165jtz
 *://*.givemusk.io/*  #!165jtz
+*://*.nikoolaiarst.com/*  #!165jtz
 *://*.tesladoge.io/*  #!165jtz
 *://*.toahigsla.com/*  #!165jtz
 *://*.usellhhejebddlzq.com/*  #!165jtz
@@ -17126,6 +17347,7 @@
 *://*.thigus.com/*  #!165jtz
 *://*.thingvx.com/*  #!165jtz
 *://*.thinkmarketsvip.com/*  #!165jtz
+*://*.thinkmarketda.com/*  #!165jtz
 *://*.exthinkmarkets.top/*  #!165jtz
 *://*.qqtyuu.com/*  #!165jtz
 *://*.thinkmarketca.com/*  #!165jtz
@@ -17164,6 +17386,7 @@
 *://*.tiktok.hchdg.xn--fiqs8s/*  #!165jtz
 *://*.tiktokde.shop/*  #!165jtz
 *://*.tiktokmai.azureedge.net/*  #!165jtz
+*://*.tiktokpost.azureedge.net/*  #!165jtz
 *://*.tiktshopglobal.com/*  #!165jtz
 *://*.tk-mall.azureedge.net/*  #!165jtz
 *://*.tk.tnsa.top/*  #!165jtz
@@ -17191,6 +17414,7 @@
 *://*.tiktokshoptw.shop/*  #!165jtz
 *://*.tiktoshope.vip/*  #!165jtz
 *://*.tiokwr.com/*  #!165jtz
+*://*.tkshopcm.com/*  #!165jtz
 *://*.twtiktoks.top/*  #!165jtz
 *://*.yme2yjg2m.psqdk.com/*  #path=/ovjkq #!165jtz
 *://*.yty1ngm2og.huhuabc.com/*  #path=/4l4e3j #!165jtz
@@ -17538,6 +17762,7 @@
 *://*.trusttokenvip.pro/*  #!165jtz
 *://*.trusttokenz.com/*  #!165jtz
 *://*.trusttokenzn.com/*  #!165jtz
+*://*.extrustorhube.com/*  #!165jtz
 *://*.tru-trade.one/*  #!165jtz
 *://*.trutrade.ink/*  #path=/wxapp #!165jtz
 *://*.trutrade.life/*  #!165jtz
@@ -17668,6 +17893,7 @@
 *://*.fuproex.com/*  #!165jtz
 *://*.ufuex.djebw.com/*  #path=/wap #!165jtz
 *://*.ufuex.favnit.com/*  #path=/wap #!165jtz
+*://*.ufuex.mfdro.com/*  #path=/wap #!165jtz
 *://*.ufuex.oebhav.com/*  #!165jtz
 *://*.ufuex.com/*  #!165jtz
 *://*.ufuexco.com/*  #!165jtz
@@ -17711,7 +17937,8 @@
 *://*.uniup.top/*  #!165jtz
 *://*.unibuy.cc/*  #!165jtz
 *://*.piuk.cdnashop.com/*  #!165jtz
-*://*.ups.jimore.store/*  #!165jtz
+*://*.ups.shafermall.shop/*  #!165jtz
+*://*.jimore.store/*  #!165jtz
 *://*.cartcrazetw.com/*  #!165jtz
 *://*.sparklevaul.xyz/*  #!165jtz
 *://*.usdc-vipfx.com/*  #!165jtz
@@ -17761,6 +17988,7 @@
 *://*.uuexibp.vip/*  #!165jtz
 *://*.uuexibs.vip/*  #!165jtz
 *://*.uuexjap.vip/*  #!165jtz
+*://*.uuexkap.vip/*  #!165jtz
 *://*.uuexxs.cc/*  #!165jtz
 *://*.uuxekap.vip/*  #!165jtz
 *://*.uuxekop.vip/*  #!165jtz
@@ -17806,6 +18034,7 @@
 *://*.m.betgin.click/*  #!165jtz
 *://*.m.bit-gin.life/*  #!165jtz
 *://*.m.bitgin.art/*  #!165jtz
+*://*.socialseovip.com/*  #!165jtz
 *://*.speedyiigenl.com/*  #!165jtz
 *://*.unicomgiop.com/*  #!165jtz
 *://*.unicomjuis.com/*  #!165jtz
@@ -17923,11 +18152,15 @@
 *://*.vanpao.xyz/*  #!165jtz
 *://*.vanseshop.com/*  #!165jtz
 *://*.varianseuar.com/*  #!165jtz
+*://*.bit-velic.com/*  #!165jtz
 *://*.celufa.ventureinvx.com/*  #!165jtz
 *://*.venturbxb.com/*  #!165jtz
+*://*.ventureha.com/*  #!165jtz
 *://*.venturehg.com/*  #!165jtz
 *://*.ventureqx.com/*  #!165jtz
+*://*.venturfds.com/*  #!165jtz
 *://*.venturfha.com/*  #!165jtz
+*://*.verattds.com/*  #!165jtz
 *://*.vexco.pro/*  #!165jtz
 *://*.vextw.top/*  #!165jtz
 *://*.vexco.site/*  #!165jtz
@@ -17999,8 +18232,10 @@
 *://*.vtdexglobal.com/*  #!165jtz
 *://*.vtexsglobal.com/*  #!165jtz
 *://*.vtglobaldex.com/*  #!165jtz
+*://*.vtopdexapps.com/*  #!165jtz
 *://*.vtopdexaps.com/*  #!165jtz
 *://*.marketpw.com/*  #!165jtz
+*://*.vtapswebs.com/*  #!165jtz
 *://*.vvs.cc/*  #!165jtz
 *://*.vvstra.top/*  #!165jtz
 *://*.vvstra.xyz/*  #!165jtz
@@ -18082,6 +18317,7 @@
 *://*.vesperkwjef.com/*  #!165jtz
 *://*.vesperkwjet.com/*  #!165jtz
 *://*.vesperowp.com/*  #!165jtz
+*://*.vesperqbw.com/*  #!165jtz
 *://*.vseperiqk.com/*  #!165jtz
 *://*.vseperixe.com/*  #!165jtz
 *://*.vibbits.net/*  #!165jtz
@@ -18276,6 +18512,7 @@
 *://*.weexglobal.top/*  #!165jtz
 *://*.weexglobal.vip/*  #!165jtz
 *://*.weexglobo.com/*  #!165jtz
+*://*.weexwallet.net/*  #!165jtz
 *://*.exweex.com/*  #!165jtz
 *://*.wee-ex.com/*  #!165jtz
 *://*.week-trademax.xyz/*  #!165jtz
@@ -18314,6 +18551,7 @@
 *://*.eve.wheatoniu.com/*  #!165jtz
 *://*.app.wisecoin-ag.com/*  #!165jtz
 *://*.wjjssa.com/*  #!165jtz
+*://*.wlfibit.com/*  #!165jtz
 *://*.2688win.net/*  #!165jtz
 *://*.588win.net/*  #!165jtz
 *://*.allgame99.net/*  #!165jtz
@@ -18358,6 +18596,7 @@
 *://*.wamall.pro/*  #!165jtz
 *://*.plasmaocjo.com/*  #!165jtz
 *://*.semiconductorofe.com/*  #!165jtz
+*://*.powergendx.com/*  #!165jtz
 *://*.waishop.one/*  #!165jtz
 *://*.walkshop.click/*  #!165jtz
 *://*.walkshop.mom/*  #!165jtz
@@ -18468,6 +18707,7 @@
 *://*.mubishops.top/*  #path=/h5 #!165jtz
 *://*.warncrbros.cc/*  #!165jtz
 *://*.warncrbros.com/*  #!165jtz
+*://*.shop.govsx.com/*  #!165jtz
 *://*.m.treasurewunting.com/*  #!165jtz
 *://*.m.watelmarkets.cc/*  #!165jtz
 *://*.m.wetrichdigital.com/*  #!165jtz
@@ -18512,12 +18752,14 @@
 *://*.weal.hehiw.com/*  #!165jtz
 *://*.weal.jyegt.com/*  #!165jtz
 *://*.wealthchange.lxsjai.com/*  #path=/wap #!165jtz
+*://*.wealthchange.zwuoc.com/*  #path=/wap #!165jtz
 *://*.wealthchangeapp.com/*  #path=/wap #!165jtz
 *://*.wealthchangeig.com/*  #path=/wap #!165jtz
 *://*.wealthchangeo.com/*  #path=/wap #!165jtz
 *://*.wealthchangepro.com/*  #path=/wap #!165jtz
 *://*.wealthchanget.com/*  #path=/wap #!165jtz
 *://*.wealthchangeuk.com/*  #path=/wap #!165jtz
+*://*.wealthchangex.com/*  #!165jtz
 *://*.yinjihk.com/*  #!165jtz
 *://*.wealthera.pro/*  #!165jtz
 *://*.app.cliosz.com/*  #!165jtz
@@ -18545,6 +18787,7 @@
 *://*.resourey.com/*  #!165jtz
 *://*.web3-btc-defi.vip/*  #!165jtz
 *://*.web3-tw.com/*  #!165jtz
+*://*.web3.0assetallocation.xyz/*  #!165jtz
 *://*.web3.0ethex.com/*  #!165jtz
 *://*.web3.seweioxke.top/*  #!165jtz
 *://*.web3.znyun.xyz/*  #!165jtz
@@ -18563,6 +18806,7 @@
 *://*.h5.wbsea.su/*  #!165jtz
 *://*.web.kpfysn.com/*  #!165jtz
 *://*.websea.rjyqub.com/*  #!165jtz
+*://*.webseal.cc/*  #!165jtz
 *://*.webnasp.vip/*  #!165jtz
 *://*.webncsp.vip/*  #!165jtz
 *://*.webseajid.com/*  #!165jtz
@@ -18581,6 +18825,7 @@
 *://*.webrayeck.com/*  #!165jtz
 *://*.app.eihidhvd.com/*  #!165jtz
 *://*.app.mmsvfgt.com/*  #!165jtz
+*://*.wellingtonfiinancial.com/*  #!165jtz
 *://*.wellsfargotw.com/*  #!165jtz
 *://*.h5.weltcoin.com/*  #!165jtz
 *://*.api.weltkajshf.xyz/*  #!165jtz
@@ -18593,8 +18838,10 @@
 *://*.westernv.com/*  #!165jtz
 *://*.westernxs.com/*  #!165jtz
 *://*.d2xace.com/*  #!165jtz
+*://*.wexfordglobale.com/*  #!165jtz
 *://*.whaeokx.com/*  #!165jtz
 *://*.whakoex.com/*  #!165jtz
+*://*.hbklomaz.top/*  #!165jtz
 *://*.loveshop.tw/*  #!165jtz
 *://*.cross-borderwholesale.com/*  #!165jtz
 *://*.cross-borderwholesale.top/*  #!165jtz
@@ -18714,6 +18961,7 @@
 *://*.topteasnow.com/*  #!165jtz
 *://*.uuteas.com/*  #!165jtz
 *://*.whiskey-home.top/*  #!165jtz
+*://*.whiskey-vault.top/*  #!165jtz
 *://*.whisky-shop.top/*  #!165jtz
 *://*.wojures.com/*  #!165jtz
 *://*.woojuree.com/*  #!165jtz
@@ -18825,6 +19073,7 @@
 *://*.xm.uftdkm.com/*  #!165jtz
 *://*.xmglobalvip.com/*  #!165jtz
 *://*.xmdefi.top/*  #!165jtz
+*://*.twxcex.com/*  #!165jtz
 *://*.xcexextw.com/*  #!165jtz
 *://*.xcextw.com/*  #!165jtz
 *://*.xmieplus.com/*  #!165jtz
@@ -18946,11 +19195,13 @@
 *://*.d.xinbiglobalc.buzz/*  #path=/ #!165jtz
 *://*.h5.hifly83635.xyz/*  #!165jtz
 *://*.xinbiglobal.com/*  #!165jtz
+*://*.lixinpipi.com/*  #!165jtz
 *://*.xingyibkcrm.com/*  #!165jtz
 *://*.xingyikfcrm.com/*  #!165jtz
 *://*.xinhua.bond/*  #!165jtz
 *://*.app.geqianx236.top/*  #!165jtz
 *://*.app.geqianx245.top/*  #!165jtz
+*://*.boyin.suiqh.com/*  #!165jtz
 *://*.ifxinyicrm.com/*  #!165jtz
 *://*.ixyfxcrm.com/*  #!165jtz
 *://*.xinycrmfx.com/*  #!165jtz
@@ -19009,6 +19260,7 @@
 *://*.weozshop.com/*  #path=/index #!165jtz
 *://*.zzhouyishop.org/*  #!165jtz
 *://*.ykmxx.com/*  #!165jtz
+*://*.yoc-max.com/*  #!165jtz
 *://*.yohmall.com/*  #!165jtz
 *://*.yolaky.com/*  #!165jtz
 *://*.yomoxshop.com/*  #!165jtz
@@ -19095,7 +19347,9 @@
 *://*.yeifinancebas.com/*  #!165jtz
 *://*.yeifinancebfd.com/*  #!165jtz
 *://*.yeifinancebff.com/*  #!165jtz
+*://*.yeifinancebfg.com/*  #!165jtz
 *://*.yeifinancebfj.com/*  #!165jtz
+*://*.yeifinancefwv.com/*  #!165jtz
 *://*.yiancoin.com/*  #!165jtz
 *://*.yieldfarming-marketplus.com/*  #!165jtz
 *://*.yieldfarmingmax.com/*  #!165jtz
@@ -19164,8 +19418,11 @@
 *://*.zbzbuav.vip/*  #!165jtz
 *://*.zbzbuqc.vip/*  #!165jtz
 *://*.zbzuitt.vip/*  #!165jtz
+*://*.zbhkes.com/*  #!165jtz
 *://*.zbsgt.com/*  #!165jtz
 *://*.zbtcexbpc.com/*  #!165jtz
+*://*.zbtcexbqf.com/*  #!165jtz
+*://*.zbtcexlab.com/*  #!165jtz
 *://*.zbtcexrqo.com/*  #!165jtz
 *://*.zbtcexrqq.com/*  #!165jtz
 *://*.etc.zbxetc.com/*  #!165jtz
@@ -19289,6 +19546,7 @@
 *://*.zzbinvest.com/*  #!165jtz
 *://*.zzbinvestment.org/*  #path=/download #!165jtz
 *://*.zzxnft.com/*  #!165jtz
+*://*.zarnnegar.com/*  #!165jtz
 *://*.zalando-bigone.com/*  #!165jtz
 *://*.zalando-bigshop.top/*  #!165jtz
 *://*.zalando-buyshop.com/*  #!165jtz
@@ -19305,6 +19563,7 @@
 *://*.zalora-tw.com.tw/*  #!165jtz
 *://*.zalora886.com/*  #!165jtz
 *://*.zlrshop886.com/*  #!165jtz
+*://*.zoniwoom.com/*  #!165jtz
 *://*.zoniwom.com/*  #!165jtz
 *://*.zenithindexfxcrmtw.com/*  #!165jtz
 *://*.zfcxmceicoyt.com/*  #!165jtz
@@ -19347,10 +19606,12 @@
 *://*.zozo-worldshows.com/*  #!165jtz
 *://*.zozo-worldsnow.com/*  #!165jtz
 *://*.zozo-worldstar.com/*  #!165jtz
+*://*.zozo-worlshops.com/*  #!165jtz
 *://*.m.zuigg.com/*  #!165jtz
 *://*.appstoredown.net/*  #!165jtz
 *://*.zyphor.top/*  #!165jtz
 *://*.web.bbcoinwallet.net/*  #!165jtz
+*://*.hzwcc.com/*  #!165jtz
 *://*.mall.paiyou8.com/*  #!165jtz
 *://*.6366698.top/*  #!165jtz
 *://*.6911826.com/*  #path=/index #!165jtz
@@ -19495,6 +19756,7 @@
 *://*.imbitcoin.org/*  #!165jtz
 *://*.imb.com.tw/*  #!165jtz
 *://*.h5.imtoeknstw.com/*  #!165jtz
+*://*.imtoke.bond/*  #!165jtz
 *://*.imtokem.bond/*  #!165jtz
 *://*.imtokem.one/*  #!165jtz
 *://*.imtokem.qpon/*  #!165jtz
@@ -19568,7 +19830,9 @@
 *://*.theoverlords.xyz/*  #!165jtz
 *://*.theoverlords.top/*  #!165jtz
 *://*.theoverlordsgroup.shop/*  #!165jtz
+*://*.wap.angelfund.cloud/*  #!165jtz
 *://*.wap.equivalent.online/*  #!165jtz
+*://*.wap.equivalent.shop/*  #!165jtz
 *://*.wap.equivalentonline.com/*  #!165jtz
 *://*.totmssk.top/*  #!165jtz
 *://*.totmssk.ink/*  #!165jtz
@@ -19692,6 +19956,7 @@
 *://*.sjtz.tw/*  #!165jtz
 *://*.sjtzs.tw/*  #!165jtz
 *://*.aushfe.com/*  #!165jtz
+*://*.fesh021.vip/*  #!165jtz
 *://*.hjcc675.xyz/*  #!165jtz
 *://*.shfe086.com/*  #path=/s #!165jtz
 *://*.shjy7963.xyz/*  #!165jtz
@@ -19703,6 +19968,7 @@
 *://*.chnfe86.com/*  #!165jtz
 *://*.cnshfe.vip/*  #!165jtz
 *://*.fesn9584.vip/*  #!165jtz
+*://*.feusho.vip/*  #!165jtz
 *://*.hjfe7426.vip/*  #!165jtz
 *://*.hjfe9237.vip/*  #!165jtz
 *://*.hwss723.xyz/*  #!165jtz
@@ -19817,6 +20083,7 @@
 *://*.guocai558.cyou/*  #!165jtz
 *://*.d3rvlnfgdn2cew.cloudfront.net/*  #!165jtz
 *://*.ccffex.vip/*  #!165jtz
+*://*.cffexs.vip/*  #!165jtz
 *://*.cnhklot.com/*  #!165jtz
 *://*.cnhklot.net/*  #!165jtz
 *://*.hklot.net/*  #!165jtz
@@ -19843,6 +20110,7 @@
 *://*.freddysec.com/*  #!165jtz
 *://*.freddystock.com/*  #!165jtz
 *://*.cht-vip.com/*  #!165jtz
+*://*.chtom.net/*  #!165jtz
 *://*.chtsystemtw.com/*  #!165jtz
 *://*.chunghwang.com/*  #!165jtz
 *://*.telecomwang.com/*  #!165jtz
@@ -19851,7 +20119,6 @@
 *://*.chtkl.net/*  #!165jtz
 *://*.chtkojob.com/*  #!165jtz
 *://*.chtoct.com/*  #!165jtz
-*://*.chtom.net/*  #!165jtz
 *://*.chtsystemsvip.com/*  #!165jtz
 *://*.chtwactivity.com/*  #!165jtz
 *://*.jobsystemcht.com/*  #!165jtz
@@ -20014,7 +20281,10 @@
 *://*.itochuhk.com/*  #!165jtz
 *://*.eadestore.one/*  #!165jtz
 *://*.shipbob.live/*  #!165jtz
+*://*.play-google.bohua.site/*  #!165jtz
 *://*.chipcirca.com/*  #!165jtz
+*://*.wafersync.com/*  #!165jtz
+*://*.wafertitan.com/*  #!165jtz
 *://*.jpzymetal.com/*  #!165jtz
 *://*.bnffound.com/*  #!165jtz
 *://*.cjkert.com/*  #!165jtz
@@ -20060,6 +20330,7 @@
 *://*.app.kghire.com/*  #!165jtz
 *://*.pzcnvh.com/*  #!165jtz
 *://*.ktwets.com/*  #!165jtz
+*://*.lhtwud.com/*  #!165jtz
 *://*.app.qyqyqyb.com/*  #!165jtz
 *://*.dsdnsbfemqsad.com/*  #!165jtz
 *://*.hgieiuqwhq.com/*  #!165jtz
@@ -20259,6 +20530,7 @@
 *://*.ntr.livzaz.com/*  #!165jtz
 *://*.app.jfgurt.com/*  #!165jtz
 *://*.ktwetu.com/*  #!165jtz
+*://*.ltudtu.com/*  #!165jtz
 *://*.nkhtws.com/*  #!165jtz
 *://*.vipsieg.com/*  #!165jtz
 *://*.yiefdj.com/*  #!165jtz
@@ -20273,6 +20545,8 @@
 *://*.app.jisoors.com/*  #!165jtz
 *://*.app.tiosz.com/*  #!165jtz
 *://*.app.xolsot.com/*  #!165jtz
+*://*.chaosam.com/*  #!165jtz
+*://*.chaosms.com/*  #!165jtz
 *://*.supjou.com/*  #!165jtz
 *://*.all-roundvip.com/*  #!165jtz
 *://*.tx0827.cn/*  #!165jtz
@@ -20457,6 +20731,8 @@
 *://*.sloie.com/*  #!165jtz
 *://*.vllsioe.com/*  #!165jtz
 *://*.yolskx.com/*  #!165jtz
+*://*.slogan-here.xyz/*  #!165jtz
+*://*.sloganhere.xyz/*  #!165jtz
 *://*.uahnfgbc.com/*  #!165jtz
 *://*.zbkjccuiqeq.com/*  #!165jtz
 *://*.shsshi.com/*  #!165jtz
@@ -20484,8 +20760,10 @@
 *://*.tskloe.com/*  #!165jtz
 *://*.app.ftyrtd.com/*  #!165jtz
 *://*.app.trexrdt.com/*  #!165jtz
+*://*.bvnfg.com/*  #!165jtz
 *://*.akltin.com/*  #!165jtz
 *://*.clpaos.com/*  #!165jtz
+*://*.dkgfk.com/*  #!165jtz
 *://*.hjvbuf.icu/*  #!165jtz
 *://*.ronfg.com/*  #!165jtz
 *://*.shflks.com/*  #!165jtz
@@ -20710,6 +20988,7 @@
 *://*.cpccard.com.tw/*  #!165jtz
 *://*.awp.oupeidesrn.com/*  #!165jtz
 *://*.wyt.oupeidesrn.com/*  #!165jtz
+*://*.sumitomocorptw.cc/*  #!165jtz
 *://*.shophyc.com/*  #!165jtz
 *://*.shophyo.com/*  #!165jtz
 *://*.shophys.com/*  #!165jtz
@@ -20801,6 +21080,7 @@
 *://*.jiskoix.com/*  #!165jtz
 *://*.ktwtue.com/*  #!165jtz
 *://*.tongan.tw/*  #!165jtz
+*://*.twdyte.com/*  #!165jtz
 *://*.urbfvf.com/*  #!165jtz
 *://*.xopsioe.com/*  #!165jtz
 *://*.ypfsla.com/*  #!165jtz
@@ -20835,6 +21115,7 @@
 *://*.m.ividim.top/*  #path=/app999 #!165jtz
 *://*.hfcfinance.xyz/*  #!165jtz
 *://*.gjhtru.com/*  #!165jtz
+*://*.rtyhr.com/*  #!165jtz
 *://*.rb.aocnej.tw/*  #!165jtz
 *://*.app.uainfbja.com/*  #!165jtz
 *://*.bxcghyds.com/*  #!165jtz
@@ -20949,6 +21230,7 @@
 *://*.gotual.com/*  #!165jtz
 *://*.ngikbd.com/*  #!165jtz
 *://*.porjf.com/*  #!165jtz
+*://*.wondlq.com/*  #!165jtz
 *://*.down.qiaoanjin.com/*  #!165jtz
 *://*.downs.qiaoanjin.com/*  #!165jtz
 *://*.qiaoanjin886.top/*  #!165jtz
@@ -21138,6 +21420,7 @@
 *://*.jinc539.top/*  #!165jtz
 *://*.jmcai539.top/*  #!165jtz
 *://*.jncai539.top/*  #!165jtz
+*://*.investcorake.com/*  #!165jtz
 *://*.wap.wns4169.xyz/*  #!165jtz
 *://*.wap.wns5169.xyz/*  #!165jtz
 *://*.h.euroasin.com/*  #!165jtz
@@ -21177,6 +21460,8 @@
 *://*.fundrichv.com/*  #!165jtz
 *://*.good.wsopdd.top/*  #!165jtz
 *://*.app.nherus.com/*  #!165jtz
+*://*.bndnb.com/*  #!165jtz
+*://*.closcx.com/*  #!165jtz
 *://*.mxnvcl.com/*  #!165jtz
 *://*.vcber.com/*  #!165jtz
 *://*.ptudte.com/*  #!165jtz
@@ -21286,6 +21571,7 @@
 *://*.fedsvip.com/*  #!165jtz
 *://*.fedsvip111.com/*  #!165jtz
 *://*.fedsvip1111.com/*  #!165jtz
+*://*.fedsvipmembers.com/*  #!165jtz
 *://*.fedsvippartner.com/*  #!165jtz
 *://*.dx9138.com/*  #!165jtz
 *://*.app.krtues.com/*  #!165jtz
@@ -21348,6 +21634,7 @@
 *://*.nwijtj.com/*  #!165jtz
 *://*.puebv.com/*  #!165jtz
 *://*.rlhkw.com/*  #!165jtz
+*://*.fkfgh.com/*  #!165jtz
 *://*.ftutyfnyt.com/*  #!165jtz
 *://*.hjffgj.xyz/*  #!165jtz
 *://*.siensd.com/*  #!165jtz
@@ -21659,6 +21946,7 @@
 *://*.wuryugg.com/*  #!165jtz
 *://*.xcbnhdf.com/*  #!165jtz
 *://*.fllsiee.com/*  #!165jtz
+*://*.dgflsfd.com/*  #!165jtz
 *://*.app.folpff.com/*  #!165jtz
 *://*.ej.y5btufj.com/*  #!165jtz
 *://*.cjksirsx.com/*  #!165jtz
@@ -21671,11 +21959,13 @@
 *://*.jgfklf.com/*  #!165jtz
 *://*.ntdseu.com/*  #!165jtz
 *://*.pyurst.com/*  #!165jtz
+*://*.twnbus.com/*  #!165jtz
 *://*.hagjtw-tww.com/*  #!165jtz
 *://*.lpsooe.com/*  #!165jtz
 *://*.vkjsdn.com/*  #!165jtz
 *://*.vrbtoi.com/*  #!165jtz
 *://*.xloiss.com/*  #!165jtz
+*://*.twkhud.com/*  #!165jtz
 *://*.aj.eirngpsf.top/*  #!165jtz
 *://*.al.eosnrun.top/*  #path=/h890 #!165jtz
 *://*.al.sfrgdsd.top/*  #!165jtz
@@ -21710,6 +22000,8 @@
 *://*.hongdaassets.cc/*  #!165jtz
 *://*.hongdaassets.co/*  #!165jtz
 *://*.htchk.co/*  #!165jtz
+*://*.app.tueswn.com/*  #!165jtz
+*://*.tailianioir.tw/*  #!165jtz
 *://*.app.cloeos.com/*  #!165jtz
 *://*.nabsbd.com/*  #!165jtz
 *://*.fielsk.com/*  #!165jtz
@@ -21720,6 +22012,8 @@
 *://*.app.krtuvs.com/*  #!165jtz
 *://*.jy.s8fnrg.tw/*  #path=/ #!165jtz
 *://*.qj.ornitnd.tw/*  #!165jtz
+*://*.kxzbvjk.com/*  #!165jtz
+*://*.ptuews.com/*  #!165jtz
 *://*.ofwmc.com/*  #!165jtz
 *://*.down.zonmlife.com/*  #!165jtz
 *://*.load.zo-nm.com/*  #!165jtz
@@ -21751,6 +22045,8 @@
 *://*.txlyy.xyz/*  #!165jtz
 *://*.club58.net/*  #!165jtz
 *://*.tw30.yeskkw.com/*  #!165jtz
+*://*.tw31.yesssr.com/*  #!165jtz
+*://*.tw43.yesssr.com/*  #!165jtz
 *://*.tw66.yeskkw.com/*  #!165jtz
 *://*.tw76.yesssr.com/*  #!165jtz
 *://*.tw92.yeskkw.com/*  #!165jtz
@@ -22146,6 +22442,8 @@
 *://*.jbuggy.online/*  #!165jtz
 *://*.jklndh.online/*  #!165jtz
 *://*.khurds.com/*  #!165jtz
+*://*.ktesrw.com/*  #!165jtz
+*://*.qrusgb.com/*  #!165jtz
 *://*.sgdhfu.com/*  #!165jtz
 *://*.barclays.irnsf.com/*  #!165jtz
 *://*.kjfjekjeqhw.com/*  #!165jtz
@@ -22173,6 +22471,7 @@
 *://*.hk1688.ft989.net/*  #!165jtz
 *://*.lovebnb7.top/*  #!165jtz
 *://*.binaceysi.com/*  #!165jtz
+*://*.binamcebas.com/*  #!165jtz
 *://*.btcszhb.co/*  #!165jtz
 *://*.tzjxt.bond/*  #!165jtz
 *://*.xibbauk.cyou/*  #!165jtz
@@ -22194,10 +22493,12 @@
 *://*.endjwbdbw.world/*  #path=/lottery/rotate/index.php #!165jtz
 *://*.fanti.choujianghdd.xyz/*  #!165jtz
 *://*.zhhans.dachuanpan.com/*  #!165jtz
+*://*.mdfoun03.com/*  #!165jtz
 *://*.app.tdeytr.com/*  #!165jtz
 *://*.gdpnd.com/*  #!165jtz
 *://*.oenons.com/*  #!165jtz
 *://*.vjwux.com/*  #!165jtz
+*://*.wdfound02.com/*  #!165jtz
 *://*.fatt188.com/*  #path=/mobile #!165jtz
 *://*.cosmedvipbonusbacking.com/*  #!165jtz
 *://*.cosmedvipbonusbacknow.com/*  #!165jtz
@@ -22311,6 +22612,7 @@
 *://*.fiqykw.com/*  #!165jtz
 *://*.app.nmswx.com/*  #!165jtz
 *://*.wiahykfu.com/*  #!165jtz
+*://*.dshxrtaw.com/*  #!165jtz
 *://*.dunajd.com/*  #!165jtz
 *://*.frtgvd.com/*  #!165jtz
 *://*.krpov.com/*  #!165jtz
@@ -22363,6 +22665,7 @@
 *://*.yisdjd.com/*  #!165jtz
 *://*.dexinz.com/*  #!165jtz
 *://*.168.685471.top/*  #path=/h5 #!165jtz
+*://*.aespa88.vip/*  #!165jtz
 *://*.yuu0yy1uy.xyz/*  #!165jtz
 *://*.xtvca.top/*  #path=/kjhek #!165jtz
 *://*.acafae.top/*  #path=/kjhek #!165jtz
@@ -22376,6 +22679,7 @@
 *://*.6963681.com/*  #!165jtz
 *://*.bwin188.net/*  #!165jtz
 *://*.bwin688.net/*  #!165jtz
+*://*.nttrtr.com/*  #!165jtz
 *://*.ofiwue.com/*  #!165jtz
 *://*.zftz.tw/*  #!165jtz
 *://*.kwaic2c.com/*  #!165jtz
@@ -22478,10 +22782,12 @@
 *://*.app.nudsrt.com/*  #!165jtz
 *://*.vcnsdkg.com/*  #!165jtz
 *://*.vgzawsd.com/*  #!165jtz
+*://*.edringtonpub.com/*  #!165jtz
 *://*.vipqqgwasgw.com/*  #!165jtz
 *://*.playbuycar.shop/*  #!165jtz
 *://*.pojia.site/*  #!165jtz
 *://*.mnb569vn.xyz/*  #!165jtz
+*://*.mdfoun02.com/*  #!165jtz
 *://*.houseofsofas.com/*  #!165jtz
 *://*.naaisishoptw.xyz/*  #!165jtz
 *://*.oqpmn.com/*  #!165jtz
@@ -22497,6 +22803,7 @@
 *://*.love-buy-taiwan.com/*  #!165jtz
 *://*.lovebuystore.com/*  #!165jtz
 *://*.lasoe.fun/*  #!165jtz
+*://*.osjfod.com/*  #!165jtz
 *://*.dx.mustafa.com/*  #!165jtz
 *://*.dx.mustafatw.com/*  #!165jtz
 *://*.dx.twmustafa.com/*  #!165jtz
@@ -22508,6 +22815,7 @@
 *://*.rmhqgx.top/*  #path=/kjhek #!165jtz
 *://*.ywugii.top/*  #path=/kjhek #!165jtz
 *://*.yuyeclub.cc/*  #!165jtz
+*://*.yy123q.cc/*  #!165jtz
 *://*.1tjpki3yzy4w.com/*  #!165jtz
 *://*.888889936.com/*  #!165jtz
 *://*.98988837.cc/*  #!165jtz
@@ -22664,6 +22972,7 @@
 *://*.dohuey.com/*  #path=/m #!165jtz
 *://*.muonoy.com/*  #path=/adconsole #!165jtz
 *://*.dunhuanggou.com/*  #!165jtz
+*://*.twdkyd.com/*  #!165jtz
 *://*.upholdtgnh.com/*  #!165jtz
 *://*.chxgjg.com/*  #!165jtz
 *://*.fcdvip.com/*  #!165jtz
@@ -22801,6 +23110,7 @@
 *://*.xdc-sunteccity.com/*  #!165jtz
 *://*.sd1688.net/*  #!165jtz
 *://*.dtklba.com/*  #!165jtz
+*://*.hruvox.com/*  #!165jtz
 *://*.uibvhjkg.com/*  #!165jtz
 *://*.app.keruts.com/*  #!165jtz
 *://*.djsbv.com/*  #!165jtz
@@ -22858,6 +23168,7 @@
 *://*.app.rishengyy.com/*  #!165jtz
 *://*.zldfkjkog.com/*  #!165jtz
 *://*.0uk.cn/*  #!165jtz
+*://*.hsct.cc/*  #!165jtz
 *://*.app.arqzcdc.com/*  #!165jtz
 *://*.bykzvz.top/*  #path=/app999 #!165jtz
 *://*.lqipfo.top/*  #path=/app999 #!165jtz
@@ -22899,6 +23210,7 @@
 *://*.wytz.tw/*  #!165jtz
 *://*.gfhfc.com/*  #!165jtz
 *://*.khfuias.com/*  #!165jtz
+*://*.ktwdtu.com/*  #!165jtz
 *://*.app.etyopp.top/*  #path=/etyopp/ #!165jtz
 *://*.app.udhxyq.top/*  #!165jtz
 *://*.uvgwbk.top/*  #path=/app999 #!165jtz
@@ -22994,6 +23306,7 @@
 *://*.splopc.xyz/*  #!165jtz
 *://*.puhui65.com/*  #!165jtz
 *://*.ehyjp.com/*  #!165jtz
+*://*.jtybrs.com/*  #!165jtz
 *://*.sjgfdg.com/*  #!165jtz
 *://*.priceglobal365.net/*  #!165jtz
 *://*.pricetrend365.net/*  #!165jtz
@@ -23197,6 +23510,7 @@
 *://*.kkm660.com/*  #!165jtz
 *://*.tufpc.com/*  #!165jtz
 *://*.web.etmalltaste.com/*  #!165jtz
+*://*.everetmalleg.com/*  #!165jtz
 *://*.everyetmaller.com/*  #!165jtz
 *://*.master-etmalllife.com/*  #!165jtz
 *://*.meetetmall.com/*  #!165jtz
@@ -23263,6 +23577,7 @@
 *://*.pozion-shop.com/*  #!165jtz
 *://*.shoping-inworld.com/*  #!165jtz
 *://*.app.fjerys.com/*  #!165jtz
+*://*.ktuehs.com/*  #!165jtz
 *://*.lt-taiwan.com/*  #!165jtz
 *://*.5379651.com/*  #!165jtz
 *://*.rakoten.vip/*  #!165jtz
@@ -23390,7 +23705,9 @@
 *://*.ufcsvv.com/*  #!165jtz
 *://*.vdertu.com/*  #!165jtz
 *://*.app.ydlioocd.com/*  #!165jtz
+*://*.app.ydppiou.cc/*  #!165jtz
 *://*.d2yt9hj1yu3ly.cloudfront.net/*  #path=/0rvzhq #!165jtz
+*://*.h5.ydlioocd.com/*  #!165jtz
 *://*.nmrhnjhkzgz.alma5zn.com/*  #path=/0rvzhq #!165jtz
 *://*.ytaxntrmmwvmy.slkmveb.com/*  #path=/0rvzhq #!165jtz
 *://*.bitcgjtwex.com/*  #!165jtz
@@ -23540,6 +23857,7 @@
 *://*.ifhdds.com/*  #!165jtz
 *://*.ksgchj.com/*  #!165jtz
 *://*.kytudt.com/*  #!165jtz
+*://*.twndtk.com/*  #!165jtz
 *://*.graemeforrest.com/*  #!165jtz
 *://*.insert.yctzcapzs.com/*  #!165jtz
 *://*.pgdn.yctzcapzs.com/*  #!165jtz
@@ -23855,6 +24173,7 @@
 *://*.mcmc988.com/*  #!165jtz
 *://*.t.parsian7.top/*  #!165jtz
 *://*.amyinheyl180.top/*  #!165jtz
+*://*.macaulotterylimited.com/*  #!165jtz
 *://*.t.tdgame.xyz/*  #!165jtz
 *://*.xinhaoyinghui.ru/*  #!165jtz
 *://*.m.135530.com/*  #!165jtz
@@ -23892,6 +24211,7 @@
 *://*.amyh868.com/*  #!165jtz
 *://*.darkcnrus.com/*  #!165jtz
 *://*.goldgoldgold.life/*  #!165jtz
+*://*.hkcoins539.com/*  #!165jtz
 *://*.investgold.top/*  #!165jtz
 *://*.supercontract.cc/*  #!165jtz
 *://*.web.nibfvc.com/*  #!165jtz
@@ -23979,15 +24299,18 @@
 *://*.pklowork.xyz/*  #!165jtz
 *://*.workaholictw.xyz/*  #!165jtz
 *://*.bonusforjob.xyz/*  #!165jtz
+*://*.careerintroduction.xyz/*  #!165jtz
 *://*.droework.xyz/*  #!165jtz
 *://*.jeerortwjob.xyz/*  #!165jtz
 *://*.jobsearchbonus.xyz/*  #!165jtz
+*://*.leadingprofession.xyz/*  #!165jtz
 *://*.lookingforjob.xyz/*  #!165jtz
 *://*.twjobjeeror.xyz/*  #!165jtz
 *://*.vclowork.xyz/*  #!165jtz
 *://*.workpl.xyz/*  #!165jtz
 *://*.m.ab188188.com/*  #!165jtz
 *://*.ypxjade.com/*  #!165jtz
+*://*.ruyijade.com/*  #!165jtz
 *://*.esunjdk.top/*  #!165jtz
 *://*.app.itloksv.com/*  #!165jtz
 *://*.lgjfdbg.com/*  #!165jtz
@@ -24118,6 +24441,7 @@
 *://*.shopdang.com/*  #!165jtz
 *://*.aq574.com/*  #path=/rk/vip5 #!165jtz
 *://*.sk9988.com/*  #path=/rk/vip9 #!165jtz
+*://*.happy-go-shops.com/*  #!165jtz
 *://*.crazybuy-shops.com/*  #!165jtz
 *://*.crazy-go.com/*  #!165jtz
 *://*.crazygo.online/*  #!165jtz
@@ -24213,6 +24537,9 @@
 *://*.sjjclw.top/*  #path=/h509 #!165jtz
 *://*.skxjgq.top/*  #path=/h509 #!165jtz
 *://*.horto0.jfbdesa.com/*  #path=/iszu07 #!165jtz
+*://*.pereligiousnews.com/*  #!165jtz
+*://*.app.yurrte.com/*  #!165jtz
+*://*.gfjhrt.com/*  #!165jtz
 *://*.h5.luxuryshop.ltd/*  #!165jtz
 *://*.hwynau.com/*  #!165jtz
 *://*.jioewg.com/*  #!165jtz
@@ -24291,6 +24618,7 @@
 *://*.m.blqwv.top/*  #path=/h509 #!165jtz
 *://*.m.sctat.top/*  #path=/h509 #!165jtz
 *://*.mhlucky.xyz/*  #!165jtz
+*://*.252b0b.jypwtiuk.com/*  #path=/wl85n7w3 #!165jtz
 *://*.8053b6.aqhdbgbo.com/*  #path=/wl85n7w3 #!165jtz
 *://*.8jiksz.page.xiao6zi.top/*  #path=/mmpnd #!165jtz
 *://*.ahead.ehobm.cn/*  #path=/mmpnd #!165jtz
@@ -24299,6 +24627,7 @@
 *://*.meonq.opecbqcr.com/*  #path=/wl85n7w3 #!165jtz
 *://*.ncryp.itokdxa.cn/*  #path=/mmpnd #!165jtz
 *://*.mxiks7bdh2.top/*  #path=/wl85n7w3 #!165jtz
+*://*.jl.yw79.bond/*  #!165jtz
 *://*.xrdown1.com/*  #!165jtz
 *://*.keecheong.com.tw/*  #!165jtz
 *://*.keecheongsec.com/*  #!165jtz
@@ -24315,6 +24644,7 @@
 *://*.fopose.xyz/*  #!165jtz
 *://*.nxzmklh.com/*  #!165jtz
 *://*.safajzg.com/*  #!165jtz
+*://*.utieihvnn.com/*  #!165jtz
 *://*.xiangzdma.com/*  #!165jtz
 *://*.xpsyiv.com/*  #!165jtz
 *://*.cmfro.com/*  #!165jtz
@@ -24328,6 +24658,7 @@
 *://*.qpdke.com/*  #!165jtz
 *://*.suopcpas.top/*  #!165jtz
 *://*.7636-gsa8hzeyhfgwg0a0.a03.azurefd.net/*  #!165jtz
+*://*.wdfound01.com/*  #!165jtz
 *://*.app.xkjdhwjhfihjb.com/*  #!165jtz
 *://*.ydfghghh.com/*  #!165jtz
 *://*.app.glnhit.com/*  #!165jtz
@@ -24384,6 +24715,7 @@
 *://*.xbbxz.com/*  #!165jtz
 *://*.zdan.mfjdijw.com/*  #path=/4EpU.app #!165jtz
 *://*.ewysjr.com/*  #!165jtz
+*://*.teiiido.com/*  #!165jtz
 *://*.app.gezqnp.top/*  #path=/gezqnp/ #!165jtz
 *://*.app.idoegc.top/*  #path=/idoegc/ #!165jtz
 *://*.app.uhrhhu.top/*  #path=/uhrhhu/ #!165jtz
@@ -24410,6 +24742,7 @@
 *://*.huifhsj.com/*  #!165jtz
 *://*.jkhhlg.com/*  #!165jtz
 *://*.vjdsx.xyz/*  #!165jtz
+*://*.fhghlpg.com/*  #!165jtz
 *://*.app.cdgdpk.top/*  #path=/cdgdpk/ #!165jtz
 *://*.app.mxccuy.top/*  #path=/mxccuy/ #!165jtz
 *://*.m.cdgdpk.top/*  #path=/app999 #!165jtz
@@ -24430,6 +24763,7 @@
 *://*.dnfsss.com/*  #!165jtz
 *://*.waosgfg.com/*  #!165jtz
 *://*.xbvhjgfg.com/*  #!165jtz
+*://*.first-gold.trade/*  #!165jtz
 *://*.firstgold.vip/*  #!165jtz
 *://*.app.kerusd.com/*  #!165jtz
 *://*.dshvui.com/*  #!165jtz
@@ -24561,6 +24895,7 @@
 *://*.nuhbk569.icu/*  #path=/m #!165jtz
 *://*.fastvf.com/*  #!165jtz
 *://*.fastvh.com/*  #!165jtz
+*://*.fastvp.com/*  #!165jtz
 *://*.fastvq.com/*  #!165jtz
 *://*.app.fllsopz.com/*  #!165jtz
 *://*.uryyngn.com/*  #!165jtz
@@ -24830,16 +25165,23 @@
 *://*.lianbang0.xyz/*  #!165jtz
 *://*.sj91.lol/*  #!165jtz
 *://*.sj97.lol/*  #!165jtz
+*://*.employmentw.xyz/*  #!165jtz
 *://*.jobseeking.xyz/*  #!165jtz
+*://*.novamdtwh.com/*  #!165jtz
+*://*.cashgroweakr.com/*  #!165jtz
 *://*.hydrogenan.com/*  #!165jtz
 *://*.hydrogenau.com/*  #!165jtz
 *://*.hydrogenax.com/*  #!165jtz
+*://*.hydrogenog.com/*  #!165jtz
 *://*.hydrogensf.com/*  #!165jtz
 *://*.hydrogensi.com/*  #!165jtz
 *://*.hydrogenst.com/*  #!165jtz
 *://*.hydrogensw.com/*  #!165jtz
 *://*.hydrogensy.com/*  #!165jtz
+*://*.tyedjsa5.com/*  #!165jtz
+*://*.careerinformation.xyz/*  #!165jtz
 *://*.careerjoball.xyz/*  #!165jtz
+*://*.workplacees.com/*  #!165jtz
 *://*.app.cllope.com/*  #!165jtz
 *://*.app.iskero.com/*  #!165jtz
 *://*.live.baadx.com/*  #!165jtz
@@ -24963,6 +25305,8 @@
 *://*.app.ptuedw.com/*  #!165jtz
 *://*.app.pudret.com/*  #!165jtz
 *://*.dsufis.com/*  #!165jtz
+*://*.fhghj.com/*  #!165jtz
+*://*.flthd.com/*  #!165jtz
 *://*.twptud.com/*  #!165jtz
 *://*.tw1234.com/*  #!165jtz
 *://*.tw6688.cc/*  #!165jtz
@@ -25017,6 +25361,7 @@
 *://*.gdgyt.xyz/*  #!165jtz
 *://*.fragrancefoud.com/*  #!165jtz
 *://*.yemu1698.cc/*  #!165jtz
+*://*.huaye1.com/*  #!165jtz
 *://*.dfhq.cc/*  #!165jtz
 *://*.kpaxxxyn.com/*  #!165jtz
 *://*.mjszmw.com/*  #!165jtz
@@ -25078,6 +25423,7 @@
 *://*.laobanzhan.top/*  #!165jtz
 *://*.mgtw07.com/*  #!165jtz
 *://*.app.drudtt.com/*  #!165jtz
+*://*.vcrrdw.com/*  #!165jtz
 *://*.zmxnvkf.com/*  #!165jtz
 *://*.app.ploxn.com/*  #!165jtz
 *://*.asjfhvn.com/*  #!165jtz
@@ -25213,6 +25559,7 @@
 *://*.huaxing98.com/*  #!165jtz
 *://*.hxing888.com/*  #!165jtz
 *://*.huayu5391.top/*  #!165jtz
+*://*.huayu5392.top/*  #!165jtz
 *://*.hfmnpb236.top/*  #!165jtz
 *://*.hymhui692.top/*  #!165jtz
 *://*.wccy269.top/*  #!165jtz
@@ -25359,10 +25706,12 @@
 *://*.onoks.com/*  #!165jtz
 *://*.shop-ego.com/*  #!165jtz
 *://*.suneasybuy.com/*  #!165jtz
+*://*.suninginvite.com/*  #!165jtz
 *://*.hfxtfp.cn/*  #!165jtz
 *://*.seayuo.com/*  #path=/m #!165jtz
 *://*.sokyeshop.com/*  #path=/m #!165jtz
 *://*.lgfylc.fit/*  #!165jtz
+*://*.p9.jeswkj.com/*  #!165jtz
 *://*.wmfoun04.com/*  #!165jtz
 *://*.app.gdysgjss.com/*  #!165jtz
 *://*.app.tioryuo.com/*  #!165jtz
@@ -25517,6 +25866,7 @@
 *://*.fengyi505.xyz/*  #!165jtz
 *://*.m.sfgj668.top/*  #!165jtz
 *://*.hu-cheap-store.com/*  #!165jtz
+*://*.hucheap-store.com/*  #!165jtz
 *://*.hucheapstore.com/*  #!165jtz
 *://*.app.lpsoev.com/*  #!165jtz
 *://*.app.xiobs.com/*  #!165jtz
@@ -25634,6 +25984,7 @@
 *://*.api.zhuanzhuantw.com/*  #!165jtz
 *://*.dc.nfsqjtal.xyz/*  #!165jtz
 *://*.fv.nfsqzgjtww.online/*  #!165jtz
+*://*.nfsq6888.com/*  #!165jtz
 *://*.nfsqzgjtio.xyz/*  #!165jtz
 *://*.vip.nfsq5.com/*  #!165jtz
 *://*.efqzgjtqq.xyz/*  #!165jtz
@@ -25696,6 +26047,7 @@
 *://*.dfxghq.online/*  #!165jtz
 *://*.dkofiy.online/*  #!165jtz
 *://*.dpfktj.online/*  #!165jtz
+*://*.masterdalen.com/*  #!165jtz
 *://*.master5888.com/*  #!165jtz
 *://*.talent888.com.tw/*  #!165jtz
 *://*.daksc.com/*  #!165jtz
@@ -25706,6 +26058,7 @@
 *://*.daljob.com/*  #!165jtz
 *://*.vipdains.com/*  #!165jtz
 *://*.damenglianmeng.mli8.cn/*  #!165jtz
+*://*.n2jiyjk4md.vehwj.com/*  #path=/5iavxw #!165jtz
 *://*.app.yvlslie.com/*  #!165jtz
 *://*.ieyuighf.com/*  #!165jtz
 *://*.skzdl.com/*  #!165jtz
@@ -25769,6 +26122,7 @@
 *://*.guqismd.top/*  #!165jtz
 *://*.guqysiyu.top/*  #!165jtz
 *://*.guyhuile.top/*  #!165jtz
+*://*.guytile.top/*  #!165jtz
 *://*.zhishhumm.top/*  #!165jtz
 *://*.app.auhti.top/*  #path=/auhti/ #!165jtz
 *://*.cezym.top/*  #path=/aaqq #!165jtz
@@ -25800,6 +26154,7 @@
 *://*.jinzun2023.com/*  #!165jtz
 *://*.gcjkzxf.com/*  #!165jtz
 *://*.tudnry.com/*  #!165jtz
+*://*.tysuzx.com/*  #!165jtz
 *://*.tw88.com.tw/*  #!165jtz
 *://*.jy51688.net/*  #!165jtz
 *://*.jy688.net/*  #!165jtz
@@ -25841,6 +26196,7 @@
 *://*.m.sads99.cc/*  #!165jtz
 *://*.m.sads99.vip/*  #!165jtz
 *://*.m.sand999.cc/*  #!165jtz
+*://*.m.sandss9.vip/*  #!165jtz
 *://*.m.sds88.cc/*  #!165jtz
 *://*.m.sds88.top/*  #!165jtz
 *://*.m.sds88.vip/*  #!165jtz
@@ -25930,6 +26286,7 @@
 *://*.ofa999.net/*  #!165jtz
 *://*.jyuyang2.jyuyang1.com/*  #!165jtz
 *://*.gxcvkb.com/*  #!165jtz
+*://*.twtkdu.com/*  #!165jtz
 *://*.ginzashopping.com/*  #!165jtz
 *://*.huanqiugouwu1.com/*  #!165jtz
 *://*.spvisitdubai.com/*  #!165jtz
@@ -26195,6 +26552,7 @@
 *://*.yunpgdninters.com/*  #!165jtz
 *://*.zha.tw/*  #!165jtz
 *://*.uzsnf.com/*  #!165jtz
+*://*.m.yunding6188.top/*  #!165jtz
 *://*.bailigong02.top/*  #!165jtz
 *://*.yunding202.xyz/*  #!165jtz
 *://*.yunding404.club/*  #!165jtz
@@ -26250,6 +26608,7 @@
 *://*.app.ertsyu.com/*  #!165jtz
 *://*.app.ntruse.com/*  #!165jtz
 *://*.ptudsn.com/*  #!165jtz
+*://*.qiuenjf.com/*  #!165jtz
 *://*.twutds.com/*  #!165jtz
 *://*.uygbeb.com/*  #!165jtz
 *://*.brk.ninja/*  #!165jtz
@@ -26276,12 +26635,14 @@
 *://*.t9gl3dm.com/*  #!165jtz
 *://*.gj2006.com.cn/*  #!165jtz
 *://*.gj2008.com.cn/*  #!165jtz
+*://*.hkeasybeauty.com/*  #!165jtz
 *://*.hkssq.com/*  #!165jtz
 *://*.hkssq.cc/*  #!165jtz
 *://*.hkssq.online/*  #!165jtz
 *://*.hkssq.vip/*  #!165jtz
 *://*.d2hhcava73k3o4.cloudfront.net/*  #path=/xkamgj/index.html #!165jtz
 *://*.mobile.hk-aimei.com/*  #!165jtz
+*://*.9885560.com/*  #!165jtz
 *://*.hklotte.com/*  #!165jtz
 *://*.hkytgj.com/*  #!165jtz
 *://*.yataibeauty.top/*  #!165jtz
