@@ -1,7 +1,7 @@
 # Title: Scam Sites Filters
 # Description: Filter for scam sites. Mostly aggregrated from governmental sources, such as Ministry
 #     of Digital Affairs and National Police Agency of Taiwan.
-# Last modified: 2025-05-18T19:50:06+00:00
+# Last modified: 2025-05-25T19:50:11+00:00
 # Homepage: https://danny0838.github.io/content-farm-terminator/
 # Licence: MIT License
 # Source: https://danny0838.github.io/content-farm-terminator/files/blocklist-hosts/scam-sites.txt
@@ -27597,3 +27597,10 @@
 0.0.0.0 marketaeg.shop  #!TWNICscams
 0.0.0.0 xn--xn-stars-bkb.com  #!TWNICscams
 0.0.0.0 goetmalltop.com  #!TWNICscams
+0.0.0.0 fllsaf.xyz  #!TWNICscams
+0.0.0.0 romhad.space  #!TWNICscams
+0.0.0.0 longsa.space  #!TWNICscams
+0.0.0.0 xinsrd.life  #!TWNICscams
+0.0.0.0 pqlyzlk.shop  #!TWNICscams
+0.0.0.0 exzxv.site  #!TWNICscams
+0.0.0.0 zhengmingplvkp.club  #!TWNICscams
