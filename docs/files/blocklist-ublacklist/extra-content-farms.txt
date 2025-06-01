@@ -1,6 +1,6 @@
 # Title: Extra Content Farm Filters
 # Description: Extra filter for content-farm-like sites, mostly aggregated from other sources.
-# Last modified: 2025-05-26T11:06:32+00:00
+# Last modified: 2025-06-01T19:50:05+00:00
 # Homepage: https://danny0838.github.io/content-farm-terminator/
 # Licence: MIT License
 # Source: https://danny0838.github.io/content-farm-terminator/files/blocklist-ublacklist/extra-content-farms.txt
@@ -2884,6 +2884,7 @@
 *://*.ziyuanlm.com/*  #!nonpnt
 *://*.hqyman.cn/*  #!nonpnt
 *://*.021east.com/*  #!nonpnt
+*://*.0714news.com/*  #!nonpnt
 *://*.1007171.com/*  #!nonpnt
 *://*.100ke.cc/*  #!nonpnt
 *://*.10jqka.com.cn/*  #!nonpnt
@@ -2899,6 +2900,7 @@
 *://*.2qun.net/*  #!nonpnt
 *://*.300m-team.com/*  #!nonpnt
 *://*.33376.xyz/*  #!nonpnt
+*://*.33lc.org/*  #!nonpnt
 *://*.361shipin.com/*  #!nonpnt
 *://*.361t.org/*  #!nonpnt
 *://*.365seal.com/*  #!nonpnt
@@ -3096,6 +3098,7 @@
 *://*.hackernews.cc/*  #!nonpnt
 *://*.hanjifoods.com/*  #!nonpnt
 *://*.haoshangbang.net/*  #!nonpnt
+*://*.haoxyx.com/*  #!nonpnt
 *://*.hbs163.com/*  #!nonpnt
 *://*.hellodemos.com/*  #!nonpnt
 *://*.helloworldkb.com/*  #!nonpnt
@@ -3154,6 +3157,7 @@
 *://*.juzhekooo.com/*  #!nonpnt
 *://*.jynews.net/*  #!nonpnt
 *://*.jzhcgm.com/*  #!nonpnt
+*://*.kafan.cn/*  #!nonpnt
 *://*.kaimalo.com/*  #!nonpnt
 *://*.kandaoni.com/*  #!nonpnt
 *://*.kbpp.org/*  #!nonpnt
@@ -3163,6 +3167,7 @@
 *://*.ksctec.com/*  #!nonpnt
 *://*.ksyzakq.com/*  #!nonpnt
 *://*.kunyuyuan.com/*  #!nonpnt
+*://*.lai18.com/*  #!nonpnt
 *://*.lcydcp.com/*  #!nonpnt
 *://*.leixue.com/*  #!nonpnt
 *://*.lete.com/kdwenda/*  #!nonpnt
@@ -3240,6 +3245,8 @@
 *://*.py.cn/*  #!nonpnt
 *://*.pyn9.com/*  #!nonpnt
 *://*.qciss.net/*  #!nonpnt
+*://*.qdcypf.com/*  #!nonpnt
+*://*.qfjhb.cn/*  #!nonpnt
 *://*.qiangwaikan.com/*  #!nonpnt
 *://*.qingdaosailing.com/*  #!nonpnt
 *://*.qingyunl.com/*  #!nonpnt
@@ -3291,6 +3298,7 @@
 *://*.sktfaker.com/*  #!nonpnt
 *://*.sm-tc.cn/*  #!nonpnt
 *://*.sm1234.net/*  #!nonpnt
+*://*.sma.so/*  #!nonpnt
 *://*.smart-gamma.com/*  #!nonpnt
 *://*.snowcoal.com/*  #!nonpnt
 *://*.soft-vn.net/*  #!nonpnt
@@ -3331,6 +3339,7 @@
 *://*.tnbta.com/*  #!nonpnt
 *://*.todohealth.com/*  #!nonpnt
 *://*.tomzx.com/*  #!nonpnt
+*://*.tongbu.com/*  #!nonpnt
 *://*.topvpnguides.com/*  #!nonpnt
 *://*.toutiao.com/keyword/*  #!nonpnt
 *://*.toutiao.com/search/*  #!nonpnt
@@ -3354,6 +3363,7 @@
 *://*.uosohyc.site/*  #!nonpnt
 *://*.upx8.com/*  #!nonpnt
 *://*.urtasker.com/*  #!nonpnt
+*://*.uulucky.com/*  #!nonpnt
 *://*.ux6.com/*  #!nonpnt
 *://*.v2ex.com/amp/*  #!nonpnt
 *://*.vectormagic.com/*  #!nonpnt
@@ -3407,6 +3417,7 @@
 *://*.xjhxx.com/*  #!nonpnt
 *://*.xn----8sbnnlfdiifnglmc.xn--p1ai/*  #!nonpnt
 *://*.xnntw.com/*  #!nonpnt
+*://*.xuesw.net/*  #!nonpnt
 *://*.xujun.org/*  #!nonpnt
 *://*.xunihao.org/*  #!nonpnt
 *://*.xuv.cc/*  #!nonpnt
@@ -3468,6 +3479,7 @@
 *://*.a.youhuima.cc/*  #!nonpnt
 *://*.adolescentz.com/*  #!nonpnt
 *://*.agid.cn/*  #!nonpnt
+*://*.aibing.cc/*  #!nonpnt
 *://*.aizhaoni.com/*  #!nonpnt
 *://*.andrew-reynolds-bootcamp.com/*  #!nonpnt
 *://*.anlander.com/*  #!nonpnt
@@ -3519,6 +3531,7 @@
 *://*.dingtalk.com/*  #!nonpnt
 *://*.discountcode.dailymail.co.uk/*  #!nonpnt
 *://*.discountcode.mirror.co.uk/*  #!nonpnt
+*://*.dm004.com/*  #!nonpnt
 *://*.dq.tieba.com/*  #!nonpnt
 *://*.dvb56.com/*  #!nonpnt
 *://*.easyhaitao.com/*  #!nonpnt
@@ -3532,6 +3545,7 @@
 *://*.f5.pm/*  #!nonpnt
 *://*.fanqiang.network/*  #!nonpnt
 *://*.feetwindyoung-5.live/*  #!nonpnt
+*://*.feishuang406.com/*  #!nonpnt
 *://*.fonnambar.info/*  #!nonpnt
 *://*.freetribe.me/*  #!nonpnt
 *://*.fyf.wx-wx.net/*  #!nonpnt
@@ -3560,6 +3574,7 @@
 *://*.jinan110.com/*  #!nonpnt
 *://*.js.wszjl.com/*  #!nonpnt
 *://*.jsrc588.com/*  #!nonpnt
+*://*.jump2.bdimg.com/*  #!nonpnt
 *://*.jutuilian.com/*  #!nonpnt
 *://*.juweibangong.com/*  #!nonpnt
 *://*.k.sina.cn/*  #!nonpnt
@@ -3574,6 +3589,7 @@
 *://*.libriblu.it/*  #!nonpnt
 *://*.liuxue.xdf.cn/*  #!nonpnt
 *://*.loginy.co.uk/*  #!nonpnt
+*://*.looknews.cc/*  #!nonpnt
 *://*.lqkweb.com/*  #!nonpnt
 *://*.m.3g.qqs9.com/*  #!nonpnt
 *://*.m.9ji.com/*  #!nonpnt
@@ -3643,6 +3659,7 @@
 *://*.search.bilibili.com/*  #!nonpnt
 *://*.seo.maro6.com/*  #!nonpnt
 *://*.share.wukongwenda.cn/*  #!nonpnt
+*://*.shenzhenxw.net/*  #!nonpnt
 *://*.shop.99114.com/*  #!nonpnt
 *://*.shop.pcpop.com/*  #!nonpnt
 *://*.shopee.tw/*  #!nonpnt
@@ -3667,6 +3684,7 @@
 *://*.ukcarbulbs.com/*  #!nonpnt
 *://*.ultimaterctoys.com/*  #!nonpnt
 *://*.videomediaseochannel.com/*  #!nonpnt
+*://*.villahermosahonduras.com/*  #!nonpnt
 *://*.wap.alounsse.com/*  #!nonpnt
 *://*.wap.mii-lab.com/*  #!nonpnt
 *://*.wap.yesky.com/*  #!nonpnt
@@ -3682,6 +3700,7 @@
 *://*.0411ct.com/*  #!nonpnt
 *://*.0755qxhj.com/*  #!nonpnt
 *://*.07diy.com/*  #!nonpnt
+*://*.09vv.cn/*  #!nonpnt
 *://*.12y.org/*  #!nonpnt
 *://www.163.com/dy/article/*  #!nonpnt
 *://*.17qufa.com/*  #!nonpnt
@@ -3693,12 +3712,14 @@
 *://*.21ic.com/*  #!nonpnt
 *://*.2265.com/*  #!nonpnt
 *://*.2616.com.cn/*  #!nonpnt
+*://*.295a.com/*  #!nonpnt
 *://*.3062.net.cn/*  #!nonpnt
 *://*.3114114.com/*  #!nonpnt
 *://*.31871111.com/*  #!nonpnt
 *://*.329329.com/*  #!nonpnt
 *://*.32r.com/*  #!nonpnt
 *://*.360buyserver.com/*  #!nonpnt
+*://*.360doc.com/*  #!nonpnt
 *://*.360kuai.com/*  #!nonpnt
 *://*.365shenbo.com/*  #!nonpnt
 *://*.39qq.com/*  #!nonpnt
@@ -3732,6 +3753,7 @@
 *://*.affloc.com/*  #!nonpnt
 *://*.aicaigoupifa.com/*  #!nonpnt
 *://*.aiskycn.com/*  #!nonpnt
+*://*.ajpsp.com/*  #!nonpnt
 *://*.alexandresoma.com/*  #!nonpnt
 *://*.aliyun.com/*  #!nonpnt
 *://*.aliyundjq.cn/*  #!nonpnt
@@ -3745,6 +3767,7 @@
 *://*.antutu.com/*  #!nonpnt
 *://*.anxinapk.com/*  #!nonpnt
 *://*.aprendotodo.com/*  #!nonpnt
+*://*.arhivo.com/*  #!nonpnt
 *://*.asmrqq.com/*  #!nonpnt
 *://*.atwidc.com/*  #!nonpnt
 *://*.bacaoo.com/*  #!nonpnt
@@ -3753,22 +3776,27 @@
 *://*.baydue.com/*  #!nonpnt
 *://*.bbba5.com/*  #!nonpnt
 *://*.bbin-n.com/*  #!nonpnt
+*://*.be55.net/*  #!nonpnt
 *://*.bestebookdownload.com/*  #!nonpnt
 *://*.bifengo.com/*  #!nonpnt
 *://*.bitedie.com/*  #!nonpnt
 *://*.blockvalue.com/*  #!nonpnt
 *://*.bmcsjmj.com/*  #!nonpnt
 *://*.boaosheou.com/*  #!nonpnt
+*://*.bobofun.com/*  #!nonpnt
 *://*.bokcms.com/*  #!nonpnt
 *://*.bollingercanyon.com/*  #!nonpnt
 *://*.bugzj.com/*  #!nonpnt
+*://*.bunian.cn/*  #!nonpnt
 *://*.c2231.com/*  #!nonpnt
+*://*.caanet.org.cn/*  #!nonpnt
 *://*.cambridgeesolchina.org/*  #!nonpnt
 *://*.cangningmucai.com/*  #!nonpnt
 *://*.captainbed.net/*  #!nonpnt
 *://*.carousell.com.hk/*  #!nonpnt
 *://*.cbedai.net/*  #!nonpnt
 *://*.ccddzlq.com/*  #!nonpnt
+*://*.ccn688.com/*  #!nonpnt
 *://*.chamberjkt.com/*  #!nonpnt
 *://*.chaoju.com/*  #!nonpnt
 *://*.chepinnet.com/*  #!nonpnt
@@ -3789,6 +3817,7 @@
 *://*.ctolib.com/*  #!nonpnt
 *://*.cuplayer.com/*  #!nonpnt
 *://*.czgeek.com/*  #!nonpnt
+*://*.dabbsports.com/*  #!nonpnt
 *://*.daihema.com/*  #!nonpnt
 *://*.dama123.com/*  #!nonpnt
 *://*.dayueng.cn/*  #!nonpnt
@@ -3822,10 +3851,12 @@
 *://*.fast8.com/*  #!nonpnt
 *://*.fastchina.net/*  #!nonpnt
 *://*.fcbqg.com/*  #!nonpnt
+*://*.fck688.com/*  #!nonpnt
 *://*.flele.com/*  #!nonpnt
 *://*.foxmac.com/*  #!nonpnt
 *://*.fuhaishenye.com/*  #!nonpnt
 *://*.fxdsxy.com/*  #!nonpnt
+*://*.fxxz.com/*  #!nonpnt
 *://*.gdsdws.com/*  #!nonpnt
 *://*.getbackpacking365.com/*  #!nonpnt
 *://*.gobabl.com/*  #!nonpnt
@@ -3834,6 +3865,7 @@
 *://*.gpbctv.com/*  #!nonpnt
 *://*.gtuanb.com/*  #!nonpnt
 *://*.guangbaobei.net/*  #!nonpnt
+*://*.guzhifa.com/*  #!nonpnt
 *://*.gygg9.com/*  #!nonpnt
 *://*.habeiwaiyuxuexiao.com/*  #!nonpnt
 *://*.haoecn.com/*  #!nonpnt
@@ -3863,6 +3895,7 @@
 *://*.il-shop.cn/*  #!nonpnt
 *://*.illitpress.com/*  #!nonpnt
 *://*.iteye.com/*  #!nonpnt
+*://*.izhufu.net/*  #!nonpnt
 *://*.jaxno.com/*  #!nonpnt
 *://*.jc0359.com/*  #!nonpnt
 *://*.jd.com/*  #!nonpnt
@@ -3876,8 +3909,10 @@
 *://*.k-creat.com/*  #!nonpnt
 *://*.kakatongmeng.net/*  #!nonpnt
 *://*.kmkejipd.com/*  #!nonpnt
+*://*.ku3101.net/*  #!nonpnt
 *://www.lagou.com/lgeduarticle/*  #!nonpnt
 *://*.lansingip.com/*  #!nonpnt
+*://*.lanzhouzaixian.cn/*  #!nonpnt
 *://*.ld12345.com/*  #!nonpnt
 *://*.lightspeedtrucking.com/*  #!nonpnt
 *://*.linjiaxiaohui.cn/*  #!nonpnt
@@ -3903,6 +3938,7 @@
 *://*.moflier.com/*  #!nonpnt
 *://*.moneytlk.com/*  #!nonpnt
 *://*.mosaby.com/*  #!nonpnt
+*://*.mscto.com/*  #!nonpnt
 *://*.mxj.com.cn/*  #!nonpnt
 *://*.mycvcv.com/*  #!nonpnt
 *://*.mydadao.net/*  #!nonpnt
@@ -3922,6 +3958,7 @@
 *://*.paloma.cn/*  #!nonpnt
 *://*.pantianxia.com/*  #!nonpnt
 *://*.parichyimin.com/*  #!nonpnt
+*://*.pck777.com/*  #!nonpnt
 *://*.pclovers.net/*  #!nonpnt
 *://www.pconline.com.cn/3g/*  #!nonpnt
 *://www.pconline.com.cn/other_pic*  #!nonpnt
@@ -3931,6 +3968,7 @@
 *://*.pnstudy.com/*  #!nonpnt
 *://*.price.com.hk/*  #!nonpnt
 *://*.programmersought.com/*  #!nonpnt
+*://*.ptkaishan.com/*  #!nonpnt
 *://*.ptzxc.com/*  #!nonpnt
 *://*.qcnsw.com/*  #!nonpnt
 *://*.qedev.com/*  #!nonpnt
@@ -3939,6 +3977,7 @@
 *://*.qmisdhpe.com/*  #!nonpnt
 *://*.qnapnas.com.cn/*  #!nonpnt
 *://*.qq366.cn/*  #!nonpnt
+*://*.qqtn.com/*  #!nonpnt
 *://*.qqxmail.com/*  #!nonpnt
 *://*.qtcamp.com/*  #!nonpnt
 *://*.quanmaimai.com/*  #!nonpnt
@@ -3967,6 +4006,7 @@
 *://*.shxmtech.com/*  #!nonpnt
 *://*.simpletense.com/*  #!nonpnt
 *://*.simpletense.org/*  #!nonpnt
+*://*.sldfc.cn/*  #!nonpnt
 *://*.smpchome.com/*  #!nonpnt
 *://*.sociablelabs.com/*  #!nonpnt
 *://*.sockvalley.com/*  #!nonpnt
@@ -4009,6 +4049,7 @@
 *://*.wenxuecity.com/*  #!nonpnt
 *://www.west.cn/docs/*  #!nonpnt
 *://*.witdroid.com/*  #!nonpnt
+*://*.wnt777.com/*  #!nonpnt
 *://*.wolonge.com/*  #!nonpnt
 *://*.wordlm.com/*  #!nonpnt
 *://*.wywb0818.com/*  #!nonpnt
@@ -4026,12 +4067,16 @@
 *://*.xsjphoto.com/*  #!nonpnt
 *://*.xspdf.com/*  #!nonpnt
 *://*.xtfeed.cn/*  #!nonpnt
+*://*.xueman288.com/*  #!nonpnt
 *://*.xulander.com/*  #!nonpnt
 *://*.xyyhs.net/*  #!nonpnt
+*://*.xz7.com/*  #!nonpnt
 *://*.y5.hk/*  #!nonpnt
 *://*.yinyids.com/*  #!nonpnt
+*://*.yiper.org/*  #!nonpnt
 *://*.yixinit.com/*  #!nonpnt
 *://*.yiyisoft.com/*  #!nonpnt
+*://*.yiyult.com/*  #!nonpnt
 *://*.ylfjs.com/*  #!nonpnt
 *://*.ymei189.com/*  #!nonpnt
 *://*.youchuang365.com/*  #!nonpnt
@@ -4253,7 +4298,6 @@
 *://*.madeingali.com/*  #!yesil
 *://*.maguai.com/*  #!yesil
 *://*.mayphatmaynen.com/*  #!yesil
-*://*.meifa.izhufu.net/*  #!yesil
 *://*.mjzj.com/*  #!yesil
 *://*.mnst.sport-dpo.de/*  #!yesil
 *://*.mspet.kbrswkj.com/*  #!yesil
@@ -4399,6 +4443,7 @@
 *://*.bdsmzj.com/*  #!yesil
 *://*.bentleycompany.buzz/*  #!yesil
 *://*.bhjy2007.com/*  #!yesil
+*://*.bhscy.com/*  #!yesil
 *://*.bjcsjsc.com/*  #!yesil
 *://*.bjdtyx.com/*  #!yesil
 *://*.bjgnhh.com/*  #!yesil
@@ -4407,6 +4452,7 @@
 *://*.btlhxzz.com/*  #!yesil
 *://*.bubuzhe.com/*  #!yesil
 *://*.buccelli.buzz/*  #!yesil
+*://*.buscodepto.com/*  #!yesil
 *://*.buythebestbuy.com/*  #!yesil
 *://*.byswq.com/*  #!yesil
 *://*.bzxfgj.com/*  #!yesil
@@ -4427,6 +4473,7 @@
 *://*.csmjjdfw.com/*  #!yesil
 *://*.csxbd.com/*  #!yesil
 *://*.ctfwikp.buzz/*  #!yesil
+*://*.cxhm.net/*  #!yesil
 *://*.czag88.com/*  #!yesil
 *://*.czcqs.com/*  #!yesil
 *://*.dapaizixun.com/*  #!yesil
@@ -4439,6 +4486,7 @@
 *://*.dn010.com/*  #!yesil
 *://*.dnf4f.com/*  #!yesil
 *://*.donnaspetcare.com/*  #!yesil
+*://*.drjordanmall.com/*  #!yesil
 *://*.e5a5x.com/*  #!yesil
 *://*.ecodezsv5.buzz/*  #!yesil
 *://*.eddingmkt.com/*  #!yesil
@@ -4450,6 +4498,7 @@
 *://*.ffffgggga.com/*  #!yesil
 *://*.fsadu.org.br/*  #!yesil
 *://*.fxsw.net/*  #!yesil
+*://*.fxyibai.com/*  #!yesil
 *://*.gatos.buzz/*  #!yesil
 *://*.gdboxinda.com/*  #!yesil
 *://*.gh-2.net/*  #!yesil
@@ -4469,14 +4518,17 @@
 *://*.hn-hongyuan.com/*  #!yesil
 *://*.hnhuayue.com/*  #!yesil
 *://*.hnzhilai.com/*  #!yesil
+*://*.hokedoor.com/*  #!yesil
 *://*.hongyazi.org/*  #!yesil
 *://*.howietech.com/*  #!yesil
 *://*.huoqiunews.com/*  #!yesil
 *://*.hydxdn.com/*  #!yesil
+*://*.ispsd2015.com/*  #!yesil
 *://*.itjie.com/*  #!yesil
 *://*.iytest.com/*  #!yesil
 *://*.jamogram.com/*  #!yesil
 *://*.jbzj.com/*  #!yesil
+*://*.jcabc.cn/*  #!yesil
 *://*.jhua365.com/*  #!yesil
 *://*.jiajiaxz.com/*  #!yesil
 *://*.jlqiou.com/*  #!yesil
@@ -4513,6 +4565,7 @@
 *://*.mapxl.buzz/*  #!yesil
 *://*.matbakhe.com/*  #!yesil
 *://*.medistaryn.com/*  #!yesil
+*://*.mei521.com/*  #!yesil
 *://*.melijoo.com/*  #!yesil
 *://*.mi6fx.com/*  #!yesil
 *://*.milacms.com/*  #!yesil
@@ -4609,6 +4662,7 @@
 *://*.yhkjjj.com/*  #!yesil
 *://*.yijyi.com/*  #!yesil
 *://*.ymhds8.com/*  #!yesil
+*://*.ymw.cn/*  #!yesil
 *://*.ynp995.com/*  #!yesil
 *://*.youyizzy.com/*  #!yesil
 *://*.yqhcwgl.com/*  #!yesil

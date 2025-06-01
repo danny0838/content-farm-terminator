@@ -1,6 +1,6 @@
 # Title: Extra Content Farm Filters
 # Description: Extra filter for content-farm-like sites, mostly aggregated from other sources.
-# Last modified: 2025-05-26T11:06:32+00:00
+# Last modified: 2025-06-01T19:50:05+00:00
 # Homepage: https://danny0838.github.io/content-farm-terminator/
 # Licence: MIT License
 # Source: https://danny0838.github.io/content-farm-terminator/files/blocklist-hosts/extra-content-farms.txt
@@ -2875,6 +2875,7 @@
 0.0.0.0 ziyuanlm.com  #!nonpnt
 0.0.0.0 hqyman.cn  #!nonpnt
 0.0.0.0 021east.com  #!nonpnt
+0.0.0.0 0714news.com  #!nonpnt
 0.0.0.0 1007171.com  #!nonpnt
 0.0.0.0 100ke.cc  #!nonpnt
 0.0.0.0 10jqka.com.cn  #!nonpnt
@@ -2890,6 +2891,7 @@
 0.0.0.0 2qun.net  #!nonpnt
 0.0.0.0 300m-team.com  #!nonpnt
 0.0.0.0 33376.xyz  #!nonpnt
+0.0.0.0 33lc.org  #!nonpnt
 0.0.0.0 361shipin.com  #!nonpnt
 0.0.0.0 361t.org  #!nonpnt
 0.0.0.0 365seal.com  #!nonpnt
@@ -3077,6 +3079,7 @@
 0.0.0.0 hackernews.cc  #!nonpnt
 0.0.0.0 hanjifoods.com  #!nonpnt
 0.0.0.0 haoshangbang.net  #!nonpnt
+0.0.0.0 haoxyx.com  #!nonpnt
 0.0.0.0 hbs163.com  #!nonpnt
 0.0.0.0 hellodemos.com  #!nonpnt
 0.0.0.0 helloworldkb.com  #!nonpnt
@@ -3131,6 +3134,7 @@
 0.0.0.0 juzhekooo.com  #!nonpnt
 0.0.0.0 jynews.net  #!nonpnt
 0.0.0.0 jzhcgm.com  #!nonpnt
+0.0.0.0 kafan.cn  #!nonpnt
 0.0.0.0 kaimalo.com  #!nonpnt
 0.0.0.0 kandaoni.com  #!nonpnt
 0.0.0.0 kbpp.org  #!nonpnt
@@ -3140,6 +3144,7 @@
 0.0.0.0 ksctec.com  #!nonpnt
 0.0.0.0 ksyzakq.com  #!nonpnt
 0.0.0.0 kunyuyuan.com  #!nonpnt
+0.0.0.0 lai18.com  #!nonpnt
 0.0.0.0 lcydcp.com  #!nonpnt
 0.0.0.0 leixue.com  #!nonpnt
 0.0.0.0 licenseapps.com  #!nonpnt
@@ -3211,6 +3216,8 @@
 0.0.0.0 py.cn  #!nonpnt
 0.0.0.0 pyn9.com  #!nonpnt
 0.0.0.0 qciss.net  #!nonpnt
+0.0.0.0 qdcypf.com  #!nonpnt
+0.0.0.0 qfjhb.cn  #!nonpnt
 0.0.0.0 qiangwaikan.com  #!nonpnt
 0.0.0.0 qingdaosailing.com  #!nonpnt
 0.0.0.0 qingyunl.com  #!nonpnt
@@ -3261,6 +3268,7 @@
 0.0.0.0 sktfaker.com  #!nonpnt
 0.0.0.0 sm-tc.cn  #!nonpnt
 0.0.0.0 sm1234.net  #!nonpnt
+0.0.0.0 sma.so  #!nonpnt
 0.0.0.0 smart-gamma.com  #!nonpnt
 0.0.0.0 snowcoal.com  #!nonpnt
 0.0.0.0 soft-vn.net  #!nonpnt
@@ -3301,6 +3309,7 @@
 0.0.0.0 tnbta.com  #!nonpnt
 0.0.0.0 todohealth.com  #!nonpnt
 0.0.0.0 tomzx.com  #!nonpnt
+0.0.0.0 tongbu.com  #!nonpnt
 0.0.0.0 topvpnguides.com  #!nonpnt
 0.0.0.0 toutiao.io  #!nonpnt
 0.0.0.0 tpyyes.com  #!nonpnt
@@ -3321,6 +3330,7 @@
 0.0.0.0 uosohyc.site  #!nonpnt
 0.0.0.0 upx8.com  #!nonpnt
 0.0.0.0 urtasker.com  #!nonpnt
+0.0.0.0 uulucky.com  #!nonpnt
 0.0.0.0 ux6.com  #!nonpnt
 0.0.0.0 vectormagic.com  #!nonpnt
 0.0.0.0 versus.com  #!nonpnt
@@ -3370,6 +3380,7 @@
 0.0.0.0 xjhxx.com  #!nonpnt
 0.0.0.0 xn----8sbnnlfdiifnglmc.xn--p1ai  #!nonpnt
 0.0.0.0 xnntw.com  #!nonpnt
+0.0.0.0 xuesw.net  #!nonpnt
 0.0.0.0 xujun.org  #!nonpnt
 0.0.0.0 xunihao.org  #!nonpnt
 0.0.0.0 xuv.cc  #!nonpnt
@@ -3423,6 +3434,7 @@
 0.0.0.0 a.youhuima.cc  #!nonpnt
 0.0.0.0 adolescentz.com  #!nonpnt
 0.0.0.0 agid.cn  #!nonpnt
+0.0.0.0 aibing.cc  #!nonpnt
 0.0.0.0 aizhaoni.com  #!nonpnt
 0.0.0.0 andrew-reynolds-bootcamp.com  #!nonpnt
 0.0.0.0 anlander.com  #!nonpnt
@@ -3464,6 +3476,7 @@
 0.0.0.0 dingtalk.com  #!nonpnt
 0.0.0.0 discountcode.dailymail.co.uk  #!nonpnt
 0.0.0.0 discountcode.mirror.co.uk  #!nonpnt
+0.0.0.0 dm004.com  #!nonpnt
 0.0.0.0 dq.tieba.com  #!nonpnt
 0.0.0.0 dvb56.com  #!nonpnt
 0.0.0.0 easyhaitao.com  #!nonpnt
@@ -3477,6 +3490,7 @@
 0.0.0.0 f5.pm  #!nonpnt
 0.0.0.0 fanqiang.network  #!nonpnt
 0.0.0.0 feetwindyoung-5.live  #!nonpnt
+0.0.0.0 feishuang406.com  #!nonpnt
 0.0.0.0 fonnambar.info  #!nonpnt
 0.0.0.0 freetribe.me  #!nonpnt
 0.0.0.0 fyf.wx-wx.net  #!nonpnt
@@ -3503,6 +3517,7 @@
 0.0.0.0 jinan110.com  #!nonpnt
 0.0.0.0 js.wszjl.com  #!nonpnt
 0.0.0.0 jsrc588.com  #!nonpnt
+0.0.0.0 jump2.bdimg.com  #!nonpnt
 0.0.0.0 jutuilian.com  #!nonpnt
 0.0.0.0 juweibangong.com  #!nonpnt
 0.0.0.0 k.sina.cn  #!nonpnt
@@ -3517,6 +3532,7 @@
 0.0.0.0 libriblu.it  #!nonpnt
 0.0.0.0 liuxue.xdf.cn  #!nonpnt
 0.0.0.0 loginy.co.uk  #!nonpnt
+0.0.0.0 looknews.cc  #!nonpnt
 0.0.0.0 lqkweb.com  #!nonpnt
 0.0.0.0 m.3g.qqs9.com  #!nonpnt
 0.0.0.0 m.9ji.com  #!nonpnt
@@ -3582,6 +3598,7 @@
 0.0.0.0 search.bilibili.com  #!nonpnt
 0.0.0.0 seo.maro6.com  #!nonpnt
 0.0.0.0 share.wukongwenda.cn  #!nonpnt
+0.0.0.0 shenzhenxw.net  #!nonpnt
 0.0.0.0 shop.99114.com  #!nonpnt
 0.0.0.0 shop.pcpop.com  #!nonpnt
 0.0.0.0 shopee.tw  #!nonpnt
@@ -3606,6 +3623,7 @@
 0.0.0.0 ukcarbulbs.com  #!nonpnt
 0.0.0.0 ultimaterctoys.com  #!nonpnt
 0.0.0.0 videomediaseochannel.com  #!nonpnt
+0.0.0.0 villahermosahonduras.com  #!nonpnt
 0.0.0.0 wap.alounsse.com  #!nonpnt
 0.0.0.0 wap.mii-lab.com  #!nonpnt
 0.0.0.0 wap.yesky.com  #!nonpnt
@@ -3621,6 +3639,7 @@
 0.0.0.0 0411ct.com  #!nonpnt
 0.0.0.0 0755qxhj.com  #!nonpnt
 0.0.0.0 07diy.com  #!nonpnt
+0.0.0.0 09vv.cn  #!nonpnt
 0.0.0.0 12y.org  #!nonpnt
 0.0.0.0 17qufa.com  #!nonpnt
 0.0.0.0 1984w.com  #!nonpnt
@@ -3631,12 +3650,14 @@
 0.0.0.0 21ic.com  #!nonpnt
 0.0.0.0 2265.com  #!nonpnt
 0.0.0.0 2616.com.cn  #!nonpnt
+0.0.0.0 295a.com  #!nonpnt
 0.0.0.0 3062.net.cn  #!nonpnt
 0.0.0.0 3114114.com  #!nonpnt
 0.0.0.0 31871111.com  #!nonpnt
 0.0.0.0 329329.com  #!nonpnt
 0.0.0.0 32r.com  #!nonpnt
 0.0.0.0 360buyserver.com  #!nonpnt
+0.0.0.0 360doc.com  #!nonpnt
 0.0.0.0 360kuai.com  #!nonpnt
 0.0.0.0 365shenbo.com  #!nonpnt
 0.0.0.0 39qq.com  #!nonpnt
@@ -3670,6 +3691,7 @@
 0.0.0.0 affloc.com  #!nonpnt
 0.0.0.0 aicaigoupifa.com  #!nonpnt
 0.0.0.0 aiskycn.com  #!nonpnt
+0.0.0.0 ajpsp.com  #!nonpnt
 0.0.0.0 alexandresoma.com  #!nonpnt
 0.0.0.0 aliyun.com  #!nonpnt
 0.0.0.0 aliyundjq.cn  #!nonpnt
@@ -3683,6 +3705,7 @@
 0.0.0.0 antutu.com  #!nonpnt
 0.0.0.0 anxinapk.com  #!nonpnt
 0.0.0.0 aprendotodo.com  #!nonpnt
+0.0.0.0 arhivo.com  #!nonpnt
 0.0.0.0 asmrqq.com  #!nonpnt
 0.0.0.0 atwidc.com  #!nonpnt
 0.0.0.0 bacaoo.com  #!nonpnt
@@ -3690,22 +3713,27 @@
 0.0.0.0 baydue.com  #!nonpnt
 0.0.0.0 bbba5.com  #!nonpnt
 0.0.0.0 bbin-n.com  #!nonpnt
+0.0.0.0 be55.net  #!nonpnt
 0.0.0.0 bestebookdownload.com  #!nonpnt
 0.0.0.0 bifengo.com  #!nonpnt
 0.0.0.0 bitedie.com  #!nonpnt
 0.0.0.0 blockvalue.com  #!nonpnt
 0.0.0.0 bmcsjmj.com  #!nonpnt
 0.0.0.0 boaosheou.com  #!nonpnt
+0.0.0.0 bobofun.com  #!nonpnt
 0.0.0.0 bokcms.com  #!nonpnt
 0.0.0.0 bollingercanyon.com  #!nonpnt
 0.0.0.0 bugzj.com  #!nonpnt
+0.0.0.0 bunian.cn  #!nonpnt
 0.0.0.0 c2231.com  #!nonpnt
+0.0.0.0 caanet.org.cn  #!nonpnt
 0.0.0.0 cambridgeesolchina.org  #!nonpnt
 0.0.0.0 cangningmucai.com  #!nonpnt
 0.0.0.0 captainbed.net  #!nonpnt
 0.0.0.0 carousell.com.hk  #!nonpnt
 0.0.0.0 cbedai.net  #!nonpnt
 0.0.0.0 ccddzlq.com  #!nonpnt
+0.0.0.0 ccn688.com  #!nonpnt
 0.0.0.0 chamberjkt.com  #!nonpnt
 0.0.0.0 chaoju.com  #!nonpnt
 0.0.0.0 chepinnet.com  #!nonpnt
@@ -3723,6 +3751,7 @@
 0.0.0.0 ctolib.com  #!nonpnt
 0.0.0.0 cuplayer.com  #!nonpnt
 0.0.0.0 czgeek.com  #!nonpnt
+0.0.0.0 dabbsports.com  #!nonpnt
 0.0.0.0 daihema.com  #!nonpnt
 0.0.0.0 dama123.com  #!nonpnt
 0.0.0.0 dayueng.cn  #!nonpnt
@@ -3756,10 +3785,12 @@
 0.0.0.0 fast8.com  #!nonpnt
 0.0.0.0 fastchina.net  #!nonpnt
 0.0.0.0 fcbqg.com  #!nonpnt
+0.0.0.0 fck688.com  #!nonpnt
 0.0.0.0 flele.com  #!nonpnt
 0.0.0.0 foxmac.com  #!nonpnt
 0.0.0.0 fuhaishenye.com  #!nonpnt
 0.0.0.0 fxdsxy.com  #!nonpnt
+0.0.0.0 fxxz.com  #!nonpnt
 0.0.0.0 gdsdws.com  #!nonpnt
 0.0.0.0 getbackpacking365.com  #!nonpnt
 0.0.0.0 gobabl.com  #!nonpnt
@@ -3768,6 +3799,7 @@
 0.0.0.0 gpbctv.com  #!nonpnt
 0.0.0.0 gtuanb.com  #!nonpnt
 0.0.0.0 guangbaobei.net  #!nonpnt
+0.0.0.0 guzhifa.com  #!nonpnt
 0.0.0.0 gygg9.com  #!nonpnt
 0.0.0.0 habeiwaiyuxuexiao.com  #!nonpnt
 0.0.0.0 haoecn.com  #!nonpnt
@@ -3795,6 +3827,7 @@
 0.0.0.0 il-shop.cn  #!nonpnt
 0.0.0.0 illitpress.com  #!nonpnt
 0.0.0.0 iteye.com  #!nonpnt
+0.0.0.0 izhufu.net  #!nonpnt
 0.0.0.0 jaxno.com  #!nonpnt
 0.0.0.0 jc0359.com  #!nonpnt
 0.0.0.0 jd.com  #!nonpnt
@@ -3808,7 +3841,9 @@
 0.0.0.0 k-creat.com  #!nonpnt
 0.0.0.0 kakatongmeng.net  #!nonpnt
 0.0.0.0 kmkejipd.com  #!nonpnt
+0.0.0.0 ku3101.net  #!nonpnt
 0.0.0.0 lansingip.com  #!nonpnt
+0.0.0.0 lanzhouzaixian.cn  #!nonpnt
 0.0.0.0 ld12345.com  #!nonpnt
 0.0.0.0 lightspeedtrucking.com  #!nonpnt
 0.0.0.0 linjiaxiaohui.cn  #!nonpnt
@@ -3834,6 +3869,7 @@
 0.0.0.0 moflier.com  #!nonpnt
 0.0.0.0 moneytlk.com  #!nonpnt
 0.0.0.0 mosaby.com  #!nonpnt
+0.0.0.0 mscto.com  #!nonpnt
 0.0.0.0 mxj.com.cn  #!nonpnt
 0.0.0.0 mycvcv.com  #!nonpnt
 0.0.0.0 mydadao.net  #!nonpnt
@@ -3852,6 +3888,7 @@
 0.0.0.0 paloma.cn  #!nonpnt
 0.0.0.0 pantianxia.com  #!nonpnt
 0.0.0.0 parichyimin.com  #!nonpnt
+0.0.0.0 pck777.com  #!nonpnt
 0.0.0.0 pclovers.net  #!nonpnt
 0.0.0.0 phoenixups.com  #!nonpnt
 0.0.0.0 ping-jia.net  #!nonpnt
@@ -3859,6 +3896,7 @@
 0.0.0.0 pnstudy.com  #!nonpnt
 0.0.0.0 price.com.hk  #!nonpnt
 0.0.0.0 programmersought.com  #!nonpnt
+0.0.0.0 ptkaishan.com  #!nonpnt
 0.0.0.0 ptzxc.com  #!nonpnt
 0.0.0.0 qcnsw.com  #!nonpnt
 0.0.0.0 qedev.com  #!nonpnt
@@ -3867,6 +3905,7 @@
 0.0.0.0 qmisdhpe.com  #!nonpnt
 0.0.0.0 qnapnas.com.cn  #!nonpnt
 0.0.0.0 qq366.cn  #!nonpnt
+0.0.0.0 qqtn.com  #!nonpnt
 0.0.0.0 qqxmail.com  #!nonpnt
 0.0.0.0 qtcamp.com  #!nonpnt
 0.0.0.0 quanmaimai.com  #!nonpnt
@@ -3894,6 +3933,7 @@
 0.0.0.0 shxmtech.com  #!nonpnt
 0.0.0.0 simpletense.com  #!nonpnt
 0.0.0.0 simpletense.org  #!nonpnt
+0.0.0.0 sldfc.cn  #!nonpnt
 0.0.0.0 smpchome.com  #!nonpnt
 0.0.0.0 sociablelabs.com  #!nonpnt
 0.0.0.0 sockvalley.com  #!nonpnt
@@ -3933,6 +3973,7 @@
 0.0.0.0 weiyoou8.com  #!nonpnt
 0.0.0.0 wenxuecity.com  #!nonpnt
 0.0.0.0 witdroid.com  #!nonpnt
+0.0.0.0 wnt777.com  #!nonpnt
 0.0.0.0 wolonge.com  #!nonpnt
 0.0.0.0 wordlm.com  #!nonpnt
 0.0.0.0 wywb0818.com  #!nonpnt
@@ -3949,12 +3990,16 @@
 0.0.0.0 xsjphoto.com  #!nonpnt
 0.0.0.0 xspdf.com  #!nonpnt
 0.0.0.0 xtfeed.cn  #!nonpnt
+0.0.0.0 xueman288.com  #!nonpnt
 0.0.0.0 xulander.com  #!nonpnt
 0.0.0.0 xyyhs.net  #!nonpnt
+0.0.0.0 xz7.com  #!nonpnt
 0.0.0.0 y5.hk  #!nonpnt
 0.0.0.0 yinyids.com  #!nonpnt
+0.0.0.0 yiper.org  #!nonpnt
 0.0.0.0 yixinit.com  #!nonpnt
 0.0.0.0 yiyisoft.com  #!nonpnt
+0.0.0.0 yiyult.com  #!nonpnt
 0.0.0.0 ylfjs.com  #!nonpnt
 0.0.0.0 ymei189.com  #!nonpnt
 0.0.0.0 youchuang365.com  #!nonpnt
@@ -4165,7 +4210,6 @@
 0.0.0.0 madeingali.com  #!yesil
 0.0.0.0 maguai.com  #!yesil
 0.0.0.0 mayphatmaynen.com  #!yesil
-0.0.0.0 meifa.izhufu.net  #!yesil
 0.0.0.0 mjzj.com  #!yesil
 0.0.0.0 mnst.sport-dpo.de  #!yesil
 0.0.0.0 mspet.kbrswkj.com  #!yesil
@@ -4311,6 +4355,7 @@
 0.0.0.0 bdsmzj.com  #!yesil
 0.0.0.0 bentleycompany.buzz  #!yesil
 0.0.0.0 bhjy2007.com  #!yesil
+0.0.0.0 bhscy.com  #!yesil
 0.0.0.0 bjcsjsc.com  #!yesil
 0.0.0.0 bjdtyx.com  #!yesil
 0.0.0.0 bjgnhh.com  #!yesil
@@ -4319,6 +4364,7 @@
 0.0.0.0 btlhxzz.com  #!yesil
 0.0.0.0 bubuzhe.com  #!yesil
 0.0.0.0 buccelli.buzz  #!yesil
+0.0.0.0 buscodepto.com  #!yesil
 0.0.0.0 buythebestbuy.com  #!yesil
 0.0.0.0 byswq.com  #!yesil
 0.0.0.0 bzxfgj.com  #!yesil
@@ -4339,6 +4385,7 @@
 0.0.0.0 csmjjdfw.com  #!yesil
 0.0.0.0 csxbd.com  #!yesil
 0.0.0.0 ctfwikp.buzz  #!yesil
+0.0.0.0 cxhm.net  #!yesil
 0.0.0.0 czag88.com  #!yesil
 0.0.0.0 czcqs.com  #!yesil
 0.0.0.0 dapaizixun.com  #!yesil
@@ -4351,6 +4398,7 @@
 0.0.0.0 dn010.com  #!yesil
 0.0.0.0 dnf4f.com  #!yesil
 0.0.0.0 donnaspetcare.com  #!yesil
+0.0.0.0 drjordanmall.com  #!yesil
 0.0.0.0 e5a5x.com  #!yesil
 0.0.0.0 ecodezsv5.buzz  #!yesil
 0.0.0.0 eddingmkt.com  #!yesil
@@ -4362,6 +4410,7 @@
 0.0.0.0 ffffgggga.com  #!yesil
 0.0.0.0 fsadu.org.br  #!yesil
 0.0.0.0 fxsw.net  #!yesil
+0.0.0.0 fxyibai.com  #!yesil
 0.0.0.0 gatos.buzz  #!yesil
 0.0.0.0 gdboxinda.com  #!yesil
 0.0.0.0 gh-2.net  #!yesil
@@ -4381,14 +4430,17 @@
 0.0.0.0 hn-hongyuan.com  #!yesil
 0.0.0.0 hnhuayue.com  #!yesil
 0.0.0.0 hnzhilai.com  #!yesil
+0.0.0.0 hokedoor.com  #!yesil
 0.0.0.0 hongyazi.org  #!yesil
 0.0.0.0 howietech.com  #!yesil
 0.0.0.0 huoqiunews.com  #!yesil
 0.0.0.0 hydxdn.com  #!yesil
+0.0.0.0 ispsd2015.com  #!yesil
 0.0.0.0 itjie.com  #!yesil
 0.0.0.0 iytest.com  #!yesil
 0.0.0.0 jamogram.com  #!yesil
 0.0.0.0 jbzj.com  #!yesil
+0.0.0.0 jcabc.cn  #!yesil
 0.0.0.0 jhua365.com  #!yesil
 0.0.0.0 jiajiaxz.com  #!yesil
 0.0.0.0 jlqiou.com  #!yesil
@@ -4425,6 +4477,7 @@
 0.0.0.0 mapxl.buzz  #!yesil
 0.0.0.0 matbakhe.com  #!yesil
 0.0.0.0 medistaryn.com  #!yesil
+0.0.0.0 mei521.com  #!yesil
 0.0.0.0 melijoo.com  #!yesil
 0.0.0.0 mi6fx.com  #!yesil
 0.0.0.0 milacms.com  #!yesil
@@ -4521,6 +4574,7 @@
 0.0.0.0 yhkjjj.com  #!yesil
 0.0.0.0 yijyi.com  #!yesil
 0.0.0.0 ymhds8.com  #!yesil
+0.0.0.0 ymw.cn  #!yesil
 0.0.0.0 ynp995.com  #!yesil
 0.0.0.0 youyizzy.com  #!yesil
 0.0.0.0 yqhcwgl.com  #!yesil
