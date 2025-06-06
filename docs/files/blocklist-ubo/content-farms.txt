@@ -1,7 +1,7 @@
 ! Title: Content Farm Filters
 ! Description: Filter for general content farms, mostly in Chinese.
 ! Expires: 3 days
-! Last modified: 2025-06-01T19:50:05+00:00
+! Last modified: 2025-06-06T07:49:26+00:00
 ! Homepage: https://danny0838.github.io/content-farm-terminator/
 ! Licence: MIT License
 ! Source: https://danny0838.github.io/content-farm-terminator/files/blocklist-ubo/content-farms.txt
@@ -15555,7 +15555,10 @@ vidlah.com  #redirects to justshare.live
 needfound.org  #redirects to maimai.pro
 kagit.kr
 funshare.cc  #redirects to *.cklive.live
-justfeed.net  #redirects to *.cklive.liveweb-ptt.tw
+justfeed.net  #redirects to *.cklive.live
+web-ptt.tw
+pets-naivety.com  #redirects to comeworlds.com
+wawa3c.com
 # aggregation: #!cxyzjd
 # source: https://raw.githubusercontent.com/wdmpa/content-farm-list/main/domains/spam/cxyzjd.txt
 # homepage: https://github.com/wdmpa/content-farm-list
