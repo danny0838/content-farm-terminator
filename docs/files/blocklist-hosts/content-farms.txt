@@ -1,6 +1,6 @@
 # Title: Content Farm Filters
 # Description: Filter for general content farms, mostly in Chinese.
-# Last modified: 2025-07-06T19:50:01+00:00
+# Last modified: 2025-07-07T16:30:14+00:00
 # Homepage: https://danny0838.github.io/content-farm-terminator/
 # Licence: MIT License
 # Source: https://danny0838.github.io/content-farm-terminator/files/blocklist-hosts/content-farms.txt
@@ -12317,6 +12317,8 @@
 0.0.0.0 web-ptt.tw
 0.0.0.0 pets-naivety.com  #redirects to comeworlds.com
 0.0.0.0 wawa3c.com
+0.0.0.0 pttweb.org.tw
+0.0.0.0 oryoy.com
 # aggregation: #!cxyzjd
 # source: https://raw.githubusercontent.com/wdmpa/content-farm-list/main/domains/spam/cxyzjd.txt
 # homepage: https://github.com/wdmpa/content-farm-list
