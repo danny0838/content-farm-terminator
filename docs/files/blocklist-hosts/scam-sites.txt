@@ -1,7 +1,7 @@
 # Title: Scam Sites Filters
 # Description: Filter for scam sites. Mostly aggregrated from governmental sources, such as Ministry
 #     of Digital Affairs and National Police Agency of Taiwan.
-# Last modified: 2025-07-07T16:12:28+00:00
+# Last modified: 2025-07-08T13:22:55+00:00
 # Homepage: https://danny0838.github.io/content-farm-terminator/
 # Licence: MIT License
 # Source: https://danny0838.github.io/content-farm-terminator/files/blocklist-hosts/scam-sites.txt
@@ -13086,7 +13086,6 @@
 0.0.0.0 moex.bar  #!165jtz
 0.0.0.0 moex.best  #!165jtz
 0.0.0.0 mokfxm.com  #!165jtz
-0.0.0.0 a.marketaeg.space  #!165jtz
 0.0.0.0 buyergomomo.com  #path=/a52yipm #!165jtz
 0.0.0.0 dkcmomo.com  #path=/af6g8ew #!165jtz
 0.0.0.0 forgomomo.com  #path=/im3fmgd #!165jtz
@@ -28405,7 +28404,7 @@
 # source: https://od.moi.gov.tw/api/v1/rest/datastore/A01010000C-001277-053
 # homepage: https://data.gov.tw/dataset/78432
 # aggregation: #!TWNICscams
-# source: https://www-api.moda.gov.tw/OpenData/Files/5791
+# source: https://www-api.moda.gov.tw/OpenData/Files/16352
 # homepage: https://data.gov.tw/dataset/165027
 0.0.0.0 tobuyersepc24.com  #!TWNICscams
 0.0.0.0 sharefunpc24.com  #!TWNICscams
@@ -29200,3 +29199,92 @@
 0.0.0.0 pqlyzlk.shop  #!TWNICscams
 0.0.0.0 exzxv.site  #!TWNICscams
 0.0.0.0 zhengmingplvkp.club  #!TWNICscams
+0.0.0.0 vapeshopee.com  #!TWNICscams
+0.0.0.0 asia-rakutenmb.com  #!TWNICscams
+0.0.0.0 uiocvs.shop  #!TWNICscams
+0.0.0.0 vozcz.com  #!TWNICscams
+0.0.0.0 etmalltopshop.com  #!TWNICscams
+0.0.0.0 vksuws.top  #!TWNICscams
+0.0.0.0 xmsksl.shop  #!TWNICscams
+0.0.0.0 uiocvs.com  #!TWNICscams
+0.0.0.0 viagravip.shop  #!TWNICscams
+0.0.0.0 oylhkl.site  #!TWNICscams
+0.0.0.0 kfbxgqnl.shop  #!TWNICscams
+0.0.0.0 xzivz.vip  #!TWNICscams
+0.0.0.0 weicup.live  #!TWNICscams
+0.0.0.0 trhdu.top  #!TWNICscams
+0.0.0.0 colaresearch.shop  #!TWNICscams
+0.0.0.0 fenon.life  #!TWNICscams
+0.0.0.0 pchomen.com  #!TWNICscams
+0.0.0.0 asia-rakutenmember.com  #!TWNICscams
+0.0.0.0 wdhjm.top  #!TWNICscams
+0.0.0.0 roxplwn.shop  #!TWNICscams
+0.0.0.0 marketaeg.space  #!TWNICscams
+0.0.0.0 mosmoscc.com  #!TWNICscams
+0.0.0.0 mosmosc.icu  #!TWNICscams
+0.0.0.0 cwxyjys.bond  #!TWNICscams
+0.0.0.0 mmoslyh.bond  #!TWNICscams
+0.0.0.0 mmoslya.bond  #!TWNICscams
+0.0.0.0 matrix-momo-api.shopex.cn  #!TWNICscams
+0.0.0.0 dgbase.top  #!TWNICscams
+0.0.0.0 tttww.icu  #!TWNICscams
+0.0.0.0 ecpay.xyz  #!TWNICscams
+0.0.0.0 niconsortiu.ecpay.com  #!TWNICscams
+0.0.0.0 ecpay-01.asia  #!TWNICscams
+0.0.0.0 h5.ecpay.icu  #!TWNICscams
+0.0.0.0 home.insurance.beta.ecpay.com  #!TWNICscams
+0.0.0.0 ecpay-06.xyz  #!TWNICscams
+0.0.0.0 ecpay-tw-cpay-fb.icu  #!TWNICscams
+0.0.0.0 ecpay-0.xyz  #!TWNICscams
+0.0.0.0 retailpark.ecpay.com  #!TWNICscams
+0.0.0.0 ecpay-09.xyz  #!TWNICscams
+0.0.0.0 ecpay-01.xyz  #!TWNICscams
+0.0.0.0 e-cpay-tw-ecpay.icu  #!TWNICscams
+0.0.0.0 greenword-ecpay.com  #!TWNICscams
+0.0.0.0 greenworld-ecpay.com  #!TWNICscams
+0.0.0.0 tw-ecpay.icu  #!TWNICscams
+0.0.0.0 ecpay-twe-cpay.icu  #!TWNICscams
+0.0.0.0 ecpay-07.xyz  #!TWNICscams
+0.0.0.0 ecpay-02.xyz  #!TWNICscams
+0.0.0.0 ecpay-02.top  #!TWNICscams
+0.0.0.0 ecpay-tw-dx.icu  #!TWNICscams
+0.0.0.0 link.ecpay.no  #!TWNICscams
+0.0.0.0 ecpay-tw.xyz  #!TWNICscams
+0.0.0.0 ecpay-twe-cpa1y.top  #!TWNICscams
+0.0.0.0 ecpay-08.xyz  #!TWNICscams
+0.0.0.0 ecpay-03.xyz  #!TWNICscams
+0.0.0.0 ecpays.com  #!TWNICscams
+0.0.0.0 random.ecpayglobal.cn  #!TWNICscams
+0.0.0.0 api.ecpayglobal.cn  #!TWNICscams
+0.0.0.0 ecpay0.xyz  #!TWNICscams
+0.0.0.0 ecpaymtw.com  #!TWNICscams
+0.0.0.0 ecpayktw.com  #!TWNICscams
+0.0.0.0 ecpayptw.com  #!TWNICscams
+0.0.0.0 ecpayndmv.top  #!TWNICscams
+0.0.0.0 ecpayitw.com  #!TWNICscams
+0.0.0.0 ecpaygtw.com  #!TWNICscams
+0.0.0.0 ecpayjsc.top  #!TWNICscams
+0.0.0.0 ecpay01.icu  #!TWNICscams
+0.0.0.0 pop3.ecpayglobal.cn  #!TWNICscams
+0.0.0.0 v5r3.ecpayglobal.cn  #!TWNICscams
+0.0.0.0 sv5r3.ecpayglobal.cn  #!TWNICscams
+0.0.0.0 rco4n.ecpayglobal.cn  #!TWNICscams
+0.0.0.0 drcvy.ecpayglobal.cn  #!TWNICscams
+0.0.0.0 buod8.ecpayglobal.cn  #!TWNICscams
+0.0.0.0 ecpayapi.amsdi.com.ph  #!TWNICscams
+0.0.0.0 ecpayltw.com  #!TWNICscams
+0.0.0.0 ecpayotw.com  #!TWNICscams
+0.0.0.0 ecpayntw.com  #!TWNICscams
+0.0.0.0 ecpayndm.top  #!TWNICscams
+0.0.0.0 ecpayhtw.com  #!TWNICscams
+0.0.0.0 ecpayplan.store  #!TWNICscams
+0.0.0.0 ecpayjscchat.qpon  #!TWNICscams
+0.0.0.0 ecpayftw.com  #!TWNICscams
+0.0.0.0 ecpayjtw.com  #!TWNICscams
+0.0.0.0 ecpaqry-tw.top  #!TWNICscams
+0.0.0.0 etmallfashion.com  #!TWNICscams
+0.0.0.0 eecopay.cn  #!TWNICscams
+0.0.0.0 ecptyry-tw.top  #!TWNICscams
+0.0.0.0 uvgxdiw.shop  #!TWNICscams
+0.0.0.0 marketaeg.online  #!TWNICscams
+0.0.0.0 xinkdd.site  #!TWNICscams

@@ -216,7 +216,7 @@ aggregate:
     type: ublacklist
   - name: TWNICscams
     homepage: https://data.gov.tw/dataset/165027
-    source: https://www-api.moda.gov.tw/OpenData/Files/5791
+    source: https://www-api.moda.gov.tw/OpenData/Files/16352
     dest: src/aggregations/scam-sites/twnicscams.txt
     type: json_twnicscams
   - name: 165jtz

@@ -1,7 +1,7 @@
 # Title: Scam Sites Filters
 # Description: Filter for scam sites. Mostly aggregrated from governmental sources, such as Ministry
 #     of Digital Affairs and National Police Agency of Taiwan.
-# Last modified: 2025-07-07T16:12:28+00:00
+# Last modified: 2025-07-08T13:22:55+00:00
 # Homepage: https://danny0838.github.io/content-farm-terminator/
 # Licence: MIT License
 # Source: https://danny0838.github.io/content-farm-terminator/files/blocklist-ublacklist/scam-sites.txt
@@ -13145,7 +13145,6 @@
 *://*.moex.bar/*  #!165jtz
 *://*.moex.best/*  #!165jtz
 *://*.mokfxm.com/*  #!165jtz
-*://*.a.marketaeg.space/*  #!165jtz
 *://*.buyergomomo.com/*  #path=/a52yipm #!165jtz
 *://*.dkcmomo.com/*  #path=/af6g8ew #!165jtz
 *://*.forgomomo.com/*  #path=/im3fmgd #!165jtz
@@ -28465,7 +28464,7 @@
 # source: https://od.moi.gov.tw/api/v1/rest/datastore/A01010000C-001277-053
 # homepage: https://data.gov.tw/dataset/78432
 # aggregation: #!TWNICscams
-# source: https://www-api.moda.gov.tw/OpenData/Files/5791
+# source: https://www-api.moda.gov.tw/OpenData/Files/16352
 # homepage: https://data.gov.tw/dataset/165027
 *://*.tobuyersepc24.com/*  #!TWNICscams
 *://*.sharefunpc24.com/*  #!TWNICscams
@@ -29260,3 +29259,92 @@
 *://*.pqlyzlk.shop/*  #!TWNICscams
 *://*.exzxv.site/*  #!TWNICscams
 *://*.zhengmingplvkp.club/*  #!TWNICscams
+*://*.vapeshopee.com/*  #!TWNICscams
+*://*.asia-rakutenmb.com/*  #!TWNICscams
+*://*.uiocvs.shop/*  #!TWNICscams
+*://*.vozcz.com/*  #!TWNICscams
+*://*.etmalltopshop.com/*  #!TWNICscams
+*://*.vksuws.top/*  #!TWNICscams
+*://*.xmsksl.shop/*  #!TWNICscams
+*://*.uiocvs.com/*  #!TWNICscams
+*://*.viagravip.shop/*  #!TWNICscams
+*://*.oylhkl.site/*  #!TWNICscams
+*://*.kfbxgqnl.shop/*  #!TWNICscams
+*://*.xzivz.vip/*  #!TWNICscams
+*://*.weicup.live/*  #!TWNICscams
+*://*.trhdu.top/*  #!TWNICscams
+*://*.colaresearch.shop/*  #!TWNICscams
+*://*.fenon.life/*  #!TWNICscams
+*://*.pchomen.com/*  #!TWNICscams
+*://*.asia-rakutenmember.com/*  #!TWNICscams
+*://*.wdhjm.top/*  #!TWNICscams
+*://*.roxplwn.shop/*  #!TWNICscams
+*://*.marketaeg.space/*  #!TWNICscams
+*://*.mosmoscc.com/*  #!TWNICscams
+*://*.mosmosc.icu/*  #!TWNICscams
+*://*.cwxyjys.bond/*  #!TWNICscams
+*://*.mmoslyh.bond/*  #!TWNICscams
+*://*.mmoslya.bond/*  #!TWNICscams
+*://*.matrix-momo-api.shopex.cn/*  #!TWNICscams
+*://*.dgbase.top/*  #!TWNICscams
+*://*.tttww.icu/*  #!TWNICscams
+*://*.ecpay.xyz/*  #!TWNICscams
+*://*.niconsortiu.ecpay.com/*  #!TWNICscams
+*://*.ecpay-01.asia/*  #!TWNICscams
+*://*.h5.ecpay.icu/*  #!TWNICscams
+*://*.home.insurance.beta.ecpay.com/*  #!TWNICscams
+*://*.ecpay-06.xyz/*  #!TWNICscams
+*://*.ecpay-tw-cpay-fb.icu/*  #!TWNICscams
+*://*.ecpay-0.xyz/*  #!TWNICscams
+*://*.retailpark.ecpay.com/*  #!TWNICscams
+*://*.ecpay-09.xyz/*  #!TWNICscams
+*://*.ecpay-01.xyz/*  #!TWNICscams
+*://*.e-cpay-tw-ecpay.icu/*  #!TWNICscams
+*://*.greenword-ecpay.com/*  #!TWNICscams
+*://*.greenworld-ecpay.com/*  #!TWNICscams
+*://*.tw-ecpay.icu/*  #!TWNICscams
+*://*.ecpay-twe-cpay.icu/*  #!TWNICscams
+*://*.ecpay-07.xyz/*  #!TWNICscams
+*://*.ecpay-02.xyz/*  #!TWNICscams
+*://*.ecpay-02.top/*  #!TWNICscams
+*://*.ecpay-tw-dx.icu/*  #!TWNICscams
+*://*.link.ecpay.no/*  #!TWNICscams
+*://*.ecpay-tw.xyz/*  #!TWNICscams
+*://*.ecpay-twe-cpa1y.top/*  #!TWNICscams
+*://*.ecpay-08.xyz/*  #!TWNICscams
+*://*.ecpay-03.xyz/*  #!TWNICscams
+*://*.ecpays.com/*  #!TWNICscams
+*://*.random.ecpayglobal.cn/*  #!TWNICscams
+*://*.api.ecpayglobal.cn/*  #!TWNICscams
+*://*.ecpay0.xyz/*  #!TWNICscams
+*://*.ecpaymtw.com/*  #!TWNICscams
+*://*.ecpayktw.com/*  #!TWNICscams
+*://*.ecpayptw.com/*  #!TWNICscams
+*://*.ecpayndmv.top/*  #!TWNICscams
+*://*.ecpayitw.com/*  #!TWNICscams
+*://*.ecpaygtw.com/*  #!TWNICscams
+*://*.ecpayjsc.top/*  #!TWNICscams
+*://*.ecpay01.icu/*  #!TWNICscams
+*://*.pop3.ecpayglobal.cn/*  #!TWNICscams
+*://*.v5r3.ecpayglobal.cn/*  #!TWNICscams
+*://*.sv5r3.ecpayglobal.cn/*  #!TWNICscams
+*://*.rco4n.ecpayglobal.cn/*  #!TWNICscams
+*://*.drcvy.ecpayglobal.cn/*  #!TWNICscams
+*://*.buod8.ecpayglobal.cn/*  #!TWNICscams
+*://*.ecpayapi.amsdi.com.ph/*  #!TWNICscams
+*://*.ecpayltw.com/*  #!TWNICscams
+*://*.ecpayotw.com/*  #!TWNICscams
+*://*.ecpayntw.com/*  #!TWNICscams
+*://*.ecpayndm.top/*  #!TWNICscams
+*://*.ecpayhtw.com/*  #!TWNICscams
+*://*.ecpayplan.store/*  #!TWNICscams
+*://*.ecpayjscchat.qpon/*  #!TWNICscams
+*://*.ecpayftw.com/*  #!TWNICscams
+*://*.ecpayjtw.com/*  #!TWNICscams
+*://*.ecpaqry-tw.top/*  #!TWNICscams
+*://*.etmallfashion.com/*  #!TWNICscams
+*://*.eecopay.cn/*  #!TWNICscams
+*://*.ecptyry-tw.top/*  #!TWNICscams
+*://*.uvgxdiw.shop/*  #!TWNICscams
+*://*.marketaeg.online/*  #!TWNICscams
+*://*.xinkdd.site/*  #!TWNICscams
