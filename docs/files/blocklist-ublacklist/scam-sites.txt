@@ -1,7 +1,7 @@
 # Title: Scam Sites Filters
 # Description: Filter for scam sites. Mostly aggregrated from governmental sources, such as Ministry
 #     of Digital Affairs and National Police Agency of Taiwan.
-# Last modified: 2025-07-08T13:22:55+00:00
+# Last modified: 2025-07-08T13:28:23+00:00
 # Homepage: https://danny0838.github.io/content-farm-terminator/
 # Licence: MIT License
 # Source: https://danny0838.github.io/content-farm-terminator/files/blocklist-ublacklist/scam-sites.txt
@@ -28460,9 +28460,6 @@
 *://*.800.bolee666.com/*  #!165jtz
 *://*.z1.bolee5788.com/*  #!165jtz
 *://*.z1.bolerr1688.net/*  #!165jtz
-# aggregation: #!165line
-# source: https://od.moi.gov.tw/api/v1/rest/datastore/A01010000C-001277-053
-# homepage: https://data.gov.tw/dataset/78432
 # aggregation: #!TWNICscams
 # source: https://www-api.moda.gov.tw/OpenData/Files/16352
 # homepage: https://data.gov.tw/dataset/165027

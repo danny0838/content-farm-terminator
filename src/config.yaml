@@ -224,11 +224,6 @@ aggregate:
     source: https://od.moi.gov.tw/api/v1/rest/datastore/A01010000C-002150-013
     dest: src/aggregations/scam-sites/165jtz.txt
     type: json_165jtz
-  - name: 165line
-    homepage: https://data.gov.tw/dataset/78432
-    source: https://od.moi.gov.tw/api/v1/rest/datastore/A01010000C-001277-053
-    dest: src/aggregations/scam-sites/165line.txt
-    type: json_165line
 
 build:
   - source:
