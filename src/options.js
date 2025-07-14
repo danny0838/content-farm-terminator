@@ -82,7 +82,7 @@ async function showInfo() {
 
     if (request.url !== url) {
       redirect = request.url;
-    } else if (request.redirects && request.redirects.length) {
+    } else if (request.redirects?.length) {
       redirect = request.redirects[request.redirects.length - 1][0];
     } else if (request.referrer) {
       redirect = request.referrer;
