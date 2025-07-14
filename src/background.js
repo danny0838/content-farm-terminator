@@ -399,7 +399,7 @@ function onBeforeRequestBlocker(details) {
   const url = details.url;
 
   const blocker = filter.getBlocker({url});
-  if (!(blocker.rule && blocker.rule.action === filter.RULE_ACTION_BLOCK)) {
+  if (blocker.rule?.action !== filter.RULE_ACTION_BLOCK) {
     return;
   }
 
@@ -615,8 +615,8 @@ function initStorageChangeListener() {
 
     if (showContextMenuCommands || quickContextMenuCommands) {
       contextMenuController.refresh(
-        showContextMenuCommands ? showContextMenuCommands.newValue : undefined,
-        quickContextMenuCommands ? quickContextMenuCommands.newValue : undefined,
+        showContextMenuCommands?.newValue,
+        quickContextMenuCommands?.newValue,
       );
     }
 

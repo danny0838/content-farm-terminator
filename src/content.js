@@ -552,7 +552,7 @@ const getRedirectedUrlOrHostname = (() => {
     if (docHostname === "twitter.com" || docHostname === "mobile.twitter.com") {
       let url = elem.textContent;
       const lastSpan = elem.querySelector('span[aria-hidden="true"]:last-child');
-      if (lastSpan && lastSpan.textContent === "…") {
+      if (lastSpan?.textContent === "…") {
         url = url.slice(0, -1);
       }
       return url;
@@ -696,7 +696,7 @@ async function updateLinkMarker(elem) {
         elem.insertBefore(marker, elem.firstChild);
       }
     } else {
-      if (marker && marker.isConnected) { marker.remove(); }
+      if (marker?.isConnected) { marker.remove(); }
     }
   }).catch((ex) => {
     console.error(ex);

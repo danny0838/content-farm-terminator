@@ -674,24 +674,24 @@
         sourceText: options.userGraylist,
         ruleOptions: {action: RULE_ACTION_NOOP},
         cacheDuration: options.webBlacklistsCacheDuration,
-        renew: optChanges && optChanges.userGraylist,
+        renew: optChanges?.userGraylist,
       });
       this.addBlocklist('userBlacklist', {
         sourceText: options.userBlacklist,
         ruleOptions: {action: RULE_ACTION_BLOCK},
         cacheDuration: options.webBlacklistsCacheDuration,
-        renew: optChanges && optChanges.userBlacklist,
+        renew: optChanges?.userBlacklist,
       });
       this.addBlocklist('userWhitelist', {
         sourceText: options.userWhitelist,
         ruleOptions: {action: RULE_ACTION_UNBLOCK},
         cacheDuration: options.webBlacklistsCacheDuration,
-        renew: optChanges && optChanges.userWhitelist,
+        renew: optChanges?.userWhitelist,
       });
 
       // calculate added urls
       const addedUrls = new Set();
-      if (optChanges && optChanges.webBlacklists) {
+      if (optChanges?.webBlacklists) {
         const {newValue, oldValue} = optChanges.webBlacklists;
         const urlSet = new Set(this.urlsTextToLines(oldValue));
         for (const url of this.urlsTextToLines(newValue)) {
@@ -1038,14 +1038,14 @@
           let check = checkUrl(url, details);
 
           // check redirected if source URL is not blocked
-          if (!(check.rule && check.rule.action === RULE_ACTION_BLOCK) && redirected) {
+          if ((check.rule?.action !== RULE_ACTION_BLOCK) && redirected) {
             // treat as http://* if hostname only
             const url = (RE_SCHEME.test(redirected) ? '' : 'http://') + redirected;
             check = checkUrl(url, details);
           }
 
           if (!details) {
-            if (check.rule && check.rule.action === RULE_ACTION_BLOCK) {
+            if (check.rule?.action === RULE_ACTION_BLOCK) {
               Object.assign(blocker, check);
             }
           } else {
