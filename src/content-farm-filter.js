@@ -858,9 +858,7 @@
       const time = Date.now();
 
       // fallback to 'omit' when host permission not granted to allow CORS fetch
-      // Firefox Android < 79: no browser.permissions => always use 'include'
-      const credentials = (!browser.permissions || await browser.permissions.contains({origins: [url]}))
-        ? 'include' : 'omit';
+      const credentials = await browser.permissions.contains({origins: [url]}) ? 'include' : 'omit';
 
       const response = await fetch(url, {
         credentials,
