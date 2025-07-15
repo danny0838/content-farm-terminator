@@ -6,6 +6,40 @@ title: 常見問題
 <h1>常見問題</h1>
 
 <details>
+<summary><b>關於 Chromium 系瀏覽器在 138 版後強制停用及移除「終結內容農場」？</b></summary>
+<p>Chromium 規劃將套件系統升級為 Manifest V3 (MV3)，並逐步淘汰 Manifest V2 (MV2) 套件。（<a href="https://developer.chrome.com/docs/extensions/develop/migrate/mv2-deprecation-timeline">官方公告</a>）</p>
+<p>「終結內容農場」作為 MV2 套件，也會被強制停用及移除。解決方案如下：</p>
+
+<h3>法一：調整瀏覽器設定以允許繼續安裝和使用 MV2 套件</h3>
+<ol>
+  <li>在 Chromium 系瀏覽器網址列輸入及造訪 chrome://flags。
+  <li>尋找 #temporary-unexpire-flags-m137，設定為 Enabled。
+  <li>重新啟動瀏覽器。
+  <li>尋找 #extension-manifest-v2-deprecation-unsupported，設定為 Disabled。
+  <li>尋找 #extension-manifest-v2-deprecation-disabled，設定為 Disabled。
+  <li>重新啟動瀏覽器。
+</ol>
+<p>完成以上設定後，即可繼續安裝和使用「終結內容農場」。
+<p>注意：此為 Chromium 提供的過渡用設定，未來可能無法使用。
+
+<figure class="box">
+<img src="../assets/images/screenshots/chrome-mv3-001.png" alt="">
+<figcaption>調整瀏覽器設定以允許繼續安裝和使用 MV2 套件</figcaption>
+</figure>
+
+<h3>法二：安裝<a href="https://chromewebstore.google.com/detail/ecpjpoefcloakmdegcjgcljibbjfcaib">「終結內容農場」MV3 測試版</a></h3>
+<p>注意：MV3 需要做系統層級的設定才能發揮較完整的網路請求攔截功能（安裝時會跳出相關提示），功能性不如 MV2。為避免影響目前使用者，預計在 MV2 版本完全無法使用時才會更新為 MV3 正式版。
+
+<figure class="box">
+<img src="../assets/images/screenshots/chrome-mv3-002.png" alt="">
+<figcaption>MV3 需要做系統層級的設定才能發揮較完整的網路請求攔截功能</figcaption>
+</figure>
+
+<h3>法三：改用非 Chromium 核心瀏覽器</h3>
+<p>這是最治本的方法。事實上，由於核心 API 實做差異，<a href="https://www.mozilla.org/firefox/">Firefox</a>（或其他 Gecko 核心）瀏覽器上的「終結內容農場」才能發揮完整功能；Chromium 上的「終結內容農場」即使是 MV2 也存在一些功能缺陷（例如無法完全攔截啟動瀏覽器時載入的網頁）。
+</details>
+
+<details>
 <summary><b>可否取消網站解鎖的等待時間和驗證碼？</b></summary>
 <p>「終結內容農場」目前沒有移除此功能的規劃，因為「終結內容農場」本質上就是藉由製造些許不便幫助使用者自律的工具。</p>
 <p>抵制內容農場本來就不是輕鬆愉快的事——看到聳動的標題、摘要、貼圖時，你必須克制一窺究竟的衝動，花點時間讓頭腦冷靜，轉而尋找更合適的資料。如果沒有打算為抵制泛濫成災的內容農場付出一點心力及忍受些許不便，一開始就不需要安裝。</p>
