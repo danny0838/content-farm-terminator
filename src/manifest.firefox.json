@@ -76,10 +76,5 @@
   "browser_action": {
     "default_icon": "img/content-farm-marker_48.png",
     "default_title": "__MSG_appName__"
-  },
-
-  "page_action": {
-    "default_icon": "img/content-farm-marker_48.png",
-    "default_title": "__MSG_appName__"
   }
 }
