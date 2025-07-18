@@ -23,6 +23,7 @@
     "webRequest",
     "webRequestBlocking",
     "storage",
+    "alarms",
     "http://*/*",
     "https://*/*",
     "file:///*"
