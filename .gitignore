@@ -3,4 +3,5 @@
 /package-lock.json
 
 # Build outputs
-dist/
+/src/manifest.json
+/dist/

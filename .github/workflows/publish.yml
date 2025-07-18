@@ -38,8 +38,8 @@ jobs:
         env:
           TIMEZONE: ${{ vars.TIMEZONE || 'UTC' }}
         run: |
-          VERSION=$(jq -r '.version' './src/manifest.json')
-          VERSION_FX=$(jq -r '.version' './src/manifest-firefox.json')
+          VERSION=$(jq -r '.version' './src/manifest.chromium.json')
+          VERSION_FX=$(jq -r '.version' './src/manifest.firefox.json')
           if [ "$VERSION" != "$VERSION_FX" ]; then
             echo "❌ Mismatching manifest versions"
             exit 1
@@ -71,7 +71,7 @@ jobs:
         run: npm run lint
 
       - name: Build extension
-        run: build/pack.sh
+        run: npm run pack
 
       - name: Create Git tag
         run: |

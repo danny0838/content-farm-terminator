@@ -60,6 +60,14 @@ export default [
   },
   {
     files: [
+      "tools/**/*.js",
+    ],
+    languageOptions: {
+      globals: globals.node,
+    },
+  },
+  {
+    files: [
       "src/**/*.js",
     ],
   },

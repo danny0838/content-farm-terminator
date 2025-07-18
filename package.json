@@ -1,11 +1,19 @@
 {
   "type": "module",
   "scripts": {
-    "lint": "eslint"
+    "lint": "eslint",
+    "dev": "npm run dev:chromium",
+    "dev:chromium": "node tools/build.js -t chromium -m dev",
+    "dev:firefox": "node tools/build.js -t firefox -m dev",
+    "pack": "npm run pack:chromium && npm run pack:firefox",
+    "pack:chromium": "node tools/build.js -t chromium -m pack",
+    "pack:firefox": "node tools/build.js -t firefox -m pack"
   },
   "devDependencies": {
     "@stylistic/eslint-plugin": "^4.2.0",
     "eslint": "^9.23.0",
-    "globals": "^16.0.0"
+    "glob": "^11.0.2",
+    "globals": "^16.0.0",
+    "web-ext": "^8.6.0"
   }
 }
