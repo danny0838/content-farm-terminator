@@ -106,10 +106,6 @@
         soup: soup,
       };
 
-      const dispatch = () => {
-        window.dispatchEvent(new CustomEvent('browserInfoLoaded'));
-      };
-
       // Whether this is a dev build.
       if (/^\d+\.\d+\.\d+\D/.test(browser.runtime.getManifest().version)) {
         soup.add('devbuild');
@@ -119,32 +115,11 @@
         soup.add('mobile');
       }
 
-      // Asynchronous
-      Promise.resolve().then(() => {
-        return browser.runtime.getBrowserInfo();
-      }).then((info) => {
-        flavor.major = parseInt(info.version, 10) || 0;
-        soup.add(info.vendor.toLowerCase());
-        soup.add(info.name.toLowerCase());
-        soup.delete('user_stylesheet');
-        if (flavor.major >= 53) { soup.add('user_stylesheet'); }
-        soup.delete('html_filtering');
-        if (flavor.major >= 57) { soup.add('html_filtering'); }
-        dispatch();
-      }, (ex) => {
-        // dummy event for potential listeners
-        dispatch();
-      }).catch((ex) => {
-        console.error(ex);
-      });
-
       // Synchronous -- order of tests is important
       var match;
       if ((match = /\bFirefox\/(\d+)/.exec(ua)) !== null) {
         flavor.major = parseInt(match[1], 10) || 0;
         soup.add('mozilla').add('firefox');
-        if (flavor.major >= 53) { soup.add('user_stylesheet'); }
-        if (flavor.major >= 57) { soup.add('html_filtering'); }
       } else if ((match = /\bEdge\/(\d+)/.exec(ua)) !== null) {
         flavor.major = parseInt(match[1], 10) || 0;
         soup.add('microsoft').add('edge');
@@ -162,11 +137,6 @@
       } else if ((match = /\bSafari\/(\d+)/.exec(ua)) !== null) {
         flavor.major = parseInt(match[1], 10) || 0;
         soup.add('apple').add('safari');
-      }
-
-      // https://github.com/gorhill/uBlock/issues/3588
-      if (soup.has('chromium') && flavor.major >= 66) {
-        soup.add('user_stylesheet');
       }
 
       Object.defineProperty(this, 'userAgent', {value: flavor});
