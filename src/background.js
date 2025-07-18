@@ -9,6 +9,14 @@ let tempUnblockTabs = new Set();
 const contextMenuController = {
   quickMode: false,
 
+  async init() {
+    if (!browser.contextMenus) { return; }
+
+    browser.contextMenus.onClicked.addListener(this.onClicked.bind(this));
+
+    await this.refresh();
+  },
+
   create() {
     if (!browser.contextMenus) { return; }
 
@@ -65,11 +73,9 @@ const contextMenuController = {
     }
 
     if (typeof showContextMenuCommands !== 'undefined') {
-      browser.contextMenus.onClicked.removeListener(this.onClicked);
       browser.contextMenus.removeAll();
       if (showContextMenuCommands) {
         this.create();
-        browser.contextMenus.onClicked.addListener(this.onClicked);
       }
     }
   },
@@ -715,7 +721,7 @@ function init() {
   initInstallListener();
   initBrowserAction();
 
-  contextMenuController.refresh(); // async
+  contextMenuController.init(); // async
   historyController.refresh(); // async
 
   updateFilter() // async
