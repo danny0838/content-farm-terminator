@@ -22,7 +22,7 @@ To report a content farm to be included in our blacklist, fill the form through 
 To publish a web blacklist for subscription, host a plain text file encoded using UTF-8 at a public accessible URL. You can also help us improve [our web blacklists](https://danny0838.github.io/content-farm-terminator/subscriptions) at the `src/` directory of the `gh_pages` branch.
 
 ## For developers
-The source code of the browser extension is placed at the `src/` directory of the `master` branch. Simply change the code and run a building script under `build/`, and the packed extension files will be generated under `dist/`.
+See [DEVELOPMENT](https://github.com/danny0838/content-farm-terminator/blob/main/DEVELOPMENT.md) for details.
 
 ## License
 Content Farm Terminator is licensed under [GNU General Public License v3.0](https://github.com/danny0838/content-farm-terminator/blob/master/LICENSE.txt).
