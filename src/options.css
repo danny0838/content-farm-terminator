@@ -11,9 +11,13 @@ body {
   font-size: 1rem;
 }
 
-a:visited {
+a {
   color: blue; /* fallback for old browsers */
   color: LinkText;
+}
+
+a:active {
+  color: #EE0000;
 }
 
 textarea {
@@ -214,6 +218,10 @@ input[type="button"]:hover {
   body {
     background-color: #333;
     color: #ccc;
+  }
+
+  a {
+    color: #4EA1FF;
   }
 
   textarea {
