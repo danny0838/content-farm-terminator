@@ -55,6 +55,7 @@
       tempUnblockCountdownReset: 24 * 60 * 60 * 1000,
       tempUnblockCountdown: -1,
       tempUnblockLastAccess: -1,
+      backgroundKeeperInterval: 19100,
     },
 
     /**
