@@ -221,6 +221,34 @@ async function autoUpdateAssets(webBlacklistsUpdateInterval) {
   });
 }
 
+async function updateBackgroundKeeper(...args) {
+  let timer;
+
+  const fn = updateBackgroundKeeper = async (backgroundKeeperInterval) => {
+    if (browser.runtime.getManifest().manifest_version !== 3) {
+      return;
+    }
+
+    if (timer) {
+      clearInterval(timer);
+      timer = null;
+    }
+
+    if (typeof backgroundKeeperInterval === 'undefined') {
+      ({backgroundKeeperInterval} = await utils.getOptions(["backgroundKeeperInterval"]));
+    }
+
+    if (backgroundKeeperInterval > 0) {
+      // The service worker shuts down on 30 seconds of inactivity, and
+      // prevented by calling an API.
+      // ref: https://developer.chrome.com/docs/extensions/develop/concepts/service-workers/lifecycle
+      timer = setInterval(browser.runtime.getPlatformInfo, backgroundKeeperInterval);
+    }
+  };
+
+  return await fn(...args);
+}
+
 async function blockSite(urlOrHostname, tabId, frameId, quickMode) {
   let rule = filter.transform(filter.parseRuleLine(urlOrHostname)).validate().toString();
 
@@ -633,7 +661,12 @@ function initStorageChangeListener() {
       userGraylist,
       transformRules,
       showLinkMarkers,
+      backgroundKeeperInterval,
     } = changes;
+
+    if (backgroundKeeperInterval) {
+      updateBackgroundKeeper(backgroundKeeperInterval.newValue); // async
+    }
 
     if (showContextMenuCommands || quickContextMenuCommands) {
       menusController.refresh(
@@ -767,6 +800,8 @@ function init() {
       onBeforeRequestCallback = onBeforeRequestBlocker;
       autoUpdateAssets();
     });
+
+  updateBackgroundKeeper(); // async
 }
 
 init();
