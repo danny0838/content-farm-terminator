@@ -355,16 +355,10 @@ const getRedirectedUrlOrHostname = (() => {
 
     if (docHostname === "www.bing.com" && docPathname === "/search") {
       if (p === "/ck/a") {
-        if (s.has("u")) {
-          if (elem.matches('#b_results .b_algo h2 a')) {
-            const refNode = elem.closest('#b_results .b_algo').querySelector('.b_caption .b_attribution cite');
-            if (refNode) {
-              let url = refNode.textContent;
-              if (url.endsWith("...")) {
-                url = new URL(url).hostname;
-              }
-              return url;
-            }
+        if (elem.matches('#b_results .b_algo h2 a')) {
+          const refNode = elem.closest('#b_results .b_algo').querySelector('.b_tpcn .b_attribution cite');
+          if (refNode) {
+            return refNode.textContent.replace(/\s.+$/, '');
           }
         }
       }
