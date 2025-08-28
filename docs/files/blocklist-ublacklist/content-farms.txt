@@ -1,6 +1,6 @@
 # Title: Content Farm Filters
 # Description: Filter for general content farms, mostly in Chinese.
-# Last modified: 2025-08-24T19:47:42+00:00
+# Last modified: 2025-08-28T13:21:47+00:00
 # Homepage: https://danny0838.github.io/content-farm-terminator/
 # Licence: MIT License
 # Source: https://danny0838.github.io/content-farm-terminator/files/blocklist-ublacklist/content-farms.txt
@@ -12231,6 +12231,18 @@
 *://*.oryoy.com/*
 *://*.kanlah.org/*  #redirects to justshare.live
 *://*.dayunlvshi.com/*
+*://*.solveapro.com/*  #redirects to dsawjk.com
+*://*.loveu-baby.com/*  #redirects to comeworlds.com
+*://*.nutritious-breakfast.com/*  #redirects to comeworlds.com
+*://*.knowledgekhabar.com/*
+*://*.companion-healthy.com/*  #redirects to comeworlds.com
+*://*.energy-healthy.com/*  #redirects to eoeonews.com
+*://*.successs-experience.com/*  #redirects to furnishwe.com
+*://*.welove-gourmet.com/*
+*://*.workplacetop.com/*  #redirects to welove-gourmet.com
+*://*.channel2025.com/*  #redirects to furnishwe.com
+*://*.svsvves.com/*  #redirects to furnishwe.com
+*://*.funnews61.com/*  #redirects to furnishwe.com
 # aggregation: #!cxyzjd
 # source: https://raw.githubusercontent.com/wdmpa/content-farm-list/main/domains/spam/cxyzjd.txt
 # homepage: https://github.com/wdmpa/content-farm-list
