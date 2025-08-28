@@ -312,6 +312,9 @@ build:
         facebook-group:
           value: /^https?://(?:(?:[\w-]+\.)?facebook\.com|fb\.(?:com|me))/(?:groups/)?(?:{value})(?!/user/)(?=[/?#]|$)/
           escape: regex
+        facebook-game:
+          value: /^https?://(?:www\.facebook\.com/gaming|fb\.gg)/play/(?:{value})(?=[/?#]|$)/
+          escape: regex
         threads-id:
           value: /^https://www\.threads\.com/@(?:{value})(?=[/?#]|$)/i
           escape: regex
