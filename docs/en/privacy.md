@@ -18,4 +18,5 @@ The default web blacklist is hosted on GitHub, which is affiliated to GitHub Cor
 * **storage**: To store configs or to cache parsed configs.
 * **unlimitedStorage**: Allow unlimited size of customized blocklists.
 * **contextMenus**: To show a context menu for certain shortcut features.
+* **alarms**: To fetch web blacklists periodically.
 * **history** (optional): To automatically remove extension pages of Content Farm Terminator such as the blocked page, to avoid leaving massive unwanted history.
