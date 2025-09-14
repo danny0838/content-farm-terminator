@@ -29,6 +29,10 @@ jobs:
       artifact_zip: ${{ steps.config.outputs.artifact_zip }}
       artifact_xpi: ${{ steps.config.outputs.artifact_xpi }}
 
+      publish_firefox: ${{ steps.config.outputs.publish_firefox }}
+      publish_chrome: ${{ steps.config.outputs.publish_chrome }}
+      publish_edge: ${{ steps.config.outputs.publish_edge }}
+
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
@@ -39,16 +43,20 @@ jobs:
           TIMEZONE: ${{ vars.TIMEZONE || 'UTC' }}
         run: |
           VERSION=$(jq -r '.version' './src/manifest.chromium.json')
-          VERSION_FX=$(jq -r '.version' './src/manifest.firefox.json')
-          if [ "$VERSION" != "$VERSION_FX" ]; then
-            echo "❌ Mismatching manifest versions"
-            exit 1
-          fi
+          for file in src/manifest*.json; do
+            VERSION2=$(jq -r '.version' "$file")
+            if [ "$VERSION" != "$VERSION2" ]; then
+              echo "❌ Mismatching manifest version: '$file'"
+              exit 1
+            fi
+          done
 
-          EXPECTED_LINE="## 終結內容農場 v$VERSION"
-          if ! grep -Fxq "$EXPECTED_LINE" RELEASES.md; then
-            echo "❌ Missing expected line in \`RELEASES.md\`: $EXPECTED_LINE"
-            exit 1
+          if [ '${{ github.event.inputs.environment }}' = 'production' ]; then
+            EXPECTED_LINE="## 終結內容農場 v$VERSION"
+            if ! grep -Fxq "$EXPECTED_LINE" RELEASES.md; then
+              echo "❌ Missing expected line in \`RELEASES.md\`: $EXPECTED_LINE"
+              exit 1
+            fi
           fi
 
           echo "version=$VERSION" >> $GITHUB_OUTPUT
@@ -58,6 +66,28 @@ jobs:
           echo "artifact_dir=dist" >> $GITHUB_OUTPUT
           echo "artifact_zip=content-farm-terminator-zip" >> $GITHUB_OUTPUT
           echo "artifact_xpi=content-farm-terminator-xpi" >> $GITHUB_OUTPUT
+
+          echo "publish_firefox=$([ -z "${{ vars.FIREFOX_EXTENSION_CHANNEL }}" ] && echo '' || echo '1')" >> $GITHUB_OUTPUT
+          echo "publish_chrome=$([ -z "${{ vars.CHROME_EXTENSION_ID }}" ] && echo '' || echo '1')" >> $GITHUB_OUTPUT
+          echo "publish_edge=$([ -z "${{ vars.EDGE_PRODUCT_ID }}" ] && echo '' || echo '1')" >> $GITHUB_OUTPUT
+
+      - name: Set extension name suffix
+        if: vars.EXTENSION_NAME_SUFFIX != ''
+        run: |
+          for file in src/_locales/*/messages.json; do
+            echo "Updating '$file'..."
+            jq '.appName.message += "${{ vars.EXTENSION_NAME_SUFFIX }}"' "$file" > .tmp.json
+            mv .tmp.json "$file"
+          done
+
+      - name: Set Firefox extension ID
+        if: vars.FIREFOX_EXTENSION_ID != ''
+        run: |
+          for file in src/manifest.firefox*.json; do
+            echo "Updating '$file'..."
+            jq '.browser_specific_settings.gecko.id = "${{ vars.FIREFOX_EXTENSION_ID }}"' "$file" > .tmp.json
+            mv .tmp.json "$file"
+          done
 
       - name: Set up Node.js
         uses: actions/setup-node@v4
@@ -74,6 +104,7 @@ jobs:
         run: npm run pack
 
       - name: Create Git tag
+        if: github.event.inputs.environment == 'production'
         run: |
           git tag --force ${{ steps.config.outputs.tag_name }}
           git push origin ${{ steps.config.outputs.tag_name }}
@@ -92,6 +123,7 @@ jobs:
 
   upload_cws:
     name: Upload to Chrome Web Store
+    if: needs.main.outputs.publish_chrome != ''
     runs-on: ubuntu-latest
     needs: main
     environment: ${{ github.event.inputs.environment }}
@@ -115,6 +147,7 @@ jobs:
 
   upload_edge:
     name: Upload to Microsoft Edge Add-ons
+    if: needs.main.outputs.publish_edge != ''
     runs-on: ubuntu-latest
     needs: main
     environment: ${{ github.event.inputs.environment }}
@@ -135,6 +168,7 @@ jobs:
 
   upload_firefox:
     name: Upload to Firefox Add-ons
+    if: needs.main.outputs.publish_firefox != ''
     runs-on: ubuntu-latest
     needs: main
     environment: ${{ github.event.inputs.environment }}
@@ -149,7 +183,10 @@ jobs:
         uses: kewisch/action-web-ext@v1
         with:
           cmd: sign
-          channel: listed
+
+          # 'listed' or 'unlisted'
+          channel: ${{ vars.FIREFOX_EXTENSION_CHANNEL }}
+
           source: ${{ needs.main.outputs.ext_path_xpi }}
           artifacts: dist
           apiKey: ${{ secrets.FIREFOX_API_KEY }}
