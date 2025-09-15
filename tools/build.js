@@ -45,6 +45,22 @@ function build(target) {
       throw new Error(`Unsupported target: ${target}`);
     }
   }
+
+  // sync version to manifest files
+  {
+    const src = path.join(ROOT, 'package.json');
+    const version = JSON.parse(fs.readFileSync(src, 'utf8')).version;
+    for (const dst of globSync([
+      path.join(srcDir, 'manifest.*.json'),
+    ], {windowsPathsNoEscape: true})) {
+      const data = JSON.parse(fs.readFileSync(dst, 'utf8'));
+      if (data.version !== version) {
+        console.log(`Updating version for "${dst}" ...`);
+        data.version = version;
+        fs.writeFileSync(dst, JSON.stringify(data, null, 2) + '\n');
+      }
+    }
+  }
 }
 
 function dev(target) {

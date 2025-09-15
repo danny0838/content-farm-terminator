@@ -42,8 +42,8 @@ jobs:
         env:
           TIMEZONE: ${{ vars.TIMEZONE || 'UTC' }}
         run: |
-          VERSION=$(jq -r '.version' './src/manifest.chromium.json')
-          for file in src/manifest*.json; do
+          VERSION=$(jq -r '.version' './package.json')
+          for file in src/manifest.*.json; do
             VERSION2=$(jq -r '.version' "$file")
             if [ "$VERSION" != "$VERSION2" ]; then
               echo "❌ Mismatching manifest version: '$file'"

@@ -1,4 +1,6 @@
 {
+  "name": "content-farm-terminator",
+  "version": "5.16.0",
   "type": "module",
   "scripts": {
     "lint": "eslint",

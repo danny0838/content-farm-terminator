@@ -5,7 +5,6 @@
   "description": "__MSG_appDesc__",
   "author": "Danny Lin",
   "default_locale": "en",
-
   "browser_specific_settings": {
     "gecko": {
       "id": "content-farm-terminator@danny0838.addons.mozilla.org",
@@ -15,13 +14,10 @@
       "strict_min_version": "113.0"
     }
   },
-
   "homepage_url": "https://danny0838.github.io/content-farm-terminator/",
-
   "icons": {
     "48": "img/content-farm-marker_48.png"
   },
-
   "permissions": [
     "contextMenus",
     "tabs",
@@ -33,15 +29,12 @@
     "http://*/*",
     "https://*/*"
   ],
-
   "optional_permissions": [
     "history"
   ],
-
   "background": {
     "page": "background-page.html"
   },
-
   "content_scripts": [
     {
       "all_frames": true,
@@ -56,19 +49,16 @@
       "run_at": "document_start"
     }
   ],
-
   "options_ui": {
     "browser_style": false,
     "open_in_tab": true,
     "page": "options.html"
   },
-
   "web_accessible_resources": [
     "blocked.html",
     "sandbox.html",
     "img/*"
   ],
-
   "browser_action": {
     "default_icon": "img/content-farm-marker_48.png",
     "default_title": "__MSG_appName__"
