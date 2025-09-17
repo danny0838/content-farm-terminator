@@ -158,7 +158,7 @@ async function init(event) {
   document.querySelector('#submitButton').addEventListener('click', onSubmit);
 
   utils.loadLanguages(document, {htmlOptions: {
-    ALLOWED_TAGS: ['h3', 'p', 'ul', 'ol', 'li', 'a', '#text'],
+    ALLOWED_TAGS: ['h3', 'p', 'ul', 'ol', 'li', 'a', 'b', '#text'],
   }});
 
   // hide some options if contextMenus is not available
