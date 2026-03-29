@@ -1,7 +1,7 @@
 ! Title: Extra Content Farm Filters
 ! Description: Extra filter for content-farm-like sites, mostly aggregated from other sources.
 ! Expires: 3 days
-! Last modified: 2026-03-22T19:54:24+00:00
+! Last modified: 2026-03-29T19:59:55+00:00
 ! Homepage: https://danny0838.github.io/content-farm-terminator/
 ! Licence: MIT License
 ! Source: https://danny0838.github.io/content-farm-terminator/files/blocklist-ubo/extra-content-farms.txt
@@ -3132,7 +3132,6 @@ ids-water.com  #!nonpnt
 iizhao.com  #!nonpnt
 ilovewechat.com  #!nonpnt
 imacso.com  #!nonpnt
-imaycon.com  #!nonpnt
 /^https?://(?:[\w-]+\.)*(?:imooc\.com/wenda/.*)$/$doc  #!nonpnt
 informer.com  #!nonpnt
 ios.im  #!nonpnt
@@ -3502,7 +3501,6 @@ m.9ji.com  #!nonpnt
 m.bilibili.com  #!nonpnt
 m.ccidnet.com  #!nonpnt
 m.fengli.com  #!nonpnt
-m.fofama.com  #!nonpnt
 m.freebuf.com  #!nonpnt
 m.fy35.com  #!nonpnt
 m.imooc.com  #!nonpnt
@@ -3600,7 +3598,6 @@ wpsousuo.cn  #!nonpnt
 39qq.com  #!nonpnt
 3gsu.com  #!nonpnt
 4561234.com  #!nonpnt
-501776.com  #!nonpnt
 511477.com  #!nonpnt
 513210.com  #!nonpnt
 52book.me  #!nonpnt
