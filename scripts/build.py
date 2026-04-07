@@ -2,8 +2,10 @@
 """Check and publish blocklists for Content Farm Terminator."""
 import argparse
 import copy
+import csv
 import glob
 import inspect
+import io
 import ipaddress
 import logging
 import os
@@ -1068,13 +1070,9 @@ class Aggregator:
 
         return r
 
-    def fetch_data_gov_tw(self, base_url, chunk_size=3000):
-        """Fetch from API at https://od.moi.gov.tw/api/v1/rest/datastore/"""
-        result = []
-        offset = 0
+    def fetch_gov_tw_csv(self, url):
         verify = True
         while True:
-            url = f'{base_url}?limit={chunk_size}' + (f'&offset={offset}' if offset else '')
             log.debug('Fetching: %s', url)
             try:
                 r = requests.get(url, verify=verify)
@@ -1085,21 +1083,12 @@ class Aggregator:
                 continue
             except requests.exceptions.RequestException as exc:
                 raise RuntimeError(f'Failed to fetch "{url}": {exc}') from exc
+            break
 
-            if not r.ok:
-                raise RuntimeError(f'Failed to fetch "{url}": {r.status_code}')
+        if not r.ok:
+            raise RuntimeError(f'Failed to fetch "{url}": {r.status_code}')
 
-            data = r.json()
-
-            if not data['success']:
-                if offset == 0:
-                    raise RuntimeError('No record can be fetched.')
-                break
-
-            result.extend(data['result']['records'])
-            offset = data['result'].get('offset', 0) + data['result']['total']
-
-        return result
+        return r
 
     def get_rules(self, type, url):
         fn = getattr(self, f'get_rules_{type}')
@@ -1229,42 +1218,50 @@ class Aggregator:
             rules.append(rule)
         return rules
 
-    def get_rules_json_165jtz(self, url):
-        """假投資 sites from 165."""
+    def get_rules_csv_165jtz(self, url):
+        """假投資 from 165."""
+        response = self.fetch_gov_tw_csv(url)
+        response.encoding = 'utf-8-sig'
         rules = []
-        records = self.fetch_data_gov_tw(url)
-        records.pop(0)  # first record is fields
-        for record in records:
-            weburl = record['WEBURL']
-            u = urlsplit(('' if weburl.startswith('https:') else 'http://') + weburl)
+        with io.StringIO(response.text) as fh:
+            reader = csv.DictReader(fh)
+            next(reader)  # first record is Chinese field names
+            for row in reader:
+                weburl = row['WEBURL']
+                u = urlsplit(('' if weburl.startswith('https:') else 'http://') + weburl)
 
-            domain = u.hostname
-            if not domain.strip():
-                continue
-            if domain.startswith('www.'):
-                domain = domain[4:]
+                domain = u.hostname
+                if not domain.strip():
+                    continue
+                if domain.startswith('www.'):
+                    domain = domain[4:]
 
-            path = u.path
-            if path:
-                path = f' #path={path}'
+                path = u.path
+                if path:
+                    path = f' #path={path}'
 
-            rule = Rule(f'{domain}{path}', path=url)
-            rules.append(rule)
+                rule = Rule(f'{domain}{path}', path=url)
+                rules.append(rule)
+
         return rules
 
-    def get_rules_json_165line(self, url):
-        """Fake Line IDs from 165."""
+    def get_rules_csv_165scams(self, url):
+        """涉詐網站 from 165."""
+        response = self.fetch_gov_tw_csv(url)
+        response.encoding = 'utf-8-sig'
         rules = []
-        records = self.fetch_data_gov_tw(url)
-        for record in records:
-            id_ = record['帳號']
+        with io.StringIO(response.text) as fh:
+            reader = csv.DictReader(fh)
+            for row in reader:
+                domain = row['網域']
+                if not domain.strip():
+                    continue
+                if domain.startswith('www.'):
+                    domain = domain[4:]
 
-            # support Line Pages only, since the invite link for a line user ID is encoded
-            if not (id_ and id_.startswith('@')):
-                continue
+                rule = Rule(domain)
+                rules.append(rule)
 
-            rule = Rule(f'line-page:{id_[1:]}', path=url)
-            rules.append(rule)
         return rules
 
 
