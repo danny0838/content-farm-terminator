@@ -1,6 +1,6 @@
 # Title: Extra Content Farm Filters
 # Description: Extra filter for content-farm-like sites, mostly aggregated from other sources.
-# Last modified: 2026-04-12T20:02:56+00:00
+# Last modified: 2026-04-19T20:04:32+00:00
 # Homepage: https://danny0838.github.io/content-farm-terminator/
 # Licence: MIT License
 # Source: https://danny0838.github.io/content-farm-terminator/files/blocklist-hosts/extra-content-farms.txt
@@ -2042,6 +2042,7 @@
 0.0.0.0 q8ab.com  #!GHHbD
 0.0.0.0 qa-help.ru  #!GHHbD
 0.0.0.0 qa-stack.pl  #!GHHbD
+0.0.0.0 qa.wujigu.com  #!GHHbD
 0.0.0.0 qacode.ru  #!GHHbD
 0.0.0.0 qandeelacademy.com  #!GHHbD
 0.0.0.0 qapicks.com  #!GHHbD
@@ -3152,7 +3153,6 @@
 0.0.0.0 mango66.com  #!nonpnt
 0.0.0.0 mattkaydiary.com  #!nonpnt
 0.0.0.0 mb-intendance.com  #!nonpnt
-0.0.0.0 meetthebookworld.com  #!nonpnt
 0.0.0.0 mefj.com.cn  #!nonpnt
 0.0.0.0 meirikeji.com  #!nonpnt
 0.0.0.0 metropaintballgames.com  #!nonpnt
@@ -3319,7 +3319,6 @@
 0.0.0.0 wintoog.com.cn  #!nonpnt
 0.0.0.0 woniuwl.com  #!nonpnt
 0.0.0.0 workessay.com  #!nonpnt
-0.0.0.0 wujigu.com  #!nonpnt
 0.0.0.0 wxkcg.com  #!nonpnt
 0.0.0.0 xa8.net  #!nonpnt
 0.0.0.0 xagrtx.com  #!nonpnt
@@ -3409,7 +3408,6 @@
 0.0.0.0 essaymin.com  #!nonpnt
 0.0.0.0 exmail-qq.cc  #!nonpnt
 0.0.0.0 f5.pm  #!nonpnt
-0.0.0.0 fyf.wx-wx.net  #!nonpnt
 0.0.0.0 ggchewl.com  #!nonpnt
 0.0.0.0 giskaa.com  #!nonpnt
 0.0.0.0 hairunwatertr.com  #!nonpnt
@@ -3528,7 +3526,6 @@
 0.0.0.0 360buyserver.com  #!nonpnt
 0.0.0.0 360doc.com  #!nonpnt
 0.0.0.0 360kuai.com  #!nonpnt
-0.0.0.0 365shenbo.com  #!nonpnt
 0.0.0.0 39qq.com  #!nonpnt
 0.0.0.0 3gsu.com  #!nonpnt
 0.0.0.0 4561234.com  #!nonpnt
@@ -3637,7 +3634,6 @@
 0.0.0.0 helplib.cn  #!nonpnt
 0.0.0.0 hisour.com  #!nonpnt
 0.0.0.0 histrend.hk  #!nonpnt
-0.0.0.0 hotessay.net  #!nonpnt
 0.0.0.0 hsjl5821808.com  #!nonpnt
 0.0.0.0 hsjtjz.com  #!nonpnt
 0.0.0.0 hszw.org  #!nonpnt
@@ -3698,10 +3694,8 @@
 0.0.0.0 phoenixups.com  #!nonpnt
 0.0.0.0 ping-jia.net  #!nonpnt
 0.0.0.0 pinlue.com  #!nonpnt
-0.0.0.0 pnstudy.com  #!nonpnt
 0.0.0.0 price.com.hk  #!nonpnt
 0.0.0.0 programmersought.com  #!nonpnt
-0.0.0.0 ptzxc.com  #!nonpnt
 0.0.0.0 qcnsw.com  #!nonpnt
 0.0.0.0 qedev.com  #!nonpnt
 0.0.0.0 qianchusai.com  #!nonpnt

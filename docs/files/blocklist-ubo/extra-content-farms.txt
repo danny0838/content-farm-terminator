@@ -1,7 +1,7 @@
 ! Title: Extra Content Farm Filters
 ! Description: Extra filter for content-farm-like sites, mostly aggregated from other sources.
 ! Expires: 3 days
-! Last modified: 2026-04-12T20:02:56+00:00
+! Last modified: 2026-04-19T20:04:32+00:00
 ! Homepage: https://danny0838.github.io/content-farm-terminator/
 ! Licence: MIT License
 ! Source: https://danny0838.github.io/content-farm-terminator/files/blocklist-ubo/extra-content-farms.txt
@@ -2051,6 +2051,7 @@ q5j.org  #!GHHbD
 q8ab.com  #!GHHbD
 qa-help.ru  #!GHHbD
 qa-stack.pl  #!GHHbD
+qa.wujigu.com  #!GHHbD
 qacode.ru  #!GHHbD
 qandeelacademy.com  #!GHHbD
 qapicks.com  #!GHHbD
@@ -3178,7 +3179,6 @@ macz.com  #!nonpnt
 mango66.com  #!nonpnt
 mattkaydiary.com  #!nonpnt
 mb-intendance.com  #!nonpnt
-meetthebookworld.com  #!nonpnt
 mefj.com.cn  #!nonpnt
 meirikeji.com  #!nonpnt
 metropaintballgames.com  #!nonpnt
@@ -3356,7 +3356,6 @@ windowsphoneinfo.com  #!nonpnt
 wintoog.com.cn  #!nonpnt
 woniuwl.com  #!nonpnt
 workessay.com  #!nonpnt
-wujigu.com  #!nonpnt
 /^https?://(?:[\w-]+\.)*(?:wuzhuiso\.com/s\?q=.*)$/$doc  #!nonpnt
 wxkcg.com  #!nonpnt
 xa8.net  #!nonpnt
@@ -3465,7 +3464,6 @@ email.tenxunqq.net  #!nonpnt
 essaymin.com  #!nonpnt
 exmail-qq.cc  #!nonpnt
 f5.pm  #!nonpnt
-fyf.wx-wx.net  #!nonpnt
 ggchewl.com  #!nonpnt
 giskaa.com  #!nonpnt
 /^https?://(?:github\.com/qyyd5g/.*)$/$doc  #!nonpnt
@@ -3591,7 +3589,6 @@ wpsousuo.cn  #!nonpnt
 360buyserver.com  #!nonpnt
 360doc.com  #!nonpnt
 360kuai.com  #!nonpnt
-365shenbo.com  #!nonpnt
 39qq.com  #!nonpnt
 3gsu.com  #!nonpnt
 4561234.com  #!nonpnt
@@ -3704,7 +3701,6 @@ hello.so  #!nonpnt
 helplib.cn  #!nonpnt
 hisour.com  #!nonpnt
 histrend.hk  #!nonpnt
-hotessay.net  #!nonpnt
 hsjl5821808.com  #!nonpnt
 hsjtjz.com  #!nonpnt
 hszw.org  #!nonpnt
@@ -3771,10 +3767,8 @@ pck777.com  #!nonpnt
 phoenixups.com  #!nonpnt
 ping-jia.net  #!nonpnt
 pinlue.com  #!nonpnt
-pnstudy.com  #!nonpnt
 price.com.hk  #!nonpnt
 programmersought.com  #!nonpnt
-ptzxc.com  #!nonpnt
 qcnsw.com  #!nonpnt
 qedev.com  #!nonpnt
 qianchusai.com  #!nonpnt
