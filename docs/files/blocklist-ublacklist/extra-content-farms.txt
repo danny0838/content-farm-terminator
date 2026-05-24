@@ -1,6 +1,6 @@
 # Title: Extra Content Farm Filters
 # Description: Extra filter for content-farm-like sites, mostly aggregated from other sources.
-# Last modified: 2026-05-17T20:28:15+00:00
+# Last modified: 2026-05-24T20:33:13+00:00
 # Homepage: https://danny0838.github.io/content-farm-terminator/
 # Licence: MIT License
 # Source: https://danny0838.github.io/content-farm-terminator/files/blocklist-ublacklist/extra-content-farms.txt
@@ -3081,7 +3081,6 @@
 *://*.food-week.ru/*  #!nonpnt
 *://*.freecodecamp.org/news/*  #!nonpnt
 *://*.freejournal.info/*  #!nonpnt
-*://*.fukuyama-okoku.com/*  #!nonpnt
 *://*.fuwuqizhijia.com/*  #!nonpnt
 *://*.gaojipro.com/*  #!nonpnt
 *://*.gaoyongboke.com/*  #!nonpnt
@@ -3560,7 +3559,6 @@
 *://*.0411ct.com/*  #!nonpnt
 *://*.0755qxhj.com/*  #!nonpnt
 *://*.07diy.com/*  #!nonpnt
-*://*.09vv.cn/*  #!nonpnt
 *://*.12y.org/*  #!nonpnt
 *://www.163.com/dy/article/*  #!nonpnt
 *://*.1984w.com/*  #!nonpnt
@@ -4149,6 +4147,7 @@
 *://*.00004.org/*  #!yesil
 *://*.0411juan.com/*  #!yesil
 *://*.0931163.com/*  #!yesil
+*://*.09vv.cn/*  #!yesil
 *://*.0tpe.com/*  #!yesil
 *://*.10tiao.com/*  #!yesil
 *://*.1129862.com/*  #!yesil
