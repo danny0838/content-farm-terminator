@@ -1,7 +1,7 @@
 ! Title: Extra Content Farm Filters
 ! Description: Extra filter for content-farm-like sites, mostly aggregated from other sources.
 ! Expires: 3 days
-! Last modified: 2026-05-31T20:39:48+00:00
+! Last modified: 2026-06-06T09:06:55+00:00
 ! Homepage: https://danny0838.github.io/content-farm-terminator/
 ! Licence: MIT License
 ! Source: https://danny0838.github.io/content-farm-terminator/files/blocklist-ubo/extra-content-farms.txt
@@ -3018,11 +3018,9 @@ bookresource.net  #!nonpnt
 boqii.com  #!nonpnt
 buffalo-mn.org  #!nonpnt
 cache.one  #!nonpnt
-camlya.com  #!nonpnt
 ccvic.com  #!nonpnt
 ceyicm.cn  #!nonpnt
 chattaboo.com  #!nonpnt
-chcpd.com  #!nonpnt
 china.cn  #!nonpnt
 china2uk.com  #!nonpnt
 cjavapy.com  #!nonpnt
@@ -3146,7 +3144,6 @@ jnw.cc  #!nonpnt
 joyoshare.com  #!nonpnt
 jqgcs123.com  #!nonpnt
 /^https?://(?:[\w-]+\.)*(?:juejin\.cn/s/.*)$/$doc  #!nonpnt
-juhebbs.com  #!nonpnt
 juyifx.cn  #!nonpnt
 jynews.net  #!nonpnt
 kafan.cn  #!nonpnt
