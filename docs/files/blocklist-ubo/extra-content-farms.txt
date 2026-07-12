@@ -1,7 +1,7 @@
 ! Title: Extra Content Farm Filters
 ! Description: Extra filter for content-farm-like sites, mostly aggregated from other sources.
 ! Expires: 3 days
-! Last modified: 2026-07-05T20:38:46+00:00
+! Last modified: 2026-07-12T20:23:59+00:00
 ! Homepage: https://danny0838.github.io/content-farm-terminator/
 ! Licence: MIT License
 ! Source: https://danny0838.github.io/content-farm-terminator/files/blocklist-ubo/extra-content-farms.txt
@@ -3286,7 +3286,6 @@ thrivemyway.com  #!nonpnt
 tidewaterschool.org  #!nonpnt
 tintsoft.com  #!nonpnt
 todohealth.com  #!nonpnt
-tomzx.com  #!nonpnt
 tongbu.com  #!nonpnt
 topvpnguides.com  #!nonpnt
 /^https?://(?:[\w-]+\.)*(?:toutiao\.com/keyword/.*)$/$doc  #!nonpnt
@@ -3589,7 +3588,6 @@ aicaigoupifa.com  #!nonpnt
 aiskycn.com  #!nonpnt
 ajpsp.com  #!nonpnt
 aliyun.com  #!nonpnt
-aliyunyh.com  #!nonpnt
 amcpp.com  #!nonpnt
 amhnn.com  #!nonpnt
 ancii.com  #!nonpnt
