@@ -1070,12 +1070,12 @@ class Aggregator:
 
         return r
 
-    def fetch_gov_tw_csv(self, url):
+    def fetch_gov_tw_csv(self, url, stream=False):
         verify = True
         while True:
             log.debug('Fetching: %s', url)
             try:
-                r = requests.get(url, verify=verify)
+                r = requests.get(url, stream=stream, verify=verify)
             except requests.exceptions.SSLError as exc:
                 log.warning('Failed to verify SSL, retry with verify=False: %s', exc)
                 requests.packages.urllib3.disable_warnings(requests.packages.urllib3.exceptions.InsecureRequestWarning)
@@ -1220,47 +1220,45 @@ class Aggregator:
 
     def get_rules_csv_165jtz(self, url):
         """假投資 from 165."""
-        response = self.fetch_gov_tw_csv(url)
+        response = self.fetch_gov_tw_csv(url, stream=True)
         response.encoding = 'utf-8-sig'
         rules = []
-        with io.StringIO(response.text) as fh:
-            reader = csv.DictReader(fh)
-            next(reader)  # first record is Chinese field names
-            for row in reader:
-                weburl = row['WEBURL']
-                u = urlsplit(('' if weburl.startswith('https:') else 'http://') + weburl)
+        reader = csv.DictReader(response.iter_lines(decode_unicode=True))
+        next(reader)  # first record is Chinese field names
+        for row in reader:
+            weburl = row['WEBURL']
+            u = urlsplit(('' if weburl.startswith('https:') else 'http://') + weburl)
 
-                domain = u.hostname
-                if not domain.strip():
-                    continue
-                if domain.startswith('www.'):
-                    domain = domain[4:]
+            domain = u.hostname
+            if not domain.strip():
+                continue
+            if domain.startswith('www.'):
+                domain = domain[4:]
 
-                path = u.path
-                if path:
-                    path = f' #path={path}'
+            path = u.path
+            if path:
+                path = f' #path={path}'
 
-                rule = Rule(f'{domain}{path}', path=url)
-                rules.append(rule)
+            rule = Rule(f'{domain}{path}', path=url)
+            rules.append(rule)
 
         return rules
 
     def get_rules_csv_165scams(self, url):
         """涉詐網站 from 165."""
-        response = self.fetch_gov_tw_csv(url)
+        response = self.fetch_gov_tw_csv(url, stream=True)
         response.encoding = 'utf-8-sig'
         rules = []
-        with io.StringIO(response.text) as fh:
-            reader = csv.DictReader(fh)
-            for row in reader:
-                domain = row['網域']
-                if not domain.strip():
-                    continue
-                if domain.startswith('www.'):
-                    domain = domain[4:]
+        reader = csv.DictReader(response.iter_lines(decode_unicode=True))
+        for row in reader:
+            domain = row['網域']
+            if not domain.strip():
+                continue
+            if domain.startswith('www.'):
+                domain = domain[4:]
 
-                rule = Rule(domain)
-                rules.append(rule)
+            rule = Rule(domain)
+            rules.append(rule)
 
         return rules
 
