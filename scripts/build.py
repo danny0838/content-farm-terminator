@@ -5,7 +5,6 @@ import copy
 import csv
 import glob
 import inspect
-import io
 import ipaddress
 import logging
 import os
@@ -692,8 +691,8 @@ class Converter:
             if isinstance(rule, Rule):
                 self.print_rule(rule)
             else:
-                for rule in rule:
-                    self.print_rule(rule)
+                for r in rule:
+                    self.print_rule(r)
 
         self.handle_grouping_scheme_rules(scheme_groups)
 
@@ -766,7 +765,7 @@ class Converter:
         scheme_max = scheme.get('max')
         scheme_mode = scheme.get('mode')
         rules = []
-        for i, template in enumerate(templates):
+        for template in templates:
             v = template.format(value=value)
 
             # apply max length limit
