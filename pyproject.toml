@@ -1,0 +1,49 @@
+[project]
+name = "content-farm-terminator"
+requires-python = ">=3.9"
+
+[dependency-groups]
+lint = [
+    "Flake8-pyproject>=1.2.3",
+    "flake8-bugbear>=22.6.22",
+    "flake8-comprehensions>=3.8",
+    "flake8-isort>=5.0",
+    "flake8-quotes>=3.4",
+    "flake8>=6.1",
+    "isort>=5.9.2",
+    "pep8-naming>=0.13.2",
+]
+scripts = [
+    "PyYAML",
+    "requests",
+]
+dev = [
+    {include-group = "lint"},
+    {include-group = "scripts"},
+]
+
+[tool.flake8]
+exclude = [
+    ".git",
+    ".tox",
+    ".venv",
+    "node_modules",
+]
+max-line-length = 160
+
+# Flake8 Rules
+# https://www.flake8rules.com/
+
+# E123: closing bracket does not match indentation of opening bracket's line
+extend-select = [
+    "E123",
+]
+
+# W503: Line break occurred before a binary operator
+ignore = [
+    "W503",
+]
+
+[tool.isort]
+multi_line_output = 3
+include_trailing_comma = true
