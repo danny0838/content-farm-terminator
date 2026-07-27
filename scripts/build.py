@@ -1168,12 +1168,10 @@ class Aggregator:
                     domain = m.group('host')
 
                     # treat "*://example.com/*" as "*://*.example.com/*"
-                    if domain.startswith('*.'):
-                        domain = domain[2:]
+                    domain = domain.removeprefix('*.')
 
                     # treat "*://www.example.com/*" as "*://*.example.com/*"
-                    if domain.startswith('www.'):
-                        domain = domain[4:]
+                    domain = domain.removeprefix('www.')
 
                     rule = f'{domain}{comment}'
 
@@ -1209,11 +1207,11 @@ class Aggregator:
         response.encoding = 'utf-8-sig'
         rules = []
         for entry in response.json():
-            domain = entry.get('網域名稱')
-            if not domain.strip():
+            domain = entry.get('網域名稱').strip()
+            if not domain:
                 continue
-            if domain.startswith('www.'):
-                domain = domain[4:]
+            domain = domain.removeprefix('www.')
+
             rule = Rule(domain, path=url)
             rules.append(rule)
         return rules
@@ -1229,11 +1227,10 @@ class Aggregator:
             weburl = row['WEBURL']
             u = urlsplit(('' if weburl.startswith('https:') else 'http://') + weburl)
 
-            domain = u.hostname
-            if not domain.strip():
+            domain = u.hostname.strip()
+            if not domain:
                 continue
-            if domain.startswith('www.'):
-                domain = domain[4:]
+            domain = domain.removeprefix('www.')
 
             path = u.path
             if path:
@@ -1251,11 +1248,12 @@ class Aggregator:
         rules = []
         reader = csv.DictReader(response.iter_lines(decode_unicode=True))
         for row in reader:
-            domain = row['網域']
-            if not domain.strip():
+            domain = row['網域'].strip()
+            if not domain:
                 continue
-            if domain.startswith('www.'):
-                domain = domain[4:]
+            domain = domain.removeprefix('https://')
+            domain = domain.removeprefix('http://')
+            domain = domain.removeprefix('www.')
 
             rule = Rule(domain)
             rules.append(rule)
