@@ -226,7 +226,7 @@ aggregate:
     type: csv_165jtz
   - name: 165scams
     homepage: https://data.gov.tw/dataset/176455
-    source: https://opdadm.moi.gov.tw/api/v1/no-auth/resource/api/dataset/29E8E643-88ED-4952-B21E-BD42A3B7108C/resource/30001015-F0DA-40AE-945C-43EF73A4DDDF/download
+    source: https://opdadm.moi.gov.tw/api/v1/no-auth/resource/api/dataset/29E8E643-88ED-4952-B21E-BD42A3B7108C/resource/49893F17-AE02-43E7-8271-25A061F9098F/download
     dest: src/aggregations/scam-sites/165scams.txt
     type: csv_165scams
 
