@@ -1252,9 +1252,8 @@ class Aggregator:
         response.encoding = 'utf-8-sig'
         rules = []
         reader = csv.DictReader(response.iter_lines(decode_unicode=True))
-        next(reader)  # first record is Chinese field names
         for row in reader:
-            weburl = row['WEBURL']
+            weburl = row['網址']
             u = urlsplit(('' if weburl.startswith('https:') else 'http://') + weburl)
 
             domain = u.hostname.strip()
