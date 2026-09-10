@@ -221,14 +221,16 @@ aggregate:
     type: json_twnicscams
   - name: 165jtz
     homepage: https://data.gov.tw/dataset/160055
-    source: https://opdadm.moi.gov.tw/api/v1/no-auth/resource/api/dataset/033197D4-70F4-45EB-9FB8-6D83532B999A/resource/FEAA1683-4483-4FDC-B861-BC530789E2AB/download
+    source: https://data.gov.tw/api/v2/rest/dataset/160055
     dest: src/aggregations/scam-sites/165jtz.txt
     type: csv_165jtz
+    spec: data_gov_csv
   - name: 165scams
     homepage: https://data.gov.tw/dataset/176455
-    source: https://opdadm.moi.gov.tw/api/v1/no-auth/resource/api/dataset/29E8E643-88ED-4952-B21E-BD42A3B7108C/resource/49893F17-AE02-43E7-8271-25A061F9098F/download
+    source: https://data.gov.tw/api/v2/rest/dataset/176455
     dest: src/aggregations/scam-sites/165scams.txt
     type: csv_165scams
+    spec: data_gov_csv
 
 build:
   - source:

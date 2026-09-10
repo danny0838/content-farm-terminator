@@ -1030,6 +1030,17 @@ class Aggregator:
                 self.run_task(task, i)
 
     def run_task(self, task, index):
+        url = task['source']
+        spec = task.get('spec')
+        if spec:
+            log.info('Fetching spec from "%s" ...', url)
+            try:
+                spec = self.get_spec(spec, url)
+                task.update(spec)
+            except Exception as exc:
+                log.error('%s', exc)
+                return
+
         name = task.get('name', str(index + 1))
         homepage = task.get('homepage')
         url = task['source']
@@ -1085,6 +1096,29 @@ class Aggregator:
             break
 
         return r
+
+    def fetch_gov_tw_spec(self, url, format=None):
+        try:
+            log.debug('Fetching from: %s', url)
+            r = requests.get(url)
+            r.raise_for_status()
+            data = r.json()
+            assert data['success'], data.get('error') or 'JSON not successful'
+            return next(
+                d['resourceDownloadUrl']
+                for d in data['result']['distribution']
+                if format is None or d['resourceFormat'] == format
+            )
+        except Exception as exc:
+            raise RuntimeError(f'Failed to fetch sepc from "{url}": {exc}')
+
+    def get_spec(self, type, url):
+        fn = getattr(self, f'get_spec_{type}')
+        return fn(url)
+
+    def get_spec_data_gov_csv(self, url):
+        source = self.fetch_gov_tw_spec(url, 'CSV')
+        return {'source': source}
 
     def get_rules(self, type, url):
         fn = getattr(self, f'get_rules_{type}')
