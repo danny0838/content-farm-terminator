@@ -1024,9 +1024,10 @@ class Aggregator:
         self.root = root
         self.config = config or {}
 
-    def run(self):
+    def run(self, names=None):
         for i, task in enumerate(self.config.get('aggregate', [])):
-            self.run_task(task, i)
+            if names is None or task.get('name') in names:
+                self.run_task(task, i)
 
     def run_task(self, task, index):
         name = task.get('name', str(index + 1))
@@ -1343,10 +1344,13 @@ def parse_args(argv=None):
         description=Builder.__doc__)
 
     # aggregate
-    subparsers.add_parser(
+    parser_aggregate = subparsers.add_parser(
         'aggregate', aliases=['a'],
         help="""run the aggregrator""",
         description=Aggregator.__doc__)
+    parser_aggregate.add_argument(
+        '--name', dest='names', metavar='NAME', nargs='+',
+        help="""the name(s) to aggregate (defualt: all)""")
 
     # auto
     parser_auto = subparsers.add_parser(
@@ -1385,7 +1389,7 @@ def main():
         Builder(args.root, config).run()
 
     elif args.action in ('aggregate', 'a'):
-        Aggregator(args.root, config).run()
+        Aggregator(args.root, config).run(names=args.names)
 
     elif args.action == 'auto':
         # switch CWD so that passed paths in kwargs are resolved from root
