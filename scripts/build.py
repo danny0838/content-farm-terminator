@@ -1062,11 +1062,9 @@ class Aggregator:
     def fetch(self, url):
         try:
             r = requests.get(url)
+            r.raise_for_status()
         except requests.exceptions.RequestException as exc:
             raise RuntimeError(f'Failed to fetch "{url}": {exc}') from exc
-
-        if not r.ok:
-            raise RuntimeError(f'Failed to fetch "{url}": {r.status_code}')
 
         return r
 
@@ -1076,6 +1074,7 @@ class Aggregator:
             log.debug('Fetching: %s', url)
             try:
                 r = requests.get(url, stream=stream, verify=verify)
+                r.raise_for_status()
             except requests.exceptions.SSLError as exc:
                 log.warning('Failed to verify SSL, retry with verify=False: %s', exc)
                 requests.packages.urllib3.disable_warnings(requests.packages.urllib3.exceptions.InsecureRequestWarning)
@@ -1084,9 +1083,6 @@ class Aggregator:
             except requests.exceptions.RequestException as exc:
                 raise RuntimeError(f'Failed to fetch "{url}": {exc}') from exc
             break
-
-        if not r.ok:
-            raise RuntimeError(f'Failed to fetch "{url}": {r.status_code}')
 
         return r
 
