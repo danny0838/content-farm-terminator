@@ -1,7 +1,7 @@
   # Title: Scam Sites Filters
   # Description: Filter for scam sites. Mostly aggregrated from governmental sources, such as Ministry
   #     of Digital Affairs and National Police Agency of Taiwan.
-  # Last modified: 2026-09-13T21:39:49+00:00
+  # Last modified: 2026-09-20T21:48:02+00:00
   # Homepage: https://danny0838.github.io/content-farm-terminator/
   # Licence: MIT License
   # Source: https://danny0838.github.io/content-farm-terminator/files/blocklist/scam-sites.txt
@@ -32398,7 +32398,7 @@ navers-shop.com #!165jtz
 bexcet.com #!165jtz
 ppsd.pro #!165jtz
   # aggregation: #!165scams
-  # source: https://opdadm.moi.gov.tw/api/v1/no-auth/resource/api/dataset/29E8E643-88ED-4952-B21E-BD42A3B7108C/resource/5672F5DD-8D7A-4F11-9E8B-1CB8D2A55B1F/download
+  # source: https://opdadm.moi.gov.tw/api/v1/no-auth/resource/api/dataset/29E8E643-88ED-4952-B21E-BD42A3B7108C/resource/BDDA488A-C15A-4FBF-99CF-E8EFA17C32EF/download
   # homepage: https://data.gov.tw/dataset/176455
 bbhhshf.cc #!165scams
 web.criptonite.vip #!165scams
