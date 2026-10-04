@@ -1,7 +1,7 @@
 ! Title: Extra Content Farm Filters
 ! Description: Extra filter for content-farm-like sites, mostly aggregated from other sources.
 ! Expires: 3 days
-! Last modified: 2026-09-27T22:32:39+00:00
+! Last modified: 2026-10-04T22:30:53+00:00
 ! Homepage: https://danny0838.github.io/content-farm-terminator/
 ! Licence: MIT License
 ! Source: https://danny0838.github.io/content-farm-terminator/files/blocklist-ubo/extra-content-farms.txt
@@ -3036,7 +3036,6 @@ craffts.com  #!nonpnt
 csolmy.com  #!nonpnt
 cspfocus.cn  #!nonpnt
 dadighost.com  #!nonpnt
-dafuhua.com  #!nonpnt
 daimafans.com  #!nonpnt
 daixieessay.com  #!nonpnt
 daka111.cn  #!nonpnt
@@ -3161,7 +3160,6 @@ macxf.com  #!nonpnt
 macz.com  #!nonpnt
 mango66.com  #!nonpnt
 mattkaydiary.com  #!nonpnt
-mb-intendance.com  #!nonpnt
 mefj.com.cn  #!nonpnt
 meirikeji.com  #!nonpnt
 metropaintballgames.com  #!nonpnt
@@ -3317,7 +3315,6 @@ website-problem.info  #!nonpnt
 websiterating.com  #!nonpnt
 /^https?://(?:[\w-]+\.)*(?:weibo\.com/a/hot/.*)$/$doc  #!nonpnt
 westack.live  #!nonpnt
-whoisua.com  #!nonpnt
 widede.com  #!nonpnt
 wikicell.org  #!nonpnt
 win7zhijia.cn  #!nonpnt
@@ -3697,7 +3694,6 @@ ok168198.com  #!nonpnt
 padh.net  #!nonpnt
 paloma.cn  #!nonpnt
 pantianxia.com  #!nonpnt
-parichyimin.com  #!nonpnt
 pck777.com  #!nonpnt
 /^https?://(?:www\.pconline\.com\.cn/3g/.*)$/$doc  #!nonpnt
 /^https?://(?:www\.pconline\.com\.cn/other_pic.*)$/$doc  #!nonpnt
