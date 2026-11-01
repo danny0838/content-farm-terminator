@@ -1,7 +1,7 @@
 ! Title: Extra Content Farm Filters
 ! Description: Extra filter for content-farm-like sites, mostly aggregated from other sources.
 ! Expires: 3 days
-! Last modified: 2026-10-25T22:01:22+00:00
+! Last modified: 2026-11-01T23:01:43+00:00
 ! Homepage: https://danny0838.github.io/content-farm-terminator/
 ! Licence: MIT License
 ! Source: https://danny0838.github.io/content-farm-terminator/files/blocklist-ubo/extra-content-farms.txt
@@ -3309,7 +3309,6 @@ website-problem.info  #!nonpnt
 websiterating.com  #!nonpnt
 /^https?://(?:[\w-]+\.)*(?:weibo\.com/a/hot/.*)$/$doc  #!nonpnt
 westack.live  #!nonpnt
-widede.com  #!nonpnt
 wikicell.org  #!nonpnt
 win7zhijia.cn  #!nonpnt
 windows101tricks.com  #!nonpnt
@@ -3766,7 +3765,6 @@ xitongcheng.com  #!nonpnt
 xpj665577.com  #!nonpnt
 xsjphoto.com  #!nonpnt
 xspdf.com  #!nonpnt
-xyyhs.net  #!nonpnt
 xz7.com  #!nonpnt
 y5.hk  #!nonpnt
 yinyids.com  #!nonpnt
