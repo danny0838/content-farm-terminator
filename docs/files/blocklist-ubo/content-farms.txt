@@ -1,7 +1,7 @@
 ! Title: Content Farm Filters
 ! Description: Filter for general content farms, mostly in Chinese.
 ! Expires: 3 days
-! Last modified: 2026-11-01T23:01:43+00:00
+! Last modified: 2026-11-03T13:46:38+00:00
 ! Homepage: https://danny0838.github.io/content-farm-terminator/
 ! Licence: MIT License
 ! Source: https://danny0838.github.io/content-farm-terminator/files/blocklist-ubo/content-farms.txt
@@ -15603,6 +15603,7 @@ lsln.cn
 coreui.cn
 ttnews.tw
 dongwangask.com
+python66.com
 # aggregation: #!cxyzjd
 # source: https://raw.githubusercontent.com/wdmpa/content-farm-list/main/domains/spam/cxyzjd.txt
 # homepage: https://github.com/wdmpa/content-farm-list
