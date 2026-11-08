@@ -1,7 +1,7 @@
 ! Title: Extra Content Farm Filters
 ! Description: Extra filter for content-farm-like sites, mostly aggregated from other sources.
 ! Expires: 3 days
-! Last modified: 2026-11-01T23:01:43+00:00
+! Last modified: 2026-11-08T23:06:53+00:00
 ! Homepage: https://danny0838.github.io/content-farm-terminator/
 ! Licence: MIT License
 ! Source: https://danny0838.github.io/content-farm-terminator/files/blocklist-ubo/extra-content-farms.txt
@@ -3189,7 +3189,6 @@ passfab.com  #!nonpnt
 /^https?://(?:[\w-]+\.)*(?:pc6\.com/infoview/.*)$/$doc  #!nonpnt
 php.cn  #!nonpnt
 picclick.co.uk  #!nonpnt
-pinkypink.org  #!nonpnt
 pipecraft.net  #!nonpnt
 pixelprivacy.com  #!nonpnt
 py.cn  #!nonpnt
@@ -3225,7 +3224,6 @@ shihuishuo.com  #!nonpnt
 shijiyin.com  #!nonpnt
 shluqu.cn  #!nonpnt
 shopwtn.com  #!nonpnt
-shoujide.com  #!nonpnt
 shoujishu.com  #!nonpnt
 shtaxi.com  #!nonpnt
 shyaki.com  #!nonpnt
@@ -3376,7 +3374,6 @@ anlander.com  #!nonpnt
 app.3dmgame.com  #!nonpnt
 app.youfa.coms.hk  #!nonpnt
 ask.seowhy.com  #!nonpnt
-auditioneasterhelm.com  #!nonpnt
 /^https?://(?:baike\.baidu\.com/tashuo/.*)$/$doc  #!nonpnt
 bbs.mydigit.cn  #!nonpnt
 bbs.nga.cn  #!nonpnt
